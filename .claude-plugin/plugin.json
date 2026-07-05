@@ -1,0 +1,12 @@
+{
+  "name": "editorial-team",
+  "description": "Editorial-team marketing skills for AI agents: shared marketing context, fast editing, and strategic editor-in-chief workflows",
+  "version": "0.1.0",
+  "author": {
+    "name": "Zinnur Temerbekov"
+  },
+  "homepage": "https://github.com/ztemerbekov/marketing-skills",
+  "repository": "https://github.com/ztemerbekov/marketing-skills",
+  "license": "MIT",
+  "skills": "./skills"
+}
