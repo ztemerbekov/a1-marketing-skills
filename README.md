@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="./assets/marketing-skills-mascot.png" alt="Marketing Skills mascot" width="140" height="140">
-</p>
+![Marketing Skills](./assets/marketing-skills-evolution.png)
 
 # Marketing Skills
 
