@@ -1,5 +1,5 @@
 ---
-name: a1-marketing-context
+name: a1-setup-marketing-context
 description: Create or update the shared marketing context for a repository. Use when the user wants to set up marketing context, describe a product for future marketing work, remember audience or tone, save brand voice, update positioning, or maintain reusable marketing facts for other skills.
 metadata:
   version: "0.1.0"

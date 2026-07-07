@@ -12,7 +12,7 @@ Canonical skills live under `skills/`:
 
 ```text
 skills/
-  a1-marketing-context/
+  a1-setup-marketing-context/
   a1-editor/
   a1-editor-in-chief/
 ```
@@ -66,7 +66,7 @@ When adding a non-standard field:
 
 ## Current Skills
 
-### a1-marketing-context
+### a1-setup-marketing-context
 
 Public, auto-triggered setup skill.
 

@@ -16,7 +16,7 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/a1-marketing-context",
+        "./skills/a1-setup-marketing-context",
         "./skills/a1-editor",
         "./skills/a1-editor-in-chief"
       ]
@@ -27,7 +27,7 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/a1-marketing-context",
+        "./skills/a1-setup-marketing-context",
         "./skills/a1-editor",
         "./skills/a1-editor-in-chief"
       ]
