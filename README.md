@@ -1,4 +1,4 @@
-![Marketing Skills](./assets/marketing-skills-evolution.png)
+![Marketing Skills](./assets/marketing-skills-evolution.webp)
 
 # Marketing Skills
 
