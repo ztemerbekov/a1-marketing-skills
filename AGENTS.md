@@ -12,9 +12,9 @@ Canonical skills live under `skills/`:
 
 ```text
 skills/
-  marketing-context/
-  editor/
-  editor-in-chief/
+  a1-marketing-context/
+  a1-editor/
+  a1-editor-in-chief/
 ```
 
 Each skill directory must be self-contained and installable directly from GitHub. Do not require users to run a build or sync step after installation.
@@ -42,6 +42,7 @@ Rules:
 
 - `name` must match the directory name.
 - Use lowercase letters, digits, and hyphens.
+- Name every skill with the `a1-` prefix so the skill list sorts this repository's skills together and near the top. Use lowercase canonical names such as `a1-editor`, not display-style names such as `A1-Editor`.
 - Keep `description` specific; include trigger phrases and scope boundaries.
 - Keep `SKILL.md` concise. Put detailed canon, rubrics, examples, and templates in `references/`.
 - Use relative links from `SKILL.md` to files inside the same skill directory.
@@ -54,7 +55,7 @@ This repository follows the Agent Skills format, with documented pragmatic exten
 
 Allowed extensions:
 
-- `disable-model-invocation: true` may be used for command-only skills such as `editor-in-chief`, where accidental auto-triggering would produce the wrong workflow.
+- `disable-model-invocation: true` may be used for command-only skills such as `a1-editor-in-chief`, where accidental auto-triggering would produce the wrong workflow.
 
 When adding a non-standard field:
 
@@ -65,23 +66,23 @@ When adding a non-standard field:
 
 ## Current Skills
 
-### marketing-context
+### a1-marketing-context
 
 Public, auto-triggered setup skill.
 
 Creates and updates `.agents/marketing-context.md`, one context per repository. The context is shared by all marketing skills and stores product, audience, positioning, voice, proof, vocabulary, examples, and business goals.
 
-### editor
+### a1-editor
 
 Public, auto-triggered rewrite skill.
 
 Uses a soft gate: if the user provides text and an editing command, it works immediately. It should not block on missing marketing context, audience, channel, or constraints. It must not invent facts or unsupported claims.
 
-### editor-in-chief
+### a1-editor-in-chief
 
 Public, command-only strategy skill.
 
-Uses a hard gate. It must not hand off to `editor` until reader, goal, channel or format, constraints, and editing operation are clear. It creates an Editor Brief, then executes the rewrite through the `editor` role.
+Uses a hard gate. It must not hand off to `a1-editor` until reader, goal, channel or format, constraints, and editing operation are clear. It creates an Editor Brief, then executes the rewrite through the `a1-editor` role.
 
 ## Platform Adapters
 

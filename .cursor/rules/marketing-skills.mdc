@@ -9,10 +9,10 @@ alwaysApply: false
 
 Canonical instructions live in `skills/*/SKILL.md`. Use those files as the source of truth.
 
-Use `skills/marketing-context/SKILL.md` when the user wants to create or update shared marketing context, describe the product for future marketing work, remember audience or tone, save brand voice, update positioning, or maintain reusable marketing facts.
+Use `skills/a1-marketing-context/SKILL.md` when the user wants to create or update shared marketing context, describe the product for future marketing work, remember audience or tone, save brand voice, update positioning, or maintain reusable marketing facts.
 
-Use `skills/editor/SKILL.md` when the user wants to shorten, rewrite, sharpen, clean up, improve, make stronger, explain edits, or apply a "glavred" style pass to existing text.
+Use `skills/a1-editor/SKILL.md` when the user wants to shorten, rewrite, sharpen, clean up, improve, make stronger, explain edits, or apply a "glavred" style pass to existing text.
 
-Use `skills/editor-in-chief/SKILL.md` only when explicitly invoked by the user for a strategic editor-in-chief process, rigorous editorial review, strategic rewrite setup, or command-style workflow. Do not auto-trigger it for ordinary rewrite requests.
+Use `skills/a1-editor-in-chief/SKILL.md` only when explicitly invoked by the user for a strategic editor-in-chief process, rigorous editorial review, strategic rewrite setup, or command-style workflow. Do not auto-trigger it for ordinary rewrite requests.
 
 If `.agents/marketing-context.md` exists, read it before marketing editing work. If it does not exist, proceed from the user's prompt unless the selected skill says the missing information blocks the task.

@@ -9,20 +9,20 @@ This repository follows the Agent Skills directory format: each skill is a self-
 <!-- SKILLS:START -->
 | Skill | Description |
 |-------|-------------|
-| [editor](skills/editor/) | Fast marketing text editor and rewrite assistant. Use when the user wants to shorten, rewrite, sharpen, clean up,... |
-| [editor-in-chief](skills/editor-in-chief/) | Strategic editorial director for strict text diagnosis, questioning, editor brief creation, and handoff to editor. Use... |
-| [marketing-context](skills/marketing-context/) | Create or update the shared marketing context for a repository. Use when the user wants to set up marketing context,... |
+| [a1-editor](skills/a1-editor/) | Fast marketing text editor and rewrite assistant. Use when the user wants to shorten, rewrite, sharpen, clean up,... |
+| [a1-editor-in-chief](skills/a1-editor-in-chief/) | Strategic editorial director for strict text diagnosis, questioning, editor brief creation, and handoff to editor. Use... |
+| [a1-marketing-context](skills/a1-marketing-context/) | Create or update the shared marketing context for a repository. Use when the user wants to set up marketing context,... |
 <!-- SKILLS:END -->
 
 ## Architecture
 
 The v1 system has three skills:
 
-- `marketing-context`: creates and updates the shared `.agents/marketing-context.md` file for the repository.
-- `editor`: public, auto-triggered, soft-gate text rewriting.
-- `editor-in-chief`: command-only strategic editor, hard gate, Editor Brief, and handoff to `editor`.
+- `a1-marketing-context`: creates and updates the shared `.agents/marketing-context.md` file for the repository.
+- `a1-editor`: public, auto-triggered, soft-gate text rewriting.
+- `a1-editor-in-chief`: command-only strategic editor, hard gate, Editor Brief, and handoff to `a1-editor`.
 
-The `marketing-context` skill is shared by all future marketing skills. It stores product, audience, positioning, voice, proof, and business context. It does not store editorial canon.
+The `a1-marketing-context` skill is shared by all future marketing skills. It stores product, audience, positioning, voice, proof, and business context. It does not store editorial canon.
 
 ## Platform Support
 
@@ -40,7 +40,7 @@ This repository follows the Agent Skills format with documented pragmatic extens
 
 Allowed extension:
 
-- `disable-model-invocation: true` may be used for command-only skills such as `editor-in-chief`, where accidental auto-triggering would produce the wrong workflow.
+- `disable-model-invocation: true` may be used for command-only skills such as `a1-editor-in-chief`, where accidental auto-triggering would produce the wrong workflow.
 
 ## Development
 

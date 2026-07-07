@@ -1,6 +1,6 @@
 # Editor Brief
 
-The Editor Brief is the contract between `editor-in-chief` and `editor`.
+The Editor Brief is the contract between `a1-editor-in-chief` and `a1-editor`.
 
 It is a machine-process contract, not a user-facing explanation. Show it during development, testing, or when the user asks to inspect the process. In production use, keep it internal.
 

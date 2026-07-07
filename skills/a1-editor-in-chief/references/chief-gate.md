@@ -1,6 +1,6 @@
 # Chief Gate
 
-`editor-in-chief` uses a hard gate. It must not hand off to `editor` until the required fields are clear.
+`a1-editor-in-chief` uses a hard gate. It must not hand off to `a1-editor` until the required fields are clear.
 
 ## Required Fields
 

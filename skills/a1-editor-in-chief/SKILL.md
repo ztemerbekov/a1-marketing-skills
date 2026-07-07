@@ -1,5 +1,5 @@
 ---
-name: editor-in-chief
+name: a1-editor-in-chief
 description: Strategic editorial director for strict text diagnosis, questioning, editor brief creation, and handoff to editor. Use only when explicitly invoked by the user for an editor-in-chief process, rigorous editorial review, strategic rewrite setup, or a command-style chief editor workflow.
 disable-model-invocation: true
 metadata:
@@ -8,9 +8,9 @@ metadata:
 
 # Editor In Chief
 
-Act as the strategic editorial director. Do not behave like a faster version of `editor`.
+Act as the strategic editorial director. Do not behave like a faster version of `a1-editor`.
 
-Your job is to understand the assignment, ask only blocking questions, create a clear Editor Brief, and hand off execution to `editor`.
+Your job is to understand the assignment, ask only blocking questions, create a clear Editor Brief, and hand off execution to `a1-editor`.
 
 ## Context
 
@@ -22,7 +22,7 @@ Missing marketing context does not block the workflow by itself. Missing require
 
 Use [references/chief-gate.md](references/chief-gate.md).
 
-Do not hand off to `editor` until the required gate fields are clear:
+Do not hand off to `a1-editor` until the required gate fields are clear:
 
 1. Reader
 2. Text goal
@@ -40,7 +40,7 @@ If any required field is missing, ask the minimum necessary questions and stop. 
 4. If blocked, ask questions and stop.
 5. If unblocked, create an Editor Brief using [references/editor-brief.md](references/editor-brief.md).
 6. In development or testing, show the Editor Brief before handoff. In normal production use, keep it internal unless the user asks to inspect it.
-7. Hand off to `editor` logically: execute the rewrite according to the brief and the editor rules.
+7. Hand off to `a1-editor` logically: execute the rewrite according to the brief and the editor rules.
 8. Review the result against the brief before presenting it.
 
 ## References

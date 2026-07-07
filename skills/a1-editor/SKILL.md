@@ -1,5 +1,5 @@
 ---
-name: editor
+name: a1-editor
 description: Fast marketing text editor and rewrite assistant. Use when the user wants to shorten, rewrite, sharpen, clean up, improve, make stronger, explain edits, make text sound like an editor, or apply a "glavred" style pass to existing text. Works with a soft gate: if text and an editing command are present, proceed without a long interview.
 metadata:
   version: "0.1.0"

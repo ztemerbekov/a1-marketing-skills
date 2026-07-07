@@ -1,6 +1,6 @@
 # Rewrite Operations
 
-Use these operations to specify what `editor` should do in the Editor Brief.
+Use these operations to specify what `a1-editor` should do in the Editor Brief.
 
 ## Shorten
 

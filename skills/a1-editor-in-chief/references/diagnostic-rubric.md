@@ -1,6 +1,6 @@
 # Diagnostic Rubric
 
-Use this rubric to review the `editor` output before presenting it.
+Use this rubric to review the `a1-editor` output before presenting it.
 
 ## Acceptance Checks
 

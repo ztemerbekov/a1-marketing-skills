@@ -1,6 +1,6 @@
 # Canon Core
 
-This is the compact editorial canon shared by `editor-in-chief`.
+This is the compact editorial canon for the `a1-editor` skill.
 
 The deeper canon will be expanded later from the source book. For now, apply only safe, general editing principles.
 
@@ -21,6 +21,12 @@ The deeper canon will be expanded later from the source book. For now, apply onl
 - Do not change legal, medical, financial, or compliance-sensitive meaning.
 - If a sentence is ambiguous, preserve the safer interpretation or flag the ambiguity.
 
-## Chief Principle
+## Default Editing Moves
 
-The chief editor protects the assignment before protecting the wording. A rewrite with unclear reader, goal, channel, or constraints is not ready for execution.
+- Remove filler and throat-clearing.
+- Replace vague verbs and nouns with clearer alternatives.
+- Break overloaded sentences.
+- Put the main point earlier.
+- Convert passive constructions when active voice is clearer.
+- Replace generic benefits with concrete consequences when supported by the source text.
+- Preserve useful personality; remove decoration that hides the point.
