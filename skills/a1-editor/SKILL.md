@@ -11,6 +11,10 @@ Rewrite and improve existing marketing text quickly.
 
 This is the public, auto-triggered editor skill. It is designed for broad use: marketers, founders, and non-editors should be able to paste text and get a better version without a heavy process.
 
+## Language
+
+Detect the user's language and work in that language by default. If the input text and user instruction use different languages, preserve the input text language for rewritten copy and use the instruction language for explanations unless the user asks otherwise.
+
 ## Context
 
 Before editing, read `.agents/marketing-context.md` if it exists. If not found, optionally check `.claude/marketing-context.md` and `marketing-context.md`.

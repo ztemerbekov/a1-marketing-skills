@@ -46,6 +46,13 @@ Rules:
 - Keep `description` specific; include trigger phrases and scope boundaries.
 - Keep `SKILL.md` concise. Put detailed canon, rubrics, examples, and templates in `references/`.
 - Use relative links from `SKILL.md` to files inside the same skill directory.
+- Every skill must include this exact language policy:
+
+```markdown
+## Language
+
+Detect the user's language and work in that language by default. If the input text and user instruction use different languages, preserve the input text language for rewritten copy and use the instruction language for explanations unless the user asks otherwise.
+```
 
 ## Compatibility Philosophy
 

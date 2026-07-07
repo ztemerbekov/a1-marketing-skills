@@ -60,6 +60,13 @@ for skill_dir in "$SKILLS_DIR"/*/; do
     skill_warnings+=("SKILL.md has $line_count lines; keep under 500 and move details to references/")
   fi
 
+  language_policy="Detect the user's language and work in that language by default. If the input text and user instruction use different languages, preserve the input text language for rewritten copy and use the instruction language for explanations unless the user asks otherwise."
+  if ! grep -q '^## Language$' "$skill_file"; then
+    skill_errors+=("Missing required '## Language' section")
+  elif ! grep -Fq "$language_policy" "$skill_file"; then
+    skill_errors+=("Language section must include the required multilingual policy")
+  fi
+
   while IFS= read -r key; do
     [[ -z "$key" ]] && continue
     case "$key" in

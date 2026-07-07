@@ -11,6 +11,10 @@ Create and maintain the repository's shared marketing context.
 
 The canonical file is `.agents/marketing-context.md`. Other marketing skills read it when present, but it is not required for them to work.
 
+## Language
+
+Detect the user's language and work in that language by default. If the input text and user instruction use different languages, preserve the input text language for rewritten copy and use the instruction language for explanations unless the user asks otherwise.
+
 ## Workflow
 
 ### 1. Check Existing Context
