@@ -77,6 +77,17 @@ for skill_dir in "$SKILLS_DIR"/*/; do
     esac
   done < <(printf '%s\n' "$frontmatter" | awk -F: '/^[A-Za-z0-9_-]+:/{print $1}')
 
+  while IFS= read -r line; do
+    [[ -z "$line" ]] && continue
+    [[ "$line" =~ ^[[:space:]] ]] && continue
+    key="${line%%:*}"
+    value="${line#*:}"
+    value="${value#"${value%%[![:space:]]*}"}"
+    if [[ "$value" != \"* && "$value" != \'* && "$value" == *": "* ]]; then
+      skill_errors+=("Frontmatter field '$key' contains an unquoted ': ' sequence; quote the value for valid YAML")
+    fi
+  done < <(printf '%s\n' "$frontmatter" | grep -E '^[A-Za-z0-9_-]+: .+')
+
   if [[ ${#skill_errors[@]} -gt 0 ]]; then
     echo "FAIL $skill_name"
     for error in "${skill_errors[@]}"; do

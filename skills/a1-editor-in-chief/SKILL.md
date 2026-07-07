@@ -1,6 +1,6 @@
 ---
 name: a1-editor-in-chief
-description: Strategic editorial director for strict text diagnosis, questioning, editor brief creation, and handoff to editor. Use only when explicitly invoked by the user for an editor-in-chief process, rigorous editorial review, strategic rewrite setup, or a command-style chief editor workflow.
+description: 'Strategic editorial director for strict text diagnosis, questioning, editor brief creation, and handoff to editor. Use only when explicitly invoked by the user for an editor-in-chief process, rigorous editorial review, strategic rewrite setup, or a command-style chief editor workflow.'
 disable-model-invocation: true
 metadata:
   version: "0.1.0"
