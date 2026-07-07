@@ -1,6 +1,6 @@
 ---
 name: a1-editor
-description: 'Fast marketing text editor and rewrite assistant. Use when the user wants to shorten, rewrite, sharpen, clean up, improve, make stronger, explain edits, make text sound like an editor, or apply a "glavred" style pass to existing text. Works with a soft gate: if text and an editing command are present, proceed without a long interview.'
+description: 'Fast marketing text editor and rewrite assistant. Use when the user wants to shorten, rewrite, clean up, clarify, improve, make stronger, or explain edits to existing text. Also use for Russian requests like "сократи", "почисти", "убери воду", "усиль", "сделай убедительнее", "перепиши", "отредактируй". Works with a soft gate: if text and an editing command are present, proceed without a long interview.'
 metadata:
   version: "0.1.0"
 ---
@@ -32,9 +32,28 @@ Do not block on missing audience, channel, goal, or constraints. Use safe assump
 
 If the user provides no editable text, ask for the text.
 
+## Operation Routing
+
+Use [references/operation-routing.md](references/operation-routing.md).
+
+Default to editing mode when the user provides text and asks to shorten, clean up, clarify, improve, strengthen, make more persuasive, or rewrite.
+
+Use strategy mode only when the user asks to define or rethink the underlying message, positioning, offer, audience, campaign, or structure rather than edit the supplied text.
+
 ## Editing Rules
 
 Use the compact canon in [references/canon-core.md](references/canon-core.md).
+
+Use the source boundary from [references/source-boundary.md](references/source-boundary.md).
+
+Use editorial passes from [references/editorial-passes.md](references/editorial-passes.md).
+
+Use level references as needed:
+
+- [references/text-level.md](references/text-level.md)
+- [references/paragraph-level.md](references/paragraph-level.md)
+- [references/sentence-level.md](references/sentence-level.md)
+- [references/word-level.md](references/word-level.md)
 
 Use rewrite operations from [references/rewrite-operations.md](references/rewrite-operations.md).
 
@@ -45,6 +64,8 @@ Default behavior:
 - Improve clarity, structure, rhythm, specificity, and force.
 - Remove filler, hedging, needless abstraction, and weak phrasing.
 - Keep the result appropriate for the likely channel and audience.
+- Improve only from the user's text, explicit instruction, and marketing context.
+- Do not add CTA, benefits, objections, offer blocks, urgency, scarcity, proof, or structure unless they are already present in the source material or explicitly requested.
 - If the instruction is ambiguous, choose the safest useful edit.
 
 ## Output
@@ -60,13 +81,14 @@ For most requests, output:
 
 - [short reason]
 - [short reason]
+- [up to 5 short reasons total]
 
 ## Assumptions
 
 - [only if relevant]
 ```
 
-Keep explanations short. If the user asks only for the edited text, provide only the edited text.
+Always include `What Changed` with 1-5 short explanatory bullets unless the user explicitly asks for only the edited text.
 
 If the user asks to explain edits, include concise rationale tied to specific changes.
 

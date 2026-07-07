@@ -10,8 +10,10 @@ Use this rubric to review the `a1-editor` output before presenting it.
 - Does it obey all constraints?
 - Does it apply the requested operation?
 - Does it avoid invented facts, proof, or promises?
+- Does it avoid invented CTA, benefits, objections, urgency, scarcity, guarantees, offer blocks, or new structure?
 - Is the main point clearer than before?
 - Is the text tighter without losing necessary meaning?
+- Does `What Changed` explain 1-5 real editorial moves?
 
 ## If the Draft Fails
 

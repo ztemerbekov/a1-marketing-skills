@@ -1,32 +1,45 @@
 # Canon Core
 
-This is the compact editorial canon for the `a1-editor` skill.
+This is the compact editorial canon for the `a1-editor` skill. The editorial rules are written in Russian because the skill edits Russian marketing text using Russian information-style principles.
 
-The deeper canon will be expanded later from the source book. For now, apply only safe, general editing principles.
+Technical contracts may stay in English elsewhere. Here, Russian wording is part of the editing method.
 
-## Principles
+## Core Principles / Главные принципы
 
-- Meaning first: preserve the intended message unless the user asks to change it.
-- Clarity over cleverness: the reader should understand the point quickly.
-- Specificity over abstraction: prefer concrete nouns, actions, and outcomes.
-- Brevity with sense: cut filler without deleting necessary context.
-- Proof over hype: strong claims need evidence.
-- Reader orientation: make the text about the reader's situation, not the author's effort.
-- Rhythm matters: vary sentence length and remove clumsy repetition.
+- Смысл важнее красивости: сохраняй исходное намерение, если пользователь не просит менять его.
+- Сначала для читателя, потом для автора: текст должен помогать читателю понять, выбрать, решить или сделать.
+- Кратко, но не в ущерб смыслу: сокращай мусор, а не полезную информацию.
+- Ясно, а не эффектно: читатель должен понимать мысль без расшифровки.
+- Конкретно вместо абстрактно: предпочитай людей, действия, предметы, обстоятельства и последствия.
+- Доказательно вместо громко: сильные утверждения требуют опоры в исходнике или разрешенном marketing context.
+- Живой тон не равен украшательству: сохраняй полезную индивидуальность, убирай декор, который прячет смысл.
 
-## Safety Rules
+## Levels / Уровни работы
 
-- Do not fabricate metrics, customers, testimonials, awards, guarantees, or product capabilities.
-- Do not turn a cautious claim into a promise unless the user provided proof.
-- Do not change legal, medical, financial, or compliance-sensitive meaning.
-- If a sentence is ambiguous, preserve the safer interpretation or flag the ambiguity.
+Редактируй не только слова. Проверяй текст сверху вниз, а затем чисти снизу вверх:
+
+1. Полезное действие и читатель: зачем читателю этот текст.
+2. Текст в целом: главный смысл, порядок, достаточность и лишнее.
+3. Абзацы: один абзац - одна мысль, ключевые слова ближе к началу.
+4. Предложения: понятные связи, люди и действия вместо туманных процессов.
+5. Слова: стоп-слова, вводные, неопределенность, заумь, оценки, штампы.
+
+Внутренние проверки не превращай в вопросы пользователю. Спрашивай только тогда, когда без ответа придется выдумывать, обещать лишнее или выбирать между разными смыслами.
+
+## Safety Rules / Границы безопасности
+
+- Не выдумывай метрики, клиентов, отзывы, награды, гарантии, возможности продукта, доказательства, срочность, дефицит или утверждения.
+- Не превращай осторожное утверждение в обещание, если исходник этого не подтверждает.
+- Не меняй юридический, медицинский, финансовый или иной чувствительный смысл.
+- Если предложение неоднозначно, сохраняй более осторожную трактовку или отмечай неоднозначность.
+- Никогда не добавляй из воздуха: оффер, CTA, выгоды, возражения, доказательства, цифры, гарантии, кейсы, срочность или новую структуру.
 
 ## Default Editing Moves
 
-- Remove filler and throat-clearing.
-- Replace vague verbs and nouns with clearer alternatives.
-- Break overloaded sentences.
-- Put the main point earlier.
-- Convert passive constructions when active voice is clearer.
-- Replace generic benefits with concrete consequences when supported by the source text.
-- Preserve useful personality; remove decoration that hides the point.
+- Убирай разгон, пустые вводные и повторы.
+- Заменяй туманные глаголы и существительные более точными словами.
+- Разбивай перегруженные предложения.
+- Выноси главный смысл ближе к началу.
+- Заменяй пассивные и канцелярские конструкции, когда прямое действие яснее.
+- Заменяй общие выгоды конкретными последствиями только если они есть в исходнике или разрешенном marketing context.
+- Сохраняй полезную индивидуальность; убирай украшения, которые прячут смысл.

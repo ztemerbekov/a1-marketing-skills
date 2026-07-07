@@ -1,47 +1,74 @@
 # Rewrite Operations
 
-Use these operations as a menu, not a checklist. Pick the operations that match the user's request.
+Use these operation names as stable labels. The editing rules are written in Russian because they control Russian text rewriting.
+
+Работай только с тем, что есть в исходном тексте, явной инструкции пользователя и разрешенном marketing context. Операция не дает права добавлять новые факты, оффер, CTA, выгоды, возражения, доказательства, срочность или гарантии из воздуха.
 
 ## Shorten
 
-Goal: reduce length while preserving meaning.
+Цель: сократить текст, сохранив смысл.
 
-- Remove repeated ideas.
-- Cut setup phrases before the point.
-- Replace long constructions with direct wording.
-- Keep terms that carry product, audience, or proof meaning.
+- Убери повторяющиеся идеи.
+- Срежь разгон перед сутью.
+- Замени длинные конструкции прямой формулировкой.
+- Сохрани термины, которые держат продуктовый, аудиторный или доказательный смысл.
+- Не выкидывай детали, которые держат смысл, доказательство или ограничение.
+
+Russian triggers: `сократи`, `сделай короче`, `убери лишнее`, `убери воду`.
+
+English triggers: `shorten`, `make shorter`, `cut`, `remove fluff`.
 
 ## Clarify
 
-Goal: make the text easier to understand.
+Цель: сделать текст понятнее.
 
-- Put the main claim first.
-- Split one overloaded sentence into two.
-- Replace unclear pronouns with named subjects.
-- Define or remove jargon when the likely reader may not know it.
+- Поставь главное утверждение раньше.
+- Разбей перегруженное предложение на два.
+- Замени неясные местоимения названными предметами или действующими лицами.
+- Объясни или убери жаргон, если вероятный читатель может его не знать.
+- Распутывай канцелярит, неопределенность и цепочки родительных падежей.
+
+Russian triggers: `проясни`, `сделай понятнее`, `упрости`, `почисти`.
+
+English triggers: `clarify`, `make clearer`, `simplify`, `clean up`.
 
 ## Strengthen
 
-Goal: make the text more convincing without inventing facts.
+Цель: сделать текст убедительнее без выдумывания фактов и неподтвержденных маркетинговых элементов.
 
-- Make the promise sharper if the source supports it.
-- Connect features to consequences.
-- Replace generic adjectives with observable outcomes.
-- Add a clearer CTA only when the user asks or the text implies one.
+- Сделай обещание точнее, если исходник это поддерживает.
+- Свяжи свойства с последствиями, если эта связь уже есть в тексте или разрешенном marketing context.
+- Замени общие оценки наблюдаемыми результатами.
+- Вынеси полезное действие, ценность для читателя или доказательство раньше, если они уже есть.
+- Не добавляй CTA, если его нет в исходнике и пользователь явно не попросил CTA.
+- Не добавляй новые выгоды, возражения, доказательства, срочность, дефицит, гарантии или блоки оффера.
+
+Russian triggers: `усиль`, `сделай убедительнее`, `сделай продающе`, `докрути`.
+
+English triggers: `strengthen`, `make persuasive`, `make it sell`, `improve`.
 
 ## Restructure
 
-Goal: improve sequence and flow.
+Цель: улучшить порядок и связность.
 
-- Group related ideas.
-- Move context before conclusions when needed.
-- Move the strongest point earlier.
-- Use bullets when scanning matters more than prose flow.
+- Сгруппируй связанные идеи.
+- Поставь контекст перед выводом, если так понятнее.
+- Передвинь самый сильный уже имеющийся смысл раньше.
+- Используй список, когда сканирование важнее цельного абзаца.
+- Не создавай новые разделы или новую маркетинговую архитектуру, если они не следуют из исходника и пользователь явно их не попросил.
+
+Russian triggers: `перестрой`, `улучши структуру`, `собери логичнее`.
+
+English triggers: `restructure`, `improve structure`, `make it flow`.
 
 ## Explain Edits
 
-Goal: help the user understand the revision.
+Цель: помочь пользователю понять правку.
 
-- Explain the 3-5 most important changes.
-- Tie each explanation to an editing principle.
-- Avoid line-by-line commentary unless requested.
+- Объясни 1-5 самых важных изменений.
+- Привяжи каждое объяснение к редакторскому принципу.
+- Не делай построчный разбор, если пользователь его не просил.
+
+Russian triggers: `объясни правки`, `что изменилось`, `почему так`.
+
+English triggers: `explain edits`, `what changed`, `why`.

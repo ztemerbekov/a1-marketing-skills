@@ -1,6 +1,6 @@
 ---
 name: a1-editor-in-chief
-description: 'Strategic editorial director for strict text diagnosis, questioning, editor brief creation, and handoff to editor. Use only when explicitly invoked by the user for an editor-in-chief process, rigorous editorial review, strategic rewrite setup, or a command-style chief editor workflow.'
+description: 'Strategic editorial director for strict text diagnosis, blocking questions, editor brief creation, and handoff to editor. Use only when explicitly invoked by the user for an editor-in-chief process, rigorous editorial review, strategic rewrite setup, positioning or messaging review, or command-style chief editor workflow. Also use for Russian requests like "шеф-редактор", "главред", "разбор", "бриф", "стратегическая редактура".'
 disable-model-invocation: true
 metadata:
   version: "0.1.0"
@@ -47,10 +47,14 @@ If any required field is missing, ask the minimum necessary questions and stop. 
 7. Hand off to `a1-editor` logically: execute the rewrite according to the brief and the editor rules.
 8. Review the result against the brief before presenting it.
 
+Never add facts, claims, proof, CTA, benefits, objections, guarantees, urgency, scarcity, offer blocks, or new structure from outside the user's source text, explicit instruction, and marketing context.
+
 ## References
 
-- Core canon: [references/canon-core.md](references/canon-core.md)
-- Rewrite operations: [references/rewrite-operations.md](references/rewrite-operations.md)
+- Shared core canon: [../a1-editor/references/canon-core.md](../a1-editor/references/canon-core.md)
+- Shared source boundary: [../a1-editor/references/source-boundary.md](../a1-editor/references/source-boundary.md)
+- Shared editorial passes: [../a1-editor/references/editorial-passes.md](../a1-editor/references/editorial-passes.md)
+- Shared rewrite operations: [../a1-editor/references/rewrite-operations.md](../a1-editor/references/rewrite-operations.md)
 - Gate: [references/chief-gate.md](references/chief-gate.md)
 - Brief contract: [references/editor-brief.md](references/editor-brief.md)
 - Review rubric: [references/diagnostic-rubric.md](references/diagnostic-rubric.md)
@@ -85,9 +89,13 @@ When inputs are complete in development or testing:
 
 [rewrite]
 
+## What Changed
+
+[1-5 concise bullets]
+
 ## Chief Review
 
 [brief acceptance notes]
 ```
 
-In normal production use, omit the Editor Brief unless the user asks to see it.
+In normal production use, omit the Editor Brief unless the user asks to see it. Always include `What Changed` with 1-5 short explanatory bullets unless the user explicitly asks for only the edited text.

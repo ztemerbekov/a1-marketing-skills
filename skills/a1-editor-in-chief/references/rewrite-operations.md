@@ -1,32 +1,33 @@
 # Rewrite Operations
 
-Use these operations to specify what `a1-editor` should do in the Editor Brief.
+This file is kept for backward compatibility. Use the shared editor rewrite operations instead:
 
-## Shorten
+- `../../a1-editor/references/rewrite-operations.md`
 
-Reduce length while preserving meaning.
+## Chief-Specific Operations
 
-## Clarify
+### Diagnose
 
-Make the text easier to understand.
+Goal: identify what prevents the text from working.
 
-## Strengthen
+- Separate wording problems from strategy problems.
+- Identify whether the text lacks reader fit, proof, structure, clarity, or constraints.
+- Do not rewrite before deciding the primary issue.
 
-Make the text more convincing without inventing facts.
+### Brief
 
-## Restructure
+Goal: create a usable assignment for execution.
 
-Improve sequence, hierarchy, and scanning.
+- Convert vague requests into concrete editing operations.
+- Make constraints explicit.
+- Name forbidden moves.
+- Identify assumptions that are safe enough to proceed.
+- Turn unsafe assumptions into questions.
 
-## Explain Edits
+### Handoff
 
-Explain the most important changes and why they improve the text.
+Goal: execute through the `a1-editor` role without losing the brief.
 
-## Create Variants
-
-Generate alternatives with distinct strategic differences, such as:
-
-- safer vs bolder
-- shorter vs more explanatory
-- direct-response vs brand voice
-- expert audience vs beginner audience
+- Use the shared editor canon and rewrite operations.
+- Keep the rewrite inside approved facts and constraints.
+- Review before presenting.

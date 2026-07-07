@@ -13,7 +13,9 @@ It is a machine-process contract, not a user-facing explanation. Show it during 
 **Reader:** [audience and awareness level]
 **Goal:** [what the text must make the reader think, feel, or do]
 **Reader state:** [what the reader likely knows, doubts, wants, or fears]
+**Assignment type:** [editing / strategy]
 **Primary operation:** [shorten / clarify / strengthen / restructure / explain edits / create variants]
+**Selected references:** [shared canon and level references that apply]
 **Allowed moves:** [what editor may change]
 **Forbidden moves:** [what editor must not change, invent, or imply]
 **Voice:** [tone and style constraints]
@@ -27,3 +29,4 @@ It is a machine-process contract, not a user-facing explanation. Show it during 
 - Do not include unapproved facts.
 - Convert uncertainty into either a constraint or a blocking question.
 - Keep the brief concise.
+- Explicitly forbid adding CTA, benefits, proof, objections, offer blocks, urgency, scarcity, guarantees, metrics, case studies, or new structure unless they are present in the source material or marketing context.
