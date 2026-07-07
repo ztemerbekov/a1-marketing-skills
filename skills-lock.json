@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "skills": {
+    "a1-editor": {
+      "source": "ztemerbekov/marketing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/a1-editor/SKILL.md",
+      "computedHash": "a07abf4caa7cae180fd4c23b96d79c172b9f744451ee7a7941f1c35c18f30a39"
+    },
+    "a1-editor-in-chief": {
+      "source": "ztemerbekov/marketing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/a1-editor-in-chief/SKILL.md",
+      "computedHash": "d1a1219262f6666666e0a8cfca804cf17daedabcbae91e952d759b4062b6c9ef"
+    },
+    "a1-setup-marketing-context": {
+      "source": "ztemerbekov/marketing-skills",
+      "sourceType": "github",
+      "skillPath": "skills/a1-setup-marketing-context/SKILL.md",
+      "computedHash": "6018933c05453cb7ec5fb0645807c474ebb9af24666cb1901c4adf7a7e60b9ee"
+    }
+  }
+}
