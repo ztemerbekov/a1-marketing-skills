@@ -19,7 +19,7 @@ This repository follows the Agent Skills directory format: each skill is a self-
 
 ## Install
 
-### Recommended: npx skills
+### <img src="./assets/vercel.webp" alt="npx skills" width="24" height="24"> Recommended: npx skills
 
 Install all current skills into the current project:
 

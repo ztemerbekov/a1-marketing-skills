@@ -19,7 +19,7 @@
 
 ## Установка
 
-### Рекомендуемый способ: npx skills
+### <img src="./assets/vercel.webp" alt="npx skills" width="24" height="24"> Рекомендуемый способ: npx skills
 
 Установить все текущие skills в текущий проект:
 
