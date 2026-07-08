@@ -46,7 +46,7 @@ rm -rf .agents/skills/a1-setup-marketing-context \
 
 Этот способ стоит использовать первым, когда нужна чистая cross-agent установка. Разделы по отдельным платформам ниже — это fallback-варианты или client-native альтернативы.
 
-### Codex
+### <img src="./assets/codex.webp" alt="Codex" width="48"> Codex
 
 Установить текущие skills из GitHub:
 
@@ -66,7 +66,7 @@ rm -rf ~/.codex/skills/a1-setup-marketing-context \
 
 После установки или удаления перезапустите Codex.
 
-### Claude Code
+### <img src="./assets/claude.webp" alt="Claude Code" width="48"> Claude Code
 
 Установить из GitHub:
 
@@ -95,7 +95,7 @@ rm -rf ~/.codex/skills/a1-setup-marketing-context \
 /plugin marketplace add /Users/ztemerbekov/Documents/GitHub/marketing-skills
 ```
 
-### Cursor
+### <img src="./assets/cursor.webp" alt="Cursor" width="48"> Cursor
 
 Поддержка Cursor работает как project adapter. Скопируйте canonical skills и Cursor rule в проект, где хотите их использовать:
 
@@ -114,7 +114,7 @@ rm -rf skills/a1-setup-marketing-context \
        .cursor/rules/marketing-skills.mdc
 ```
 
-### Antigravity
+### <img src="./assets/antigravity.webp" alt="Antigravity" width="48"> Antigravity
 
 Поддержка Antigravity использует cross-agent project convention. Скопируйте canonical skills в директорию `.agents/skills/` целевого проекта:
 
