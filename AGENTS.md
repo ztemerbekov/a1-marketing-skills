@@ -6,6 +6,19 @@ Guidelines for AI agents working in this repository.
 
 This repository contains marketing-focused Agent Skills. Skills should be useful across Codex, Claude Code, Cursor, and other clients that understand the Agent Skills folder format.
 
+## README Languages
+
+`README.md` is the default English README.
+
+`README.ru.md` is the Russian translation.
+
+Keep the language switcher near the top of both files:
+
+- `README.md`: `**English** | [Русский](./README.ru.md)`
+- `README.ru.md`: `[English](./README.md) | **Русский**`
+
+When changing installation, architecture, platform-support, or development instructions in one README, update the other README in the same change.
+
 ## Architecture
 
 Canonical skills live under `skills/`:

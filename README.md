@@ -2,6 +2,8 @@
 
 # Marketing Skills
 
+**English** | [Русский](./README.ru.md)
+
 Marketing skills for AI agents.
 
 This repository follows the Agent Skills directory format: each skill is a self-contained folder with a `SKILL.md` file and optional `references/`, `scripts/`, or `assets/`.
@@ -144,8 +146,8 @@ rm -rf .agents/skills/a1-setup-marketing-context \
 <!-- SKILLS:START -->
 | Skill | Description |
 |-------|-------------|
-| [a1-editor](skills/a1-editor/) | Fast marketing text editor and rewrite assistant. Use when the user wants to shorten, rewrite, sharpen, clean up,... |
-| [a1-editor-in-chief](skills/a1-editor-in-chief/) | Strategic editorial director for strict text diagnosis, questioning, editor brief creation, and handoff to editor. Use... |
+| [a1-editor](skills/a1-editor/) | Fast marketing text editor and rewrite assistant. Use when the user wants to shorten, rewrite, clean up, clarify,... |
+| [a1-editor-in-chief](skills/a1-editor-in-chief/) | Strategic editorial director for strict text diagnosis, blocking questions, editor brief creation, and handoff to... |
 | [a1-setup-marketing-context](skills/a1-setup-marketing-context/) | Create or update the shared marketing context for a repository. Use when the user wants to set up marketing context,... |
 <!-- SKILLS:END -->
 
