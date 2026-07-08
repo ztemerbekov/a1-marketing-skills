@@ -112,6 +112,10 @@ Cursor rules should point to canonical skills, not duplicate their full logic.
 
 Claude plugin files should describe where skills live, not redefine the skills.
 
+## Change Reporting
+
+After every code or documentation change, include a suggested commit title in the response.
+
 ## Validation
 
 Run:

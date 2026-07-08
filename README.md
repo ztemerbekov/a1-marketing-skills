@@ -46,7 +46,7 @@ rm -rf .agents/skills/a1-setup-marketing-context \
 
 Use this path first when you want a clean cross-agent install. The platform-specific sections below are fallbacks or client-native alternatives.
 
-### <img src="./assets/codex.webp" alt="Codex" width="48"> Codex
+### <img src="./assets/codex.webp" alt="Codex" width="12" height="12"> Codex
 
 Install the current skills from GitHub:
 
@@ -66,7 +66,7 @@ rm -rf ~/.codex/skills/a1-setup-marketing-context \
 
 Restart Codex after installing or removing skills.
 
-### <img src="./assets/claude.webp" alt="Claude Code" width="48"> Claude Code
+### <img src="./assets/claude.webp" alt="Claude Code" width="12" height="12"> Claude Code
 
 Install from GitHub:
 
@@ -95,7 +95,7 @@ For local development, add this checkout as the marketplace instead:
 /plugin marketplace add /Users/ztemerbekov/Documents/GitHub/marketing-skills
 ```
 
-### <img src="./assets/cursor.webp" alt="Cursor" width="48"> Cursor
+### <img src="./assets/cursor.webp" alt="Cursor" width="12" height="12"> Cursor
 
 Cursor support is a project adapter. Copy the canonical skills and Cursor rule into the project where you want to use them:
 
@@ -114,7 +114,7 @@ rm -rf skills/a1-setup-marketing-context \
        .cursor/rules/marketing-skills.mdc
 ```
 
-### <img src="./assets/antigravity.webp" alt="Antigravity" width="48"> Antigravity
+### <img src="./assets/antigravity.webp" alt="Antigravity" width="12" height="12"> Antigravity
 
 Antigravity support uses the cross-agent project convention. Copy the canonical skills into the target project's `.agents/skills/` directory:
 
