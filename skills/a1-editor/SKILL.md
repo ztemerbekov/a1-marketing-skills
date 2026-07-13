@@ -1,6 +1,6 @@
 ---
 name: a1-editor
-description: 'Fast marketing text editor and rewrite assistant. Use when the user wants to shorten, rewrite, clean up, clarify, improve, make stronger, or explain edits to existing text. Also use for Russian requests like "сократи", "почисти", "убери воду", "усиль", "сделай убедительнее", "перепиши", "отредактируй". Works with a soft gate: if text and an editing command are present, proceed without a long interview.'
+description: 'Fast marketing text editor and rewrite assistant. Use when the user wants to shorten, rewrite, clean up, clarify, improve, make stronger, or explain edits to existing text. Russian triggers include "сократи", "почисти", "убери воду", "усиль", "перепиши", and "отредактируй". Explicit information-style triggers include "в информационном стиле", "в инфостиле", "по Ильяхову", and "по Пиши, сокращай". Works with a soft gate.'
 metadata:
   version: "0.1.0"
 ---
@@ -35,6 +35,8 @@ If the user provides no editable text, ask for the text.
 ## Operation Routing
 
 Use [references/operation-routing.md](references/operation-routing.md).
+
+When the user explicitly requests information style, use [references/information-style.md](references/information-style.md). Do not infer this mode from generic editing requests.
 
 Default to editing mode when the user provides text and asks to shorten, clean up, clarify, improve, strengthen, make more persuasive, or rewrite.
 

@@ -67,6 +67,7 @@ Examples:
 - clarify
 - strengthen
 - restructure
+- information-style
 - explain edits
 - create variants
 

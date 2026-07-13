@@ -161,6 +161,19 @@ The v1 system has three skills:
 
 The `a1-setup-marketing-context` skill is shared by all future marketing skills. It stores product, audience, positioning, voice, proof, and business context. It does not store editorial canon.
 
+## Editing Workflows and Modes
+
+Choose the entry point by how much assignment discovery you need:
+
+| Workflow | Use it when | Behavior |
+|----------|-------------|----------|
+| `a1-editor` | The text and editing intent are already clear | Starts immediately with a soft gate and returns the edited text plus concise change notes |
+| `a1-editor-in-chief` | Reader, goal, channel, constraints, or editorial strategy need to be established | Uses a hard gate, creates an Editor Brief, and then hands the selected operation to `a1-editor` |
+
+Both workflows use the same editing operations. Standard requests such as “edit,” “clean up,” “shorten,” or “clarify” preserve the normal, more conservative editing behavior.
+
+Information style is a separate explicit mode. Activate it with unambiguous requests such as “in information style,” “по Ильяхову,” or “по «Пиши, сокращай».” The mode may remove empty author-focused setup, neutralize unsupported evaluations, reorganize existing material, and improve Markdown. It still cannot introduce facts, definitions, claims, or conclusions from model knowledge. Explicit constraints such as “preserve my voice” or “preserve the structure” always take priority.
+
 ## Platform Support
 
 Canonical skills live in `skills/`.

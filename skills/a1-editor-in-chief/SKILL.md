@@ -1,6 +1,6 @@
 ---
 name: a1-editor-in-chief
-description: 'Strategic editorial director for strict text diagnosis, blocking questions, editor brief creation, and handoff to editor. Use only when explicitly invoked by the user for an editor-in-chief process, rigorous editorial review, strategic rewrite setup, positioning or messaging review, or command-style chief editor workflow. Also use for Russian requests like "шеф-редактор", "главред", "разбор", "бриф", "стратегическая редактура".'
+description: 'Strategic editorial director for strict text diagnosis, blocking questions, editor brief creation, and handoff to editor. Use only when explicitly invoked for an editor-in-chief process, rigorous editorial review, strategic rewrite setup, positioning or messaging review, or command-style chief editor workflow. Russian triggers include "шеф-редактор", "главред", "разбор", "бриф", and "стратегическая редактура". Supports information-style editing through the shared editor operation after the hard gate.'
 disable-model-invocation: true
 metadata:
   version: "0.1.0"
@@ -55,6 +55,7 @@ Never add facts, claims, proof, CTA, benefits, objections, guarantees, urgency, 
 - Shared source boundary: [../a1-editor/references/source-boundary.md](../a1-editor/references/source-boundary.md)
 - Shared editorial passes: [../a1-editor/references/editorial-passes.md](../a1-editor/references/editorial-passes.md)
 - Shared rewrite operations: [../a1-editor/references/rewrite-operations.md](../a1-editor/references/rewrite-operations.md)
+- Shared information-style operation: [../a1-editor/references/information-style.md](../a1-editor/references/information-style.md)
 - Gate: [references/chief-gate.md](references/chief-gate.md)
 - Brief contract: [references/editor-brief.md](references/editor-brief.md)
 - Review rubric: [references/diagnostic-rubric.md](references/diagnostic-rubric.md)

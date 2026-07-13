@@ -4,6 +4,21 @@ Classify the request by meaning, including Russian and English phrasing. This is
 
 Определи режим по смыслу запроса, а не по точному совпадению слов.
 
+## Information Style / Информационный стиль
+
+Use the dedicated information-style operation only when the user explicitly asks for it. Follow [information-style.md](information-style.md).
+
+Explicit Russian markers include:
+
+- `в информационном стиле`
+- `в инфостиле`
+- `по Ильяхову`
+- `по «Пиши, сокращай»`
+
+Equivalent unambiguous phrasing also activates the operation. Generic requests such as `отредактируй`, `почисти`, `убери воду`, `сократи`, or `сделай понятнее` do not activate it by themselves.
+
+Information style is an editing operation, not strategy mode. An explicit user constraint such as `сохрани мой голос`, `сохрани структуру`, or `не меняй форматирование` overrides the operation defaults.
+
 ## Editing Mode / Режим редактуры
 
 Default mode. Use when the user provides text and asks to rewrite, shorten, clean up, clarify, improve, strengthen, make more persuasive, or make it sell.

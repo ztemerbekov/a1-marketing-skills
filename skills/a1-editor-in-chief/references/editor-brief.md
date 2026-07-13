@@ -14,7 +14,7 @@ It is a machine-process contract, not a user-facing explanation. Show it during 
 **Goal:** [what the text must make the reader think, feel, or do]
 **Reader state:** [what the reader likely knows, doubts, wants, or fears]
 **Assignment type:** [editing / strategy]
-**Primary operation:** [shorten / clarify / strengthen / restructure / explain edits / create variants]
+**Primary operation:** [shorten / clarify / strengthen / restructure / information-style / explain edits / create variants]
 **Selected references:** [shared canon and level references that apply]
 **Allowed moves:** [what editor may change]
 **Forbidden moves:** [what editor must not change, invent, or imply]
