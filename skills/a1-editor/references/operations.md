@@ -38,6 +38,8 @@ Move the main point earlier, untangle overloaded syntax, name known actors or ob
 
 When weak material contains one observable function alongside vague process or interaction claims, anchor the rewrite in the observable function and remove the unsupported abstraction. Do not turn vague process or interaction language into a broader categorical capability merely to make it sound concrete.
 
+Use the observable function as the entire rewrite if it is the only supported concrete content. Do not retain or paraphrase the vague source sentences merely because they appeared in the input.
+
 **Complete when:** the same source-supported meaning requires less interpretation from the reader.
 
 ## Strengthen

@@ -126,6 +126,8 @@ require_text "skills/a1-editor/evals/cases/significant-ambiguity.md" 'Ближа
 require_text "skills/a1-editor/evals/cases/information-style-explicit.md" "личный опыт остается отдельным абзацем перед списком" "Information Style regression must reject leaving personal context before the actionable list"
 require_text "skills/a1-editor/evals/cases/clarify-weak-source.md" 'объединяет общение с клиентами' "Clarify regression must reject broadening vague process language into a capability"
 require_text "skills/a1-editor/references/operations.md" "Do not turn vague process or interaction language into a broader categorical capability" "Clarify runtime must not broaden vague process language"
+require_text "skills/a1-editor/evals/cases/clarify-weak-source.md" "допустимо оставить только конкретный факт" "Clarify regression must allow dropping unsupported source sentences entirely"
+require_text "skills/a1-editor/references/operations.md" "Use the observable function as the entire rewrite if it is the only supported concrete content" "Clarify runtime must drop vague source sentences when one concrete fact is sufficient"
 require_text "skills/a1-editor/references/information-style.md" "put the actionable sequence before supporting personal context" "Information Style runtime must foreground an actionable sequence before supporting personal context"
 require_text "skills/a1-editor/SKILL.md" "references/editor-spine.md" "A1 Editor must use the invariant editor spine"
 require_text "skills/a1-editor/SKILL.md" "safe strategy router" "A1 Editor invocation metadata must advertise safe strategy routing"

@@ -5,8 +5,8 @@ This record is the semantic release gate for the A1 Editor pilot. It tracks crit
 ## Certification Status
 
 - Status: `FAIL`
-- Candidate runtime revision: `684a5411ed87942e2af2241d7b378cd36723df58`
-- Decision: the LLM-arbitrated full rerun stopped at `editor-clarify-001`: the candidate broadened a weak source into the categorical capability `объединяет общение с клиентами`. The Clarify source boundary requires a runtime fix, permanent regression, new installation, and another complete rerun.
+- Candidate runtime revision: `a87e6350d485144ad2445e0ad832c2dec8057c3e`
+- Decision: the first Clarify fix still failed focused LLM arbitration: `вести коммуникацию с клиентами в едином пространстве` preserved the same unsupported abstraction in simpler words. The runtime must require dropping vague source sentences entirely when the only supported concrete content is a separate observable fact.
 
 ## Environment
 
@@ -15,7 +15,7 @@ Populate these values from the installed client used for the complete run. One e
 - Client: `codex-cli 0.144.4`
 - Model: `gpt-5.6-sol`
 - Run date: `2026-07-15`
-- Skill revision: `684a5411ed87942e2af2241d7b378cd36723df58`
+- Skill revision: `a87e6350d485144ad2445e0ad832c2dec8057c3e`
 - Reviewer: `ztemerbekov` for cases 001–004; separate `codex-cli 0.144.4` / `gpt-5.6-sol` LLM arbiter from case 005 while arbitration is enabled; user override available.
 - Installation: candidate skill directories installed under `~/.codex/skills`; both directories verified byte-for-byte against the recorded revision before the run.
 
@@ -47,17 +47,17 @@ Do not compare against golden wording. Treat ambiguous evidence as failure. Reco
 
 | Case | Client | Model | Date | Result | Concise notes |
 |------|--------|-------|------|--------|---------------|
-| [`editor-strategy-route-001`](../skills/a1-editor/evals/cases/strategy-positioning-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified positioning and differentiation as strategic, recommended explicit chief invocation, and invented no positioning; human-confirmed `684a541` full rerun. |
-| [`editor-strategy-route-002`](../skills/a1-editor/evals/cases/strategy-offer-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified tariff composition, price rationale, and CTA as strategic, recommended explicit chief invocation, and invented no offer; human-confirmed `684a541` full rerun. |
-| [`editor-strategy-route-003`](../skills/a1-editor/evals/cases/strategy-audience-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Left audience and primary reader unchosen, noted insufficient evidence, and recommended explicit chief invocation; human-confirmed `684a541` full rerun. |
-| [`editor-strategy-route-004`](../skills/a1-editor/evals/cases/strategy-campaign-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified campaign concept and message-system creation as strategic, recommended explicit chief invocation, and invented no campaign; human-confirmed `684a541` full rerun. |
-| [`editor-strategy-route-005`](../skills/a1-editor/evals/cases/strategy-landing-structure-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Routed blank-page landing architecture to explicit chief invocation without inventing blocks or order; independent LLM-arbitrated `684a541` full rerun. |
-| [`editor-strategy-boundary-006`](../skills/a1-editor/evals/cases/ordinary-edit-stays-editor.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Shortened immediately without optional context or chief routing while preserving Friday, team, and action order; independent LLM-arbitrated `684a541` full rerun. |
-| [`editor-strategy-boundary-007`](../skills/a1-editor/evals/cases/strategy-keyword-edit-stays-editor.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Shortened the accepted positioning without inventing strategy or routing to chief; independent LLM-arbitrated `684a541` full rerun. |
-| [`editor-strategy-boundary-008`](../skills/a1-editor/evals/cases/mixed-edit-and-strategy-boundary.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Completed the separable edit and routed only the unperformed positioning task to chief; independent LLM-arbitrated `684a541` full rerun. |
-| [`editor-standard-001`](../skills/a1-editor/evals/cases/standard-edit-voice.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Removed the tautology while preserving first-person voice, Friday use, three marketplaces, and one report; independent LLM-arbitrated `684a541` full rerun. |
-| [`editor-shorten-001`](../skills/a1-editor/evals/cases/shorten.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Shortened materially while preserving price, up-to-10 limit, weekly Monday reports, and cancellation terms; independent LLM-arbitrated `684a541` full rerun. |
-| [`editor-clarify-001`](../skills/a1-editor/evals/cases/clarify-weak-source.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `FAIL` | Added the broader categorical capability `объединяет общение с клиентами` instead of limiting the rewrite to questions visible in one window; independent LLM-arbitrated significant failure. |
+| [`editor-strategy-route-001`](../skills/a1-editor/evals/cases/strategy-positioning-route.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `a87e635`; prior verdict is historical. |
+| [`editor-strategy-route-002`](../skills/a1-editor/evals/cases/strategy-offer-route.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `a87e635`; prior verdict is historical. |
+| [`editor-strategy-route-003`](../skills/a1-editor/evals/cases/strategy-audience-route.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `a87e635`; prior verdict is historical. |
+| [`editor-strategy-route-004`](../skills/a1-editor/evals/cases/strategy-campaign-route.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `a87e635`; prior verdict is historical. |
+| [`editor-strategy-route-005`](../skills/a1-editor/evals/cases/strategy-landing-structure-route.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `a87e635`; prior verdict is historical. |
+| [`editor-strategy-boundary-006`](../skills/a1-editor/evals/cases/ordinary-edit-stays-editor.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `a87e635`; prior verdict is historical. |
+| [`editor-strategy-boundary-007`](../skills/a1-editor/evals/cases/strategy-keyword-edit-stays-editor.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `a87e635`; prior verdict is historical. |
+| [`editor-strategy-boundary-008`](../skills/a1-editor/evals/cases/mixed-edit-and-strategy-boundary.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `a87e635`; prior verdict is historical. |
+| [`editor-standard-001`](../skills/a1-editor/evals/cases/standard-edit-voice.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `a87e635`; prior verdict is historical. |
+| [`editor-shorten-001`](../skills/a1-editor/evals/cases/shorten.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `a87e635`; prior verdict is historical. |
+| [`editor-clarify-001`](../skills/a1-editor/evals/cases/clarify-weak-source.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `FAIL` | Focused rerun still paraphrased vague process language as `вести коммуникацию с клиентами в едином пространстве`; independent LLM-arbitrated significant failure. |
 | [`editor-strengthen-001`](../skills/a1-editor/evals/cases/strengthen-unsupported-claims.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Concurrent diagnostic output received arbiter PASS but cannot be carried past the runtime fix. |
 | [`editor-restructure-001`](../skills/a1-editor/evals/cases/restructure.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `684a541`; no semantic verdict. |
 | [`editor-ambiguity-001`](../skills/a1-editor/evals/cases/significant-ambiguity.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `684a541`; no semantic verdict. |
@@ -97,8 +97,8 @@ A significant failure blocks certification. Fix the smallest runtime cause, add 
 ## Remaining Limitations
 
 - The first installed run stopped after two significant failures; its evidence is historical and does not count toward the final verdict.
-- The first three known regressions pass focused review, but the `684a541` full rerun exposed a fourth significant failure in Clarify source fidelity.
-- The active `684a541` candidate is installed and verified but is known to fail and cannot be certified.
+- The first Clarify fix in `a87e635` still fails the focused regression because it preserves unsupported abstraction in simpler words.
+- The active `a87e635` candidate is installed and verified but is known to fail and cannot be certified.
 - Final-run evidence and results remain unknown for every row still marked `PENDING`; concurrent diagnostic passes do not count after the runtime changes.
 - Temporary LLM arbitration is enabled from case 005 and is auditable but uses the same model family as the candidate runner; the user can override or disable it.
 

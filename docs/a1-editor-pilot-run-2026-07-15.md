@@ -769,3 +769,24 @@ Arbiter evidence: the supported one-list function is central, uncertainty remain
 ## Interrupted `684a541` Full Rerun
 
 The suite stopped at `editor-clarify-001`. A Clarify runtime fix and permanent regression are required, followed by installation of the new candidate and another complete restart from case one.
+
+## Focused Clarify Regression Rerun — `a87e635`
+
+- Client and model: `codex-cli 0.144.4` / `gpt-5.6-sol`
+- Skill revision: `a87e6350d485144ad2445e0ad832c2dec8057c3e`
+- Installation: both active skills verified byte-for-byte against the revision.
+- Arbiter: separate fresh ephemeral read-only session; `LLM_ARBITER=ON`.
+
+```markdown
+## Отредактированный вариант
+
+Решение помогает команде вести коммуникацию с клиентами в едином пространстве. Вопросы клиентов видны в одном окне.
+
+## Что изменилось
+
+- Убрал неподтверждённые оценки: «инновационное», «максимально качественное», «эффективно».
+- Заменил абстрактные формулировки простыми.
+- Сохранил единственный конкретный факт — вопросы видны в одном окне.
+```
+
+Arbiter evidence: the one-window fact and output contract pass, but `вести коммуникацию с клиентами в едином пространстве` retains the unsupported broad process claim in simpler language. Verdict: `FAIL`.
