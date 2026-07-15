@@ -6,6 +6,20 @@ Guidelines for AI agents working in this repository.
 
 This repository contains marketing-focused Agent Skills. Skills should be useful across Codex, Claude Code, Cursor, and other clients that understand the Agent Skills folder format.
 
+## Agent skills
+
+### Issue tracker
+
+Work is tracked in GitHub Issues. External pull requests are not a triage request surface. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Use the canonical `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, and `wontfix` labels. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+This is currently a single-context repository: use root `CONTEXT.md` and `docs/adr/` when they exist. When adding a skill, reassess whether it introduces a distinct domain context; raise the need for `CONTEXT-MAP.md` with the user before creating one. See `docs/agents/domain.md`.
+
 ## README Languages
 
 `README.md` is the default English README.
