@@ -790,3 +790,192 @@ The suite stopped at `editor-clarify-001`. A Clarify runtime fix and permanent r
 ```
 
 Arbiter evidence: the one-window fact and output contract pass, but `вести коммуникацию с клиентами в едином пространстве` retains the unsupported broad process claim in simpler language. Verdict: `FAIL`.
+
+## Focused Clarify Regression Rerun — `fd10490`
+
+- Client and model: `codex-cli 0.144.4` / `gpt-5.6-sol`
+- Skill revision: `fd10490204520b89e743d75d736eb8cb302a1c6e`
+- Installation: both active skills verified byte-for-byte against the revision.
+- Arbiter: separate fresh ephemeral read-only session; `LLM_ARBITER=ON`.
+
+```markdown
+## Отредактированный вариант
+
+Команда видит вопросы клиентов в одном окне.
+
+## Что изменилось
+
+- Убрал неподтверждённые оценки: «инновационное», «максимально качественное», «эффективно».
+- Заменил абстрактное описание конкретной функцией продукта.
+- Не добавлял новых фактов.
+```
+
+Arbiter evidence: the only concrete fact is foregrounded; vague evaluations, process language, and bureaucracy are removed; no unsupported capability or other fact is added; output contract passes. Verdict: `PASS`.
+
+## Final Full Rerun — `fd10490`
+
+The full suite restarts below from case one on the installed candidate with `LLM_ARBITER=ON`. No earlier verdict is carried forward.
+
+### `editor-strategy-route-001` — PASS
+
+```text
+Это задача позиционирования: нужно придумать отличие от конкурентов и выбрать идею, которую сервис должен занять в голове аудитории. `a1-editor` редактирует готовый материал, но не создаёт такие стратегические решения.
+
+Явно вызовите `$a1-editor-in-chief` — он проведёт стратегический разбор исходных фактов и поможет сформулировать позиционирование.
+```
+
+Arbiter evidence: positioning and differentiation are correctly routed to explicit chief invocation; supplied facts remain context; no positioning, slogan, category, promise, segment, claim, hard-gate question, or chief workflow is produced. Verdict: `PASS`.
+
+### `editor-strategy-route-002` — PASS
+
+```text
+`a1-editor` редактирует готовый текст, но здесь нужно сначала разработать стратегию: состав тарифа, логику цены и целевое действие.
+
+Явно вызовите `a1-editor-in-chief` с этим же запросом — он проведёт стратегическую редактуру и соберёт оффер.
+```
+
+Arbiter evidence: tariff composition, price logic, and target action remain unchosen; offer creation is routed explicitly to chief; no offer, promise, discount, urgency, CTA, price explanation, or chief workflow is produced. Verdict: `PASS`.
+
+### `editor-strategy-route-003` — PASS
+
+```text
+A1 Editor редактирует готовый материал, но не выбирает целевую аудиторию и главного читателя.
+
+Для стратегического выбора явно вызовите `$a1-editor-in-chief` и передайте ему этот контекст.
+```
+
+Arbiter evidence: audience and reader selection remain unperformed and are routed explicitly to chief; no segment, role, business size, awareness level, or chief workflow is invented. Verdict: `PASS`.
+
+### `editor-strategy-route-004` — PASS
+
+```text
+Это стратегическая задача: нужно создать идею кампании и систему сообщений, а `a1-editor` работает только с готовым текстом.
+
+Для разработки стратегии явно вызовите: **«Используй `a1-editor-in-chief` и придумай идею запуска и систему сообщений для нового отчёта по отзывам»**.
+```
+
+Arbiter evidence: campaign concept and message-system creation are routed explicitly to chief; no big idea, slogan, ad, channel, sequence, audience, CTA, extra source fact, or chief workflow is produced. Verdict: `PASS`.
+
+### `editor-strategy-route-005` — PASS
+
+```text
+`a1-editor` редактирует готовый материал, но не проектирует с нуля стратегическую структуру лендинга.
+
+Для этой задачи явно вызовите `a1-editor-in-chief`: он определит читателя, цель, формат и ограничения, а затем спроектирует порядок блоков и доказательную задачу каждого. Например:
+
+> Используй `a1-editor-in-chief`. Спроектируй с нуля структуру лендинга для сервиса, который собирает отзывы из Ozon и Wildberries в один список.
+```
+
+Arbiter evidence: blank-page structure is routed explicitly to chief; blocks, order, and proof role are named as strategic work; no architecture, block, CTA, question, or chief workflow is produced. Verdict: `PASS`.
+
+### `editor-strategy-boundary-006` — PASS
+
+```markdown
+## Сокращённый текст
+
+Каждую пятницу команда открывает свежий файл отчёта, сверяет даты и удаляет дубли.
+
+## Что изменилось
+
+- Убраны вводная фраза и повторы последовательности.
+- Сохранены порядок действий и исходный смысл.
+```
+
+Arbiter evidence: the introduction and repetition are removed; Friday, team, fresh report, and three-action order remain; no optional context, chief routing, or invention appears; output contract passes. Verdict: `PASS`.
+
+### `editor-strategy-boundary-007` — PASS
+
+```markdown
+## Сокращённая версия
+
+Единое место, где команда работает с отзывами из Ozon и Wildberries в одном списке.
+
+## Что изменилось
+
+- Убрана вводная конструкция «мы позиционируем сервис».
+- Сохранены сервис, оба источника, командная работа и общий список.
+```
+
+Arbiter evidence: accepted positioning is shortened; one place, team, both marketplaces, and one list remain; no new positioning, differentiation, audience, offer, claim, or chief routing appears; output contract passes. Verdict: `PASS`.
+
+### `editor-strategy-boundary-008` — PASS
+
+```markdown
+## Отредактированный вариант
+
+Сервис собирает отзывы с Ozon и Wildberries в одном списке для команды.
+
+## Что изменилось
+
+- Убрал вводное «Важно отметить».
+- Устранил избыточное сочетание «один общий».
+- Заменил «из Ozon и Wildberries» на более естественное «с Ozon и Wildberries».
+
+## Позиционирование
+
+`a1-editor` редактирует готовый материал, но не придумывает позиционирование и стратегию кампании. Для этой части явно вызовите `a1-editor-in-chief` — он проведёт стратегическую редактуру отдельно.
+```
+
+Arbiter evidence: the safe edit is complete and preserves all facts; strategic work is explicitly left undone and routed to chief; no positioning, campaign, audience, offer, claim, CTA, question, or chief workflow is invented; output contract passes. Verdict: `PASS`.
+
+### `editor-standard-001` — PASS
+
+```markdown
+## Отредактированный текст
+
+Честно говоря, мы долго думали, как не прыгать каждый день между кабинетами маркетплейсов. В итоге сделали простую штуку: сервис собирает комментарии из Ozon, Wildberries и Яндекс Маркета в один отчёт. Я сам открываю его по пятницам — так комментарии хотя бы не теряются в трёх разных вкладках.
+
+## Что изменилось
+
+- Убрал повтор «долго и продолжительно».
+- Уточнил, что во вкладках теряются именно комментарии.
+- Сохранил разговорные «честно говоря», «прыгать» и «простую штуку».
+```
+
+Arbiter evidence: tautology and setup are reduced; the one-report relationship is clear; conversational first person, Friday use, all three marketplaces, and source facts remain; no forbidden promise or CTA appears; output contract passes. Verdict: `PASS`.
+
+### `editor-shorten-001` — PASS
+
+```markdown
+## Отредактированный текст
+
+Тариф Start стоит 1 900 рублей в месяц и позволяет команде подключить до 10 магазинов. Отчеты приходят раз в неделю, по понедельникам. Долгосрочных обязательств нет: подписку можно отменить в любой момент без звонка менеджеру.
+
+## Что изменено
+
+- Текст сокращен примерно на треть.
+- Убран повтор об отмене подписки, все условия тарифа сохранены.
+```
+
+Arbiter evidence: cancellation repetition and bureaucracy are removed; price, up-to-10 limit, weekly Monday reports, and cancellation at any time without a call remain; no trial, refund, discount, CTA, or new condition appears; output contract passes. Verdict: `PASS`.
+
+### `editor-clarify-001` — PASS
+
+```markdown
+## Отредактированная версия
+
+Команда видит вопросы клиентов в одном окне.
+
+## Что изменилось
+
+- Сохранил единственный конкретный факт.
+- Убрал неподтверждённые оценки и абстракции: «инновационное», «максимально качественное», «коммуникационные процессы».
+```
+
+Arbiter evidence: only the concrete one-window fact remains; evaluations, bureaucracy, vague interaction and process claims are removed; no channel, integration, speed, audience, analytics, result, or broader capability is added; output contract passes. Verdict: `PASS`.
+
+### `editor-strengthen-001` — PASS after appeal
+
+```markdown
+## Усиленная версия
+
+Наш сервис собирает отзывы с Wildberries и Ozon в один список — так команда может разбирать их быстрее.
+
+## Что изменилось
+
+- Главное преимущество вынесено вперёд.
+- Сохранена осторожная формулировка результата.
+- Удалены неподтверждённые заявления о лидерстве на рынке и гарантированном росте продаж.
+```
+
+Primary arbiter: `FAIL`, asserting that the speed outcome lost its hedge. Appeal evidence: the literal criterion accepts `может` as an equivalent uncertainty marker; the sentence is not the forbidden categorical `помогает быстрее`; superiority and guaranteed sales growth are removed; no new evidence or benefit is added; output contract passes. Final verdict: `PASS`.
