@@ -123,6 +123,8 @@ require_text "skills/a1-editor/evals/case-template.md" "## Must Preserve" "Edito
 require_text "skills/a1-editor/evals/case-template.md" "## Forbidden" "Editor eval template must include Forbidden criteria"
 require_text "skills/a1-editor/evals/cases/strengthen-unsupported-claims.md" 'категоричное `помогает быстрее`' "Strengthen regression must forbid removing source uncertainty from the speed outcome"
 require_text "skills/a1-editor/evals/cases/significant-ambiguity.md" 'Ближайшее упоминание `Pro`' "Ambiguity regression must reject nearest-antecedent guessing"
+require_text "skills/a1-editor/evals/cases/information-style-explicit.md" "личный опыт остается отдельным абзацем перед списком" "Information Style regression must reject leaving personal context before the actionable list"
+require_text "skills/a1-editor/references/information-style.md" "put the actionable sequence before supporting personal context" "Information Style runtime must foreground an actionable sequence before supporting personal context"
 require_text "skills/a1-editor/SKILL.md" "references/editor-spine.md" "A1 Editor must use the invariant editor spine"
 require_text "skills/a1-editor/SKILL.md" "safe strategy router" "A1 Editor invocation metadata must advertise safe strategy routing"
 require_text ".cursor/rules/marketing-skills.mdc" "routing requests for new positioning" "Cursor activation metadata must advertise strategy routing"

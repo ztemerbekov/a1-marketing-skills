@@ -5,8 +5,8 @@ This record is the semantic release gate for the A1 Editor pilot. It tracks crit
 ## Certification Status
 
 - Status: `FAIL`
-- Candidate runtime revision: `73e029a`
-- Decision: the installed run found two human-confirmed significant failures in uncertainty preservation and significant-ambiguity handling. The suite stopped for runtime fixes and must restart from case one after the corrected candidate is installed.
+- Candidate runtime revision: `0da7a9fc548da0f1ea87f6aba27854dbde9d0874`
+- Decision: the restarted suite found a human-confirmed significant failure in Information Style ordering: `editor-information-style-001` left personal context before the actionable list. The suite stopped; concurrent results for cases 002–004 are diagnostic only. Fix the runtime, install the new candidate, and restart all 25 cases from case one.
 
 ## Environment
 
@@ -15,7 +15,7 @@ Populate these values from the installed client used for the complete run. One e
 - Client: `codex-cli 0.144.4`
 - Model: `gpt-5.6-sol`
 - Run date: `2026-07-15`
-- Skill revision: `73e029ac8ee12d2b1cae85c703b0f5f54d6cf612`
+- Skill revision: `0da7a9fc548da0f1ea87f6aba27854dbde9d0874`
 - Reviewer: `ztemerbekov`
 - Installation: candidate skill directories installed under `~/.codex/skills`; both directories verified byte-for-byte against the recorded revision before the run.
 
@@ -40,24 +40,24 @@ Do not compare against golden wording. Treat ambiguous evidence as failure. Reco
 
 | Case | Client | Model | Date | Result | Concise notes |
 |------|--------|-------|------|--------|---------------|
-| [`editor-strategy-route-001`](../skills/a1-editor/evals/cases/strategy-positioning-route.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
-| [`editor-strategy-route-002`](../skills/a1-editor/evals/cases/strategy-offer-route.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
-| [`editor-strategy-route-003`](../skills/a1-editor/evals/cases/strategy-audience-route.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
-| [`editor-strategy-route-004`](../skills/a1-editor/evals/cases/strategy-campaign-route.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
-| [`editor-strategy-route-005`](../skills/a1-editor/evals/cases/strategy-landing-structure-route.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
-| [`editor-strategy-boundary-006`](../skills/a1-editor/evals/cases/ordinary-edit-stays-editor.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Shortened immediately without optional context or chief routing; preserved Friday, the team, and the ordered actions without adding audience, channel, tools, or benefits; human-confirmed. |
-| [`editor-strategy-boundary-007`](../skills/a1-editor/evals/cases/strategy-keyword-edit-stays-editor.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
-| [`editor-strategy-boundary-008`](../skills/a1-editor/evals/cases/mixed-edit-and-strategy-boundary.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
-| [`editor-standard-001`](../skills/a1-editor/evals/cases/standard-edit-voice.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Removed the tautology and clarified the one-report flow while preserving first-person voice, Friday use, all marketplace names, and the source boundary; human-confirmed. |
-| [`editor-shorten-001`](../skills/a1-editor/evals/cases/shorten.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Removed the repeated cancellation explanation while preserving price, the up-to-10 limit, Monday delivery, and cancellation at any time without a manager call; human-confirmed. |
-| [`editor-clarify-001`](../skills/a1-editor/evals/cases/clarify-weak-source.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Removed unsupported evaluations and foregrounded the one-window fact without inventing channels, integrations, speed, analytics, or business outcomes; human-confirmed. |
-| [`editor-strengthen-001`](../skills/a1-editor/evals/cases/strengthen-unsupported-claims.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `FAIL` | Removed `возможно` and made the unsupported speed outcome categorical; human-confirmed significant failure requiring a runtime fix and full rerun. |
-| [`editor-restructure-001`](../skills/a1-editor/evals/cases/restructure.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Grouped tariff, trial, report, and support conditions without changing any number, export restriction, or meaning; human-confirmed. |
-| [`editor-ambiguity-001`](../skills/a1-editor/evals/cases/significant-ambiguity.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `FAIL` | Guessed `Pro` instead of asking which named tariff the pronoun referred to; human-confirmed significant failure requiring a runtime fix and full rerun. |
-| [`editor-information-style-001`](../skills/a1-editor/evals/cases/information-style-explicit.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
-| [`editor-information-style-002`](../skills/a1-editor/evals/cases/information-style-not-inferred.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
-| [`editor-information-style-003`](../skills/a1-editor/evals/cases/information-style-llm-post.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
-| [`editor-information-style-004`](../skills/a1-editor/evals/cases/information-style-preserve-voice.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
+| [`editor-strategy-route-001`](../skills/a1-editor/evals/cases/strategy-positioning-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified positioning as strategic, named differentiation and the product's main thought, recommended explicit chief invocation, and invented no positioning; human-confirmed final rerun. |
+| [`editor-strategy-route-002`](../skills/a1-editor/evals/cases/strategy-offer-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified offer architecture as strategic, named tariff composition, price logic, and target action, recommended explicit chief invocation, and invented no offer; human-confirmed final rerun. |
+| [`editor-strategy-route-003`](../skills/a1-editor/evals/cases/strategy-audience-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified audience selection as strategic, left segment and reader unchosen, recommended explicit chief invocation, and invented no audience; human-confirmed final rerun. |
+| [`editor-strategy-route-004`](../skills/a1-editor/evals/cases/strategy-campaign-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified campaign concept and message system as strategic, supplied only an explicit chief command, and invented no campaign, channel, audience, or CTA; human-confirmed final rerun. |
+| [`editor-strategy-route-005`](../skills/a1-editor/evals/cases/strategy-landing-structure-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified blank-page landing architecture and proof logic as strategic, recommended explicit chief invocation, and invented no blocks or order; human-confirmed final rerun. |
+| [`editor-strategy-boundary-006`](../skills/a1-editor/evals/cases/ordinary-edit-stays-editor.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Shortened immediately without optional context, preserved Friday, team, and action order, and did not route to chief; human-confirmed final rerun. |
+| [`editor-strategy-boundary-007`](../skills/a1-editor/evals/cases/strategy-keyword-edit-stays-editor.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Shortened the approved positioning while preserving both sources, the shared list, and team use; invented no new strategy and did not route to chief; human-confirmed final rerun. |
+| [`editor-strategy-boundary-008`](../skills/a1-editor/evals/cases/mixed-edit-and-strategy-boundary.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Completed the separable edit, preserved all product facts, and routed only the unperformed positioning work to explicit chief invocation; human-confirmed final rerun. |
+| [`editor-standard-001`](../skills/a1-editor/evals/cases/standard-edit-voice.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Removed the tautology while preserving the conversational first-person voice, Friday use, all three marketplaces, and one report; human-confirmed final rerun. |
+| [`editor-shorten-001`](../skills/a1-editor/evals/cases/shorten.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Materially shortened the tariff copy while preserving price, the up-to-10 limit, Monday reports, and cancellation at any time without a manager call; human-confirmed final rerun. |
+| [`editor-clarify-001`](../skills/a1-editor/evals/cases/clarify-weak-source.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Foregrounded questions visible in one window, removed empty evaluations, and invented no channel, integration, speed, analytics, audience, or business result; human-confirmed final rerun. |
+| [`editor-strengthen-001`](../skills/a1-editor/evals/cases/strengthen-unsupported-claims.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Centered the supported one-list function, preserved uncertainty with `может помочь`, and removed unsupported leadership and sales-growth claims; human-confirmed final rerun. |
+| [`editor-restructure-001`](../skills/a1-editor/evals/cases/restructure.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Grouped tariff, trial, delivery, and support conditions into a scannable order while preserving every number and export restriction; human-confirmed final rerun. |
+| [`editor-ambiguity-001`](../skills/a1-editor/evals/cases/significant-ambiguity.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Asked one concise Basic-or-Pro blocking question, preserved both interpretations, and stopped before editing or assigning features; human-confirmed final rerun. |
+| [`editor-information-style-001`](../skills/a1-editor/evals/cases/information-style-explicit.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `FAIL` | Removed the empty opening and created the required list, but left personal experience before it instead of moving the actionable sequence first; human-confirmed significant failure. |
+| [`editor-information-style-002`](../skills/a1-editor/evals/cases/information-style-not-inferred.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Concurrent diagnostic output passed human review but cannot be carried past the runtime fix. |
+| [`editor-information-style-003`](../skills/a1-editor/evals/cases/information-style-llm-post.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Concurrent diagnostic output passed human review but cannot be carried past the runtime fix. |
+| [`editor-information-style-004`](../skills/a1-editor/evals/cases/information-style-preserve-voice.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Concurrent diagnostic output passed human review but cannot be carried past the runtime fix. |
 | [`editor-information-style-005`](../skills/a1-editor/evals/cases/information-style-preserve-structure.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
 | [`editor-information-style-006`](../skills/a1-editor/evals/cases/information-style-unsupported-claims.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
 | [`editor-information-style-007`](../skills/a1-editor/evals/cases/information-style-markdown-integrity.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
@@ -89,9 +89,10 @@ A significant failure blocks certification. Fix the smallest runtime cause, add 
 
 ## Remaining Limitations
 
-- The first installed run stopped after two significant failures; the 25-case suite has not completed, so the pilot is not certified.
-- The semantic runner is operational, but a corrected runtime must be installed and the full suite restarted before certification.
-- Unrun case evidence and results remain unknown.
+- The first installed run stopped after two significant failures; its evidence is historical and does not count toward the final verdict.
+- The first two corrected regressions pass, but the restarted suite exposed a third significant failure in Information Style ordering.
+- The active installed candidate is now known to fail and cannot be certified; a new revision must be installed after the runtime fix.
+- Final-run evidence and results remain unknown for every row still marked `PENDING`; concurrent diagnostic passes after the failure do not count.
 - No automated LLM judge is used; semantic judgment remains a human review responsibility.
 
 ## Finalization Rule

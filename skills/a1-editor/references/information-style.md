@@ -21,6 +21,7 @@ Within the source boundary and any overrides, this branch may:
 - remove empty author-focused setup while preserving author details that carry fact, firsthand experience, voice, or trust;
 - remove or soften unsupported evaluations, intensifiers, cliches, bureaucratic wording, repetition, and template transitions;
 - move the useful point earlier and regroup existing material around it;
+- when the source contains a self-contained actionable sequence and separate supporting firsthand context, put the actionable sequence before supporting personal context unless an explicit preserve-structure, preserve-formatting, or order instruction forbids reordering; keep protected firsthand facts after the sequence;
 - split or combine paragraphs and sentences when the structure constraint allows;
 - turn existing parallel material into headings or lists when the formatting constraint allows;
 - neutralize author presence only when it adds no protected voice, fact, experience, or trust.
