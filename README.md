@@ -8,6 +8,15 @@ Marketing Skills is a small team of AI skills for marketers, founders, and anyon
 
 You do not need to learn a special command language. Install the skills, describe the task in ordinary words, and include the text when you want it edited.
 
+## Contents
+
+- [Start here](#start-here)
+- [Choose a skill](#choose-a-skill)
+- [Meet the skills](#meet-the-skills)
+- [Install](#install)
+- [Use the skills](#use-the-skills)
+- [Help and feedback](#help-and-feedback)
+
 ## Start here
 
 1. Open a terminal in the project where you want to use the skills.
