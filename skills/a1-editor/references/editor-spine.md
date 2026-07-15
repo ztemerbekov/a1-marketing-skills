@@ -8,6 +8,8 @@ If editable text is missing, ask for it and stop before starting a run.
 
 When text and an editing intent are present, start immediately. Do not ask for marketing context, audience, channel, goal, tone, or constraints. If every safe edit would choose between materially different meanings, ask one concise blocking question and resume the same run after the answer. Otherwise use the safest useful interpretation and continue.
 
+Before using the safest useful interpretation, apply the canonical [Significant Ambiguity rule](source-boundary.md#significant-ambiguity--существенная-неоднозначность); that section owns concrete-name replacement and inference boundaries.
+
 ## 1. Determine Allowed Sources
 
 Read [source-boundary.md](source-boundary.md). Build an internal source map from the supplied text, current instruction, available marketing context, and any clearly applicable user-provided facts from the conversation.

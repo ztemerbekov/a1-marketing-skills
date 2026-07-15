@@ -42,3 +42,5 @@ If the missing support materially limits the result, mention that limitation aft
 ## Significant Ambiguity / Существенная неоднозначность
 
 Ask one concise question only when every safe edit would choose between materially different meanings. If a conservative rewrite can preserve the ambiguity without misleading the reader, make that edit and briefly note the ambiguity when useful.
+
+When the user explicitly requires one concrete name but the source leaves two or more named candidates plausible, a conservative ambiguous rewrite does not satisfy the request. Ask which candidate is intended and stop. Do not infer the binding from the nearest antecedent, word order, grammar, likelihood, or common sense.

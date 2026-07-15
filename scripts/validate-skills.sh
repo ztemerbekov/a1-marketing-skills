@@ -121,6 +121,8 @@ require_text "$certification_report" "## Finalization Rule" "Pilot certification
 require_text "skills/a1-editor/evals/case-template.md" "## Must Change" "Editor eval template must include Must Change criteria"
 require_text "skills/a1-editor/evals/case-template.md" "## Must Preserve" "Editor eval template must include Must Preserve criteria"
 require_text "skills/a1-editor/evals/case-template.md" "## Forbidden" "Editor eval template must include Forbidden criteria"
+require_text "skills/a1-editor/evals/cases/strengthen-unsupported-claims.md" 'категоричное `помогает быстрее`' "Strengthen regression must forbid removing source uncertainty from the speed outcome"
+require_text "skills/a1-editor/evals/cases/significant-ambiguity.md" 'Ближайшее упоминание `Pro`' "Ambiguity regression must reject nearest-antecedent guessing"
 require_text "skills/a1-editor/SKILL.md" "references/editor-spine.md" "A1 Editor must use the invariant editor spine"
 require_text "skills/a1-editor/SKILL.md" "safe strategy router" "A1 Editor invocation metadata must advertise safe strategy routing"
 require_text ".cursor/rules/marketing-skills.mdc" "routing requests for new positioning" "Cursor activation metadata must advertise strategy routing"

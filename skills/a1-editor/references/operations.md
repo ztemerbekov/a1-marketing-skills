@@ -44,6 +44,8 @@ Use for `strengthen`, `make persuasive`, `make it sell`, `усиль`, `сдел
 
 Foreground existing reader value, proof, useful action, or supported feature-to-outcome connections. Replace unsupported evaluations with observable material already present or make them more cautious. Do not create missing persuasion assets.
 
+Treat source uncertainty as a constraint, not as weak wording to remove. When an outcome is tentative and the source supplies only a related feature, either preserve the hedge on that outcome or remove the outcome and keep the supported feature. Never keep the same outcome while deleting `may`, `might`, `possibly`, `возможно`, `может`, or an equivalent qualification. A feature is not proof of an inferred speed, revenue, or business result.
+
 **Complete when:** the existing case is easier to see and believe without a stronger claim than the sources support.
 
 ## Restructure

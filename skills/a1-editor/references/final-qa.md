@@ -6,6 +6,7 @@ This is the authoritative final acceptance check for `a1-editor`. Run it after t
 
 - Every specific element in the draft is traceable under [source-boundary.md](source-boundary.md).
 - Facts, names, figures, links, product terms, and material qualifications remain accurate to the allowed sources.
+- No source hedge or qualification was removed while retaining the same tentative outcome as a categorical claim; a related feature alone does not justify that change.
 - The draft contains no forbidden addition from the source boundary.
 
 ## 2. Operation Completion
