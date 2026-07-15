@@ -23,7 +23,7 @@ Criteria must describe observable behavior, not preferred wording. Use the [case
 
 ## Starter Suite
 
-The starter suite maps directly to the standard editor contract:
+### Standard Editor
 
 - [standard edit and voice preservation](cases/standard-edit-voice.md)
 - [shortening](cases/shorten.md)
@@ -31,9 +31,17 @@ The starter suite maps directly to the standard editor contract:
 - [strengthening without unsupported claims](cases/strengthen-unsupported-claims.md)
 - [restructuring](cases/restructure.md)
 - [significant ambiguity](cases/significant-ambiguity.md)
+
+### Information Style
+
 - [explicit information-style activation](cases/information-style-explicit.md)
 - [generic editing that must not activate information style](cases/information-style-not-inferred.md)
 - [legacy information-style LLM post regression](cases/information-style-llm-post.md)
+- [voice preservation override](cases/information-style-preserve-voice.md)
+- [structure preservation override](cases/information-style-preserve-structure.md)
+- [formatting preservation override](cases/information-style-preserve-formatting.md)
+- [unsupported claims](cases/information-style-unsupported-claims.md)
+- [Markdown integrity](cases/information-style-markdown-integrity.md)
 
 ## Manual Run Protocol
 

@@ -20,6 +20,11 @@ editor_eval_cases=(
   "skills/a1-editor/evals/cases/information-style-explicit.md"
   "skills/a1-editor/evals/cases/information-style-not-inferred.md"
   "skills/a1-editor/evals/cases/information-style-llm-post.md"
+  "skills/a1-editor/evals/cases/information-style-preserve-voice.md"
+  "skills/a1-editor/evals/cases/information-style-preserve-structure.md"
+  "skills/a1-editor/evals/cases/information-style-preserve-formatting.md"
+  "skills/a1-editor/evals/cases/information-style-unsupported-claims.md"
+  "skills/a1-editor/evals/cases/information-style-markdown-integrity.md"
 )
 
 chief_eval_cases=(
@@ -35,6 +40,7 @@ required_artifacts=(
   "skills/a1-editor/references/editor-spine.md"
   "skills/a1-editor/references/source-boundary.md"
   "skills/a1-editor/references/operations.md"
+  "skills/a1-editor/references/information-style.md"
   "skills/a1-editor/references/final-qa.md"
   "skills/a1-editor/evals/README.md"
   "skills/a1-editor/evals/case-template.md"
@@ -87,6 +93,11 @@ require_text "skills/a1-editor/references/operations.md" "## Shorten" "Editor op
 require_text "skills/a1-editor/references/operations.md" "## Clarify" "Editor operations must define clarification"
 require_text "skills/a1-editor/references/operations.md" "## Strengthen" "Editor operations must define strengthening"
 require_text "skills/a1-editor/references/operations.md" "## Restructure" "Editor operations must define restructuring"
+require_text "skills/a1-editor/references/operations.md" "по «Пиши, сокращай»" "Information Style routing must retain the documented explicit markers"
+require_text "skills/a1-editor/references/operations.md" "do not activate Information Style" "Generic editing intent must not activate Information Style"
+require_text "skills/a1-editor/references/information-style.md" "## Constraint Overrides" "Information Style must define explicit constraint overrides"
+require_text "skills/a1-editor/references/information-style.md" "## Markdown Integrity" "Information Style must protect Markdown integrity"
+require_text "skills/a1-editor/references/information-style.md" "## Completion Criterion" "Information Style must define a checkable completion criterion"
 
 for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}"; do
   require_text "$eval_case" "## User Instruction" "Editor eval case must include the exact user instruction"

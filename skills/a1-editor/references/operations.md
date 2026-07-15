@@ -62,9 +62,10 @@ Select this branch only when the user explicitly asks for information style with
 - `в инфостиле`;
 - `по Ильяхову`;
 - `по «Пиши, сокращай»`;
-- an equivalent unambiguous request in another language.
+- `use information style` or `apply information-style editing`;
+- equivalent unambiguous wording in the user's language.
 
-Generic requests such as `отредактируй`, `почисти`, `убери воду`, `сократи`, or `сделай понятнее` do not activate Information Style. Follow [information-style.md](information-style.md) only after explicit activation. Explicit constraints on voice, structure, and formatting override that branch's defaults.
+Generic requests such as `edit`, `clean up`, `shorten`, `remove fluff`, `clarify`, `отредактируй`, `почисти`, `убери воду`, `сократи`, or `сделай понятнее` do not activate Information Style. Follow [information-style.md](information-style.md) only after explicit activation. Explicit constraints on voice, structure, and formatting override that branch's defaults.
 
 **Complete when:** the dedicated information-style contract passes without exceeding the shared source boundary.
 
