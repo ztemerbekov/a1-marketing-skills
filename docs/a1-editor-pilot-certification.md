@@ -1,12 +1,12 @@
 # A1 Editor Pilot Certification
 
-This record is the semantic release gate for the A1 Editor pilot. It tracks criteria-based results without defining one preferred rewrite or using an automated LLM judge.
+This record is the semantic release gate for the A1 Editor pilot. It tracks criteria-based results without defining one preferred rewrite. Any temporary LLM arbitration is explicitly identified below and remains subject to user override.
 
 ## Certification Status
 
 - Status: `FAIL`
-- Candidate runtime revision: `0da7a9fc548da0f1ea87f6aba27854dbde9d0874`
-- Decision: the restarted suite found a human-confirmed significant failure in Information Style ordering: `editor-information-style-001` left personal context before the actionable list. The suite stopped; concurrent results for cases 002–004 are diagnostic only. Fix the runtime, install the new candidate, and restart all 25 cases from case one.
+- Candidate runtime revision: `684a5411ed87942e2af2241d7b378cd36723df58`
+- Decision: the LLM-arbitrated full rerun stopped at `editor-clarify-001`: the candidate broadened a weak source into the categorical capability `объединяет общение с клиентами`. The Clarify source boundary requires a runtime fix, permanent regression, new installation, and another complete rerun.
 
 ## Environment
 
@@ -15,8 +15,8 @@ Populate these values from the installed client used for the complete run. One e
 - Client: `codex-cli 0.144.4`
 - Model: `gpt-5.6-sol`
 - Run date: `2026-07-15`
-- Skill revision: `0da7a9fc548da0f1ea87f6aba27854dbde9d0874`
-- Reviewer: `ztemerbekov`
+- Skill revision: `684a5411ed87942e2af2241d7b378cd36723df58`
+- Reviewer: `ztemerbekov` for cases 001–004; separate `codex-cli 0.144.4` / `gpt-5.6-sol` LLM arbiter from case 005 while arbitration is enabled; user override available.
 - Installation: candidate skill directories installed under `~/.codex/skills`; both directories verified byte-for-byte against the recorded revision before the run.
 
 Complete outputs and human verdict evidence are stored in the [2026-07-15 run record](a1-editor-pilot-run-2026-07-15.md).
@@ -34,30 +34,37 @@ Submit each case's exact instruction and input without paraphrasing. Judge the c
 
 Do not compare against golden wording. Treat ambiguous evidence as failure. Record concise evidence for every group before assigning a case result.
 
+## Temporary Arbitration Mode
+
+- Toggle: `LLM_ARBITER=ON` from `editor-strategy-route-005`; the user can disable it or override any verdict.
+- Isolation: each verdict comes from a fresh ephemeral read-only `codex exec`, separate from the candidate run.
+- Input: exact instruction, original input, candidate output, and all four criterion groups.
+- Authority while enabled: the arbiter verdict is recorded unless the user overrides it; any uncertainty must produce `FAIL`.
+
 ## Case Results
 
 `PENDING` means the case has not been run and has no semantic verdict.
 
 | Case | Client | Model | Date | Result | Concise notes |
 |------|--------|-------|------|--------|---------------|
-| [`editor-strategy-route-001`](../skills/a1-editor/evals/cases/strategy-positioning-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified positioning as strategic, named differentiation and the product's main thought, recommended explicit chief invocation, and invented no positioning; human-confirmed final rerun. |
-| [`editor-strategy-route-002`](../skills/a1-editor/evals/cases/strategy-offer-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified offer architecture as strategic, named tariff composition, price logic, and target action, recommended explicit chief invocation, and invented no offer; human-confirmed final rerun. |
-| [`editor-strategy-route-003`](../skills/a1-editor/evals/cases/strategy-audience-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified audience selection as strategic, left segment and reader unchosen, recommended explicit chief invocation, and invented no audience; human-confirmed final rerun. |
-| [`editor-strategy-route-004`](../skills/a1-editor/evals/cases/strategy-campaign-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified campaign concept and message system as strategic, supplied only an explicit chief command, and invented no campaign, channel, audience, or CTA; human-confirmed final rerun. |
-| [`editor-strategy-route-005`](../skills/a1-editor/evals/cases/strategy-landing-structure-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified blank-page landing architecture and proof logic as strategic, recommended explicit chief invocation, and invented no blocks or order; human-confirmed final rerun. |
-| [`editor-strategy-boundary-006`](../skills/a1-editor/evals/cases/ordinary-edit-stays-editor.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Shortened immediately without optional context, preserved Friday, team, and action order, and did not route to chief; human-confirmed final rerun. |
-| [`editor-strategy-boundary-007`](../skills/a1-editor/evals/cases/strategy-keyword-edit-stays-editor.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Shortened the approved positioning while preserving both sources, the shared list, and team use; invented no new strategy and did not route to chief; human-confirmed final rerun. |
-| [`editor-strategy-boundary-008`](../skills/a1-editor/evals/cases/mixed-edit-and-strategy-boundary.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Completed the separable edit, preserved all product facts, and routed only the unperformed positioning work to explicit chief invocation; human-confirmed final rerun. |
-| [`editor-standard-001`](../skills/a1-editor/evals/cases/standard-edit-voice.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Removed the tautology while preserving the conversational first-person voice, Friday use, all three marketplaces, and one report; human-confirmed final rerun. |
-| [`editor-shorten-001`](../skills/a1-editor/evals/cases/shorten.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Materially shortened the tariff copy while preserving price, the up-to-10 limit, Monday reports, and cancellation at any time without a manager call; human-confirmed final rerun. |
-| [`editor-clarify-001`](../skills/a1-editor/evals/cases/clarify-weak-source.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Foregrounded questions visible in one window, removed empty evaluations, and invented no channel, integration, speed, analytics, audience, or business result; human-confirmed final rerun. |
-| [`editor-strengthen-001`](../skills/a1-editor/evals/cases/strengthen-unsupported-claims.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Centered the supported one-list function, preserved uncertainty with `может помочь`, and removed unsupported leadership and sales-growth claims; human-confirmed final rerun. |
-| [`editor-restructure-001`](../skills/a1-editor/evals/cases/restructure.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Grouped tariff, trial, delivery, and support conditions into a scannable order while preserving every number and export restriction; human-confirmed final rerun. |
-| [`editor-ambiguity-001`](../skills/a1-editor/evals/cases/significant-ambiguity.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Asked one concise Basic-or-Pro blocking question, preserved both interpretations, and stopped before editing or assigning features; human-confirmed final rerun. |
-| [`editor-information-style-001`](../skills/a1-editor/evals/cases/information-style-explicit.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `FAIL` | Removed the empty opening and created the required list, but left personal experience before it instead of moving the actionable sequence first; human-confirmed significant failure. |
-| [`editor-information-style-002`](../skills/a1-editor/evals/cases/information-style-not-inferred.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Concurrent diagnostic output passed human review but cannot be carried past the runtime fix. |
-| [`editor-information-style-003`](../skills/a1-editor/evals/cases/information-style-llm-post.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Concurrent diagnostic output passed human review but cannot be carried past the runtime fix. |
-| [`editor-information-style-004`](../skills/a1-editor/evals/cases/information-style-preserve-voice.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Concurrent diagnostic output passed human review but cannot be carried past the runtime fix. |
+| [`editor-strategy-route-001`](../skills/a1-editor/evals/cases/strategy-positioning-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified positioning and differentiation as strategic, recommended explicit chief invocation, and invented no positioning; human-confirmed `684a541` full rerun. |
+| [`editor-strategy-route-002`](../skills/a1-editor/evals/cases/strategy-offer-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified tariff composition, price rationale, and CTA as strategic, recommended explicit chief invocation, and invented no offer; human-confirmed `684a541` full rerun. |
+| [`editor-strategy-route-003`](../skills/a1-editor/evals/cases/strategy-audience-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Left audience and primary reader unchosen, noted insufficient evidence, and recommended explicit chief invocation; human-confirmed `684a541` full rerun. |
+| [`editor-strategy-route-004`](../skills/a1-editor/evals/cases/strategy-campaign-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Identified campaign concept and message-system creation as strategic, recommended explicit chief invocation, and invented no campaign; human-confirmed `684a541` full rerun. |
+| [`editor-strategy-route-005`](../skills/a1-editor/evals/cases/strategy-landing-structure-route.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Routed blank-page landing architecture to explicit chief invocation without inventing blocks or order; independent LLM-arbitrated `684a541` full rerun. |
+| [`editor-strategy-boundary-006`](../skills/a1-editor/evals/cases/ordinary-edit-stays-editor.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Shortened immediately without optional context or chief routing while preserving Friday, team, and action order; independent LLM-arbitrated `684a541` full rerun. |
+| [`editor-strategy-boundary-007`](../skills/a1-editor/evals/cases/strategy-keyword-edit-stays-editor.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Shortened the accepted positioning without inventing strategy or routing to chief; independent LLM-arbitrated `684a541` full rerun. |
+| [`editor-strategy-boundary-008`](../skills/a1-editor/evals/cases/mixed-edit-and-strategy-boundary.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Completed the separable edit and routed only the unperformed positioning task to chief; independent LLM-arbitrated `684a541` full rerun. |
+| [`editor-standard-001`](../skills/a1-editor/evals/cases/standard-edit-voice.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Removed the tautology while preserving first-person voice, Friday use, three marketplaces, and one report; independent LLM-arbitrated `684a541` full rerun. |
+| [`editor-shorten-001`](../skills/a1-editor/evals/cases/shorten.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Shortened materially while preserving price, up-to-10 limit, weekly Monday reports, and cancellation terms; independent LLM-arbitrated `684a541` full rerun. |
+| [`editor-clarify-001`](../skills/a1-editor/evals/cases/clarify-weak-source.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `FAIL` | Added the broader categorical capability `объединяет общение с клиентами` instead of limiting the rewrite to questions visible in one window; independent LLM-arbitrated significant failure. |
+| [`editor-strengthen-001`](../skills/a1-editor/evals/cases/strengthen-unsupported-claims.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Concurrent diagnostic output received arbiter PASS but cannot be carried past the runtime fix. |
+| [`editor-restructure-001`](../skills/a1-editor/evals/cases/restructure.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `684a541`; no semantic verdict. |
+| [`editor-ambiguity-001`](../skills/a1-editor/evals/cases/significant-ambiguity.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `684a541`; no semantic verdict. |
+| [`editor-information-style-001`](../skills/a1-editor/evals/cases/information-style-explicit.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Focused post-fix PASS retained only in run evidence; full rerun pending. |
+| [`editor-information-style-002`](../skills/a1-editor/evals/cases/information-style-not-inferred.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `684a541`; no semantic verdict. |
+| [`editor-information-style-003`](../skills/a1-editor/evals/cases/information-style-llm-post.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `684a541`; no semantic verdict. |
+| [`editor-information-style-004`](../skills/a1-editor/evals/cases/information-style-preserve-voice.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `684a541`; no semantic verdict. |
 | [`editor-information-style-005`](../skills/a1-editor/evals/cases/information-style-preserve-structure.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
 | [`editor-information-style-006`](../skills/a1-editor/evals/cases/information-style-unsupported-claims.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
 | [`editor-information-style-007`](../skills/a1-editor/evals/cases/information-style-markdown-integrity.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
@@ -90,10 +97,10 @@ A significant failure blocks certification. Fix the smallest runtime cause, add 
 ## Remaining Limitations
 
 - The first installed run stopped after two significant failures; its evidence is historical and does not count toward the final verdict.
-- The first two corrected regressions pass, but the restarted suite exposed a third significant failure in Information Style ordering.
-- The active installed candidate is now known to fail and cannot be certified; a new revision must be installed after the runtime fix.
-- Final-run evidence and results remain unknown for every row still marked `PENDING`; concurrent diagnostic passes after the failure do not count.
-- No automated LLM judge is used; semantic judgment remains a human review responsibility.
+- The first three known regressions pass focused review, but the `684a541` full rerun exposed a fourth significant failure in Clarify source fidelity.
+- The active `684a541` candidate is installed and verified but is known to fail and cannot be certified.
+- Final-run evidence and results remain unknown for every row still marked `PENDING`; concurrent diagnostic passes do not count after the runtime changes.
+- Temporary LLM arbitration is enabled from case 005 and is auditable but uses the same model family as the candidate runner; the user can override or disable it.
 
 ## Finalization Rule
 

@@ -551,3 +551,221 @@ Human evidence: first person, the infinite-table joke, failed love, Friday ten-m
 ## Interrupted Final Rerun
 
 The suite stopped at `editor-information-style-001`. A runtime fix and permanent regression are required, followed by installation of the new candidate and a complete restart from case one. No PASS above may be carried into that rerun.
+
+## Focused Information-Style Regression Rerun — `684a541`
+
+- Client: `codex-cli 0.144.4`
+- Model: `gpt-5.6-sol`
+- Skill revision: `684a5411ed87942e2af2241d7b378cd36723df58`
+- Installation: both active skill directories verified byte-for-byte against the recorded revision.
+- Purpose: focused RED-to-GREEN confirmation only; this verdict does not replace the required full rerun.
+
+### `editor-information-style-001` — PASS
+
+```markdown
+## Отредактированный вариант
+
+Порядок проверки:
+
+1. Выгрузить отчет.
+2. Сверить даты.
+3. Отправить итог.
+
+Памятка: https://example.com/checklist
+
+На прошлой неделе я трижды сверял отчеты вручную и постоянно путался во вкладках.
+
+## Что изменилось
+
+- Убрал эмоциональную подводку.
+- Вынес порядок проверки в список.
+- Сохранил ссылку и факт о трех ручных проверках.
+```
+
+Human evidence: the actionable sequence now precedes the personal context; the empty opening is removed; the three ordered steps form valid Markdown; the exact URL and three-manual-check fact remain; no purpose, saving, audience, tool, or CTA is invented. Verdict: `PASS`, confirmed by `ztemerbekov`.
+
+## Final Full Rerun — `684a541`
+
+The final suite restarts below from case one on the installed corrected candidate. No verdict from any earlier or focused run is carried forward.
+
+### `editor-strategy-route-001` — PASS
+
+```text
+Это задача позиционирования: нужно выбрать отличие и сформулировать идею, которую сервис должен занять в сознании аудитории. `a1-editor` редактирует готовый материал, но не придумывает маркетинговую стратегию.
+
+Явно вызовите `$a1-editor-in-chief` с этим же запросом — он проведёт стратегический разбор.
+```
+
+Human evidence: identifies differentiation and the product's main idea as positioning decisions, treats the supplied fact only as context, recommends explicit chief invocation, and invents no positioning, slogan, category, promise, segment, or claim. Verdict: `PASS`, confirmed by `ztemerbekov`.
+
+### `editor-strategy-route-002` — PASS
+
+```text
+`a1-editor` редактирует готовый материал, но не проектирует состав тарифа, ценовое обоснование и CTA с нуля.
+
+Для разработки оффера явно вызовите `a1-editor-in-chief`, например:
+
+> Используй `a1-editor-in-chief`. Собери оффер для нового тарифа на основе указанных фактов.
+```
+
+Human evidence: identifies tariff composition, price rationale, and CTA as unchosen strategic work, recommends explicit chief invocation, and invents no offer, discount, urgency, action, or explanation of price. Verdict: `PASS`, confirmed by `ztemerbekov`.
+
+### `editor-strategy-route-003` — PASS
+
+```text
+`a1-editor` редактирует готовый текст, но не выбирает целевую аудиторию и приоритетного читателя — это стратегическое решение.
+
+Явно вызовите `$a1-editor-in-chief`: он проведёт стратегический разбор и поможет обоснованно выбрать первый сегмент. Одного факта о сборе отзывов для такого выбора недостаточно.
+```
+
+Human evidence: identifies audience and primary-reader selection as strategic, explicitly leaves them unchosen because evidence is insufficient, recommends explicit chief invocation, and invents no segment, role, company size, or awareness level. Verdict: `PASS`, confirmed by `ztemerbekov`.
+
+### `editor-strategy-route-004` — PASS
+
+```text
+A1 Editor редактирует готовый материал, но не придумывает концепцию кампании и систему сообщений с нуля.
+
+Для такой стратегической задачи явно вызовите `$a1-editor-in-chief`. Он поможет разработать идею запуска на основе факта, что отчёт объединяет отзывы с Ozon и Wildberries.
+```
+
+Human evidence: identifies campaign concept and message-system creation as strategic, preserves the sole source fact, recommends explicit chief invocation, and invents no big idea, slogan, ad, channel, sequence, audience, or CTA. Verdict: `PASS`, confirmed by `ztemerbekov`.
+
+## Temporary LLM Arbitration Enabled
+
+- Toggle: `LLM_ARBITER=ON` from case 005; the user may disable it or override any verdict.
+- Arbiter: fresh ephemeral read-only `codex-cli 0.144.4` / `gpt-5.6-sol` session, separate from each candidate run.
+- Rule: judge exact input and complete output against Must Change, Must Preserve, Forbidden, and Output Contract; uncertainty is `FAIL`; no golden wording.
+
+### `editor-strategy-route-005` — PASS
+
+Candidate output:
+
+```text
+A1 Editor редактирует готовый материал, но не проектирует с нуля стратегическую структуру лендинга.
+
+Для этой задачи явно вызовите `a1-editor-in-chief`: он определит блоки, их порядок и доказательную роль каждого блока.
+```
+
+Arbiter evidence: request correctly classified as blank-page structure; boundary and explicit chief invocation present; blocks, order, proof, CTA, questions, and chief workflow not invented; output contract passes. Verdict: `PASS`.
+
+### `editor-strategy-boundary-006` — PASS
+
+Candidate output:
+
+```markdown
+## Сокращённая версия
+
+Каждую пятницу команда открывает свежий файл отчёта, сверяет даты и удаляет дубли.
+
+## Что изменилось
+
+- Убраны вводная фраза и повторяющиеся указатели последовательности.
+- Сохранены порядок действий и исходный смысл.
+```
+
+Arbiter evidence: immediate shortening removes the introduction and repetitions; Friday, team, fresh report, and action order remain; no chief routing or invented context appears; output contract passes. Verdict: `PASS`.
+
+### `editor-strategy-boundary-007` — PASS
+
+Candidate output:
+
+```markdown
+## Сокращённая версия
+
+Сервис — единое место, где команда работает с отзывами из Ozon и Wildberries в одном списке.
+
+## Что изменилось
+
+- Убрана вводная фраза «мы позиционируем».
+- Устранён повтор «одном общем».
+- Исходный смысл сохранён.
+```
+
+Arbiter evidence: the accepted positioning is shortened immediately; one place, both marketplaces, team, and one list remain; no strategy, audience, offer, claim, or chief routing is invented; output contract passes. Verdict: `PASS`.
+
+### `editor-strategy-boundary-008` — PASS
+
+Candidate output:
+
+```markdown
+## Отредактированный вариант
+
+Сервис собирает отзывы с Ozon и Wildberries в единый список для команды.
+
+## Что изменилось
+
+- Убрал вводное «Важно отметить, что».
+- Заменил «общий список» на более точное «единый список».
+
+Новое позиционирование — стратегическая задача, а `a1-editor` редактирует только готовый материал. Чтобы разработать основу будущей кампании, явно вызовите `a1-editor-in-chief`.
+```
+
+Arbiter evidence: the separable edit is complete and preserves all facts; the unperformed strategic work is clearly separated and routed to chief; no positioning, campaign, audience, offer, claim, CTA, hard-gate question, or chief workflow is invented; output contract passes. Verdict: `PASS`.
+
+### `editor-standard-001` — PASS
+
+```markdown
+## Отредактированный вариант
+
+Честно говоря, мы долго думали, как перестать каждый день прыгать между кабинетами маркетплейсов. В итоге сделали простую штуку: сервис собирает комментарии с Ozon, Wildberries и Яндекс Маркета в один отчёт. Я сам открываю его по пятницам — так хотя бы ничего не теряется между тремя вкладками.
+
+## Что изменилось
+
+- Убрал повтор «долго и продолжительно».
+- Упростил тяжёлую конструкцию «как не прыгать».
+- Сохранил разговорные «честно говоря», «простую штуку» и личную деталь про пятницы.
+```
+
+Arbiter evidence: the tautology and long setup are removed; the three marketplaces connect clearly to one report; first person, conversational voice, Friday use, and all facts remain; no forbidden promise or CTA appears; output contract passes. Verdict: `PASS`.
+
+### `editor-shorten-001` — PASS
+
+```markdown
+## Сокращённая версия
+
+Тариф Start стоит 1 900 рублей в месяц. Команда может подключить до 10 магазинов. Отчеты приходят раз в неделю, по понедельникам. Тариф можно отменить в любой момент без звонка менеджеру и долгосрочных обязательств.
+
+## Что изменилось
+
+- Сократил текст примерно на треть.
+- Убрал повтор об отмене подписки.
+- Сохранил стоимость, лимит магазинов, график отчетов и условия отмены.
+```
+
+Arbiter evidence: repetition and bureaucracy are removed; 1,900 rubles per month, up to 10 stores, weekly Monday reports, and cancellation at any time without a manager call remain; no new condition, trial, refund, discount, or CTA appears; output contract passes. Verdict: `PASS`.
+
+### `editor-clarify-001` — FAIL
+
+```markdown
+## Отредактированный текст
+
+Наше решение объединяет общение с клиентами в одном пространстве. Команда видит вопросы клиентов в одном окне.
+
+## Что изменилось
+
+- Убрал неподтверждённые оценки: «инновационное», «максимально качественное», «эффективно».
+- Заменил канцелярские обороты простыми и конкретными формулировками.
+- Сохранил все факты исходного текста.
+```
+
+Arbiter evidence: the one-window fact is preserved and empty evaluations are removed, but `объединяет общение с клиентами` promotes vague source language into a broader categorical capability instead of retaining only the confirmed function. Forbidden additions and output shape otherwise pass. Verdict: `FAIL`.
+
+### `editor-strengthen-001` — diagnostic PASS
+
+```markdown
+## Отредактированная версия
+
+Сервис собирает отзывы из Wildberries и Ozon в одном списке. Возможно, это поможет команде разбирать их быстрее.
+
+## Что изменилось
+
+- Сразу вынесена конкретная функция сервиса.
+- Сохранена честная оговорка «возможно».
+- Удалены неподтверждённые заявления о лидерстве на рынке и гарантированном росте продаж.
+```
+
+Arbiter evidence: the supported one-list function is central, uncertainty remains explicit, and unsupported superiority and sales growth are removed; no new fact, metric, case, guarantee, benefit, or CTA appears; output contract passes. Diagnostic verdict: `PASS`, not carried forward.
+
+## Interrupted `684a541` Full Rerun
+
+The suite stopped at `editor-clarify-001`. A Clarify runtime fix and permanent regression are required, followed by installation of the new candidate and another complete restart from case one.

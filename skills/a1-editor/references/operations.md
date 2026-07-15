@@ -36,6 +36,8 @@ Use for `clarify`, `make clearer`, `simplify`, `проясни`, `сделай �
 
 Move the main point earlier, untangle overloaded syntax, name known actors or objects, and simplify jargon when the allowed sources support the change. Preserve necessary technical terms and uncertainty.
 
+When weak material contains one observable function alongside vague process or interaction claims, anchor the rewrite in the observable function and remove the unsupported abstraction. Do not turn vague process or interaction language into a broader categorical capability merely to make it sound concrete.
+
 **Complete when:** the same source-supported meaning requires less interpretation from the reader.
 
 ## Strengthen
