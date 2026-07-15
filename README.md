@@ -4,37 +4,166 @@
 
 **English** | [Русский](./README.ru.md)
 
-Marketing skills for AI agents.
+Marketing Skills is a small team of AI skills for marketers, founders, and anyone who works with marketing copy. The skills help your agent remember product context, improve existing text, and prepare complex editorial assignments without inventing facts about the product.
 
-This repository follows the Agent Skills directory format: each skill is a self-contained folder with a `SKILL.md` file and optional `references/`, `scripts/`, or `assets/`.
+An AI skill is a reusable set of instructions that teaches an agent how to handle a specific kind of work. This repository currently contains three skills that work together as a small editorial team.
 
-## Contents
+You do not need to learn a special command language. Install the skills, describe the task in ordinary words, and include the text when you want it edited.
 
-- [Install](#install)
-- [Skills](#skills)
-- [Design Contract](#design-contract)
-- [Architecture](#architecture)
-- [Platform Support](#platform-support)
-- [Compatibility Philosophy](#compatibility-philosophy)
-- [Development](#development)
+## Start here
+
+1. Open a terminal in the project where you want to use the skills.
+2. Install all current Marketing Skills:
+
+   ```bash
+   npx skills@latest add ztemerbekov/marketing-skills
+   ```
+
+3. Open or reload your AI client. Codex users should restart Codex after installation.
+4. Paste your text and ask for the change you need:
+
+   ```text
+   Shorten this text, keep the facts and the calm tone:
+
+   [your text]
+   ```
+
+The recommended installer is the simplest option for a project shared across different AI clients. Client-specific alternatives are available in [Install](#install).
+
+## Choose a skill
+
+<!-- SKILLS:START -->
+| Skill | Best for |
+|-------|----------|
+| [Marketing Context](skills/a1-setup-marketing-context/) (`a1-setup-marketing-context`) | Giving future marketing work reusable product, audience, positioning, voice, proof, vocabulary, examples, and goals. |
+| [Editor](skills/a1-editor/) (`a1-editor`) | Improving existing text immediately: edit, shorten, clarify, strengthen, or restructure without inventing facts. |
+| [Editor in Chief](skills/a1-editor-in-chief/) (`a1-editor-in-chief`) | Defining a strategic or editorial assignment through focused questions before Editor rewrites the text. |
+<!-- SKILLS:END -->
+
+Use this quick rule:
+
+- Want the agent to remember your product, audience, voice, or proof for future work? Start with **Marketing Context**.
+- Already have text and know what should change? Use **Editor**.
+- Need to work out the reader, goal, format, constraints, positioning, or message before editing? Explicitly invoke **Editor in Chief**.
+
+Marketing Context is useful for repeated work, but Editor does not require it to improve a supplied text.
+
+## Meet the skills
+
+### Marketing Context
+
+**What it does:** saves reusable facts about the product, audience, positioning, voice, proof, vocabulary, examples, and business goals in the current project. Other marketing skills can use this context in later tasks.
+
+**Use it when:** you start marketing work in a project or when important product facts, audiences, proof, terminology, or voice guidelines change.
+
+**Try:**
+
+```text
+Save our product, audience, positioning, voice, proof, preferred words, and business goals for future marketing work.
+```
+
+### Editor
+
+**What it does:** improves text you already have. It can edit, shorten, clarify, strengthen, or restructure the material while preserving supported facts, qualifications, and useful voice. It starts immediately when you provide text and an editing request.
+
+**Use it when:** the underlying marketing decision is already made and you want a clearer, tighter, or better-organized version of the existing copy.
+
+**Try:**
+
+```text
+Make this landing-page section clearer and shorter. Keep every number and do not add new promises:
+
+[your text]
+```
+
+For information-style editing, ask for it explicitly: “Edit this in information style” or “по Ильяхову.” A generic request such as “clean this up” keeps the standard, more conservative editing behavior.
+
+Requests to create or rethink positioning, an offer, an audience, campaign messaging, or a landing-page structure are outside Editor's text-editing boundary. Editor recommends that you explicitly invoke `a1-editor-in-chief`; it does not start the chief interview automatically.
+
+### Editor in Chief
+
+**What it does:** helps define a strategic or demanding editorial assignment before rewriting begins. It asks only the questions that block the work, creates an Editor Brief, and then hands the selected editing operation to Editor.
+
+**Use it when:** the reader, goal, format, constraints, positioning, message, or editing operation still needs to be decided. This skill starts only when you explicitly invoke it.
+
+**Try:**
+
+```text
+Use a1-editor-in-chief. Help me define the audience, goal, message, and constraints for this page, then edit the supplied text.
+```
 
 ## Install
 
-### <img src="./assets/vercel.webp" alt="npx skills" width="16" height="16"> Recommended: npx skills
+### Recommended project installation
 
-Install all current skills into the current project:
+Run this command from the project where you want the skills:
 
 ```bash
 npx skills@latest add ztemerbekov/marketing-skills
 ```
 
-Install only the editorial team skills:
+It installs all current skills into the project using the cross-agent convention. Use one of the alternatives below only when you prefer a client-native installation or your client needs its adapter.
+
+<details>
+<summary><strong>Codex: install from GitHub</strong></summary>
 
 ```bash
-npx skills@latest add ztemerbekov/marketing-skills --skill a1-setup-marketing-context a1-editor a1-editor-in-chief
+python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
+  --repo ztemerbekov/marketing-skills \
+  --path skills/a1-setup-marketing-context skills/a1-editor skills/a1-editor-in-chief
 ```
 
-Remove the installed project skills:
+Restart Codex after installation.
+
+</details>
+
+<details>
+<summary><strong>Claude Code: install as a plugin</strong></summary>
+
+```text
+/plugin marketplace add ztemerbekov/marketing-skills
+/plugin install marketing-skills
+```
+
+To install only the editorial team bundle:
+
+```text
+/plugin install editorial-team
+```
+
+</details>
+
+<details>
+<summary><strong>Cursor: copy the skills and Cursor rule</strong></summary>
+
+Clone this repository, open a terminal in its root, set the target project path, and run:
+
+```bash
+TARGET_PROJECT=/path/to/your/project
+mkdir -p "$TARGET_PROJECT/.cursor/rules" "$TARGET_PROJECT/skills"
+cp -R skills/a1-* "$TARGET_PROJECT/skills/"
+cp .cursor/rules/marketing-skills.mdc "$TARGET_PROJECT/.cursor/rules/"
+```
+
+</details>
+
+<details>
+<summary><strong>Antigravity: copy skills into the project</strong></summary>
+
+Clone this repository, open a terminal in its root, set the target project path, and run:
+
+```bash
+TARGET_PROJECT=/path/to/your/project
+mkdir -p "$TARGET_PROJECT/.agents/skills"
+cp -R skills/a1-* "$TARGET_PROJECT/.agents/skills/"
+```
+
+</details>
+
+<details>
+<summary><strong>Remove installed skills</strong></summary>
+
+Remove a project installation:
 
 ```bash
 rm -rf .agents/skills/a1-setup-marketing-context \
@@ -45,19 +174,7 @@ rm -rf .agents/skills/a1-setup-marketing-context \
        .claude/skills/a1-editor-in-chief
 ```
 
-Use this path first when you want a clean cross-agent install. The platform-specific sections below are fallbacks or client-native alternatives.
-
-### <img src="./assets/codex.webp" alt="Codex" width="16" height="16"> Codex
-
-Install the current skills from GitHub:
-
-```bash
-python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo ztemerbekov/marketing-skills \
-  --path skills/a1-setup-marketing-context skills/a1-editor skills/a1-editor-in-chief
-```
-
-Remove the installed skills:
+Remove a global Codex installation:
 
 ```bash
 rm -rf ~/.codex/skills/a1-setup-marketing-context \
@@ -65,165 +182,20 @@ rm -rf ~/.codex/skills/a1-setup-marketing-context \
        ~/.codex/skills/a1-editor-in-chief
 ```
 
-Restart Codex after installing or removing skills.
+</details>
 
-### <img src="./assets/claude.webp" alt="Claude Code" width="16" height="16"> Claude Code
+## Use the skills
 
-Install from GitHub:
+- Write requests in the language you normally use. The skills answer in that language by default and preserve the language of the supplied copy.
+- Give Editor the complete text and a concrete intent such as “shorten,” “clarify,” “strengthen,” or “restructure.”
+- State important constraints directly: preserve the numbers, keep the voice, keep the structure, or return only the edited text.
+- Set up Marketing Context when you want consistent product facts and voice across repeated tasks. Missing context does not block an ordinary edit.
+- Invoke Editor in Chief by name when you want the assignment clarified before editing.
 
-```text
-/plugin marketplace add ztemerbekov/marketing-skills
-/plugin install marketing-skills
-```
+## Help and feedback
 
-Install only the editorial team bundle:
+If a skill produces a bad result, remove confidential information and email the input, instruction, output, and expected behavior to [z.temerbekov@gmail.com](mailto:z.temerbekov@gmail.com).
 
-```text
-/plugin install editorial-team
-```
+## For contributors
 
-Remove installed plugins:
-
-```text
-/plugin uninstall marketing-skills
-/plugin uninstall editorial-team
-/plugin marketplace remove marketing-skills
-```
-
-For local development, add this checkout as the marketplace instead:
-
-```text
-/plugin marketplace add /Users/ztemerbekov/Documents/GitHub/marketing-skills
-```
-
-### <img src="./assets/cursor.webp" alt="Cursor" width="16" height="16"> Cursor
-
-Cursor support is a project adapter. Copy the canonical skills and Cursor rule into the project where you want to use them:
-
-```bash
-mkdir -p .cursor/rules skills
-cp -R /Users/ztemerbekov/Documents/GitHub/marketing-skills/skills/a1-* skills/
-cp /Users/ztemerbekov/Documents/GitHub/marketing-skills/.cursor/rules/marketing-skills.mdc .cursor/rules/
-```
-
-Remove them from a project:
-
-```bash
-rm -rf skills/a1-setup-marketing-context \
-       skills/a1-editor \
-       skills/a1-editor-in-chief \
-       .cursor/rules/marketing-skills.mdc
-```
-
-### <img src="./assets/antigravity.webp" alt="Antigravity" width="16" height="16"> Antigravity
-
-Antigravity support uses the cross-agent project convention. Copy the canonical skills into the target project's `.agents/skills/` directory:
-
-```bash
-mkdir -p .agents/skills
-cp -R /Users/ztemerbekov/Documents/GitHub/marketing-skills/skills/a1-* .agents/skills/
-```
-
-For a clean install from GitHub into the current project:
-
-```bash
-tmpdir="$(mktemp -d)"
-git clone --depth 1 https://github.com/ztemerbekov/marketing-skills.git "$tmpdir/marketing-skills"
-mkdir -p .agents/skills
-cp -R "$tmpdir/marketing-skills"/skills/a1-* .agents/skills/
-rm -rf "$tmpdir"
-```
-
-Remove them from a project:
-
-```bash
-rm -rf .agents/skills/a1-setup-marketing-context \
-       .agents/skills/a1-editor \
-       .agents/skills/a1-editor-in-chief
-```
-
-## Skills
-
-<!-- SKILLS:START -->
-| Skill | Description |
-|-------|-------------|
-| [a1-editor](skills/a1-editor/) | Fast marketing text editor and safe strategy router. Use when the user wants to shorten, rewrite, clean up, clarify,... |
-| [a1-editor-in-chief](skills/a1-editor-in-chief/) | Strategic editorial director for strict text diagnosis, blocking questions, editor brief creation, and handoff to... |
-| [a1-setup-marketing-context](skills/a1-setup-marketing-context/) | Create or update the shared marketing context for a repository. Use when the user wants to set up marketing context,... |
-<!-- SKILLS:END -->
-
-## Design Contract
-
-A1 skills keep complexity inside and the user-facing surface simple:
-
-- One public skill represents one understandable user job. Variations stay as internal operations until they require a materially different interaction contract.
-- Safe natural-language entry points are model-invoked. Deliberate interviews and consequential workflows are user-invoked or command-only.
-- Fast skills use marketing context when it exists but continue without it. A strategic skill may require context when proceeding would force an unsafe choice.
-- Results can vary with the material, but the process stays predictable: every skill has a short invariant spine and reveals deeper references only when needed.
-
-Maintainers use the canonical [A1 skill design contract](docs/a1-skill-design-contract.md) and [A1 marketing glossary](docs/a1-marketing-glossary.md). Each installed skill remains self-contained.
-
-If a skill produces a bad result, remove confidential data and email the input, instruction, output, and expected behavior to [z.temerbekov@gmail.com](mailto:z.temerbekov@gmail.com).
-
-## Architecture
-
-The v1 system has three skills:
-
-- `a1-setup-marketing-context`: creates and updates the shared `.agents/marketing-context.md` file for the repository.
-- `a1-editor`: public, auto-triggered, soft-gate text rewriting.
-- `a1-editor-in-chief`: command-only strategic editor, hard gate, Editor Brief, and handoff to `a1-editor`.
-
-The `a1-setup-marketing-context` skill is shared by all future marketing skills. It stores product, audience, positioning, voice, proof, and business context. It does not store editorial canon.
-
-## Editing Workflows and Modes
-
-Choose the entry point by how much assignment discovery you need:
-
-| Workflow | Use it when | Behavior |
-|----------|-------------|----------|
-| `a1-editor` | The text and editing intent are already clear | Starts immediately with a soft gate and returns the edited text plus concise change notes |
-| `a1-editor-in-chief` | You explicitly invoke it to establish a strategic or editorial assignment | Uses a hard gate, creates an Editor Brief, and then hands the selected operation to `a1-editor` |
-
-Both workflows use the same editing operations. Standard requests such as “edit,” “clean up,” “shorten,” or “clarify” preserve the normal, more conservative editing behavior.
-
-Requests to create or rethink positioning, an offer, an audience, campaign messaging, landing-page structure, or another marketing architecture are outside A1 Editor's editing boundary. A1 Editor gives a concise explanation and recommends that you explicitly invoke `a1-editor-in-chief`; it does not start the chief interview automatically. Missing audience, channel, goal, constraints, or marketing context does not route an otherwise ordinary editing request away from A1 Editor.
-
-Information style is a separate explicit mode. Activate it with unambiguous requests such as “in information style,” “по Ильяхову,” or “по «Пиши, сокращай».” The mode may remove empty author-focused setup, neutralize unsupported evaluations, reorganize existing material, and improve Markdown. It still cannot introduce facts, definitions, claims, or conclusions from model knowledge. Explicit constraints such as “preserve my voice” or “preserve the structure” always take priority.
-
-## Platform Support
-
-Canonical skills live in `skills/`.
-
-Claude Code plugin metadata lives in `.claude-plugin/`.
-
-Cursor support lives in `.cursor/rules/` as an adapter. Cursor rules are not the source of truth.
-
-Antigravity support uses `.agents/skills/` at the target project level.
-
-Maintainer scripts live in `scripts/` and are not required after installation.
-
-## Compatibility Philosophy
-
-This repository follows the Agent Skills format with documented pragmatic extensions when behavior matters more than strict spec purity.
-
-Allowed extension:
-
-- `disable-model-invocation: true` may be used for command-only skills such as `a1-editor-in-chief`, where accidental auto-triggering would produce the wrong workflow.
-
-## Development
-
-Validate skills:
-
-```bash
-./scripts/validate-skills.sh
-```
-
-Sync the README skill table and Claude plugin version metadata:
-
-```bash
-node scripts/sync-readme-and-plugin.js
-```
-
-### Completion and certification
-
-Use the [A1 skill completion checklist](docs/a1-skill-completion-checklist.md) before declaring a new or materially changed skill complete. The current A1 Editor semantic verdict, environment record, case inventory, release evidence, and limitations live in the [pilot certification record](docs/a1-editor-pilot-certification.md). Structural validation and metadata synchronization do not replace the installed semantic run.
+Developing or maintaining this repository? See [Contributing](./CONTRIBUTING.md).

@@ -4,9 +4,57 @@ const fs = require("fs");
 const path = require("path");
 
 const skillsDir = "skills";
-const readmeFile = "README.md";
 const pluginFile = ".claude-plugin/plugin.json";
 const marketplaceFile = ".claude-plugin/marketplace.json";
+const skillOrder = [
+  "a1-setup-marketing-context",
+  "a1-editor",
+  "a1-editor-in-chief",
+];
+const readmes = [
+  {
+    file: "README.md",
+    columns: ["Skill", "Best for"],
+    copy: {
+      "a1-setup-marketing-context": {
+        title: "Marketing Context",
+        summary:
+          "Giving future marketing work reusable product, audience, positioning, voice, proof, vocabulary, examples, and goals.",
+      },
+      "a1-editor": {
+        title: "Editor",
+        summary:
+          "Improving existing text immediately: edit, shorten, clarify, strengthen, or restructure without inventing facts.",
+      },
+      "a1-editor-in-chief": {
+        title: "Editor in Chief",
+        summary:
+          "Defining a strategic or editorial assignment through focused questions before Editor rewrites the text.",
+      },
+    },
+  },
+  {
+    file: "README.ru.md",
+    columns: ["Навык", "Когда использовать"],
+    copy: {
+      "a1-setup-marketing-context": {
+        title: "Маркетинговый контекст",
+        summary:
+          "Сохранить сведения о продукте, аудитории, позиционировании, стиле общения, подтверждениях, словаре, примерах и целях для следующих задач.",
+      },
+      "a1-editor": {
+        title: "Редактор",
+        summary:
+          "Сразу улучшить готовый текст: отредактировать, сократить, прояснить, усилить или перестроить без выдуманных фактов.",
+      },
+      "a1-editor-in-chief": {
+        title: "Шеф-редактор",
+        summary:
+          "Поставить стратегическую или редакторскую задачу через короткие уточнения, а затем передать текст Редактору.",
+      },
+    },
+  },
+];
 
 function parseFrontmatter(content) {
   const match = content.match(/^---\n([\s\S]*?)\n---/);
@@ -43,37 +91,52 @@ function getSkills() {
       return {
         dir: entry.name,
         name: frontmatter.name || entry.name,
-        description: frontmatter.description || "",
       };
     })
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .sort((a, b) => {
+      const aIndex = skillOrder.indexOf(a.name);
+      const bIndex = skillOrder.indexOf(b.name);
+      if (aIndex === -1 && bIndex === -1) return a.name.localeCompare(b.name);
+      if (aIndex === -1) return 1;
+      if (bIndex === -1) return -1;
+      return aIndex - bIndex;
+    });
 }
 
-function truncate(text, max = 120) {
-  if (text.length <= max) return text;
-  const sliced = text.slice(0, max);
-  const lastSpace = sliced.lastIndexOf(" ");
-  return `${sliced.slice(0, lastSpace > 0 ? lastSpace : max)}...`;
-}
+function syncReadme(skills, readme) {
+  const content = fs.readFileSync(readme.file, "utf8");
+  const missingCopy = skills
+    .filter((skill) => !readme.copy[skill.name])
+    .map((skill) => skill.name);
 
-function syncReadme(skills) {
-  const content = fs.readFileSync(readmeFile, "utf8");
+  if (missingCopy.length > 0) {
+    throw new Error(
+      `${readme.file} needs user-facing copy for: ${missingCopy.join(", ")}`,
+    );
+  }
+
   const table = [
-    "| Skill | Description |",
-    "|-------|-------------|",
-    ...skills.map(
-      (skill) =>
-        `| [${skill.name}](skills/${skill.dir}/) | ${truncate(skill.description)} |`,
-    ),
+    `| ${readme.columns[0]} | ${readme.columns[1]} |`,
+    "|-------|----------|",
+    ...skills.map((skill) => {
+      const copy = readme.copy[skill.name];
+      return `| [${copy.title}](skills/${skill.dir}/) (\`${skill.name}\`) | ${copy.summary} |`;
+    }),
   ].join("\n");
 
+  const inventoryPattern =
+    /(<!-- SKILLS:START -->\n)[\s\S]*?(\n<!-- SKILLS:END -->)/;
+  if (!inventoryPattern.test(content)) {
+    throw new Error(`${readme.file} is missing the generated skill inventory`);
+  }
+
   const next = content.replace(
-    /(<!-- SKILLS:START -->\n)[\s\S]*?(\n<!-- SKILLS:END -->)/,
+    inventoryPattern,
     `$1${table}$2`,
   );
 
   if (next !== content) {
-    fs.writeFileSync(readmeFile, next);
+    fs.writeFileSync(readme.file, next);
     return true;
   }
   return false;
@@ -111,12 +174,16 @@ function syncPlugin(skills) {
 }
 
 const skills = getSkills();
-const readmeUpdated = syncReadme(skills);
+const updatedReadmes = readmes
+  .filter((readme) => syncReadme(skills, readme))
+  .map((readme) => readme.file);
 const pluginUpdated = syncPlugin(skills);
 
-if (!readmeUpdated && !pluginUpdated) {
+if (updatedReadmes.length === 0 && !pluginUpdated) {
   console.log("Everything is already in sync");
 } else {
-  if (readmeUpdated) console.log("Updated README.md skills table");
+  for (const readme of updatedReadmes) {
+    console.log(`Updated ${readme} skills table`);
+  }
   if (pluginUpdated) console.log("Updated Claude plugin metadata");
 }
