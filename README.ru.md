@@ -221,3 +221,7 @@ Maintainer scripts лежат в `scripts/` и не требуются посл�
 ```bash
 node scripts/sync-readme-and-plugin.js
 ```
+
+### Завершение и сертификация
+
+Перед завершением нового или существенно измененного skill используйте [чек-лист завершения A1 skill](docs/a1-skill-completion-checklist.md). Текущий semantic verdict A1 Editor, параметры окружения, список кейсов, release evidence и ограничения хранятся в [записи сертификации пилота](docs/a1-editor-pilot-certification.md). Структурная валидация и синхронизация metadata не заменяют semantic-прогон установленного skill.
