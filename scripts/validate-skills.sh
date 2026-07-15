@@ -6,6 +6,7 @@ issues=0
 warnings=0
 passed=0
 artifacts_passed=0
+certification_report="skills/a1-editor/evals/pilot-certification.md"
 
 echo "Validating A1 design contract artifacts"
 echo
@@ -47,6 +48,7 @@ required_artifacts=(
   "README.ru.md"
   ".cursor/rules/marketing-skills.mdc"
   "docs/a1-skill-design-contract.md"
+  "docs/a1-skill-completion-checklist.md"
   "docs/a1-marketing-glossary.md"
   "skills/a1-editor/references/editor-spine.md"
   "skills/a1-editor/references/strategy-boundary.md"
@@ -56,6 +58,7 @@ required_artifacts=(
   "skills/a1-editor/references/final-qa.md"
   "skills/a1-editor/evals/README.md"
   "skills/a1-editor/evals/case-template.md"
+  "$certification_report"
   "skills/a1-editor-in-chief/references/chief-gate.md"
   "skills/a1-editor-in-chief/references/editor-brief.md"
   "${editor_eval_cases[@]}"
@@ -86,9 +89,20 @@ require_text() {
 }
 
 require_text "AGENTS.md" "docs/a1-skill-design-contract.md" "AGENTS.md must require the canonical A1 skill design contract"
+require_text "AGENTS.md" "docs/a1-skill-completion-checklist.md" "AGENTS.md must require the reusable A1 completion checklist"
 require_text "AGENTS.md" "CONTEXT-MAP.md" "AGENTS.md must require domain-boundary reassessment for new skills"
+require_text "docs/a1-skill-design-contract.md" "a1-skill-completion-checklist.md" "The design contract must route maintainers to the completion checklist"
+require_text "docs/a1-skill-completion-checklist.md" "## Invocation and Interaction Contract" "Completion checklist must cover invocation selection"
+require_text "docs/a1-skill-completion-checklist.md" "## Self-Contained Runtime" "Completion checklist must cover self-contained installation"
+require_text "docs/a1-skill-completion-checklist.md" "## Criteria-Based Evaluation" "Completion checklist must cover eval design"
+require_text "docs/a1-skill-completion-checklist.md" "## Installed Semantic Release Gate" "Completion checklist must cover installed semantic runs"
+require_text "docs/a1-skill-completion-checklist.md" "CONTEXT-MAP.md" "Completion checklist must require domain-boundary reassessment"
 require_text "README.md" "docs/a1-skill-design-contract.md" "README.md must link the A1 skill design contract"
 require_text "README.ru.md" "docs/a1-skill-design-contract.md" "README.ru.md must link the A1 skill design contract"
+require_text "README.md" "docs/a1-skill-completion-checklist.md" "README.md must link the reusable A1 completion checklist"
+require_text "README.ru.md" "docs/a1-skill-completion-checklist.md" "README.ru.md must link the reusable A1 completion checklist"
+require_text "README.md" "skills/a1-editor/evals/pilot-certification.md" "README.md must link the A1 Editor pilot certification record"
+require_text "README.ru.md" "skills/a1-editor/evals/pilot-certification.md" "README.ru.md must link the A1 Editor pilot certification record"
 require_text "README.md" "z.temerbekov@gmail.com" "README.md must include the feedback address"
 require_text "README.ru.md" "z.temerbekov@gmail.com" "README.ru.md must include the feedback address"
 require_text "README.md" 'explicitly invoke `a1-editor-in-chief`' "README.md must document explicit Editor in Chief invocation"
@@ -97,6 +111,15 @@ require_text "README.ru.md" 'явно запустить `a1-editor-in-chief`' "
 require_text "README.ru.md" "не начинает интервью шеф-редактора автоматически" "README.ru.md must document the automatic-interview boundary"
 require_text "skills/a1-editor/evals/README.md" "## Case Format" "Editor eval docs must define the case format"
 require_text "skills/a1-editor/evals/README.md" "## Manual Run Protocol" "Editor eval docs must define the manual run protocol"
+require_text "skills/a1-editor/evals/README.md" "pilot-certification.md" "Editor eval docs must link the pilot certification record"
+require_text "skills/a1-editor/evals/README.md" "a1-skill-completion-checklist.md" "Editor eval docs must link the reusable completion checklist"
+require_text "$certification_report" "## Certification Status" "Pilot certification must state its verdict"
+require_text "$certification_report" "## Environment" "Pilot certification must record a comparable environment"
+require_text "$certification_report" "## Judgment Rule" "Pilot certification must define criteria-based judgment"
+require_text "$certification_report" "Output contract" "Pilot certification must include the output contract in every semantic judgment"
+require_text "$certification_report" "## Case Results" "Pilot certification must inventory every eval case"
+require_text "$certification_report" "## Remaining Limitations" "Pilot certification must disclose remaining limitations"
+require_text "$certification_report" "## Finalization Rule" "Pilot certification must prevent a false pass"
 require_text "skills/a1-editor/evals/case-template.md" "## Must Change" "Editor eval template must include Must Change criteria"
 require_text "skills/a1-editor/evals/case-template.md" "## Must Preserve" "Editor eval template must include Must Preserve criteria"
 require_text "skills/a1-editor/evals/case-template.md" "## Forbidden" "Editor eval template must include Forbidden criteria"
@@ -136,6 +159,15 @@ for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}"; do
   require_text "$eval_case" "## Must Change" "Editor eval case must include Must Change criteria"
   require_text "$eval_case" "## Must Preserve" "Editor eval case must include Must Preserve criteria"
   require_text "$eval_case" "## Forbidden" "Editor eval case must include Forbidden criteria"
+
+  eval_id="$(sed -n 's/^- ID: `\([^`]*\)`.*/\1/p' "$eval_case" | head -n 1)"
+  if [[ -z "$eval_id" ]]; then
+    echo "FAIL $eval_case"
+    echo "  Eval case must declare a stable ID"
+    issues=$((issues + 1))
+  else
+    require_text "$certification_report" "$eval_id" "Pilot certification must include eval case $eval_id"
+  fi
 done
 
 echo

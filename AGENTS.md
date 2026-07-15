@@ -58,6 +58,8 @@ Do not make Cursor rules, Claude plugin metadata, or generated files the source 
 
 Every new or materially changed skill must follow the canonical [A1 skill design contract](docs/a1-skill-design-contract.md). Use the [A1 marketing glossary](docs/a1-marketing-glossary.md) for shared operational terms.
 
+Before declaring a new or materially changed skill complete, use the [A1 skill completion checklist](docs/a1-skill-completion-checklist.md). Record the installed semantic run and any remaining limitations; structural validation alone is not a semantic pass.
+
 ## Skill Format
 
 Every skill must include `SKILL.md` with YAML frontmatter:

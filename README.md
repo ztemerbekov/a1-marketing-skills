@@ -223,3 +223,7 @@ Sync the README skill table and Claude plugin version metadata:
 ```bash
 node scripts/sync-readme-and-plugin.js
 ```
+
+### Completion and certification
+
+Use the [A1 skill completion checklist](docs/a1-skill-completion-checklist.md) before declaring a new or materially changed skill complete. The current A1 Editor semantic verdict, environment record, case inventory, release evidence, and limitations live in the [pilot certification record](skills/a1-editor/evals/pilot-certification.md). Structural validation and metadata synchronization do not replace the installed semantic run.

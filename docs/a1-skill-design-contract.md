@@ -76,6 +76,8 @@ Repository automation may validate structure: required files, headings, frontmat
 
 ## Future-Skill Checklist
 
+Use the operational [A1 skill completion checklist](a1-skill-completion-checklist.md) to apply this contract, run the installed semantic gate, and record a release verdict.
+
 Before merging a new or materially changed skill, confirm that:
 
 1. Its user job and interaction contract are explicit.

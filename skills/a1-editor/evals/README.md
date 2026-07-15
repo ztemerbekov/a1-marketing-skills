@@ -54,6 +54,12 @@ Criteria must describe observable behavior, not preferred wording. Use the [case
 - [unsupported claims](cases/information-style-unsupported-claims.md)
 - [Markdown integrity](cases/information-style-markdown-integrity.md)
 
+## Pilot Certification
+
+The suite-level source of truth is the [pilot certification record](pilot-certification.md). It inventories Editor and Editor in Chief cases, records the comparable environment and per-case verdicts, maps required pilot coverage, and discloses remaining limitations. A `PENDING` or `FAIL` status is not a pass.
+
+For future skills, use the repository's [A1 skill completion checklist](../../../docs/a1-skill-completion-checklist.md). A complete run updates the certification environment and every case row, judges all four criteria groups, and restarts the full suite after any runtime fix.
+
 ## Manual Run Protocol
 
 1. Start a clean agent session with the current `skills/a1-editor/` directory installed.
