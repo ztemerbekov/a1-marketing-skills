@@ -1,4 +1,4 @@
-# Eval Case: Positioning Request Routes to Editor in Chief
+# editor-strategy-route-001 — Positioning Request Routes to Editor in Chief
 
 - ID: `editor-strategy-route-001`
 - Operation: `Strategy Boundary`

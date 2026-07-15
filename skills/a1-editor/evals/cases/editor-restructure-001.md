@@ -1,4 +1,4 @@
-# Eval Case: Restructure Existing Material Only
+# editor-restructure-001 — Restructure Existing Material Only
 
 - ID: `editor-restructure-001`
 - Operation: `Restructure`

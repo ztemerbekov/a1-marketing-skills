@@ -1,4 +1,4 @@
-# Eval Case: Missing Editor Dependency
+# chief-dependency-001 — Missing Editor Dependency
 
 - ID: `chief-dependency-001`
 - Operation: `Dependency Gate`

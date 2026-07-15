@@ -1,4 +1,4 @@
-# Eval Case: Mixed Editing and Strategy Request Preserves the Boundary
+# editor-strategy-boundary-008 — Mixed Editing and Strategy Request Preserves the Boundary
 
 - ID: `editor-strategy-boundary-008`
 - Operation: `Standard Edit + Strategy Boundary`

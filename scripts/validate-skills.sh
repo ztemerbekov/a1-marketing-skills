@@ -12,34 +12,34 @@ echo "Validating A1 design contract artifacts"
 echo
 
 editor_eval_cases=(
-  "skills/a1-editor/evals/cases/strategy-positioning-route.md"
-  "skills/a1-editor/evals/cases/strategy-offer-route.md"
-  "skills/a1-editor/evals/cases/strategy-audience-route.md"
-  "skills/a1-editor/evals/cases/strategy-campaign-route.md"
-  "skills/a1-editor/evals/cases/strategy-landing-structure-route.md"
-  "skills/a1-editor/evals/cases/ordinary-edit-stays-editor.md"
-  "skills/a1-editor/evals/cases/strategy-keyword-edit-stays-editor.md"
-  "skills/a1-editor/evals/cases/mixed-edit-and-strategy-boundary.md"
-  "skills/a1-editor/evals/cases/standard-edit-voice.md"
-  "skills/a1-editor/evals/cases/shorten.md"
-  "skills/a1-editor/evals/cases/clarify-weak-source.md"
-  "skills/a1-editor/evals/cases/strengthen-unsupported-claims.md"
-  "skills/a1-editor/evals/cases/restructure.md"
-  "skills/a1-editor/evals/cases/significant-ambiguity.md"
-  "skills/a1-editor/evals/cases/information-style-explicit.md"
-  "skills/a1-editor/evals/cases/information-style-not-inferred.md"
-  "skills/a1-editor/evals/cases/information-style-llm-post.md"
-  "skills/a1-editor/evals/cases/information-style-preserve-voice.md"
-  "skills/a1-editor/evals/cases/information-style-preserve-structure.md"
-  "skills/a1-editor/evals/cases/information-style-preserve-formatting.md"
-  "skills/a1-editor/evals/cases/information-style-unsupported-claims.md"
-  "skills/a1-editor/evals/cases/information-style-markdown-integrity.md"
+  "skills/a1-editor/evals/cases/editor-strategy-route-001.md"
+  "skills/a1-editor/evals/cases/editor-strategy-route-002.md"
+  "skills/a1-editor/evals/cases/editor-strategy-route-003.md"
+  "skills/a1-editor/evals/cases/editor-strategy-route-004.md"
+  "skills/a1-editor/evals/cases/editor-strategy-route-005.md"
+  "skills/a1-editor/evals/cases/editor-strategy-boundary-006.md"
+  "skills/a1-editor/evals/cases/editor-strategy-boundary-007.md"
+  "skills/a1-editor/evals/cases/editor-strategy-boundary-008.md"
+  "skills/a1-editor/evals/cases/editor-standard-001.md"
+  "skills/a1-editor/evals/cases/editor-shorten-001.md"
+  "skills/a1-editor/evals/cases/editor-clarify-001.md"
+  "skills/a1-editor/evals/cases/editor-strengthen-001.md"
+  "skills/a1-editor/evals/cases/editor-restructure-001.md"
+  "skills/a1-editor/evals/cases/editor-ambiguity-001.md"
+  "skills/a1-editor/evals/cases/editor-information-style-001.md"
+  "skills/a1-editor/evals/cases/editor-information-style-002.md"
+  "skills/a1-editor/evals/cases/editor-information-style-003.md"
+  "skills/a1-editor/evals/cases/editor-information-style-004.md"
+  "skills/a1-editor/evals/cases/editor-information-style-005.md"
+  "skills/a1-editor/evals/cases/editor-information-style-008.md"
+  "skills/a1-editor/evals/cases/editor-information-style-006.md"
+  "skills/a1-editor/evals/cases/editor-information-style-007.md"
 )
 
 chief_eval_cases=(
-  "skills/a1-editor-in-chief/evals/cases/missing-editor-dependency.md"
-  "skills/a1-editor-in-chief/evals/cases/explicit-chief-hard-gate.md"
-  "skills/a1-editor-in-chief/evals/cases/explicit-chief-handoff.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-dependency-001.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-explicit-002.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-explicit-003.md"
 )
 
 required_artifacts=(
@@ -121,12 +121,12 @@ require_text "$certification_report" "## Finalization Rule" "Pilot certification
 require_text "skills/a1-editor/evals/case-template.md" "## Must Change" "Editor eval template must include Must Change criteria"
 require_text "skills/a1-editor/evals/case-template.md" "## Must Preserve" "Editor eval template must include Must Preserve criteria"
 require_text "skills/a1-editor/evals/case-template.md" "## Forbidden" "Editor eval template must include Forbidden criteria"
-require_text "skills/a1-editor/evals/cases/strengthen-unsupported-claims.md" 'категоричное `помогает быстрее`' "Strengthen regression must forbid removing source uncertainty from the speed outcome"
-require_text "skills/a1-editor/evals/cases/significant-ambiguity.md" 'Ближайшее упоминание `Pro`' "Ambiguity regression must reject nearest-antecedent guessing"
-require_text "skills/a1-editor/evals/cases/information-style-explicit.md" "личный опыт остается отдельным абзацем перед списком" "Information Style regression must reject leaving personal context before the actionable list"
-require_text "skills/a1-editor/evals/cases/clarify-weak-source.md" 'объединяет общение с клиентами' "Clarify regression must reject broadening vague process language into a capability"
+require_text "skills/a1-editor/evals/cases/editor-strengthen-001.md" 'категоричное `помогает быстрее`' "Strengthen regression must forbid removing source uncertainty from the speed outcome"
+require_text "skills/a1-editor/evals/cases/editor-ambiguity-001.md" 'Ближайшее упоминание `Pro`' "Ambiguity regression must reject nearest-antecedent guessing"
+require_text "skills/a1-editor/evals/cases/editor-information-style-001.md" "личный опыт остается отдельным абзацем перед списком" "Information Style regression must reject leaving personal context before the actionable list"
+require_text "skills/a1-editor/evals/cases/editor-clarify-001.md" 'объединяет общение с клиентами' "Clarify regression must reject broadening vague process language into a capability"
 require_text "skills/a1-editor/references/operations.md" "Do not turn vague process or interaction language into a broader categorical capability" "Clarify runtime must not broaden vague process language"
-require_text "skills/a1-editor/evals/cases/clarify-weak-source.md" "допустимо оставить только конкретный факт" "Clarify regression must allow dropping unsupported source sentences entirely"
+require_text "skills/a1-editor/evals/cases/editor-clarify-001.md" "допустимо оставить только конкретный факт" "Clarify regression must allow dropping unsupported source sentences entirely"
 require_text "skills/a1-editor/references/operations.md" "Use the observable function as the entire rewrite if it is the only supported concrete content" "Clarify runtime must drop vague source sentences when one concrete fact is sufficient"
 require_text "skills/a1-editor/references/information-style.md" "put the actionable sequence before supporting personal context" "Information Style runtime must foreground an actionable sequence before supporting personal context"
 require_text "skills/a1-editor/SKILL.md" "references/editor-spine.md" "A1 Editor must use the invariant editor spine"
@@ -172,6 +172,13 @@ for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}"; do
     echo "  Eval case must declare a stable ID"
     issues=$((issues + 1))
   else
+    eval_filename="${eval_case##*/}"
+    expected_eval_filename="${eval_id}.md"
+    if [[ "$eval_filename" != "$expected_eval_filename" ]]; then
+      echo "FAIL $eval_case"
+      echo "  Eval filename must match its ID: expected $expected_eval_filename"
+      issues=$((issues + 1))
+    fi
     require_text "$certification_report" "$eval_id" "Pilot certification must include eval case $eval_id"
   fi
 done

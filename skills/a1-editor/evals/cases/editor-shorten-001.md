@@ -1,4 +1,4 @@
-# Eval Case: Shorten Without Losing Qualifications
+# editor-shorten-001 — Shorten Without Losing Qualifications
 
 - ID: `editor-shorten-001`
 - Operation: `Shorten`

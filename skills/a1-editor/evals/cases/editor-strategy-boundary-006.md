@@ -1,4 +1,4 @@
-# Eval Case: Ordinary Editing Stays in Editor Without Optional Context
+# editor-strategy-boundary-006 — Ordinary Editing Stays in Editor Without Optional Context
 
 - ID: `editor-strategy-boundary-006`
 - Operation: `Shorten`

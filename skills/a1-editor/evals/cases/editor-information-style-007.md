@@ -1,4 +1,4 @@
-# Eval Case: Information Style Preserves Markdown Integrity
+# editor-information-style-007 — Information Style Preserves Markdown Integrity
 
 - ID: `editor-information-style-007`
 - Operation: `Information Style`

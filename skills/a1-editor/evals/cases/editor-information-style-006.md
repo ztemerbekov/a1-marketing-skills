@@ -1,4 +1,4 @@
-# Eval Case: Information Style Neutralizes Unsupported Claims
+# editor-information-style-006 — Information Style Neutralizes Unsupported Claims
 
 - ID: `editor-information-style-006`
 - Operation: `Information Style`

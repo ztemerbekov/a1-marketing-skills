@@ -1,4 +1,4 @@
-# Eval Case: Explicit Chief Invocation Completes the Handoff
+# chief-explicit-003 — Explicit Chief Invocation Completes the Handoff
 
 - ID: `chief-explicit-003`
 - Operation: `Clarify`

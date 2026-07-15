@@ -1,4 +1,4 @@
-# Eval Case: Generic Editing Does Not Activate Information Style
+# editor-information-style-002 — Generic Editing Does Not Activate Information Style
 
 - ID: `editor-information-style-002`
 - Operation: `Standard Edit / Shorten`

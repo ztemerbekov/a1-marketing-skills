@@ -1,4 +1,4 @@
-# Eval Case: Explicit Chief Invocation Runs the Hard Gate
+# chief-explicit-002 — Explicit Chief Invocation Runs the Hard Gate
 
 - ID: `chief-explicit-002`
 - Operation: `Hard Gate`

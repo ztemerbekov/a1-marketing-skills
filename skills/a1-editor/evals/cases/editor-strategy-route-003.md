@@ -1,4 +1,4 @@
-# Eval Case: Audience Request Routes to Editor in Chief
+# editor-strategy-route-003 — Audience Request Routes to Editor in Chief
 
 - ID: `editor-strategy-route-003`
 - Operation: `Strategy Boundary`

@@ -1,4 +1,4 @@
-# Eval Case: Information Style Preserves Voice
+# editor-information-style-004 — Information Style Preserves Voice
 
 - ID: `editor-information-style-004`
 - Operation: `Information Style`

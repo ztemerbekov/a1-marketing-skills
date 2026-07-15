@@ -1,4 +1,4 @@
-# Eval Case: Strategy Keywords Do Not Route an Ordinary Edit
+# editor-strategy-boundary-007 — Strategy Keywords Do Not Route an Ordinary Edit
 
 - ID: `editor-strategy-boundary-007`
 - Operation: `Shorten`

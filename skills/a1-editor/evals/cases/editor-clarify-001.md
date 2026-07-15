@@ -1,4 +1,4 @@
-# Eval Case: Clarify Weak Source Material
+# editor-clarify-001 — Clarify Weak Source Material
 
 - ID: `editor-clarify-001`
 - Operation: `Clarify`

@@ -1,4 +1,4 @@
-# Eval Case: Campaign Request Routes to Editor in Chief
+# editor-strategy-route-004 — Campaign Request Routes to Editor in Chief
 
 - ID: `editor-strategy-route-004`
 - Operation: `Strategy Boundary`

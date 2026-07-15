@@ -1,4 +1,4 @@
-# Eval Case: Information Style Preserves Formatting
+# editor-information-style-008 — Information Style Preserves Formatting
 
 - ID: `editor-information-style-008`
 - Operation: `Information Style`

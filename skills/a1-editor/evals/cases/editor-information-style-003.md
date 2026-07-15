@@ -1,4 +1,4 @@
-# Eval Case: Information-Style LLM Post Regression
+# editor-information-style-003 — Information-Style LLM Post Regression
 
 - ID: `editor-information-style-003`
 - Operation: `Information Style`

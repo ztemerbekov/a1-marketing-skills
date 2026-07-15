@@ -1,4 +1,4 @@
-# Eval Case: Explicit Information-Style Activation
+# editor-information-style-001 — Explicit Information-Style Activation
 
 - ID: `editor-information-style-001`
 - Operation: `Information Style`

@@ -1,4 +1,4 @@
-# Eval Case: Information Style Preserves Structure
+# editor-information-style-005 — Information Style Preserves Structure
 
 - ID: `editor-information-style-005`
 - Operation: `Information Style`

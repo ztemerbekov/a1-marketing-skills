@@ -1,4 +1,4 @@
-# Eval Case: Standard Edit Preserves Voice
+# editor-standard-001 — Standard Edit Preserves Voice
 
 - ID: `editor-standard-001`
 - Operation: `Standard Edit`

@@ -13,7 +13,7 @@ This record preserves complete semantic-run outputs for human review. Case instr
 
 ## `editor-standard-001` — PASS
 
-Case: [standard edit preserves voice](../skills/a1-editor/evals/cases/standard-edit-voice.md)
+Case: [standard edit preserves voice](../skills/a1-editor/evals/cases/editor-standard-001.md)
 
 ### Complete Output
 
@@ -39,7 +39,7 @@ Case: [standard edit preserves voice](../skills/a1-editor/evals/cases/standard-e
 
 ## `editor-strategy-boundary-006` — PASS
 
-Case: [ordinary editing stays in Editor without optional context](../skills/a1-editor/evals/cases/ordinary-edit-stays-editor.md)
+Case: [ordinary editing stays in Editor without optional context](../skills/a1-editor/evals/cases/editor-strategy-boundary-006.md)
 
 ### Complete Output
 
@@ -64,7 +64,7 @@ Case: [ordinary editing stays in Editor without optional context](../skills/a1-e
 
 ## `editor-shorten-001` — PASS
 
-Case: [shorten without losing qualifications](../skills/a1-editor/evals/cases/shorten.md)
+Case: [shorten without losing qualifications](../skills/a1-editor/evals/cases/editor-shorten-001.md)
 
 ### Complete Output
 
@@ -89,7 +89,7 @@ Case: [shorten without losing qualifications](../skills/a1-editor/evals/cases/sh
 
 ## `editor-clarify-001` — PASS
 
-Case: [clarify weak source material](../skills/a1-editor/evals/cases/clarify-weak-source.md)
+Case: [clarify weak source material](../skills/a1-editor/evals/cases/editor-clarify-001.md)
 
 ### Complete Output
 
@@ -115,7 +115,7 @@ Case: [clarify weak source material](../skills/a1-editor/evals/cases/clarify-wea
 
 ## `editor-strengthen-001` — FAIL
 
-Case: [strengthen without unsupported claims](../skills/a1-editor/evals/cases/strengthen-unsupported-claims.md)
+Case: [strengthen without unsupported claims](../skills/a1-editor/evals/cases/editor-strengthen-001.md)
 
 ### Complete Output
 
@@ -141,7 +141,7 @@ Case: [strengthen without unsupported claims](../skills/a1-editor/evals/cases/st
 
 ## `editor-restructure-001` — PASS
 
-Case: [restructure existing material only](../skills/a1-editor/evals/cases/restructure.md)
+Case: [restructure existing material only](../skills/a1-editor/evals/cases/editor-restructure-001.md)
 
 ### Complete Output
 
@@ -170,7 +170,7 @@ Case: [restructure existing material only](../skills/a1-editor/evals/cases/restr
 
 ## `editor-ambiguity-001` — FAIL
 
-Case: [ask only for significant ambiguity](../skills/a1-editor/evals/cases/significant-ambiguity.md)
+Case: [ask only for significant ambiguity](../skills/a1-editor/evals/cases/editor-ambiguity-001.md)
 
 ### Complete Output
 
@@ -234,7 +234,7 @@ The final suite restarts below from case one on the corrected candidate. No verd
 
 ### `editor-strategy-route-001` — PASS
 
-Case: [positioning request routes to Editor in Chief](../skills/a1-editor/evals/cases/strategy-positioning-route.md)
+Case: [positioning request routes to Editor in Chief](../skills/a1-editor/evals/cases/editor-strategy-route-001.md)
 
 ```text
 `a1-editor` редактирует готовый материал, но не придумывает позиционирование и конкурентное отличие.
@@ -246,7 +246,7 @@ Human evidence: identifies the positioning decision, treats supplied facts as co
 
 ### `editor-strategy-route-002` — PASS
 
-Case: [offer request routes to Editor in Chief](../skills/a1-editor/evals/cases/strategy-offer-route.md)
+Case: [offer request routes to Editor in Chief](../skills/a1-editor/evals/cases/editor-strategy-route-002.md)
 
 ```text
 `a1-editor` редактирует готовый материал, но не придумывает архитектуру оффера: состав тарифа, логику цены и целевое действие.
@@ -258,7 +258,7 @@ Human evidence: identifies offer creation, names the unchosen tariff composition
 
 ### `editor-strategy-route-003` — PASS
 
-Case: [audience request routes to Editor in Chief](../skills/a1-editor/evals/cases/strategy-audience-route.md)
+Case: [audience request routes to Editor in Chief](../skills/a1-editor/evals/cases/editor-strategy-route-003.md)
 
 ```text
 `a1-editor` редактирует готовые материалы, но не выбирает целевую аудиторию и приоритетного читателя — это стратегическое решение.
@@ -270,7 +270,7 @@ Human evidence: identifies audience selection as strategic, leaves the reader an
 
 ### `editor-strategy-route-004` — PASS
 
-Case: [campaign request routes to Editor in Chief](../skills/a1-editor/evals/cases/strategy-campaign-route.md)
+Case: [campaign request routes to Editor in Chief](../skills/a1-editor/evals/cases/editor-strategy-route-004.md)
 
 ```text
 Это стратегическая задача: нужно создать концепцию кампании и систему сообщений, а `a1-editor` работает только с готовым материалом.
@@ -284,7 +284,7 @@ Human evidence: identifies campaign concept and message-system creation as strat
 
 ### `editor-strategy-route-005` — PASS
 
-Case: [landing structure request routes to Editor in Chief](../skills/a1-editor/evals/cases/strategy-landing-structure-route.md)
+Case: [landing structure request routes to Editor in Chief](../skills/a1-editor/evals/cases/editor-strategy-route-005.md)
 
 ```text
 `a1-editor` редактирует готовый материал, но не проектирует маркетинговую архитектуру с нуля. Здесь нужно выбрать структуру лендинга и доказательную логику, а факт про сбор отзывов — лишь контекст.
@@ -296,7 +296,7 @@ Human evidence: identifies blank-page landing architecture and proof logic as st
 
 ### `editor-strategy-boundary-006` — PASS
 
-Case: [ordinary editing stays in Editor without optional context](../skills/a1-editor/evals/cases/ordinary-edit-stays-editor.md)
+Case: [ordinary editing stays in Editor without optional context](../skills/a1-editor/evals/cases/editor-strategy-boundary-006.md)
 
 ```markdown
 ## Сокращённый вариант
@@ -313,7 +313,7 @@ Human evidence: the stock introduction and repeated sequence markers are removed
 
 ### `editor-strategy-boundary-007` — PASS
 
-Case: [strategy keywords do not route an ordinary edit](../skills/a1-editor/evals/cases/strategy-keyword-edit-stays-editor.md)
+Case: [strategy keywords do not route an ordinary edit](../skills/a1-editor/evals/cases/editor-strategy-boundary-007.md)
 
 ```markdown
 ## Сокращённая версия
@@ -330,7 +330,7 @@ Human evidence: the supplied positioning is shortened immediately; the one-place
 
 ### `editor-strategy-boundary-008` — PASS
 
-Case: [mixed editing and strategy request preserves the boundary](../skills/a1-editor/evals/cases/mixed-edit-and-strategy-boundary.md)
+Case: [mixed editing and strategy request preserves the boundary](../skills/a1-editor/evals/cases/editor-strategy-boundary-008.md)
 
 ```markdown
 ### Отредактированный вариант
@@ -349,7 +349,7 @@ Human evidence: the safe separable edit is complete; Ozon, Wildberries, one shar
 
 ### `editor-standard-001` — PASS
 
-Case: [standard edit preserves voice](../skills/a1-editor/evals/cases/standard-edit-voice.md)
+Case: [standard edit preserves voice](../skills/a1-editor/evals/cases/editor-standard-001.md)
 
 ```markdown
 ## Отредактированный текст
@@ -367,7 +367,7 @@ Human evidence: the tautology and heavy construction are removed; the conversati
 
 ### `editor-shorten-001` — PASS
 
-Case: [shorten without losing qualifications](../skills/a1-editor/evals/cases/shorten.md)
+Case: [shorten without losing qualifications](../skills/a1-editor/evals/cases/editor-shorten-001.md)
 
 ```markdown
 ## Сокращённый текст
@@ -384,7 +384,7 @@ Human evidence: repetition and bureaucratic wording are removed; the monthly pri
 
 ### `editor-clarify-001` — PASS
 
-Case: [clarify weak source material](../skills/a1-editor/evals/cases/clarify-weak-source.md)
+Case: [clarify weak source material](../skills/a1-editor/evals/cases/editor-clarify-001.md)
 
 ```markdown
 ## Отредактированный текст
@@ -402,7 +402,7 @@ Human evidence: the concrete one-window fact is foregrounded and empty evaluatio
 
 ### `editor-strengthen-001` — PASS
 
-Case: [strengthen without unsupported claims](../skills/a1-editor/evals/cases/strengthen-unsupported-claims.md)
+Case: [strengthen without unsupported claims](../skills/a1-editor/evals/cases/editor-strengthen-001.md)
 
 ```markdown
 ## Усиленная версия
@@ -420,7 +420,7 @@ Human evidence: the supported one-list function is central; Wildberries, Ozon, a
 
 ### `editor-restructure-001` — PASS
 
-Case: [restructure existing material only](../skills/a1-editor/evals/cases/restructure.md)
+Case: [restructure existing material only](../skills/a1-editor/evals/cases/editor-restructure-001.md)
 
 ```markdown
 ## Отредактированный текст
@@ -440,7 +440,7 @@ Human evidence: tariff price and composition, trial duration and export restrict
 
 ### `editor-ambiguity-001` — PASS
 
-Case: [ask only for significant ambiguity](../skills/a1-editor/evals/cases/significant-ambiguity.md)
+Case: [ask only for significant ambiguity](../skills/a1-editor/evals/cases/editor-ambiguity-001.md)
 
 ```text
 Какой тариф включает экспорт отчётов и доступ для пяти сотрудников: **Basic** или **Pro**?
@@ -450,7 +450,7 @@ Human evidence: one concise blocking question names both candidates; both interp
 
 ### `editor-information-style-001` — FAIL
 
-Case: [explicit information-style activation](../skills/a1-editor/evals/cases/information-style-explicit.md)
+Case: [explicit information-style activation](../skills/a1-editor/evals/cases/editor-information-style-001.md)
 
 ```markdown
 ## Отредактированный текст

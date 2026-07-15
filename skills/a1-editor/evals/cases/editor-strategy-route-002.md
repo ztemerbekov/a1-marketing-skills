@@ -1,4 +1,4 @@
-# Eval Case: Offer Request Routes to Editor in Chief
+# editor-strategy-route-002 — Offer Request Routes to Editor in Chief
 
 - ID: `editor-strategy-route-002`
 - Operation: `Strategy Boundary`

@@ -1,4 +1,4 @@
-# Eval Case: Landing Structure Request Routes to Editor in Chief
+# editor-strategy-route-005 — Landing Structure Request Routes to Editor in Chief
 
 - ID: `editor-strategy-route-005`
 - Operation: `Strategy Boundary`

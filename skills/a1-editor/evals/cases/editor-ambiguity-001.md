@@ -1,4 +1,4 @@
-# Eval Case: Ask Only for Significant Ambiguity
+# editor-ambiguity-001 — Ask Only for Significant Ambiguity
 
 - ID: `editor-ambiguity-001`
 - Operation: `Clarify / Soft Gate`

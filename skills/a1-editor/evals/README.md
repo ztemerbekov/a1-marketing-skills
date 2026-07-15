@@ -19,40 +19,42 @@ Every case contains:
 7. **Forbidden** criteria for inventions, unsupported claims, or operation-boundary violations that must not appear.
 8. A manual run record with evidence and a pass/fail result.
 
+Name every case file exactly `<ID>.md`, using the stable ID declared inside the file. The repository validator enforces this mapping so a reported case ID always resolves directly to its filename.
+
 Criteria must describe observable behavior, not preferred wording. Use the [case template](case-template.md) as the starting point for every new case.
 
 ## Starter Suite
 
 ### Strategy Boundary
 
-- [positioning request routes to explicit Editor in Chief invocation](cases/strategy-positioning-route.md)
-- [offer request routes to explicit Editor in Chief invocation](cases/strategy-offer-route.md)
-- [audience request routes to explicit Editor in Chief invocation](cases/strategy-audience-route.md)
-- [campaign request routes to explicit Editor in Chief invocation](cases/strategy-campaign-route.md)
-- [landing-structure request routes to explicit Editor in Chief invocation](cases/strategy-landing-structure-route.md)
-- [strategy keywords do not route an ordinary edit](cases/strategy-keyword-edit-stays-editor.md)
-- [mixed editing and strategy request preserves the boundary](cases/mixed-edit-and-strategy-boundary.md)
+- [positioning request routes to explicit Editor in Chief invocation](cases/editor-strategy-route-001.md)
+- [offer request routes to explicit Editor in Chief invocation](cases/editor-strategy-route-002.md)
+- [audience request routes to explicit Editor in Chief invocation](cases/editor-strategy-route-003.md)
+- [campaign request routes to explicit Editor in Chief invocation](cases/editor-strategy-route-004.md)
+- [landing-structure request routes to explicit Editor in Chief invocation](cases/editor-strategy-route-005.md)
+- [strategy keywords do not route an ordinary edit](cases/editor-strategy-boundary-007.md)
+- [mixed editing and strategy request preserves the boundary](cases/editor-strategy-boundary-008.md)
 
 ### Standard Editor
 
-- [ordinary editing stays in Editor without optional context](cases/ordinary-edit-stays-editor.md)
-- [standard edit and voice preservation](cases/standard-edit-voice.md)
-- [shortening](cases/shorten.md)
-- [clarifying weak source material](cases/clarify-weak-source.md)
-- [strengthening without unsupported claims](cases/strengthen-unsupported-claims.md)
-- [restructuring](cases/restructure.md)
-- [significant ambiguity](cases/significant-ambiguity.md)
+- [ordinary editing stays in Editor without optional context](cases/editor-strategy-boundary-006.md)
+- [standard edit and voice preservation](cases/editor-standard-001.md)
+- [shortening](cases/editor-shorten-001.md)
+- [clarifying weak source material](cases/editor-clarify-001.md)
+- [strengthening without unsupported claims](cases/editor-strengthen-001.md)
+- [restructuring](cases/editor-restructure-001.md)
+- [significant ambiguity](cases/editor-ambiguity-001.md)
 
 ### Information Style
 
-- [explicit information-style activation](cases/information-style-explicit.md)
-- [generic editing that must not activate information style](cases/information-style-not-inferred.md)
-- [legacy information-style LLM post regression](cases/information-style-llm-post.md)
-- [voice preservation override](cases/information-style-preserve-voice.md)
-- [structure preservation override](cases/information-style-preserve-structure.md)
-- [formatting preservation override](cases/information-style-preserve-formatting.md)
-- [unsupported claims](cases/information-style-unsupported-claims.md)
-- [Markdown integrity](cases/information-style-markdown-integrity.md)
+- [explicit information-style activation](cases/editor-information-style-001.md)
+- [generic editing that must not activate information style](cases/editor-information-style-002.md)
+- [legacy information-style LLM post regression](cases/editor-information-style-003.md)
+- [voice preservation override](cases/editor-information-style-004.md)
+- [structure preservation override](cases/editor-information-style-005.md)
+- [formatting preservation override](cases/editor-information-style-008.md)
+- [unsupported claims](cases/editor-information-style-006.md)
+- [Markdown integrity](cases/editor-information-style-007.md)
 
 ## Manual Run Protocol
 

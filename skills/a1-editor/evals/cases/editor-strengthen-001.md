@@ -1,4 +1,4 @@
-# Eval Case: Strengthen Without Unsupported Claims
+# editor-strengthen-001 — Strengthen Without Unsupported Claims
 
 - ID: `editor-strengthen-001`
 - Operation: `Strengthen`
