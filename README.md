@@ -105,7 +105,7 @@ npx skills@latest add ztemerbekov/marketing-skills
 It installs all current skills into the project using the cross-agent convention. Use one of the alternatives below only when you prefer a client-native installation or your client needs its adapter.
 
 <details>
-<summary><strong>Codex: install from GitHub</strong></summary>
+<summary><img src="./assets/codex.webp" alt="Codex" width="16" height="16"> <strong>Codex: install from GitHub</strong></summary>
 
 ```bash
 python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
@@ -118,7 +118,7 @@ Restart Codex after installation.
 </details>
 
 <details>
-<summary><strong>Claude Code: install as a plugin</strong></summary>
+<summary><img src="./assets/claude.webp" alt="Claude Code" width="16" height="16"> <strong>Claude Code: install as a plugin</strong></summary>
 
 ```text
 /plugin marketplace add ztemerbekov/marketing-skills
@@ -134,7 +134,7 @@ To install only the editorial team bundle:
 </details>
 
 <details>
-<summary><strong>Cursor: copy the skills and Cursor rule</strong></summary>
+<summary><img src="./assets/cursor.webp" alt="Cursor" width="16" height="16"> <strong>Cursor: copy the skills and Cursor rule</strong></summary>
 
 Clone this repository, open a terminal in its root, set the target project path, and run:
 
@@ -148,7 +148,7 @@ cp .cursor/rules/marketing-skills.mdc "$TARGET_PROJECT/.cursor/rules/"
 </details>
 
 <details>
-<summary><strong>Antigravity: copy skills into the project</strong></summary>
+<summary><img src="./assets/antigravity.webp" alt="Antigravity" width="16" height="16"> <strong>Antigravity: copy skills into the project</strong></summary>
 
 Clone this repository, open a terminal in its root, set the target project path, and run:
 
@@ -161,7 +161,7 @@ cp -R skills/a1-* "$TARGET_PROJECT/.agents/skills/"
 </details>
 
 <details>
-<summary><strong>Remove installed skills</strong></summary>
+<summary>🗑️ <strong>Remove installed skills</strong></summary>
 
 Remove a project installation:
 

@@ -105,7 +105,7 @@ npx skills@latest add ztemerbekov/marketing-skills
 Она установит все доступные навыки в проект в общем для ИИ-агентов формате. Используйте один из вариантов ниже, только если предпочитаете встроенную установку своего клиента или ему нужен особый способ подключения.
 
 <details>
-<summary><strong>Codex: установка из GitHub</strong></summary>
+<summary><img src="./assets/codex.webp" alt="Codex" width="16" height="16"> <strong>Codex: установка из GitHub</strong></summary>
 
 ```bash
 python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
@@ -118,7 +118,7 @@ python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-githu
 </details>
 
 <details>
-<summary><strong>Claude Code: установка как расширения</strong></summary>
+<summary><img src="./assets/claude.webp" alt="Claude Code" width="16" height="16"> <strong>Claude Code: установка как расширения</strong></summary>
 
 ```text
 /plugin marketplace add ztemerbekov/marketing-skills
@@ -134,7 +134,7 @@ python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-githu
 </details>
 
 <details>
-<summary><strong>Cursor: копирование навыков и правила Cursor</strong></summary>
+<summary><img src="./assets/cursor.webp" alt="Cursor" width="16" height="16"> <strong>Cursor: копирование навыков и правила Cursor</strong></summary>
 
 Склонируйте репозиторий, откройте терминал в его корневой папке, укажите путь к целевому проекту и выполните команды:
 
@@ -148,7 +148,7 @@ cp .cursor/rules/marketing-skills.mdc "$TARGET_PROJECT/.cursor/rules/"
 </details>
 
 <details>
-<summary><strong>Antigravity: копирование навыков в проект</strong></summary>
+<summary><img src="./assets/antigravity.webp" alt="Antigravity" width="16" height="16"> <strong>Antigravity: копирование навыков в проект</strong></summary>
 
 Склонируйте репозиторий, откройте терминал в его корневой папке, укажите путь к целевому проекту и выполните команды:
 
@@ -161,7 +161,7 @@ cp -R skills/a1-* "$TARGET_PROJECT/.agents/skills/"
 </details>
 
 <details>
-<summary><strong>Удаление установленных навыков</strong></summary>
+<summary>🗑️ <strong>Удаление установленных навыков</strong></summary>
 
 Удалить навыки из проекта:
 
