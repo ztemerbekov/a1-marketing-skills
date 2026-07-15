@@ -57,7 +57,8 @@ Marketing Context is useful for repeated work, but Editor does not require it to
 
 ## Meet the skills
 
-### Marketing Context
+<details>
+<summary><strong>Marketing Context</strong></summary>
 
 **What it does:** saves reusable facts about the product, audience, positioning, voice, proof, vocabulary, examples, and business goals in the current project. Other marketing skills can use this context in later tasks.
 
@@ -69,7 +70,10 @@ Marketing Context is useful for repeated work, but Editor does not require it to
 Save our product, audience, positioning, voice, proof, preferred words, and business goals for future marketing work.
 ```
 
-### Editor
+</details>
+
+<details>
+<summary><strong>Editor</strong></summary>
 
 **What it does:** improves text you already have. It can edit, shorten, clarify, strengthen, or restructure the material while preserving supported facts, qualifications, and useful voice. It starts immediately when you provide text and an editing request.
 
@@ -87,7 +91,10 @@ For information-style editing, ask for it explicitly: “Edit this in informatio
 
 Requests to create or rethink positioning, an offer, an audience, campaign messaging, or a landing-page structure are outside Editor's text-editing boundary. Editor recommends that you explicitly invoke `a1-editor-in-chief`; it does not start the chief interview automatically.
 
-### Editor in Chief
+</details>
+
+<details>
+<summary><strong>Editor in Chief</strong></summary>
 
 **What it does:** helps define a strategic or demanding editorial assignment before rewriting begins. It asks only the questions that block the work, creates an Editor Brief, and then hands the selected editing operation to Editor.
 
@@ -98,6 +105,8 @@ Requests to create or rethink positioning, an offer, an audience, campaign messa
 ```text
 Use a1-editor-in-chief. Help me define the audience, goal, message, and constraints for this page, then edit the supplied text.
 ```
+
+</details>
 
 ## Install
 
