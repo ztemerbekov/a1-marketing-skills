@@ -12,6 +12,7 @@ This repository follows the Agent Skills directory format: each skill is a self-
 
 - [Install](#install)
 - [Skills](#skills)
+- [Design Contract](#design-contract)
 - [Architecture](#architecture)
 - [Platform Support](#platform-support)
 - [Compatibility Philosophy](#compatibility-philosophy)
@@ -150,6 +151,19 @@ rm -rf .agents/skills/a1-setup-marketing-context \
 | [a1-editor-in-chief](skills/a1-editor-in-chief/) | Strategic editorial director for strict text diagnosis, blocking questions, editor brief creation, and handoff to... |
 | [a1-setup-marketing-context](skills/a1-setup-marketing-context/) | Create or update the shared marketing context for a repository. Use when the user wants to set up marketing context,... |
 <!-- SKILLS:END -->
+
+## Design Contract
+
+A1 skills keep complexity inside and the user-facing surface simple:
+
+- One public skill represents one understandable user job. Variations stay as internal operations until they require a materially different interaction contract.
+- Safe natural-language entry points are model-invoked. Deliberate interviews and consequential workflows are user-invoked or command-only.
+- Fast skills use marketing context when it exists but continue without it. A strategic skill may require context when proceeding would force an unsafe choice.
+- Results can vary with the material, but the process stays predictable: every skill has a short invariant spine and reveals deeper references only when needed.
+
+Maintainers use the canonical [A1 skill design contract](docs/a1-skill-design-contract.md) and [A1 marketing glossary](docs/a1-marketing-glossary.md). Each installed skill remains self-contained.
+
+If a skill produces a bad result, remove confidential data and email the input, instruction, output, and expected behavior to [z.temerbekov@gmail.com](mailto:z.temerbekov@gmail.com).
 
 ## Architecture
 

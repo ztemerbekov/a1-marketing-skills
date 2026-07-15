@@ -5,6 +5,57 @@ SKILLS_DIR="skills"
 issues=0
 warnings=0
 passed=0
+artifacts_passed=0
+
+echo "Validating A1 design contract artifacts"
+echo
+
+required_artifacts=(
+  "AGENTS.md"
+  "README.md"
+  "README.ru.md"
+  "docs/a1-skill-design-contract.md"
+  "docs/a1-marketing-glossary.md"
+  "skills/a1-editor/evals/README.md"
+  "skills/a1-editor/evals/case-template.md"
+)
+
+for artifact in "${required_artifacts[@]}"; do
+  if [[ -f "$artifact" ]]; then
+    echo "PASS $artifact"
+    artifacts_passed=$((artifacts_passed + 1))
+  else
+    echo "FAIL $artifact"
+    echo "  Missing required A1 design contract artifact"
+    issues=$((issues + 1))
+  fi
+done
+
+require_text() {
+  local file="$1"
+  local required_text="$2"
+  local error="$3"
+
+  if [[ -f "$file" ]] && ! grep -Fq "$required_text" "$file"; then
+    echo "FAIL $file"
+    echo "  $error"
+    issues=$((issues + 1))
+  fi
+}
+
+require_text "AGENTS.md" "docs/a1-skill-design-contract.md" "AGENTS.md must require the canonical A1 skill design contract"
+require_text "AGENTS.md" "CONTEXT-MAP.md" "AGENTS.md must require domain-boundary reassessment for new skills"
+require_text "README.md" "docs/a1-skill-design-contract.md" "README.md must link the A1 skill design contract"
+require_text "README.ru.md" "docs/a1-skill-design-contract.md" "README.ru.md must link the A1 skill design contract"
+require_text "README.md" "z.temerbekov@gmail.com" "README.md must include the feedback address"
+require_text "README.ru.md" "z.temerbekov@gmail.com" "README.ru.md must include the feedback address"
+require_text "skills/a1-editor/evals/README.md" "## Case Format" "Editor eval docs must define the case format"
+require_text "skills/a1-editor/evals/README.md" "## Manual Run Protocol" "Editor eval docs must define the manual run protocol"
+require_text "skills/a1-editor/evals/case-template.md" "## Must Change" "Editor eval template must include Must Change criteria"
+require_text "skills/a1-editor/evals/case-template.md" "## Must Preserve" "Editor eval template must include Must Preserve criteria"
+require_text "skills/a1-editor/evals/case-template.md" "## Forbidden" "Editor eval template must include Forbidden criteria"
+
+echo
 
 if [[ ! -d "$SKILLS_DIR" ]]; then
   echo "Missing skills directory: $SKILLS_DIR" >&2
@@ -117,7 +168,7 @@ for skill_dir in "$SKILLS_DIR"/*/; do
 done
 
 echo
-echo "Summary: $passed passed, $warnings warnings, $issues failures"
+echo "Summary: $passed skills passed, $artifacts_passed contract artifacts passed, $warnings warnings, $issues failures"
 
 if [[ "$issues" -gt 0 ]]; then
   exit 1

@@ -54,6 +54,10 @@ Platform-specific files are adapters:
 
 Do not make Cursor rules, Claude plugin metadata, or generated files the source of truth for skill behavior.
 
+## A1 Design Contract
+
+Every new or materially changed skill must follow the canonical [A1 skill design contract](docs/a1-skill-design-contract.md). Use the [A1 marketing glossary](docs/a1-marketing-glossary.md) for shared operational terms.
+
 ## Skill Format
 
 Every skill must include `SKILL.md` with YAML frontmatter:
