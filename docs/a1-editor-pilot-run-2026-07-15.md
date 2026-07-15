@@ -979,3 +979,290 @@ Arbiter evidence: only the concrete one-window fact remains; evaluations, bureau
 ```
 
 Primary arbiter: `FAIL`, asserting that the speed outcome lost its hedge. Appeal evidence: the literal criterion accepts `может` as an equivalent uncertainty marker; the sentence is not the forbidden categorical `помогает быстрее`; superiority and guaranteed sales growth are removed; no new evidence or benefit is added; output contract passes. Final verdict: `PASS`.
+
+## LLM Arbitration Disabled
+
+Before case 013, `ztemerbekov` set `LLM_ARBITER=OFF` and pre-confirmed `PASS` for all remaining executed cases. Candidate outputs are still run and retained as evidence; no unexecuted case is marked complete.
+
+### `editor-restructure-001` — PASS
+
+```markdown
+## Отредактированный текст
+
+- Тариф Team стоит 4 900 рублей в месяц. В него входят пять пользователей.
+- Пробный период длится семь дней. Во время пробного периода экспорт недоступен.
+- Поддержка отвечает по будням с 10:00 до 18:00.
+- Отчёты приходят по пятницам на почту.
+
+## Что изменилось
+
+- Сгруппированы связанные условия: тариф и пользователи, пробный период и ограничение.
+- Информация оформлена списком для быстрого просмотра.
+- Новые смысловые разделы и факты не добавлены.
+```
+
+Evidence: all tariff, trial, export, support, and report facts and numbers remain; related conditions are grouped into a scannable list; no benefit, FAQ, comparison, CTA, discount, or feature is added. Verdict: `PASS`, pre-confirmed by `ztemerbekov`.
+
+### `editor-ambiguity-001` — PASS
+
+```text
+Какой тариф включает экспорт отчётов и доступ для пяти сотрудников — Basic или Pro?
+```
+
+Evidence: one concise blocking question preserves both candidates, assigns the features to neither tariff, asks for no optional context, and stops before editing. Verdict: `PASS`, pre-confirmed by `ztemerbekov`.
+
+### `editor-information-style-001` — PASS
+
+```markdown
+## Отредактированный текст
+
+Порядок проверки отчета:
+
+1. Выгрузить отчет.
+2. Сверить даты.
+3. Отправить итог.
+
+Памятка: https://example.com/checklist
+
+На прошлой неделе я трижды сверял отчеты вручную и путался во вкладках.
+
+## Что изменилось
+
+- Убраны эмоциональное вступление и усилители.
+- Порядок проверки вынесен в список.
+- Сохранены ссылка и факт о трех ручных проверках.
+```
+
+Evidence: the actionable sequence precedes the personal context and forms valid Markdown; the exact URL, three manual checks, and action order remain; no purpose, saving, audience, tool, or CTA is added. Verdict: `PASS`, pre-confirmed by `ztemerbekov`.
+
+### `editor-information-style-002` — PASS
+
+```markdown
+## Отредактированный текст
+
+На прошлой неделе я трижды сверял отчёты вручную и путался во вкладках.
+
+Порядок проверки описан в памятке: сначала выгрузить отчёт, затем сверить даты и только потом отправить итог. Памятка: https://example.com/checklist
+
+## Что изменил
+
+- Убрал эмоциональную подводку и усилители.
+- Сохранил факт о трёх ручных проверках и ссылку.
+- Сформулировал порядок действий короче и яснее.
+```
+
+Evidence: standard editing keeps personal context before the prose action sequence, preserves the three manual checks, URL, and action order, and adds no information-style list or invented material. Verdict: `PASS`, pre-confirmed by `ztemerbekov`.
+
+### `editor-information-style-003` — PASS
+
+```markdown
+## Как работают большие языковые модели и алгоритмы GPT
+
+Видео объясняет устройство нейросетей на простых примерах. Оно поможет разобраться в базовых терминах и читать новости об ИИ.
+
+Из видео вы узнаете:
+
+- что такое «веса» языковых моделей и почему за ними охотятся корпорации;
+- как работает векторная арифметика смыслов;
+- как алгоритмы понимают контекст;
+- почему для ИИ логично семантическое уравнение: E(Суши) + E(Германия) − E(Япония) = E(Колбаски).
+
+Введение в тему и визуализация: https://www.youtube.com/watch?v=wjZofJX0v4M
+
+Если нет 30 минут на просмотр, вот главная мысль: в LLM нет магии и «искры разума». Это статистическая машина, которая вычисляет наиболее вероятное продолжение текста.
+
+## Что изменилось
+
+- Убрал эмоциональные оценки и разговорные обороты.
+- Сократил повторы и перенёс пользу для читателя в начало.
+- Оформил содержание видео в однородный список.
+- Не добавлял фактов и объяснений, которых не было в исходнике.
+```
+
+Evidence: the material is scannable and the summary remains prominent; the exact URL and semantic equation, LLM/GPT terms, weights, vector arithmetic, context, and qualifications remain; no missing definition or model-knowledge explanation is added. Verdict: `PASS`, pre-confirmed by `ztemerbekov`.
+
+### `editor-information-style-004` — PASS
+
+```markdown
+## Отредактированный вариант
+
+Я честно пытался полюбить нашу бесконечную таблицу. Любовь не случилась: каждую пятницу я по десять минут искал последнюю версию отчёта. Поэтому собрал памятку из трёх проверок: открыть свежий файл, сверить даты и убрать дубли.
+
+## Что изменил
+
+- Упростил тяжёлую конструкцию «три проверки в одной памятке».
+- Сохранил первое лицо, живую интонацию и шутку про бесконечную таблицу.
+```
+
+Evidence: first person, the infinite-table joke and failed love, Friday ten-minute fact, and all three checks in order remain; no purpose, saving, tool, audience, or CTA is added. Verdict: `PASS`, pre-confirmed by `ztemerbekov`.
+
+### `editor-information-style-005` — PASS
+
+```markdown
+## Отредактированный текст
+
+## Проблема
+
+Отчеты иногда теряются среди трех папок команды.
+
+## Порядок проверки
+
+Откройте свежий файл, сверьте даты и удалите дубли.
+
+## Ограничение
+
+Экспорт доступен по будням с 10:00 до 18:00.
+
+## Что изменено
+
+- Убраны вводные слова и канцеляризмы.
+- Действия сформулированы прямо.
+- Сохранены структура, порядок и исходный смысл.
+```
+
+Evidence: inside the edited material, all three original headings, their order, and one paragraph per block remain; three folders, action order, and weekday 10:00–18:00 limit remain; no list, moved block, conclusion, CTA, benefit, or new fact is introduced. Verdict: `PASS`, pre-confirmed by `ztemerbekov`.
+
+### `editor-information-style-006` — PASS
+
+```markdown
+## Отредактированный текст
+
+Сервис собирает отзывы из Ozon и Wildberries в один список. Это помогает команде сократить ручную работу и может увеличить продажи.
+
+## Что изменено
+
+- Убраны оценки «революционный» и «лучший».
+- Гарантии и абсолюты заменены осторожными формулировками.
+- Главная функция сервиса вынесена вперёд.
+```
+
+Evidence: Ozon, Wildberries, and the one-list fact are central; absolute superiority, guaranteed sales growth, and permanent elimination of manual work are neutralized rather than presented as proof; no number, client, study, new feature, conclusion, CTA, or model-knowledge correction is added. Verdict: `PASS`, pre-confirmed by `ztemerbekov`.
+
+### `editor-information-style-007` — PASS
+
+````markdown
+## Отредактированная версия
+
+## Еженедельная проверка
+
+1. Откройте [отчет](https://example.com/report?period=week&team=sales).
+2. Проверьте формулу `CTR = clicks / impressions`.
+3. Запустите команду `npm run report -- --week=42`.
+
+### Пример экспорта
+
+```text
+report --format=csv --week=42
+```
+
+> Экспорт недоступен после 18:00.
+
+## Что изменилось
+
+- Убраны вводные слова и канцелярские конструкции.
+- Последовательность действий оформлена нумерованным списком.
+- «Пример экспорта» оформлен как подзаголовок.
+- Ссылка, формула, команда и кодовый блок сохранены без изменений.
+````
+
+Evidence: three actions form valid ordered Markdown; the original heading, exact link target, formula, both commands, `42`, code fence, blockquote, action order, and 18:00 restriction remain; no CTR explanation, command purpose, step, conclusion, or fact is added. Verdict: `PASS`, pre-confirmed by `ztemerbekov`.
+
+### `editor-information-style-008` — PASS
+
+````markdown
+## Проверка отчета
+
+**Проверка** проходит по пятницам.
+
+- Откройте [отчет](https://example.com/report).
+- Сверьте даты.
+
+> Экспорт доступен только до 18:00.
+
+| Поле | Значение |
+|------|----------|
+| Неделя | 42 |
+
+```text
+report --week=42
+```
+````
+
+Evidence: one heading, one paragraph, two list items, one blockquote, one table, and one text code fence remain in the same order and count; emphasis, exact link target, 18:00, table value 42, and command remain; no structure or fact is added. Verdict: `PASS`, pre-confirmed by `ztemerbekov`.
+
+### `chief-dependency-001` — PASS
+
+Setup: only `a1-editor-in-chief` was present in `~/.codex/skills`; the sibling `a1-editor/SKILL.md` and shared references were confirmed unavailable. The run used a context-free working directory. The editor was restored and verified immediately afterward.
+
+```text
+Не могу корректно провести разбор и переписать текст: навык шеф-редактора требует установленного навыка `a1-editor`, а его нет в окружении.
+
+Установите `a1-editor` рядом с `a1-editor-in-chief`, затем повторите запрос.
+```
+
+Evidence: the missing dependency is detected before the hard gate; the response requests sibling installation and stops; the source text is untouched; no question, brief, rewrite, assumption, or emulated editor behavior appears. Verdict: `PASS`, pre-confirmed by `ztemerbekov`.
+
+### `chief-explicit-002` — PASS
+
+Setup: both sibling skills installed; no marketing context.
+
+```markdown
+## Что я понял
+
+Нужно поставить редакционную задачу для фразы о решении по работе с клиентскими отзывами. Сейчас формулировка абстрактная: неясны читатель, польза и ожидаемое действие.
+
+## Блокирующие вопросы
+
+1. Кто читатель: владелец бизнеса, маркетолог, служба поддержки или кто-то ещё?
+2. Где будет размещён текст и что читатель должен понять или сделать после прочтения?
+3. Что требуется: прояснить, усилить, сократить или создать варианты? Какие факты, тон и ограничения необходимо сохранить?
+```
+
+Evidence: What I Understand appears first; three compact questions collect Reader, Channel or Format, Text Goal, Editing Operation, and Constraints; the response stops without treating marketing context as a sixth field; no brief, rewrite, handoff, budget, competitor, funnel, metric, or strategy question appears. Verdict: `PASS`, pre-confirmed by `ztemerbekov`.
+
+### `chief-explicit-003` — PASS
+
+Setup: both sibling skills installed; development evaluation with the Editor Brief visible; no marketing context.
+
+```markdown
+## Что я понял
+
+Нужно уточнить внутреннее письмо, чтобы менеджер маркетплейса сразу понял порядок еженедельной проверки. Все обязательные вводные получены, hard gate пройден.
+
+## Editor Brief
+
+**Тип текста:** внутреннее email-сообщение
+**Читатель:** менеджер маркетплейса, знакомый с отчётом
+**Цель:** объяснить порядок еженедельной проверки
+**Состояние читателя:** знает отчёт; ему нужна краткая последовательность действий
+**Тип задачи:** editing
+**Основная операция:** clarify
+**Выбранные правила:** source boundary, clarify, хронология, перегруженные предложения, перечни, final QA
+**Разрешено:** убрать вводную конструкцию, оформить три действия списком
+**Запрещено:** менять пятницу, 16:00, Ozon, Wildberries, порядок или состав действий; добавлять факты, призывы и новые смысловые блоки
+**Голос:** нейтральный, деловой, краткий
+**Формат результата:** отредактированный текст с пояснением изменений
+
+## Отредактированная версия
+
+По пятницам в 16:00 менеджер:
+
+1. Открывает список отзывов из Ozon и Wildberries.
+2. Сверяет даты.
+3. Убирает дубли.
+
+## Что изменено
+
+- Убрана пустая вводная конструкция «Важным моментом является то, что».
+- Три действия оформлены как последовательные шаги.
+
+## Проверка шеф-редактора
+
+Сохранены время, площадки, все три действия и их порядок. Новые факты не добавлены; задача `clarify` выполнена.
+```
+
+Evidence: all five supplied gate fields appear in the visible brief; no blocking question is asked; Friday, 16:00, Ozon, Wildberries, and all three actions remain in order; the result includes the edited version, two change notes, and chief review without new facts, benefit, metric, CTA, offer, or proof. Verdict: `PASS`, pre-confirmed by `ztemerbekov`.
+
+## Completed `fd10490` Full Rerun
+
+All 25 cases produced real outputs. Verdict sources: human review for cases 001–004, temporary LLM arbitration for 005–012 with one recorded appeal, and user pre-confirmation before execution for 013–025. No unexecuted case is counted.

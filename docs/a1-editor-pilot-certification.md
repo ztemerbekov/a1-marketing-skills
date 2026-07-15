@@ -4,9 +4,9 @@ This record is the semantic release gate for the A1 Editor pilot. It tracks crit
 
 ## Certification Status
 
-- Status: `PENDING`
+- Status: `PASS`
 - Candidate runtime revision: `fd10490204520b89e743d75d736eb8cb302a1c6e`
-- Decision: the strengthened Clarify regression passed focused LLM arbitration on the installed candidate. The full 25-case suite is restarting from case one; no historical or focused verdict is carried forward.
+- Decision: all 25 cases produced real outputs on the recorded installed candidate and are recorded as `PASS`; cases 001–004 were human-reviewed, cases 005–012 used temporary LLM arbitration with one appeal, and cases 013–025 were pre-confirmed by the user before execution. Release checks remain the final commit gate.
 
 ## Environment
 
@@ -16,7 +16,7 @@ Populate these values from the installed client used for the complete run. One e
 - Model: `gpt-5.6-sol`
 - Run date: `2026-07-15`
 - Skill revision: `fd10490204520b89e743d75d736eb8cb302a1c6e`
-- Reviewer: `ztemerbekov` for cases 001–004; separate `codex-cli 0.144.4` / `gpt-5.6-sol` LLM arbiter from case 005 while arbitration is enabled; user override available.
+- Reviewer: `ztemerbekov` for cases 001–004 and pre-confirmed cases 013–025; separate `codex-cli 0.144.4` / `gpt-5.6-sol` LLM arbiter for cases 005–012, with one recorded appeal.
 - Installation: candidate skill directories installed under `~/.codex/skills`; both directories verified byte-for-byte against the recorded revision before the run.
 
 Complete outputs and human verdict evidence are stored in the [2026-07-15 run record](a1-editor-pilot-run-2026-07-15.md).
@@ -36,7 +36,7 @@ Do not compare against golden wording. Treat ambiguous evidence as failure. Reco
 
 ## Temporary Arbitration Mode
 
-- Toggle: `LLM_ARBITER=ON` from `editor-strategy-route-005`; the user can disable it or override any verdict.
+- Toggle: `LLM_ARBITER=ON` for cases 005–012, then `OFF` before case 013 at the user's request.
 - Isolation: each verdict comes from a fresh ephemeral read-only `codex exec`, separate from the candidate run.
 - Input: exact instruction, original input, candidate output, and all four criterion groups.
 - Authority while enabled: the arbiter verdict is recorded unless the user overrides it; any uncertainty must produce `FAIL`.
@@ -60,19 +60,19 @@ Do not compare against golden wording. Treat ambiguous evidence as failure. Reco
 | [`editor-shorten-001`](../skills/a1-editor/evals/cases/shorten.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Shortened materially while preserving price, up-to-10 limit, weekly Monday delivery, and cancellation terms; LLM-arbitrated `fd10490` full rerun. |
 | [`editor-clarify-001`](../skills/a1-editor/evals/cases/clarify-weak-source.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Retained only the concrete one-window function and removed vague evaluations and process claims; LLM-arbitrated `fd10490` full rerun. |
 | [`editor-strengthen-001`](../skills/a1-editor/evals/cases/strengthen-unsupported-claims.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Centered the one-list function, preserved uncertainty with `может`, and removed unsupported superiority and sales growth; primary arbiter misread the hedge and a recorded appeal returned PASS. |
-| [`editor-restructure-001`](../skills/a1-editor/evals/cases/restructure.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `684a541`; no semantic verdict. |
-| [`editor-ambiguity-001`](../skills/a1-editor/evals/cases/significant-ambiguity.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `684a541`; no semantic verdict. |
-| [`editor-information-style-001`](../skills/a1-editor/evals/cases/information-style-explicit.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Focused post-fix PASS retained only in run evidence; full rerun pending. |
-| [`editor-information-style-002`](../skills/a1-editor/evals/cases/information-style-not-inferred.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `684a541`; no semantic verdict. |
-| [`editor-information-style-003`](../skills/a1-editor/evals/cases/information-style-llm-post.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `684a541`; no semantic verdict. |
-| [`editor-information-style-004`](../skills/a1-editor/evals/cases/information-style-preserve-voice.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run on `684a541`; no semantic verdict. |
-| [`editor-information-style-005`](../skills/a1-editor/evals/cases/information-style-preserve-structure.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
-| [`editor-information-style-006`](../skills/a1-editor/evals/cases/information-style-unsupported-claims.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
-| [`editor-information-style-007`](../skills/a1-editor/evals/cases/information-style-markdown-integrity.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
-| [`editor-information-style-008`](../skills/a1-editor/evals/cases/information-style-preserve-formatting.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; no semantic verdict. |
-| [`chief-dependency-001`](../skills/a1-editor-in-chief/evals/cases/missing-editor-dependency.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; requires chief-only installation. |
-| [`chief-explicit-002`](../skills/a1-editor-in-chief/evals/cases/explicit-chief-hard-gate.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; requires both installed skills. |
-| [`chief-explicit-003`](../skills/a1-editor-in-chief/evals/cases/explicit-chief-handoff.md) | `PENDING` | `PENDING` | `PENDING` | `PENDING` | Not run; requires both installed skills. |
+| [`editor-restructure-001`](../skills/a1-editor/evals/cases/restructure.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Grouped tariff, trial, support, and report conditions without changing facts or numbers; user pre-confirmed `fd10490` full-rerun result. |
+| [`editor-ambiguity-001`](../skills/a1-editor/evals/cases/significant-ambiguity.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Asked one concise Basic-or-Pro blocking question and stopped before editing; user pre-confirmed `fd10490` full-rerun result. |
+| [`editor-information-style-001`](../skills/a1-editor/evals/cases/information-style-explicit.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Put the three-step list before personal context while preserving the URL and manual-check fact; user pre-confirmed `fd10490` full-rerun result. |
+| [`editor-information-style-002`](../skills/a1-editor/evals/cases/information-style-not-inferred.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Performed conservative standard editing, preserving paragraph order and prose sequence; user pre-confirmed `fd10490` full-rerun result. |
+| [`editor-information-style-003`](../skills/a1-editor/evals/cases/information-style-llm-post.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Produced scannable Markdown while preserving the URL, equation, technical material, and source boundary; user pre-confirmed `fd10490` full-rerun result. |
+| [`editor-information-style-004`](../skills/a1-editor/evals/cases/information-style-preserve-voice.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Preserved first person, the infinite-table joke, Friday ten-minute fact, and three checks; user pre-confirmed `fd10490` full-rerun result. |
+| [`editor-information-style-005`](../skills/a1-editor/evals/cases/information-style-preserve-structure.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Preserved the three headings, order, one-paragraph blocks, actions, and support limit; user pre-confirmed `fd10490` full-rerun result. |
+| [`editor-information-style-006`](../skills/a1-editor/evals/cases/information-style-unsupported-claims.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Centered the one-list fact and replaced unsupported absolutes with cautious source-faithful wording; user pre-confirmed `fd10490` full-rerun result. |
+| [`editor-information-style-007`](../skills/a1-editor/evals/cases/information-style-markdown-integrity.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Preserved the exact URL, formula, commands, code fence, blockquote, and action order in valid Markdown; user pre-confirmed `fd10490` full-rerun result. |
+| [`editor-information-style-008`](../skills/a1-editor/evals/cases/information-style-preserve-formatting.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Preserved every Markdown block, order, count, protected token, link, table value, and command; user pre-confirmed `fd10490` full-rerun result. |
+| [`chief-dependency-001`](../skills/a1-editor-in-chief/evals/cases/missing-editor-dependency.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | Under verified chief-only setup, detected the missing editor, requested sibling installation, and stopped; user pre-confirmed result. |
+| [`chief-explicit-002`](../skills/a1-editor-in-chief/evals/cases/explicit-chief-hard-gate.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | With both skills installed, summarized the assignment, collected the five required fields in three compact questions, and stopped; user pre-confirmed result. |
+| [`chief-explicit-003`](../skills/a1-editor-in-chief/evals/cases/explicit-chief-handoff.md) | `codex-cli 0.144.4` | `gpt-5.6-sol` | `2026-07-15` | `PASS` | With complete inputs, showed the brief, clarified the copy, preserved all constraints, and completed chief review; user pre-confirmed result. |
 
 ## Required Coverage
 
@@ -98,10 +98,9 @@ A significant failure blocks certification. Fix the smallest runtime cause, add 
 ## Remaining Limitations
 
 - The first installed run stopped after two significant failures; its evidence is historical and does not count toward the final verdict.
-- The strengthened Clarify rule in `fd10490` passes focused arbitration, but focused evidence does not certify the pilot.
-- The active `fd10490` candidate is installed and verified; its required full rerun has not completed.
-- Final-run evidence and results remain unknown for every row still marked `PENDING`; concurrent diagnostic passes do not count after the runtime changes.
-- Temporary LLM arbitration is enabled from case 005 and is auditable but uses the same model family as the candidate runner; the user can override or disable it.
+- Temporary LLM arbitration covered only cases 005–012 and used the same model family as the candidate runner; one literal-criterion conflict required a recorded appeal.
+- Cases 013–025 were pre-confirmed by the user before their outputs were generated, so they do not have post-run semantic review; their complete outputs and setup evidence remain auditable in the run record.
+- Semantic evaluation is model- and run-sensitive; this certification records `codex-cli 0.144.4`, `gpt-5.6-sol`, `fd10490`, and `2026-07-15`, not a guarantee for future clients or models.
 
 ## Finalization Rule
 
