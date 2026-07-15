@@ -6,8 +6,6 @@
 
 Marketing Skills is a small team of AI skills for marketers, founders, and anyone who works with marketing copy. The skills help your agent remember product context, improve existing text, and prepare complex editorial assignments without inventing facts about the product.
 
-An AI skill is a reusable set of instructions that teaches an agent how to handle a specific kind of work. This repository currently contains three skills that work together as a small editorial team.
-
 You do not need to learn a special command language. Install the skills, describe the task in ordinary words, and include the text when you want it edited.
 
 ## Start here
