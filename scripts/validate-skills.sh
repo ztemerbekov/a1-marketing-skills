@@ -22,6 +22,10 @@ editor_eval_cases=(
   "skills/a1-editor/evals/cases/information-style-llm-post.md"
 )
 
+chief_eval_cases=(
+  "skills/a1-editor-in-chief/evals/cases/missing-editor-dependency.md"
+)
+
 required_artifacts=(
   "AGENTS.md"
   "README.md"
@@ -35,6 +39,7 @@ required_artifacts=(
   "skills/a1-editor/evals/README.md"
   "skills/a1-editor/evals/case-template.md"
   "${editor_eval_cases[@]}"
+  "${chief_eval_cases[@]}"
 )
 
 for artifact in "${required_artifacts[@]}"; do
@@ -83,7 +88,7 @@ require_text "skills/a1-editor/references/operations.md" "## Clarify" "Editor op
 require_text "skills/a1-editor/references/operations.md" "## Strengthen" "Editor operations must define strengthening"
 require_text "skills/a1-editor/references/operations.md" "## Restructure" "Editor operations must define restructuring"
 
-for eval_case in "${editor_eval_cases[@]}"; do
+for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}"; do
   require_text "$eval_case" "## User Instruction" "Editor eval case must include the exact user instruction"
   require_text "$eval_case" "## Input" "Editor eval case must include the complete input"
   require_text "$eval_case" "## Must Change" "Editor eval case must include Must Change criteria"
