@@ -1,0 +1,47 @@
+# Eval Case: Positioning Request Routes to Editor in Chief
+
+- ID: `editor-strategy-route-001`
+- Operation: `Strategy Boundary`
+- Risk: The fast editor invents positioning or starts the chief interview automatically.
+
+## Setup
+
+### Marketing Context
+
+None.
+
+## User Instruction
+
+```text
+Помоги решить, чем сервис сбора отзывов должен отличаться от конкурентов и какую главную мысль занять в голове менеджеров маркетплейсов.
+```
+
+## Input
+
+```text
+Факты для контекста, не текст для редактуры: сервис собирает отзывы из Ozon и Wildberries в один список.
+```
+
+## Must Change
+
+- [ ] По смыслу определить запрос как выбор позиционирования, хотя пользователь не назвал внутренний operation.
+- [ ] Коротко объяснить границу A1 Editor и рекомендовать явно запустить `a1-editor-in-chief`.
+
+## Must Preserve
+
+- [ ] Ответить на русском и назвать именно стратегическое решение о differentiation и главной мысли продукта.
+- [ ] Рассматривать факт про Ozon и Wildberries только как контекст, а не как текст для переписывания.
+
+## Forbidden
+
+- [ ] Не предлагать позиционирование, слоганы, категории, обещания, сегменты или конкурентные claims.
+- [ ] Не задавать вопросы hard gate, не создавать Editor Brief и не начинать chief workflow автоматически.
+
+## Manual Run Record
+
+- Status: `NOT RUN`
+- Evidence: `<complete during manual evaluation>`
+
+### Result
+
+`PASS` or `FAIL`

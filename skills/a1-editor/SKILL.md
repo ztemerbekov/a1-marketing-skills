@@ -1,6 +1,6 @@
 ---
 name: a1-editor
-description: 'Fast marketing text editor and rewrite assistant. Use when the user wants to shorten, rewrite, clean up, clarify, improve, make stronger, or explain edits to existing text. Russian triggers include "сократи", "почисти", "убери воду", "усиль", "перепиши", and "отредактируй". Explicit information-style triggers include "в информационном стиле", "в инфостиле", "по Ильяхову", and "по Пиши, сокращай". Works with a soft gate.'
+description: 'Fast marketing text editor and safe strategy router. Use when the user wants to shorten, rewrite, clean up, clarify, improve, strengthen, or explain edits to existing text. Also use for requests to create or rethink positioning, offers, audiences, campaign messaging, landing-page structure, or other marketing architecture: explain the editing boundary and recommend explicit a1-editor-in-chief invocation without starting its interview. Russian editing triggers include "сократи", "почисти", "убери воду", "усиль", "перепиши", and "отредактируй"; strategy-routing triggers include "позиционирование", "оффер", "аудитория", "кампания", and "структура лендинга". Explicit information-style triggers include "в информационном стиле", "в инфостиле", "по Ильяхову", and "по Пиши, сокращай". Editing works with a soft gate.'
 metadata:
   version: "0.1.0"
 ---
@@ -15,6 +15,12 @@ This is a public, Model-invoked skill for marketers, founders, and non-editors. 
 
 Detect the user's language and work in that language by default. If the input text and user instruction use different languages, preserve the input text language for rewritten copy and use the instruction language for explanations unless the user asks otherwise.
 
+## Request Boundary
+
+Before applying the entry contract, read [the strategy boundary](references/strategy-boundary.md) and classify the request by meaning.
+
+Only requests to edit existing material enter the editor spine. If the user asks to create or rethink a strategic decision, return the concise boundary response from that reference and stop. A recommendation to use `a1-editor-in-chief` is not permission to start its interview: the user must invoke it explicitly.
+
 ## Entry Contract
 
 Start immediately when the user provides:
@@ -26,7 +32,7 @@ Marketing context is optional. Read `.agents/marketing-context.md` when it exist
 
 Do not block on missing audience, channel, goal, tone, constraints, or marketing context. Ask only when editable text is missing or every safe edit would choose between materially different meanings. If any safe useful edit is possible, make it and briefly state a material limitation instead of asking.
 
-Requests to create or rethink positioning, an offer, an audience, a campaign, or new marketing architecture are strategy work, not an editor run.
+Do not infer strategy from missing optional inputs. An ordinary editing request still starts immediately when audience, channel, goal, constraints, or marketing context are absent.
 
 ## Runtime
 

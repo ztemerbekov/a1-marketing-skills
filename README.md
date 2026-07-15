@@ -147,7 +147,7 @@ rm -rf .agents/skills/a1-setup-marketing-context \
 <!-- SKILLS:START -->
 | Skill | Description |
 |-------|-------------|
-| [a1-editor](skills/a1-editor/) | Fast marketing text editor and rewrite assistant. Use when the user wants to shorten, rewrite, clean up, clarify,... |
+| [a1-editor](skills/a1-editor/) | Fast marketing text editor and safe strategy router. Use when the user wants to shorten, rewrite, clean up, clarify,... |
 | [a1-editor-in-chief](skills/a1-editor-in-chief/) | Strategic editorial director for strict text diagnosis, blocking questions, editor brief creation, and handoff to... |
 | [a1-setup-marketing-context](skills/a1-setup-marketing-context/) | Create or update the shared marketing context for a repository. Use when the user wants to set up marketing context,... |
 <!-- SKILLS:END -->
@@ -182,9 +182,11 @@ Choose the entry point by how much assignment discovery you need:
 | Workflow | Use it when | Behavior |
 |----------|-------------|----------|
 | `a1-editor` | The text and editing intent are already clear | Starts immediately with a soft gate and returns the edited text plus concise change notes |
-| `a1-editor-in-chief` | Reader, goal, channel, constraints, or editorial strategy need to be established | Uses a hard gate, creates an Editor Brief, and then hands the selected operation to `a1-editor` |
+| `a1-editor-in-chief` | You explicitly invoke it to establish a strategic or editorial assignment | Uses a hard gate, creates an Editor Brief, and then hands the selected operation to `a1-editor` |
 
 Both workflows use the same editing operations. Standard requests such as “edit,” “clean up,” “shorten,” or “clarify” preserve the normal, more conservative editing behavior.
+
+Requests to create or rethink positioning, an offer, an audience, campaign messaging, landing-page structure, or another marketing architecture are outside A1 Editor's editing boundary. A1 Editor gives a concise explanation and recommends that you explicitly invoke `a1-editor-in-chief`; it does not start the chief interview automatically. Missing audience, channel, goal, constraints, or marketing context does not route an otherwise ordinary editing request away from A1 Editor.
 
 Information style is a separate explicit mode. Activate it with unambiguous requests such as “in information style,” “по Ильяхову,” or “по «Пиши, сокращай».” The mode may remove empty author-focused setup, neutralize unsupported evaluations, reorganize existing material, and improve Markdown. It still cannot introduce facts, definitions, claims, or conclusions from model knowledge. Explicit constraints such as “preserve my voice” or “preserve the structure” always take priority.
 

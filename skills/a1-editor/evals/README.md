@@ -23,8 +23,19 @@ Criteria must describe observable behavior, not preferred wording. Use the [case
 
 ## Starter Suite
 
+### Strategy Boundary
+
+- [positioning request routes to explicit Editor in Chief invocation](cases/strategy-positioning-route.md)
+- [offer request routes to explicit Editor in Chief invocation](cases/strategy-offer-route.md)
+- [audience request routes to explicit Editor in Chief invocation](cases/strategy-audience-route.md)
+- [campaign request routes to explicit Editor in Chief invocation](cases/strategy-campaign-route.md)
+- [landing-structure request routes to explicit Editor in Chief invocation](cases/strategy-landing-structure-route.md)
+- [strategy keywords do not route an ordinary edit](cases/strategy-keyword-edit-stays-editor.md)
+- [mixed editing and strategy request preserves the boundary](cases/mixed-edit-and-strategy-boundary.md)
+
 ### Standard Editor
 
+- [ordinary editing stays in Editor without optional context](cases/ordinary-edit-stays-editor.md)
 - [standard edit and voice preservation](cases/standard-edit-voice.md)
 - [shortening](cases/shorten.md)
 - [clarifying weak source material](cases/clarify-weak-source.md)

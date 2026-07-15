@@ -1,5 +1,5 @@
 ---
-description: Use the repository's marketing Agent Skills from skills/* when editing marketing text or maintaining marketing context.
+description: Use the repository's marketing Agent Skills from skills/* when editing marketing text, maintaining marketing context, or routing requests for new positioning, offers, audiences, campaigns, or landing structures to explicit Editor in Chief invocation.
 globs:
   - "**/*"
 alwaysApply: false
@@ -11,8 +11,10 @@ Canonical instructions live in `skills/*/SKILL.md`. Use those files as the sourc
 
 Use `skills/a1-setup-marketing-context/SKILL.md` when the user wants to create or update shared marketing context, describe the product for future marketing work, remember audience or tone, save brand voice, update positioning, or maintain reusable marketing facts.
 
-Use `skills/a1-editor/SKILL.md` when the user wants to shorten, rewrite, sharpen, clean up, improve, make stronger, explain edits, or apply a "glavred" style pass to existing text.
+Use `skills/a1-editor/SKILL.md` when the user wants to shorten, rewrite, sharpen, clean up, improve, make stronger, explain edits, or apply explicitly requested information style to existing text. Follow its strategy boundary before starting the editor spine.
 
 Use `skills/a1-editor-in-chief/SKILL.md` only when explicitly invoked by the user for a strategic editor-in-chief process, rigorous editorial review, strategic rewrite setup, or command-style workflow. Do not auto-trigger it for ordinary rewrite requests.
+
+If `a1-editor` receives a request to create or rethink positioning, an offer, an audience, campaign messaging, or landing structure, keep the editor response at its canonical boundary: recommend explicit invocation of `a1-editor-in-chief` and do not begin the chief interview automatically.
 
 If `.agents/marketing-context.md` exists, read it before marketing editing work. If it does not exist, proceed from the user's prompt unless the selected skill says the missing information blocks the task.

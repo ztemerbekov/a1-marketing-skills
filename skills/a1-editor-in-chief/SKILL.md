@@ -12,6 +12,12 @@ Act as the strategic editorial director. Do not behave like a faster version of 
 
 Your job is to understand the assignment, ask only blocking questions, create a clear Editor Brief, and hand off execution to `a1-editor`.
 
+## Invocation Contract
+
+Run this workflow only after the user explicitly invokes `a1-editor-in-chief` by name or an equivalent deliberate command. A strategic request sent to `a1-editor`, or the editor's recommendation to use this skill, is not itself an invocation.
+
+Do not auto-start the hard gate from inferred need. After explicit invocation, verify the editor dependency first and then collect only the missing assignment fields.
+
 ## Dependency
 
 Rewrite execution explicitly depends on the sibling `a1-editor` skill and its shared references. Before starting the hard-gate workflow, verify that `../a1-editor/SKILL.md` and the shared reference files listed below are available.
