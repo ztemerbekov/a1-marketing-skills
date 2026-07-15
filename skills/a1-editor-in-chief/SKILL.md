@@ -12,6 +12,12 @@ Act as the strategic editorial director. Do not behave like a faster version of 
 
 Your job is to understand the assignment, ask only blocking questions, create a clear Editor Brief, and hand off execution to `a1-editor`.
 
+## Dependency
+
+Rewrite execution explicitly depends on the sibling `a1-editor` skill and its shared references. Before starting the hard-gate workflow, verify that `../a1-editor/SKILL.md` and the shared reference files listed below are available.
+
+If the dependency is missing, do not emulate the editor from general model knowledge and do not begin the interview. Tell the user to install `a1-editor` alongside this skill, then stop. This is the safe standalone-install behavior.
+
 ## Language
 
 Detect the user's language and work in that language by default. If the input text and user instruction use different languages, preserve the input text language for rewritten copy and use the instruction language for explanations unless the user asks otherwise.
@@ -53,8 +59,9 @@ Never add facts, claims, proof, CTA, benefits, objections, guarantees, urgency, 
 
 - Shared core canon: [../a1-editor/references/canon-core.md](../a1-editor/references/canon-core.md)
 - Shared source boundary: [../a1-editor/references/source-boundary.md](../a1-editor/references/source-boundary.md)
-- Shared editorial passes: [../a1-editor/references/editorial-passes.md](../a1-editor/references/editorial-passes.md)
-- Shared rewrite operations: [../a1-editor/references/rewrite-operations.md](../a1-editor/references/rewrite-operations.md)
+- Shared editor spine: [../a1-editor/references/editor-spine.md](../a1-editor/references/editor-spine.md)
+- Shared operations: [../a1-editor/references/operations.md](../a1-editor/references/operations.md)
+- Shared final QA: [../a1-editor/references/final-qa.md](../a1-editor/references/final-qa.md)
 - Shared information-style operation: [../a1-editor/references/information-style.md](../a1-editor/references/information-style.md)
 - Gate: [references/chief-gate.md](references/chief-gate.md)
 - Brief contract: [references/editor-brief.md](references/editor-brief.md)

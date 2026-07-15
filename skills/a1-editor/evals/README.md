@@ -21,6 +21,20 @@ Every case contains:
 
 Criteria must describe observable behavior, not preferred wording. Use the [case template](case-template.md) as the starting point for every new case.
 
+## Starter Suite
+
+The starter suite maps directly to the standard editor contract:
+
+- [standard edit and voice preservation](cases/standard-edit-voice.md)
+- [shortening](cases/shorten.md)
+- [clarifying weak source material](cases/clarify-weak-source.md)
+- [strengthening without unsupported claims](cases/strengthen-unsupported-claims.md)
+- [restructuring](cases/restructure.md)
+- [significant ambiguity](cases/significant-ambiguity.md)
+- [explicit information-style activation](cases/information-style-explicit.md)
+- [generic editing that must not activate information style](cases/information-style-not-inferred.md)
+- [legacy information-style LLM post regression](cases/information-style-llm-post.md)
+
 ## Manual Run Protocol
 
 1. Start a clean agent session with the current `skills/a1-editor/` directory installed.

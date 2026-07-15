@@ -4,7 +4,8 @@ This file is kept for backward compatibility. Use the shared editor canon instea
 
 - `../../a1-editor/references/canon-core.md`
 - `../../a1-editor/references/source-boundary.md`
-- `../../a1-editor/references/editorial-passes.md`
+- `../../a1-editor/references/editor-spine.md`
+- `../../a1-editor/references/final-qa.md`
 
 ## Chief Principle
 

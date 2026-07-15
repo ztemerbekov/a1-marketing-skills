@@ -2,7 +2,7 @@
 
 This file is kept for backward compatibility. Use the shared editor rewrite operations instead:
 
-- `../../a1-editor/references/rewrite-operations.md`
+- `../../a1-editor/references/operations.md`
 
 ## Chief-Specific Operations
 

@@ -1,0 +1,47 @@
+# Eval Case: Strengthen Without Unsupported Claims
+
+- ID: `editor-strengthen-001`
+- Operation: `Strengthen`
+- Risk: Persuasive intent causes the editor to repeat or amplify unsupported superiority and revenue claims.
+
+## Setup
+
+### Marketing Context
+
+None.
+
+## User Instruction
+
+```text
+Усиль текст, но не добавляй новых фактов.
+```
+
+## Input
+
+```text
+Наш сервис, возможно, помогает команде быстрее разбирать отзывы: он собирает отзывы из Wildberries и Ozon в один список. Это лучший сервис на рынке и он гарантированно увеличит продажи.
+```
+
+## Must Change
+
+- [ ] Поставить подтвержденную функцию — единый список отзывов из двух площадок — в центр аргумента.
+- [ ] Убрать или сделать осторожнее неподтвержденные заявления `лучший` и `гарантированно увеличит продажи`.
+
+## Must Preserve
+
+- [ ] Сохранить Wildberries, Ozon и сбор отзывов в один список.
+- [ ] Не превращать предположение о более быстром разборе в измеренное обещание.
+
+## Forbidden
+
+- [ ] Не добавлять проценты, клиентов, кейсы, экономию времени, гарантию, CTA или новые выгоды.
+- [ ] Не выдавать превосходство на рынке или рост продаж за подтвержденный факт.
+
+## Manual Run Record
+
+- Status: `NOT RUN`
+- Evidence: `<complete during manual evaluation>`
+
+### Result
+
+`PASS` or `FAIL`

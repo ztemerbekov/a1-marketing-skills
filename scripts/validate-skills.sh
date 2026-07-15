@@ -10,14 +10,31 @@ artifacts_passed=0
 echo "Validating A1 design contract artifacts"
 echo
 
+editor_eval_cases=(
+  "skills/a1-editor/evals/cases/standard-edit-voice.md"
+  "skills/a1-editor/evals/cases/shorten.md"
+  "skills/a1-editor/evals/cases/clarify-weak-source.md"
+  "skills/a1-editor/evals/cases/strengthen-unsupported-claims.md"
+  "skills/a1-editor/evals/cases/restructure.md"
+  "skills/a1-editor/evals/cases/significant-ambiguity.md"
+  "skills/a1-editor/evals/cases/information-style-explicit.md"
+  "skills/a1-editor/evals/cases/information-style-not-inferred.md"
+  "skills/a1-editor/evals/cases/information-style-llm-post.md"
+)
+
 required_artifacts=(
   "AGENTS.md"
   "README.md"
   "README.ru.md"
   "docs/a1-skill-design-contract.md"
   "docs/a1-marketing-glossary.md"
+  "skills/a1-editor/references/editor-spine.md"
+  "skills/a1-editor/references/source-boundary.md"
+  "skills/a1-editor/references/operations.md"
+  "skills/a1-editor/references/final-qa.md"
   "skills/a1-editor/evals/README.md"
   "skills/a1-editor/evals/case-template.md"
+  "${editor_eval_cases[@]}"
 )
 
 for artifact in "${required_artifacts[@]}"; do
@@ -54,6 +71,25 @@ require_text "skills/a1-editor/evals/README.md" "## Manual Run Protocol" "Editor
 require_text "skills/a1-editor/evals/case-template.md" "## Must Change" "Editor eval template must include Must Change criteria"
 require_text "skills/a1-editor/evals/case-template.md" "## Must Preserve" "Editor eval template must include Must Preserve criteria"
 require_text "skills/a1-editor/evals/case-template.md" "## Forbidden" "Editor eval template must include Forbidden criteria"
+require_text "skills/a1-editor/SKILL.md" "references/editor-spine.md" "A1 Editor must use the invariant editor spine"
+require_text "skills/a1-editor/references/editor-spine.md" "## 1. Determine Allowed Sources" "Editor spine must start by determining allowed sources"
+require_text "skills/a1-editor/references/editor-spine.md" "## 2. Select the Operation" "Editor spine must select an operation"
+require_text "skills/a1-editor/references/editor-spine.md" "## 3. Edit" "Editor spine must include editing"
+require_text "skills/a1-editor/references/editor-spine.md" "## 4. Run Final QA" "Editor spine must include final QA"
+require_text "skills/a1-editor/references/editor-spine.md" "## 5. Return the Result" "Editor spine must return the result"
+require_text "skills/a1-editor/references/operations.md" "## Standard Edit" "Editor operations must define standard editing"
+require_text "skills/a1-editor/references/operations.md" "## Shorten" "Editor operations must define shortening"
+require_text "skills/a1-editor/references/operations.md" "## Clarify" "Editor operations must define clarification"
+require_text "skills/a1-editor/references/operations.md" "## Strengthen" "Editor operations must define strengthening"
+require_text "skills/a1-editor/references/operations.md" "## Restructure" "Editor operations must define restructuring"
+
+for eval_case in "${editor_eval_cases[@]}"; do
+  require_text "$eval_case" "## User Instruction" "Editor eval case must include the exact user instruction"
+  require_text "$eval_case" "## Input" "Editor eval case must include the complete input"
+  require_text "$eval_case" "## Must Change" "Editor eval case must include Must Change criteria"
+  require_text "$eval_case" "## Must Preserve" "Editor eval case must include Must Preserve criteria"
+  require_text "$eval_case" "## Forbidden" "Editor eval case must include Forbidden criteria"
+done
 
 echo
 

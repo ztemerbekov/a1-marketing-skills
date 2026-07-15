@@ -7,68 +7,39 @@ metadata:
 
 # Editor
 
-Rewrite and improve existing marketing text quickly.
+Improve existing marketing text immediately without inventing the marketing behind it.
 
-This is the public, auto-triggered editor skill. It is designed for broad use: marketers, founders, and non-editors should be able to paste text and get a better version without a heavy process.
+This is a public, Model-invoked skill for marketers, founders, and non-editors. The user should be able to paste text, state an editing intent in ordinary language, and receive a source-faithful improvement without a setup interview.
 
 ## Language
 
 Detect the user's language and work in that language by default. If the input text and user instruction use different languages, preserve the input text language for rewritten copy and use the instruction language for explanations unless the user asks otherwise.
 
-## Context
+## Entry Contract
 
-Before editing, read `.agents/marketing-context.md` if it exists. If not found, optionally check `.claude/marketing-context.md` and `marketing-context.md`.
+Start immediately when the user provides:
 
-If no marketing context exists, continue from the user's prompt.
-
-## Soft Gate
-
-Proceed when the user provides:
-
-1. Text to edit
+1. Editable text
 2. An editing command or intent
 
-Do not block on missing audience, channel, goal, or constraints. Use safe assumptions and state them briefly after the rewrite.
+Marketing context is optional. Read `.agents/marketing-context.md` when it exists; otherwise optionally check `.claude/marketing-context.md` and `marketing-context.md`. If none exists, continue from the user's text and instruction.
 
-If the user provides no editable text, ask for the text.
+Do not block on missing audience, channel, goal, tone, constraints, or marketing context. Ask only when editable text is missing or every safe edit would choose between materially different meanings. If any safe useful edit is possible, make it and briefly state a material limitation instead of asking.
 
-## Operation Routing
+Requests to create or rethink positioning, an offer, an audience, a campaign, or new marketing architecture are strategy work, not an editor run.
 
-Use [references/operation-routing.md](references/operation-routing.md).
+## Runtime
 
-When the user explicitly requests information style, use [references/information-style.md](references/information-style.md). Do not infer this mode from generic editing requests.
+Every accepted request must follow [the editor spine](references/editor-spine.md) in order. It is the authoritative process for determining sources, selecting an operation, editing, running final QA, and returning the result.
 
-Default to editing mode when the user provides text and asks to shorten, clean up, clarify, improve, strengthen, make more persuasive, or rewrite.
+The spine routes to the authoritative runtime references:
 
-Use strategy mode only when the user asks to define or rethink the underlying message, positioning, offer, audience, campaign, or structure rather than edit the supplied text.
+- [source-boundary.md](references/source-boundary.md) for allowed and forbidden material;
+- [operations.md](references/operations.md) for operation selection and behavior;
+- [canon-core.md](references/canon-core.md) for editorial principles;
+- [final-qa.md](references/final-qa.md) for the final acceptance check.
 
-## Editing Rules
-
-Use the compact canon in [references/canon-core.md](references/canon-core.md).
-
-Use the source boundary from [references/source-boundary.md](references/source-boundary.md).
-
-Use editorial passes from [references/editorial-passes.md](references/editorial-passes.md).
-
-Use level references as needed:
-
-- [references/text-level.md](references/text-level.md)
-- [references/paragraph-level.md](references/paragraph-level.md)
-- [references/sentence-level.md](references/sentence-level.md)
-- [references/word-level.md](references/word-level.md)
-
-Use rewrite operations from [references/rewrite-operations.md](references/rewrite-operations.md).
-
-Default behavior:
-
-- Preserve the user's intended meaning.
-- Do not invent facts, metrics, proof, testimonials, features, guarantees, or claims.
-- Improve clarity, structure, rhythm, specificity, and force.
-- Remove filler, hedging, needless abstraction, and weak phrasing.
-- Keep the result appropriate for the likely channel and audience.
-- Improve only from the user's text, explicit instruction, and marketing context.
-- Do not add CTA, benefits, objections, offer blocks, urgency, scarcity, proof, or structure unless they are already present in the source material or explicitly requested.
-- If the instruction is ambiguous, choose the safest useful edit.
+Load detailed text-, paragraph-, sentence-, or word-level references only when the selected operation and defects in the source require them. Do not load every reference by default.
 
 ## Output
 
@@ -87,11 +58,9 @@ For most requests, output:
 
 ## Assumptions
 
-- [only if relevant]
+- [only if materially relevant]
 ```
 
-Always include `What Changed` with 1-5 short explanatory bullets unless the user explicitly asks for only the edited text.
+Always include `What Changed` with one to five concise explanations of changes actually made unless the user explicitly asks for only the edited text.
 
-If the user asks to explain edits, include concise rationale tied to specific changes.
-
-If the user asks for variants, provide 2-3 clearly different options and label the difference.
+If the user asks to explain edits, tie the explanation to specific changes. If the user asks for variants, provide two or three clearly different options and label the difference.

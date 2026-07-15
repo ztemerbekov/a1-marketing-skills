@@ -1,59 +1,44 @@
 # Source Boundary / Граница источников
 
-This boundary applies to both `a1-editor` and `a1-editor-in-chief`. It is written primarily in Russian because it controls Russian text editing behavior.
-
-Это правило важнее любых операций усиления, сокращения или перестройки.
+This is the authoritative source boundary for `a1-editor` and shared editor execution. Other runtime files may point here but must not redefine this boundary.
 
 ## Allowed Sources / Разрешенные источники
 
-Используй только:
+Use only:
 
-- исходный текст пользователя;
-- явную инструкцию пользователя в текущем запросе;
-- `.agents/marketing-context.md`, если он есть;
-- `.claude/marketing-context.md` или `marketing-context.md`, только если `.agents/marketing-context.md` не найден;
-- факты из предыдущего разговора, только если они явно относятся к задаче.
+1. The editable text supplied by the user.
+2. The user's explicit instruction and constraints in the current request.
+3. `.agents/marketing-context.md`, when it exists.
+4. `.claude/marketing-context.md` or `marketing-context.md` only when `.agents/marketing-context.md` is absent.
+5. Facts the user supplied earlier in the conversation only when they clearly apply to the current text.
+
+The instruction authorizes a transformation; it is not evidence for a new fact or marketing claim. Marketing context is optional. Its absence never blocks an otherwise safe edit.
+
+## Traceability Rule / Проверка источника
+
+Every specific fact, name, figure, feature, qualification, proof point, benefit, promise, and marketing element in the result must be traceable to an allowed source.
+
+Preserve material qualifications and uncertainty. Do not turn `may`, `can`, `often`, an estimate, or a condition into a categorical promise.
 
 ## Forbidden Additions / Что нельзя добавлять
 
-Никогда не выдумывай и не добавляй извне:
+Do not invent or introduce material that is absent from the allowed sources, including:
 
-- оффер;
-- CTA;
-- выгоды;
-- возражения;
-- доказательства;
-- метрики;
-- отзывы;
-- клиентов;
-- награды;
-- гарантии;
-- возможности продукта;
-- срочность;
-- дефицит;
-- кейсы;
-- скидки;
-- новые разделы или новую маркетинговую структуру.
+- facts, definitions, metrics, clients, testimonials, awards, cases, or proof;
+- product capabilities, benefits, outcomes, or claims;
+- an offer, CTA, objection, guarantee, discount, urgency, or scarcity;
+- a new audience, positioning, campaign message, landing-page architecture, or other marketing structure.
 
-Нельзя достраивать маркетинг "как обычно делают маркетологи". Можно только провести данный материал через редакторские правила.
+A request such as `make it sell`, `усиль`, or `add a CTA` does not waive this boundary. If the requested element is absent, improve the supplied material without creating it and state the limitation when it matters.
 
-## If Source Material Is Weak / Если исходник слабый
+Reordering, shortening, clarifying, and formatting existing material are allowed when they do not imply missing marketing elements.
 
-Не блокируй обычную редактуру. Улучшай то, что можно улучшить:
+## Weak Source Material / Слабый исходник
 
-- убери мусор;
-- проясни главную мысль;
-- вынеси полезный смысл раньше;
-- упрости синтаксис;
-- сохрани ограничения;
-- сделай неподтвержденные утверждения осторожнее.
+Do not block. Make the safe improvement the source supports: remove clutter, clarify the available point, foreground existing value, simplify syntax, preserve constraints, and make unsupported source claims more cautious.
 
-После отредактированной версии коротко обозначь ограничение, если оно важно:
+If the missing support materially limits the result, mention that limitation after the edit. Do not turn the limitation into a request for optional context.
 
-> Не добавлял новые выгоды, доказательства и обещания, потому что их нет в исходнике или marketing context.
+## Significant Ambiguity / Существенная неоднозначность
 
-## Questions / Вопросы пользователю
-
-Внутренние проверки не являются вопросами пользователю.
-
-Спрашивай пользователя только тогда, когда без ответа пришлось бы выдумывать, обещать лишнее или выбирать между существенно разными смыслами.
+Ask one concise question only when every safe edit would choose between materially different meanings. If a conservative rewrite can preserve the ambiguity without misleading the reader, make that edit and briefly note the ambiguity when useful.
