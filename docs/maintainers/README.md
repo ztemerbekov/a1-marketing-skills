@@ -11,10 +11,11 @@ This is the technical entry point for people who design, develop, validate, and 
 - [Complete A1 Editor pilot run](../a1-editor-pilot-run-2026-07-15.md) — prompts, outputs, and judgments behind the certification record.
 - [A1 scope-boundary focused run](../a1-scope-boundary-run-2026-07-16.md) — Issue #7 boundary outputs, human criteria verdict, and the explicitly accepted constrained fallback.
 - [A1 Editor in Chief refactor run](../a1-editor-in-chief-run-2026-07-16.md) — Issue #8 outputs, criteria evidence, and release verdict for the bounded orchestration spine.
+- [A1 Marketing Context incremental workflow run](../a1-marketing-context-run-2026-07-16.md) — Issue #9 write traces, criteria evidence, and release verdict for repository-local incremental context maintenance.
 
 ## Repository Architecture
 
-Canonical, directly installable skills live under `skills/`. The shared marketing context skill stores reusable project facts; Editor performs source-faithful text editing; Editor in Chief sets bounded editorial direction inside confirmed strategy, delegates all text work to Editor, and reviews the result.
+Canonical, directly installable skills live under `skills/`. The shared marketing context skill incrementally stores confirmed repository-local inputs without passive writes or hypotheses; Editor performs source-faithful text editing; Editor in Chief sets bounded editorial direction inside confirmed strategy, delegates all text work to Editor, and reviews the result.
 
 Platform-specific directories are adapters:
 

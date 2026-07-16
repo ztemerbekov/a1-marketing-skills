@@ -24,6 +24,8 @@ Use [the case template](case-template.md) for new cases. Filenames must match th
 - [current facts override marketing context](cases/chief-source-conflict-010.md)
 - [one corrective Editor pass](cases/chief-corrective-review-011.md)
 - [copy and explanation language behavior](cases/chief-language-012.md)
+- [task-specific audience and voice override context defaults](cases/context-chief-default-override-019.md)
+- [protected context conflict stops before the brief](cases/context-chief-protected-conflict-020.md)
 
 ## Manual Run Protocol
 

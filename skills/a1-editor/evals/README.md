@@ -59,6 +59,11 @@ Every materially changed scope boundary must have coverage for four scenarios ac
 - [unsupported claims](cases/editor-information-style-006.md)
 - [Markdown integrity](cases/editor-information-style-007.md)
 
+### Marketing Context Consumption
+
+- [task-specific audience and voice override context defaults](cases/context-editor-default-override-017.md)
+- [protected context conflict stops before editing](cases/context-editor-protected-conflict-018.md)
+
 ## Manual Run Protocol
 
 1. Prefer a clean agent session with the current `skills/a1-editor/` directory installed. If security policy blocks it, use the explicitly accepted constrained fallback: load the exact candidate in the current supported client and record the policy block, candidate digest, isolation difference, and fallback approver.

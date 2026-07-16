@@ -19,7 +19,7 @@ const readmes = [
       "a1-setup-marketing-context": {
         title: "Marketing Context",
         summary:
-          "Giving future marketing work reusable product, audience, positioning, voice, proof, vocabulary, examples, and goals.",
+          "Creating or incrementally updating one repository-local context from confirmed marketing information.",
       },
       "a1-editor": {
         title: "Editor",
@@ -40,7 +40,7 @@ const readmes = [
       "a1-setup-marketing-context": {
         title: "Маркетинговый контекст",
         summary:
-          "Сохранить сведения о продукте, аудитории, позиционировании, стиле общения, подтверждениях, словаре, примерах и целях для следующих задач.",
+          "Создать или пошагово обновить один контекст репозитория из подтверждённых маркетинговых сведений.",
       },
       "a1-editor": {
         title: "Редактор",

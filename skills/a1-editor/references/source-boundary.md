@@ -14,6 +14,12 @@ Use only:
 
 The instruction authorizes a transformation; it is not evidence for a new fact or marketing claim. Marketing context is optional. Its absence never blocks an otherwise safe edit.
 
+## Context Consumption / Использование контекста
+
+When the context uses the canonical schema, treat `Audience Defaults`, `Brand Voice Defaults`, and `Business Goal Defaults` as defaults: an explicit current request may override them for this task without changing the file. Treat `Product Facts`, `Claims and Evidence`, and `Explicit Prohibitions` as protected inputs. Equivalent legacy headings inherit the same meaning: `Product` and `Claims and Proof` are protected; `Audience`, `Brand Voice`, and `Business Goals` are defaults; a prohibition under `Words to Avoid` is protected.
+
+Current instructions do not silently override protected inputs. When source text or an instruction conflicts with one, make the safest supported edit that preserves the protected input and briefly surface the conflict. If every permissible result would require choosing which protected fact is true, ask one concise question and do not guess. Missing context or a missing context section never blocks an otherwise safe edit.
+
 ## Traceability Rule / Проверка источника
 
 Every specific fact, name, figure, feature, qualification, proof point, benefit, promise, and marketing element in the result must be traceable to an allowed source.

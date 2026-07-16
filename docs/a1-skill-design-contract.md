@@ -35,6 +35,8 @@ Fast skills must remain useful without `.agents/marketing-context.md`; read it w
 
 Brand-specific product facts, audiences, positioning, voice, proof, examples, vocabulary, and business goals belong in marketing context, not in the shared design canon.
 
+Marketing context must distinguish overridable defaults from protected inputs. Current task instructions may override defaults such as audience, voice, or business goal without updating the file. Product facts, evidence, and explicit prohibitions must not be silently contradicted, weakened, or replaced; a consumer follows its conflict rule when they disagree with current material.
+
 ## Internal Behavior
 
 ### Predictable process, not fixed output

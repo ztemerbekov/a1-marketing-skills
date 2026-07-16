@@ -108,9 +108,9 @@ When adding a non-standard field:
 
 ### a1-setup-marketing-context
 
-Public, auto-triggered setup skill.
+Public, Model-invoked context-maintenance skill for explicit natural-language setup and update intent.
 
-Creates and updates `.agents/marketing-context.md`, one context per repository. The context is shared by all marketing skills and stores product, audience, positioning, voice, proof, vocabulary, examples, and business goals.
+Uses Auto-draft for ordinary explicit requests and starts a one-question-at-a-time interview only when explicitly requested. It creates and incrementally updates one public `.agents/marketing-context.md` per repository from confirmed information, preserves unrelated additions, and never creates hypotheses or writes passively after installation, project opening, a generic marketing mention, or another skill finding no context.
 
 ### a1-editor
 

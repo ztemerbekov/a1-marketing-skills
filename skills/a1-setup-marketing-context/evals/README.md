@@ -1,0 +1,54 @@
+# A1 Marketing Context Evaluation
+
+This self-contained manual suite protects invocation, incremental writes, interview limits, source safety, merge behavior, repository isolation, consumption semantics, output shape, and language behavior.
+
+Evaluation files are maintainer material. Runtime instructions do not load them during an ordinary context run.
+
+## Case Format
+
+Each case embeds the exact user instruction, repository state, authoritative input, interaction harness when needed, and observable criteria. Every case must include:
+
+1. stable ID, mode, risk, and applicable scope scenario;
+2. complete setup and repository state;
+3. exact user instruction and input;
+4. **Must change**, **Must preserve**, and **Forbidden** criteria;
+5. the applicable output contract and manual run record.
+
+Use [the case template](case-template.md). Name every file exactly `<ID>.md`.
+
+## Suite
+
+- [natural Auto-draft invocation](cases/context-natural-invocation-001.md)
+- [passive events cause no write](cases/context-passive-noop-002.md)
+- [direct field update](cases/context-direct-update-003.md)
+- [explicit platform-neutral interview](cases/context-interview-explicit-004.md)
+- [seven-question interview limit](cases/context-interview-limit-005.md)
+- [early interview stop saves partial progress](cases/context-interview-stop-006.md)
+- [sparse repository asks one question](cases/context-sparse-repo-007.md)
+- [one-section partial context is valid](cases/context-partial-file-008.md)
+- [pure hypothesis request is refused](cases/context-no-hypotheses-009.md)
+- [Auto-draft preserves unrelated additions](cases/context-merge-preservation-010.md)
+- [material conflict stops the write](cases/context-conflict-011.md)
+- [write stays isolated to the current repository](cases/context-repository-isolation-012.md)
+- [defaults and protected inputs remain distinct](cases/context-protected-facts-013.md)
+- [default output is concise](cases/context-output-shape-014.md)
+- [stored content and explanations follow language policy](cases/context-language-015.md)
+- [mixed context and hypothesis job is fully refused](cases/context-mixed-hypothesis-016.md)
+- [legacy fallback migration is explicit and lossless](cases/context-legacy-migration-021.md)
+- [immediate interview stop creates no empty context](cases/context-interview-empty-stop-022.md)
+
+Consumer integration regressions live in the self-contained evaluation packages of the consumers they evaluate. The Issue #9 release record combines those Editor and Chief cases with this setup suite and pins the full candidate skill set.
+
+Across the suite, scope coverage includes `In scope`, `Out of scope`, `Mixed job`, and `Completed external input`.
+
+## Manual Run Protocol
+
+1. Prefer a clean supported client with only the exact candidate skill set required by the case installed in a temporary repository matching the case setup. Setup-only cases require Marketing Context; consumer-integration cases also require the named Editor or Chief dependency.
+2. If security policy blocks it, use the explicitly accepted constrained fallback: load the exact required candidate skill set in the current supported client and record the policy block, one combined digest over every installed candidate directory, isolation difference, and fallback approver.
+3. Reproduce only the repository state and interaction steps declared by the case.
+4. Submit exact instructions and inputs without paraphrasing. Record every file write and the complete user-facing output.
+5. Judge every **Must change**, **Must preserve**, and **Forbidden** item, then judge the output contract separately.
+6. Treat ambiguous evidence as failure. Mark a case pass only when every criterion passes.
+7. Record the client, model, combined candidate revision or digest, date, reviewer, and fallback mode.
+
+Structural validation checks the package shape and permanent boundary assertions. It does not replace human semantic judgment.

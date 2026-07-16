@@ -42,14 +42,14 @@ The recommended installer is the simplest option for a project shared across dif
 <!-- SKILLS:START -->
 | Skill | Best for |
 |-------|----------|
-| [Marketing Context](skills/a1-setup-marketing-context/) (`a1-setup-marketing-context`) | Giving future marketing work reusable product, audience, positioning, voice, proof, vocabulary, examples, and goals. |
+| [Marketing Context](skills/a1-setup-marketing-context/) (`a1-setup-marketing-context`) | Creating or incrementally updating one repository-local context from confirmed marketing information. |
 | [Editor](skills/a1-editor/) (`a1-editor`) | Improving existing text immediately: edit, shorten, clarify, strengthen, or restructure without inventing facts. |
 | [Editor in Chief](skills/a1-editor-in-chief/) (`a1-editor-in-chief`) | Turning a confirmed editorial assignment into a reviewed edit without creating general marketing strategy. |
 <!-- SKILLS:END -->
 
 Use this quick rule:
 
-- Want the agent to remember your product, audience, voice, or proof for future work? Start with **Marketing Context**.
+- Want the current repository to remember confirmed product, audience, voice, or proof for future work? Explicitly ask **Marketing Context** to save or update it.
 - Already have text and know what should change? Use **Editor**.
 - Have confirmed product and marketing inputs, but need to decide the editorial reader focus, message emphasis, angle, structure, or voice? Explicitly invoke **Editor in Chief**.
 
@@ -60,15 +60,23 @@ Marketing Context is useful for repeated work, but Editor does not require it to
 <details>
 <summary><strong>Marketing Context</strong></summary>
 
-**What it does:** saves reusable facts about the product, audience, positioning, voice, proof, vocabulary, examples, and business goals in the current project. Other marketing skills can use this context in later tasks.
+**What it does:** creates or incrementally updates one shared `.agents/marketing-context.md` in the current repository. Auto-draft records only confirmed user information and direct facts from authoritative project material. A one-section partial context is valid; unrelated additions survive later updates.
 
-**Use it when:** you start marketing work in a project or when important product facts, audiences, proof, terminology, or voice guidelines change.
+**Use it when:** you explicitly want the repository to remember or update approved product facts, audience, positioning, voice, proof, terminology, examples, or goals.
 
 **Try:**
 
 ```text
-Save our product, audience, positioning, voice, proof, preferred words, and business goals for future marketing work.
+Set up marketing context from confirmed information in this repository.
+
+Remember our approved tone of voice: practical, calm, and direct.
+
+Update only the audience: marketplace operations managers.
 ```
+
+For guided setup, ask naturally: “Interview me to set up marketing context.” Questions arrive one at a time, stop after at most seven in one pass, and confirmed partial progress is saved if you stop early.
+
+The context belongs only to the current repository: there is no global or private profile. Installation, opening a project, mentioning marketing, or another skill finding no context never causes a write. Marketing Context records completed facts and decisions; it does not create or evaluate hypotheses.
 
 </details>
 
@@ -210,7 +218,7 @@ rm -rf ~/.codex/skills/a1-setup-marketing-context \
 - Write requests in the language you normally use. The skills answer in that language by default and preserve the language of the supplied copy.
 - Give Editor the complete text and a concrete intent such as “shorten,” “clarify,” “strengthen,” or “restructure.”
 - State important constraints directly: preserve the numbers, keep the voice, keep the structure, or return only the edited text.
-- Set up Marketing Context when you want consistent product facts and voice across repeated tasks. Missing context does not block an ordinary edit.
+- Explicitly ask Marketing Context to save confirmed reusable information in the current repository. It never writes merely because context is missing, and missing context does not block an ordinary edit.
 - Invoke Editor in Chief by name when you want the assignment clarified before editing.
 
 ## Help and feedback

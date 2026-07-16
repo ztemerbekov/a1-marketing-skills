@@ -9,7 +9,7 @@ alwaysApply: false
 
 Canonical instructions live in `skills/*/SKILL.md`. Use those files as the source of truth.
 
-Use `skills/a1-setup-marketing-context/SKILL.md` when the user wants to create or update shared marketing context, describe the product for future marketing work, remember audience or tone, save brand voice, update positioning, or maintain reusable marketing facts.
+Use `skills/a1-setup-marketing-context/SKILL.md` only when the user explicitly wants to create or update repository-local marketing context, remember confirmed audience or tone, save approved facts, or start a context interview. Do not invoke it after installation, project opening, a generic marketing mention, or another skill finding no context.
 
 Use `skills/a1-editor/SKILL.md` when the user wants to shorten, rewrite, sharpen, clean up, improve, make stronger, explain edits, or apply explicitly requested information style to existing text. Follow its strategy boundary before starting the editor spine.
 
