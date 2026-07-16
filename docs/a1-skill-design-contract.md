@@ -46,13 +46,13 @@ Use these ownership boundaries:
 - `docs/a1-marketing-glossary.md` owns shared authoring terminology.
 - Each canonical `skills/<name>/SKILL.md` and its references own that skill's runtime behavior.
 - `.agents/marketing-context.md` owns brand-specific facts for the target repository.
-- Platform adapters point to canonical skills and do not redefine them.
+- The cross-agent installer distributes canonical skill folders without redefining them.
 
 An installable skill must not depend on repository-level maintainer docs at runtime. When a shared rule or term materially affects runtime behavior, include only the minimum required wording inside the skill; that local wording becomes the runtime source for that installed skill.
 
 ### Self-contained installation
 
-Every directory under `skills/` must be directly installable from GitHub. Include every runtime reference, template, script, and asset that the skill needs. Do not require a build, sync step, sibling skill, repository doc, or platform adapter unless the skill explicitly declares and safely handles that dependency.
+Every directory under `skills/` must be directly installable from GitHub. Include every runtime reference, template, script, and asset that the skill needs. Do not require a build, sync step, sibling skill, repository doc, or client-specific adapter unless the skill explicitly declares and safely handles that dependency.
 
 ## Evaluation Contract
 

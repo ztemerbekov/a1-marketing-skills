@@ -42,17 +42,14 @@ skills/
   a1-setup-marketing-context/
   a1-editor/
   a1-editor-in-chief/
+  a1-update-marketing-skills/
 ```
 
 Each skill directory must be self-contained and installable directly from GitHub. Do not require users to run a build or sync step after installation.
 
-Platform-specific files are adapters:
+Public installation and updates use the cross-agent `npx skills` CLI. Do not add client-specific plugin metadata, rules, copied skill trees, or manual installers unless a future issue explicitly restores that compatibility surface.
 
-- `.claude-plugin/` is for Claude Code plugin installation.
-- `.cursor/rules/` is a Cursor bridge.
-- `scripts/` contains maintainer tools only.
-
-Do not make Cursor rules, Claude plugin metadata, or generated files the source of truth for skill behavior.
+`scripts/` contains maintainer tools only and is not required after installation.
 
 ## A1 Design Contract
 
@@ -124,13 +121,17 @@ Public, command-only strategy skill.
 
 Uses a hard gate. It must not hand off to `a1-editor` until reader, goal, channel or format, constraints, and editing operation are clear. It creates an Editor Brief, then executes the rewrite through the `a1-editor` role.
 
-## Platform Adapters
+### a1-update-marketing-skills
+
+Public, explicitly requested update skill.
+
+Uses `npx skills` to refresh only installations tracked from `ztemerbekov/marketing-skills`. Existing skills and upstream deletions are applied without confirmation; newly available skills require one grouped confirmation. It must not update unrelated sources, scan other projects, or connect new clients without permission.
+
+## Cross-Client Distribution
 
 Do not put Claude-only command injection syntax, Cursor-only MDC behavior, or Codex-only assumptions into canonical `skills/*/SKILL.md` files unless we explicitly accept that as a documented behavior-over-spec extension.
 
-Cursor rules should point to canonical skills, not duplicate their full logic.
-
-Claude plugin files should describe where skills live, not redefine the skills.
+Keep the canonical Agent Skills folders compatible with the clients supported by `npx skills`. Client selection and linking belong to the installer, not to repository adapters.
 
 ## Change Reporting
 
@@ -144,8 +145,8 @@ Run:
 ./scripts/validate-skills.sh
 ```
 
-Before changing plugin metadata or README skill lists, run:
+Before changing README skill lists, run:
 
 ```bash
-node scripts/sync-readme-and-plugin.js
+node scripts/sync-readmes.js
 ```

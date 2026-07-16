@@ -7,6 +7,7 @@ warnings=0
 passed=0
 artifacts_passed=0
 certification_report="docs/a1-editor-pilot-certification.md"
+update_certification_report="docs/a1-update-marketing-skills-certification.md"
 
 echo "Validating A1 design contract artifacts"
 echo
@@ -42,12 +43,21 @@ chief_eval_cases=(
   "skills/a1-editor-in-chief/evals/cases/chief-explicit-003.md"
 )
 
+update_eval_cases=(
+  "skills/a1-update-marketing-skills/evals/cases/update-existing-001.md"
+  "skills/a1-update-marketing-skills/evals/cases/update-deleted-001.md"
+  "skills/a1-update-marketing-skills/evals/cases/update-new-001.md"
+  "skills/a1-update-marketing-skills/evals/cases/update-explain-001.md"
+  "skills/a1-update-marketing-skills/evals/cases/update-prerequisite-001.md"
+  "skills/a1-update-marketing-skills/evals/cases/update-upstream-failure-001.md"
+)
+
 required_artifacts=(
   "AGENTS.md"
   "README.md"
   "README.ru.md"
   "CONTRIBUTING.md"
-  ".cursor/rules/marketing-skills.mdc"
+  "scripts/test-update-lock-helper.mjs"
   "docs/maintainers/README.md"
   "docs/a1-skill-design-contract.md"
   "docs/a1-skill-completion-checklist.md"
@@ -61,10 +71,19 @@ required_artifacts=(
   "skills/a1-editor/evals/README.md"
   "skills/a1-editor/evals/case-template.md"
   "$certification_report"
+  "$update_certification_report"
   "skills/a1-editor-in-chief/references/chief-gate.md"
   "skills/a1-editor-in-chief/references/editor-brief.md"
+  "skills/a1-update-marketing-skills/SKILL.md"
+  "skills/a1-update-marketing-skills/agents/openai.yaml"
+  "skills/a1-update-marketing-skills/references/npx-workflow.md"
+  "skills/a1-update-marketing-skills/references/runtime-prerequisites.md"
+  "skills/a1-update-marketing-skills/scripts/prune-lock.mjs"
+  "skills/a1-update-marketing-skills/evals/README.md"
+  "skills/a1-update-marketing-skills/evals/case-template.md"
   "${editor_eval_cases[@]}"
   "${chief_eval_cases[@]}"
+  "${update_eval_cases[@]}"
 )
 
 for artifact in "${required_artifacts[@]}"; do
@@ -74,6 +93,29 @@ for artifact in "${required_artifacts[@]}"; do
   else
     echo "FAIL $artifact"
     echo "  Missing required A1 design contract artifact"
+    issues=$((issues + 1))
+  fi
+done
+
+echo
+echo "Testing updater lock helper"
+if node scripts/test-update-lock-helper.mjs; then
+  :
+else
+  echo "FAIL scripts/test-update-lock-helper.mjs"
+  echo "  Updater lock helper fixtures failed"
+  issues=$((issues + 1))
+fi
+
+removed_adapters=(
+  ".claude-plugin"
+  ".cursor/rules"
+)
+
+for adapter in "${removed_adapters[@]}"; do
+  if [[ -e "$adapter" ]]; then
+    echo "FAIL $adapter"
+    echo "  Client-specific adapters must remain removed; distribute with npx skills"
     issues=$((issues + 1))
   fi
 done
@@ -118,9 +160,15 @@ require_text "README.ru.md" "## Какой навык выбрать" "README.ru
 require_text "README.md" "<summary><strong>Marketing Context</strong></summary>" "README.md must explain Marketing Context in a user-facing disclosure"
 require_text "README.md" "<summary><strong>Editor</strong></summary>" "README.md must explain Editor in a user-facing disclosure"
 require_text "README.md" "<summary><strong>Editor in Chief</strong></summary>" "README.md must explain Editor in Chief in a user-facing disclosure"
+require_text "README.md" "<summary><strong>Update Marketing Skills</strong></summary>" "README.md must explain the updater in a user-facing disclosure"
 require_text "README.ru.md" "<summary><strong>Маркетинговый контекст</strong></summary>" "README.ru.md must explain Marketing Context in a Russian disclosure"
 require_text "README.ru.md" "<summary><strong>Редактор</strong></summary>" "README.ru.md must explain Editor in a Russian disclosure"
 require_text "README.ru.md" "<summary><strong>Шеф-редактор</strong></summary>" "README.ru.md must explain Editor in Chief in a Russian disclosure"
+require_text "README.ru.md" "<summary><strong>Обновление Marketing Skills</strong></summary>" "README.ru.md must explain the updater in a Russian disclosure"
+require_text "README.md" "## Update" "README.md must include user-facing update instructions"
+require_text "README.ru.md" "## Обновление" "README.ru.md must include Russian update instructions"
+require_text "README.md" "npx skills@latest add ztemerbekov/marketing-skills -g" "README.md must use the canonical global npx installer"
+require_text "README.ru.md" "npx skills@latest add ztemerbekov/marketing-skills -g" "README.ru.md must use the canonical global npx installer"
 require_text "README.md" "CONTRIBUTING.md" "README.md must end with a concise contributor entry point"
 require_text "README.ru.md" "CONTRIBUTING.md" "README.ru.md must end with a concise contributor entry point"
 require_text "README.md" "z.temerbekov@gmail.com" "README.md must include the feedback address"
@@ -141,8 +189,16 @@ forbid_text "README.ru.md" "## Поддержка платформ" "README.ru.m
 forbid_text "README.ru.md" "## Философия совместимости" "README.ru.md must keep compatibility policy out of the user flow"
 forbid_text "README.ru.md" "## Разработка" "README.ru.md must keep maintainer workflow out of the user flow"
 forbid_text "README.ru.md" "### Завершение и сертификация" "README.ru.md must keep certification details out of the user flow"
+forbid_text "README.md" "skill-installer" "README.md must not document the legacy Codex installer"
+forbid_text "README.ru.md" "skill-installer" "README.ru.md must not document the legacy Codex installer"
+forbid_text "README.md" "/plugin marketplace" "README.md must not document the removed Claude plugin"
+forbid_text "README.ru.md" "/plugin marketplace" "README.ru.md must not document the removed Claude plugin"
+forbid_text "README.md" ".cursor/rules" "README.md must not document the removed Cursor adapter"
+forbid_text "README.ru.md" ".cursor/rules" "README.ru.md must not document the removed Cursor adapter"
+forbid_text "README.md" "cp -R skills/" "README.md must not require manual skill copying"
+forbid_text "README.ru.md" "cp -R skills/" "README.ru.md must not require manual skill copying"
 require_text "CONTRIBUTING.md" "docs/maintainers/README.md" "CONTRIBUTING.md must link the maintainer documentation index"
-require_text "CONTRIBUTING.md" "node scripts/sync-readme-and-plugin.js" "CONTRIBUTING.md must document metadata and README synchronization"
+require_text "CONTRIBUTING.md" "node scripts/sync-readmes.js" "CONTRIBUTING.md must document README inventory synchronization"
 require_text "CONTRIBUTING.md" "./scripts/validate-skills.sh" "CONTRIBUTING.md must document repository validation"
 require_text "CONTRIBUTING.md" "docs/a1-skill-completion-checklist.md" "CONTRIBUTING.md must link the reusable completion checklist"
 require_text "docs/maintainers/README.md" "../a1-skill-design-contract.md" "Maintainer index must link the canonical skill design contract"
@@ -150,7 +206,8 @@ require_text "docs/maintainers/README.md" "../a1-marketing-glossary.md" "Maintai
 require_text "docs/maintainers/README.md" "../a1-skill-completion-checklist.md" "Maintainer index must link the reusable completion checklist"
 require_text "docs/maintainers/README.md" "../a1-editor-pilot-certification.md" "Maintainer index must link the pilot certification record"
 require_text "docs/maintainers/README.md" "../a1-editor-pilot-run-2026-07-15.md" "Maintainer index must link the complete pilot run"
-require_text "scripts/sync-readme-and-plugin.js" 'file: "README.ru.md"' "README synchronization must cover the Russian skill inventory"
+require_text "docs/maintainers/README.md" "../a1-update-marketing-skills-certification.md" "Maintainer index must link the updater certification record"
+require_text "scripts/sync-readmes.js" 'file: "README.ru.md"' "README synchronization must cover the Russian skill inventory"
 require_text "skills/a1-editor/evals/README.md" "## Case Format" "Editor eval docs must define the case format"
 require_text "skills/a1-editor/evals/README.md" "## Manual Run Protocol" "Editor eval docs must define the manual run protocol"
 require_text "$certification_report" "## Certification Status" "Pilot certification must state its verdict"
@@ -160,6 +217,12 @@ require_text "$certification_report" "Output-contract check" "Pilot certificatio
 require_text "$certification_report" "## Case Results" "Pilot certification must inventory every eval case"
 require_text "$certification_report" "## Remaining Limitations" "Pilot certification must disclose remaining limitations"
 require_text "$certification_report" "## Finalization Rule" "Pilot certification must prevent a false pass"
+require_text "$update_certification_report" "## Certification Status" "Updater certification must state its verdict"
+require_text "$update_certification_report" 'Status: `PENDING`' "Updater certification must not claim a semantic pass before the installed suite"
+require_text "$update_certification_report" "## Domain Boundary Decision" "Updater certification must record the domain-boundary reassessment"
+require_text "$update_certification_report" "## Case Results" "Updater certification must inventory every eval case"
+require_text "$update_certification_report" "## Remaining Limitations" "Updater certification must disclose remaining limitations"
+require_text "$update_certification_report" "## Finalization Rule" "Updater certification must prevent a false pass"
 require_text "skills/a1-editor/evals/case-template.md" "## Must Change" "Editor eval template must include Must Change criteria"
 require_text "skills/a1-editor/evals/case-template.md" "## Must Preserve" "Editor eval template must include Must Preserve criteria"
 require_text "skills/a1-editor/evals/case-template.md" "## Forbidden" "Editor eval template must include Forbidden criteria"
@@ -173,7 +236,6 @@ require_text "skills/a1-editor/references/operations.md" "Use the observable fun
 require_text "skills/a1-editor/references/information-style.md" "put the actionable sequence before supporting personal context" "Information Style runtime must foreground an actionable sequence before supporting personal context"
 require_text "skills/a1-editor/SKILL.md" "references/editor-spine.md" "A1 Editor must use the invariant editor spine"
 require_text "skills/a1-editor/SKILL.md" "safe strategy router" "A1 Editor invocation metadata must advertise safe strategy routing"
-require_text ".cursor/rules/marketing-skills.mdc" "routing requests for new positioning" "Cursor activation metadata must advertise strategy routing"
 require_text "skills/a1-editor/SKILL.md" "references/strategy-boundary.md" "A1 Editor must route strategic requests before the editing spine"
 require_text "skills/a1-editor/references/strategy-boundary.md" "## Strategic Requests" "Editor strategy boundary must identify strategic requests by meaning"
 require_text "skills/a1-editor/references/strategy-boundary.md" 'explicitly invoke `a1-editor-in-chief`' "Editor strategy boundary must recommend explicit Editor in Chief invocation"
@@ -200,8 +262,18 @@ require_text "skills/a1-editor-in-chief/references/chief-gate.md" "### Text Goal
 require_text "skills/a1-editor-in-chief/references/chief-gate.md" "### Channel or Format" "Chief gate must require the channel or format"
 require_text "skills/a1-editor-in-chief/references/chief-gate.md" "### Constraints" "Chief gate must require constraints"
 require_text "skills/a1-editor-in-chief/references/chief-gate.md" "### Editing Operation" "Chief gate must require the editing operation"
+require_text "skills/a1-update-marketing-skills/SKILL.md" "ztemerbekov/marketing-skills" "Update skill must pin its source boundary"
+require_text "skills/a1-update-marketing-skills/SKILL.md" "without asking and without creating a backup" "Update skill must overwrite existing installations without a backup prompt"
+require_text "skills/a1-update-marketing-skills/SKILL.md" "Present all newly available skills in one confirmation" "Update skill must group the new-skill confirmation"
+require_text "skills/a1-update-marketing-skills/SKILL.md" "automatically remove tracked skills missing from upstream" "Update skill must remove upstream-deleted skills without confirmation"
+require_text "skills/a1-update-marketing-skills/SKILL.md" "references/npx-workflow.md" "Update skill must route to its source-scoped npx workflow"
+require_text "skills/a1-update-marketing-skills/SKILL.md" "references/runtime-prerequisites.md" "Update skill must route missing Node.js to its prerequisite workflow"
+require_text "skills/a1-update-marketing-skills/references/npx-workflow.md" 'Never use `--all`' "Update workflow must forbid unscoped removal"
+require_text "skills/a1-update-marketing-skills/references/npx-workflow.md" "node scripts/prune-lock.mjs" "Update workflow must clean source-owned stale lock entries"
+require_text "skills/a1-update-marketing-skills/SKILL.md" "Do not search other project directories" "Update workflow must stay within global and current-project scopes"
+require_text "skills/a1-update-marketing-skills/references/runtime-prerequisites.md" "Do not bootstrap Homebrew" "Prerequisite workflow must not install another package manager"
 
-for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}"; do
+for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}" "${update_eval_cases[@]}"; do
   require_text "$eval_case" "## User Instruction" "Editor eval case must include the exact user instruction"
   require_text "$eval_case" "## Input" "Editor eval case must include the complete input"
   require_text "$eval_case" "## Must Change" "Editor eval case must include Must Change criteria"
@@ -221,7 +293,20 @@ for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}"; do
       echo "  Eval filename must match its ID: expected $expected_eval_filename"
       issues=$((issues + 1))
     fi
+  fi
+done
+
+for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}"; do
+  eval_id="$(sed -n 's/^- ID: `\([^`]*\)`.*/\1/p' "$eval_case" | head -n 1)"
+  if [[ -n "$eval_id" ]]; then
     require_text "$certification_report" "$eval_id" "Pilot certification must include eval case $eval_id"
+  fi
+done
+
+for eval_case in "${update_eval_cases[@]}"; do
+  eval_id="$(sed -n 's/^- ID: `\([^`]*\)`.*/\1/p' "$eval_case" | head -n 1)"
+  if [[ -n "$eval_id" ]]; then
+    require_text "$update_certification_report" "$eval_id" "Updater certification must include eval case $eval_id"
   fi
 done
 

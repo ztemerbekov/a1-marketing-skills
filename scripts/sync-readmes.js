@@ -4,12 +4,11 @@ const fs = require("fs");
 const path = require("path");
 
 const skillsDir = "skills";
-const pluginFile = ".claude-plugin/plugin.json";
-const marketplaceFile = ".claude-plugin/marketplace.json";
 const skillOrder = [
   "a1-setup-marketing-context",
   "a1-editor",
   "a1-editor-in-chief",
+  "a1-update-marketing-skills",
 ];
 const readmes = [
   {
@@ -30,6 +29,11 @@ const readmes = [
         title: "Editor in Chief",
         summary:
           "Defining a strategic or editorial assignment through focused questions before Editor rewrites the text.",
+      },
+      "a1-update-marketing-skills": {
+        title: "Update Marketing Skills",
+        summary:
+          "Updating only this collection across already connected AI clients and offering newly available skills before installing them.",
       },
     },
   },
@@ -52,6 +56,11 @@ const readmes = [
         summary:
           "Поставить стратегическую или редакторскую задачу через короткие уточнения, а затем передать текст Редактору.",
       },
+      "a1-update-marketing-skills": {
+        title: "Обновление Marketing Skills",
+        summary:
+          "Обновить только этот набор во всех уже подключённых ИИ-клиентах и заранее показать новые доступные навыки.",
+      },
     },
   },
 ];
@@ -63,8 +72,7 @@ function parseFrontmatter(content) {
   const result = {};
   for (const line of match[1].split("\n")) {
     const index = line.indexOf(":");
-    if (index === -1) continue;
-    if (/^\s/.test(line)) continue;
+    if (index === -1 || /^\s/.test(line)) continue;
     const key = line.slice(0, index).trim();
     let value = line.slice(index + 1).trim();
     if (
@@ -130,10 +138,7 @@ function syncReadme(skills, readme) {
     throw new Error(`${readme.file} is missing the generated skill inventory`);
   }
 
-  const next = content.replace(
-    inventoryPattern,
-    `$1${table}$2`,
-  );
+  const next = content.replace(inventoryPattern, `$1${table}$2`);
 
   if (next !== content) {
     fs.writeFileSync(readme.file, next);
@@ -142,48 +147,15 @@ function syncReadme(skills, readme) {
   return false;
 }
 
-function syncPlugin(skills) {
-  let updated = false;
-
-  if (fs.existsSync(pluginFile) && fs.existsSync(marketplaceFile)) {
-    const plugin = JSON.parse(fs.readFileSync(pluginFile, "utf8"));
-    const marketplace = JSON.parse(fs.readFileSync(marketplaceFile, "utf8"));
-    const version = marketplace.metadata && marketplace.metadata.version;
-
-    if (version && plugin.version !== version) {
-      plugin.version = version;
-      fs.writeFileSync(pluginFile, `${JSON.stringify(plugin, null, 2)}\n`);
-      updated = true;
-    }
-
-    const marketplacePlugin = marketplace.plugins && marketplace.plugins[0];
-    if (marketplacePlugin) {
-      const nextDescription = marketplacePlugin.description.replace(
-        /^\d+ marketing skills/,
-        `${skills.length} marketing skills`,
-      );
-      if (marketplacePlugin.description !== nextDescription) {
-        marketplacePlugin.description = nextDescription;
-        fs.writeFileSync(marketplaceFile, `${JSON.stringify(marketplace, null, 2)}\n`);
-        updated = true;
-      }
-    }
-  }
-
-  return updated;
-}
-
 const skills = getSkills();
 const updatedReadmes = readmes
   .filter((readme) => syncReadme(skills, readme))
   .map((readme) => readme.file);
-const pluginUpdated = syncPlugin(skills);
 
-if (updatedReadmes.length === 0 && !pluginUpdated) {
-  console.log("Everything is already in sync");
+if (updatedReadmes.length === 0) {
+  console.log("README skill inventories are already in sync");
 } else {
   for (const readme of updatedReadmes) {
     console.log(`Updated ${readme} skills table`);
   }
-  if (pluginUpdated) console.log("Updated Claude plugin metadata");
 }
