@@ -8,6 +8,10 @@ Do not put brand-specific products, audiences, positioning, voice, proof, exampl
 |------|------------------------|----------------------|
 | User job | One outcome a user can recognize and ask for without knowing the internal method. | Defines the boundary of one public skill. |
 | Interaction contract | The expected input, gate, working relationship, and output for a user job. | A materially different contract is a reason to split a skill; an operation variant alone is not. |
+| Scope boundary | The explicit division between work a skill may perform, work it must not perform, completed external inputs it may accept, and its mixed-request response. | Makes the user job operational and testable before any other work begins. |
+| Scope classification | The decision that a whole request is in scope, out of scope, mixed job, or supplies a completed external input. | Runs before dependency checks, context gathering, interviews, or artifact creation. |
+| Mixed-job request | One request that combines the skill's declared user job with a different user job. | Requires rejection before either part is performed, except when orchestration or routing is the declared user job. |
+| Completed external input | A finished artifact the skill may consume as source material even though producing or rethinking that artifact is outside its user job. | Prevents permission to accept an input from being mistaken for permission to create it. |
 | Model-invoked | A safe skill the agent may select from natural-language intent. | The skill should start from a reasonable default and avoid surprising hard gates. |
 | User-invoked | A skill the user deliberately starts by name or command. | Use for interviews, consequential workflows, and other processes where an automatic start would be surprising. |
 | Soft gate | The minimum input needed to produce a safe, useful result; missing optional context does not block execution. | Proceed with safe assumptions and disclose them when relevant. |

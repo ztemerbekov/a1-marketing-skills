@@ -1,6 +1,13 @@
 # Strategy Boundary
 
-This boundary runs before the editor soft gate. It decides whether `a1-editor` can edit supplied material or must stop before an editing run begins.
+This boundary runs before dependency checks, context gathering, the editor soft gate, or any editing work. It classifies the whole request before deciding whether `a1-editor` may begin an editing run.
+
+## Declared Scope
+
+- **User job and in-scope work:** transform existing marketing text through the editing operations declared by `a1-editor`.
+- **Out-of-scope work:** create, choose, or rethink positioning, offers, audiences, campaign messaging, landing-page structure, or other marketing strategy.
+- **Allowed external inputs:** completed strategic decisions and approved wording may be accepted as source material for an editing request. Accepting them does not permit the editor to create or rethink them.
+- **Mixed-job behavior:** if one request combines editing with out-of-scope strategy work, reject the whole mixed request before editing. Name the boundary, recommend explicit `a1-editor-in-chief` invocation for the strategic workflow, and do not return a partial edit.
 
 ## Strategic Requests
 
@@ -18,7 +25,7 @@ Editing existing wording about one of these subjects is still editing when the u
 
 Start the ordinary editor run when the user supplies editable material and an editing intent. Missing audience, channel, goal, constraints, or marketing context does not turn that request into strategy and does not justify routing it elsewhere.
 
-If a mixed request contains a safe, separable edit and a strategic decision, never create the strategy silently. Perform the edit only when a partial result is clearly useful; name the omitted strategic part and use the boundary response for it.
+If a request combines a safe edit with a strategic decision, do not perform either part. A1 Editor's user job is editing, not orchestration, so even a useful separable edit would be forbidden partial execution.
 
 ## Boundary Response
 
@@ -28,6 +35,6 @@ Respond concisely in the user's language:
 2. Recommend that the user explicitly invoke `a1-editor-in-chief` for the strategic workflow.
 3. Stop without asking for reader, goal, channel or format, constraints, editing operation, or marketing context.
 
-Do not load or emulate the chief workflow, start its hard gate, create an Editor Brief, propose strategic options, or draft the missing positioning, offer, audience, campaign, or structure. Only a later explicit invocation by the user can start `a1-editor-in-chief`.
+Do not load or emulate the chief workflow, start its hard gate, create an Editor Brief, propose strategic options, draft the missing positioning, offer, audience, campaign, or structure, or return an edited fragment from a mixed request. Only a later explicit invocation by the user can start `a1-editor-in-chief`.
 
-**Complete when:** the response names the relevant boundary, recommends explicit invocation, asks no chief-gate questions, and contains no invented strategy.
+**Complete when:** the response names the relevant boundary, recommends explicit invocation, asks no chief-gate questions, contains no invented strategy, and returns no partial edit for a mixed request.

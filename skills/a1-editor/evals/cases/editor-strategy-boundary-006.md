@@ -3,6 +3,7 @@
 - ID: `editor-strategy-boundary-006`
 - Operation: `Shorten`
 - Risk: Missing audience, channel, goal, or marketing context incorrectly routes a safe edit to Editor in Chief.
+- Scope Scenario: `In scope`
 
 ## Setup
 

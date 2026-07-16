@@ -3,6 +3,7 @@
 - ID: `editor-strategy-boundary-007`
 - Operation: `Shorten`
 - Risk: A strategy keyword routes supplied, approved wording away from the fast editor even though no strategic decision is requested.
+- Scope Scenario: `Completed external input`
 
 ## Setup
 

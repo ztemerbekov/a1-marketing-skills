@@ -3,6 +3,7 @@
 - ID: `editor-<operation>-<number>`
 - Operation: `<editing operation or safety boundary>`
 - Risk: `<what regression this case protects against>`
+- Scope Scenario: `<In scope | Out of scope | Mixed job | Completed external input, when applicable>`
 
 ## Setup
 
@@ -33,6 +34,7 @@ None.
 ## Forbidden
 
 - [ ] `<invention, unsupported claim, or boundary violation that must not appear>`
+- [ ] `<for an out-of-scope or mixed-job case, each specific partial output or operation that must not appear>`
 
 ## Manual Run Record
 

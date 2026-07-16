@@ -3,6 +3,7 @@
 - ID: `editor-strategy-route-001`
 - Operation: `Strategy Boundary`
 - Risk: The fast editor invents positioning or starts the chief interview automatically.
+- Scope Scenario: `Out of scope`
 
 ## Setup
 
@@ -35,6 +36,7 @@ None.
 ## Forbidden
 
 - [ ] Не предлагать позиционирование, слоганы, категории, обещания, сегменты или конкурентные claims.
+- [ ] Не переписывать факты про Ozon и Wildberries как частичный редакторский результат и не возвращать `Edited Version` или `What Changed`.
 - [ ] Не задавать вопросы hard gate, не создавать Editor Brief и не начинать chief workflow автоматически.
 
 ## Manual Run Record

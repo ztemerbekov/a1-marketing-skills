@@ -18,6 +18,10 @@ Use this checklist before declaring a new or materially changed A1 marketing ski
 
 ## Invocation and Interaction Contract
 
+- [ ] Declare one recognizable user job and classify the whole request before dependency checks, context gathering, interviews, or artifact creation.
+- [ ] Declare the work the skill may perform and the work it must not perform.
+- [ ] Declare which completed external inputs the skill may accept without producing or rethinking them.
+- [ ] Declare mixed-job behavior and forbid partial execution unless orchestration or routing is the skill's explicitly declared user job.
 - [ ] Choose **Model-invoked** for a safe natural-language entry point with a reversible default.
 - [ ] Choose **User-invoked** or command-only for a deliberate interview, consequential workflow, or surprising hard gate.
 - [ ] Put trigger phrases and scope boundaries in frontmatter so supported clients can select the skill reliably.
@@ -41,6 +45,8 @@ Use this checklist before declaring a new or materially changed A1 marketing ski
 
 ## Criteria-Based Evaluation
 
+- [ ] Cover in-scope, out-of-scope, mixed-job, and completed external input scenarios for every materially changed scope boundary.
+- [ ] In out-of-scope and mixed-job cases, name every forbidden partial output explicitly.
 - [ ] Add realistic cases for every important operation and high-risk boundary.
 - [ ] Make each case self-contained with exact instruction, input, setup, and marketing context.
 - [ ] Define observable **Must change**, **Must preserve**, and **Forbidden** criteria plus the applicable output contract.
@@ -49,12 +55,14 @@ Use this checklist before declaring a new or materially changed A1 marketing ski
 
 ## Installed Semantic Release Gate
 
-- [ ] Install the exact candidate revision in a clean supported client.
-- [ ] Record client, model, run date, skill revision, reviewer, and any case-specific installation difference.
+- [ ] Prefer installing the exact candidate revision in a clean supported client.
+- [ ] If security policy blocks a clean run, use an **explicitly accepted constrained fallback** only after the product owner accepts that mode: load the exact candidate in the current supported client and record the policy block, candidate digest, isolation difference, and fallback approver.
+- [ ] Structural validation alone does not satisfy the constrained fallback; record exact prompts, complete outputs, and semantic evidence for every required case.
+- [ ] Record client, model, run date, skill revision, reviewer, fallback mode when used, and any case-specific installation difference.
 - [ ] Submit every case's exact instruction and input without paraphrasing.
 - [ ] Judge every case against the three criteria groups — Must change, Must preserve, and Forbidden — then verify the applicable output contract separately.
 - [ ] Treat ambiguous evidence as failure and record concise evidence for every verdict.
-- [ ] For a significant failure, fix the smallest runtime cause, add or strengthen a permanent regression case, reinstall the new revision, and restart the full suite.
+- [ ] For a significant failure, fix the smallest runtime cause, add or strengthen a permanent regression case, reload the exact candidate under the selected mode, and restart the full suite.
 
 ## Repository Verification
 
@@ -68,11 +76,12 @@ Use this checklist before declaring a new or materially changed A1 marketing ski
 
 - [ ] Record every known limitation, deferred case, unsupported client, dependency issue, and follow-up task.
 - [ ] Distinguish a blocked or pending semantic gate from a passing structural check.
+- [ ] Treat the unavailable clean-client mode as a disclosed limitation, not a failure, only when the explicitly accepted constrained fallback has complete semantic evidence.
 - [ ] Do not hide unresolved failures inside a qualified pass verdict.
 
 ## Completion Verdict
 
-- [ ] Mark `PASS` only when every required semantic case and repository check passes on the recorded candidate revision.
+- [ ] Mark `PASS` only when every required semantic case and repository check passes on the recorded candidate revision under either the clean-client mode or an explicitly accepted constrained fallback.
 - [ ] Mark `FAIL` when a required case has an unresolved failure.
-- [ ] Mark `PENDING` when the installed run, environment record, evidence, or required verification is incomplete.
+- [ ] Mark `PENDING` when neither allowed semantic mode is complete, or when its environment record, evidence, or required verification is incomplete.
 - [ ] Do not close or otherwise declare the work complete until the verdict accurately represents the evidence.

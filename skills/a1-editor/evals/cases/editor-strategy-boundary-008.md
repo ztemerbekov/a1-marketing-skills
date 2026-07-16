@@ -1,8 +1,9 @@
-# editor-strategy-boundary-008 — Mixed Editing and Strategy Request Preserves the Boundary
+# editor-strategy-boundary-008 — Mixed Editing and Strategy Request Stops Before Partial Execution
 
 - ID: `editor-strategy-boundary-008`
-- Operation: `Standard Edit + Strategy Boundary`
-- Risk: A useful edit is discarded or the editor silently invents the strategic half of a mixed request.
+- Operation: `Strategy Boundary`
+- Risk: The editor starts a useful-looking partial edit before rejecting the strategic half of a mixed request.
+- Scope Scenario: `Mixed job`
 
 ## Setup
 
@@ -24,17 +25,18 @@ None.
 
 ## Must Change
 
-- [ ] Выполнить безопасную separable edit: убрать шаблонную вводную и вернуть отредактированный исходный абзац с `What Changed`.
-- [ ] Отдельно назвать стратегическую часть невыполненной и рекомендовать явно запустить `a1-editor-in-chief` для нового позиционирования.
+- [ ] До editor spine определить весь запрос как смешение редактуры и создания нового позиционирования.
+- [ ] Коротко назвать обе части запроса, объяснить границу и рекомендовать явно запустить `a1-editor-in-chief` для стратегического workflow.
 
 ## Must Preserve
 
-- [ ] Сохранить Ozon, Wildberries, один общий список и команду без новых продуктовых утверждений.
-- [ ] Ясно отделить завершенную редактуру от стратегической задачи, которая требует отдельной explicit invocation.
+- [ ] Рассматривать исходный абзац только как неиспользованный материал смешанного запроса: не менять и не расширять его факты.
+- [ ] Ответить на русском и оставить новый positioning decision для отдельной explicit invocation.
 
 ## Forbidden
 
 - [ ] Не придумывать позиционирование, campaign concept, differentiation, audience, offer, claims или CTA.
+- [ ] Не возвращать очищенную, сокращенную или иначе отредактированную версию абзаца, `Edited Version`, `What Changed` или другой частичный редакторский результат.
 - [ ] Не задавать вопросы hard gate, не создавать Editor Brief и не начинать chief workflow автоматически.
 
 ## Manual Run Record

@@ -10,6 +10,19 @@ A public skill represents one understandable job a user is trying to complete. K
 
 The user-facing prompt should stay simpler than the internal method. Do not expose rubrics, passes, routing tables, or evaluation mechanics unless they help the user make a necessary choice.
 
+### Scope before helpfulness
+
+Every skill must declare one user job and classify the whole request against that job before dependency checks, context gathering, interviews, or artifact creation. Its scope boundary must name:
+
+- work the skill may perform;
+- work it must not perform;
+- completed external inputs it may accept;
+- how it responds when one request combines its user job with another job.
+
+Reject a mixed-job request before doing either part. Do not produce a helpful in-scope fragment while declining the rest: that partial execution hides the boundary and can commit the user to an unintended workflow. Partial execution is allowed only when orchestration or routing is the skill's explicitly declared user job.
+
+Scope applies to production, not subject matter. A skill may accept a completed external input without gaining permission to create or rethink that artifact. State this direction explicitly wherever the same artifact can be an allowed input but a forbidden output.
+
 ### Invocation rule
 
 Use the **Model-invoked** mode for safe, natural-language entry points where a reasonable default can produce a reversible result. Use the **User-invoked** mode or command-only behavior for deliberate interviews, consequential workflows, or processes whose hard gate would be surprising when auto-triggered.
@@ -68,9 +81,13 @@ Each case must contain the complete instruction, input, optional context, and th
 
 Keep cases inside the skill they evaluate so the evaluation package travels with a direct installation.
 
+For every materially changed scope boundary, cover four scenarios across the regression suite: an in-scope request, an out-of-scope request, a mixed-job request, and a request that supplies a completed external input. Out-of-scope and mixed-job cases must name the partial artifact or other work that is forbidden, so a superficially helpful partial response cannot pass.
+
 ### Manual semantics, automated structure
 
 Run semantic evals manually during the pilot. A human reviewer records evidence for every criterion and marks the case pass only when all criteria pass. Do not add an automated LLM judge.
+
+Prefer a clean supported client with the exact candidate installed. If security policy blocks that mode, the completion checklist's explicitly accepted constrained fallback may load the exact candidate in the current supported client. Record the policy block, candidate digest, exact prompts, complete outputs, criteria evidence, reviewer, fallback approver, and isolation difference. Structural validation alone never satisfies this fallback.
 
 Repository automation may validate structure: required files, headings, frontmatter, links, and template sections. It must not pretend to score marketing quality.
 
