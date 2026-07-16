@@ -9,6 +9,9 @@ artifacts_passed=0
 certification_report="docs/a1-editor-pilot-certification.md"
 chief_run_report="docs/a1-editor-in-chief-run-2026-07-16.md"
 context_run_report="docs/a1-marketing-context-run-2026-07-16.md"
+integrated_run_report="docs/a1-integrated-release-run-2026-07-16.md"
+chief_completion_report="docs/a1-editor-in-chief-completion-2026-07-16.md"
+context_completion_report="docs/a1-marketing-context-completion-2026-07-16.md"
 
 echo "Validating A1 design contract artifacts"
 echo
@@ -91,6 +94,10 @@ context_consumer_eval_cases=(
   "skills/a1-editor-in-chief/evals/cases/context-chief-protected-conflict-020.md"
 )
 
+release_chief_eval_cases=(
+  "skills/a1-editor-in-chief/evals/cases/chief-context-isolation-013.md"
+)
+
 required_artifacts=(
   "AGENTS.md"
   "README.md"
@@ -112,6 +119,9 @@ required_artifacts=(
   "$certification_report"
   "$chief_run_report"
   "$context_run_report"
+  "$integrated_run_report"
+  "$chief_completion_report"
+  "$context_completion_report"
   "skills/a1-setup-marketing-context/evals/README.md"
   "skills/a1-setup-marketing-context/evals/case-template.md"
   "skills/a1-setup-marketing-context/references/context-spine.md"
@@ -134,6 +144,7 @@ required_artifacts=(
   "skills/a1-editor/evals/cases/editor-chief-handoff-009.md"
   "${context_eval_cases[@]}"
   "${context_consumer_eval_cases[@]}"
+  "${release_chief_eval_cases[@]}"
 )
 
 for artifact in "${required_artifacts[@]}"; do
@@ -236,6 +247,9 @@ require_text "docs/maintainers/README.md" "../a1-skill-completion-checklist.md" 
 require_text "docs/maintainers/README.md" "../a1-editor-pilot-certification.md" "Maintainer index must link the pilot certification record"
 require_text "docs/maintainers/README.md" "../a1-editor-pilot-run-2026-07-15.md" "Maintainer index must link the complete pilot run"
 require_text "docs/maintainers/README.md" "../a1-marketing-context-run-2026-07-16.md" "Maintainer index must link the Marketing Context run"
+require_text "docs/maintainers/README.md" "../a1-integrated-release-run-2026-07-16.md" "Maintainer index must link the integrated release run"
+require_text "docs/maintainers/README.md" "../a1-editor-in-chief-completion-2026-07-16.md" "Maintainer index must link the Chief completion checklist"
+require_text "docs/maintainers/README.md" "../a1-marketing-context-completion-2026-07-16.md" "Maintainer index must link the Context completion checklist"
 require_text "scripts/sync-readme-and-plugin.js" 'file: "README.ru.md"' "README synchronization must cover the Russian skill inventory"
 require_text "skills/a1-setup-marketing-context/SKILL.md" "## Invocation Contract" "Marketing Context must define explicit natural invocation"
 require_text "skills/a1-setup-marketing-context/SKILL.md" "references/context-spine.md" "Marketing Context must use its invariant spine"
@@ -271,6 +285,10 @@ require_text "skills/a1-editor/references/source-boundary.md" "Audience Defaults
 require_text "skills/a1-editor/references/source-boundary.md" "Current instructions do not silently override protected inputs" "Editor must preserve or surface protected context conflicts"
 require_text "skills/a1-editor-in-chief/references/source-resolution.md" "override repository context defaults" "Chief must allow task-specific default overrides"
 require_text "skills/a1-editor-in-chief/references/source-resolution.md" "Current material must not silently override them" "Chief must gate protected context conflicts"
+require_text "skills/a1-editor-in-chief/references/source-resolution.md" "Never read a global marketing profile, a last-used pointer, or context from another" "Chief context resolution must stay in the current repository"
+require_text "skills/a1-editor-in-chief/evals/README.md" "chief-context-isolation-013.md" "Chief suite must cover global and previous-project isolation"
+require_text "skills/a1-editor-in-chief/evals/cases/chief-context-isolation-013.md" "Last-used sentinel" "Chief isolation regression must define an observable previous-project sentinel"
+require_text "$integrated_run_report" "OUTSIDE-CURRENT-REPOSITORY CONTEXT ACCESSES -> 0" "Integrated isolation evidence must record zero outside-repository context discovery"
 require_text "skills/a1-setup-marketing-context/evals/README.md" "## Manual Run Protocol" "Context evals must define the semantic protocol"
 require_text "skills/a1-setup-marketing-context/evals/README.md" "one combined digest over every installed candidate directory" "Context integration protocol must pin every runtime candidate"
 require_text "skills/a1-editor/evals/README.md" "context-editor-default-override-017.md" "Editor must own its context-default integration regression"
@@ -386,7 +404,7 @@ for obsolete_chief_file in \
   fi
 done
 
-for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}" "${chief_integration_eval_cases[@]}" "${context_eval_cases[@]}" "${context_consumer_eval_cases[@]}"; do
+for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}" "${chief_integration_eval_cases[@]}" "${context_eval_cases[@]}" "${context_consumer_eval_cases[@]}" "${release_chief_eval_cases[@]}"; do
   require_text "$eval_case" "## User Instruction" "A1 eval case must include the exact user instruction"
   require_text "$eval_case" "## Input" "A1 eval case must include the complete input"
   require_text "$eval_case" "## Must Change" "A1 eval case must include Must Change criteria"
@@ -424,6 +442,27 @@ for eval_case in "${context_eval_cases[@]}" "${context_consumer_eval_cases[@]}";
   require_text "$eval_case" "## Output Contract" "Marketing Context eval case must include an output-contract check"
   require_text "$context_run_report" "$eval_id" "Marketing Context run report must include eval case $eval_id"
 done
+
+for eval_case in "${chief_eval_cases[@]}" "${release_chief_eval_cases[@]}" "${context_eval_cases[@]}" "${context_consumer_eval_cases[@]}"; do
+  eval_id="$(sed -n 's/^- ID: `\([^`]*\)`.*/\1/p' "$eval_case" | head -n 1)"
+  require_text "$integrated_run_report" "$eval_id" "Integrated release run must include required case $eval_id"
+done
+
+require_text "$integrated_run_report" "## Environment and Candidate" "Integrated release run must record a comparable environment"
+require_text "$integrated_run_report" "## Installation Mode" "Integrated release run must disclose its installation mode"
+require_text "$integrated_run_report" "## Finalization Rule" "Integrated release run must prevent a false pass"
+require_text "$integrated_run_report" 'Repository verification: `PASS`' "Integrated release run must record passing repository verification"
+require_text "$integrated_run_report" 'Standards review: `PASS`' "Integrated release run must record the independent Standards verdict"
+require_text "$integrated_run_report" 'Spec review: `PASS`' "Integrated release run must record the independent Spec verdict"
+require_text "$integrated_run_report" 'Human semantic judgment: `PASS`' "Integrated release run must capture the human semantic verdict"
+require_text "$integrated_run_report" 'Final release verdict: `PASS — READY FOR USERS`' "Integrated release run must state the final user-readiness verdict"
+require_text "$integrated_run_report" 'Human reviewer: `ztemerbekov`' "Integrated release run must identify the human reviewer"
+require_text "$chief_completion_report" "## Installed Semantic Release Gate" "Chief completion record must apply the installed semantic gate"
+require_text "$chief_completion_report" "## Completion Verdict" "Chief completion record must state a verdict rule"
+require_text "$chief_completion_report" '`PASS — READY FOR USERS`' "Chief completion record must state a passing final verdict"
+require_text "$context_completion_report" "## Installed Semantic Release Gate" "Context completion record must apply the installed semantic gate"
+require_text "$context_completion_report" "## Completion Verdict" "Context completion record must state a verdict rule"
+require_text "$context_completion_report" '`PASS — READY FOR USERS`' "Context completion record must state a passing final verdict"
 
 echo
 
