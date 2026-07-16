@@ -39,20 +39,17 @@ Canonical skills live under `skills/`:
 
 ```text
 skills/
-  a1-setup-marketing-context/
+  a1-marketing-context/
   a1-editor/
   a1-editor-in-chief/
+  a1-update/
 ```
 
 Each skill directory must be self-contained and installable directly from GitHub. Do not require users to run a build or sync step after installation.
 
-Platform-specific files are adapters:
+Public installation and updates use the cross-agent `npx skills` CLI. Do not add client-specific plugin metadata, rules, copied skill trees, or manual installers unless a future issue explicitly restores that compatibility surface.
 
-- `.claude-plugin/` is for Claude Code plugin installation.
-- `.cursor/rules/` is a Cursor bridge.
-- `scripts/` contains maintainer tools only.
-
-Do not make Cursor rules, Claude plugin metadata, or generated files the source of truth for skill behavior.
+`scripts/` contains maintainer tools only and is not required after installation.
 
 ## A1 Design Contract
 
@@ -96,6 +93,7 @@ This repository follows the Agent Skills format, with documented pragmatic exten
 Allowed extensions:
 
 - `disable-model-invocation: true` may be used for command-only skills such as `a1-editor-in-chief`, where accidental auto-triggering would produce the wrong workflow.
+- `agents/openai.yaml` may provide UI-only display metadata for a canonical skill. It must not redefine runtime behavior, duplicate the skill tree, or be required by clients that ignore it.
 
 When adding a non-standard field:
 
@@ -106,7 +104,7 @@ When adding a non-standard field:
 
 ## Current Skills
 
-### a1-setup-marketing-context
+### a1-marketing-context
 
 Public, Model-invoked context-maintenance skill for explicit natural-language setup and update intent.
 
@@ -124,13 +122,17 @@ Public, command-only bounded chief-editor skill.
 
 Classifies scope before all other work, accepts completed product and marketing decisions as inputs, and uses an adaptive gate for only the material editorial facts that remain unclear. It chooses the editing operation, creates an internal Editor Brief, delegates all text execution to `a1-editor`, reviews the result, and may request at most one corrective Editor pass. It does not create market research, segmentation, pricing, positioning, GTM, product strategy, or general marketing strategy.
 
-## Platform Adapters
+### a1-update
+
+Public, explicitly requested update skill.
+
+Uses `npx skills` to refresh only installations tracked from `ztemerbekov/marketing-skills`. Existing skills and upstream deletions are applied without confirmation; newly available skills require one grouped confirmation. It must not update unrelated sources, scan other projects, or connect new clients without permission.
+
+## Cross-Client Distribution
 
 Do not put Claude-only command injection syntax, Cursor-only MDC behavior, or Codex-only assumptions into canonical `skills/*/SKILL.md` files unless we explicitly accept that as a documented behavior-over-spec extension.
 
-Cursor rules should point to canonical skills, not duplicate their full logic.
-
-Claude plugin files should describe where skills live, not redefine the skills.
+Keep the canonical Agent Skills folders compatible with the clients supported by `npx skills`. Client selection and linking belong to the installer, not to repository adapters.
 
 ## Change Reporting
 
@@ -144,8 +146,8 @@ Run:
 ./scripts/validate-skills.sh
 ```
 
-Before changing plugin metadata or README skill lists, run:
+Before changing README skill lists, run:
 
 ```bash
-node scripts/sync-readme-and-plugin.js
+node scripts/sync-readmes.js
 ```

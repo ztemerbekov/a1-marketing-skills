@@ -13,8 +13,8 @@ This record is the semantic release gate for the safe incremental context workfl
 - Client: Codex desktop, current implementation task
 - Model: GPT-5
 - Run date: `2026-07-16`
-- Candidate source: current `skills/a1-setup-marketing-context/`, `skills/a1-editor/`, and `skills/a1-editor-in-chief/`
-- Combined candidate directory digest: `097ba2356f52b84a47ade45e5e511112e45ae6695f8936696dead96d2a14b2cc`
+- Candidate source: current `skills/a1-marketing-context/`, `skills/a1-editor/`, and `skills/a1-editor-in-chief/`
+- Combined candidate directory digest: `b95ff6f67f43d5a7dfb48bfd6ca36e6f4d51d0df5b66296b3bbd6b8961e5114a`
 - Digest method: SHA-256 over every sorted repository-relative path in all three candidate directories, a NUL separator, and that file's SHA-256.
 - Fallback mode: exact candidate skill set loaded in the current supported client because tenant policy blocks external clean-client execution
 - Fallback approver: `ztemerbekov`, explicit product decision on `2026-07-16`
@@ -22,6 +22,8 @@ This record is the semantic release gate for the safe incremental context workfl
 - Human reviewer: `ztemerbekov`, confirmed `PASS` on `2026-07-16`
 
 The exact **User Instruction**, **Input**, setup, and multi-turn harness from every linked case were applied without paraphrasing. Every simulated repository write and complete user-facing output is recorded below. Structural checks are separate and do not substitute for semantic evidence.
+
+The post-certification merge renamed the canonical context directory and frontmatter identifier to `a1-marketing-context` and added UI-only `agents/openai.yaml` metadata. The runtime instructions, references, and evaluated behavior remain unchanged apart from identifier/path substitutions; the digest above pins the merged candidate.
 
 ## Domain Boundary Reassessment
 
@@ -32,7 +34,7 @@ The exact **User Instruction**, **Input**, setup, and multi-turn harness from ev
 
 ## Case Results
 
-### [`context-natural-invocation-001`](../skills/a1-setup-marketing-context/evals/cases/context-natural-invocation-001.md)
+### [`context-natural-invocation-001`](../skills/a1-marketing-context/evals/cases/context-natural-invocation-001.md)
 
 Write: created `.agents/marketing-context.md` with the fixed schema note and these populated sections only:
 
@@ -66,7 +68,7 @@ Changed:
 - Forbidden: `PASS` — no invented field, placeholder, or mode choice appears.
 - Output contract: `PASS` — concise creation link and changed sections only.
 
-### [`context-passive-noop-002`](../skills/a1-setup-marketing-context/evals/cases/context-passive-noop-002.md)
+### [`context-passive-noop-002`](../skills/a1-marketing-context/evals/cases/context-passive-noop-002.md)
 
 Write trace: no `.agents/` directory or context file was created during installation, project opening, the marketing mention, or Editor's optional-context observation.
 
@@ -77,7 +79,7 @@ Complete context-skill output: `<no invocation and no output>`
 - Forbidden: `PASS` — no context, profile, map, offer, question, or confirmation appeared.
 - Output contract: `PASS` — true no-op.
 
-### [`context-direct-update-003`](../skills/a1-setup-marketing-context/evals/cases/context-direct-update-003.md)
+### [`context-direct-update-003`](../skills/a1-marketing-context/evals/cases/context-direct-update-003.md)
 
 Write: changed `Last updated` to `2026-07-16` and replaced only the existing audience bullet with `Руководители команд маркетплейсов.` Product Facts, the HTML comment, Launch Notes, ordering, and formatting were byte-preserved.
 
@@ -93,7 +95,7 @@ Write: changed `Last updated` to `2026-07-16` and replaced only the existing aud
 - Forbidden: `PASS` — no repository fill, rename, rewrite, or preview occurred.
 - Output contract: `PASS` — one changed-section bullet.
 
-### [`context-interview-explicit-004`](../skills/a1-setup-marketing-context/evals/cases/context-interview-explicit-004.md)
+### [`context-interview-explicit-004`](../skills/a1-marketing-context/evals/cases/context-interview-explicit-004.md)
 
 Write trace: no file was created before a confirmed answer.
 
@@ -108,7 +110,7 @@ Write trace: no file was created before a confirmed answer.
 - Forbidden: `PASS` — no command requirement, batch, schema dump, Auto-draft, or proposed answer.
 - Output contract: `PASS` — notice plus one question.
 
-### [`context-interview-limit-005`](../skills/a1-setup-marketing-context/evals/cases/context-interview-limit-005.md)
+### [`context-interview-limit-005`](../skills/a1-marketing-context/evals/cases/context-interview-limit-005.md)
 
 Assistant turn 1, before any write:
 
@@ -186,7 +188,7 @@ Changed:
 - Forbidden: `PASS` — no eighth question, batching, proposal, extra section, or lost seventh answer.
 - Output contract: `PASS` — final confirmation and no further question.
 
-### [`context-interview-stop-006`](../skills/a1-setup-marketing-context/evals/cases/context-interview-stop-006.md)
+### [`context-interview-stop-006`](../skills/a1-marketing-context/evals/cases/context-interview-stop-006.md)
 
 Assistant turn 1, before any write:
 
@@ -227,7 +229,7 @@ The next exact user message was `Стоп, на этом закончим.` The 
 - Forbidden: `PASS` — no question after the stop message, padding, deletion, or unusable warning.
 - Output contract: `PASS` — partial context confirmed normally.
 
-### [`context-sparse-repo-007`](../skills/a1-setup-marketing-context/evals/cases/context-sparse-repo-007.md)
+### [`context-sparse-repo-007`](../skills/a1-marketing-context/evals/cases/context-sparse-repo-007.md)
 
 Write trace: no directory or file change.
 
@@ -240,7 +242,7 @@ What confirmed product fact should I record first—what does this product do?
 - Forbidden: `PASS` — no inferred category, product, audience, feature, empty file, placeholder, or questionnaire.
 - Output contract: `PASS` — one question and no write.
 
-### [`context-partial-file-008`](../skills/a1-setup-marketing-context/evals/cases/context-partial-file-008.md)
+### [`context-partial-file-008`](../skills/a1-marketing-context/evals/cases/context-partial-file-008.md)
 
 Write: created the fixed schema note plus one populated section:
 
@@ -262,7 +264,7 @@ Write: created the fixed schema note plus one populated section:
 - Forbidden: `PASS` — no question, empty section, filler, example, or incompleteness warning.
 - Output contract: `PASS` — one linked creation and one section.
 
-### [`context-no-hypotheses-009`](../skills/a1-setup-marketing-context/evals/cases/context-no-hypotheses-009.md)
+### [`context-no-hypotheses-009`](../skills/a1-marketing-context/evals/cases/context-no-hypotheses-009.md)
 
 Write trace: no repository inspection, directory creation, or file write.
 
@@ -275,7 +277,7 @@ Write trace: no repository inspection, directory creation, or file write.
 - Forbidden: `PASS` — no evaluation, save, test plan, context, research, or strategy artifact.
 - Output contract: `PASS` — concise refusal.
 
-### [`context-merge-preservation-010`](../skills/a1-setup-marketing-context/evals/cases/context-merge-preservation-010.md)
+### [`context-merge-preservation-010`](../skills/a1-marketing-context/evals/cases/context-merge-preservation-010.md)
 
 Write: inserted `Audience Defaults` with `Marketplace managers.` and updated the date. Product wording, the owner comment, Launch Notes, custom footer, order, and formatting were byte-preserved.
 
@@ -291,7 +293,7 @@ Changed:
 - Forbidden: `PASS` — no regeneration, rename, replacement, padding, or added field.
 - Output contract: `PASS` — one changed-section bullet.
 
-### [`context-conflict-011`](../skills/a1-setup-marketing-context/evals/cases/context-conflict-011.md)
+### [`context-conflict-011`](../skills/a1-marketing-context/evals/cases/context-conflict-011.md)
 
 Write trace: context remained byte-identical, including date and `4 900 ₽`.
 
@@ -304,7 +306,7 @@ Write trace: context remained byte-identical, including date and `4 900 ₽`.
 - Forbidden: `PASS` — no precedence guess, merge, average, date change, warning-only update, or second question.
 - Output contract: `PASS` — one concrete conflict question.
 
-### [`context-repository-isolation-012`](../skills/a1-setup-marketing-context/evals/cases/context-repository-isolation-012.md)
+### [`context-repository-isolation-012`](../skills/a1-marketing-context/evals/cases/context-repository-isolation-012.md)
 
 Write trace: only `repo-a/.agents/marketing-context.md` was created; repo-b and the harness home directory remained unchanged. The new file contained only the fixed schema note and `Audience Defaults: Marketplace managers.`
 
@@ -320,7 +322,7 @@ Changed:
 - Forbidden: `PASS` — no global, last-used, private, fallback, domain-map, or second-repository write.
 - Output contract: `PASS` — current-repository relative link only.
 
-### [`context-protected-facts-013`](../skills/a1-setup-marketing-context/evals/cases/context-protected-facts-013.md)
+### [`context-protected-facts-013`](../skills/a1-marketing-context/evals/cases/context-protected-facts-013.md)
 
 Write: replaced only `Audience Defaults` with `Агентства, которые ведут магазины на маркетплейсах.` and updated the date. The schema note, `Ozon and Wildberries only`, `up to 1,200`, and `Never claim Amazon support` were byte-preserved.
 
@@ -336,7 +338,7 @@ Write: replaced only `Audience Defaults` with `Агентства, которы�
 - Forbidden: `PASS` — no weakening, Amazon addition, evidence rewrite, or unrelated field edit.
 - Output contract: `PASS` — one changed default section.
 
-### [`context-output-shape-014`](../skills/a1-setup-marketing-context/evals/cases/context-output-shape-014.md)
+### [`context-output-shape-014`](../skills/a1-marketing-context/evals/cases/context-output-shape-014.md)
 
 Write: added `Words to Use` with `review workspace`; all existing sections remained unchanged.
 
@@ -352,7 +354,7 @@ Changed:
 - Forbidden: `PASS` — no full file, schema, source map, diff, assumption, preview, or extra term.
 - Output contract: `PASS` — one line, link, and one bullet group only.
 
-### [`context-language-015`](../skills/a1-setup-marketing-context/evals/cases/context-language-015.md)
+### [`context-language-015`](../skills/a1-marketing-context/evals/cases/context-language-015.md)
 
 Write: created the fixed schema note plus `Brand Voice Defaults` containing exactly `Пишем спокойно, конкретно и без превосходных степеней.`
 
@@ -368,7 +370,7 @@ Changed:
 - Forbidden: `PASS` — no translation, Russian explanation, bilingual duplication, extra section, or question.
 - Output contract: `PASS` — English creation confirmation and one section.
 
-### [`context-mixed-hypothesis-016`](../skills/a1-setup-marketing-context/evals/cases/context-mixed-hypothesis-016.md)
+### [`context-mixed-hypothesis-016`](../skills/a1-marketing-context/evals/cases/context-mixed-hypothesis-016.md)
 
 Write trace: no repository inspection, directory creation, fact save, or hypothesis artifact.
 
@@ -459,7 +461,7 @@ Complete Chief output:
 - Forbidden: `PASS` — no brief, delegation, rewrite, Amazon choice, context update, or second question appeared.
 - Output contract: `PASS` — one concise Russian decision question.
 
-### [`context-legacy-migration-021`](../skills/a1-setup-marketing-context/evals/cases/context-legacy-migration-021.md)
+### [`context-legacy-migration-021`](../skills/a1-marketing-context/evals/cases/context-legacy-migration-021.md)
 
 First-turn write trace: no file or directory change.
 
@@ -508,7 +510,7 @@ Changed:
 - Forbidden: `PASS` — no silent competing file, lost content, fallback mutation, inferred value, global/private state, pointer, or domain map appeared.
 - Output contract: `PASS` — one migration question followed by concise linked creation confirmation.
 
-### [`context-interview-empty-stop-022`](../skills/a1-setup-marketing-context/evals/cases/context-interview-empty-stop-022.md)
+### [`context-interview-empty-stop-022`](../skills/a1-marketing-context/evals/cases/context-interview-empty-stop-022.md)
 
 Assistant turn 1, with no repository write:
 
@@ -531,8 +533,9 @@ The next exact user message was `Стоп.` The stop pass built the explicit emp
 
 ## Repository Evidence
 
-- README and plugin synchronization: `PASS` — `node scripts/sync-readme-and-plugin.js` reported everything in sync.
+- README inventory synchronization: `PASS` — `node scripts/sync-readmes.js` reported everything in sync.
 - Structural validation: `PASS` — 3 skills, 94 contract artifacts, 0 warnings, 0 failures.
+- Post-merge structural validation: `PASS` — 4 skills, 113 contract artifacts, 0 warnings, 0 failures.
 - Shell syntax, diff hygiene, and link integrity: `PASS`.
 - Standards and spec review: `PASS` — independent reviews completed after fixes with no findings.
 

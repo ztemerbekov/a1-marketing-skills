@@ -4,9 +4,7 @@
 
 **English** | [Русский](./README.ru.md)
 
-Marketing Skills is a small team of AI skills for marketers, founders, and anyone who works with marketing copy. The skills help your agent remember product context, improve existing text, and prepare complex editorial assignments without inventing facts about the product.
-
-You do not need to learn a special command language. Install the skills, describe the task in ordinary words, and include the text when you want it edited.
+Marketing Skills helps marketers, founders, and writers work with AI agents in ordinary language. The collection can remember product context, improve existing copy, clarify complex editorial assignments, and keep itself up to date without changing unrelated skills.
 
 ## Contents
 
@@ -14,37 +12,26 @@ You do not need to learn a special command language. Install the skills, describ
 - [Choose a skill](#choose-a-skill)
 - [Meet the skills](#meet-the-skills)
 - [Install](#install)
-- [Use the skills](#use-the-skills)
+- [Update](#update)
 - [Help and feedback](#help-and-feedback)
 
 ## Start here
 
-1. Open a terminal in the project where you want to use the skills.
-2. Install all current Marketing Skills:
-
-   ```bash
-   npx skills@latest add ztemerbekov/marketing-skills
-   ```
-
-3. Open or reload your AI client. Codex users should restart Codex after installation.
-4. Paste your text and ask for the change you need:
-
-   ```text
-   Shorten this text, keep the facts and the calm tone:
-
-   [your text]
-   ```
-
-The recommended installer is the simplest option for a project shared across different AI clients. Client-specific alternatives are available in [Install](#install).
+```bash
+npx skills@latest add ztemerbekov/marketing-skills -g
+```
 
 ## Choose a skill
+
+If this is your first time using Marketing Skills, start with [Marketing Context](skills/a1-marketing-context/). It saves product information that the other skills can reuse.
 
 <!-- SKILLS:START -->
 | Skill | Best for |
 |-------|----------|
-| [Marketing Context](skills/a1-setup-marketing-context/) (`a1-setup-marketing-context`) | Creating or incrementally updating one repository-local context from confirmed marketing information. |
-| [Editor](skills/a1-editor/) (`a1-editor`) | Improving existing text immediately: edit, shorten, clarify, strengthen, or restructure without inventing facts. |
-| [Editor in Chief](skills/a1-editor-in-chief/) (`a1-editor-in-chief`) | Turning a confirmed editorial assignment into a reviewed edit without creating general marketing strategy. |
+| [Editor](skills/a1-editor/)<br>`a1-editor` | Improve existing text: shorten, clarify, strengthen, or restructure it without inventing facts. |
+| [Editor in Chief](skills/a1-editor-in-chief/)<br>`a1-editor-in-chief` | Turning a confirmed editorial assignment into a reviewed edit without creating general marketing strategy. |
+| [Marketing Context](skills/a1-marketing-context/)<br>`a1-marketing-context` | Creating or incrementally updating one repository-local context from confirmed marketing information. |
+| [Update](skills/a1-update/)<br>`a1-update` | Update only Marketing Skills and decide separately whether to install new skills from the collection. |
 <!-- SKILLS:END -->
 
 Use this quick rule:
@@ -83,9 +70,11 @@ The context belongs only to the current repository: there is no global or privat
 <details>
 <summary><strong>Editor</strong></summary>
 
-**What it does:** improves text you already have. It can edit, shorten, clarify, strengthen, or restructure the material while preserving supported facts, qualifications, and useful voice. It starts immediately when you provide text and an editing request.
+**What it does:** improves text you already have by shortening, clarifying, strengthening, or restructuring it. It preserves facts, numbers, and your voice without adding new promises.
 
-**Use it when:** the underlying marketing decision is already made and you want a clearer, tighter, or better-organized version of the existing copy.
+**Use it when:** the text already exists and you know what should change. Include the complete text and state any important constraints up front.
+
+Marketing Context is useful for repeated work, but ordinary editing does not require it.
 
 **Try:**
 
@@ -106,7 +95,7 @@ Requests to create or rethink positioning, an offer, an audience, campaign messa
 
 **What it does:** sets bounded editorial direction inside confirmed product and marketing inputs. It resolves available sources, asks one decision question only when necessary, creates an internal Editor Brief, delegates all text work to Editor, and reviews the result with at most one corrective pass.
 
-**Use it when:** you already have the source material and approved marketing strategy, but the reader focus, message emphasis, editorial angle, argument order, structure, or voice still needs chief-editor judgment. This skill starts only when you explicitly invoke it.
+**Use it when:** you already have the source material and approved marketing strategy, but the reader focus, message emphasis, editorial angle, argument order, structure, or voice still needs chief-editor judgment. Invoke Editor in Chief by name; the skill starts only when you explicitly invoke it.
 
 **Try:**
 
@@ -121,105 +110,118 @@ Editor in Chief does not create market research, segmentation, pricing, position
 
 </details>
 
+<details>
+<summary><strong>Update</strong></summary>
+
+**What it does:** installs the latest Marketing Skills in every app where you use them. It does not change skills from other collections.
+
+**Use it when:** you want fixes and new capabilities. If the collection includes new skills, you decide whether to install them.
+
+**Try:**
+
+```text
+Update Marketing Skills.
+```
+
+See [Update](#update) for details.
+
+</details>
+
 ## Install
 
-### Recommended project installation
+The same `npx skills` installer works with the supported clients below. This repository no longer uses separate client plugins, rules, or manual-copy installers.
 
-Run this command from the project where you want the skills:
+<p>
+  <img src="./assets/codex.webp" alt="Codex" width="16" height="16"> Codex &nbsp;&nbsp;
+  <img src="./assets/claude.webp" alt="Claude Code" width="16" height="16"> Claude Code &nbsp;&nbsp;
+  <img src="./assets/cursor.webp" alt="Cursor" width="16" height="16"> Cursor &nbsp;&nbsp;
+  <img src="./assets/antigravity.webp" alt="Antigravity" width="16" height="16"> Antigravity
+</p>
+
+<details open>
+<summary><strong>Install globally with npx skills</strong></summary>
+
+Run from any directory:
+
+```bash
+npx skills@latest add ztemerbekov/marketing-skills -g
+```
+
+The installer shows the available skills and detected AI clients. Select the clients you already use and choose the skills you want; installing the complete collection is recommended.
+
+If the terminal says it cannot find `npx`, install [Node.js](https://nodejs.org/en/download), reopen the terminal, and run the command again.
+
+</details>
+
+<details>
+<summary><strong>Install only in the current project</strong></summary>
+
+Open a terminal in the project and omit `-g`:
 
 ```bash
 npx skills@latest add ztemerbekov/marketing-skills
 ```
 
-It installs all current skills into the project using the cross-agent convention. Use one of the alternatives below only when you prefer a client-native installation or your client needs its adapter.
-
-<details>
-<summary><img src="./assets/codex.webp" alt="Codex" width="16" height="16"> <strong>Codex: install from GitHub</strong></summary>
-
-```bash
-python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo ztemerbekov/marketing-skills \
-  --path skills/a1-setup-marketing-context skills/a1-editor skills/a1-editor-in-chief
-```
-
-Restart Codex after installation.
+Use this when the project must carry its own skill versions. Otherwise prefer the global installation.
 
 </details>
 
 <details>
-<summary><img src="./assets/claude.webp" alt="Claude Code" width="16" height="16"> <strong>Claude Code: install as a plugin</strong></summary>
+<summary><strong>Remove Marketing Skills</strong></summary>
+
+Remove the current global collection from every connected client:
+
+```bash
+npx skills@latest remove \
+  a1-editor \
+  a1-editor-in-chief \
+  a1-marketing-context \
+  a1-update \
+  --global \
+  --yes
+```
+
+</details>
+
+## Update
+
+<details>
+<summary><strong>Moving from the previous skill names</strong></summary>
+
+If you installed Marketing Skills before the names changed, remove the two previous skills and install the current collection:
+
+```bash
+npx skills@latest remove \
+  a1-setup-marketing-context \
+  a1-update-marketing-skills \
+  --global \
+  --yes
+npx skills@latest add ztemerbekov/marketing-skills -g
+```
+
+For a project-only installation, run both commands in that project, omit `--global` from the removal command, and omit `-g` from the installation command.
+
+</details>
+
+The easiest way to update is to ask your AI agent:
 
 ```text
-/plugin marketplace add ztemerbekov/marketing-skills
-/plugin install marketing-skills
+Update Marketing Skills.
 ```
 
-To install only the editorial team bundle:
+Here is what happens:
 
-```text
-/plugin install editorial-team
-```
+- installed Marketing Skills are updated in every app where you use them;
+- skills that are no longer part of the collection are removed automatically;
+- if new skills are available, the agent shows them and asks which ones to install;
+- skills from other collections do not change;
+- manual changes inside installed skill files are lost.
 
-</details>
-
-<details>
-<summary><img src="./assets/cursor.webp" alt="Cursor" width="16" height="16"> <strong>Cursor: copy the skills and Cursor rule</strong></summary>
-
-Clone this repository, open a terminal in its root, set the target project path, and run:
+You can also update from the terminal. Run the installation command again and select the skills and apps you want to update:
 
 ```bash
-TARGET_PROJECT=/path/to/your/project
-mkdir -p "$TARGET_PROJECT/.cursor/rules" "$TARGET_PROJECT/skills"
-cp -R skills/a1-* "$TARGET_PROJECT/skills/"
-cp .cursor/rules/marketing-skills.mdc "$TARGET_PROJECT/.cursor/rules/"
+npx skills@latest add ztemerbekov/marketing-skills -g
 ```
-
-</details>
-
-<details>
-<summary><img src="./assets/antigravity.webp" alt="Antigravity" width="16" height="16"> <strong>Antigravity: copy skills into the project</strong></summary>
-
-Clone this repository, open a terminal in its root, set the target project path, and run:
-
-```bash
-TARGET_PROJECT=/path/to/your/project
-mkdir -p "$TARGET_PROJECT/.agents/skills"
-cp -R skills/a1-* "$TARGET_PROJECT/.agents/skills/"
-```
-
-</details>
-
-<details>
-<summary>🗑️ <strong>Remove installed skills</strong></summary>
-
-Remove a project installation:
-
-```bash
-rm -rf .agents/skills/a1-setup-marketing-context \
-       .agents/skills/a1-editor \
-       .agents/skills/a1-editor-in-chief \
-       .claude/skills/a1-setup-marketing-context \
-       .claude/skills/a1-editor \
-       .claude/skills/a1-editor-in-chief
-```
-
-Remove a global Codex installation:
-
-```bash
-rm -rf ~/.codex/skills/a1-setup-marketing-context \
-       ~/.codex/skills/a1-editor \
-       ~/.codex/skills/a1-editor-in-chief
-```
-
-</details>
-
-## Use the skills
-
-- Write requests in the language you normally use. The skills answer in that language by default and preserve the language of the supplied copy.
-- Give Editor the complete text and a concrete intent such as “shorten,” “clarify,” “strengthen,” or “restructure.”
-- State important constraints directly: preserve the numbers, keep the voice, keep the structure, or return only the edited text.
-- Explicitly ask Marketing Context to save confirmed reusable information in the current repository. It never writes merely because context is missing, and missing context does not block an ordinary edit.
-- Invoke Editor in Chief by name when you want the assignment clarified before editing.
 
 ## Help and feedback
 

@@ -7,7 +7,7 @@ Marketing Skills keeps user documentation separate from maintainer documentation
 1. Read [AGENTS.md](AGENTS.md) for the repository rules.
 2. Work from a GitHub issue with a clear scope and acceptance criteria.
 3. Check the current Git status and preserve unrelated work.
-4. Treat `skills/` as the canonical runtime. Platform adapters and generated files must not become the source of truth.
+4. Treat `skills/` as the canonical runtime. Public installation and updates use `npx skills`; do not create client-specific copies as alternate sources of truth.
 
 When installation, skill inventory, platform support, or user-facing behavior changes, update `README.md` and `README.ru.md` together.
 
@@ -20,10 +20,10 @@ When installation, skill inventory, platform support, or user-facing behavior ch
 
 ## Validate
 
-If the skill inventory, README tables, or Claude plugin metadata may have changed, synchronize them:
+If the skill inventory or README tables may have changed, synchronize them:
 
 ```bash
-node scripts/sync-readme-and-plugin.js
+node scripts/sync-readmes.js
 ```
 
 Run the full repository validation before committing:

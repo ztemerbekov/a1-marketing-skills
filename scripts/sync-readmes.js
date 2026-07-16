@@ -4,19 +4,18 @@ const fs = require("fs");
 const path = require("path");
 
 const skillsDir = "skills";
-const pluginFile = ".claude-plugin/plugin.json";
-const marketplaceFile = ".claude-plugin/marketplace.json";
 const skillOrder = [
-  "a1-setup-marketing-context",
   "a1-editor",
   "a1-editor-in-chief",
+  "a1-marketing-context",
+  "a1-update",
 ];
 const readmes = [
   {
     file: "README.md",
     columns: ["Skill", "Best for"],
     copy: {
-      "a1-setup-marketing-context": {
+      "a1-marketing-context": {
         title: "Marketing Context",
         summary:
           "Creating or incrementally updating one repository-local context from confirmed marketing information.",
@@ -24,12 +23,17 @@ const readmes = [
       "a1-editor": {
         title: "Editor",
         summary:
-          "Improving existing text immediately: edit, shorten, clarify, strengthen, or restructure without inventing facts.",
+          "Improve existing text: shorten, clarify, strengthen, or restructure it without inventing facts.",
       },
       "a1-editor-in-chief": {
         title: "Editor in Chief",
         summary:
           "Turning a confirmed editorial assignment into a reviewed edit without creating general marketing strategy.",
+      },
+      "a1-update": {
+        title: "Update",
+        summary:
+          "Update only Marketing Skills and decide separately whether to install new skills from the collection.",
       },
     },
   },
@@ -37,7 +41,7 @@ const readmes = [
     file: "README.ru.md",
     columns: ["Навык", "Когда использовать"],
     copy: {
-      "a1-setup-marketing-context": {
+      "a1-marketing-context": {
         title: "Маркетинговый контекст",
         summary:
           "Создать или пошагово обновить один контекст репозитория из подтверждённых маркетинговых сведений.",
@@ -45,12 +49,17 @@ const readmes = [
       "a1-editor": {
         title: "Редактор",
         summary:
-          "Сразу улучшить готовый текст: отредактировать, сократить, прояснить, усилить или перестроить без выдуманных фактов.",
+          "Улучшить готовый текст: сократить, прояснить, усилить или перестроить, не добавляя выдуманных фактов.",
       },
       "a1-editor-in-chief": {
         title: "Шеф-редактор",
         summary:
           "Превратить подтверждённую редакционную задачу в проверенный текст без разработки общей маркетинговой стратегии.",
+      },
+      "a1-update": {
+        title: "Обновление",
+        summary:
+          "Обновить только Marketing Skills и отдельно решить, устанавливать ли новые навыки из набора.",
       },
     },
   },
@@ -63,8 +72,7 @@ function parseFrontmatter(content) {
   const result = {};
   for (const line of match[1].split("\n")) {
     const index = line.indexOf(":");
-    if (index === -1) continue;
-    if (/^\s/.test(line)) continue;
+    if (index === -1 || /^\s/.test(line)) continue;
     const key = line.slice(0, index).trim();
     let value = line.slice(index + 1).trim();
     if (
@@ -120,7 +128,7 @@ function syncReadme(skills, readme) {
     "|-------|----------|",
     ...skills.map((skill) => {
       const copy = readme.copy[skill.name];
-      return `| [${copy.title}](skills/${skill.dir}/) (\`${skill.name}\`) | ${copy.summary} |`;
+      return `| [${copy.title}](skills/${skill.dir}/)<br>\`${skill.name}\` | ${copy.summary} |`;
     }),
   ].join("\n");
 
@@ -130,10 +138,7 @@ function syncReadme(skills, readme) {
     throw new Error(`${readme.file} is missing the generated skill inventory`);
   }
 
-  const next = content.replace(
-    inventoryPattern,
-    `$1${table}$2`,
-  );
+  const next = content.replace(inventoryPattern, `$1${table}$2`);
 
   if (next !== content) {
     fs.writeFileSync(readme.file, next);
@@ -142,48 +147,15 @@ function syncReadme(skills, readme) {
   return false;
 }
 
-function syncPlugin(skills) {
-  let updated = false;
-
-  if (fs.existsSync(pluginFile) && fs.existsSync(marketplaceFile)) {
-    const plugin = JSON.parse(fs.readFileSync(pluginFile, "utf8"));
-    const marketplace = JSON.parse(fs.readFileSync(marketplaceFile, "utf8"));
-    const version = marketplace.metadata && marketplace.metadata.version;
-
-    if (version && plugin.version !== version) {
-      plugin.version = version;
-      fs.writeFileSync(pluginFile, `${JSON.stringify(plugin, null, 2)}\n`);
-      updated = true;
-    }
-
-    const marketplacePlugin = marketplace.plugins && marketplace.plugins[0];
-    if (marketplacePlugin) {
-      const nextDescription = marketplacePlugin.description.replace(
-        /^\d+ marketing skills/,
-        `${skills.length} marketing skills`,
-      );
-      if (marketplacePlugin.description !== nextDescription) {
-        marketplacePlugin.description = nextDescription;
-        fs.writeFileSync(marketplaceFile, `${JSON.stringify(marketplace, null, 2)}\n`);
-        updated = true;
-      }
-    }
-  }
-
-  return updated;
-}
-
 const skills = getSkills();
 const updatedReadmes = readmes
   .filter((readme) => syncReadme(skills, readme))
   .map((readme) => readme.file);
-const pluginUpdated = syncPlugin(skills);
 
-if (updatedReadmes.length === 0 && !pluginUpdated) {
-  console.log("Everything is already in sync");
+if (updatedReadmes.length === 0) {
+  console.log("README skill inventories are already in sync");
 } else {
   for (const readme of updatedReadmes) {
     console.log(`Updated ${readme} skills table`);
   }
-  if (pluginUpdated) console.log("Updated Claude plugin metadata");
 }

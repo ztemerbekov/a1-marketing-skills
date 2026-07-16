@@ -1,5 +1,5 @@
 ---
-name: a1-setup-marketing-context
+name: a1-marketing-context
 description: 'Create or incrementally update one public marketing context for the current repository from confirmed information. Use when the user explicitly asks to set up marketing context, remember a tone of voice, save approved product or audience facts, update positioning, or maintain reusable marketing inputs. Ordinary explicit requests use Auto-draft; an interview starts only when explicitly requested. Never write after installation, project opening, a generic marketing mention, or another skill finding no context, and never create or evaluate hypotheses.'
 metadata:
   version: "0.1.0"

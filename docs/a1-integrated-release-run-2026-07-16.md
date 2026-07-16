@@ -1,6 +1,6 @@
 # A1 Integrated Release Run — 2026-07-16
 
-This record is the semantic release gate for GitHub Issue #10. It certifies `a1-editor-in-chief` and `a1-setup-marketing-context` together with the required `a1-editor` dependency.
+This record is the semantic release gate for GitHub Issue #10. It certifies `a1-editor-in-chief` and `a1-marketing-context` together with the required `a1-editor` dependency.
 
 ## Verdict
 
@@ -18,11 +18,11 @@ This record is the semantic release gate for GitHub Issue #10. It certifies `a1-
 - Run date: `2026-07-16`
 - Repository base commit: `a2a3442` (`refactor: make marketing context setup incremental (#9)`)
 - Certification revision: the Issue #10 commit containing this record; its hash is reported in the release handoff, while the exact pre-commit candidate content is pinned by the digests below.
-- Candidate sources: `skills/a1-editor-in-chief/`, `skills/a1-setup-marketing-context/`, and required dependency `skills/a1-editor/`
+- Candidate sources: `skills/a1-editor-in-chief/`, `skills/a1-marketing-context/`, and required dependency `skills/a1-editor/`
 - Chief directory digest: `0c7c69e6d55f9471a574ad27b057040cd17b9c3808c6302bad0f8acdf640966c`
-- Marketing Context directory digest: `839d036ddbfcfe10805e9c4ed441d377ffa4cf62986e1308b48cdd7e54249d24`
+- Marketing Context directory digest: `0f46b0e46710ba123391faafa7d7e3097374f80e33a0d9eac701fc8339808481`
 - Editor directory digest: `6ab1b723d8816991fdc3f93741df0b818f35da9600fa2ade2327ff4f230e68d2`
-- Combined candidate digest: `3339cb0814836dee59d27aa7d86fec0c27f4297a98cb49210b47fa3b7c09005f`
+- Combined candidate digest: `b95ff6f67f43d5a7dfb48bfd6ca36e6f4d51d0df5b66296b3bbd6b8961e5114a`
 - Digest method: SHA-256 over every sorted repository-relative candidate path, a NUL separator, and that file's SHA-256
 - Preliminary reviewer: Codex criteria review in the current task
 - Human reviewer: `ztemerbekov`, confirmed `PASS` on `2026-07-16`
@@ -41,6 +41,8 @@ Under that fallback:
 - case `chief-dependency-001` intentionally removed Editor from its case harness; every other Chief case loaded the required Editor dependency.
 
 Structural validation alone is not used as semantic evidence. Every exact instruction and input came from its linked case without paraphrasing. The complete current Chief outputs are recorded below. Marketing Context's runtime directory is byte-identical to the candidate already recorded in the complete Issue #9 run, so its exact outputs and write traces remain single-sourced there and are linked case by case below; every case was replayed against the same runtime content.
+
+The later merge with `main` renamed the canonical context directory and frontmatter identifier to `a1-marketing-context` and added UI-only `agents/openai.yaml` metadata. Runtime instructions, references, and evaluated behavior remain unchanged apart from identifier/path substitutions. The merged candidate was rechecked by direct copy, relative-link validation, repository validation, and review; the digests above pin that merged form.
 
 ## Domain Boundary Reassessment
 
@@ -379,13 +381,13 @@ The Chief suite additionally proves that Chief verifies the Editor dependency, d
 - `README.md` and `README.ru.md` contain aligned natural setup, point-update, and explicit Interview examples.
 - Both READMEs state repository isolation, passive no-write behavior, partial validity, and hypothesis exclusion.
 - Both READMEs describe explicit Chief invocation and the research, segmentation, positioning, pricing, offer, GTM, and architecture boundary.
-- Platform adapters remain pointers to canonical skills and do not redefine runtime behavior.
+- Client-specific platform adapters remain removed; canonical skills are distributed with `npx skills`.
 
 ## Repository Evidence
 
-- Temporary direct-copy installation and self-contained link check: `PASS` — all three copies were byte-identical to their sources and every internal relative link resolved under `/tmp/a1-integrated-install.r6PTnI`.
-- `./scripts/validate-skills.sh`: `PASS` — 3 skills, 98 contract artifacts, 0 warnings, 0 failures.
-- `node scripts/sync-readme-and-plugin.js`: `PASS` — everything is in sync.
+- Temporary direct-copy installation and self-contained link check: `PASS` — all three copies were byte-identical to their sources and every internal relative link resolved under `/tmp/a1-integrated-install.Kyvap3`.
+- `./scripts/validate-skills.sh`: `PASS` — 4 skills, 113 contract artifacts, 0 warnings, 0 failures.
+- `node scripts/sync-readmes.js`: `PASS` — everything is in sync.
 - Shell syntax, Markdown links, diff hygiene: `PASS`.
 - Standards review: `PASS` — independent final review reported no findings.
 - Spec review: `PASS` — independent final review reported no findings.

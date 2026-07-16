@@ -39,11 +39,11 @@ This is the separate completion-checklist record for the integrated Issue #10 ca
 
 ## Self-Contained Runtime
 
-- [x] Canonical runtime files and relative references live inside `skills/a1-setup-marketing-context/`.
+- [x] Canonical runtime files and relative references live inside `skills/a1-marketing-context/`.
 - [x] The only write target is current-repository `.agents/marketing-context.md`; migration is explicit and lossless.
 - [x] No global, private, last-used, previous-project, fallback-write, or `CONTEXT-MAP.md` state is created.
 - [x] Temporary direct-copy installation contains all three skills and every internal relative link resolves inside the copied directories.
-- [x] Platform adapters remain pointers rather than alternate runtime authorities.
+- [x] Client-specific platform adapters remain removed; canonical skills are distributed with `npx skills`.
 
 ## Criteria-Based Evaluation
 
@@ -66,8 +66,8 @@ This is the separate completion-checklist record for the integrated Issue #10 ca
 ## Repository Verification
 
 - [x] Temporary direct-copy installation and relative links.
-- [x] English/Russian documentation parity and plugin synchronization.
-- [x] Repository validator and focused syntax checks: 3 skills, 98 artifacts, 0 warnings, 0 failures.
+- [x] English/Russian documentation parity and README inventory synchronization.
+- [x] Repository validator and focused syntax checks: 4 skills, 113 artifacts, 0 warnings, 0 failures.
 - [x] Markdown links and diff hygiene.
 - [x] Independent Standards and Spec reviews completed with no findings.
 

@@ -25,7 +25,7 @@ No save, remember, setup, update, or interview request is present.
 
 ## Must Change
 
-- [ ] Keep `a1-setup-marketing-context` uninvoked across installation, project opening, the generic marketing mention, and Editor's missing-context observation.
+- [ ] Keep `a1-marketing-context` uninvoked across installation, project opening, the generic marketing mention, and Editor's missing-context observation.
 
 ## Must Preserve
 

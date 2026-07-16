@@ -321,7 +321,7 @@ A1 Editor редактирует готовый текст, но не проек
 
 ## Repository Evidence
 
-- README and plugin synchronization: `PASS` — `node scripts/sync-readme-and-plugin.js` reported everything in sync.
+- README inventory synchronization: `PASS` — `node scripts/sync-readmes.js` reported everything in sync.
 - Structural validation: `PASS` — 3 skills, 63 contract artifacts, 0 warnings, 0 failures.
 - Shell syntax, diff hygiene, and link integrity: `PASS`.
 - Standards and spec review: `PASS` — final independent reviews reported no findings after the two correction rounds.

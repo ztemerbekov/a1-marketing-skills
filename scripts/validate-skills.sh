@@ -12,6 +12,7 @@ context_run_report="docs/a1-marketing-context-run-2026-07-16.md"
 integrated_run_report="docs/a1-integrated-release-run-2026-07-16.md"
 chief_completion_report="docs/a1-editor-in-chief-completion-2026-07-16.md"
 context_completion_report="docs/a1-marketing-context-completion-2026-07-16.md"
+update_certification_report="docs/a1-update-certification.md"
 
 echo "Validating A1 design contract artifacts"
 echo
@@ -67,24 +68,24 @@ chief_integration_eval_cases=(
 )
 
 context_eval_cases=(
-  "skills/a1-setup-marketing-context/evals/cases/context-natural-invocation-001.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-passive-noop-002.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-direct-update-003.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-interview-explicit-004.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-interview-limit-005.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-interview-stop-006.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-sparse-repo-007.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-partial-file-008.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-no-hypotheses-009.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-merge-preservation-010.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-conflict-011.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-repository-isolation-012.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-protected-facts-013.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-output-shape-014.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-language-015.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-mixed-hypothesis-016.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-legacy-migration-021.md"
-  "skills/a1-setup-marketing-context/evals/cases/context-interview-empty-stop-022.md"
+  "skills/a1-marketing-context/evals/cases/context-natural-invocation-001.md"
+  "skills/a1-marketing-context/evals/cases/context-passive-noop-002.md"
+  "skills/a1-marketing-context/evals/cases/context-direct-update-003.md"
+  "skills/a1-marketing-context/evals/cases/context-interview-explicit-004.md"
+  "skills/a1-marketing-context/evals/cases/context-interview-limit-005.md"
+  "skills/a1-marketing-context/evals/cases/context-interview-stop-006.md"
+  "skills/a1-marketing-context/evals/cases/context-sparse-repo-007.md"
+  "skills/a1-marketing-context/evals/cases/context-partial-file-008.md"
+  "skills/a1-marketing-context/evals/cases/context-no-hypotheses-009.md"
+  "skills/a1-marketing-context/evals/cases/context-merge-preservation-010.md"
+  "skills/a1-marketing-context/evals/cases/context-conflict-011.md"
+  "skills/a1-marketing-context/evals/cases/context-repository-isolation-012.md"
+  "skills/a1-marketing-context/evals/cases/context-protected-facts-013.md"
+  "skills/a1-marketing-context/evals/cases/context-output-shape-014.md"
+  "skills/a1-marketing-context/evals/cases/context-language-015.md"
+  "skills/a1-marketing-context/evals/cases/context-mixed-hypothesis-016.md"
+  "skills/a1-marketing-context/evals/cases/context-legacy-migration-021.md"
+  "skills/a1-marketing-context/evals/cases/context-interview-empty-stop-022.md"
 )
 
 context_consumer_eval_cases=(
@@ -98,12 +99,21 @@ release_chief_eval_cases=(
   "skills/a1-editor-in-chief/evals/cases/chief-context-isolation-013.md"
 )
 
+update_eval_cases=(
+  "skills/a1-update/evals/cases/update-existing-001.md"
+  "skills/a1-update/evals/cases/update-deleted-001.md"
+  "skills/a1-update/evals/cases/update-new-001.md"
+  "skills/a1-update/evals/cases/update-explain-001.md"
+  "skills/a1-update/evals/cases/update-prerequisite-001.md"
+  "skills/a1-update/evals/cases/update-upstream-failure-001.md"
+)
+
 required_artifacts=(
   "AGENTS.md"
   "README.md"
   "README.ru.md"
   "CONTRIBUTING.md"
-  ".cursor/rules/marketing-skills.mdc"
+  "scripts/test-update-lock-helper.mjs"
   "docs/maintainers/README.md"
   "docs/a1-skill-design-contract.md"
   "docs/a1-skill-completion-checklist.md"
@@ -122,14 +132,15 @@ required_artifacts=(
   "$integrated_run_report"
   "$chief_completion_report"
   "$context_completion_report"
-  "skills/a1-setup-marketing-context/evals/README.md"
-  "skills/a1-setup-marketing-context/evals/case-template.md"
-  "skills/a1-setup-marketing-context/references/context-spine.md"
-  "skills/a1-setup-marketing-context/references/invocation-and-scope.md"
-  "skills/a1-setup-marketing-context/references/source-policy.md"
-  "skills/a1-setup-marketing-context/references/context-schema.md"
-  "skills/a1-setup-marketing-context/references/merge-and-conflicts.md"
-  "skills/a1-setup-marketing-context/references/interview.md"
+  "$update_certification_report"
+  "skills/a1-marketing-context/evals/README.md"
+  "skills/a1-marketing-context/evals/case-template.md"
+  "skills/a1-marketing-context/references/context-spine.md"
+  "skills/a1-marketing-context/references/invocation-and-scope.md"
+  "skills/a1-marketing-context/references/source-policy.md"
+  "skills/a1-marketing-context/references/context-schema.md"
+  "skills/a1-marketing-context/references/merge-and-conflicts.md"
+  "skills/a1-marketing-context/references/interview.md"
   "skills/a1-editor-in-chief/evals/README.md"
   "skills/a1-editor-in-chief/evals/case-template.md"
   "skills/a1-editor-in-chief/references/chief-scope.md"
@@ -139,12 +150,21 @@ required_artifacts=(
   "skills/a1-editor-in-chief/references/editorial-diagnosis.md"
   "skills/a1-editor-in-chief/references/editor-brief.md"
   "skills/a1-editor-in-chief/references/chief-review.md"
+  "skills/a1-editor/evals/cases/editor-chief-handoff-009.md"
+  "skills/a1-update/SKILL.md"
+  "skills/a1-update/agents/openai.yaml"
+  "skills/a1-update/references/npx-workflow.md"
+  "skills/a1-update/references/runtime-prerequisites.md"
+  "skills/a1-update/scripts/prune-lock.mjs"
+  "skills/a1-update/evals/README.md"
+  "skills/a1-update/evals/case-template.md"
+  "skills/a1-marketing-context/agents/openai.yaml"
   "${editor_eval_cases[@]}"
   "${chief_eval_cases[@]}"
-  "skills/a1-editor/evals/cases/editor-chief-handoff-009.md"
   "${context_eval_cases[@]}"
   "${context_consumer_eval_cases[@]}"
   "${release_chief_eval_cases[@]}"
+  "${update_eval_cases[@]}"
 )
 
 for artifact in "${required_artifacts[@]}"; do
@@ -157,6 +177,56 @@ for artifact in "${required_artifacts[@]}"; do
     issues=$((issues + 1))
   fi
 done
+
+echo
+echo "Testing updater lock helper"
+if node scripts/test-update-lock-helper.mjs; then
+  :
+else
+  echo "FAIL scripts/test-update-lock-helper.mjs"
+  echo "  Updater lock helper fixtures failed"
+  issues=$((issues + 1))
+fi
+
+removed_adapters=(
+  ".claude-plugin"
+  ".cursor/rules"
+)
+
+for adapter in "${removed_adapters[@]}"; do
+  if [[ -e "$adapter" ]]; then
+    echo "FAIL $adapter"
+    echo "  Client-specific adapters must remain removed; distribute with npx skills"
+    issues=$((issues + 1))
+  fi
+done
+
+legacy_skill_dirs=(
+  "skills/a1-setup-marketing-context"
+  "skills/a1-update-marketing-skills"
+)
+
+for legacy_skill_dir in "${legacy_skill_dirs[@]}"; do
+  if [[ -e "$legacy_skill_dir" ]]; then
+    echo "FAIL $legacy_skill_dir"
+    echo "  Legacy skill aliases must not remain installable"
+    issues=$((issues + 1))
+  fi
+done
+
+legacy_skill_references="$(
+  grep -RIlE \
+    --exclude="validate-skills.sh" \
+    'a1-setup-marketing-context|a1-update-marketing-skills' \
+    AGENTS.md CONTRIBUTING.md docs skills scripts || true
+)"
+
+if [[ -n "$legacy_skill_references" ]]; then
+  echo "FAIL legacy skill references"
+  echo "  Previous identifiers may appear only in README migration instructions and validator assertions"
+  echo "$legacy_skill_references"
+  issues=$((issues + 1))
+fi
 
 require_text() {
   local file="$1"
@@ -185,6 +255,7 @@ forbid_text() {
 require_text "AGENTS.md" "docs/a1-skill-design-contract.md" "AGENTS.md must require the canonical A1 skill design contract"
 require_text "AGENTS.md" "docs/a1-skill-completion-checklist.md" "AGENTS.md must require the reusable A1 completion checklist"
 require_text "AGENTS.md" "CONTEXT-MAP.md" "AGENTS.md must require domain-boundary reassessment for new skills"
+require_text "AGENTS.md" 'agents/openai.yaml' "AGENTS.md must document the accepted UI metadata extension"
 require_text "docs/a1-skill-design-contract.md" "a1-skill-completion-checklist.md" "The design contract must route maintainers to the completion checklist"
 require_text "docs/a1-skill-design-contract.md" "### Scope before helpfulness" "The design contract must classify scope before other work"
 require_text "docs/a1-skill-design-contract.md" "Reject a mixed-job request before doing either part" "The design contract must forbid partial mixed-job execution"
@@ -208,9 +279,19 @@ require_text "README.ru.md" "## Какой навык выбрать" "README.ru
 require_text "README.md" "<summary><strong>Marketing Context</strong></summary>" "README.md must explain Marketing Context in a user-facing disclosure"
 require_text "README.md" "<summary><strong>Editor</strong></summary>" "README.md must explain Editor in a user-facing disclosure"
 require_text "README.md" "<summary><strong>Editor in Chief</strong></summary>" "README.md must explain Editor in Chief in a user-facing disclosure"
+require_text "README.md" "<summary><strong>Update</strong></summary>" "README.md must explain the updater in a user-facing disclosure"
 require_text "README.ru.md" "<summary><strong>Маркетинговый контекст</strong></summary>" "README.ru.md must explain Marketing Context in a Russian disclosure"
 require_text "README.ru.md" "<summary><strong>Редактор</strong></summary>" "README.ru.md must explain Editor in a Russian disclosure"
 require_text "README.ru.md" "<summary><strong>Шеф-редактор</strong></summary>" "README.ru.md must explain Editor in Chief in a Russian disclosure"
+require_text "README.ru.md" "<summary><strong>Обновление</strong></summary>" "README.ru.md must explain the updater in a Russian disclosure"
+require_text "README.md" "## Update" "README.md must include user-facing update instructions"
+require_text "README.ru.md" "## Обновление" "README.ru.md must include Russian update instructions"
+require_text "README.md" "npx skills@latest add ztemerbekov/marketing-skills -g" "README.md must use the canonical global npx installer"
+require_text "README.ru.md" "npx skills@latest add ztemerbekov/marketing-skills -g" "README.ru.md must use the canonical global npx installer"
+require_text "README.md" "a1-setup-marketing-context" "README.md must keep the permanent migration path from the previous context skill name"
+require_text "README.md" "a1-update-marketing-skills" "README.md must keep the permanent migration path from the previous updater name"
+require_text "README.ru.md" "a1-setup-marketing-context" "README.ru.md must keep the permanent migration path from the previous context skill name"
+require_text "README.ru.md" "a1-update-marketing-skills" "README.ru.md must keep the permanent migration path from the previous updater name"
 require_text "README.md" "CONTRIBUTING.md" "README.md must end with a concise contributor entry point"
 require_text "README.ru.md" "CONTRIBUTING.md" "README.ru.md must end with a concise contributor entry point"
 require_text "README.md" "z.temerbekov@gmail.com" "README.md must include the feedback address"
@@ -237,8 +318,16 @@ forbid_text "README.ru.md" "## Поддержка платформ" "README.ru.m
 forbid_text "README.ru.md" "## Философия совместимости" "README.ru.md must keep compatibility policy out of the user flow"
 forbid_text "README.ru.md" "## Разработка" "README.ru.md must keep maintainer workflow out of the user flow"
 forbid_text "README.ru.md" "### Завершение и сертификация" "README.ru.md must keep certification details out of the user flow"
+forbid_text "README.md" "skill-installer" "README.md must not document the legacy Codex installer"
+forbid_text "README.ru.md" "skill-installer" "README.ru.md must not document the legacy Codex installer"
+forbid_text "README.md" "/plugin marketplace" "README.md must not document the removed Claude plugin"
+forbid_text "README.ru.md" "/plugin marketplace" "README.ru.md must not document the removed Claude plugin"
+forbid_text "README.md" ".cursor/rules" "README.md must not document the removed Cursor adapter"
+forbid_text "README.ru.md" ".cursor/rules" "README.ru.md must not document the removed Cursor adapter"
+forbid_text "README.md" "cp -R skills/" "README.md must not require manual skill copying"
+forbid_text "README.ru.md" "cp -R skills/" "README.ru.md must not require manual skill copying"
 require_text "CONTRIBUTING.md" "docs/maintainers/README.md" "CONTRIBUTING.md must link the maintainer documentation index"
-require_text "CONTRIBUTING.md" "node scripts/sync-readme-and-plugin.js" "CONTRIBUTING.md must document metadata and README synchronization"
+require_text "CONTRIBUTING.md" "node scripts/sync-readmes.js" "CONTRIBUTING.md must document README inventory synchronization"
 require_text "CONTRIBUTING.md" "./scripts/validate-skills.sh" "CONTRIBUTING.md must document repository validation"
 require_text "CONTRIBUTING.md" "docs/a1-skill-completion-checklist.md" "CONTRIBUTING.md must link the reusable completion checklist"
 require_text "docs/maintainers/README.md" "../a1-skill-design-contract.md" "Maintainer index must link the canonical skill design contract"
@@ -250,37 +339,38 @@ require_text "docs/maintainers/README.md" "../a1-marketing-context-run-2026-07-1
 require_text "docs/maintainers/README.md" "../a1-integrated-release-run-2026-07-16.md" "Maintainer index must link the integrated release run"
 require_text "docs/maintainers/README.md" "../a1-editor-in-chief-completion-2026-07-16.md" "Maintainer index must link the Chief completion checklist"
 require_text "docs/maintainers/README.md" "../a1-marketing-context-completion-2026-07-16.md" "Maintainer index must link the Context completion checklist"
-require_text "scripts/sync-readme-and-plugin.js" 'file: "README.ru.md"' "README synchronization must cover the Russian skill inventory"
-require_text "skills/a1-setup-marketing-context/SKILL.md" "## Invocation Contract" "Marketing Context must define explicit natural invocation"
-require_text "skills/a1-setup-marketing-context/SKILL.md" "references/context-spine.md" "Marketing Context must use its invariant spine"
-require_text "skills/a1-setup-marketing-context/SKILL.md" 'Write only `.agents/marketing-context.md`' "Marketing Context must have one repository-local write target"
-require_text "skills/a1-setup-marketing-context/SKILL.md" "another skill reporting missing context is not write intent" "Marketing Context must forbid passive missing-context writes"
-require_text "skills/a1-setup-marketing-context/SKILL.md" "Do not create or maintain global state" "Marketing Context must forbid global and private profiles"
-require_text "skills/a1-setup-marketing-context/references/context-spine.md" "## 1. Classify Invocation and Scope" "Context spine must classify invocation and scope first"
-require_text "skills/a1-setup-marketing-context/references/invocation-and-scope.md" "## Passive No-op Boundary" "Context invocation must define passive no-op behavior"
-require_text "skills/a1-setup-marketing-context/references/invocation-and-scope.md" "## Explicit Interview Intent" "Context interview must require explicit intent"
-require_text "skills/a1-setup-marketing-context/references/invocation-and-scope.md" "Mixed-job behavior" "Context scope must reject mixed jobs"
-require_text "skills/a1-setup-marketing-context/references/source-policy.md" "## Hypothesis Exclusion" "Context source policy must exclude hypotheses"
-require_text "skills/a1-setup-marketing-context/references/source-policy.md" "finds no confirmed information at all" "Sparse Auto-draft must ask once instead of creating an empty file"
-require_text "skills/a1-setup-marketing-context/references/context-schema.md" "## Partial Files" "Context schema must accept partial files"
-require_text "skills/a1-setup-marketing-context/references/context-schema.md" "Overridable defaults" "Context schema must define defaults"
-require_text "skills/a1-setup-marketing-context/references/context-schema.md" "Protected inputs" "Context schema must define protected inputs"
-require_text "skills/a1-setup-marketing-context/references/context-schema.md" "Protected inputs in Product Facts, Claims and Evidence, and Explicit Prohibitions" "Generated context must identify its protected sections"
-require_text "skills/a1-setup-marketing-context/references/merge-and-conflicts.md" "change only those fields" "Direct context updates must be field-bounded"
-require_text "skills/a1-setup-marketing-context/references/merge-and-conflicts.md" "add confirmed missing information without replacing" "Auto-draft must preserve existing content"
-require_text "skills/a1-setup-marketing-context/references/merge-and-conflicts.md" "make no file or directory change" "Material conflicts must stop context writes"
-require_text "skills/a1-setup-marketing-context/references/merge-and-conflicts.md" "do not add a mandatory preview" "Explicit safe context requests must not require preview"
-require_text "skills/a1-setup-marketing-context/references/merge-and-conflicts.md" "## Legacy Migration" "Context setup must handle repository-local legacy contexts safely"
-require_text "skills/a1-setup-marketing-context/references/merge-and-conflicts.md" "remove the authorized legacy source" "Legacy migration must leave one public context"
-require_text "skills/a1-setup-marketing-context/references/merge-and-conflicts.md" "name the legacy headings actually retained" "Migrated contexts must remain self-describing"
-require_text "skills/a1-setup-marketing-context/references/interview.md" "questions will arrive one at a time" "Interview must explain one-at-a-time questions"
-require_text "skills/a1-setup-marketing-context/references/interview.md" "Ask at most seven questions" "Interview must cap one pass at seven questions"
-require_text "skills/a1-setup-marketing-context/references/interview.md" "Save the confirmed answer immediately" "Interview must save partial progress incrementally"
-require_text "skills/a1-setup-marketing-context/references/interview.md" "new complete pass through the context spine" "Interview answers must preserve the invariant stage order"
-require_text "skills/a1-setup-marketing-context/references/context-spine.md" "explicit empty no-write patch" "Interview stop passes must traverse the invariant spine without a write"
-require_text "skills/a1-setup-marketing-context/references/context-spine.md" "empty-session stop receives its short zero-write close response" "Stage 7 must complete an immediate stop without nonexistent state"
-require_text "skills/a1-setup-marketing-context/references/interview.md" "No marketing context was created because no confirmed answers were saved" "Empty-session stop must have a zero-write close response"
-require_text "skills/a1-setup-marketing-context/SKILL.md" "sections safely saved across that current session" "Interview session confirmation must allow accumulated saved sections"
+require_text "docs/maintainers/README.md" "../a1-update-certification.md" "Maintainer index must link the updater certification record"
+require_text "scripts/sync-readmes.js" 'file: "README.ru.md"' "README synchronization must cover the Russian skill inventory"
+require_text "skills/a1-marketing-context/SKILL.md" "## Invocation Contract" "Marketing Context must define explicit natural invocation"
+require_text "skills/a1-marketing-context/SKILL.md" "references/context-spine.md" "Marketing Context must use its invariant spine"
+require_text "skills/a1-marketing-context/SKILL.md" 'Write only `.agents/marketing-context.md`' "Marketing Context must have one repository-local write target"
+require_text "skills/a1-marketing-context/SKILL.md" "another skill reporting missing context is not write intent" "Marketing Context must forbid passive missing-context writes"
+require_text "skills/a1-marketing-context/SKILL.md" "Do not create or maintain global state" "Marketing Context must forbid global and private profiles"
+require_text "skills/a1-marketing-context/references/context-spine.md" "## 1. Classify Invocation and Scope" "Context spine must classify invocation and scope first"
+require_text "skills/a1-marketing-context/references/invocation-and-scope.md" "## Passive No-op Boundary" "Context invocation must define passive no-op behavior"
+require_text "skills/a1-marketing-context/references/invocation-and-scope.md" "## Explicit Interview Intent" "Context interview must require explicit intent"
+require_text "skills/a1-marketing-context/references/invocation-and-scope.md" "Mixed-job behavior" "Context scope must reject mixed jobs"
+require_text "skills/a1-marketing-context/references/source-policy.md" "## Hypothesis Exclusion" "Context source policy must exclude hypotheses"
+require_text "skills/a1-marketing-context/references/source-policy.md" "finds no confirmed information at all" "Sparse Auto-draft must ask once instead of creating an empty file"
+require_text "skills/a1-marketing-context/references/context-schema.md" "## Partial Files" "Context schema must accept partial files"
+require_text "skills/a1-marketing-context/references/context-schema.md" "Overridable defaults" "Context schema must define defaults"
+require_text "skills/a1-marketing-context/references/context-schema.md" "Protected inputs" "Context schema must define protected inputs"
+require_text "skills/a1-marketing-context/references/context-schema.md" "Protected inputs in Product Facts, Claims and Evidence, and Explicit Prohibitions" "Generated context must identify its protected sections"
+require_text "skills/a1-marketing-context/references/merge-and-conflicts.md" "change only those fields" "Direct context updates must be field-bounded"
+require_text "skills/a1-marketing-context/references/merge-and-conflicts.md" "add confirmed missing information without replacing" "Auto-draft must preserve existing content"
+require_text "skills/a1-marketing-context/references/merge-and-conflicts.md" "make no file or directory change" "Material conflicts must stop context writes"
+require_text "skills/a1-marketing-context/references/merge-and-conflicts.md" "do not add a mandatory preview" "Explicit safe context requests must not require preview"
+require_text "skills/a1-marketing-context/references/merge-and-conflicts.md" "## Legacy Migration" "Context setup must handle repository-local legacy contexts safely"
+require_text "skills/a1-marketing-context/references/merge-and-conflicts.md" "remove the authorized legacy source" "Legacy migration must leave one public context"
+require_text "skills/a1-marketing-context/references/merge-and-conflicts.md" "name the legacy headings actually retained" "Migrated contexts must remain self-describing"
+require_text "skills/a1-marketing-context/references/interview.md" "questions will arrive one at a time" "Interview must explain one-at-a-time questions"
+require_text "skills/a1-marketing-context/references/interview.md" "Ask at most seven questions" "Interview must cap one pass at seven questions"
+require_text "skills/a1-marketing-context/references/interview.md" "Save the confirmed answer immediately" "Interview must save partial progress incrementally"
+require_text "skills/a1-marketing-context/references/interview.md" "new complete pass through the context spine" "Interview answers must preserve the invariant stage order"
+require_text "skills/a1-marketing-context/references/context-spine.md" "explicit empty no-write patch" "Interview stop passes must traverse the invariant spine without a write"
+require_text "skills/a1-marketing-context/references/context-spine.md" "empty-session stop receives its short zero-write close response" "Stage 7 must complete an immediate stop without nonexistent state"
+require_text "skills/a1-marketing-context/references/interview.md" "No marketing context was created because no confirmed answers were saved" "Empty-session stop must have a zero-write close response"
+require_text "skills/a1-marketing-context/SKILL.md" "sections safely saved across that current session" "Interview session confirmation must allow accumulated saved sections"
 require_text "skills/a1-editor/references/source-boundary.md" "Audience Defaults" "Editor must recognize overridable context defaults"
 require_text "skills/a1-editor/references/source-boundary.md" "Current instructions do not silently override protected inputs" "Editor must preserve or surface protected context conflicts"
 require_text "skills/a1-editor-in-chief/references/source-resolution.md" "override repository context defaults" "Chief must allow task-specific default overrides"
@@ -289,24 +379,26 @@ require_text "skills/a1-editor-in-chief/references/source-resolution.md" "Never 
 require_text "skills/a1-editor-in-chief/evals/README.md" "chief-context-isolation-013.md" "Chief suite must cover global and previous-project isolation"
 require_text "skills/a1-editor-in-chief/evals/cases/chief-context-isolation-013.md" "Last-used sentinel" "Chief isolation regression must define an observable previous-project sentinel"
 require_text "$integrated_run_report" "OUTSIDE-CURRENT-REPOSITORY CONTEXT ACCESSES -> 0" "Integrated isolation evidence must record zero outside-repository context discovery"
-require_text "skills/a1-setup-marketing-context/evals/README.md" "## Manual Run Protocol" "Context evals must define the semantic protocol"
-require_text "skills/a1-setup-marketing-context/evals/README.md" "one combined digest over every installed candidate directory" "Context integration protocol must pin every runtime candidate"
+require_text "skills/a1-marketing-context/evals/README.md" "## Manual Run Protocol" "Context evals must define the semantic protocol"
+require_text "skills/a1-marketing-context/evals/README.md" "one combined digest over every installed candidate directory" "Context integration protocol must pin every runtime candidate"
 require_text "skills/a1-editor/evals/README.md" "context-editor-default-override-017.md" "Editor must own its context-default integration regression"
 require_text "skills/a1-editor/evals/README.md" "context-editor-protected-conflict-018.md" "Editor must own its protected-context integration regression"
 require_text "skills/a1-editor-in-chief/evals/README.md" "context-chief-default-override-019.md" "Chief must own its context-default integration regression"
 require_text "skills/a1-editor-in-chief/evals/README.md" "context-chief-protected-conflict-020.md" "Chief must own its protected-context integration regression"
-require_text "$context_run_report" 'Candidate source: current `skills/a1-setup-marketing-context/`, `skills/a1-editor/`, and `skills/a1-editor-in-chief/`' "Context integration record must identify every runtime candidate"
+require_text "$context_run_report" 'Candidate source: current `skills/a1-marketing-context/`, `skills/a1-editor/`, and `skills/a1-editor-in-chief/`' "Context integration record must identify every runtime candidate"
 require_text "$context_run_report" "Combined candidate directory digest" "Context integration record must use a combined candidate digest"
 require_text "$context_run_report" "After Answer 6, write:" "Seven-question evidence must record every intermediate write and output"
 require_text "$context_run_report" "The stop pass traversed the explicit empty patch" "Interview stop evidence must record the final no-write pass"
 require_text "$context_run_report" 'Standards and spec review: `PASS`' "Context release record must capture completed independent review"
 require_text "$context_run_report" 'Semantic release gate: `PASS`' "Issue #9 semantic record must state a passing verdict"
 require_text "$context_run_report" 'Human reviewer: `ztemerbekov`' "Issue #9 semantic record must capture human judgment"
-require_text "skills/a1-setup-marketing-context/evals/cases/context-interview-empty-stop-022.md" "Do not link" "Immediate-stop regression must forbid a nonexistent context link"
-require_text "skills/a1-setup-marketing-context/evals/cases/context-natural-invocation-001.md" 'Scope Scenario: `In scope`' "Context evals must cover in-scope behavior"
-require_text "skills/a1-setup-marketing-context/evals/cases/context-no-hypotheses-009.md" 'Scope Scenario: `Out of scope`' "Context evals must cover out-of-scope behavior"
-require_text "skills/a1-setup-marketing-context/evals/cases/context-mixed-hypothesis-016.md" 'Scope Scenario: `Mixed job`' "Context evals must cover mixed-job behavior"
-require_text "skills/a1-setup-marketing-context/evals/cases/context-direct-update-003.md" 'Scope Scenario: `Completed external input`' "Context evals must cover completed external input"
+require_text "skills/a1-marketing-context/evals/cases/context-interview-empty-stop-022.md" "Do not link" "Immediate-stop regression must forbid a nonexistent context link"
+require_text "skills/a1-marketing-context/evals/cases/context-natural-invocation-001.md" 'Scope Scenario: `In scope`' "Context evals must cover in-scope behavior"
+require_text "skills/a1-marketing-context/evals/cases/context-no-hypotheses-009.md" 'Scope Scenario: `Out of scope`' "Context evals must cover out-of-scope behavior"
+require_text "skills/a1-marketing-context/evals/cases/context-mixed-hypothesis-016.md" 'Scope Scenario: `Mixed job`' "Context evals must cover mixed-job behavior"
+require_text "skills/a1-marketing-context/evals/cases/context-direct-update-003.md" 'Scope Scenario: `Completed external input`' "Context evals must cover completed external input"
+require_text "skills/a1-marketing-context/agents/openai.yaml" 'display_name: "A1 Marketing Context"' "Marketing Context must expose the agreed display name"
+require_text "skills/a1-update/agents/openai.yaml" 'display_name: "A1 Update"' "Update must expose the agreed display name"
 require_text "skills/a1-editor/evals/README.md" "## Case Format" "Editor eval docs must define the case format"
 require_text "skills/a1-editor/evals/README.md" "## Manual Run Protocol" "Editor eval docs must define the manual run protocol"
 require_text "skills/a1-editor/evals/README.md" "explicitly accepted constrained fallback" "Editor eval docs must define the policy-blocked fallback"
@@ -321,6 +413,12 @@ require_text "$certification_report" "Output-contract check" "Pilot certificatio
 require_text "$certification_report" "## Case Results" "Pilot certification must inventory every eval case"
 require_text "$certification_report" "## Remaining Limitations" "Pilot certification must disclose remaining limitations"
 require_text "$certification_report" "## Finalization Rule" "Pilot certification must prevent a false pass"
+require_text "$update_certification_report" "## Certification Status" "Updater certification must state its verdict"
+require_text "$update_certification_report" 'Status: `PENDING`' "Updater certification must not claim a semantic pass before the installed suite"
+require_text "$update_certification_report" "## Domain Boundary Decision" "Updater certification must record the domain-boundary reassessment"
+require_text "$update_certification_report" "## Case Results" "Updater certification must inventory every eval case"
+require_text "$update_certification_report" "## Remaining Limitations" "Updater certification must disclose remaining limitations"
+require_text "$update_certification_report" "## Finalization Rule" "Updater certification must prevent a false pass"
 require_text "skills/a1-editor/evals/case-template.md" "## Must Change" "Editor eval template must include Must Change criteria"
 require_text "skills/a1-editor/evals/case-template.md" "## Must Preserve" "Editor eval template must include Must Preserve criteria"
 require_text "skills/a1-editor/evals/case-template.md" "## Forbidden" "Editor eval template must include Forbidden criteria"
@@ -336,7 +434,6 @@ require_text "skills/a1-editor/references/operations.md" "Use the observable fun
 require_text "skills/a1-editor/references/information-style.md" "put the actionable sequence before supporting personal context" "Information Style runtime must foreground an actionable sequence before supporting personal context"
 require_text "skills/a1-editor/SKILL.md" "references/editor-spine.md" "A1 Editor must use the invariant editor spine"
 require_text "skills/a1-editor/SKILL.md" "safe strategy boundary" "A1 Editor invocation metadata must advertise its strategy boundary"
-require_text ".cursor/rules/marketing-skills.mdc" "bounded chief-editor workflow" "Cursor activation metadata must advertise the bounded chief workflow"
 require_text "skills/a1-editor/SKILL.md" "references/strategy-boundary.md" "A1 Editor must route strategic requests before the editing spine"
 require_text "skills/a1-editor/references/strategy-boundary.md" "## Strategic Requests" "Editor strategy boundary must identify strategic requests by meaning"
 require_text "skills/a1-editor/references/strategy-boundary.md" "## Completed-Strategy Chief Handoff" "Editor boundary must distinguish a bounded Chief handoff from strategy creation"
@@ -404,7 +501,18 @@ for obsolete_chief_file in \
   fi
 done
 
-for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}" "${chief_integration_eval_cases[@]}" "${context_eval_cases[@]}" "${context_consumer_eval_cases[@]}" "${release_chief_eval_cases[@]}"; do
+require_text "skills/a1-update/SKILL.md" "ztemerbekov/marketing-skills" "Update skill must pin its source boundary"
+require_text "skills/a1-update/SKILL.md" "without asking and without creating a backup" "Update skill must overwrite existing installations without a backup prompt"
+require_text "skills/a1-update/SKILL.md" "Present all newly available skills in one confirmation" "Update skill must group the new-skill confirmation"
+require_text "skills/a1-update/SKILL.md" "automatically remove tracked skills missing from upstream" "Update skill must remove upstream-deleted skills without confirmation"
+require_text "skills/a1-update/SKILL.md" "references/npx-workflow.md" "Update skill must route to its source-scoped npx workflow"
+require_text "skills/a1-update/SKILL.md" "references/runtime-prerequisites.md" "Update skill must route missing Node.js to its prerequisite workflow"
+require_text "skills/a1-update/references/npx-workflow.md" 'Never use `--all`' "Update workflow must forbid unscoped removal"
+require_text "skills/a1-update/references/npx-workflow.md" "node scripts/prune-lock.mjs" "Update workflow must clean source-owned stale lock entries"
+require_text "skills/a1-update/SKILL.md" "Do not search other project directories" "Update workflow must stay within global and current-project scopes"
+require_text "skills/a1-update/references/runtime-prerequisites.md" "Do not bootstrap Homebrew" "Prerequisite workflow must not install another package manager"
+
+for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}" "${chief_integration_eval_cases[@]}" "${context_eval_cases[@]}" "${context_consumer_eval_cases[@]}" "${release_chief_eval_cases[@]}" "${update_eval_cases[@]}"; do
   require_text "$eval_case" "## User Instruction" "A1 eval case must include the exact user instruction"
   require_text "$eval_case" "## Input" "A1 eval case must include the complete input"
   require_text "$eval_case" "## Must Change" "A1 eval case must include Must Change criteria"
@@ -463,6 +571,13 @@ require_text "$chief_completion_report" '`PASS — READY FOR USERS`' "Chief comp
 require_text "$context_completion_report" "## Installed Semantic Release Gate" "Context completion record must apply the installed semantic gate"
 require_text "$context_completion_report" "## Completion Verdict" "Context completion record must state a verdict rule"
 require_text "$context_completion_report" '`PASS — READY FOR USERS`' "Context completion record must state a passing final verdict"
+
+for eval_case in "${update_eval_cases[@]}"; do
+  eval_id="$(sed -n 's/^- ID: `\([^`]*\)`.*/\1/p' "$eval_case" | head -n 1)"
+  if [[ -n "$eval_id" ]]; then
+    require_text "$update_certification_report" "$eval_id" "Updater certification must include eval case $eval_id"
+  fi
+done
 
 echo
 

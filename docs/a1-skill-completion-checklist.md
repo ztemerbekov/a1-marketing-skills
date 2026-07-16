@@ -41,7 +41,7 @@ Use this checklist before declaring a new or materially changed A1 marketing ski
 - [ ] Include every runtime reference, template, script, and asset inside the skill directory.
 - [ ] Use relative links and verify that every runtime link resolves from the installed directory.
 - [ ] Do not depend on repository docs, adapters, or sibling skills at runtime unless the dependency is explicit and missing-dependency behavior is safe and tested.
-- [ ] Keep Claude, Cursor, Codex, and other platform adapters as pointers to canonical skill behavior rather than alternate sources of truth.
+- [ ] Keep cross-client installation in the installer; do not add client-specific copies as alternate sources of truth.
 
 ## Criteria-Based Evaluation
 
@@ -66,7 +66,7 @@ Use this checklist before declaring a new or materially changed A1 marketing ski
 
 ## Repository Verification
 
-- [ ] Synchronize README skill lists and plugin metadata with `node scripts/sync-readme-and-plugin.js` before and after relevant metadata changes.
+- [ ] Synchronize README skill lists with `node scripts/sync-readmes.js` before and after relevant inventory changes.
 - [ ] Keep English and Russian workflow documentation aligned.
 - [ ] Run `./scripts/validate-skills.sh` and any focused syntax checks.
 - [ ] Run `git diff --check` and verify relative Markdown links.

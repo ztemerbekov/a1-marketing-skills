@@ -15,19 +15,17 @@ This is the technical entry point for people who design, develop, validate, and 
 - [A1 integrated release run](../a1-integrated-release-run-2026-07-16.md) — Issue #10 full-suite and cross-skill semantic evidence for the final integrated candidate.
 - [A1 Editor in Chief completion checklist](../a1-editor-in-chief-completion-2026-07-16.md) — separate Chief completion verdict and limitations.
 - [A1 Marketing Context completion checklist](../a1-marketing-context-completion-2026-07-16.md) — separate context-setup completion verdict and limitations.
+- [A1 Update certification](../a1-update-certification.md) — updater release gate, current evidence, and remaining semantic work.
 
 ## Repository Architecture
 
-Canonical, directly installable skills live under `skills/`. The shared marketing context skill incrementally stores confirmed repository-local inputs without passive writes or hypotheses; Editor performs source-faithful text editing; Editor in Chief sets bounded editorial direction inside confirmed strategy, delegates all text work to Editor, and reviews the result.
+Canonical, directly installable skills live under `skills/`. Marketing Context incrementally stores confirmed repository-local inputs without passive writes or hypotheses; Editor performs source-faithful text editing; Editor in Chief sets bounded editorial direction inside confirmed strategy, delegates all text work to Editor, and reviews the result; Update maintains source-scoped installations from the repository's `main`.
 
-Platform-specific directories are adapters:
+Public distribution uses `npx skills` for Codex, Claude Code, Cursor, Antigravity, and other compatible clients. The repository does not maintain client-specific plugin metadata, rules, or copied skill trees.
 
-- `.claude-plugin/` contains Claude Code plugin metadata.
-- `.cursor/rules/` bridges Cursor to the canonical skills.
-- `.agents/skills/` is the target-project convention used by cross-agent installation and Antigravity.
 - `scripts/` contains maintainer tooling and is not required after installation.
 
-Adapters may expose the canonical skills to a client, but they must not redefine skill behavior.
+The domain-boundary reassessment for `a1-update` keeps it in the existing single repository context: it manages the collection lifecycle and introduces no independently evolving marketing vocabulary. A `CONTEXT-MAP.md` is not needed.
 
 ## Compatibility Policy
 
@@ -43,4 +41,4 @@ Any additional non-standard field must be documented in `AGENTS.md`, accepted by
 - [Triage labels](../agents/triage-labels.md)
 - [Domain documentation rules](../agents/domain.md)
 
-Use GitHub Issues for implementation work. Keep the English and Russian user READMEs synchronized, run the metadata synchronization tool when applicable, and finish every change with the repository validator.
+Use GitHub Issues for implementation work. Keep the English and Russian user READMEs synchronized, run `node scripts/sync-readmes.js` when the skill inventory changes, and finish every change with the repository validator.
