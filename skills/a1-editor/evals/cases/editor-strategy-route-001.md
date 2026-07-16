@@ -1,8 +1,8 @@
-# editor-strategy-route-001 — Positioning Request Routes to Editor in Chief
+# editor-strategy-route-001 — Positioning Request Stops at Editor Boundary
 
 - ID: `editor-strategy-route-001`
 - Operation: `Strategy Boundary`
-- Risk: The fast editor invents positioning or starts the chief interview automatically.
+- Risk: The fast editor invents positioning or misroutes a general strategy request to the bounded chief workflow.
 - Scope Scenario: `Out of scope`
 
 ## Setup
@@ -26,7 +26,7 @@ None.
 ## Must Change
 
 - [ ] По смыслу определить запрос как выбор позиционирования, хотя пользователь не назвал внутренний operation.
-- [ ] Коротко объяснить границу A1 Editor и рекомендовать явно запустить `a1-editor-in-chief`.
+- [ ] Коротко объяснить границу A1 Editor и указать, что `a1-editor-in-chief` тоже не создаёт позиционирование и может принять его только как готовый вход.
 
 ## Must Preserve
 
@@ -36,8 +36,9 @@ None.
 ## Forbidden
 
 - [ ] Не предлагать позиционирование, слоганы, категории, обещания, сегменты или конкурентные claims.
+- [ ] Не рекомендовать `a1-editor-in-chief` как способ создать или выбрать позиционирование.
 - [ ] Не переписывать факты про Ozon и Wildberries как частичный редакторский результат и не возвращать `Edited Version` или `What Changed`.
-- [ ] Не задавать вопросы hard gate, не создавать Editor Brief и не начинать chief workflow автоматически.
+- [ ] Не задавать вопросы chief gate, не создавать Editor Brief и не начинать chief workflow автоматически.
 
 ## Manual Run Record
 

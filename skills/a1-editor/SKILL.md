@@ -1,6 +1,6 @@
 ---
 name: a1-editor
-description: 'Fast marketing text editor with a safe strategy boundary. Use when the user wants to shorten, rewrite, clean up, clarify, improve, strengthen, or explain edits to existing text. Also use for requests to create or rethink positioning, offers, audiences, campaign messaging, landing-page structure, or other marketing architecture: explain the editing boundary and recommend explicit a1-editor-in-chief invocation without starting its interview. Russian editing triggers include "сократи", "почисти", "убери воду", "усиль", "перепиши", and "отредактируй"; strategy-boundary triggers include "позиционирование", "оффер", "аудитория", "кампания", and "структура лендинга". Explicit information-style triggers include "в информационном стиле", "в инфостиле", "по Ильяхову", and "по Пиши, сокращай". Editing works with a soft gate.'
+description: 'Fast marketing text editor with a safe strategy boundary. Use when the user wants to shorten, rewrite, clean up, clarify, improve, strengthen, or explain edits to existing text. Also use for requests to create or rethink positioning, offers, audiences, campaign messaging, landing-page structure, or other marketing architecture: explain the editing boundary and stop. Recommend explicit a1-editor-in-chief invocation only when completed strategy is supplied and the user wants bounded editorial direction before text execution. Russian editing triggers include "сократи", "почисти", "убери воду", "усиль", "перепиши", and "отредактируй"; strategy-boundary triggers include "позиционирование", "оффер", "аудитория", "кампания", and "структура лендинга". Explicit information-style triggers include "в информационном стиле", "в инфостиле", "по Ильяхову", and "по Пиши, сокращай". Editing works with a soft gate.'
 metadata:
   version: "0.1.0"
 ---
@@ -19,7 +19,7 @@ Detect the user's language and work in that language by default. If the input te
 
 Before applying the entry contract, read [the strategy boundary](references/strategy-boundary.md) and classify the whole request by meaning.
 
-Only requests to edit existing material enter the editor spine. If the user asks to create or rethink a strategic decision, return the concise boundary response from that reference and stop. A recommendation to use `a1-editor-in-chief` is not permission to start its interview: the user must invoke it explicitly.
+Only requests to edit existing material enter the editor spine. If the user asks to create or rethink a strategic decision, return the concise boundary response from that reference and stop. Recommend `a1-editor-in-chief` only under the completed-strategy handoff rule; a recommendation is not permission to start its workflow because the user must invoke it explicitly.
 
 ## Entry Contract
 

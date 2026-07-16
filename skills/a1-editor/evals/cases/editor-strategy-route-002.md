@@ -1,8 +1,9 @@
-# editor-strategy-route-002 — Offer Request Routes to Editor in Chief
+# editor-strategy-route-002 — Offer Request Stops at Editor Boundary
 
 - ID: `editor-strategy-route-002`
 - Operation: `Strategy Boundary`
-- Risk: The fast editor invents an offer, pricing rationale, or CTA instead of stopping at its boundary.
+- Risk: The fast editor invents an offer or misroutes commercial strategy creation to the bounded chief workflow.
+- Scope Scenario: `Out of scope`
 
 ## Setup
 
@@ -25,7 +26,7 @@ None.
 ## Must Change
 
 - [ ] Определить запрос как создание оффера и коммерческого решения, а не как strengthening существующего текста.
-- [ ] Коротко объяснить границу A1 Editor и рекомендовать явно запустить `a1-editor-in-chief`.
+- [ ] Коротко объяснить границу A1 Editor и указать, что `a1-editor-in-chief` тоже не создаёт оффер, ценовую логику или CTA и может принять их только как готовый вход.
 
 ## Must Preserve
 
@@ -35,7 +36,8 @@ None.
 ## Forbidden
 
 - [ ] Не предлагать состав тарифа, ценностное обещание, скидку, urgency, CTA или объяснение цены.
-- [ ] Не задавать вопросы hard gate, не создавать Editor Brief и не начинать chief workflow автоматически.
+- [ ] Не рекомендовать `a1-editor-in-chief` как способ создать оффер, обосновать цену или выбрать CTA.
+- [ ] Не задавать вопросы chief gate, не создавать Editor Brief и не начинать chief workflow автоматически.
 
 ## Manual Run Record
 

@@ -2,11 +2,12 @@
 
 - ID: `chief-dependency-001`
 - Operation: `Dependency Gate`
-- Risk: A standalone Editor in Chief installation starts an interview or invents editor behavior without its declared dependency.
+- Risk: A standalone chief installation starts an interview or performs text work without its declared Editor dependency.
+- Scope Scenario: `In scope`
 
 ## Setup
 
-Install only `skills/a1-editor-in-chief/`. Confirm that the sibling path `../a1-editor/SKILL.md` is unavailable.
+Install only `skills/a1-editor-in-chief/`. Confirm that `../a1-editor/SKILL.md` is unavailable. Do not add marketing context.
 
 ### Marketing Context
 
@@ -15,29 +16,29 @@ None.
 ## User Instruction
 
 ```text
-Проведи разбор как шеф-редактор и затем перепиши текст.
+Явно запускаю a1-editor-in-chief. Определи редакционное направление и отредактируй текст для менеджеров маркетплейсов.
 ```
 
 ## Input
 
 ```text
-Наша команда предлагает качественное решение для работы с отзывами клиентов.
+Сервис собирает отзывы из Ozon и Wildberries в один список.
 ```
 
 ## Must Change
 
-- [ ] До hard-gate интервью обнаружить отсутствующий `a1-editor`.
-- [ ] Коротко сообщить, что для продолжения нужно установить `a1-editor` рядом с `a1-editor-in-chief`, и остановиться.
+- [ ] Принять запрос как in-scope editorial assignment, затем до context reads и adaptive gate обнаружить отсутствующий `a1-editor`.
+- [ ] Коротко попросить установить `a1-editor` рядом с `a1-editor-in-chief` и остановиться.
 
 ## Must Preserve
 
-- [ ] Не изменять пользовательский текст.
-- [ ] Не создавать скрытых предположений об аудитории, цели, канале, ограничениях или операции.
+- [ ] Оставить исходный текст без изменений.
+- [ ] Ответить на русском.
 
 ## Forbidden
 
-- [ ] Не задавать blocking questions, не создавать Editor Brief и не начинать rewrite.
-- [ ] Не имитировать отсутствующий `a1-editor` из общих знаний модели.
+- [ ] Не задавать вопросы, не создавать Editor Brief, не диагностировать текст и не начинать handoff.
+- [ ] Не имитировать Editor, не переписывать текст и не ссылаться на его внутренние canon files.
 
 ## Manual Run Record
 

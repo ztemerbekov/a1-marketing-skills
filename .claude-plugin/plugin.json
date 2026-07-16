@@ -1,6 +1,6 @@
 {
   "name": "editorial-team",
-  "description": "Editorial-team marketing skills for AI agents: shared marketing context, fast editing, and strategic editor-in-chief workflows",
+  "description": "Editorial-team marketing skills for AI agents: shared context, fast editing, and a bounded chief-editor workflow",
   "version": "0.1.0",
   "author": {
     "name": "Zinnur Temerbekov"

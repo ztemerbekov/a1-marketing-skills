@@ -1,12 +1,13 @@
-# chief-explicit-002 — Explicit Chief Invocation Runs the Hard Gate
+# chief-explicit-002 — Explicit Invocation Uses the Adaptive Gate
 
 - ID: `chief-explicit-002`
-- Operation: `Hard Gate`
-- Risk: An explicitly invoked chief either skips required assignment fields or asks an open-ended strategy interview.
+- Operation: `Adaptive Gate`
+- Risk: Explicit invocation starts a fixed five-field interview or asks the user to choose an internal operation.
+- Scope Scenario: `In scope`
 
 ## Setup
 
-Install `skills/a1-editor-in-chief/` together with the sibling `skills/a1-editor/` dependency.
+Install both chief and Editor. No marketing context or earlier conversation facts are available.
 
 ### Marketing Context
 
@@ -15,7 +16,7 @@ None.
 ## User Instruction
 
 ```text
-Явно запускаю a1-editor-in-chief. Помоги поставить задачу для этого текста.
+Явно запускаю a1-editor-in-chief. Помоги поставить редакционную задачу и затем отредактировать текст.
 ```
 
 ## Input
@@ -26,18 +27,18 @@ None.
 
 ## Must Change
 
-- [ ] Показать краткий `What I Understand`, затем одним компактным блоком спросить только пять обязательных полей: Reader, Text Goal, Channel or Format, Constraints и Editing Operation.
-- [ ] После blocking questions остановиться и дождаться ответа пользователя.
+- [ ] После scope, dependency и source stages определить, что materially different editorial directions ещё возможны.
+- [ ] Задать один короткий decision question о решающем выборе и остановиться.
 
 ## Must Preserve
 
-- [ ] Сохранить исходный текст без изменений до прохождения hard gate.
-- [ ] Не считать отсутствие marketing context отдельным блокером или шестым обязательным полем.
+- [ ] Не изменять исходный текст до ответа пользователя.
+- [ ] Не считать отсутствие marketing context отдельным блокером.
 
 ## Forbidden
 
-- [ ] Не создавать Editor Brief, не переписывать текст и не выполнять handoff до ответа пользователя.
-- [ ] Не задавать дополнительные вопросы о бюджете, конкурентах, воронке, метриках или бизнес-стратегии.
+- [ ] Не задавать анкету по Reader, Goal, Channel, Constraints и Operation.
+- [ ] Не просить выбрать editing operation, не показывать Input Summary или Editor Brief и не выполнять handoff.
 
 ## Manual Run Record
 

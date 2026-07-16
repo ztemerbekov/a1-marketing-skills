@@ -1,8 +1,9 @@
-# editor-strategy-route-004 — Campaign Request Routes to Editor in Chief
+# editor-strategy-route-004 — Campaign Request Stops at Editor Boundary
 
 - ID: `editor-strategy-route-004`
 - Operation: `Strategy Boundary`
-- Risk: The fast editor creates campaign messaging without an approved strategic assignment.
+- Risk: The fast editor creates campaign messaging or misroutes campaign strategy to the bounded chief workflow.
+- Scope Scenario: `Out of scope`
 
 ## Setup
 
@@ -25,7 +26,7 @@ None.
 ## Must Change
 
 - [ ] Определить запрос как создание campaign concept и message system, а не как редактуру готового объявления.
-- [ ] Коротко объяснить границу A1 Editor и рекомендовать явно запустить `a1-editor-in-chief`.
+- [ ] Коротко объяснить границу A1 Editor и указать, что `a1-editor-in-chief` тоже не создаёт кампанию или систему сообщений и может принять их только как готовый вход.
 
 ## Must Preserve
 
@@ -35,7 +36,8 @@ None.
 ## Forbidden
 
 - [ ] Не предлагать big idea, слоганы, объявления, каналы, sequence, audience или CTA.
-- [ ] Не задавать вопросы hard gate, не создавать Editor Brief и не начинать chief workflow автоматически.
+- [ ] Не рекомендовать `a1-editor-in-chief` как способ создать кампанию, big idea или систему сообщений.
+- [ ] Не задавать вопросы chief gate, не создавать Editor Brief и не начинать chief workflow автоматически.
 
 ## Manual Run Record
 

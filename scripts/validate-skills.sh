@@ -7,6 +7,7 @@ warnings=0
 passed=0
 artifacts_passed=0
 certification_report="docs/a1-editor-pilot-certification.md"
+chief_run_report="docs/a1-editor-in-chief-run-2026-07-16.md"
 
 echo "Validating A1 design contract artifacts"
 echo
@@ -40,6 +41,25 @@ chief_eval_cases=(
   "skills/a1-editor-in-chief/evals/cases/chief-dependency-001.md"
   "skills/a1-editor-in-chief/evals/cases/chief-explicit-002.md"
   "skills/a1-editor-in-chief/evals/cases/chief-explicit-003.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-scope-mixed-004.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-scope-completed-input-005.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-context-filled-006.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-context-incomplete-007.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-operation-selection-008.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-editorial-boundary-009.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-source-conflict-010.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-corrective-review-011.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-language-012.md"
+)
+
+chief_integration_eval_cases=(
+  "skills/a1-editor/evals/cases/editor-strategy-route-001.md"
+  "skills/a1-editor/evals/cases/editor-strategy-route-002.md"
+  "skills/a1-editor/evals/cases/editor-strategy-route-003.md"
+  "skills/a1-editor/evals/cases/editor-strategy-route-004.md"
+  "skills/a1-editor/evals/cases/editor-strategy-route-005.md"
+  "skills/a1-editor/evals/cases/editor-strategy-boundary-008.md"
+  "skills/a1-editor/evals/cases/editor-chief-handoff-009.md"
 )
 
 required_artifacts=(
@@ -61,10 +81,19 @@ required_artifacts=(
   "skills/a1-editor/evals/README.md"
   "skills/a1-editor/evals/case-template.md"
   "$certification_report"
+  "$chief_run_report"
+  "skills/a1-editor-in-chief/evals/README.md"
+  "skills/a1-editor-in-chief/evals/case-template.md"
+  "skills/a1-editor-in-chief/references/chief-scope.md"
+  "skills/a1-editor-in-chief/references/chief-spine.md"
+  "skills/a1-editor-in-chief/references/source-resolution.md"
   "skills/a1-editor-in-chief/references/chief-gate.md"
+  "skills/a1-editor-in-chief/references/editorial-diagnosis.md"
   "skills/a1-editor-in-chief/references/editor-brief.md"
+  "skills/a1-editor-in-chief/references/chief-review.md"
   "${editor_eval_cases[@]}"
   "${chief_eval_cases[@]}"
+  "skills/a1-editor/evals/cases/editor-chief-handoff-009.md"
 )
 
 for artifact in "${required_artifacts[@]}"; do
@@ -133,9 +162,9 @@ require_text "README.ru.md" "CONTRIBUTING.md" "README.ru.md must end with a conc
 require_text "README.md" "z.temerbekov@gmail.com" "README.md must include the feedback address"
 require_text "README.ru.md" "z.temerbekov@gmail.com" "README.ru.md must include the feedback address"
 require_text "README.md" 'explicitly invoke `a1-editor-in-chief`' "README.md must document explicit Editor in Chief invocation"
-require_text "README.md" "does not start the chief interview automatically" "README.md must document the automatic-interview boundary"
+require_text "README.md" "does not start the chief workflow automatically" "README.md must document the automatic-chief boundary"
 require_text "README.ru.md" 'явно запустить `a1-editor-in-chief`' "README.ru.md must document explicit Editor in Chief invocation"
-require_text "README.ru.md" "не начинает интервью шеф-редактора автоматически" "README.ru.md must document the automatic-interview boundary"
+require_text "README.ru.md" "не запускает процесс шеф-редактора автоматически" "README.ru.md must document the automatic-chief boundary"
 forbid_text "README.md" "## Design Contract" "README.md must keep the design contract out of the user flow"
 forbid_text "README.md" "## Architecture" "README.md must keep internal architecture out of the user flow"
 forbid_text "README.md" "## Platform Support" "README.md must keep platform adapter internals out of the user flow"
@@ -185,16 +214,21 @@ require_text "skills/a1-editor/references/operations.md" "Use the observable fun
 require_text "skills/a1-editor/references/information-style.md" "put the actionable sequence before supporting personal context" "Information Style runtime must foreground an actionable sequence before supporting personal context"
 require_text "skills/a1-editor/SKILL.md" "references/editor-spine.md" "A1 Editor must use the invariant editor spine"
 require_text "skills/a1-editor/SKILL.md" "safe strategy boundary" "A1 Editor invocation metadata must advertise its strategy boundary"
-require_text ".cursor/rules/marketing-skills.mdc" "routing requests for new positioning" "Cursor activation metadata must advertise strategy routing"
+require_text ".cursor/rules/marketing-skills.mdc" "bounded chief-editor workflow" "Cursor activation metadata must advertise the bounded chief workflow"
 require_text "skills/a1-editor/SKILL.md" "references/strategy-boundary.md" "A1 Editor must route strategic requests before the editing spine"
 require_text "skills/a1-editor/references/strategy-boundary.md" "## Strategic Requests" "Editor strategy boundary must identify strategic requests by meaning"
-require_text "skills/a1-editor/references/strategy-boundary.md" 'explicitly invoke `a1-editor-in-chief`' "Editor strategy boundary must recommend explicit Editor in Chief invocation"
+require_text "skills/a1-editor/references/strategy-boundary.md" "## Completed-Strategy Chief Handoff" "Editor boundary must distinguish a bounded Chief handoff from strategy creation"
+require_text "skills/a1-editor/references/strategy-boundary.md" "Do not recommend Chief as a way to create" "Editor boundary must not route general strategy creation to Chief"
+require_text "skills/a1-editor/references/strategy-boundary.md" 'explicitly invoke `a1-editor-in-chief`' "Editor boundary must recommend explicit Chief invocation for a completed-strategy handoff"
 require_text "skills/a1-editor/references/strategy-boundary.md" "do not perform either part" "Editor strategy boundary must reject mixed jobs before partial execution"
 require_text "skills/a1-editor/evals/cases/editor-strategy-route-001.md" 'Scope Scenario: `Out of scope`' "Editor evals must cover an out-of-scope request"
 require_text "skills/a1-editor/evals/cases/editor-strategy-boundary-006.md" 'Scope Scenario: `In scope`' "Editor evals must cover an in-scope request"
 require_text "skills/a1-editor/evals/cases/editor-strategy-boundary-007.md" 'Scope Scenario: `Completed external input`' "Editor evals must cover a completed external input"
 require_text "skills/a1-editor/evals/cases/editor-strategy-boundary-008.md" 'Scope Scenario: `Mixed job`' "Editor evals must cover a mixed-job request"
 require_text "skills/a1-editor/evals/cases/editor-strategy-boundary-008.md" "Не возвращать очищенную, сокращенную" "Mixed-job regression must forbid partial editing output"
+require_text "skills/a1-editor/evals/cases/editor-strategy-boundary-008.md" 'Не рекомендовать `a1-editor-in-chief` как способ создать позиционирование' "Mixed-job regression must forbid routing strategy creation to Chief"
+require_text "skills/a1-editor/evals/cases/editor-chief-handoff-009.md" 'Scope Scenario: `Completed external input`' "Editor integration eval must cover a completed-strategy Chief handoff"
+require_text "skills/a1-editor/evals/cases/editor-chief-handoff-009.md" "не переписывать email" "Editor integration eval must forbid direct execution during Chief handoff"
 require_text "skills/a1-editor/references/editor-spine.md" "## 1. Determine Allowed Sources" "Editor spine must start by determining allowed sources"
 require_text "skills/a1-editor/references/editor-spine.md" "## 2. Select the Operation" "Editor spine must select an operation"
 require_text "skills/a1-editor/references/editor-spine.md" "## 3. Edit" "Editor spine must include editing"
@@ -211,15 +245,44 @@ require_text "skills/a1-editor/references/information-style.md" "## Constraint O
 require_text "skills/a1-editor/references/information-style.md" "## Markdown Integrity" "Information Style must protect Markdown integrity"
 require_text "skills/a1-editor/references/information-style.md" "## Completion Criterion" "Information Style must define a checkable completion criterion"
 require_text "skills/a1-editor-in-chief/SKILL.md" "## Invocation Contract" "Editor in Chief must require explicit invocation"
-require_text "skills/a1-editor-in-chief/SKILL.md" "references/chief-gate.md" "Editor in Chief must load its self-contained hard gate"
-require_text "skills/a1-editor-in-chief/SKILL.md" "references/editor-brief.md" "Editor in Chief must load its self-contained Editor Brief contract"
-require_text "skills/a1-editor-in-chief/references/chief-gate.md" "### Reader" "Chief gate must require the reader"
-require_text "skills/a1-editor-in-chief/references/chief-gate.md" "### Text Goal" "Chief gate must require the text goal"
-require_text "skills/a1-editor-in-chief/references/chief-gate.md" "### Channel or Format" "Chief gate must require the channel or format"
-require_text "skills/a1-editor-in-chief/references/chief-gate.md" "### Constraints" "Chief gate must require constraints"
-require_text "skills/a1-editor-in-chief/references/chief-gate.md" "### Editing Operation" "Chief gate must require the editing operation"
+require_text "skills/a1-editor-in-chief/SKILL.md" "references/chief-spine.md" "Editor in Chief must use its invariant spine"
+require_text "skills/a1-editor-in-chief/SKILL.md" "Do not inspect or copy Editor's internal references" "Chief must not deep-link or duplicate Editor canon"
+require_text "skills/a1-editor-in-chief/references/chief-spine.md" "## 1. Classify Scope" "Chief spine must classify scope first"
+require_text "skills/a1-editor-in-chief/references/chief-spine.md" "## 2. Verify Editor Dependency" "Chief spine must verify Editor after scope"
+require_text "skills/a1-editor-in-chief/references/chief-spine.md" "## 3. Resolve Sources" "Chief spine must resolve source precedence"
+require_text "skills/a1-editor-in-chief/references/chief-spine.md" "## 4. Apply the Adaptive Gate" "Chief spine must use adaptive gating"
+require_text "skills/a1-editor-in-chief/references/chief-spine.md" "## 5. Diagnose Editorially" "Chief spine must diagnose editorially"
+require_text "skills/a1-editor-in-chief/references/chief-spine.md" "## 6. Create the Editor Brief" "Chief spine must create the handoff brief"
+require_text "skills/a1-editor-in-chief/references/chief-spine.md" "## 7. Delegate to Editor" "Chief spine must delegate text execution"
+require_text "skills/a1-editor-in-chief/references/chief-spine.md" "## 8. Review as Chief" "Chief spine must review Editor output"
+require_text "skills/a1-editor-in-chief/references/chief-spine.md" "## 9. Deliver Simply" "Chief spine must deliver a simple answer"
+require_text "skills/a1-editor-in-chief/references/chief-scope.md" "Mixed-job behavior" "Chief scope must refuse mixed jobs"
+require_text "skills/a1-editor-in-chief/references/chief-scope.md" "Completed external inputs" "Chief scope must accept completed strategy as input"
+require_text "skills/a1-editor-in-chief/references/source-resolution.md" "Current instructions and task materials always override" "Chief sources must prioritize current task material"
+require_text "skills/a1-editor-in-chief/references/chief-gate.md" "The editing operation is not a user gate field" "Chief must select the operation itself"
+require_text "skills/a1-editor-in-chief/references/chief-gate.md" "Ask one concise decision question" "Chief gate must ask only one decisive question"
+require_text "skills/a1-editor-in-chief/references/editor-brief.md" "Keep it hidden unless" "Editor Brief must be internal by default"
+require_text "skills/a1-editor-in-chief/references/chief-review.md" "Never rewrite or patch Editor's text locally" "Chief review must delegate corrections"
+require_text "skills/a1-editor-in-chief/references/chief-review.md" "Never make more than one corrective Editor pass" "Chief review must cap correction passes"
+require_text "skills/a1-editor-in-chief/evals/README.md" "## Manual Run Protocol" "Chief evals must define the semantic protocol"
+require_text "README.md" "does not create market research, segmentation, pricing" "English README must explain the chief boundary"
+require_text "README.ru.md" "не проводит исследования рынка" "Russian README must explain the chief boundary"
+require_text "README.md" "Approved strategy:" "English README must include a realistic chief invocation"
+require_text "README.ru.md" "Утверждённая стратегия:" "Russian README must include a realistic chief invocation"
+forbid_text "skills/a1-editor-in-chief/SKILL.md" "a1-editor/references" "Chief must not deep-link Editor internal references"
 
-for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}"; do
+for obsolete_chief_file in \
+  "skills/a1-editor-in-chief/references/canon-core.md" \
+  "skills/a1-editor-in-chief/references/rewrite-operations.md" \
+  "skills/a1-editor-in-chief/references/diagnostic-rubric.md"; do
+  if [[ -e "$obsolete_chief_file" ]]; then
+    echo "FAIL $obsolete_chief_file"
+    echo "  Obsolete chief compatibility shim must be removed"
+    issues=$((issues + 1))
+  fi
+done
+
+for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}" "${chief_integration_eval_cases[@]}"; do
   require_text "$eval_case" "## User Instruction" "Editor eval case must include the exact user instruction"
   require_text "$eval_case" "## Input" "Editor eval case must include the complete input"
   require_text "$eval_case" "## Must Change" "Editor eval case must include Must Change criteria"
@@ -239,8 +302,17 @@ for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}"; do
       echo "  Eval filename must match its ID: expected $expected_eval_filename"
       issues=$((issues + 1))
     fi
-    require_text "$certification_report" "$eval_id" "Pilot certification must include eval case $eval_id"
   fi
+done
+
+for eval_case in "${editor_eval_cases[@]}"; do
+  eval_id="$(sed -n 's/^- ID: `\([^`]*\)`.*/\1/p' "$eval_case" | head -n 1)"
+  require_text "$certification_report" "$eval_id" "Pilot certification must include editor eval case $eval_id"
+done
+
+for eval_case in "${chief_eval_cases[@]}" "${chief_integration_eval_cases[@]}"; do
+  eval_id="$(sed -n 's/^- ID: `\([^`]*\)`.*/\1/p' "$eval_case" | head -n 1)"
+  require_text "$chief_run_report" "$eval_id" "Chief run report must include eval case $eval_id"
 done
 
 echo

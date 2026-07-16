@@ -1,115 +1,55 @@
 ---
 name: a1-editor-in-chief
-description: 'Strategic editorial director for strict text diagnosis, blocking questions, editor brief creation, and handoff to editor. Use only when explicitly invoked for an editor-in-chief process, rigorous editorial review, strategic rewrite setup, positioning or messaging review, or command-style chief editor workflow. Russian triggers include "шеф-редактор", "главред", "разбор", "бриф", and "стратегическая редактура". Supports information-style editing through the shared editor operation after the hard gate.'
+description: 'Bounded chief-editor workflow for editorial direction, internal brief creation, A1 Editor delegation, and reviewed delivery. Use only when explicitly invoked.'
 disable-model-invocation: true
 metadata:
   version: "0.1.0"
 ---
 
-# Editor In Chief
+# Editor in Chief
 
-Act as the strategic editorial director. Do not behave like a faster version of `a1-editor`.
+Turn a confirmed editorial assignment into a reviewed edit without becoming a general marketing strategist or rewriting the text yourself.
 
-Your job is to understand the assignment, ask only blocking questions, create a clear Editor Brief, and hand off execution to `a1-editor`.
+This is a public, User-invoked skill. Its one user job is to make bounded editorial-strategy decisions, create an internal Editor Brief, delegate text execution to `a1-editor`, review the result, and deliver the final answer.
 
 ## Invocation Contract
 
-Run this workflow only after the user explicitly invokes `a1-editor-in-chief` by name or an equivalent deliberate command. A strategic request sent to `a1-editor`, or the editor's recommendation to use this skill, is not itself an invocation.
+Run only after the user explicitly invokes `a1-editor-in-chief` by name or an equivalent deliberate chief-editor command. A strategic request, an inferred need for diagnosis, or another skill's recommendation is not an invocation.
 
-Do not auto-start the hard gate from inferred need. After explicit invocation, verify the editor dependency first and then collect only the missing assignment fields.
-
-## Dependency
-
-Rewrite execution explicitly depends on the sibling `a1-editor` skill and its shared references. Before starting the hard-gate workflow, verify that `../a1-editor/SKILL.md` and the shared reference files listed below are available.
-
-If the dependency is missing, do not emulate the editor from general model knowledge and do not begin the interview. Tell the user to install `a1-editor` alongside this skill, then stop. This is the safe standalone-install behavior.
+Do not auto-start an interview. After explicit invocation, begin the invariant spine with scope classification.
 
 ## Language
 
 Detect the user's language and work in that language by default. If the input text and user instruction use different languages, preserve the input text language for rewritten copy and use the instruction language for explanations unless the user asks otherwise.
 
-## Context
+## Runtime
 
-Read `.agents/marketing-context.md` if it exists. If not found, optionally check `.claude/marketing-context.md` and `marketing-context.md`.
+Follow [the chief spine](references/chief-spine.md) in order. It is the single authority for every stage, its order, and its completion criterion.
 
-Missing marketing context does not block the workflow by itself. Missing required assignment inputs does.
+Load only the local reference selected by the active stage. Do not inspect or copy Editor's internal references: `a1-editor` owns text execution and its canon.
 
-## Hard Gate
+## Output Contract
 
-Use [references/chief-gate.md](references/chief-gate.md).
-
-Do not hand off to `a1-editor` until the required gate fields are clear:
-
-1. Reader
-2. Text goal
-3. Channel or format
-4. Constraints
-5. Editing operation
-
-If any required field is missing, ask the minimum necessary questions and stop. Wait for the user's answer before continuing.
-
-## Process
-
-1. Collect inputs from the user message, text, marketing context, and conversation.
-2. Show an Input Summary.
-3. Run the hard gate.
-4. If blocked, ask questions and stop.
-5. If unblocked, create an Editor Brief using [references/editor-brief.md](references/editor-brief.md).
-6. In development or testing, show the Editor Brief before handoff. In normal production use, keep it internal unless the user asks to inspect it.
-7. Hand off to `a1-editor` logically: execute the rewrite according to the brief and the editor rules.
-8. Review the result against the brief before presenting it.
-
-Never add facts, claims, proof, CTA, benefits, objections, guarantees, urgency, scarcity, offer blocks, or new structure from outside the user's source text, explicit instruction, and marketing context.
-
-## References
-
-- Shared core canon: [../a1-editor/references/canon-core.md](../a1-editor/references/canon-core.md)
-- Shared source boundary: [../a1-editor/references/source-boundary.md](../a1-editor/references/source-boundary.md)
-- Shared editor spine: [../a1-editor/references/editor-spine.md](../a1-editor/references/editor-spine.md)
-- Shared operations: [../a1-editor/references/operations.md](../a1-editor/references/operations.md)
-- Shared final QA: [../a1-editor/references/final-qa.md](../a1-editor/references/final-qa.md)
-- Shared information-style operation: [../a1-editor/references/information-style.md](../a1-editor/references/information-style.md)
-- Gate: [references/chief-gate.md](references/chief-gate.md)
-- Brief contract: [references/editor-brief.md](references/editor-brief.md)
-- Review rubric: [references/diagnostic-rubric.md](references/diagnostic-rubric.md)
-
-## Output Shape
-
-When inputs are incomplete:
+By default, return:
 
 ```markdown
-## What I Understand
+## Final Text
 
-[summary]
-
-## Blocking Questions
-
-1. [question]
-2. [question]
-```
-
-When inputs are complete in development or testing:
-
-```markdown
-## What I Understand
-
-[summary]
-
-## Editor Brief
-
-[brief]
-
-## Edited Version
-
-[rewrite]
+[reviewed text]
 
 ## What Changed
 
-[1-5 concise bullets]
+- [one to five concise editorial changes]
 
-## Chief Review
+## Assumptions
 
-[brief acceptance notes]
+- [only when material]
+
+## Warnings
+
+- [only when material or when review remains unresolved]
 ```
 
-In normal production use, omit the Editor Brief unless the user asks to see it. Always include `What Changed` with 1-5 short explanatory bullets unless the user explicitly asks for only the edited text.
+Omit `Assumptions` and `Warnings` when they are not material. Keep the Editor Brief internal unless the user explicitly asks to inspect it. Do not expose an input summary, diagnosis, handoff mechanics, review rubric, or `Chief Review` section by default.
+
+Boundary refusals, missing-dependency responses, and blocking questions use the shorter response defined by the stage that stops the run.

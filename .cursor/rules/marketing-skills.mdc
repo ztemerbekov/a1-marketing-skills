@@ -1,5 +1,5 @@
 ---
-description: Use the repository's marketing Agent Skills from skills/* when editing marketing text, maintaining marketing context, or routing requests for new positioning, offers, audiences, campaigns, or landing structures to explicit Editor in Chief invocation.
+description: Use the repository's marketing Agent Skills from skills/* when editing marketing text, maintaining marketing context, or explicitly running a bounded chief-editor workflow inside confirmed marketing strategy.
 globs:
   - "**/*"
 alwaysApply: false
@@ -13,8 +13,8 @@ Use `skills/a1-setup-marketing-context/SKILL.md` when the user wants to create o
 
 Use `skills/a1-editor/SKILL.md` when the user wants to shorten, rewrite, sharpen, clean up, improve, make stronger, explain edits, or apply explicitly requested information style to existing text. Follow its strategy boundary before starting the editor spine.
 
-Use `skills/a1-editor-in-chief/SKILL.md` only when explicitly invoked by the user for a strategic editor-in-chief process, rigorous editorial review, strategic rewrite setup, or command-style workflow. Do not auto-trigger it for ordinary rewrite requests.
+Use `skills/a1-editor-in-chief/SKILL.md` only when explicitly invoked by the user for bounded editorial direction, Editor handoff, and chief review inside confirmed product and marketing inputs. Do not auto-trigger it for ordinary rewrite or general marketing-strategy requests.
 
-If `a1-editor` receives a request to create or rethink positioning, an offer, an audience, campaign messaging, or landing structure, keep the editor response at its canonical boundary: recommend explicit invocation of `a1-editor-in-chief` and do not begin the chief interview automatically.
+If `a1-editor` receives a request to create or rethink positioning, an offer, an audience, campaign messaging, or landing structure, keep the editor response at its canonical boundary and state that Chief does not create those decisions either. Recommend explicit invocation of `a1-editor-in-chief` only when the strategy is completed and the user wants its bounded editorial workflow.
 
 If `.agents/marketing-context.md` exists, read it before marketing editing work. If it does not exist, proceed from the user's prompt unless the selected skill says the missing information blocks the task.

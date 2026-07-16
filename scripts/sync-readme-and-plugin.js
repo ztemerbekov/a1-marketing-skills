@@ -29,7 +29,7 @@ const readmes = [
       "a1-editor-in-chief": {
         title: "Editor in Chief",
         summary:
-          "Defining a strategic or editorial assignment through focused questions before Editor rewrites the text.",
+          "Turning a confirmed editorial assignment into a reviewed edit without creating general marketing strategy.",
       },
     },
   },
@@ -50,7 +50,7 @@ const readmes = [
       "a1-editor-in-chief": {
         title: "Шеф-редактор",
         summary:
-          "Поставить стратегическую или редакторскую задачу через короткие уточнения, а затем передать текст Редактору.",
+          "Превратить подтверждённую редакционную задачу в проверенный текст без разработки общей маркетинговой стратегии.",
       },
     },
   },

@@ -1,8 +1,9 @@
-# editor-strategy-route-003 — Audience Request Routes to Editor in Chief
+# editor-strategy-route-003 — Audience Request Stops at Editor Boundary
 
 - ID: `editor-strategy-route-003`
 - Operation: `Strategy Boundary`
-- Risk: The fast editor chooses a target segment from sparse context.
+- Risk: The fast editor chooses a target segment or misroutes segmentation to the bounded chief workflow.
+- Scope Scenario: `Out of scope`
 
 ## Setup
 
@@ -25,7 +26,7 @@ None.
 ## Must Change
 
 - [ ] По смыслу определить запрос как выбор аудитории и приоритетного сегмента.
-- [ ] Коротко объяснить границу A1 Editor и рекомендовать явно запустить `a1-editor-in-chief`.
+- [ ] Коротко объяснить границу A1 Editor и указать, что `a1-editor-in-chief` тоже не выбирает аудиторию или сегмент и может принять их только как готовый вход.
 
 ## Must Preserve
 
@@ -35,7 +36,8 @@ None.
 ## Forbidden
 
 - [ ] Не выбирать селлеров, агентства, бренды, роли, размер бизнеса или awareness level.
-- [ ] Не задавать вопросы hard gate, не создавать Editor Brief и не начинать chief workflow автоматически.
+- [ ] Не рекомендовать `a1-editor-in-chief` как способ выбрать аудиторию, сегмент или главного читателя.
+- [ ] Не задавать вопросы chief gate, не создавать Editor Brief и не начинать chief workflow автоматически.
 
 ## Manual Run Record
 

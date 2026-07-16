@@ -44,14 +44,14 @@ The recommended installer is the simplest option for a project shared across dif
 |-------|----------|
 | [Marketing Context](skills/a1-setup-marketing-context/) (`a1-setup-marketing-context`) | Giving future marketing work reusable product, audience, positioning, voice, proof, vocabulary, examples, and goals. |
 | [Editor](skills/a1-editor/) (`a1-editor`) | Improving existing text immediately: edit, shorten, clarify, strengthen, or restructure without inventing facts. |
-| [Editor in Chief](skills/a1-editor-in-chief/) (`a1-editor-in-chief`) | Defining a strategic or editorial assignment through focused questions before Editor rewrites the text. |
+| [Editor in Chief](skills/a1-editor-in-chief/) (`a1-editor-in-chief`) | Turning a confirmed editorial assignment into a reviewed edit without creating general marketing strategy. |
 <!-- SKILLS:END -->
 
 Use this quick rule:
 
 - Want the agent to remember your product, audience, voice, or proof for future work? Start with **Marketing Context**.
 - Already have text and know what should change? Use **Editor**.
-- Need to work out the reader, goal, format, constraints, positioning, or message before editing? Explicitly invoke **Editor in Chief**.
+- Have confirmed product and marketing inputs, but need to decide the editorial reader focus, message emphasis, angle, structure, or voice? Explicitly invoke **Editor in Chief**.
 
 Marketing Context is useful for repeated work, but Editor does not require it to improve a supplied text.
 
@@ -89,22 +89,27 @@ Make this landing-page section clearer and shorter. Keep every number and do not
 
 For information-style editing, ask for it explicitly: “Edit this in information style” or “по Ильяхову.” A generic request such as “clean this up” keeps the standard, more conservative editing behavior.
 
-Requests to create or rethink positioning, an offer, an audience, campaign messaging, or a landing-page structure are outside Editor's text-editing boundary. Editor recommends that you explicitly invoke `a1-editor-in-chief`; it does not start the chief interview automatically.
+Requests to create or rethink positioning, an offer, an audience, campaign messaging, or a landing-page structure are outside Editor's text-editing boundary, and Editor in Chief does not create them either. When those strategic inputs are already approved and you want bounded editorial direction before execution, Editor can recommend that you explicitly invoke `a1-editor-in-chief`; it does not start the chief workflow automatically.
 
 </details>
 
 <details>
 <summary><strong>Editor in Chief</strong></summary>
 
-**What it does:** helps define a strategic or demanding editorial assignment before rewriting begins. It asks only the questions that block the work, creates an Editor Brief, and then hands the selected editing operation to Editor.
+**What it does:** sets bounded editorial direction inside confirmed product and marketing inputs. It resolves available sources, asks one decision question only when necessary, creates an internal Editor Brief, delegates all text work to Editor, and reviews the result with at most one corrective pass.
 
-**Use it when:** the reader, goal, format, constraints, positioning, message, or editing operation still needs to be decided. This skill starts only when you explicitly invoke it.
+**Use it when:** you already have the source material and approved marketing strategy, but the reader focus, message emphasis, editorial angle, argument order, structure, or voice still needs chief-editor judgment. This skill starts only when you explicitly invoke it.
 
 **Try:**
 
 ```text
-Use a1-editor-in-chief. Help me define the audience, goal, message, and constraints for this page, then edit the supplied text.
+Use a1-editor-in-chief. The audience and positioning below are approved. Choose the strongest editorial angle and argument order for this email, have Editor rewrite it, and review the result.
+
+Approved strategy: [audience and positioning]
+Source text: [your text]
 ```
+
+Editor in Chief does not create market research, segmentation, pricing, positioning, GTM, product strategy, or general marketing strategy. You can supply those completed decisions as source material for an editorial assignment.
 
 </details>
 

@@ -1,8 +1,9 @@
-# editor-strategy-route-005 — Landing Structure Request Routes to Editor in Chief
+# editor-strategy-route-005 — Landing Structure Request Stops at Editor Boundary
 
 - ID: `editor-strategy-route-005`
 - Operation: `Strategy Boundary`
-- Risk: The fast editor turns a blank-page request into invented landing-page architecture.
+- Risk: The fast editor invents landing-page architecture or misroutes a blank-page request to the bounded chief workflow.
+- Scope Scenario: `Out of scope`
 
 ## Setup
 
@@ -25,7 +26,7 @@ None.
 ## Must Change
 
 - [ ] Определить запрос как создание новой marketing structure, а не как restructure существующего текста.
-- [ ] Коротко объяснить границу A1 Editor и рекомендовать явно запустить `a1-editor-in-chief`.
+- [ ] Коротко объяснить границу A1 Editor и указать, что `a1-editor-in-chief` тоже не создаёт архитектуру лендинга и может принять её только как готовый вход.
 
 ## Must Preserve
 
@@ -35,7 +36,8 @@ None.
 ## Forbidden
 
 - [ ] Не предлагать hero, benefits, proof, objections, pricing, FAQ, CTA или порядок блоков.
-- [ ] Не задавать вопросы hard gate, не создавать Editor Brief и не начинать chief workflow автоматически.
+- [ ] Не рекомендовать `a1-editor-in-chief` как способ создать структуру лендинга с нуля.
+- [ ] Не задавать вопросы chief gate, не создавать Editor Brief и не начинать chief workflow автоматически.
 
 ## Manual Run Record
 

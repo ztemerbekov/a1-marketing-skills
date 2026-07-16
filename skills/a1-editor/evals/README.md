@@ -27,15 +27,16 @@ Every materially changed scope boundary must have coverage for four scenarios ac
 
 ## Starter Suite
 
-### Strategy Boundary
+### Strategy Boundary and Bounded Chief Handoff
 
-- [positioning request routes to explicit Editor in Chief invocation](cases/editor-strategy-route-001.md)
-- [offer request routes to explicit Editor in Chief invocation](cases/editor-strategy-route-002.md)
-- [audience request routes to explicit Editor in Chief invocation](cases/editor-strategy-route-003.md)
-- [campaign request routes to explicit Editor in Chief invocation](cases/editor-strategy-route-004.md)
-- [landing-structure request routes to explicit Editor in Chief invocation](cases/editor-strategy-route-005.md)
+- [positioning request stops at the Editor boundary](cases/editor-strategy-route-001.md)
+- [offer request stops at the Editor boundary](cases/editor-strategy-route-002.md)
+- [audience request stops at the Editor boundary](cases/editor-strategy-route-003.md)
+- [campaign request stops at the Editor boundary](cases/editor-strategy-route-004.md)
+- [landing-structure request stops at the Editor boundary](cases/editor-strategy-route-005.md)
 - [strategy keywords do not route an ordinary edit](cases/editor-strategy-boundary-007.md)
 - [mixed editing and strategy request stops before partial execution](cases/editor-strategy-boundary-008.md)
+- [completed strategy plus editorial direction routes to explicit bounded Chief invocation](cases/editor-chief-handoff-009.md)
 
 ### Standard Editor
 

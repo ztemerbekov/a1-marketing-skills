@@ -1,12 +1,13 @@
-# chief-explicit-003 — Explicit Chief Invocation Completes the Handoff
+# chief-explicit-003 — Complete Assignment Returns Minimal Reviewed Output
 
 - ID: `chief-explicit-003`
 - Operation: `Clarify`
-- Risk: A complete chief assignment is questioned again, bypasses the Editor Brief, or invents material during handoff.
+- Risk: A complete assignment is questioned again, exposes internal process, or lets the chief rewrite without Editor.
+- Scope Scenario: `In scope`
 
 ## Setup
 
-Install `skills/a1-editor-in-chief/` together with the sibling `skills/a1-editor/` dependency. Run as a development evaluation so the Editor Brief is visible.
+Install both chief and Editor. No marketing context is available.
 
 ### Marketing Context
 
@@ -15,12 +16,7 @@ None.
 ## User Instruction
 
 ```text
-Явно запускаю a1-editor-in-chief.
-Reader: менеджер маркетплейса, который уже работает с отчетом.
-Text Goal: после письма понять порядок еженедельной проверки.
-Channel or Format: внутреннее email-сообщение.
-Constraints: сохранить пятницу, 16:00, Ozon, Wildberries и три действия; не добавлять факты.
-Editing Operation: clarify.
+Явно запускаю a1-editor-in-chief. Текст читает менеджер маркетплейса, который уже работает с отчетом. После внутреннего email он должен понять порядок еженедельной проверки. Сохрани пятницу, 16:00, Ozon, Wildberries и три действия; не добавляй факты. Верни обычный финальный ответ, бриф не показывай.
 ```
 
 ## Input
@@ -31,18 +27,18 @@ Editing Operation: clarify.
 
 ## Must Change
 
-- [ ] Показать `What I Understand`, создать Editor Brief со всеми пятью gate fields и выполнить clarify через правила `a1-editor`.
-- [ ] Вернуть `Edited Version`, один-пять пунктов `What Changed` и `Chief Review`, подтверждающий соответствие brief.
+- [ ] Без дополнительных вопросов выбрать `clarify`, создать скрытый Editor Brief, делегировать текст Editor и проверить результат.
+- [ ] Вернуть только `Final Text` и один-пять пунктов `What Changed`.
 
 ## Must Preserve
 
-- [ ] Сохранить пятницу, 16:00, Ozon, Wildberries и порядок трех действий.
-- [ ] Сохранить reader, goal, email format, constraints и clarify operation без скрытых стратегических решений.
+- [ ] Сохранить пятницу, 16:00, Ozon, Wildberries и порядок трёх действий.
+- [ ] Сохранить русский язык текста и объяснений.
 
 ## Forbidden
 
-- [ ] Не задавать blocking questions, потому что все обязательные поля уже даны.
-- [ ] Не добавлять аудиторию, выгоды, метрики, CTA, offer, proof, новую структуру письма или фактические объяснения.
+- [ ] Не показывать Input Summary, diagnosis, Editor Brief, handoff, `Chief Review`, assumptions или warnings без материальной причины.
+- [ ] Не добавлять аудиторию, выгоды, метрики, CTA, offer, proof, новую маркетинговую структуру или факты.
 
 ## Manual Run Record
 

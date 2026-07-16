@@ -5,14 +5,14 @@
     "email": "z.temerbekov@gmail.com"
   },
   "metadata": {
-    "description": "Marketing skills for AI agents: shared context, editor, and editor-in-chief workflows",
+    "description": "Marketing skills for AI agents: shared context, editor, and bounded chief-editor workflows",
     "version": "0.1.0",
     "repository": "https://github.com/ztemerbekov/marketing-skills"
   },
   "plugins": [
     {
       "name": "editorial-team",
-      "description": "3 marketing skills for AI agents: shared marketing context, fast editor, and command-only editor-in-chief",
+      "description": "3 marketing skills for AI agents: shared context, fast editor, and command-only bounded chief editor",
       "source": "./",
       "strict": false,
       "skills": [

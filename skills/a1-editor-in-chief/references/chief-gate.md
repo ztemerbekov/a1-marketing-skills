@@ -1,89 +1,32 @@
-# Chief Gate
+# Adaptive Gate
 
-`a1-editor-in-chief` uses a hard gate. It must not hand off to `a1-editor` until the required fields are clear.
+Use the source map to determine whether the chief can set one safe editorial direction.
 
-Use the shared source boundary from `../../a1-editor/references/source-boundary.md`. Missing inputs are blocking only when proceeding would require invention, overpromising, or choosing between materially different meanings.
+## Assignment Inputs
 
-## Required Fields
+Resolve, when material:
 
-### Reader
+- editable text or other task material;
+- reader;
+- text goal;
+- channel or format;
+- constraints.
 
-Who will read the text?
+These inputs may come from the current request, current task materials, conversation, or marketing context under the source precedence rule. Do not require the user to restate information that is already available.
 
-Useful detail:
+The editing operation is not a user gate field. The chief chooses it during editorial diagnosis.
 
-- segment or role
-- level of awareness
-- sophistication
-- current belief or objection
+## Blocking Rule
 
-### Text Goal
+Missing marketing context is never a blocker. A blank field is not automatically a blocker either.
 
-What should the text change?
+Block only when:
 
-Examples:
+- there is no material to edit; or
+- two or more materially different editorial directions remain and choosing among them would change the reader, goal, message emphasis, angle, argument hierarchy, structure, voice, or a binding constraint.
 
-- make the reader understand
-- make the reader believe
-- make the reader click
-- make the reader reply
-- make the reader choose
-- make the reader keep reading
+Ask one concise decision question about the decisive fork, then stop. Do not send a questionnaire, ask for internal operation names, or collect nice-to-have background. On the next turn, resolve sources again before continuing.
 
-### Channel or Format
+If one safe editorial direction is available, proceed and place any material assumption in the Editor Brief. Do not ask merely to make the brief more detailed.
 
-Where will the text live?
-
-Examples:
-
-- landing page
-- email
-- social post
-- ad
-- sales message
-- presentation
-- product UI
-
-### Constraints
-
-What must not change?
-
-Examples:
-
-- claims that cannot be made
-- facts that cannot be invented
-- tone boundaries
-- legal or compliance limits
-- product details that must stay exact
-- length limits
-
-### Editing Operation
-
-What should be done?
-
-Examples:
-
-- shorten
-- clarify
-- strengthen
-- restructure
-- information-style
-- explain edits
-- create variants
-
-## Assignment Type / Тип задачи
-
-Classify the assignment as:
-
-- editing: the user supplied text and wants it revised;
-- strategy: the user wants positioning, offer, campaign message, landing structure, or another underlying message decision.
-
-Editing can proceed with fewer questions when the source text and constraints are enough. Strategy requires the full hard gate because the agent must not invent strategy.
-
-## Blocking Behavior
-
-If any required field is missing, ask the minimum number of questions needed to fill it.
-
-Ask questions in a compact batch. Do not ask non-blocking curiosity questions. Internal editorial checks are not user questions.
-
-After asking, stop and wait for the user.
+**Complete when:** usable task material and one safe editorial direction are available, or one decisive question has been asked and the run has stopped.

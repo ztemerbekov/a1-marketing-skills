@@ -120,9 +120,9 @@ Uses a soft gate: if the user provides text and an editing command, it works imm
 
 ### a1-editor-in-chief
 
-Public, command-only strategy skill.
+Public, command-only bounded chief-editor skill.
 
-Uses a hard gate. It must not hand off to `a1-editor` until reader, goal, channel or format, constraints, and editing operation are clear. It creates an Editor Brief, then executes the rewrite through the `a1-editor` role.
+Classifies scope before all other work, accepts completed product and marketing decisions as inputs, and uses an adaptive gate for only the material editorial facts that remain unclear. It chooses the editing operation, creates an internal Editor Brief, delegates all text execution to `a1-editor`, reviews the result, and may request at most one corrective Editor pass. It does not create market research, segmentation, pricing, positioning, GTM, product strategy, or general marketing strategy.
 
 ## Platform Adapters
 
