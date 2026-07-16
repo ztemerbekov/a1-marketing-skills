@@ -7,15 +7,15 @@ const skillsDir = "skills";
 const skillOrder = [
   "a1-editor",
   "a1-editor-in-chief",
-  "a1-setup-marketing-context",
-  "a1-update-marketing-skills",
+  "a1-marketing-context",
+  "a1-update",
 ];
 const readmes = [
   {
     file: "README.md",
     columns: ["Skill", "Best for"],
     copy: {
-      "a1-setup-marketing-context": {
+      "a1-marketing-context": {
         title: "Marketing Context",
         summary:
           "Save product, audience, and voice information for future work.",
@@ -30,8 +30,8 @@ const readmes = [
         summary:
           "Define the reader, goal, format, constraints, and message before editing the text.",
       },
-      "a1-update-marketing-skills": {
-        title: "Update Marketing Skills",
+      "a1-update": {
+        title: "Update",
         summary:
           "Update only Marketing Skills and decide separately whether to install new skills from the collection.",
       },
@@ -41,7 +41,7 @@ const readmes = [
     file: "README.ru.md",
     columns: ["Навык", "Когда использовать"],
     copy: {
-      "a1-setup-marketing-context": {
+      "a1-marketing-context": {
         title: "Маркетинговый контекст",
         summary:
           "Сохранить сведения о продукте, аудитории и стиле общения для следующих задач.",
@@ -56,8 +56,8 @@ const readmes = [
         summary:
           "Сначала определить читателя, цель, формат, ограничения и сообщение, а затем отредактировать текст.",
       },
-      "a1-update-marketing-skills": {
-        title: "Обновление Marketing Skills",
+      "a1-update": {
+        title: "Обновление",
         summary:
           "Обновить только Marketing Skills и отдельно решить, устанавливать ли новые навыки из набора.",
       },

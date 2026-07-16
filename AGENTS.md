@@ -39,10 +39,10 @@ Canonical skills live under `skills/`:
 
 ```text
 skills/
-  a1-setup-marketing-context/
+  a1-marketing-context/
   a1-editor/
   a1-editor-in-chief/
-  a1-update-marketing-skills/
+  a1-update/
 ```
 
 Each skill directory must be self-contained and installable directly from GitHub. Do not require users to run a build or sync step after installation.
@@ -93,6 +93,7 @@ This repository follows the Agent Skills format, with documented pragmatic exten
 Allowed extensions:
 
 - `disable-model-invocation: true` may be used for command-only skills such as `a1-editor-in-chief`, where accidental auto-triggering would produce the wrong workflow.
+- `agents/openai.yaml` may provide UI-only display metadata for a canonical skill. It must not redefine runtime behavior, duplicate the skill tree, or be required by clients that ignore it.
 
 When adding a non-standard field:
 
@@ -103,9 +104,9 @@ When adding a non-standard field:
 
 ## Current Skills
 
-### a1-setup-marketing-context
+### a1-marketing-context
 
-Public, auto-triggered setup skill.
+Public, auto-triggered marketing context skill.
 
 Creates and updates `.agents/marketing-context.md`, one context per repository. The context is shared by all marketing skills and stores product, audience, positioning, voice, proof, vocabulary, examples, and business goals.
 
@@ -121,7 +122,7 @@ Public, command-only strategy skill.
 
 Uses a hard gate. It must not hand off to `a1-editor` until reader, goal, channel or format, constraints, and editing operation are clear. It creates an Editor Brief, then executes the rewrite through the `a1-editor` role.
 
-### a1-update-marketing-skills
+### a1-update
 
 Public, explicitly requested update skill.
 

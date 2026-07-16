@@ -23,15 +23,15 @@ npx skills@latest add ztemerbekov/marketing-skills -g
 
 ## Какой навык выбрать
 
-Если вы впервые работаете с Marketing Skills, начните с [Маркетингового контекста](skills/a1-setup-marketing-context/): он сохранит сведения о продукте, которые пригодятся другим навыкам.
+Если вы впервые работаете с Marketing Skills, начните с [Маркетингового контекста](skills/a1-marketing-context/): он сохранит сведения о продукте, которые пригодятся другим навыкам.
 
 <!-- SKILLS:START -->
 | Навык | Когда использовать |
 |-------|----------|
 | [Редактор](skills/a1-editor/)<br>`a1-editor` | Улучшить готовый текст: сократить, прояснить, усилить или перестроить, не добавляя выдуманных фактов. |
 | [Шеф-редактор](skills/a1-editor-in-chief/)<br>`a1-editor-in-chief` | Сначала определить читателя, цель, формат, ограничения и сообщение, а затем отредактировать текст. |
-| [Маркетинговый контекст](skills/a1-setup-marketing-context/)<br>`a1-setup-marketing-context` | Сохранить сведения о продукте, аудитории и стиле общения для следующих задач. |
-| [Обновление Marketing Skills](skills/a1-update-marketing-skills/)<br>`a1-update-marketing-skills` | Обновить только Marketing Skills и отдельно решить, устанавливать ли новые навыки из набора. |
+| [Маркетинговый контекст](skills/a1-marketing-context/)<br>`a1-marketing-context` | Сохранить сведения о продукте, аудитории и стиле общения для следующих задач. |
+| [Обновление](skills/a1-update/)<br>`a1-update` | Обновить только Marketing Skills и отдельно решить, устанавливать ли новые навыки из набора. |
 <!-- SKILLS:END -->
 
 ## Познакомьтесь с навыками
@@ -90,7 +90,7 @@ npx skills@latest add ztemerbekov/marketing-skills -g
 </details>
 
 <details>
-<summary><strong>Обновление Marketing Skills</strong></summary>
+<summary><strong>Обновление</strong></summary>
 
 **Что делает:** устанавливает свежие версии Marketing Skills во всех программах, где вы ими пользуетесь. Другие наборы навыков не меняет.
 
@@ -152,10 +152,10 @@ npx skills@latest add ztemerbekov/marketing-skills
 
 ```bash
 npx skills@latest remove \
-  a1-setup-marketing-context \
+  a1-marketing-context \
   a1-editor \
   a1-editor-in-chief \
-  a1-update-marketing-skills \
+  a1-update \
   --global \
   --yes
 ```
@@ -165,6 +165,24 @@ npx skills@latest remove \
 </details>
 
 ## Обновление
+
+<details>
+<summary><strong>Переход со старых названий</strong></summary>
+
+Если вы установили Marketing Skills до переименования, удалите два прежних навыка и установите актуальный набор:
+
+```bash
+npx skills@latest remove \
+  a1-setup-marketing-context \
+  a1-update-marketing-skills \
+  --global \
+  --yes
+npx skills@latest add ztemerbekov/marketing-skills -g
+```
+
+Для установки только в проекте выполните обе команды в этом проекте: в команде удаления уберите `--global`, а в команде установки — `-g`.
+
+</details>
 
 Проще всего попросить ИИ-агента:
 

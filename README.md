@@ -23,15 +23,15 @@ npx skills@latest add ztemerbekov/marketing-skills -g
 
 ## Choose a skill
 
-If this is your first time using Marketing Skills, start with [Marketing Context](skills/a1-setup-marketing-context/). It saves product information that the other skills can reuse.
+If this is your first time using Marketing Skills, start with [Marketing Context](skills/a1-marketing-context/). It saves product information that the other skills can reuse.
 
 <!-- SKILLS:START -->
 | Skill | Best for |
 |-------|----------|
 | [Editor](skills/a1-editor/)<br>`a1-editor` | Improve existing text: shorten, clarify, strengthen, or restructure it without inventing facts. |
 | [Editor in Chief](skills/a1-editor-in-chief/)<br>`a1-editor-in-chief` | Define the reader, goal, format, constraints, and message before editing the text. |
-| [Marketing Context](skills/a1-setup-marketing-context/)<br>`a1-setup-marketing-context` | Save product, audience, and voice information for future work. |
-| [Update Marketing Skills](skills/a1-update-marketing-skills/)<br>`a1-update-marketing-skills` | Update only Marketing Skills and decide separately whether to install new skills from the collection. |
+| [Marketing Context](skills/a1-marketing-context/)<br>`a1-marketing-context` | Save product, audience, and voice information for future work. |
+| [Update](skills/a1-update/)<br>`a1-update` | Update only Marketing Skills and decide separately whether to install new skills from the collection. |
 <!-- SKILLS:END -->
 
 ## Meet the skills
@@ -90,7 +90,7 @@ Save our product, audience, positioning, voice, proof, and business goals for fu
 </details>
 
 <details>
-<summary><strong>Update Marketing Skills</strong></summary>
+<summary><strong>Update</strong></summary>
 
 **What it does:** installs the latest Marketing Skills in every app where you use them. It does not change skills from other collections.
 
@@ -152,10 +152,10 @@ Remove the current global collection from every connected client:
 
 ```bash
 npx skills@latest remove \
-  a1-setup-marketing-context \
+  a1-marketing-context \
   a1-editor \
   a1-editor-in-chief \
-  a1-update-marketing-skills \
+  a1-update \
   --global \
   --yes
 ```
@@ -165,6 +165,24 @@ For a project-only installation, run the command from that project and omit `--g
 </details>
 
 ## Update
+
+<details>
+<summary><strong>Moving from the previous skill names</strong></summary>
+
+If you installed Marketing Skills before the names changed, remove the two previous skills and install the current collection:
+
+```bash
+npx skills@latest remove \
+  a1-setup-marketing-context \
+  a1-update-marketing-skills \
+  --global \
+  --yes
+npx skills@latest add ztemerbekov/marketing-skills -g
+```
+
+For a project-only installation, run both commands in that project, omit `--global` from the removal command, and omit `-g` from the installation command.
+
+</details>
 
 The easiest way to update is to ask your AI agent:
 

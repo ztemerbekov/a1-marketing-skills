@@ -8,7 +8,7 @@ Each case contains a stable ID, setup, exact user instruction, complete inventor
 
 ## Manual Run Protocol
 
-1. Install the candidate `a1-update-marketing-skills` in a clean supported client or an isolated fixture environment.
+1. Install the candidate `a1-update` in a clean supported client or an isolated fixture environment.
 2. Submit the exact instruction and inventory state from one case without paraphrasing.
 3. Do not permit commands to reach real user installations when a fixture is intended.
 4. Record evidence for Must Change, Must Preserve, Forbidden, and Output Contract separately.

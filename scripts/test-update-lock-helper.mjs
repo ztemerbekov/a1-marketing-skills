@@ -7,7 +7,7 @@ import { join, resolve } from "node:path";
 import { spawnSync } from "node:child_process";
 
 const helper = resolve(
-  "skills/a1-update-marketing-skills/scripts/prune-lock.mjs",
+  "skills/a1-update/scripts/prune-lock.mjs",
 );
 const fixtureRoot = await mkdtemp(join(tmpdir(), "a1-update-lock-test-"));
 

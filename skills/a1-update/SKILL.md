@@ -1,9 +1,9 @@
 ---
-name: a1-update-marketing-skills
+name: a1-update
 description: 'Update only the skills installed from ztemerbekov/marketing-skills. Use when the user explicitly asks to update, refresh, upgrade, repair, or reinstall Marketing Skills, including requests such as "Update Marketing Skills", "Обнови Marketing Skills", or "обнови маркетинговые навыки". Refresh tracked skills from main across their existing clients, remove upstream-deleted skills automatically, and ask once before installing newly available skills. For informational how-to questions, explain the process without changing the system.'
 ---
 
-# Update Marketing Skills
+# Update
 
 Keep installations from `ztemerbekov/marketing-skills` aligned with the latest `main` without changing skills from any other source.
 

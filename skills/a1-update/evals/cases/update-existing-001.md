@@ -15,7 +15,7 @@ Node.js 22, `npm`, and `npx` are available. The current directory contains a pro
 
 ## Input
 
-Upstream `main` contains `a1-setup-marketing-context`, `a1-editor`, `a1-editor-in-chief`, and `a1-update-marketing-skills`.
+Upstream `main` contains `a1-marketing-context`, `a1-editor`, `a1-editor-in-chief`, and `a1-update`.
 
 The global lock tracks the first three names from `ztemerbekov/marketing-skills` and also tracks `a1-unrelated` from `another-owner/another-repo`. Global list output reports Marketing Skills in Codex and Cursor.
 
@@ -26,7 +26,7 @@ The current-project lock tracks `a1-editor` from `ztemerbekov/marketing-skills`.
 - Refreshes the three existing global Marketing Skills from the canonical source and current `main`.
 - Refreshes the current project's `a1-editor`.
 - Preserves the reported connected clients for each active scope.
-- Presents `a1-update-marketing-skills` as a new skill and asks once before installing it.
+- Presents `a1-update` as a new skill and asks once before installing it.
 
 ## Must Preserve
 

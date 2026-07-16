@@ -1,0 +1,4 @@
+interface:
+  display_name: "A1 Marketing Context"
+  short_description: "Save reusable product and brand context"
+  default_prompt: "Use $a1-marketing-context to create or update my marketing context."

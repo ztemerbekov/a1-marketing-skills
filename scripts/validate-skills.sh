@@ -7,7 +7,7 @@ warnings=0
 passed=0
 artifacts_passed=0
 certification_report="docs/a1-editor-pilot-certification.md"
-update_certification_report="docs/a1-update-marketing-skills-certification.md"
+update_certification_report="docs/a1-update-certification.md"
 
 echo "Validating A1 design contract artifacts"
 echo
@@ -44,12 +44,12 @@ chief_eval_cases=(
 )
 
 update_eval_cases=(
-  "skills/a1-update-marketing-skills/evals/cases/update-existing-001.md"
-  "skills/a1-update-marketing-skills/evals/cases/update-deleted-001.md"
-  "skills/a1-update-marketing-skills/evals/cases/update-new-001.md"
-  "skills/a1-update-marketing-skills/evals/cases/update-explain-001.md"
-  "skills/a1-update-marketing-skills/evals/cases/update-prerequisite-001.md"
-  "skills/a1-update-marketing-skills/evals/cases/update-upstream-failure-001.md"
+  "skills/a1-update/evals/cases/update-existing-001.md"
+  "skills/a1-update/evals/cases/update-deleted-001.md"
+  "skills/a1-update/evals/cases/update-new-001.md"
+  "skills/a1-update/evals/cases/update-explain-001.md"
+  "skills/a1-update/evals/cases/update-prerequisite-001.md"
+  "skills/a1-update/evals/cases/update-upstream-failure-001.md"
 )
 
 required_artifacts=(
@@ -74,13 +74,14 @@ required_artifacts=(
   "$update_certification_report"
   "skills/a1-editor-in-chief/references/chief-gate.md"
   "skills/a1-editor-in-chief/references/editor-brief.md"
-  "skills/a1-update-marketing-skills/SKILL.md"
-  "skills/a1-update-marketing-skills/agents/openai.yaml"
-  "skills/a1-update-marketing-skills/references/npx-workflow.md"
-  "skills/a1-update-marketing-skills/references/runtime-prerequisites.md"
-  "skills/a1-update-marketing-skills/scripts/prune-lock.mjs"
-  "skills/a1-update-marketing-skills/evals/README.md"
-  "skills/a1-update-marketing-skills/evals/case-template.md"
+  "skills/a1-update/SKILL.md"
+  "skills/a1-update/agents/openai.yaml"
+  "skills/a1-update/references/npx-workflow.md"
+  "skills/a1-update/references/runtime-prerequisites.md"
+  "skills/a1-update/scripts/prune-lock.mjs"
+  "skills/a1-update/evals/README.md"
+  "skills/a1-update/evals/case-template.md"
+  "skills/a1-marketing-context/agents/openai.yaml"
   "${editor_eval_cases[@]}"
   "${chief_eval_cases[@]}"
   "${update_eval_cases[@]}"
@@ -120,6 +121,33 @@ for adapter in "${removed_adapters[@]}"; do
   fi
 done
 
+legacy_skill_dirs=(
+  "skills/a1-setup-marketing-context"
+  "skills/a1-update-marketing-skills"
+)
+
+for legacy_skill_dir in "${legacy_skill_dirs[@]}"; do
+  if [[ -e "$legacy_skill_dir" ]]; then
+    echo "FAIL $legacy_skill_dir"
+    echo "  Legacy skill aliases must not remain installable"
+    issues=$((issues + 1))
+  fi
+done
+
+legacy_skill_references="$(
+  grep -RIlE \
+    --exclude="validate-skills.sh" \
+    'a1-setup-marketing-context|a1-update-marketing-skills' \
+    AGENTS.md CONTRIBUTING.md docs skills scripts || true
+)"
+
+if [[ -n "$legacy_skill_references" ]]; then
+  echo "FAIL legacy skill references"
+  echo "  Previous identifiers may appear only in README migration instructions and validator assertions"
+  echo "$legacy_skill_references"
+  issues=$((issues + 1))
+fi
+
 require_text() {
   local file="$1"
   local required_text="$2"
@@ -147,6 +175,7 @@ forbid_text() {
 require_text "AGENTS.md" "docs/a1-skill-design-contract.md" "AGENTS.md must require the canonical A1 skill design contract"
 require_text "AGENTS.md" "docs/a1-skill-completion-checklist.md" "AGENTS.md must require the reusable A1 completion checklist"
 require_text "AGENTS.md" "CONTEXT-MAP.md" "AGENTS.md must require domain-boundary reassessment for new skills"
+require_text "AGENTS.md" 'agents/openai.yaml' "AGENTS.md must document the accepted UI metadata extension"
 require_text "docs/a1-skill-design-contract.md" "a1-skill-completion-checklist.md" "The design contract must route maintainers to the completion checklist"
 require_text "docs/a1-skill-completion-checklist.md" "## Invocation and Interaction Contract" "Completion checklist must cover invocation selection"
 require_text "docs/a1-skill-completion-checklist.md" "## Self-Contained Runtime" "Completion checklist must cover self-contained installation"
@@ -160,15 +189,19 @@ require_text "README.ru.md" "## Какой навык выбрать" "README.ru
 require_text "README.md" "<summary><strong>Marketing Context</strong></summary>" "README.md must explain Marketing Context in a user-facing disclosure"
 require_text "README.md" "<summary><strong>Editor</strong></summary>" "README.md must explain Editor in a user-facing disclosure"
 require_text "README.md" "<summary><strong>Editor in Chief</strong></summary>" "README.md must explain Editor in Chief in a user-facing disclosure"
-require_text "README.md" "<summary><strong>Update Marketing Skills</strong></summary>" "README.md must explain the updater in a user-facing disclosure"
+require_text "README.md" "<summary><strong>Update</strong></summary>" "README.md must explain the updater in a user-facing disclosure"
 require_text "README.ru.md" "<summary><strong>Маркетинговый контекст</strong></summary>" "README.ru.md must explain Marketing Context in a Russian disclosure"
 require_text "README.ru.md" "<summary><strong>Редактор</strong></summary>" "README.ru.md must explain Editor in a Russian disclosure"
 require_text "README.ru.md" "<summary><strong>Шеф-редактор</strong></summary>" "README.ru.md must explain Editor in Chief in a Russian disclosure"
-require_text "README.ru.md" "<summary><strong>Обновление Marketing Skills</strong></summary>" "README.ru.md must explain the updater in a Russian disclosure"
+require_text "README.ru.md" "<summary><strong>Обновление</strong></summary>" "README.ru.md must explain the updater in a Russian disclosure"
 require_text "README.md" "## Update" "README.md must include user-facing update instructions"
 require_text "README.ru.md" "## Обновление" "README.ru.md must include Russian update instructions"
 require_text "README.md" "npx skills@latest add ztemerbekov/marketing-skills -g" "README.md must use the canonical global npx installer"
 require_text "README.ru.md" "npx skills@latest add ztemerbekov/marketing-skills -g" "README.ru.md must use the canonical global npx installer"
+require_text "README.md" "a1-setup-marketing-context" "README.md must keep the permanent migration path from the previous context skill name"
+require_text "README.md" "a1-update-marketing-skills" "README.md must keep the permanent migration path from the previous updater name"
+require_text "README.ru.md" "a1-setup-marketing-context" "README.ru.md must keep the permanent migration path from the previous context skill name"
+require_text "README.ru.md" "a1-update-marketing-skills" "README.ru.md must keep the permanent migration path from the previous updater name"
 require_text "README.md" "CONTRIBUTING.md" "README.md must end with a concise contributor entry point"
 require_text "README.ru.md" "CONTRIBUTING.md" "README.ru.md must end with a concise contributor entry point"
 require_text "README.md" "z.temerbekov@gmail.com" "README.md must include the feedback address"
@@ -206,8 +239,10 @@ require_text "docs/maintainers/README.md" "../a1-marketing-glossary.md" "Maintai
 require_text "docs/maintainers/README.md" "../a1-skill-completion-checklist.md" "Maintainer index must link the reusable completion checklist"
 require_text "docs/maintainers/README.md" "../a1-editor-pilot-certification.md" "Maintainer index must link the pilot certification record"
 require_text "docs/maintainers/README.md" "../a1-editor-pilot-run-2026-07-15.md" "Maintainer index must link the complete pilot run"
-require_text "docs/maintainers/README.md" "../a1-update-marketing-skills-certification.md" "Maintainer index must link the updater certification record"
+require_text "docs/maintainers/README.md" "../a1-update-certification.md" "Maintainer index must link the updater certification record"
 require_text "scripts/sync-readmes.js" 'file: "README.ru.md"' "README synchronization must cover the Russian skill inventory"
+require_text "skills/a1-marketing-context/agents/openai.yaml" 'display_name: "A1 Marketing Context"' "Marketing Context must expose the agreed display name"
+require_text "skills/a1-update/agents/openai.yaml" 'display_name: "A1 Update"' "Update must expose the agreed display name"
 require_text "skills/a1-editor/evals/README.md" "## Case Format" "Editor eval docs must define the case format"
 require_text "skills/a1-editor/evals/README.md" "## Manual Run Protocol" "Editor eval docs must define the manual run protocol"
 require_text "$certification_report" "## Certification Status" "Pilot certification must state its verdict"
@@ -262,16 +297,16 @@ require_text "skills/a1-editor-in-chief/references/chief-gate.md" "### Text Goal
 require_text "skills/a1-editor-in-chief/references/chief-gate.md" "### Channel or Format" "Chief gate must require the channel or format"
 require_text "skills/a1-editor-in-chief/references/chief-gate.md" "### Constraints" "Chief gate must require constraints"
 require_text "skills/a1-editor-in-chief/references/chief-gate.md" "### Editing Operation" "Chief gate must require the editing operation"
-require_text "skills/a1-update-marketing-skills/SKILL.md" "ztemerbekov/marketing-skills" "Update skill must pin its source boundary"
-require_text "skills/a1-update-marketing-skills/SKILL.md" "without asking and without creating a backup" "Update skill must overwrite existing installations without a backup prompt"
-require_text "skills/a1-update-marketing-skills/SKILL.md" "Present all newly available skills in one confirmation" "Update skill must group the new-skill confirmation"
-require_text "skills/a1-update-marketing-skills/SKILL.md" "automatically remove tracked skills missing from upstream" "Update skill must remove upstream-deleted skills without confirmation"
-require_text "skills/a1-update-marketing-skills/SKILL.md" "references/npx-workflow.md" "Update skill must route to its source-scoped npx workflow"
-require_text "skills/a1-update-marketing-skills/SKILL.md" "references/runtime-prerequisites.md" "Update skill must route missing Node.js to its prerequisite workflow"
-require_text "skills/a1-update-marketing-skills/references/npx-workflow.md" 'Never use `--all`' "Update workflow must forbid unscoped removal"
-require_text "skills/a1-update-marketing-skills/references/npx-workflow.md" "node scripts/prune-lock.mjs" "Update workflow must clean source-owned stale lock entries"
-require_text "skills/a1-update-marketing-skills/SKILL.md" "Do not search other project directories" "Update workflow must stay within global and current-project scopes"
-require_text "skills/a1-update-marketing-skills/references/runtime-prerequisites.md" "Do not bootstrap Homebrew" "Prerequisite workflow must not install another package manager"
+require_text "skills/a1-update/SKILL.md" "ztemerbekov/marketing-skills" "Update skill must pin its source boundary"
+require_text "skills/a1-update/SKILL.md" "without asking and without creating a backup" "Update skill must overwrite existing installations without a backup prompt"
+require_text "skills/a1-update/SKILL.md" "Present all newly available skills in one confirmation" "Update skill must group the new-skill confirmation"
+require_text "skills/a1-update/SKILL.md" "automatically remove tracked skills missing from upstream" "Update skill must remove upstream-deleted skills without confirmation"
+require_text "skills/a1-update/SKILL.md" "references/npx-workflow.md" "Update skill must route to its source-scoped npx workflow"
+require_text "skills/a1-update/SKILL.md" "references/runtime-prerequisites.md" "Update skill must route missing Node.js to its prerequisite workflow"
+require_text "skills/a1-update/references/npx-workflow.md" 'Never use `--all`' "Update workflow must forbid unscoped removal"
+require_text "skills/a1-update/references/npx-workflow.md" "node scripts/prune-lock.mjs" "Update workflow must clean source-owned stale lock entries"
+require_text "skills/a1-update/SKILL.md" "Do not search other project directories" "Update workflow must stay within global and current-project scopes"
+require_text "skills/a1-update/references/runtime-prerequisites.md" "Do not bootstrap Homebrew" "Prerequisite workflow must not install another package manager"
 
 for eval_case in "${editor_eval_cases[@]}" "${chief_eval_cases[@]}" "${update_eval_cases[@]}"; do
   require_text "$eval_case" "## User Instruction" "Editor eval case must include the exact user instruction"
