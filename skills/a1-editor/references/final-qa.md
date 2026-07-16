@@ -29,9 +29,8 @@ This is the authoritative final acceptance check for `a1-editor`. Run it after t
 
 ## 5. Response Integrity
 
-- The response follows the output contract in `../SKILL.md`.
-- `What Changed` contains one to five concise explanations of changes actually made.
-- If the user requested edited text only, no explanations or process notes are added.
+- The response follows every language, labeling, order, and exception rule in the output contract in `../SKILL.md`.
+- The localized change-summary section contains one to five concise explanations of changes actually made.
 - Assumptions or limitations appear only when they materially affect the rewrite.
 
 ## Pass Rule

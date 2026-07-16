@@ -15,6 +15,8 @@ This is a public, Model-invoked skill for marketers, founders, and non-editors. 
 
 Detect the user's language and work in that language by default. If the input text and user instruction use different languages, preserve the input text language for rewritten copy and use the instruction language for explanations unless the user asks otherwise.
 
+Use the explanation language for every user-facing service element, including section headings, option labels, change notes, assumptions, warnings, limitations, and similar response scaffolding. Localize these elements naturally. Do not translate skill names, commands, paths, code, URLs, product names, or explicitly supplied terms.
+
 ## Request Boundary
 
 Before applying the entry contract, read [the strategy boundary](references/strategy-boundary.md) and classify the whole request by meaning.
@@ -49,24 +51,31 @@ Load detailed text-, paragraph-, sentence-, or word-level references only when t
 
 ## Output
 
-For most requests, output:
+For every accepted request except an explicit edited-text-only request, return these semantic sections in this order, with every user-facing label localized under the Language rule:
 
 ```markdown
-## Edited Version
+## [localized Edited version label]
 
-[rewritten text]
+[rewritten text, or localized numbered options]
 
-## What Changed
+## [localized What changed label]
 
-- [short reason]
-- [short reason]
-- [up to 5 short reasons total]
+- [one to five concise explanations of changes actually made]
 
-## Assumptions
+## [localized Assumptions label]
 
-- [only if materially relevant]
+- [only when materially relevant]
 ```
 
-Always include `What Changed` with one to five concise explanations of changes actually made unless the user explicitly asks for only the edited text.
+Use these canonical labels when their language applies:
 
-If the user asks to explain edits, tie the explanation to specific changes. If the user asks for variants, provide two or three clearly different options and label the difference.
+| Service element | English | Russian |
+|---|---|---|
+| Edited version | `Edited Version` | `Отредактированный текст` |
+| Change summary | `What Changed` | `Что изменилось` |
+| Assumptions | `Assumptions` | `Допущения` |
+| Numbered option | `Option N` | `Вариант N` |
+
+Use the exact canonical English or Russian label when that language applies; do not replace it with a synonym, singular form, or alternate wording. For other languages, use natural localized equivalents of the same semantic labels. Do not mix the edited-copy language into the service elements when the explanation language differs.
+
+Always start with the localized edited-version heading and include the localized change-summary section unless the user explicitly asks for only the edited text. Variants stay inside the edited-version section; provide two or three clearly different options, use localized option labels, and put any descriptive difference after—not instead of—the canonical option label. If the user explicitly asks to disclose an assumption, treat that section as material and place it after the change summary rather than before the result. If the user asks to explain edits, tie the explanation to specific changes. Preserve an edited-text-only request without headings, explanations, assumptions, warnings, or option labels.

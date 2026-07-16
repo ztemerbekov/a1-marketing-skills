@@ -76,6 +76,8 @@ The context belongs only to the current repository: there is no global or privat
 
 Marketing Context is useful for repeated work, but ordinary editing does not require it.
 
+Response headings, option labels, and explanations follow the language of your instruction. The edited copy keeps the source language unless you ask to translate it.
+
 **Try:**
 
 ```text

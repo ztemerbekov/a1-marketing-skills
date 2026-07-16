@@ -48,6 +48,13 @@ Every materially changed scope boundary must have coverage for four scenarios ac
 - [restructuring](cases/editor-restructure-001.md)
 - [significant ambiguity](cases/editor-ambiguity-001.md)
 
+### Language and Output Contract
+
+- [Russian instruction localizes the complete response](cases/editor-language-010.md)
+- [English instruction keeps Russian copy and English service elements](cases/editor-language-011.md)
+- [edited-text-only override remains wrapper-free](cases/editor-language-012.md)
+- [third-language instruction localizes response scaffolding](cases/editor-language-013.md)
+
 ### Information Style
 
 - [explicit information-style activation](cases/editor-information-style-001.md)
