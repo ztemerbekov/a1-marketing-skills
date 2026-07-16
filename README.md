@@ -152,15 +152,13 @@ Remove the current global collection from every connected client:
 
 ```bash
 npx skills@latest remove \
-  a1-marketing-context \
   a1-editor \
   a1-editor-in-chief \
+  a1-marketing-context \
   a1-update \
   --global \
   --yes
 ```
-
-For a project-only installation, run the command from that project and omit `--global`.
 
 </details>
 

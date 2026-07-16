@@ -152,15 +152,13 @@ npx skills@latest add ztemerbekov/marketing-skills
 
 ```bash
 npx skills@latest remove \
-  a1-marketing-context \
   a1-editor \
   a1-editor-in-chief \
+  a1-marketing-context \
   a1-update \
   --global \
   --yes
 ```
-
-Для установки только в проекте выполните команду в этом проекте и уберите `--global`.
 
 </details>
 
