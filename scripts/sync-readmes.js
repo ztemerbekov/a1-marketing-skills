@@ -5,9 +5,9 @@ const path = require("path");
 
 const skillsDir = "skills";
 const skillOrder = [
-  "a1-setup-marketing-context",
   "a1-editor",
   "a1-editor-in-chief",
+  "a1-setup-marketing-context",
   "a1-update-marketing-skills",
 ];
 const readmes = [
@@ -18,22 +18,22 @@ const readmes = [
       "a1-setup-marketing-context": {
         title: "Marketing Context",
         summary:
-          "Giving future marketing work reusable product, audience, positioning, voice, proof, vocabulary, examples, and goals.",
+          "Save product, audience, and voice information for future work.",
       },
       "a1-editor": {
         title: "Editor",
         summary:
-          "Improving existing text immediately: edit, shorten, clarify, strengthen, or restructure without inventing facts.",
+          "Improve existing text: shorten, clarify, strengthen, or restructure it without inventing facts.",
       },
       "a1-editor-in-chief": {
         title: "Editor in Chief",
         summary:
-          "Defining a strategic or editorial assignment through focused questions before Editor rewrites the text.",
+          "Define the reader, goal, format, constraints, and message before editing the text.",
       },
       "a1-update-marketing-skills": {
         title: "Update Marketing Skills",
         summary:
-          "Updating only this collection across already connected AI clients and offering newly available skills before installing them.",
+          "Update only Marketing Skills and decide separately whether to install new skills from the collection.",
       },
     },
   },
@@ -44,22 +44,22 @@ const readmes = [
       "a1-setup-marketing-context": {
         title: "Маркетинговый контекст",
         summary:
-          "Сохранить сведения о продукте, аудитории, позиционировании, стиле общения, подтверждениях, словаре, примерах и целях для следующих задач.",
+          "Сохранить сведения о продукте, аудитории и стиле общения для следующих задач.",
       },
       "a1-editor": {
         title: "Редактор",
         summary:
-          "Сразу улучшить готовый текст: отредактировать, сократить, прояснить, усилить или перестроить без выдуманных фактов.",
+          "Улучшить готовый текст: сократить, прояснить, усилить или перестроить, не добавляя выдуманных фактов.",
       },
       "a1-editor-in-chief": {
         title: "Шеф-редактор",
         summary:
-          "Поставить стратегическую или редакторскую задачу через короткие уточнения, а затем передать текст Редактору.",
+          "Сначала определить читателя, цель, формат, ограничения и сообщение, а затем отредактировать текст.",
       },
       "a1-update-marketing-skills": {
         title: "Обновление Marketing Skills",
         summary:
-          "Обновить только этот набор во всех уже подключённых ИИ-клиентах и заранее показать новые доступные навыки.",
+          "Обновить только Marketing Skills и отдельно решить, устанавливать ли новые навыки из набора.",
       },
     },
   },
@@ -128,7 +128,7 @@ function syncReadme(skills, readme) {
     "|-------|----------|",
     ...skills.map((skill) => {
       const copy = readme.copy[skill.name];
-      return `| [${copy.title}](skills/${skill.dir}/) (\`${skill.name}\`) | ${copy.summary} |`;
+      return `| [${copy.title}](skills/${skill.dir}/)<br>\`${skill.name}\` | ${copy.summary} |`;
     }),
   ].join("\n");
 
