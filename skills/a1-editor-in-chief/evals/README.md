@@ -25,6 +25,10 @@ Use [the case template](case-template.md) for new cases. Filenames must match th
 - [one corrective Editor pass](cases/chief-corrective-review-011.md)
 - [copy and explanation language behavior](cases/chief-language-012.md)
 - [global and previous-project context isolation](cases/chief-context-isolation-013.md)
+- [Russian instruction localizes the complete Chief response](cases/chief-language-014.md)
+- [English instruction keeps Russian copy and Chief labels](cases/chief-language-015.md)
+- [final-text-only override remains wrapper-free](cases/chief-language-016.md)
+- [third-language instruction localizes Chief delivery](cases/chief-language-017.md)
 - [task-specific audience and voice override context defaults](cases/context-chief-default-override-019.md)
 - [protected context conflict stops before the brief](cases/context-chief-protected-conflict-020.md)
 

@@ -16,6 +16,6 @@ If the first result passes, deliver it. If it fails:
 
 Never rewrite or patch Editor's text locally. Never make more than one corrective Editor pass.
 
-If the second result still fails, report the unresolved criteria honestly. Withhold a draft that violates source fidelity or a binding constraint. A safe but incomplete draft may be returned only with a material `Warnings` section that names the failure; do not claim that the review passed.
+If the second result still fails, report the unresolved criteria honestly. Withhold a draft that violates source fidelity or a binding constraint. A safe but incomplete draft may be returned only with the localized material warnings section required by the output contract; do not claim that the review passed.
 
 **Complete when:** the first result passes, or one corrective pass has been reviewed and any remaining failure is disclosed without local rewriting or a third Editor call.

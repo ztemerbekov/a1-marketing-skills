@@ -54,6 +54,6 @@ Read [chief-review.md](chief-review.md). Review against the brief. Allow at most
 
 ## 9. Deliver Simply
 
-Use the output contract in `../SKILL.md`. Return the final text and one to five concise `What Changed` bullets. Add assumptions or warnings only when material. Include the Editor Brief only when explicitly requested.
+Use the output contract in `../SKILL.md`. Return the reviewed copy once under the localized Chief delivery sections; do not pass through Editor response scaffolding. Before returning a wrapped delivery, verify that every heading and every inline or block option marker uses the explanation language, and relabel service scaffolding if needed without changing the reviewed copy. Include the Editor Brief only when explicitly requested.
 
 **Complete when:** the user receives the reviewed text and concise change summary without internal process sections, or an unresolved unsafe failure is reported without presenting the unsafe draft.

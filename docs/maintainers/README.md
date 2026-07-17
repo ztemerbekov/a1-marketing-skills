@@ -12,6 +12,7 @@ This is the technical entry point for people who design, develop, validate, and 
 - [A1 Editor localization run](../a1-editor-localization-run-2026-07-16.md) — Issue #14 mixed-language output-contract evidence and release verdict.
 - [A1 scope-boundary focused run](../a1-scope-boundary-run-2026-07-16.md) — Issue #7 boundary outputs, human criteria verdict, and the explicitly accepted constrained fallback.
 - [A1 Editor in Chief refactor run](../a1-editor-in-chief-run-2026-07-16.md) — Issue #8 outputs, criteria evidence, and release verdict for the bounded orchestration spine.
+- [A1 Editor in Chief localization run](../a1-editor-in-chief-localization-run-2026-07-17.md) — Issue #15 mixed-language delivery evidence and focused verdict.
 - [A1 Marketing Context incremental workflow run](../a1-marketing-context-run-2026-07-16.md) — Issue #9 write traces, criteria evidence, and release verdict for repository-local incremental context maintenance.
 - [A1 integrated release run](../a1-integrated-release-run-2026-07-16.md) — Issue #10 full-suite and cross-skill semantic evidence for the final integrated candidate.
 - [A1 Editor in Chief completion checklist](../a1-editor-in-chief-completion-2026-07-16.md) — separate Chief completion verdict and limitations.

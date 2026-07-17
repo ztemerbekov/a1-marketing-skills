@@ -9,6 +9,7 @@ artifacts_passed=0
 certification_report="docs/a1-editor-pilot-certification.md"
 editor_localization_report="docs/a1-editor-localization-run-2026-07-16.md"
 chief_run_report="docs/a1-editor-in-chief-run-2026-07-16.md"
+chief_localization_report="docs/a1-editor-in-chief-localization-run-2026-07-17.md"
 context_run_report="docs/a1-marketing-context-run-2026-07-16.md"
 integrated_run_report="docs/a1-integrated-release-run-2026-07-16.md"
 chief_completion_report="docs/a1-editor-in-chief-completion-2026-07-16.md"
@@ -63,6 +64,13 @@ chief_eval_cases=(
   "skills/a1-editor-in-chief/evals/cases/chief-source-conflict-010.md"
   "skills/a1-editor-in-chief/evals/cases/chief-corrective-review-011.md"
   "skills/a1-editor-in-chief/evals/cases/chief-language-012.md"
+)
+
+chief_localization_eval_cases=(
+  "skills/a1-editor-in-chief/evals/cases/chief-language-014.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-language-015.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-language-016.md"
+  "skills/a1-editor-in-chief/evals/cases/chief-language-017.md"
 )
 
 chief_integration_eval_cases=(
@@ -137,6 +145,7 @@ required_artifacts=(
   "$certification_report"
   "$editor_localization_report"
   "$chief_run_report"
+  "$chief_localization_report"
   "$context_run_report"
   "$integrated_run_report"
   "$chief_completion_report"
@@ -171,6 +180,7 @@ required_artifacts=(
   "${editor_eval_cases[@]}"
   "${editor_localization_eval_cases[@]}"
   "${chief_eval_cases[@]}"
+  "${chief_localization_eval_cases[@]}"
   "${context_eval_cases[@]}"
   "${context_consumer_eval_cases[@]}"
   "${release_chief_eval_cases[@]}"
@@ -346,6 +356,7 @@ require_text "docs/maintainers/README.md" "../a1-skill-completion-checklist.md" 
 require_text "docs/maintainers/README.md" "../a1-editor-pilot-certification.md" "Maintainer index must link the pilot certification record"
 require_text "docs/maintainers/README.md" "../a1-editor-pilot-run-2026-07-15.md" "Maintainer index must link the complete pilot run"
 require_text "docs/maintainers/README.md" "../a1-editor-localization-run-2026-07-16.md" "Maintainer index must link the Editor localization run"
+require_text "docs/maintainers/README.md" "../a1-editor-in-chief-localization-run-2026-07-17.md" "Maintainer index must link the Chief localization run"
 require_text "docs/maintainers/README.md" "../a1-marketing-context-run-2026-07-16.md" "Maintainer index must link the Marketing Context run"
 require_text "docs/maintainers/README.md" "../a1-integrated-release-run-2026-07-16.md" "Maintainer index must link the integrated release run"
 require_text "docs/maintainers/README.md" "../a1-editor-in-chief-completion-2026-07-16.md" "Maintainer index must link the Chief completion checklist"
@@ -400,6 +411,10 @@ require_text "skills/a1-editor/evals/README.md" "editor-language-012.md" "Editor
 require_text "skills/a1-editor/evals/README.md" "editor-language-013.md" "Editor suite must cover localization beyond English and Russian"
 require_text "skills/a1-editor-in-chief/evals/README.md" "context-chief-default-override-019.md" "Chief must own its context-default integration regression"
 require_text "skills/a1-editor-in-chief/evals/README.md" "context-chief-protected-conflict-020.md" "Chief must own its protected-context integration regression"
+require_text "skills/a1-editor-in-chief/evals/README.md" "chief-language-014.md" "Chief suite must cover Russian localized response scaffolding"
+require_text "skills/a1-editor-in-chief/evals/README.md" "chief-language-015.md" "Chief suite must cover English scaffolding with Russian copy"
+require_text "skills/a1-editor-in-chief/evals/README.md" "chief-language-016.md" "Chief suite must preserve the final-text-only override"
+require_text "skills/a1-editor-in-chief/evals/README.md" "chief-language-017.md" "Chief suite must cover localization beyond English and Russian"
 require_text "$context_run_report" 'Candidate source: current `skills/a1-marketing-context/`, `skills/a1-editor/`, and `skills/a1-editor-in-chief/`' "Context integration record must identify every runtime candidate"
 require_text "$context_run_report" "Combined candidate directory digest" "Context integration record must use a combined candidate digest"
 require_text "$context_run_report" "After Answer 6, write:" "Seven-question evidence must record every intermediate write and output"
@@ -527,7 +542,7 @@ require_text "skills/a1-update/references/npx-workflow.md" "node scripts/prune-l
 require_text "skills/a1-update/SKILL.md" "Do not search other project directories" "Update workflow must stay within global and current-project scopes"
 require_text "skills/a1-update/references/runtime-prerequisites.md" "Do not bootstrap Homebrew" "Prerequisite workflow must not install another package manager"
 
-for eval_case in "${editor_eval_cases[@]}" "${editor_localization_eval_cases[@]}" "${chief_eval_cases[@]}" "${chief_integration_eval_cases[@]}" "${context_eval_cases[@]}" "${context_consumer_eval_cases[@]}" "${release_chief_eval_cases[@]}" "${update_eval_cases[@]}"; do
+for eval_case in "${editor_eval_cases[@]}" "${editor_localization_eval_cases[@]}" "${chief_eval_cases[@]}" "${chief_localization_eval_cases[@]}" "${chief_integration_eval_cases[@]}" "${context_eval_cases[@]}" "${context_consumer_eval_cases[@]}" "${release_chief_eval_cases[@]}" "${update_eval_cases[@]}"; do
   require_text "$eval_case" "## User Instruction" "A1 eval case must include the exact user instruction"
   require_text "$eval_case" "## Input" "A1 eval case must include the complete input"
   require_text "$eval_case" "## Must Change" "A1 eval case must include Must Change criteria"
@@ -571,6 +586,18 @@ for eval_case in "${chief_eval_cases[@]}" "${chief_integration_eval_cases[@]}"; 
   eval_id="$(sed -n 's/^- ID: `\([^`]*\)`.*/\1/p' "$eval_case" | head -n 1)"
   require_text "$chief_run_report" "$eval_id" "Chief run report must include eval case $eval_id"
 done
+
+for eval_case in "${chief_localization_eval_cases[@]}"; do
+  eval_id="$(sed -n 's/^- ID: `\([^`]*\)`.*/\1/p' "$eval_case" | head -n 1)"
+  require_text "$chief_localization_report" "$eval_id" "Chief localization run must include eval case $eval_id"
+done
+
+require_text "$chief_localization_report" "## Installation Mode" "Chief localization run must disclose its installation mode"
+require_text "$chief_localization_report" 'Repository verification: `PASS`' "Chief localization run must record passing repository verification"
+require_text "$chief_localization_report" 'Standards review: `PASS`' "Chief localization run must record the independent Standards verdict"
+require_text "$chief_localization_report" 'Spec review: `PASS`' "Chief localization run must record the independent Spec verdict"
+require_text "$chief_localization_report" 'Human semantic judgment: `PASS`' "Chief localization run must capture the human semantic verdict"
+require_text "$chief_localization_report" 'Focused semantic gate: `PASS`' "Chief localization run must state a passing focused semantic verdict"
 
 for eval_case in "${context_eval_cases[@]}" "${context_consumer_eval_cases[@]}"; do
   eval_id="$(sed -n 's/^- ID: `\([^`]*\)`.*/\1/p' "$eval_case" | head -n 1)"

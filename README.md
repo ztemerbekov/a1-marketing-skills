@@ -99,6 +99,8 @@ Requests to create or rethink positioning, an offer, an audience, campaign messa
 
 **Use it when:** you already have the source material and approved marketing strategy, but the reader focus, message emphasis, editorial angle, argument order, structure, or voice still needs chief-editor judgment. Invoke Editor in Chief by name; the skill starts only when you explicitly invoke it.
 
+Final headings, option labels, explanations, assumptions, and warnings follow the language of your instruction. The reviewed copy keeps the source language unless you ask to translate it, and a request for final text only remains wrapper-free.
+
 **Try:**
 
 ```text
