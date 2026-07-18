@@ -221,13 +221,7 @@ Here is what happens:
 - skills from other collections do not change;
 - manual changes inside installed skill files are lost.
 
-Before changing an installation, Update verifies the complete source, installation, and connected-app state. If it cannot prepare the whole update safely, nothing changes and you receive one recovery action instead of a technical choice. If Node.js is unavailable or too old, it asks only “Node.js is required for the update. Install it and continue?” and, after approval, uses an already available trusted installer before resuming. A failure after changes begin is reported as partial completion with one instruction to retry; Update does not attempt an unsafe rollback.
-
-You can also update from the terminal. Run the installation command again and select the skills and apps you want to update:
-
-```bash
-npx skills@latest add ztemerbekov/marketing-skills -g
-```
+The agent handles the update itself. If it needs your permission, it asks one short question.
 
 ## Help and feedback
 

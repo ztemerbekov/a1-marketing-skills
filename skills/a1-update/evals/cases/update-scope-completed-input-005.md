@@ -5,7 +5,7 @@
 
 ## Setup
 
-Node.js 22, `npm`, and `npx` are available. Command execution is intercepted by a fixture, and no current-project installation is active.
+Node.js 22.20.0 or newer, `npm`, and `npx` are available. Command execution is intercepted by a fixture, and no current-project installation is active.
 
 ## User Instruction
 

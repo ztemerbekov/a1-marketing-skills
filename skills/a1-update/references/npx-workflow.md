@@ -45,6 +45,7 @@ Supported client label-to-key mappings are:
 | Cursor | `cursor` |
 | Gemini CLI | `gemini-cli` |
 | GitHub Copilot | `github-copilot` |
+| Warp | `warp` |
 | Zed | `zed` |
 
 For each scope, take the union of clients reported for its source-tracked Marketing Skills. This is the managed client set for the complete collection in that scope. The global lock's `lastSelectedAgents` value is installer-wide history, not source-specific evidence; never use it to add clients to the managed set. Keep global and current-project unions separate.
@@ -78,9 +79,9 @@ Treat this as one mutation barrier across all active scopes. Do not run `npx ski
 
 ### Unknown-client recovery
 
-If any source-owned installed skill reports a client label that this installed updater cannot map, stop the whole run before the mutation barrier. Never ask the user for a key, invent one, omit the client, or update only the known clients.
+If any source-owned installed skill reports a client label that this running updater cannot map, do not invent a key, omit the client, or update only the known clients. Finish every other read-only check for every active scope. Use automatic recovery only when the unresolved mapping is the remaining preflight blocker.
 
-Locate the running `a1-update` copy to determine its installation scope. Give one short message in the user's language stating that the update could not be prepared and nothing changed. Then provide exactly one copy-ready bootstrap command that refreshes `a1-update` in that same scope before the user retries the original request. Do not pass `--agent`: current `npx skills` detects the AI client running the command and selects it non-interactively.
+Locate the running `a1-update` copy and determine its installation scope. Refresh only that updater automatically with the matching command below. Do not pass `--agent`: current `npx skills` detects the AI client running the command and selects it non-interactively. This source-pinned self-refresh is the sole bounded recovery mutation allowed before the ordinary collection mutation barrier.
 
 Global updater:
 
@@ -94,7 +95,9 @@ Current-project updater:
 npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --yes
 ```
 
-Return only the command that matches the running updater. Do not name the unresolved client, show a client table, explain a lock file, expose an `--agent` key, or offer alternative commands.
+After the command succeeds, Reload the refreshed A1 Update instructions from the same installed path, including the workflow references they select. Restart the user's original request from scope classification and a complete read-only preflight; reuse no inventory, mapping, or plan from the earlier attempt. If the refreshed updater resolves every client, continue through the ordinary mutation barrier and synchronize the complete collection into the recovered managed set.
+
+Attempt this automatic self-refresh at most once in one user request. Mutation begins immediately before invoking the bootstrap command. If it fails, if reloading fails, if the restarted preflight fails, or if the refreshed updater still cannot resolve the client, stop without another bootstrap attempt and use the partial-completion response from `SKILL.md`. Never show the bootstrap command to the user, ask them to copy or retry it, name the unresolved client, show a client table, explain a lock file, expose an `--agent` key, or offer alternative commands. On successful resumed synchronization, return only the ordinary success response.
 
 ## 5. Remove Deleted Skills Automatically
 

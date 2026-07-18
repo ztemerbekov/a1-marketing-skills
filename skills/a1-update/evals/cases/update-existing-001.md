@@ -5,7 +5,7 @@
 
 ## Setup
 
-Node.js 22, `npm`, and `npx` are available. The current directory contains a project lock. All command execution is intercepted by a fixture.
+Node.js 22.20.0 or newer, `npm`, and `npx` are available. The current directory contains a project lock. All command execution is intercepted by a fixture.
 
 ## User Instruction
 

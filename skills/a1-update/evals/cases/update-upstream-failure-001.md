@@ -5,7 +5,7 @@
 
 ## Setup
 
-Node.js 22, `npm`, and `npx` are available. One exact-source global installation is active in Codex and Cursor, no current-project installation is active, and every command is intercepted by a fixture. GitHub is unavailable and the upstream inventory command fails.
+Node.js 22.20.0 or newer, `npm`, and `npx` are available. One exact-source global installation is active in Codex and Cursor, no current-project installation is active, and every command is intercepted by a fixture. GitHub is unavailable and the upstream inventory command fails.
 
 ## User Instruction
 

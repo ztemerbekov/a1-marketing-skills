@@ -29,7 +29,7 @@ Prefer an already-installed Node version manager because it can select LTS direc
 - `nvm install --lts`, then activate that LTS version;
 - `volta install node@lts`.
 
-Otherwise use an existing trusted platform manager, such as Homebrew on macOS, WinGet on Windows, or the system package manager on Linux. Choose a package that provides Node.js 18 or newer and prefer active LTS. Do not hard-code a future-sensitive LTS major when the manager can resolve LTS itself.
+Otherwise use an existing trusted platform manager, such as Homebrew on macOS, WinGet on Windows, or the system package manager on Linux. Choose a package that provides Node.js 22.20.0 or newer and prefer active LTS. Do not hard-code a future-sensitive LTS major when the manager can resolve LTS itself.
 
 If no suitable manager exists, use the official Node.js installer from `https://nodejs.org/en/download` and let the user complete operating-system prompts. Do not bootstrap Homebrew or another package manager merely to install Node.js.
 

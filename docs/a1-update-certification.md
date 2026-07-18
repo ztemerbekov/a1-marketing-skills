@@ -5,7 +5,7 @@ This record is the semantic release gate for `a1-update`. Structural and isolate
 ## Certification Status
 
 - Status: `PENDING`
-- Candidate runtime revision: Issue #17 candidate digest `730f8d8a534f0d3921460812afd563978b3c4369ae8d5f92acc57e290ee68229`
+- Candidate runtime revision: Issue #17 candidate digest `3f77ca9e1502356c4a48441e3fd5c94eb122c82e8f32abcbbd773ca3709c8c3a`
 - Decision: the Issue #16 managed-set gate passes. Issue #17 recovery outputs have preliminary evidence on the exact current candidate and await explicit constrained-fallback acceptance, human semantic judgment, repository verification, and independent Standards and Spec reviews.
 
 ## Domain Boundary Decision
@@ -41,6 +41,7 @@ Submit each case's exact instruction and complete fixture without paraphrasing. 
 | [`update-mid-write-failure-009`](../skills/a1-update/evals/cases/update-mid-write-failure-009.md) | `PENDING` | Issue #17 partial-completion contract is implemented; installed semantic evidence is pending. |
 | [`update-first-write-failure-010`](../skills/a1-update/evals/cases/update-first-write-failure-010.md) | `PENDING` | Issue #17 first-write uncertainty contract is implemented; installed semantic evidence is pending. |
 | [`update-upstream-failure-001`](../skills/a1-update/evals/cases/update-upstream-failure-001.md) | `PENDING` | Fail-closed contract is present; installed failure fixture pending. |
+| [`update-unrelated-project-lock-011`](../skills/a1-update/evals/cases/update-unrelated-project-lock-011.md) | `PENDING` | Exact unrelated-project-lock isolation trace is recorded; human semantic judgment is pending. |
 
 ## Release Evidence
 

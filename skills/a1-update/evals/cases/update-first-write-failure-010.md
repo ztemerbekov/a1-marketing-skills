@@ -5,7 +5,7 @@
 
 ## Setup
 
-Node.js 22, `npm`, and `npx` are available. One exact-source global installation passes the complete preflight, no current-project installation is active, and every command and file is intercepted by a fixture.
+Node.js 22.20.0 or newer, `npm`, and `npx` are available. One exact-source global installation passes the complete preflight, no current-project installation is active, and every command and file is intercepted by a fixture.
 
 ## User Instruction
 

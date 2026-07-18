@@ -4,11 +4,11 @@ This record collects preliminary focused semantic evidence for the preflight and
 
 ## Verdict
 
-- Focused recovery regressions: `PRELIMINARY PASS` — seven changed branches on one exact candidate digest
+- Focused recovery regressions: `PRELIMINARY PASS` — eight changed branches on one exact candidate digest
 - Unchanged Issue #16 managed-set regressions: `PASS` — previously certified behavior remains structurally covered and the ordinary success contract is unchanged
 - Repository verification: `PENDING`
-- Standards review: `PENDING`
-- Spec review: `PENDING`
+- Standards review: `PENDING` — the automatic-recovery and public-documentation revision requires a fresh independent review
+- Spec review: `PENDING` — the revised GitHub Issue #17 requires a fresh independent review
 - Human semantic judgment: `PENDING`
 - Focused semantic gate: `PENDING`
 
@@ -19,20 +19,20 @@ This record collects preliminary focused semantic evidence for the preflight and
 - Run date: `2026-07-18`
 - Repository base commit: `d375b57131ebc55853291ec61cc5e8da1c305f3e`
 - Candidate source: current `skills/a1-update/`
-- Candidate directory digest: `730f8d8a534f0d3921460812afd563978b3c4369ae8d5f92acc57e290ee68229`
-- Digest method: SHA-256 over every sorted path relative to `skills/a1-update/`, a NUL separator, and the raw SHA-256 digest of that file
+- Candidate directory digest: `3f77ca9e1502356c4a48441e3fd5c94eb122c82e8f32abcbbd773ca3709c8c3a`
+- Digest method: SHA-256 over the sorted standard `shasum -a 256` manifest of every file, with paths relative to `skills/a1-update/` and prefixed by `./`
 - Preliminary criteria reviewer: Codex
 - Human reviewer and constrained-fallback approver: `PENDING`
 
 ## Installation Mode
 
-The exact candidate was installed from the local repository into `/private/tmp/a1-update-issue17.ttDUJi` with `npx skills@latest` 1.5.19 and explicit Codex/global targeting. The installed directory and source candidate were byte-identical and produced the same digest above.
+The exact candidate was installed from the local repository into `/private/tmp/a1-update-issue17.bn8GdU/.agents/skills/a1-update` with the cached official `skills` 1.5.19 CLI and explicit Codex/project targeting. The local `npx` wrapper exited successfully without creating the requested isolated installation, so the same cached package's official `bin/cli.mjs` entry point was invoked directly. The installed directory and source candidate were byte-identical and produced the same digest above.
 
 A new external model run was not attempted. The Issue #16 attempt was rejected by the security reviewer because sending the private candidate and complete fixture prompts to an external provider required separate authorization; that restriction still applies. The proposed constrained fallback loads the exact candidate in this current supported Codex task, intercepts every fixture command, and asks the product owner to judge the complete outputs below. It has less isolation than a clean external client and does not mutate a real user installation.
 
 ## Source Check
 
-The current official `vercel-labs/skills` source and README were checked on `2026-07-18`. Version 1.5.19 requires Node.js 18 or newer. Inside a detected AI agent, `skills add` enters non-interactive mode and selects the detected agent when `--agent` is omitted. This supports a bootstrap command that targets the current client without exposing an installer key.
+The current official `vercel-labs/skills` source, package metadata, and README were checked on `2026-07-18`. Version 1.5.19 declares Node.js 22.20.0 or newer, includes Warp as a supported agent key, and enters non-interactive mode inside a detected AI agent. When `--agent` is omitted, `skills add` selects that detected agent. This supports an automatic updater bootstrap that targets the running client without exposing an installer key or command to the user.
 
 ## Domain Boundary Reassessment
 
@@ -49,13 +49,16 @@ The case verdicts below are preliminary Codex judgments until `ztemerbekov` revi
 The confirmed public seam was the installed updater as a black box: user request plus isolated runtime, upstream, lock, client, and command state in; command order, final state, and visible response out. Each vertical slice produced a failing repository check before its runtime contract was added:
 
 - complete all-scope preflight: 3 expected failures, then GREEN;
-- unknown-client bootstrap: 4 expected failures, then GREEN;
+- automatic unknown-client bootstrap and public-documentation separation: 6 expected failures, then GREEN;
 - exact Node.js approval question: 2 expected failures, then GREEN;
 - Node.js refusal: 2 expected failures, then GREEN;
 - mid-write partial completion: 3 expected failures, then GREEN;
 - first-write uncertainty added after Spec review: 3 expected failures beyond the open final gates, then GREEN;
 - non-technical upstream failure: 1 expected failure, then GREEN;
-- detected-client bootstrap refinement: 2 expected failures, then GREEN.
+- detected-client bootstrap refinement: 2 expected failures, then GREEN;
+- unrelated project-lock isolation: 2 expected failures, then GREEN;
+- current CLI runtime floor: 2 expected failures, then GREEN;
+- current Warp mapping: 1 expected failure, then GREEN.
 
 ## `update-preflight-failure-006` — PRELIMINARY PASS
 
@@ -66,7 +69,7 @@ Case: [stop all scopes when preflight is incomplete](../skills/a1-update/evals/c
 Maintainer-only intercepted trace:
 
 ```text
-node --version -> v22.17.0
+node --version -> v25.6.1
 npm --version -> available
 npx --version -> available
 npx skills@latest add ztemerbekov/marketing-skills --list
@@ -94,25 +97,32 @@ Case: [recover from an unknown client mapping](../skills/a1-update/evals/cases/u
 Maintainer-only intercepted trace:
 
 ```text
-node --version -> v22.17.0
+node --version -> v25.6.1
 npm --version -> available
 npx --version -> available
 npx skills@latest add ztemerbekov/marketing-skills --list
 npx skills@latest list -g --json -> source-owned inventory includes one unmappable client label
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --global --yes
+reload installed a1-update/SKILL.md and selected references -> refreshed updater maps the newer client
+node --version -> v25.6.1
+npm --version -> available
+npx --version -> available
+npx skills@latest add ztemerbekov/marketing-skills --list
+npx skills@latest list -g --json
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-editor --skill a1-editor-in-chief --skill a1-marketing-context --skill a1-update --agent cursor --agent future-client --global --yes
+npx skills@latest list -g --json
 ```
 
 User-visible response:
 
 ```text
-Не удалось безопасно подготовить обновление. Ничего не изменено. Обновите A1 Update этой командой, затем повторите запрос:
-
-npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --global --yes
+Marketing Skills обновлены.
 ```
 
-- Must change: `PRELIMINARY PASS` — the unmappable connected client stops preflight and produces one source-pinned bootstrap for the running global updater.
-- Must preserve: `PRELIMINARY PASS` — no installed skill, lock entry, client connection, or unrelated state changes.
-- Forbidden: `PRELIMINARY PASS` — the response neither names nor drops the client, asks for a key, exposes `--agent`, or offers alternatives.
-- Output contract: `PRELIMINARY PASS` — one short message is followed by exactly one copy-ready command.
+- Must change: `PRELIMINARY PASS` — the unmappable connected client stops the stale plan; A1 Update refreshes itself once, reloads, restarts complete preflight, and then synchronizes the full collection into the recovered managed set.
+- Must preserve: `PRELIMINARY PASS` — the newer client remains included, no outside client is connected, and unrelated state stays unchanged.
+- Forbidden: `PRELIMINARY PASS` — no client, installer key, bootstrap command, copy/paste request, stale plan, or second self-refresh reaches the user.
+- Output contract: `PRELIMINARY PASS` — the successful resumed operation returns only the ordinary concise completion message.
 
 ## `update-prerequisite-001` — PRELIMINARY PASS
 
@@ -132,7 +142,7 @@ Maintainer-only intercepted trace after approval:
 
 ```text
 brew install node
-node --version -> v22.17.0
+node --version -> v25.6.1
 npm --version -> available
 npx --version -> available
 npx skills@latest add ztemerbekov/marketing-skills --list
@@ -192,7 +202,7 @@ Case: [report partial completion after a write fails](../skills/a1-update/evals/
 Maintainer-only intercepted trace:
 
 ```text
-node --version -> v22.17.0
+node --version -> v25.6.1
 npm --version -> available
 npx --version -> available
 npx skills@latest add ztemerbekov/marketing-skills --list
@@ -224,7 +234,7 @@ Case: [treat the first write failure as partial completion](../skills/a1-update/
 Maintainer-only intercepted trace:
 
 ```text
-node --version -> v22.17.0
+node --version -> v25.6.1
 npm --version -> available
 npx --version -> available
 npx skills@latest add ztemerbekov/marketing-skills --list
@@ -252,7 +262,7 @@ Case: [fail closed when upstream is unavailable](../skills/a1-update/evals/cases
 Maintainer-only intercepted trace:
 
 ```text
-node --version -> v22.17.0
+node --version -> v25.6.1
 npm --version -> available
 npx --version -> available
 npx skills@latest add ztemerbekov/marketing-skills --list -> failed without inventory
@@ -269,12 +279,44 @@ User-visible response:
 - Forbidden: `PRELIMINARY PASS` — empty output is not treated as deletion evidence; no failed command, client state, lock detail, or installer key reaches the user.
 - Output contract: `PRELIMINARY PASS` — the exact plain Russian failure response contains no diagnostic internals.
 
+## `update-unrelated-project-lock-011` — PRELIMINARY PASS
+
+Case: [ignore an unrelated project lock silently](../skills/a1-update/evals/cases/update-unrelated-project-lock-011.md)
+
+### Complete Output
+
+Maintainer-only intercepted trace:
+
+```text
+node --version -> v25.6.1
+npm --version -> available
+npx --version -> available
+npx skills@latest add ztemerbekov/marketing-skills --list
+read global lock -> exact-source Marketing Skills entries
+read ./skills-lock.json -> no Marketing Skills entry; current-project scope is inactive
+npx skills@latest list -g --json
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-editor --skill a1-editor-in-chief --skill a1-marketing-context --skill a1-update --agent cursor --global --yes
+npx skills@latest list -g --json
+```
+
+User-visible response:
+
+```text
+Marketing Skills обновлены.
+```
+
+- Must change: `PRELIMINARY PASS` — only the exact-source global installation is active and synchronized; no current-project inventory or write command runs.
+- Must preserve: `PRELIMINARY PASS` — the unrelated project lock entry, installation, client connection, and every project file remain byte-for-byte unchanged.
+- Forbidden: `PRELIMINARY PASS` — no unrelated skill or source name, lock file, project scope, skip decision, question, or project command reaches the user.
+- Output contract: `PRELIMINARY PASS` — the user sees only the ordinary concise completion message.
+
 ## Remaining Limitations
 
 - The proposed constrained fallback has less isolation than a clean external client run and still requires explicit product-owner acceptance.
 - Mutating installation, runtime, and failure commands were intercepted and assessed from complete traces rather than executed against a real user installation.
-- Future installer changes can introduce another unknown label; the designed response safely refreshes A1 Update instead of guessing until the new candidate knows that mapping.
+- The automatic updater refresh, refreshed-instruction reload, future mapping, and subsequent full synchronization are fixture-intercepted; the simulated upstream copy is newer than the running updater by design.
+- Future installer changes can introduce another unknown label; the updater refreshes itself once and restarts instead of guessing, dropping the client, or asking the user to run a command.
 
 ## Finalization Rule
 
-The Issue #17 focused gate passes only when all seven cases pass every criterion group and output contract, the product owner explicitly accepts the constrained fallback and judges the actual outputs, repository verification passes, and independent Standards and Spec reviews pass. Only then may the full `a1-update` certification move from `PENDING` to `PASS`.
+The Issue #17 focused gate passes only when all eight cases pass every criterion group and output contract, the product owner explicitly accepts the constrained fallback and judges the actual outputs, repository verification passes, and independent Standards and Spec reviews pass. Only then may the full `a1-update` certification move from `PENDING` to `PASS`.

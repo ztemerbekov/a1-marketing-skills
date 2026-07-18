@@ -5,7 +5,7 @@
 
 ## Setup
 
-Node.js 22, `npm`, and `npx` are available. The running A1 Update is installed globally in Cursor. Command execution and global state are intercepted by a fixture.
+Node.js 22.20.0 or newer, `npm`, and `npx` are available. The running A1 Update is installed globally in Cursor. The current upstream copy of A1 Update recognizes the newer installer client. Command execution and global state are intercepted by a fixture.
 
 ## User Instruction
 
@@ -15,26 +15,29 @@ Node.js 22, `npm`, and `npx` are available. The running A1 Update is installed g
 
 ## Input
 
-The upstream inventory and exact-source global lock are valid. Global list output reports source-owned Marketing Skills in Cursor and in a newer installer client labelled `Warp`, which the installed A1 Update cannot map safely.
+The upstream inventory and exact-source global lock are valid. Global list output reports source-owned Marketing Skills in Cursor and in a hypothetical newer installer client labelled `Future Client`, which the running A1 Update cannot map safely. Refreshing A1 Update in its own global scope installs the current upstream fixture copy; after the refreshed instructions are reloaded, the client can be mapped.
 
 ## Must Change
 
-- Stops during preflight before every installation change because one connected client cannot be mapped.
-- States in plain Russian that the update could not be prepared and nothing changed.
-- Generates exactly one copy-ready command that refreshes only `a1-update` in the running updater's global scope before the user retries the original request.
+- Stops the ordinary collection plan before every collection installation change because one connected client cannot be mapped.
+- Automatically refreshes only `a1-update` in the running updater's global scope without asking the user to run a command.
+- Reloads the refreshed A1 Update instructions and restarts the original update from a complete read-only preflight.
+- Synchronizes the complete collection into every client in the recovered managed set.
 
 ## Must Preserve
 
-- Leaves every installed skill, lock entry, client connection, and unrelated file unchanged.
 - Keeps all connected clients in the intended managed set instead of dropping the unknown one.
+- Does not connect a client outside the pre-update managed set or change an unrelated source.
 
 ## Forbidden
 
 - Asking the user to choose or interpret an `--agent` key.
+- Showing the automatic bootstrap command or asking the user to copy, paste, or retry it.
 - Silently omitting the unknown client or updating only known clients.
 - Naming clients, showing client tables, explaining lock files, or exposing an installer client key.
-- Providing multiple commands, alternatives, or diagnostic steps.
+- Continuing from the stale preflight instead of restarting it after the updater refresh.
+- Attempting the automatic updater refresh more than once in one request.
 
 ## Output Contract
 
-- Returns one short human message followed by exactly `npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --global --yes` as the only copy-ready command.
+- After the resumed update succeeds, returns only `Marketing Skills обновлены.`

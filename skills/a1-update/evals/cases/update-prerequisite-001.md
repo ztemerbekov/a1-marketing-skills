@@ -21,7 +21,7 @@ After the confirmation question, the user answers exactly:
 
 ## Input
 
-`node`, `npm`, and `npx` are unavailable. Homebrew can install a Node.js release satisfying the CLI's Node.js 18-or-newer requirement.
+`node`, `npm`, and `npx` are unavailable. Homebrew can install a Node.js release satisfying the CLI's Node.js 22.20.0-or-newer requirement.
 
 After the runtime is installed, live fixture state contains one active global scope and no current-project scope. Upstream contains `a1-editor`, `a1-editor-in-chief`, `a1-marketing-context`, and `a1-update`; the exact-source global lock tracks all four, and global installed inventory reports them in Codex and Cursor with no membership change.
 
@@ -41,7 +41,7 @@ After the runtime is installed, live fixture state contains one active global sc
 - Installing Homebrew, a second package manager, or unrelated global packages.
 - Using an unverified `curl | sh` command.
 - Showing an installation command, permission explanation, version table, or alternative before approval.
-- Continuing to `npx skills` before Node.js 18 or newer is verified.
+- Continuing to `npx skills` before Node.js 22.20.0 or newer is verified.
 
 ## Output Contract
 

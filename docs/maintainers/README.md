@@ -31,6 +31,12 @@ Public distribution uses `npx skills` for Codex, Claude Code, Cursor, Antigravit
 
 The domain-boundary reassessment for `a1-update` keeps it in the existing single repository context: it manages the collection lifecycle and introduces no independently evolving marketing vocabulary. A `CONTEXT-MAP.md` is not needed.
 
+## A1 Update Safety Contract
+
+Before the first ordinary collection write, A1 Update verifies the runtime, upstream inventory, exact-source locks, installed inventory, active scopes, and complete managed client sets. An unresolved newer client is the sole bounded recovery exception: after every other read-only check succeeds, the updater refreshes its own current-client copy once, reloads the refreshed instructions, and restarts the original request from a complete preflight. The bootstrap command and installer internals never reach ordinary user output.
+
+If Node.js is unavailable or outdated, A1 Update asks one approved confirmation question before using an already installed trusted package manager or the official installer. A refusal leaves the system unchanged. Any command failure after a collection write or automatic updater refresh begins is treated as potentially partial; A1 Update stops later writes and does not attempt an unsafe rollback.
+
 ## Compatibility Policy
 
 The repository follows the Agent Skills folder format and prefers behavior over strict specification purity when a narrow extension protects critical runtime behavior. The accepted extension is `disable-model-invocation: true` for command-only skills such as `a1-editor-in-chief`, where accidental automatic invocation would start the wrong interaction.
