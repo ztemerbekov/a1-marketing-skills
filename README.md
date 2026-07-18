@@ -31,7 +31,7 @@ If this is your first time using Marketing Skills, start with [Marketing Context
 | [Editor](skills/a1-editor/)<br>`a1-editor` | Improve existing text: shorten, clarify, strengthen, or restructure it without inventing facts. |
 | [Editor in Chief](skills/a1-editor-in-chief/)<br>`a1-editor-in-chief` | Turning a confirmed editorial assignment into a reviewed edit without creating general marketing strategy. |
 | [Marketing Context](skills/a1-marketing-context/)<br>`a1-marketing-context` | Creating or incrementally updating one repository-local context from confirmed marketing information. |
-| [Update](skills/a1-update/)<br>`a1-update` | Update only Marketing Skills and decide separately whether to install new skills from the collection. |
+| [Update](skills/a1-update/)<br>`a1-update` | Synchronize the complete Marketing Skills collection without changing unrelated skills or connecting new clients. |
 <!-- SKILLS:END -->
 
 Use this quick rule:
@@ -119,7 +119,7 @@ Editor in Chief does not create market research, segmentation, pricing, position
 
 **What it does:** installs the latest Marketing Skills in every app where you use them. It does not change skills from other collections.
 
-**Use it when:** you want fixes and new capabilities. If the collection includes new skills, you decide whether to install them.
+**Use it when:** you want fixes and new capabilities. New skills are installed automatically everywhere the collection is already connected.
 
 **Try:**
 
@@ -216,8 +216,8 @@ Update Marketing Skills.
 Here is what happens:
 
 - installed Marketing Skills are updated in every app where you use them;
+- new skills are installed automatically in those same apps;
 - skills that are no longer part of the collection are removed automatically;
-- if new skills are available, the agent shows them and asks which ones to install;
 - skills from other collections do not change;
 - manual changes inside installed skill files are lost.
 

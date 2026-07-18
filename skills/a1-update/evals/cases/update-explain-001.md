@@ -19,7 +19,7 @@ No additional input.
 
 ## Must Change
 
-- Explains the source-scoped update behavior, new-skill confirmation, automatic deletion, and overwrite policy.
+- Explains that the complete upstream set is synchronized automatically across already connected clients, including automatic addition, automatic deletion, and overwrite without backup.
 - Provides the first-install or manual console command only when useful to the explanation.
 
 ## Must Preserve
@@ -30,6 +30,7 @@ No additional input.
 
 - Running `node`, `npx`, inventory, update, add, or remove commands.
 - Changing installed skills, lock files, system dependencies, or clients.
+- Offering a choice of newly available Marketing Skills.
 
 ## Output Contract
 

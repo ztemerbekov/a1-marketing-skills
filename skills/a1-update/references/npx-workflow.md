@@ -38,22 +38,28 @@ Supported client label-to-key mappings are:
 
 | List label | `--agent` key |
 |------------|---------------|
-| Codex | `codex` |
-| Claude Code | `claude-code` |
-| Cursor | `cursor` |
 | Antigravity | `antigravity` |
+| Antigravity CLI | `antigravity-cli` |
+| Claude Code | `claude-code` |
+| Codex | `codex` |
+| Cursor | `cursor` |
+| Gemini CLI | `gemini-cli` |
+| GitHub Copilot | `github-copilot` |
+| Zed | `zed` |
 
-Preserve the client set reported for each existing skill. For a newly available skill, use the union of clients already connected to any Marketing Skill in that scope. If a reported label cannot be mapped safely, do not invent a key or silently omit the client; report the ambiguity and stop that scope.
+For each scope, take the union of clients reported for its source-tracked Marketing Skills. This is the managed client set for the complete collection in that scope. The global lock's `lastSelectedAgents` value is installer-wide history, not source-specific evidence; never use it to add clients to the managed set. Keep global and current-project unions separate.
+
+If a reported label cannot be mapped safely, do not invent a key, ask the user to choose one, or silently omit the client; stop that scope.
 
 ## 3. Compare
 
 For each scope calculate:
 
-- **Existing:** source-tracked names also present upstream.
+- **Upstream:** every name in the verified upstream inventory.
 - **Deleted:** source-tracked names absent upstream.
 - **New:** upstream names not tracked for that scope.
 
-A missing folder with a valid source lock entry still counts as existing and should be restored. If no connected client can be recovered for it, stop and ask which already-used client should be restored; do not connect every client.
+A missing folder with a valid source lock entry is repaired during synchronization. If the scope has source-owned lock entries but no managed client can be recovered from the installed inventory, stop without changing that scope; do not use auto-detection, installer history, or every client as a fallback.
 
 ## 4. Remove Deleted Skills Automatically
 
@@ -83,9 +89,9 @@ node scripts/prune-lock.mjs \
 
 Repeat `--skill` for multiple names. Use the global or current-project lock path established in step 2. The helper accepts only entries owned by `ztemerbekov/marketing-skills`, preserves unrelated entries and top-level metadata, sorts project skill keys, and writes atomically. If removal failed or any deleted skill is still installed, do not prune its lock entry.
 
-## 5. Refresh Existing Skills
+## 5. Synchronize the Managed Set
 
-Re-add existing skills from the canonical source so installed files are replaced by the latest `main`. Group skills only when they share the same connected-client set.
+Re-add every upstream skill from the canonical source into the scope's complete managed client set. This one operation refreshes tracked skills, repairs incomplete installations, and installs new upstream skills. All upstream skills share the same managed client set by definition.
 
 Global form:
 
@@ -106,27 +112,22 @@ npx skills@latest add ztemerbekov/marketing-skills \
   --yes
 ```
 
-Repeat `--skill` or `--agent` as required by the installed inventory. Always pass explicit clients; AI-agent auto-detection must not narrow or expand the existing client set.
+Repeat `--skill` for every upstream name and `--agent` for every key in the managed client set. Always pass explicit clients; AI-agent auto-detection must not narrow or expand the managed set.
 
 Do not preserve or back up manual changes inside installed skill folders.
 
-## 6. Offer New Skills Once
+## 6. Record Membership Changes
 
-After refreshing and removing tracked skills, show one combined list of all new skills with descriptions and the scopes where each would be installed. Ask one question that accepts:
-
-- all listed skills;
-- none;
-- a named subset.
-
-Install accepted skills with the same `add` forms above, targeting the union of clients already connected to Marketing Skills in each scope. Do not add a client that was not in that union. A declined skill remains untracked and is offered again on the next run.
+Do not ask whether to install new upstream skills. They are already included in step 5. Record the names that were new before synchronization so the final response can mention only collection membership changes without exposing clients or scopes.
 
 ## 7. Verify
 
 Run the applicable `list --json` commands again. Confirm that:
 
-- every refreshed or accepted skill exists in its intended scope and clients;
+- every upstream skill exists in every client in that scope's managed client set;
 - every upstream-deleted skill is absent from that scope;
 - every upstream-deleted source-owned lock entry is absent;
+- no client outside the pre-update managed client set was connected;
 - unrelated installed skills are unchanged.
 
-Report partial completion as partial completion, not success.
+For success, follow the concise output contract in `SKILL.md`. Report partial completion as partial completion, not success.

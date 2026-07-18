@@ -18,6 +18,7 @@ This is the technical entry point for people who design, develop, validate, and 
 - [A1 Editor in Chief completion checklist](../a1-editor-in-chief-completion-2026-07-16.md) — separate Chief completion verdict and limitations.
 - [A1 Marketing Context completion checklist](../a1-marketing-context-completion-2026-07-16.md) — separate context-setup completion verdict and limitations.
 - [A1 Update certification](../a1-update-certification.md) — updater release gate, current evidence, and remaining semantic work.
+- [A1 Update managed-set run](../a1-update-managed-set-run-2026-07-18.md) — Issue #16 zero-choice synchronization traces, criteria evidence, and constrained-fallback disclosure.
 
 ## Repository Architecture
 

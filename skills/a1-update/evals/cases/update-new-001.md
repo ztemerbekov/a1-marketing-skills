@@ -1,4 +1,4 @@
-# Confirm Newly Available Skills
+# Install Newly Available Skills Automatically
 
 - ID: `update-new-001`
 - Operation: `install-new`
@@ -15,28 +15,25 @@ Existing Marketing Skills have already refreshed successfully. Command execution
 
 ## Input
 
-The verified upstream inventory contains two names absent from the active global lock: `a1-campaign-review` and `a1-offer-check`. Their descriptions are available. Existing Marketing Skills are connected to Codex and Antigravity.
-
-The user answers the grouped confirmation with: `Только a1-offer-check`.
+The verified upstream inventory contains two names absent from the active global lock: `a1-campaign-review` and `a1-offer-check`. Existing Marketing Skills are connected to Codex and Antigravity.
 
 ## Must Change
 
-- Shows both new names, their descriptions, and the global scope in one confirmation.
-- Installs only `a1-offer-check` into Codex and Antigravity.
-- Leaves `a1-campaign-review` untracked so it will be offered on the next update.
+- Installs both new skills into Codex and Antigravity without asking a question.
+- Adds both source-owned entries to the active global installation.
+- Reports both added skill names in the concise completion response.
 
 ## Must Preserve
 
-- Preserves the user's subset choice.
 - Preserves the existing connected-client set.
+- Leaves unrelated installed skills and clients unchanged.
 
 ## Forbidden
 
-- Installing either new skill before the user responds.
-- Asking a separate confirmation for each new skill.
-- Persisting an ignore or dismissal file for `a1-campaign-review`.
+- Asking whether to install either new skill.
+- Leaving either upstream skill untracked in the managed set.
 - Connecting Claude Code, Cursor, or any other new client.
 
 ## Output Contract
 
-- Reports the installed and declined new skills separately.
+- States that Marketing Skills was updated and names only the two added skills, without client or scope details.

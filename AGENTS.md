@@ -126,7 +126,7 @@ Classifies scope before all other work, accepts completed product and marketing 
 
 Public, explicitly requested update skill.
 
-Uses `npx skills` to refresh only installations tracked from `ztemerbekov/marketing-skills`. Existing skills and upstream deletions are applied without confirmation; newly available skills require one grouped confirmation. It must not update unrelated sources, scan other projects, or connect new clients without permission.
+Uses `npx skills` to synchronize the complete current collection only in installations tracked from `ztemerbekov/marketing-skills`. It treats clients already connected to any Marketing Skill in one scope as that scope's managed client set, repairs incomplete installations, and applies refreshes, additions, and upstream deletions without confirmation. It must not update unrelated sources, scan other projects, or connect clients outside the managed set.
 
 ## Cross-Client Distribution
 
