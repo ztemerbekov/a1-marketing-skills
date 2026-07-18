@@ -134,6 +134,7 @@ update_recovery_eval_cases=(
   "skills/a1-update/evals/cases/update-prerequisite-001.md"
   "skills/a1-update/evals/cases/update-prerequisite-refusal-008.md"
   "skills/a1-update/evals/cases/update-mid-write-failure-009.md"
+  "skills/a1-update/evals/cases/update-first-write-failure-010.md"
   "skills/a1-update/evals/cases/update-upstream-failure-001.md"
 )
 
@@ -567,7 +568,6 @@ require_text "skills/a1-update/SKILL.md" "references/npx-workflow.md" "Update sk
 require_text "skills/a1-update/SKILL.md" "references/runtime-prerequisites.md" "Update skill must route missing Node.js to its prerequisite workflow"
 require_text "skills/a1-update/SKILL.md" "Complete the read-only preflight for every active scope before the first installation change." "Update skill must place one mutation barrier after all active-scope preflight checks"
 require_text "skills/a1-update/SKILL.md" 'Never ask the user to choose an `--agent` key.' "Update skill must hide installer key selection from recovery"
-require_text "skills/a1-update/SKILL.md" "Для обновления нужен Node.js. Установить и продолжить?" "Update skill must define the exact Russian Node.js confirmation"
 require_text "skills/a1-update/SKILL.md" "Marketing Skills обновлены частично. Повторите запрос: «Обнови Marketing Skills»." "Update skill must define one concise partial-completion retry"
 require_text "skills/a1-update/SKILL.md" "Не удалось подготовить обновление. Ничего не изменено. Повторите запрос позже." "Update skill must define one concise preflight-failure retry"
 require_text "skills/a1-update/references/npx-workflow.md" 'Never use `--all`' "Update workflow must forbid unscoped removal"
@@ -575,6 +575,7 @@ require_text "skills/a1-update/references/npx-workflow.md" "## 4. Mutation Barri
 require_text "skills/a1-update/references/npx-workflow.md" 'npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --global --yes' "Update workflow must provide one global updater bootstrap command"
 require_text "skills/a1-update/references/npx-workflow.md" 'npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --yes' "Update workflow must provide one project updater bootstrap command"
 require_text "skills/a1-update/references/npx-workflow.md" "## Mid-write Failure" "Update workflow must stop without unsafe rollback after mutation begins"
+require_text "skills/a1-update/references/npx-workflow.md" "Mutation begins immediately before invoking the first mutating command" "Update workflow must treat a failing first write as potentially partial"
 require_text "skills/a1-update/references/npx-workflow.md" "node scripts/prune-lock.mjs" "Update workflow must clean source-owned stale lock entries"
 require_text "skills/a1-update/references/npx-workflow.md" '`antigravity-cli`' "Update workflow must map Antigravity CLI"
 require_text "skills/a1-update/references/npx-workflow.md" '`gemini-cli`' "Update workflow must map Gemini CLI"
@@ -583,6 +584,7 @@ require_text "skills/a1-update/references/npx-workflow.md" '`zed`' "Update workf
 require_text "skills/a1-update/SKILL.md" "Do not search other project directories" "Update workflow must stay within global and current-project scopes"
 require_text "skills/a1-update/references/runtime-prerequisites.md" "Do not bootstrap Homebrew" "Prerequisite workflow must not install another package manager"
 require_text "skills/a1-update/references/runtime-prerequisites.md" "Ask only this question before any system change" "Prerequisite workflow must not expose commands before approval"
+require_text "skills/a1-update/references/runtime-prerequisites.md" "Для обновления нужен Node.js. Установить и продолжить?" "Prerequisite workflow must own the exact Russian Node.js confirmation"
 require_text "skills/a1-update/references/runtime-prerequisites.md" "If the user declines" "Prerequisite workflow must preserve the system after refusal"
 forbid_text "skills/a1-update/SKILL.md" "Present all newly available skills in one confirmation" "Update skill must not ask about newly available skills"
 require_text "README.md" "New skills are installed automatically" "English README must explain automatic Marketing Skills membership"

@@ -169,11 +169,11 @@ For success, follow the concise output contract in `SKILL.md`. Report partial co
 
 ## Mid-write Failure
 
-Mutation begins as soon as the first `add`, `remove`, or lock-helper operation succeeds. If any later mutating command or post-write verification fails:
+Mutation begins immediately before invoking the first mutating command. A non-zero exit from `add`, `remove`, or the lock helper does not prove that no file changed. If the first or any later mutating command or post-write verification fails:
 
 1. Stop every remaining write in the current scope and every later active scope.
 2. Do not reinstall a removed skill, restore a lock snapshot, reverse a successful add, or attempt any other automatic rollback.
-3. Preserve an internal record of the operations that completed, the command that failed, and the operations that remain so explicit diagnostics can be accurate.
+3. Preserve an internal record of the operations that completed, the failed command's state as uncertain, and the operations that remain so explicit diagnostics can be accurate.
 4. Tell the user only that the update completed partially and give one retry action: repeat the original Marketing Skills update request. The retry starts with a new complete preflight against the real current state.
 
 Do not expose client names, scopes, lock files, installer keys, command traces, or alternative recovery actions in the ordinary failure response.

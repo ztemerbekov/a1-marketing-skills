@@ -1,10 +1,10 @@
 # A1 Update Safe-Recovery Run — 2026-07-18
 
-This record is the focused semantic regression gate for the preflight and recovery contract implemented in GitHub Issue #17. Together with the passing Issue #16 managed-set run, it completes the updater release evidence.
+This record collects preliminary focused semantic evidence for the preflight and recovery contract implemented in GitHub Issue #17. Together with the passing Issue #16 managed-set run, it can complete the updater release evidence only after every gate below passes.
 
 ## Verdict
 
-- Focused recovery regressions: `PRELIMINARY PASS` — six changed branches on one exact candidate digest
+- Focused recovery regressions: `PRELIMINARY PASS` — seven changed branches on one exact candidate digest
 - Unchanged Issue #16 managed-set regressions: `PASS` — previously certified behavior remains structurally covered and the ordinary success contract is unchanged
 - Repository verification: `PENDING`
 - Standards review: `PENDING`
@@ -19,7 +19,7 @@ This record is the focused semantic regression gate for the preflight and recove
 - Run date: `2026-07-18`
 - Repository base commit: `d375b57131ebc55853291ec61cc5e8da1c305f3e`
 - Candidate source: current `skills/a1-update/`
-- Candidate directory digest: `ad8694fcf98fdd70b8b71a88f1a3d61a037f3a6715f0e436f4ad497db3195a0d`
+- Candidate directory digest: `730f8d8a534f0d3921460812afd563978b3c4369ae8d5f92acc57e290ee68229`
 - Digest method: SHA-256 over every sorted path relative to `skills/a1-update/`, a NUL separator, and the raw SHA-256 digest of that file
 - Preliminary criteria reviewer: Codex
 - Human reviewer and constrained-fallback approver: `PENDING`
@@ -53,6 +53,7 @@ The confirmed public seam was the installed updater as a black box: user request
 - exact Node.js approval question: 2 expected failures, then GREEN;
 - Node.js refusal: 2 expected failures, then GREEN;
 - mid-write partial completion: 3 expected failures, then GREEN;
+- first-write uncertainty added after Spec review: 3 expected failures beyond the open final gates, then GREEN;
 - non-technical upstream failure: 1 expected failure, then GREEN;
 - detected-client bootstrap refinement: 2 expected failures, then GREEN.
 
@@ -214,6 +215,34 @@ Marketing Skills обновлены частично. Повторите зап�
 - Forbidden: `PRELIMINARY PASS` — no rollback, continuation, false full success, unchanged-state claim, internal detail, or multiple recovery action reaches the user.
 - Output contract: `PRELIMINARY PASS` — the Russian response exactly reports partial completion and one retry action.
 
+## `update-first-write-failure-010` — PRELIMINARY PASS
+
+Case: [treat the first write failure as partial completion](../skills/a1-update/evals/cases/update-first-write-failure-010.md)
+
+### Complete Output
+
+Maintainer-only intercepted trace:
+
+```text
+node --version -> v22.17.0
+npm --version -> available
+npx --version -> available
+npx skills@latest add ztemerbekov/marketing-skills --list
+npx skills@latest list -g --json
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-editor --skill a1-editor-in-chief --skill a1-marketing-context --skill a1-update --agent codex --agent cursor --global --yes -> overwrote part of a1-editor, then exited non-zero
+```
+
+User-visible response:
+
+```text
+Marketing Skills обновлены частично. Повторите запрос: «Обнови Marketing Skills».
+```
+
+- Must change: `PRELIMINARY PASS` — mutation starts before invoking the first write, so its non-zero exit produces partial completion and stops every later command.
+- Must preserve: `PRELIMINARY PASS` — the actual uncertain state is retained for fresh preflight, while unrelated state remains unchanged.
+- Forbidden: `PRELIMINARY PASS` — no unchanged-state claim, rollback, automatic retry, later installer call, or internal detail reaches the user.
+- Output contract: `PRELIMINARY PASS` — the exact partial-completion response gives one retry action.
+
 ## `update-upstream-failure-001` — PRELIMINARY PASS
 
 Case: [fail closed when upstream is unavailable](../skills/a1-update/evals/cases/update-upstream-failure-001.md)
@@ -248,4 +277,4 @@ User-visible response:
 
 ## Finalization Rule
 
-The Issue #17 focused gate passes only when all six cases pass every criterion group and output contract, the product owner explicitly accepts the constrained fallback and judges the actual outputs, repository verification passes, and independent Standards and Spec reviews pass. Only then may the full `a1-update` certification move from `PENDING` to `PASS`.
+The Issue #17 focused gate passes only when all seven cases pass every criterion group and output contract, the product owner explicitly accepts the constrained fallback and judges the actual outputs, repository verification passes, and independent Standards and Spec reviews pass. Only then may the full `a1-update` certification move from `PENDING` to `PASS`.

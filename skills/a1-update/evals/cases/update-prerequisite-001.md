@@ -13,6 +13,12 @@ The user requested an update on macOS. Node.js is missing, Homebrew is already i
 Обнови Marketing Skills.
 ```
 
+After the confirmation question, the user answers exactly:
+
+```text
+Да
+```
+
 ## Input
 
 `node`, `npm`, and `npx` are unavailable. Homebrew can install a Node.js release satisfying the CLI's Node.js 18-or-newer requirement.

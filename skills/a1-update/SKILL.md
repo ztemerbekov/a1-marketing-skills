@@ -45,7 +45,7 @@ Do not search other project directories. For each active scope, derive one manag
 ## Workflow
 
 1. Classify the whole request under Scope Classification. Stop out-of-scope and mixed-job requests before prerequisite work; answer informational questions without commands.
-2. Check Node.js, `npm`, and `npx`. The current `skills` CLI requires Node.js 18 or newer. If the requirement is not met, ask one confirmation before any system change, then follow [runtime-prerequisites.md](references/runtime-prerequisites.md). In Russian, the entire confirmation turn is exactly: `Для обновления нужен Node.js. Установить и продолжить?` After approval and runtime verification, restart this step and resume the original update.
+2. Check Node.js, `npm`, and `npx`. The current `skills` CLI requires Node.js 18 or newer. If the requirement is not met, follow the one-question confirmation, trusted installation, verification, and automatic-resume contract in [runtime-prerequisites.md](references/runtime-prerequisites.md).
 3. Follow [npx-workflow.md](references/npx-workflow.md) to collect the upstream and installed inventories, resolve every reported client, calculate each scope's managed client set, and build the complete mutation plan. Complete the read-only preflight for every active scope before the first installation change. If any upstream inventory or active-scope state cannot be verified, stop the whole run with every scope unchanged.
 4. Cross the workflow's mutation barrier only after every preflight result is complete and valid.
 5. For each active scope, automatically remove tracked skills missing from upstream and prune their exact source-owned lock entries with the bundled helper.
@@ -64,7 +64,7 @@ npx skills@latest add ztemerbekov/marketing-skills -g
 - Any failure before the mutation barrier stops the entire run and leaves every active scope unchanged, including a scope whose own preflight already passed.
 - Never ask the user to choose an `--agent` key. For an unknown client mapping, use the single updater-refresh recovery command defined in `npx-workflow.md`; do not skip the client or expose its label or key.
 - Do not treat a network or authentication failure as evidence that an upstream skill was deleted.
-- After the mutation barrier, complete one scope before changing the next. If any write succeeds and a later command fails, stop all further writes, keep the real partial state, and never attempt an automatic rollback. Record completed and pending operations internally, but give the user only the concise partial-completion response and one retry action.
+- After the mutation barrier, enter the mutation phase immediately before invoking the first mutating command, then complete one scope before changing the next. If the first or any later mutating command fails, stop all further writes, treat the state as potentially partial, and never attempt an automatic rollback. Record completed, uncertain, and pending operations internally, but give the user only the concise partial-completion response and one retry action.
 - Never edit a lock entry by hand when `scripts/prune-lock.mjs` rejects its source or structure.
 - Do not install Homebrew, another package manager, or an unrelated system tool as part of this workflow.
 

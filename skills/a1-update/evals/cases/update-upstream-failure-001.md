@@ -5,17 +5,17 @@
 
 ## Setup
 
-The installed lock contains Marketing Skills, but GitHub is unavailable and the upstream inventory command fails.
+Node.js 22, `npm`, and `npx` are available. One exact-source global installation is active in Codex and Cursor, no current-project installation is active, and every command is intercepted by a fixture. GitHub is unavailable and the upstream inventory command fails.
 
 ## User Instruction
 
 ```text
-Update Marketing Skills.
+Обнови Marketing Skills.
 ```
 
 ## Input
 
-The local lock includes `a1-editor-in-chief`. The failed inventory output contains no skill names.
+The global lock tracks `a1-editor`, `a1-editor-in-chief`, `a1-marketing-context`, and `a1-update` from exactly `ztemerbekov/marketing-skills`. Their installed state is unchanged before the run. The failed upstream inventory output contains no skill names, so installed-inventory reads and every mutating command remain unexecuted.
 
 ## Must Change
 
