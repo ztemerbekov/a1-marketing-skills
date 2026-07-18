@@ -221,11 +221,18 @@ Here is what happens:
 - skills from other collections do not change;
 - manual changes inside installed skill files are lost.
 
-You can also update from the terminal. Run the installation command again and select the skills and apps you want to update:
+The agent handles the update itself. If it needs your permission, it asks one short question.
+
+<details>
+<summary><strong>Update from the terminal</strong></summary>
+
+If you prefer the terminal, run the installation command again and select the skills and apps you want to update:
 
 ```bash
 npx skills@latest add ztemerbekov/marketing-skills -g
 ```
+
+</details>
 
 ## Help and feedback
 

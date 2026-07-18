@@ -45,6 +45,7 @@ Supported client label-to-key mappings are:
 | Cursor | `cursor` |
 | Gemini CLI | `gemini-cli` |
 | GitHub Copilot | `github-copilot` |
+| Warp | `warp` |
 | Zed | `zed` |
 
 For each scope, take the union of clients reported for its source-tracked Marketing Skills. This is the managed client set for the complete collection in that scope. The global lock's `lastSelectedAgents` value is installer-wide history, not source-specific evidence; never use it to add clients to the managed set. Keep global and current-project unions separate.
@@ -61,7 +62,44 @@ For each scope calculate:
 
 A missing folder with a valid source lock entry is repaired during synchronization. If the scope has source-owned lock entries but no managed client can be recovered from the installed inventory, stop without changing that scope; do not use auto-detection, installer history, or every client as a fallback.
 
-## 4. Remove Deleted Skills Automatically
+## 4. Mutation Barrier
+
+Before any ordinary collection change, complete every read-only check for the whole run:
+
+- verify the Node.js, `npm`, and `npx` capability required by `skills`;
+- verify the complete upstream inventory;
+- identify every active exact-source global and current-project scope;
+- parse every active scope's source-owned lock state;
+- read every active scope's installed inventory;
+- calculate every managed client set;
+- resolve every reported client label to a supported key; and
+- calculate the complete deleted, new, repair, and refresh plan for every scope.
+
+Treat this as one ordinary mutation barrier across all active scopes. Do not run `npx skills add`, `npx skills remove`, or `scripts/prune-lock.mjs` for the collection until every item above succeeds for every active scope. If a result is missing, unreadable, ambiguous, or empty where a managed set is required, stop the whole run. An unmappable client may use only the bounded updater-refresh exception below, and only after every other read-only check succeeds. Do not mutate an earlier scope merely because its own preflight passed.
+
+### Unknown-client recovery
+
+If any source-owned installed skill reports a client label that this running updater cannot map, do not invent a key, omit the client, or update only the known clients. Finish every other read-only check for every active scope. Use automatic recovery only when the unresolved mapping is the remaining preflight blocker.
+
+Locate the running `a1-update` copy and determine its installation scope. Refresh only that updater automatically with the matching command below. Do not pass `--agent`: current `npx skills` detects the AI client running the command and selects it non-interactively. This source-pinned self-refresh is the sole bounded recovery mutation allowed before the ordinary collection mutation barrier.
+
+Global updater:
+
+```bash
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --global --yes
+```
+
+Current-project updater:
+
+```bash
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --yes
+```
+
+After the command succeeds, Reload the refreshed A1 Update instructions from the same installed path, including the workflow references they select. Restart the user's original request from scope classification and a complete read-only preflight; reuse no inventory, mapping, or plan from the earlier attempt. If the refreshed updater resolves every client, continue through the ordinary mutation barrier and synchronize the complete collection into the recovered managed set.
+
+Attempt this automatic self-refresh at most once in one user request. Mutation begins immediately before invoking the bootstrap command. If it fails, if reloading fails, if the restarted preflight fails, or if the refreshed updater still cannot resolve the client, stop without another bootstrap attempt and use the partial-completion response from `SKILL.md`. Never show the bootstrap command to the user, ask them to copy or retry it, name the unresolved client, show a client table, explain a lock file, expose an `--agent` key, or offer alternative commands. On successful resumed synchronization, return only the ordinary success response.
+
+## 5. Remove Deleted Skills Automatically
 
 Only after a successful upstream inventory, remove deleted names without confirmation.
 
@@ -89,7 +127,7 @@ node scripts/prune-lock.mjs \
 
 Repeat `--skill` for multiple names. Use the global or current-project lock path established in step 2. The helper accepts only entries owned by `ztemerbekov/marketing-skills`, preserves unrelated entries and top-level metadata, sorts project skill keys, and writes atomically. If removal failed or any deleted skill is still installed, do not prune its lock entry.
 
-## 5. Synchronize the Managed Set
+## 6. Synchronize the Managed Set
 
 Re-add every upstream skill from the canonical source into the scope's complete managed client set. This one operation refreshes tracked skills, repairs incomplete installations, and installs new upstream skills. All upstream skills share the same managed client set by definition.
 
@@ -116,11 +154,11 @@ Repeat `--skill` for every upstream name and `--agent` for every key in the mana
 
 Do not preserve or back up manual changes inside installed skill folders.
 
-## 6. Record Membership Changes
+## 7. Record Membership Changes
 
-Do not ask whether to install new upstream skills. They are already included in step 5. Record the names that were new before synchronization so the final response can mention only collection membership changes without exposing clients or scopes.
+Do not ask whether to install new upstream skills. They are already included in step 6. Record the names that were new before synchronization so the final response can mention only collection membership changes without exposing clients or scopes.
 
-## 7. Verify
+## 8. Verify
 
 Run the applicable `list --json` commands again. Confirm that:
 
@@ -131,3 +169,14 @@ Run the applicable `list --json` commands again. Confirm that:
 - unrelated installed skills are unchanged.
 
 For success, follow the concise output contract in `SKILL.md`. Report partial completion as partial completion, not success.
+
+## Mid-write Failure
+
+Mutation begins immediately before invoking the first mutating command. A non-zero exit from `add`, `remove`, or the lock helper does not prove that no file changed. If the first or any later mutating command or post-write verification fails:
+
+1. Stop every remaining write in the current scope and every later active scope.
+2. Do not reinstall a removed skill, restore a lock snapshot, reverse a successful add, or attempt any other automatic rollback.
+3. Preserve an internal record of the operations that completed, the failed command's state as uncertain, and the operations that remain so explicit diagnostics can be accurate.
+4. Tell the user only that the update completed partially and give one retry action: repeat the original Marketing Skills update request. The retry starts with a new complete preflight against the real current state.
+
+Do not expose client names, scopes, lock files, installer keys, command traces, or alternative recovery actions in the ordinary failure response.

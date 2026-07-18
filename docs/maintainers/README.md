@@ -19,6 +19,7 @@ This is the technical entry point for people who design, develop, validate, and 
 - [A1 Marketing Context completion checklist](../a1-marketing-context-completion-2026-07-16.md) — separate context-setup completion verdict and limitations.
 - [A1 Update certification](../a1-update-certification.md) — updater release gate, current evidence, and remaining semantic work.
 - [A1 Update managed-set run](../a1-update-managed-set-run-2026-07-18.md) — Issue #16 zero-choice synchronization traces, criteria evidence, and constrained-fallback disclosure.
+- [A1 Update safe-recovery run](../a1-update-recovery-run-2026-07-18.md) — Issue #17 preflight, prerequisite, recovery, and partial-completion evidence.
 
 ## Repository Architecture
 
@@ -29,6 +30,12 @@ Public distribution uses `npx skills` for Codex, Claude Code, Cursor, Antigravit
 - `scripts/` contains maintainer tooling and is not required after installation.
 
 The domain-boundary reassessment for `a1-update` keeps it in the existing single repository context: it manages the collection lifecycle and introduces no independently evolving marketing vocabulary. A `CONTEXT-MAP.md` is not needed.
+
+## A1 Update Safety Contract
+
+Before the first ordinary collection write, A1 Update verifies the runtime, upstream inventory, exact-source locks, installed inventory, active scopes, and complete managed client sets. An unresolved newer client is the sole bounded recovery exception: after every other read-only check succeeds, the updater refreshes its own current-client copy once, reloads the refreshed instructions, and restarts the original request from a complete preflight. The bootstrap command and installer internals never reach ordinary user output.
+
+If Node.js is unavailable or outdated, A1 Update asks one approved confirmation question before using an already installed trusted package manager or the official installer. A refusal leaves the system unchanged. Any command failure after a collection write or automatic updater refresh begins is treated as potentially partial; A1 Update stops later writes and does not attempt an unsafe rollback.
 
 ## Compatibility Policy
 

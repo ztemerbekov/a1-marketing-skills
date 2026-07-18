@@ -16,6 +16,7 @@ chief_completion_report="docs/a1-editor-in-chief-completion-2026-07-16.md"
 context_completion_report="docs/a1-marketing-context-completion-2026-07-16.md"
 update_certification_report="docs/a1-update-certification.md"
 update_managed_set_report="docs/a1-update-managed-set-run-2026-07-18.md"
+update_recovery_report="docs/a1-update-recovery-run-2026-07-18.md"
 
 echo "Validating A1 design contract artifacts"
 echo
@@ -127,10 +128,24 @@ update_focused_eval_cases=(
   "skills/a1-update/evals/cases/update-scope-completed-input-005.md"
 )
 
+update_recovery_eval_cases=(
+  "skills/a1-update/evals/cases/update-preflight-failure-006.md"
+  "skills/a1-update/evals/cases/update-unknown-client-recovery-007.md"
+  "skills/a1-update/evals/cases/update-prerequisite-001.md"
+  "skills/a1-update/evals/cases/update-prerequisite-refusal-008.md"
+  "skills/a1-update/evals/cases/update-mid-write-failure-009.md"
+  "skills/a1-update/evals/cases/update-first-write-failure-010.md"
+  "skills/a1-update/evals/cases/update-upstream-failure-001.md"
+  "skills/a1-update/evals/cases/update-unrelated-project-lock-011.md"
+  "skills/a1-update/evals/cases/update-bootstrap-failure-012.md"
+  "skills/a1-update/evals/cases/update-reload-failure-013.md"
+  "skills/a1-update/evals/cases/update-restarted-preflight-failure-014.md"
+  "skills/a1-update/evals/cases/update-still-unknown-client-015.md"
+)
+
 update_eval_cases=(
   "${update_focused_eval_cases[@]}"
-  "skills/a1-update/evals/cases/update-prerequisite-001.md"
-  "skills/a1-update/evals/cases/update-upstream-failure-001.md"
+  "${update_recovery_eval_cases[@]}"
 )
 
 required_artifacts=(
@@ -161,6 +176,7 @@ required_artifacts=(
   "$context_completion_report"
   "$update_certification_report"
   "$update_managed_set_report"
+  "$update_recovery_report"
   "skills/a1-marketing-context/evals/README.md"
   "skills/a1-marketing-context/evals/case-template.md"
   "skills/a1-marketing-context/references/context-spine.md"
@@ -455,7 +471,7 @@ require_text "$certification_report" "## Case Results" "Pilot certification must
 require_text "$certification_report" "## Remaining Limitations" "Pilot certification must disclose remaining limitations"
 require_text "$certification_report" "## Finalization Rule" "Pilot certification must prevent a false pass"
 require_text "$update_certification_report" "## Certification Status" "Updater certification must state its verdict"
-require_text "$update_certification_report" 'Status: `PENDING`' "Updater certification must not claim a semantic pass before the installed suite"
+require_text "$update_certification_report" 'Status: `PASS`' "Updater certification must record the completed installed semantic suite"
 require_text "$update_certification_report" "## Domain Boundary Decision" "Updater certification must record the domain-boundary reassessment"
 require_text "$update_certification_report" "## Case Results" "Updater certification must inventory every eval case"
 require_text "$update_certification_report" "## Remaining Limitations" "Updater certification must disclose remaining limitations"
@@ -555,17 +571,39 @@ require_text "skills/a1-update/SKILL.md" "Always state explicitly that manual ch
 require_text "skills/a1-update/SKILL.md" "Marketing Skills обновлены." "Update skill must define the concise Russian success response"
 require_text "skills/a1-update/SKILL.md" "references/npx-workflow.md" "Update skill must route to its source-scoped npx workflow"
 require_text "skills/a1-update/SKILL.md" "references/runtime-prerequisites.md" "Update skill must route missing Node.js to its prerequisite workflow"
+require_text "skills/a1-update/SKILL.md" "canonical current minimum in [runtime-prerequisites.md]" "Update skill must route runtime-version ownership to the prerequisite reference"
+require_text "skills/a1-update/SKILL.md" "Complete the read-only preflight for every active scope before the first ordinary collection change." "Update skill must place one ordinary mutation barrier after all active-scope preflight checks"
+require_text "skills/a1-update/SKILL.md" "If the file contains only unrelated sources, treat the project scope as inactive" "Update skill must skip an unrelated-only project lock silently"
+require_text "skills/a1-update/SKILL.md" 'Never ask the user to choose an `--agent` key.' "Update skill must hide installer key selection from recovery"
+require_text "skills/a1-update/SKILL.md" "refresh the running A1 Update automatically" "Update skill must recover an unknown client without making the user run a command"
+require_text "skills/a1-update/SKILL.md" "Marketing Skills обновлены частично. Повторите запрос: «Обнови Marketing Skills»." "Update skill must define one concise partial-completion retry"
+require_text "skills/a1-update/SKILL.md" "Не удалось подготовить обновление. Ничего не изменено. Повторите запрос позже." "Update skill must define one concise preflight-failure retry"
 require_text "skills/a1-update/references/npx-workflow.md" 'Never use `--all`' "Update workflow must forbid unscoped removal"
+require_text "skills/a1-update/references/npx-workflow.md" "## 4. Mutation Barrier" "Update workflow must separate complete preflight from installation changes"
+require_text "skills/a1-update/references/npx-workflow.md" 'npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --global --yes' "Update workflow must provide one global updater bootstrap command"
+require_text "skills/a1-update/references/npx-workflow.md" 'npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --yes' "Update workflow must provide one project updater bootstrap command"
+require_text "skills/a1-update/references/npx-workflow.md" "Reload the refreshed A1 Update instructions" "Update workflow must resume through the refreshed updater"
+require_text "skills/a1-update/references/npx-workflow.md" "Never show the bootstrap command to the user" "Update workflow must keep automatic recovery machinery out of user output"
+require_text "skills/a1-update/references/npx-workflow.md" "## Mid-write Failure" "Update workflow must stop without unsafe rollback after mutation begins"
+require_text "skills/a1-update/references/npx-workflow.md" "Mutation begins immediately before invoking the first mutating command" "Update workflow must treat a failing first write as potentially partial"
 require_text "skills/a1-update/references/npx-workflow.md" "node scripts/prune-lock.mjs" "Update workflow must clean source-owned stale lock entries"
 require_text "skills/a1-update/references/npx-workflow.md" '`antigravity-cli`' "Update workflow must map Antigravity CLI"
 require_text "skills/a1-update/references/npx-workflow.md" '`gemini-cli`' "Update workflow must map Gemini CLI"
 require_text "skills/a1-update/references/npx-workflow.md" '`github-copilot`' "Update workflow must map GitHub Copilot"
+require_text "skills/a1-update/references/npx-workflow.md" '`warp`' "Update workflow must map Warp"
 require_text "skills/a1-update/references/npx-workflow.md" '`zed`' "Update workflow must map Zed"
 require_text "skills/a1-update/SKILL.md" "Do not search other project directories" "Update workflow must stay within global and current-project scopes"
 require_text "skills/a1-update/references/runtime-prerequisites.md" "Do not bootstrap Homebrew" "Prerequisite workflow must not install another package manager"
+require_text "skills/a1-update/references/runtime-prerequisites.md" 'canonical minimum for the current `skills` CLI is Node.js 22.20.0' "Prerequisite workflow must own the current skills CLI runtime floor"
+require_text "skills/a1-update/references/runtime-prerequisites.md" "Ask only this question before any system change" "Prerequisite workflow must not expose commands before approval"
+require_text "skills/a1-update/references/runtime-prerequisites.md" "Для обновления нужен Node.js. Установить и продолжить?" "Prerequisite workflow must own the exact Russian Node.js confirmation"
+require_text "skills/a1-update/references/runtime-prerequisites.md" "If the user declines" "Prerequisite workflow must preserve the system after refusal"
 forbid_text "skills/a1-update/SKILL.md" "Present all newly available skills in one confirmation" "Update skill must not ask about newly available skills"
 require_text "README.md" "New skills are installed automatically" "English README must explain automatic Marketing Skills membership"
 require_text "README.ru.md" "Новые навыки устанавливаются автоматически" "Russian README must explain automatic Marketing Skills membership"
+forbid_text "README.md" "Before changing an installation, Update verifies" "Public English README must not expose the updater's internal recovery contract"
+forbid_text "README.ru.md" "До первого изменения Обновление проверяет" "Public Russian README must not expose the updater's internal recovery contract"
+require_text "docs/maintainers/README.md" "## A1 Update Safety Contract" "Maintainer README must own the updater's technical recovery summary"
 
 for eval_case in "${editor_eval_cases[@]}" "${editor_localization_eval_cases[@]}" "${chief_eval_cases[@]}" "${chief_localization_eval_cases[@]}" "${chief_integration_eval_cases[@]}" "${context_eval_cases[@]}" "${context_consumer_eval_cases[@]}" "${release_chief_eval_cases[@]}" "${update_eval_cases[@]}"; do
   require_text "$eval_case" "## User Instruction" "A1 eval case must include the exact user instruction"
@@ -669,6 +707,18 @@ require_text "$update_managed_set_report" 'Standards review: `PASS`' "Updater ma
 require_text "$update_managed_set_report" 'Spec review: `PASS`' "Updater managed-set run must record the independent Spec verdict"
 require_text "$update_managed_set_report" 'Human semantic judgment: `PASS`' "Updater managed-set run must capture the human semantic verdict"
 require_text "$update_managed_set_report" 'Focused semantic gate: `PASS`' "Updater managed-set run must state a passing focused verdict"
+
+for eval_case in "${update_recovery_eval_cases[@]}"; do
+  eval_id="$(sed -n 's/^- ID: `\([^`]*\)`.*/\1/p' "$eval_case" | head -n 1)"
+  require_text "$update_recovery_report" "$eval_id" "Updater recovery run must include focused case $eval_id"
+done
+
+require_text "$update_recovery_report" "## Installation Mode" "Updater recovery run must disclose its installation mode"
+require_text "$update_recovery_report" 'Repository verification: `PASS`' "Updater recovery run must record passing repository verification"
+require_text "$update_recovery_report" 'Standards review: `PASS`' "Updater recovery run must record the independent Standards verdict"
+require_text "$update_recovery_report" 'Spec review: `PASS`' "Updater recovery run must record the independent Spec verdict"
+require_text "$update_recovery_report" 'Human semantic judgment: `PASS`' "Updater recovery run must capture the human semantic verdict"
+require_text "$update_recovery_report" 'Focused semantic gate: `PASS`' "Updater recovery run must state a passing focused verdict"
 
 echo
 

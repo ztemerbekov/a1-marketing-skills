@@ -128,6 +128,8 @@ Public, explicitly requested update skill.
 
 Uses `npx skills` to synchronize the complete current collection only in installations tracked from `ztemerbekov/marketing-skills`. It treats clients already connected to any Marketing Skill in one scope as that scope's managed client set, repairs incomplete installations, and applies refreshes, additions, and upstream deletions without confirmation. It must not update unrelated sources, scan other projects, or connect clients outside the managed set.
 
+It completes one read-only preflight across every active scope before the first ordinary collection change. Ordinary preflight failures leave all scopes unchanged. An unknown client mapping may trigger one source-pinned automatic updater refresh only after every other read-only check succeeds; the updater reloads, restarts complete preflight, and never exposes a recovery command or installer key. Missing or outdated Node.js uses the exact one-question confirmation contract and only an already available trusted installer. A failure after any mutation begins stops later writes, reports partial completion with one retry action, and never attempts automatic rollback.
+
 ## Cross-Client Distribution
 
 Do not put Claude-only command injection syntax, Cursor-only MDC behavior, or Codex-only assumptions into canonical `skills/*/SKILL.md` files unless we explicitly accept that as a documented behavior-over-spec extension.

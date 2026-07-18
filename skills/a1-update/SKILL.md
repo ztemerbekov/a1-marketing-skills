@@ -38,18 +38,19 @@ Manage only lock entries whose normalized source is exactly `ztemerbekov/marketi
 Process:
 
 1. The global installation.
-2. A project installation only when `skills-lock.json` exists in the current working directory and contains this source.
+2. A project installation only when `skills-lock.json` exists in the current working directory and contains this source. If the file contains only unrelated sources, treat the project scope as inactive without running project inventory or mentioning the file or unrelated skills to the user.
 
 Do not search other project directories. For each active scope, derive one managed client set: the union of clients reported for any source-owned Marketing Skill in that scope. Synchronize every upstream skill to that set, repairing incomplete per-skill installations. Do not use global installer selection history as source-specific evidence, combine client sets across scopes, or connect a client outside the managed set.
 
 ## Workflow
 
 1. Classify the whole request under Scope Classification. Stop out-of-scope and mixed-job requests before prerequisite work; answer informational questions without commands.
-2. Check Node.js, `npm`, and `npx`. The current `skills` CLI requires Node.js 18 or newer. If the requirement is not met, follow [runtime-prerequisites.md](references/runtime-prerequisites.md), then resume this workflow.
-3. Follow [npx-workflow.md](references/npx-workflow.md) to collect the upstream and installed inventories, resolve every reported client, and calculate each scope's managed client set. If the upstream inventory or active-scope state cannot be verified, stop without updating or deleting anything.
-4. For each active scope, automatically remove tracked skills missing from upstream and prune their exact source-owned lock entries with the bundled helper.
-5. Synchronize every upstream skill to the managed client set. This automatically restores missing copies, installs newly available skills, and replaces installed files from current `main`, including manual changes, without asking and without creating a backup.
-6. Verify the final installed inventory and report the result.
+2. Check Node.js, `npm`, and `npx` against the canonical current minimum in [runtime-prerequisites.md](references/runtime-prerequisites.md). If the requirement is not met, follow that reference's one-question confirmation, trusted installation, verification, and automatic-resume contract.
+3. Follow [npx-workflow.md](references/npx-workflow.md) to collect the upstream and installed inventories, resolve every reported client, calculate each scope's managed client set, and build the complete mutation plan. Complete the read-only preflight for every active scope before the first ordinary collection change. If any upstream inventory or active-scope state cannot be verified, stop the whole run with every scope unchanged unless the only remaining blocker qualifies for the bounded automatic unknown-client recovery.
+4. Cross the workflow's ordinary mutation barrier only after every preflight result is complete and valid. The one automatic updater refresh defined in `npx-workflow.md` is the only bounded recovery mutation before that barrier.
+5. For each active scope, automatically remove tracked skills missing from upstream and prune their exact source-owned lock entries with the bundled helper.
+6. Synchronize every upstream skill to the managed client set. This automatically restores missing copies, installs newly available skills, and replaces installed files from current `main`, including manual changes, without asking and without creating a backup.
+7. Verify the final installed inventory and report the result.
 
 If no Marketing Skills installation is tracked, do not guess from folder names. Explain that first installation is a console bootstrap and provide:
 
@@ -59,9 +60,11 @@ npx skills@latest add ztemerbekov/marketing-skills -g
 
 ## Failure Rules
 
-- Fail closed on an unreadable lock file, unavailable upstream inventory, ambiguous source, empty managed client set, unknown client mapping, or failed command.
+- Fail closed on an unreadable lock file, unavailable upstream inventory, ambiguous source, empty managed client set, an unknown client mapping that remains after one automatic updater refresh, or a failed command.
+- Any failure before the ordinary mutation barrier stops the entire run and leaves every active scope unchanged, including a scope whose own preflight already passed. The bounded automatic unknown-client refresh is the sole exception; after it begins, any failure is potentially partial.
+- Never ask the user to choose an `--agent` key. For an unknown client mapping, refresh the running A1 Update automatically once as defined in `npx-workflow.md`, reload it, and restart the original request; do not skip the client, expose its label or key, or make the user run a command.
 - Do not treat a network or authentication failure as evidence that an upstream skill was deleted.
-- Complete one scope before changing the next. If a command fails, stop that scope and report exactly what succeeded and what remains.
+- After the mutation barrier, enter the mutation phase immediately before invoking the first mutating command, then complete one scope before changing the next. If the first or any later mutating command fails, stop all further writes, treat the state as potentially partial, and never attempt an automatic rollback. Record completed, uncertain, and pending operations internally, but give the user only the concise partial-completion response and one retry action.
 - Never edit a lock entry by hand when `scripts/prune-lock.mjs` rejects its source or structure.
 - Do not install Homebrew, another package manager, or an unrelated system tool as part of this workflow.
 
@@ -73,4 +76,16 @@ For an ordinary successful update, return only the concise completion message in
 Marketing Skills обновлены.
 ```
 
-If collection membership changed, append the added or removed skill names only. Do not include client counts, client names, scopes, lock files, installer keys, or a routine list of refreshed skills. Include technical detail only when the user explicitly requests diagnostics or when a failure needs a manual action.
+If collection membership changed, append the added or removed skill names only. Do not include client counts, client names, scopes, lock files, installer keys, recovery commands, or a routine list of refreshed skills. Include other technical detail only when the user explicitly requests diagnostics.
+
+For a preflight failure without a more specific recovery above, state that preparation failed, nothing changed, and the user should retry later. In Russian, return exactly:
+
+```text
+Не удалось подготовить обновление. Ничего не изменено. Повторите запрос позже.
+```
+
+If a command fails after mutation begins, do not claim success or claim that nothing changed. In Russian, return exactly:
+
+```text
+Marketing Skills обновлены частично. Повторите запрос: «Обнови Marketing Skills».
+```
