@@ -11,6 +11,18 @@ Keep installations from `ztemerbekov/marketing-skills` aligned with the latest `
 
 Detect the user's language and work in that language by default. If the input text and user instruction use different languages, preserve the input text language for rewritten copy and use the instruction language for explanations unless the user asks otherwise.
 
+## Scope Classification
+
+Classify the whole request before checking prerequisites, reading inventory, or changing anything.
+
+**In scope:** an actionable request to update, refresh, repair, or reinstall only the collection owned by `ztemerbekov/marketing-skills`; or an informational question about that update process. If an update request finds no tracked installation, return only the bootstrap guidance defined below.
+
+**Out of scope:** updating or removing skills from another source, connecting or disconnecting clients, scanning or updating other projects, changing unrelated system tools, or performing a first installation inside this workflow.
+
+**Completed external inputs:** accept a user-supplied inventory, diagnostic, or command result as context. It does not prove current source ownership, upstream membership, or connected clients; verify live state before any mutation.
+
+**Mixed-job behavior:** if one request combines the Marketing Skills update job with any out-of-scope job, stop the whole request before prerequisite or inventory work. Name the unsupported part and ask the user to separate it. Do not partially update Marketing Skills.
+
 ## Interaction Contract
 
 Treat a direct request such as “Update Marketing Skills” as authorization to synchronize the complete collection from current `main` in every active installation scope. This includes refreshing existing skills, installing newly available skills, removing upstream-deleted skills, and replacing manual changes in installed copies.
@@ -32,7 +44,7 @@ Do not search other project directories. For each active scope, derive one manag
 
 ## Workflow
 
-1. Distinguish an actionable update request from an informational question.
+1. Classify the whole request under Scope Classification. Stop out-of-scope and mixed-job requests before prerequisite work; answer informational questions without commands.
 2. Check Node.js, `npm`, and `npx`. The current `skills` CLI requires Node.js 18 or newer. If the requirement is not met, follow [runtime-prerequisites.md](references/runtime-prerequisites.md), then resume this workflow.
 3. Follow [npx-workflow.md](references/npx-workflow.md) to collect the upstream and installed inventories, resolve every reported client, and calculate each scope's managed client set. If the upstream inventory or active-scope state cannot be verified, stop without updating or deleting anything.
 4. For each active scope, automatically remove tracked skills missing from upstream and prune their exact source-owned lock entries with the bundled helper.

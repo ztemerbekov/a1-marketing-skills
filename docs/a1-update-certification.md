@@ -5,8 +5,8 @@ This record is the semantic release gate for `a1-update`. Structural and isolate
 ## Certification Status
 
 - Status: `PENDING`
-- Candidate runtime revision: Issue #16 candidate digest `6f74da570031300431cc1bec40d03dac93052b3a22efb8b87eaf4cf0c8eedef4`
-- Decision: the Issue #16 managed-set success paths pass the explicitly accepted constrained semantic gate. Full updater release certification remains pending for prerequisite and failure branches, which are redesigned by Issue #17.
+- Candidate runtime revision: Issue #16 candidate digest `e5cd8e654a63fa28591d834093a4bfbbbc2d75fa19911053159af3163c690e78`
+- Decision: the Issue #16 focused outputs pass human semantic judgment under the explicitly accepted constrained fallback and await final independent rereview. Full updater release certification also remains pending for prerequisite and failure branches, which are redesigned by Issue #17.
 
 ## Domain Boundary Decision
 
@@ -26,11 +26,14 @@ Submit each case's exact instruction and complete fixture without paraphrasing. 
 
 | Case | Result | Current evidence |
 |------|--------|------------------|
-| [`update-existing-001`](../skills/a1-update/evals/cases/update-existing-001.md) | `PASS` | Complete constrained-fallback trace synchronizes the full collection in both active scopes without a question. |
-| [`update-managed-set-002`](../skills/a1-update/evals/cases/update-managed-set-002.md) | `PASS` | Complete trace normalizes all four skills across the exact seven-client source-owned union and ignores global selection history. |
-| [`update-deleted-001`](../skills/a1-update/evals/cases/update-deleted-001.md) | `PASS` | Complete deletion trace removes and prunes only the upstream-deleted source-owned entry in both active scopes. |
-| [`update-new-001`](../skills/a1-update/evals/cases/update-new-001.md) | `PASS` | Both new skills install automatically into the existing managed client set and only their names reach the user. |
-| [`update-explain-001`](../skills/a1-update/evals/cases/update-explain-001.md) | `PASS` | The final-digest rerun explains automatic membership and explicitly discloses overwrite without backup. |
+| [`update-existing-001`](../skills/a1-update/evals/cases/update-existing-001.md) | `PASS` | Complete constrained-fallback trace and concise output passed human judgment. |
+| [`update-managed-set-002`](../skills/a1-update/evals/cases/update-managed-set-002.md) | `PASS` | Seven-client normalization trace and concise output passed human judgment. |
+| [`update-deleted-001`](../skills/a1-update/evals/cases/update-deleted-001.md) | `PASS` | Complete deletion and remaining-set synchronization trace passed human judgment. |
+| [`update-new-001`](../skills/a1-update/evals/cases/update-new-001.md) | `PASS` | Automatic membership-addition trace and concise output passed human judgment. |
+| [`update-explain-001`](../skills/a1-update/evals/cases/update-explain-001.md) | `PASS` | Final-digest explanation passed human judgment after the overwrite disclosure regression fix. |
+| [`update-scope-out-003`](../skills/a1-update/evals/cases/update-scope-out-003.md) | `PASS` | Out-of-scope boundary response passed human judgment. |
+| [`update-scope-mixed-004`](../skills/a1-update/evals/cases/update-scope-mixed-004.md) | `PASS` | Mixed-job refusal passed human judgment. |
+| [`update-scope-completed-input-005`](../skills/a1-update/evals/cases/update-scope-completed-input-005.md) | `PASS` | Completed-inventory verification trace passed human judgment. |
 | [`update-prerequisite-001`](../skills/a1-update/evals/cases/update-prerequisite-001.md) | `PENDING` | Runtime policy is structurally covered; no system-package fixture run yet. |
 | [`update-upstream-failure-001`](../skills/a1-update/evals/cases/update-upstream-failure-001.md) | `PENDING` | Fail-closed contract is present; installed failure fixture pending. |
 
@@ -38,12 +41,12 @@ Submit each case's exact instruction and complete fixture without paraphrasing. 
 
 - Skill Creator validation: `PASS` — candidate frontmatter and layout are valid.
 - Isolated `npx skills` discovery and installation: `PASS` — the current CLI discovered exactly `a1-editor`, `a1-editor-in-chief`, `a1-marketing-context`, and `a1-update`, then copied both renamed skill directories into a temporary project.
-- Issue #16 focused semantic run: `PASS` — five changed success-path cases pass on the exact candidate digest under the explicitly accepted constrained fallback.
+- Issue #16 focused semantic run: `PASS` — eight final-digest outputs pass human judgment under the explicitly accepted constrained fallback; independent rereview remains a separate issue-level gate.
 - Lock helper syntax and fixtures: `PASS` — a source-owned project entry was removed atomically while unrelated data remained; a same-named entry from another source was rejected unchanged.
 - Repository validation: `PENDING` — final Issue #16 run pending after review.
 - README synchronization: `PASS` — both generated skill inventories are in sync.
 - Shell and Node syntax: `PASS` — validator, README synchronizer, and lock helper parse successfully.
-- Relative-link integrity: `PASS` — all relative links across 71 Markdown files resolve.
+- Relative-link integrity: `PENDING` — final link check pending after the added scope regressions and run evidence.
 - Diff hygiene: `PASS` — `git diff --check` completed without errors.
 
 ## Remaining Limitations

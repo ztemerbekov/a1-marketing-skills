@@ -116,12 +116,19 @@ release_chief_eval_cases=(
   "skills/a1-editor-in-chief/evals/cases/chief-context-isolation-013.md"
 )
 
-update_eval_cases=(
+update_focused_eval_cases=(
   "skills/a1-update/evals/cases/update-existing-001.md"
   "skills/a1-update/evals/cases/update-managed-set-002.md"
   "skills/a1-update/evals/cases/update-deleted-001.md"
   "skills/a1-update/evals/cases/update-new-001.md"
   "skills/a1-update/evals/cases/update-explain-001.md"
+  "skills/a1-update/evals/cases/update-scope-out-003.md"
+  "skills/a1-update/evals/cases/update-scope-mixed-004.md"
+  "skills/a1-update/evals/cases/update-scope-completed-input-005.md"
+)
+
+update_eval_cases=(
+  "${update_focused_eval_cases[@]}"
   "skills/a1-update/evals/cases/update-prerequisite-001.md"
   "skills/a1-update/evals/cases/update-upstream-failure-001.md"
 )
@@ -536,6 +543,10 @@ for obsolete_chief_file in \
 done
 
 require_text "skills/a1-update/SKILL.md" "ztemerbekov/marketing-skills" "Update skill must pin its source boundary"
+require_text "skills/a1-update/SKILL.md" "## Scope Classification" "Update skill must classify scope before prerequisite work"
+require_text "skills/a1-update/SKILL.md" "Out of scope:" "Update skill must declare out-of-scope work"
+require_text "skills/a1-update/SKILL.md" "Completed external inputs:" "Update skill must declare completed external inputs"
+require_text "skills/a1-update/SKILL.md" "Mixed-job behavior:" "Update skill must declare mixed-job behavior"
 require_text "skills/a1-update/SKILL.md" "without asking and without creating a backup" "Update skill must overwrite existing installations without a backup prompt"
 require_text "skills/a1-update/SKILL.md" "managed client set" "Update skill must synchronize one managed client set per scope"
 require_text "skills/a1-update/SKILL.md" "Install every upstream skill automatically" "Update skill must install newly available skills without confirmation"
@@ -647,12 +658,7 @@ for eval_case in "${update_eval_cases[@]}"; do
   fi
 done
 
-for eval_case in \
-  "skills/a1-update/evals/cases/update-existing-001.md" \
-  "skills/a1-update/evals/cases/update-managed-set-002.md" \
-  "skills/a1-update/evals/cases/update-deleted-001.md" \
-  "skills/a1-update/evals/cases/update-new-001.md" \
-  "skills/a1-update/evals/cases/update-explain-001.md"; do
+for eval_case in "${update_focused_eval_cases[@]}"; do
   eval_id="$(sed -n 's/^- ID: `\([^`]*\)`.*/\1/p' "$eval_case" | head -n 1)"
   require_text "$update_managed_set_report" "$eval_id" "Updater managed-set run must include focused case $eval_id"
 done
