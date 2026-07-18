@@ -6,7 +6,7 @@ This record is the semantic release gate for `a1-update`. Structural and isolate
 
 - Status: `PENDING`
 - Candidate runtime revision: Issue #16 candidate digest `e5cd8e654a63fa28591d834093a4bfbbbc2d75fa19911053159af3163c690e78`
-- Decision: the Issue #16 focused outputs pass human semantic judgment under the explicitly accepted constrained fallback and await final independent rereview. Full updater release certification also remains pending for prerequisite and failure branches, which are redesigned by Issue #17.
+- Decision: the Issue #16 focused gate passes under the explicitly accepted constrained fallback, including human semantic judgment, repository verification, and independent Standards and Spec rereviews. Full updater release certification remains pending for prerequisite and failure branches, which are redesigned by Issue #17.
 
 ## Domain Boundary Decision
 
@@ -41,12 +41,12 @@ Submit each case's exact instruction and complete fixture without paraphrasing. 
 
 - Skill Creator validation: `PASS` — candidate frontmatter and layout are valid.
 - Isolated `npx skills` discovery and installation: `PASS` — the current CLI discovered exactly `a1-editor`, `a1-editor-in-chief`, `a1-marketing-context`, and `a1-update`, then copied both renamed skill directories into a temporary project.
-- Issue #16 focused semantic run: `PASS` — eight final-digest outputs pass human judgment under the explicitly accepted constrained fallback; independent rereview remains a separate issue-level gate.
+- Issue #16 focused semantic run: `PASS` — eight final-digest outputs pass human judgment under the explicitly accepted constrained fallback, and both independent rereviews pass.
 - Lock helper syntax and fixtures: `PASS` — a source-owned project entry was removed atomically while unrelated data remained; a same-named entry from another source was rejected unchanged.
-- Repository validation: `PENDING` — final Issue #16 run pending after review.
+- Repository validation: `PASS` — 4 skills and 128 contract artifacts passed with 0 warnings and 0 failures.
 - README synchronization: `PASS` — both generated skill inventories are in sync.
 - Shell and Node syntax: `PASS` — validator, README synchronizer, and lock helper parse successfully.
-- Relative-link integrity: `PENDING` — final link check pending after the added scope regressions and run evidence.
+- Relative-link integrity: `PASS` — all 21 relative Markdown links in the changed updater and evidence surface resolve.
 - Diff hygiene: `PASS` — `git diff --check` completed without errors.
 
 ## Remaining Limitations

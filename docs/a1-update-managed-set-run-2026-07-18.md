@@ -5,11 +5,11 @@ This record is the focused semantic regression gate for the zero-choice managed-
 ## Verdict
 
 - Focused semantic regressions: `PASS` — eight focused cases on one exact candidate digest
-- Repository verification: `PENDING`
-- Standards review: `PENDING` — the initial review found four hard completion defects and one duplication smell; corrections are applied and rereview remains pending
-- Spec review: `PENDING` — the initial review found only the intentionally open final gate; rereview remains pending after corrections
+- Repository verification: `PASS` — 4 skills and 128 contract artifacts passed with 0 warnings and 0 failures; focused syntax, helper, README, link, and diff checks also passed
+- Standards review: `PASS` — independent rereview found no remaining documented-standard violations or baseline smells after the evidence-state correction
+- Spec review: `PASS` — independent rereview found no remaining behavioral gaps or scope creep after the final gate and evidence-state corrections
 - Human semantic judgment: `PASS` — `ztemerbekov` explicitly accepted the constrained fallback and confirmed the actual final-digest outputs on `2026-07-18`
-- Focused semantic gate: `PENDING`
+- Focused semantic gate: `PASS`
 
 ## Environment and Candidate
 
@@ -45,7 +45,7 @@ Each case-level `PASS` below combines the recorded Codex criteria evidence with 
 
 The first installed informational run correctly explained automatic membership and client boundaries but omitted that manual changes are overwritten without backup. `update-explain-001` therefore failed. The runtime explanation contract and structural regression were tightened.
 
-The first independent Standards review then found missing scope classification coverage, advance rather than actual human judgment, incomplete deletion input, a non-reproducible digest description, and duplicated focused-case lists. Scope behavior and three regressions were added, the deletion fixture was completed, the digest method was corrected, the validator list was centralized, and the candidate was reinstalled under the final digest above. All eight focused cases were restarted in the accepted fallback; their actual outputs now await human judgment.
+The first independent Standards review then found missing scope classification coverage, advance rather than actual human judgment, incomplete deletion input, a non-reproducible digest description, and duplicated focused-case lists. Scope behavior and three regressions were added, the deletion fixture was completed, the digest method was corrected, the validator list was centralized, and the candidate was reinstalled under the final digest above. All eight focused cases were restarted in the accepted fallback, and `ztemerbekov` judged their actual outputs `PASS`.
 
 ## `update-existing-001` — PASS
 
