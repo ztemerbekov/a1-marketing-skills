@@ -61,7 +61,7 @@ Submit each case's exact instruction and complete fixture without paraphrasing. 
 
 ## Remaining Limitations
 
-- Security policy blocked fresh external sessions from receiving the private candidate and fixture prompts. The product owner explicitly accepted the documented constrained fallback, which has less isolation.
+- Security policy blocked fresh external sessions from receiving the private candidate and fixture prompts. The product owner accepted the documented constrained fallback for Issue #16; the same less-isolated mode for the revised Issue #17 evidence still awaits explicit acceptance.
 - Mutating action cases use intercepted complete command traces rather than a real user installation.
 - Prerequisite and failure cases have preliminary fixture evidence under Issue #17 and await the remaining semantic and repository gates.
 - Automatic unknown-client recovery is fixture-intercepted; a future upstream updater copy is simulated rather than installed from a real later release.
