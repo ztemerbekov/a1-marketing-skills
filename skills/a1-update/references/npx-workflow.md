@@ -64,7 +64,7 @@ A missing folder with a valid source lock entry is repaired during synchronizati
 
 ## 4. Mutation Barrier
 
-Before any installation change, complete every read-only check for the whole run:
+Before any ordinary collection change, complete every read-only check for the whole run:
 
 - verify the Node.js, `npm`, and `npx` capability required by `skills`;
 - verify the complete upstream inventory;
@@ -75,7 +75,7 @@ Before any installation change, complete every read-only check for the whole run
 - resolve every reported client label to a supported key; and
 - calculate the complete deleted, new, repair, and refresh plan for every scope.
 
-Treat this as one mutation barrier across all active scopes. Do not run `npx skills add`, `npx skills remove`, or `scripts/prune-lock.mjs` until every item above succeeds for every active scope. If any result is missing, unreadable, ambiguous, empty where a managed set is required, or unmappable, stop the whole run. Do not mutate an earlier scope merely because its own preflight passed.
+Treat this as one ordinary mutation barrier across all active scopes. Do not run `npx skills add`, `npx skills remove`, or `scripts/prune-lock.mjs` for the collection until every item above succeeds for every active scope. If a result is missing, unreadable, ambiguous, or empty where a managed set is required, stop the whole run. An unmappable client may use only the bounded updater-refresh exception below, and only after every other read-only check succeeds. Do not mutate an earlier scope merely because its own preflight passed.
 
 ### Unknown-client recovery
 

@@ -5,7 +5,7 @@
 
 ## Setup
 
-Node.js 22.20.0 or newer, `npm`, and `npx` are available. Marketing Skills are installed globally. The current directory contains `skills-lock.json`, and all command execution and filesystem state are intercepted by a fixture.
+The runtime satisfies the current `skills` requirement, and `npm` and `npx` are available. Marketing Skills are installed globally. The current directory contains `skills-lock.json`, and all command execution and filesystem state are intercepted by a fixture.
 
 ## User Instruction
 

@@ -5,7 +5,7 @@
 
 ## Setup
 
-Node.js 22.20.0 or newer, `npm`, and `npx` are available. Global and current-project installations pass the complete preflight. All commands and state are intercepted by a fixture.
+The runtime satisfies the current `skills` requirement, and `npm` and `npx` are available. Global and current-project installations pass the complete preflight. All commands and state are intercepted by a fixture.
 
 ## User Instruction
 

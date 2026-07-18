@@ -5,7 +5,7 @@
 
 ## Setup
 
-Node.js 22.20.0 or newer, `npm`, and `npx` are available. Global and current-project installations are active. Command execution and both scopes are intercepted by a fixture.
+The runtime satisfies the current `skills` requirement, and `npm` and `npx` are available. Global and current-project installations are active. Command execution and both scopes are intercepted by a fixture.
 
 ## User Instruction
 

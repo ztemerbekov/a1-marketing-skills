@@ -137,6 +137,10 @@ update_recovery_eval_cases=(
   "skills/a1-update/evals/cases/update-first-write-failure-010.md"
   "skills/a1-update/evals/cases/update-upstream-failure-001.md"
   "skills/a1-update/evals/cases/update-unrelated-project-lock-011.md"
+  "skills/a1-update/evals/cases/update-bootstrap-failure-012.md"
+  "skills/a1-update/evals/cases/update-reload-failure-013.md"
+  "skills/a1-update/evals/cases/update-restarted-preflight-failure-014.md"
+  "skills/a1-update/evals/cases/update-still-unknown-client-015.md"
 )
 
 update_eval_cases=(
@@ -567,7 +571,7 @@ require_text "skills/a1-update/SKILL.md" "Always state explicitly that manual ch
 require_text "skills/a1-update/SKILL.md" "Marketing Skills обновлены." "Update skill must define the concise Russian success response"
 require_text "skills/a1-update/SKILL.md" "references/npx-workflow.md" "Update skill must route to its source-scoped npx workflow"
 require_text "skills/a1-update/SKILL.md" "references/runtime-prerequisites.md" "Update skill must route missing Node.js to its prerequisite workflow"
-require_text "skills/a1-update/SKILL.md" "Node.js 22.20.0 or newer" "Update skill must match the current official skills CLI runtime floor"
+require_text "skills/a1-update/SKILL.md" "canonical current minimum in [runtime-prerequisites.md]" "Update skill must route runtime-version ownership to the prerequisite reference"
 require_text "skills/a1-update/SKILL.md" "Complete the read-only preflight for every active scope before the first ordinary collection change." "Update skill must place one ordinary mutation barrier after all active-scope preflight checks"
 require_text "skills/a1-update/SKILL.md" "If the file contains only unrelated sources, treat the project scope as inactive" "Update skill must skip an unrelated-only project lock silently"
 require_text "skills/a1-update/SKILL.md" 'Never ask the user to choose an `--agent` key.' "Update skill must hide installer key selection from recovery"
@@ -590,7 +594,7 @@ require_text "skills/a1-update/references/npx-workflow.md" '`warp`' "Update work
 require_text "skills/a1-update/references/npx-workflow.md" '`zed`' "Update workflow must map Zed"
 require_text "skills/a1-update/SKILL.md" "Do not search other project directories" "Update workflow must stay within global and current-project scopes"
 require_text "skills/a1-update/references/runtime-prerequisites.md" "Do not bootstrap Homebrew" "Prerequisite workflow must not install another package manager"
-require_text "skills/a1-update/references/runtime-prerequisites.md" "Node.js 22.20.0 or newer" "Prerequisite workflow must install a runtime accepted by the current skills CLI"
+require_text "skills/a1-update/references/runtime-prerequisites.md" 'canonical minimum for the current `skills` CLI is Node.js 22.20.0' "Prerequisite workflow must own the current skills CLI runtime floor"
 require_text "skills/a1-update/references/runtime-prerequisites.md" "Ask only this question before any system change" "Prerequisite workflow must not expose commands before approval"
 require_text "skills/a1-update/references/runtime-prerequisites.md" "Для обновления нужен Node.js. Установить и продолжить?" "Prerequisite workflow must own the exact Russian Node.js confirmation"
 require_text "skills/a1-update/references/runtime-prerequisites.md" "If the user declines" "Prerequisite workflow must preserve the system after refusal"

@@ -5,7 +5,7 @@
 
 ## Setup
 
-Node.js 22.20.0 or newer, `npm`, and `npx skills` 1.5.19 are available. The upstream and installed inventory commands are intercepted by a fixture, and no current-project installation is active.
+The runtime satisfies the current `skills` requirement, and `npm` and `npx skills` 1.5.19 are available. The upstream and installed inventory commands are intercepted by a fixture, and no current-project installation is active.
 
 ## User Instruction
 

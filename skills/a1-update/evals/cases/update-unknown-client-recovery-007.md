@@ -5,7 +5,7 @@
 
 ## Setup
 
-Node.js 22.20.0 or newer, `npm`, and `npx` are available. The running A1 Update is installed globally in Cursor. The current upstream copy of A1 Update recognizes the newer installer client. Command execution and global state are intercepted by a fixture.
+The runtime satisfies the current `skills` requirement, and `npm` and `npx` are available. The running A1 Update is installed globally in Cursor. The current upstream copy of A1 Update recognizes the newer installer client. Command execution and global state are intercepted by a fixture.
 
 ## User Instruction
 

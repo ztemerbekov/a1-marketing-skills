@@ -223,6 +223,17 @@ Here is what happens:
 
 The agent handles the update itself. If it needs your permission, it asks one short question.
 
+<details>
+<summary><strong>Update from the terminal</strong></summary>
+
+If you prefer the terminal, run the installation command again and select the skills and apps you want to update:
+
+```bash
+npx skills@latest add ztemerbekov/marketing-skills -g
+```
+
+</details>
+
 ## Help and feedback
 
 If a skill produces a bad result, remove confidential information and email the input, instruction, output, and expected behavior to [z.temerbekov@gmail.com](mailto:z.temerbekov@gmail.com).

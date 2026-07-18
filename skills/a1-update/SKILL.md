@@ -45,7 +45,7 @@ Do not search other project directories. For each active scope, derive one manag
 ## Workflow
 
 1. Classify the whole request under Scope Classification. Stop out-of-scope and mixed-job requests before prerequisite work; answer informational questions without commands.
-2. Check Node.js, `npm`, and `npx`. The current `skills` CLI requires Node.js 22.20.0 or newer. If the requirement is not met, follow the one-question confirmation, trusted installation, verification, and automatic-resume contract in [runtime-prerequisites.md](references/runtime-prerequisites.md).
+2. Check Node.js, `npm`, and `npx` against the canonical current minimum in [runtime-prerequisites.md](references/runtime-prerequisites.md). If the requirement is not met, follow that reference's one-question confirmation, trusted installation, verification, and automatic-resume contract.
 3. Follow [npx-workflow.md](references/npx-workflow.md) to collect the upstream and installed inventories, resolve every reported client, calculate each scope's managed client set, and build the complete mutation plan. Complete the read-only preflight for every active scope before the first ordinary collection change. If any upstream inventory or active-scope state cannot be verified, stop the whole run with every scope unchanged unless the only remaining blocker qualifies for the bounded automatic unknown-client recovery.
 4. Cross the workflow's ordinary mutation barrier only after every preflight result is complete and valid. The one automatic updater refresh defined in `npx-workflow.md` is the only bounded recovery mutation before that barrier.
 5. For each active scope, automatically remove tracked skills missing from upstream and prune their exact source-owned lock entries with the bundled helper.

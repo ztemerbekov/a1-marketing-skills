@@ -4,7 +4,7 @@ This record collects preliminary focused semantic evidence for the preflight and
 
 ## Verdict
 
-- Focused recovery regressions: `PRELIMINARY PASS` — eight changed branches on one exact candidate digest
+- Focused recovery regressions: `PRELIMINARY PASS` — twelve changed branches on one exact candidate digest
 - Unchanged Issue #16 managed-set regressions: `PASS` — previously certified behavior remains structurally covered and the ordinary success contract is unchanged
 - Repository verification: `PENDING`
 - Standards review: `PENDING` — the automatic-recovery and public-documentation revision requires a fresh independent review
@@ -19,7 +19,7 @@ This record collects preliminary focused semantic evidence for the preflight and
 - Run date: `2026-07-18`
 - Repository base commit: `d375b57131ebc55853291ec61cc5e8da1c305f3e`
 - Candidate source: current `skills/a1-update/`
-- Candidate directory digest: `3f77ca9e1502356c4a48441e3fd5c94eb122c82e8f32abcbbd773ca3709c8c3a`
+- Candidate directory digest: `34453ecf9e1caf195a2c4bafd3189549331b95621ef2a3a556c90b73378bc76f`
 - Digest method: SHA-256 over the sorted standard `shasum -a 256` manifest of every file, with paths relative to `skills/a1-update/` and prefixed by `./`
 - Preliminary criteria reviewer: Codex
 - Human reviewer and constrained-fallback approver: `PENDING`
@@ -58,7 +58,8 @@ The confirmed public seam was the installed updater as a black box: user request
 - detected-client bootstrap refinement: 2 expected failures, then GREEN;
 - unrelated project-lock isolation: 2 expected failures, then GREEN;
 - current CLI runtime floor: 2 expected failures, then GREEN;
-- current Warp mapping: 1 expected failure, then GREEN.
+- current Warp mapping: 1 expected failure, then GREEN;
+- automatic-recovery failure branches: 8 expected evidence failures, then GREEN.
 
 ## `update-preflight-failure-006` — PRELIMINARY PASS
 
@@ -310,6 +311,130 @@ Marketing Skills обновлены.
 - Forbidden: `PRELIMINARY PASS` — no unrelated skill or source name, lock file, project scope, skip decision, question, or project command reaches the user.
 - Output contract: `PRELIMINARY PASS` — the user sees only the ordinary concise completion message.
 
+## `update-bootstrap-failure-012` — PRELIMINARY PASS
+
+Case: [stop after the automatic updater refresh fails](../skills/a1-update/evals/cases/update-bootstrap-failure-012.md)
+
+### Complete Output
+
+Maintainer-only intercepted trace:
+
+```text
+node --version -> v25.6.1
+npm --version -> available
+npx --version -> available
+npx skills@latest add ztemerbekov/marketing-skills --list
+npx skills@latest list -g --json -> source-owned inventory includes one unmappable client label
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --global --yes -> overwrote part of a1-update, then exited non-zero
+```
+
+User-visible response:
+
+```text
+Marketing Skills обновлены частично. Повторите запрос: «Обнови Marketing Skills».
+```
+
+- Must change: `PRELIMINARY PASS` — mutation begins before the one automatic bootstrap; its non-zero exit stops reload and all collection work.
+- Must preserve: `PRELIMINARY PASS` — the uncertain updater state is retained for a later complete preflight without rollback or a second bootstrap.
+- Forbidden: `PRELIMINARY PASS` — no unchanged-state claim, success claim, command, client, key, scope, lock, trace, retry loop, or rollback reaches the user.
+- Output contract: `PRELIMINARY PASS` — only the exact partial-completion response and one retry action are visible.
+
+## `update-reload-failure-013` — PRELIMINARY PASS
+
+Case: [stop when the refreshed updater cannot be reloaded](../skills/a1-update/evals/cases/update-reload-failure-013.md)
+
+### Complete Output
+
+Maintainer-only intercepted trace:
+
+```text
+node --version -> v25.6.1
+npm --version -> available
+npx --version -> available
+npx skills@latest add ztemerbekov/marketing-skills --list
+npx skills@latest list -g --json -> source-owned inventory includes one unmappable client label
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --global --yes
+reload installed a1-update/SKILL.md -> failed
+```
+
+User-visible response:
+
+```text
+Marketing Skills обновлены частично. Повторите запрос: «Обнови Marketing Skills».
+```
+
+- Must change: `PRELIMINARY PASS` — the successful updater refresh is followed by one required reload attempt; reload failure stops before restarted preflight or collection work.
+- Must preserve: `PRELIMINARY PASS` — the refreshed updater is retained without rollback, stale-instruction continuation, or a second bootstrap.
+- Forbidden: `PRELIMINARY PASS` — no unchanged-state claim, success claim, command, path, client, key, scope, lock, or trace reaches the user.
+- Output contract: `PRELIMINARY PASS` — only the exact partial-completion response and one retry action are visible.
+
+## `update-restarted-preflight-failure-014` — PRELIMINARY PASS
+
+Case: [stop when preflight fails after updater recovery](../skills/a1-update/evals/cases/update-restarted-preflight-failure-014.md)
+
+### Complete Output
+
+Maintainer-only intercepted trace:
+
+```text
+node --version -> v25.6.1
+npm --version -> available
+npx --version -> available
+npx skills@latest add ztemerbekov/marketing-skills --list
+npx skills@latest list -g --json -> source-owned inventory includes one unmappable client label
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --global --yes
+reload installed a1-update/SKILL.md and selected references
+node --version -> v25.6.1
+npm --version -> available
+npx --version -> available
+npx skills@latest add ztemerbekov/marketing-skills --list -> failed without inventory
+```
+
+User-visible response:
+
+```text
+Marketing Skills обновлены частично. Повторите запрос: «Обнови Marketing Skills».
+```
+
+- Must change: `PRELIMINARY PASS` — the refreshed updater restarts from runtime and fresh upstream inventory; that failure stops all collection work as potentially partial.
+- Must preserve: `PRELIMINARY PASS` — the refreshed updater remains, the stale plan is discarded, and no rollback, deletion inference, or second bootstrap runs.
+- Forbidden: `PRELIMINARY PASS` — no unchanged-state message, command, client, key, scope, lock, trace, or ordinary preflight response reaches the user.
+- Output contract: `PRELIMINARY PASS` — only the exact partial-completion response and one retry action are visible.
+
+## `update-still-unknown-client-015` — PRELIMINARY PASS
+
+Case: [stop when the refreshed updater still cannot map a client](../skills/a1-update/evals/cases/update-still-unknown-client-015.md)
+
+### Complete Output
+
+Maintainer-only intercepted trace:
+
+```text
+node --version -> v25.6.1
+npm --version -> available
+npx --version -> available
+npx skills@latest add ztemerbekov/marketing-skills --list
+npx skills@latest list -g --json -> source-owned inventory includes one unmappable client label
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --global --yes
+reload installed a1-update/SKILL.md and selected references
+node --version -> v25.6.1
+npm --version -> available
+npx --version -> available
+npx skills@latest add ztemerbekov/marketing-skills --list
+npx skills@latest list -g --json -> same client label remains unmappable; stop
+```
+
+User-visible response:
+
+```text
+Marketing Skills обновлены частично. Повторите запрос: «Обнови Marketing Skills».
+```
+
+- Must change: `PRELIMINARY PASS` — one complete restarted preflight confirms that the client remains unresolved and stops with a potentially partial result.
+- Must preserve: `PRELIMINARY PASS` — the unresolved client is not dropped, no collection write runs, and no mapping guess, rollback, or second bootstrap occurs.
+- Forbidden: `PRELIMINARY PASS` — no loop, key question, command, client, key, scope, lock, trace, unchanged-state claim, or success claim reaches the user.
+- Output contract: `PRELIMINARY PASS` — only the exact partial-completion response and one retry action are visible.
+
 ## Remaining Limitations
 
 - The proposed constrained fallback has less isolation than a clean external client run and still requires explicit product-owner acceptance.
@@ -319,4 +444,4 @@ Marketing Skills обновлены.
 
 ## Finalization Rule
 
-The Issue #17 focused gate passes only when all eight cases pass every criterion group and output contract, the product owner explicitly accepts the constrained fallback and judges the actual outputs, repository verification passes, and independent Standards and Spec reviews pass. Only then may the full `a1-update` certification move from `PENDING` to `PASS`.
+The Issue #17 focused gate passes only when all twelve cases pass every criterion group and output contract, the product owner explicitly accepts the constrained fallback and judges the actual outputs, repository verification passes, and independent Standards and Spec reviews pass. Only then may the full `a1-update` certification move from `PENDING` to `PASS`.

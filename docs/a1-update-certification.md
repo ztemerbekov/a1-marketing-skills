@@ -5,7 +5,7 @@ This record is the semantic release gate for `a1-update`. Structural and isolate
 ## Certification Status
 
 - Status: `PENDING`
-- Candidate runtime revision: Issue #17 candidate digest `3f77ca9e1502356c4a48441e3fd5c94eb122c82e8f32abcbbd773ca3709c8c3a`
+- Candidate runtime revision: Issue #17 candidate digest `34453ecf9e1caf195a2c4bafd3189549331b95621ef2a3a556c90b73378bc76f`
 - Decision: the Issue #16 managed-set gate passes. Issue #17 recovery outputs have preliminary evidence on the exact current candidate and await explicit constrained-fallback acceptance, human semantic judgment, repository verification, and independent Standards and Spec reviews.
 
 ## Domain Boundary Decision
@@ -42,6 +42,10 @@ Submit each case's exact instruction and complete fixture without paraphrasing. 
 | [`update-first-write-failure-010`](../skills/a1-update/evals/cases/update-first-write-failure-010.md) | `PENDING` | Issue #17 first-write uncertainty contract is implemented; installed semantic evidence is pending. |
 | [`update-upstream-failure-001`](../skills/a1-update/evals/cases/update-upstream-failure-001.md) | `PENDING` | Fail-closed contract is present; installed failure fixture pending. |
 | [`update-unrelated-project-lock-011`](../skills/a1-update/evals/cases/update-unrelated-project-lock-011.md) | `PENDING` | Exact unrelated-project-lock isolation trace is recorded; human semantic judgment is pending. |
+| [`update-bootstrap-failure-012`](../skills/a1-update/evals/cases/update-bootstrap-failure-012.md) | `PENDING` | Automatic updater-refresh failure trace is pending human semantic judgment. |
+| [`update-reload-failure-013`](../skills/a1-update/evals/cases/update-reload-failure-013.md) | `PENDING` | Refreshed-instruction reload failure trace is pending human semantic judgment. |
+| [`update-restarted-preflight-failure-014`](../skills/a1-update/evals/cases/update-restarted-preflight-failure-014.md) | `PENDING` | Restarted-preflight failure trace is pending human semantic judgment. |
+| [`update-still-unknown-client-015`](../skills/a1-update/evals/cases/update-still-unknown-client-015.md) | `PENDING` | Still-unresolved client trace is pending human semantic judgment. |
 
 ## Release Evidence
 
@@ -59,8 +63,8 @@ Submit each case's exact instruction and complete fixture without paraphrasing. 
 
 - Security policy blocked fresh external sessions from receiving the private candidate and fixture prompts. The product owner explicitly accepted the documented constrained fallback, which has less isolation.
 - Mutating action cases use intercepted complete command traces rather than a real user installation.
-- Prerequisite and failure cases remain pending and are redesigned by Issue #17.
-- Unknown future client labels still fail closed until Issue #17 adds the agreed recovery path.
+- Prerequisite and failure cases have preliminary fixture evidence under Issue #17 and await the remaining semantic and repository gates.
+- Automatic unknown-client recovery is fixture-intercepted; a future upstream updater copy is simulated rather than installed from a real later release.
 
 ## Finalization Rule
 

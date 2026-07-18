@@ -17,7 +17,7 @@ The user answers `Нет` to the Node.js confirmation.
 
 ## Input
 
-`node --version` reports Node.js 16; `npm` and `npx` are available but cannot satisfy the CLI's Node.js 22.20.0-or-newer requirement. No updater inventory or installation command has run.
+`node --version` reports Node.js 16; `npm` and `npx` are available but the runtime does not satisfy the current CLI requirement. No updater inventory or installation command has run.
 
 ## Must Change
 
