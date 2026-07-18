@@ -471,7 +471,7 @@ require_text "$certification_report" "## Case Results" "Pilot certification must
 require_text "$certification_report" "## Remaining Limitations" "Pilot certification must disclose remaining limitations"
 require_text "$certification_report" "## Finalization Rule" "Pilot certification must prevent a false pass"
 require_text "$update_certification_report" "## Certification Status" "Updater certification must state its verdict"
-require_text "$update_certification_report" 'Status: `PENDING`' "Updater certification must not claim a semantic pass before the installed suite"
+require_text "$update_certification_report" 'Status: `PASS`' "Updater certification must record the completed installed semantic suite"
 require_text "$update_certification_report" "## Domain Boundary Decision" "Updater certification must record the domain-boundary reassessment"
 require_text "$update_certification_report" "## Case Results" "Updater certification must inventory every eval case"
 require_text "$update_certification_report" "## Remaining Limitations" "Updater certification must disclose remaining limitations"
