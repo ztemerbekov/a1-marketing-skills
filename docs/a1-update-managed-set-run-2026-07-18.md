@@ -1,0 +1,181 @@
+# A1 Update Managed-Set Run — 2026-07-18
+
+This record is the focused semantic regression gate for the zero-choice managed-set update contract implemented in GitHub Issue #16. It does not replace the full updater release gate.
+
+## Verdict
+
+- Focused semantic regressions: `PASS` — five changed success-path cases on one exact candidate digest
+- Repository verification: `PENDING`
+- Standards review: `PENDING`
+- Spec review: `PENDING`
+- Human semantic judgment: `PASS` — `ztemerbekov` pre-confirmed the observable behavior and exact concise success output, then explicitly accepted the constrained fallback on `2026-07-18`
+- Focused semantic gate: `PENDING`
+
+## Environment and Candidate
+
+- Client: current Codex desktop task
+- Model: GPT-5 family; the desktop client does not expose the exact service variant
+- Run date: `2026-07-18`
+- Repository base commit: `cb8c76011b8223e08ba99a0de23a40bdbe710f63`
+- Candidate source: current `skills/a1-update/`
+- Candidate directory digest: `6f74da570031300431cc1bec40d03dac93052b3a22efb8b87eaf4cf0c8eedef4`
+- Digest method: SHA-256 over every sorted repository-relative candidate path, a NUL separator, and that file's SHA-256
+- Human reviewer and fallback approver: `ztemerbekov`
+- Preliminary criteria review: Codex
+
+## Installation Mode
+
+The exact candidate was installed from the local repository into a new temporary HOME with `npx skills@latest` 1.5.19. The installed directory and source candidate were byte-identical and produced the same recorded digest.
+
+Fresh external `codex exec --ephemeral` runs were then rejected by the security reviewer because they would send the private candidate and fixture prompts to an external model provider without separate authorization. No workaround was attempted. The product owner explicitly accepted the completion checklist's constrained fallback: the current supported Codex task loaded the exact candidate, kept all fixture commands non-mutating, and recorded complete maintainer-only traces plus user-visible responses below.
+
+This mode has less isolation than a clean external client session. It verifies semantic routing, command selection, protected state, and visible output against the exact candidate, but does not execute the mutating commands against a real user installation.
+
+## Domain Boundary Reassessment
+
+This change updates the existing updater interaction contract and collection lifecycle. It adds no skill or independently evolving marketing vocabulary. The repository remains a single-context domain and does not need `CONTEXT-MAP.md`.
+
+## Judgment Rule
+
+Each case uses its exact instruction, setup, and input without paraphrasing. The maintainer-only internal trace is judged separately from the user-visible response. A case passes only when Must Change, Must Preserve, Forbidden, and Output Contract all pass. Ambiguity is failure.
+
+## Development Regression Evidence
+
+The first installed informational run correctly explained automatic membership and client boundaries but omitted that manual changes are overwritten without backup. `update-explain-001` therefore failed. The runtime explanation contract and structural regression were tightened, the candidate was reinstalled under the final digest above, and the complete five-case focused suite was restarted.
+
+## `update-existing-001` — PASS
+
+Case: [update the complete collection in both active scopes](../skills/a1-update/evals/cases/update-existing-001.md)
+
+### Complete Output
+
+Maintainer-only internal execution trace:
+
+```text
+npx skills@latest add ztemerbekov/marketing-skills --list
+npx skills@latest list -g --json
+npx skills@latest list --json
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-editor --skill a1-editor-in-chief --skill a1-marketing-context --skill a1-update --agent codex --agent cursor --global --yes
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-editor --skill a1-editor-in-chief --skill a1-marketing-context --skill a1-update --agent claude-code --yes
+npx skills@latest list -g --json
+npx skills@latest list --json
+```
+
+User-visible response:
+
+```text
+Marketing Skills обновлены.
+```
+
+- Must change: `PASS` — all four upstream skills are synchronized globally to the Codex/Cursor union and in the current project to Claude Code; `a1-update` is added automatically.
+- Must preserve: `PASS` — the commands stay source-scoped, keep the two managed client sets separate, and never inspect the other project.
+- Forbidden: `PASS` — there is no unfiltered update, `--all`, new client, backup, or confirmation.
+- Output contract: `PASS` — the Russian response contains only the concise completion message.
+
+## `update-managed-set-002` — PASS
+
+Case: [normalize the managed set across seven clients](../skills/a1-update/evals/cases/update-managed-set-002.md)
+
+### Complete Output
+
+Maintainer-only internal execution trace:
+
+```text
+npx skills@latest add ztemerbekov/marketing-skills --list
+npx skills@latest list -g --json
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-editor --skill a1-editor-in-chief --skill a1-marketing-context --skill a1-update --agent antigravity --agent antigravity-cli --agent codex --agent cursor --agent gemini-cli --agent github-copilot --agent zed --global --yes
+npx skills@latest list -g --json
+```
+
+User-visible response:
+
+```text
+Marketing Skills обновлены.
+```
+
+- Must change: `PASS` — all four skills target the exact seven-client union and every reported label resolves to its supported key.
+- Must preserve: `PASS` — the union comes only from source-owned skill inventory; no project scope is active.
+- Forbidden: `PASS` — `lastSelectedAgents` contributes no client, and Amp, Claude Code, Cline, Deep Agents, OpenCode, and Warp are absent.
+- Output contract: `PASS` — no client count, client name, scope, lock detail, or installer key reaches the user.
+
+## `update-new-001` — PASS
+
+Case: [install newly available skills automatically](../skills/a1-update/evals/cases/update-new-001.md)
+
+### Complete Output
+
+Maintainer-only internal execution trace after the fixture's completed existing-skill refresh:
+
+```text
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-campaign-review --skill a1-offer-check --agent antigravity --agent codex --global --yes
+npx skills@latest list -g --json
+```
+
+User-visible response:
+
+```text
+Marketing Skills обновлены. Добавлены: a1-campaign-review, a1-offer-check.
+```
+
+- Must change: `PASS` — both new names are installed automatically into the existing Antigravity/Codex union and reported.
+- Must preserve: `PASS` — the managed client set and unrelated state remain unchanged.
+- Forbidden: `PASS` — there is no question, declined skill, dismissal state, Claude Code, or Cursor connection.
+- Output contract: `PASS` — only the two membership additions follow the concise completion sentence.
+
+## `update-deleted-001` — PASS
+
+Case: [remove skills deleted upstream](../skills/a1-update/evals/cases/update-deleted-001.md)
+
+### Complete Output
+
+Maintainer-only deletion trace; the fixture does not enumerate the remaining upstream names, whose ordinary refresh continues separately:
+
+```text
+npx skills@latest remove a1-editor-in-chief --global --yes
+node scripts/prune-lock.mjs --lock ~/.agents/.skill-lock.json --skill a1-editor-in-chief
+npx skills@latest remove a1-editor-in-chief --yes
+node scripts/prune-lock.mjs --lock ./skills-lock.json --skill a1-editor-in-chief
+npx skills@latest list -g --json
+npx skills@latest list --json
+```
+
+User-visible response:
+
+```text
+Marketing Skills updated. Removed: a1-editor-in-chief.
+```
+
+- Must change: `PASS` — the source-scoped skill is removed and its exact lock entry pruned in both active scopes without confirmation.
+- Must preserve: `PASS` — unrelated installed skills, lock entries, and other scopes remain outside the commands.
+- Forbidden: `PASS` — there is no `--all`, name-prefix deletion, failed-inventory inference, or unrelated lock edit.
+- Output contract: `PASS` — the removed name is reported without clients or scopes.
+
+## `update-explain-001` — PASS
+
+Case: [explain without updating](../skills/a1-update/evals/cases/update-explain-001.md)
+
+### Complete Output
+
+```text
+Marketing Skills синхронизируются с актуальным набором из ветки main репозитория ztemerbekov/marketing-skills.
+
+При обновлении весь текущий набор устанавливается во всех клиентах, где уже подключён хотя бы один Marketing Skill. Новые навыки добавляются автоматически, а удалённые из набора — удаляются. Другие источники, новые клиенты и проекты вне текущей папки не затрагиваются. Ручные изменения внутри установленных папок перезаписываются без бэкапа.
+
+Это только объяснение: сейчас никаких команд и изменений не выполнялось.
+```
+
+- Must change: `PASS` — the explanation covers source scope, managed-set synchronization, automatic addition/deletion, and overwrite without backup.
+- Must preserve: `PASS` — it remains informational and gives no unnecessary bootstrap command.
+- Forbidden: `PASS` — no command, file change, system change, client change, or new-skill choice occurs.
+- Output contract: `PASS` — it makes no completion claim and states that nothing ran.
+
+## Remaining Limitations
+
+- The explicitly accepted constrained fallback has less isolation than a clean external client run.
+- Mutating npx commands were intercepted and assessed from complete traces rather than executed against a real installation.
+- Full updater release certification remains pending for prerequisite and failure branches; GitHub Issue #17 owns their redesigned recovery contract.
+- Unknown future client labels still fail closed until Issue #17 adds the agreed non-technical recovery path.
+
+## Finalization Rule
+
+The Issue #16 focused gate passes only when all five cases pass every criterion group and output contract, repository verification passes, independent Standards and Spec reviews pass, and the accepted fallback plus limitations remain disclosed. The full updater release gate remains separate.

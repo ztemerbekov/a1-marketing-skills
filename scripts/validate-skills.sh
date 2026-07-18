@@ -15,6 +15,7 @@ integrated_run_report="docs/a1-integrated-release-run-2026-07-16.md"
 chief_completion_report="docs/a1-editor-in-chief-completion-2026-07-16.md"
 context_completion_report="docs/a1-marketing-context-completion-2026-07-16.md"
 update_certification_report="docs/a1-update-certification.md"
+update_managed_set_report="docs/a1-update-managed-set-run-2026-07-18.md"
 
 echo "Validating A1 design contract artifacts"
 echo
@@ -117,6 +118,7 @@ release_chief_eval_cases=(
 
 update_eval_cases=(
   "skills/a1-update/evals/cases/update-existing-001.md"
+  "skills/a1-update/evals/cases/update-managed-set-002.md"
   "skills/a1-update/evals/cases/update-deleted-001.md"
   "skills/a1-update/evals/cases/update-new-001.md"
   "skills/a1-update/evals/cases/update-explain-001.md"
@@ -151,6 +153,7 @@ required_artifacts=(
   "$chief_completion_report"
   "$context_completion_report"
   "$update_certification_report"
+  "$update_managed_set_report"
   "skills/a1-marketing-context/evals/README.md"
   "skills/a1-marketing-context/evals/case-template.md"
   "skills/a1-marketing-context/references/context-spine.md"
@@ -362,6 +365,7 @@ require_text "docs/maintainers/README.md" "../a1-integrated-release-run-2026-07-
 require_text "docs/maintainers/README.md" "../a1-editor-in-chief-completion-2026-07-16.md" "Maintainer index must link the Chief completion checklist"
 require_text "docs/maintainers/README.md" "../a1-marketing-context-completion-2026-07-16.md" "Maintainer index must link the Context completion checklist"
 require_text "docs/maintainers/README.md" "../a1-update-certification.md" "Maintainer index must link the updater certification record"
+require_text "docs/maintainers/README.md" "../a1-update-managed-set-run-2026-07-18.md" "Maintainer index must link the updater managed-set run"
 require_text "scripts/sync-readmes.js" 'file: "README.ru.md"' "README synchronization must cover the Russian skill inventory"
 require_text "skills/a1-marketing-context/SKILL.md" "## Invocation Contract" "Marketing Context must define explicit natural invocation"
 require_text "skills/a1-marketing-context/SKILL.md" "references/context-spine.md" "Marketing Context must use its invariant spine"
@@ -533,14 +537,24 @@ done
 
 require_text "skills/a1-update/SKILL.md" "ztemerbekov/marketing-skills" "Update skill must pin its source boundary"
 require_text "skills/a1-update/SKILL.md" "without asking and without creating a backup" "Update skill must overwrite existing installations without a backup prompt"
-require_text "skills/a1-update/SKILL.md" "Present all newly available skills in one confirmation" "Update skill must group the new-skill confirmation"
+require_text "skills/a1-update/SKILL.md" "managed client set" "Update skill must synchronize one managed client set per scope"
+require_text "skills/a1-update/SKILL.md" "Install every upstream skill automatically" "Update skill must install newly available skills without confirmation"
 require_text "skills/a1-update/SKILL.md" "automatically remove tracked skills missing from upstream" "Update skill must remove upstream-deleted skills without confirmation"
+require_text "skills/a1-update/SKILL.md" "Always state explicitly that manual changes inside installed skill folders are overwritten without a backup." "Update explanation must disclose destructive overwrite behavior"
+require_text "skills/a1-update/SKILL.md" "Marketing Skills обновлены." "Update skill must define the concise Russian success response"
 require_text "skills/a1-update/SKILL.md" "references/npx-workflow.md" "Update skill must route to its source-scoped npx workflow"
 require_text "skills/a1-update/SKILL.md" "references/runtime-prerequisites.md" "Update skill must route missing Node.js to its prerequisite workflow"
 require_text "skills/a1-update/references/npx-workflow.md" 'Never use `--all`' "Update workflow must forbid unscoped removal"
 require_text "skills/a1-update/references/npx-workflow.md" "node scripts/prune-lock.mjs" "Update workflow must clean source-owned stale lock entries"
+require_text "skills/a1-update/references/npx-workflow.md" '`antigravity-cli`' "Update workflow must map Antigravity CLI"
+require_text "skills/a1-update/references/npx-workflow.md" '`gemini-cli`' "Update workflow must map Gemini CLI"
+require_text "skills/a1-update/references/npx-workflow.md" '`github-copilot`' "Update workflow must map GitHub Copilot"
+require_text "skills/a1-update/references/npx-workflow.md" '`zed`' "Update workflow must map Zed"
 require_text "skills/a1-update/SKILL.md" "Do not search other project directories" "Update workflow must stay within global and current-project scopes"
 require_text "skills/a1-update/references/runtime-prerequisites.md" "Do not bootstrap Homebrew" "Prerequisite workflow must not install another package manager"
+forbid_text "skills/a1-update/SKILL.md" "Present all newly available skills in one confirmation" "Update skill must not ask about newly available skills"
+require_text "README.md" "New skills are installed automatically" "English README must explain automatic Marketing Skills membership"
+require_text "README.ru.md" "Новые навыки устанавливаются автоматически" "Russian README must explain automatic Marketing Skills membership"
 
 for eval_case in "${editor_eval_cases[@]}" "${editor_localization_eval_cases[@]}" "${chief_eval_cases[@]}" "${chief_localization_eval_cases[@]}" "${chief_integration_eval_cases[@]}" "${context_eval_cases[@]}" "${context_consumer_eval_cases[@]}" "${release_chief_eval_cases[@]}" "${update_eval_cases[@]}"; do
   require_text "$eval_case" "## User Instruction" "A1 eval case must include the exact user instruction"
@@ -632,6 +646,23 @@ for eval_case in "${update_eval_cases[@]}"; do
     require_text "$update_certification_report" "$eval_id" "Updater certification must include eval case $eval_id"
   fi
 done
+
+for eval_case in \
+  "skills/a1-update/evals/cases/update-existing-001.md" \
+  "skills/a1-update/evals/cases/update-managed-set-002.md" \
+  "skills/a1-update/evals/cases/update-deleted-001.md" \
+  "skills/a1-update/evals/cases/update-new-001.md" \
+  "skills/a1-update/evals/cases/update-explain-001.md"; do
+  eval_id="$(sed -n 's/^- ID: `\([^`]*\)`.*/\1/p' "$eval_case" | head -n 1)"
+  require_text "$update_managed_set_report" "$eval_id" "Updater managed-set run must include focused case $eval_id"
+done
+
+require_text "$update_managed_set_report" "## Installation Mode" "Updater managed-set run must disclose its installation mode"
+require_text "$update_managed_set_report" 'Repository verification: `PASS`' "Updater managed-set run must record passing repository verification"
+require_text "$update_managed_set_report" 'Standards review: `PASS`' "Updater managed-set run must record the independent Standards verdict"
+require_text "$update_managed_set_report" 'Spec review: `PASS`' "Updater managed-set run must record the independent Spec verdict"
+require_text "$update_managed_set_report" 'Human semantic judgment: `PASS`' "Updater managed-set run must capture the human semantic verdict"
+require_text "$update_managed_set_report" 'Focused semantic gate: `PASS`' "Updater managed-set run must state a passing focused verdict"
 
 echo
 

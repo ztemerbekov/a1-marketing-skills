@@ -33,7 +33,7 @@ const readmes = [
       "a1-update": {
         title: "Update",
         summary:
-          "Update only Marketing Skills and decide separately whether to install new skills from the collection.",
+          "Synchronize the complete Marketing Skills collection without changing unrelated skills or connecting new clients.",
       },
     },
   },
@@ -59,7 +59,7 @@ const readmes = [
       "a1-update": {
         title: "Обновление",
         summary:
-          "Обновить только Marketing Skills и отдельно решить, устанавливать ли новые навыки из набора.",
+          "Синхронизировать весь набор Marketing Skills, не меняя посторонние навыки и не подключая новые клиенты.",
       },
     },
   },

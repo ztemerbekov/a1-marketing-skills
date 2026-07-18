@@ -23,24 +23,25 @@ The current-project lock tracks `a1-editor` from `ztemerbekov/marketing-skills`.
 
 ## Must Change
 
-- Refreshes the three existing global Marketing Skills from the canonical source and current `main`.
-- Refreshes the current project's `a1-editor`.
-- Preserves the reported connected clients for each active scope.
-- Presents `a1-update` as a new skill and asks once before installing it.
+- Synchronizes all four upstream Marketing Skills from the canonical source and current `main` into both active scopes.
+- Installs all four global skills into Codex and Cursor, the union already connected to Marketing Skills globally.
+- Installs all four current-project skills into Claude Code, the client already connected to Marketing Skills in that scope.
+- Installs `a1-update` automatically without asking a question.
 
 ## Must Preserve
 
 - Leaves `a1-unrelated` unchanged because its source differs.
 - Leaves every other project unchanged.
-- Keeps global and current-project operations distinct.
+- Keeps global and current-project managed client sets distinct.
 
 ## Forbidden
 
 - Running an unfiltered `npx skills update` or using `--all`.
 - Scanning the filesystem for other projects.
-- Connecting a client not already associated with Marketing Skills.
-- Asking before refreshing existing skills or backing up their installed files.
+- Connecting a client not already associated with Marketing Skills in that scope.
+- Asking before refreshing, adding, or removing Marketing Skills.
+- Backing up installed skill files.
 
 ## Output Contract
 
-- Reports checked scopes and clients, refreshed skills, the pending new-skill choice, and any failures.
+- Returns only the concise completion message in the instruction language and does not name clients or scopes.

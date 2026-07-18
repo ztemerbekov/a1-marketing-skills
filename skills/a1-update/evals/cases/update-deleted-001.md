@@ -38,4 +38,4 @@ The global and current-project locks both track `a1-editor-in-chief` from `zteme
 
 ## Output Contract
 
-- Names the removed skill and both affected scopes.
+- States that Marketing Skills was updated and names the removed skill without naming clients or scopes.
