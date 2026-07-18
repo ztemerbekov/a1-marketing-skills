@@ -45,11 +45,12 @@ Do not search other project directories. For each active scope, derive one manag
 ## Workflow
 
 1. Classify the whole request under Scope Classification. Stop out-of-scope and mixed-job requests before prerequisite work; answer informational questions without commands.
-2. Check Node.js, `npm`, and `npx`. The current `skills` CLI requires Node.js 18 or newer. If the requirement is not met, follow [runtime-prerequisites.md](references/runtime-prerequisites.md), then resume this workflow.
-3. Follow [npx-workflow.md](references/npx-workflow.md) to collect the upstream and installed inventories, resolve every reported client, and calculate each scope's managed client set. If the upstream inventory or active-scope state cannot be verified, stop without updating or deleting anything.
-4. For each active scope, automatically remove tracked skills missing from upstream and prune their exact source-owned lock entries with the bundled helper.
-5. Synchronize every upstream skill to the managed client set. This automatically restores missing copies, installs newly available skills, and replaces installed files from current `main`, including manual changes, without asking and without creating a backup.
-6. Verify the final installed inventory and report the result.
+2. Check Node.js, `npm`, and `npx`. The current `skills` CLI requires Node.js 18 or newer. If the requirement is not met, ask one confirmation before any system change, then follow [runtime-prerequisites.md](references/runtime-prerequisites.md). In Russian, the entire confirmation turn is exactly: `Для обновления нужен Node.js. Установить и продолжить?` After approval and runtime verification, restart this step and resume the original update.
+3. Follow [npx-workflow.md](references/npx-workflow.md) to collect the upstream and installed inventories, resolve every reported client, calculate each scope's managed client set, and build the complete mutation plan. Complete the read-only preflight for every active scope before the first installation change. If any upstream inventory or active-scope state cannot be verified, stop the whole run with every scope unchanged.
+4. Cross the workflow's mutation barrier only after every preflight result is complete and valid.
+5. For each active scope, automatically remove tracked skills missing from upstream and prune their exact source-owned lock entries with the bundled helper.
+6. Synchronize every upstream skill to the managed client set. This automatically restores missing copies, installs newly available skills, and replaces installed files from current `main`, including manual changes, without asking and without creating a backup.
+7. Verify the final installed inventory and report the result.
 
 If no Marketing Skills installation is tracked, do not guess from folder names. Explain that first installation is a console bootstrap and provide:
 
@@ -60,8 +61,10 @@ npx skills@latest add ztemerbekov/marketing-skills -g
 ## Failure Rules
 
 - Fail closed on an unreadable lock file, unavailable upstream inventory, ambiguous source, empty managed client set, unknown client mapping, or failed command.
+- Any failure before the mutation barrier stops the entire run and leaves every active scope unchanged, including a scope whose own preflight already passed.
+- Never ask the user to choose an `--agent` key. For an unknown client mapping, use the single updater-refresh recovery command defined in `npx-workflow.md`; do not skip the client or expose its label or key.
 - Do not treat a network or authentication failure as evidence that an upstream skill was deleted.
-- Complete one scope before changing the next. If a command fails, stop that scope and report exactly what succeeded and what remains.
+- After the mutation barrier, complete one scope before changing the next. If any write succeeds and a later command fails, stop all further writes, keep the real partial state, and never attempt an automatic rollback. Record completed and pending operations internally, but give the user only the concise partial-completion response and one retry action.
 - Never edit a lock entry by hand when `scripts/prune-lock.mjs` rejects its source or structure.
 - Do not install Homebrew, another package manager, or an unrelated system tool as part of this workflow.
 
@@ -73,4 +76,16 @@ For an ordinary successful update, return only the concise completion message in
 Marketing Skills обновлены.
 ```
 
-If collection membership changed, append the added or removed skill names only. Do not include client counts, client names, scopes, lock files, installer keys, or a routine list of refreshed skills. Include technical detail only when the user explicitly requests diagnostics or when a failure needs a manual action.
+If collection membership changed, append the added or removed skill names only. Do not include client counts, client names, scopes, lock files, installer keys, or a routine list of refreshed skills. A recovery response may include one copy-ready command but no explanation of its flags. Include other technical detail only when the user explicitly requests diagnostics.
+
+For a preflight failure without a more specific recovery above, state that preparation failed, nothing changed, and the user should retry later. In Russian, return exactly:
+
+```text
+Не удалось подготовить обновление. Ничего не изменено. Повторите запрос позже.
+```
+
+If a command fails after mutation begins, do not claim success or claim that nothing changed. In Russian, return exactly:
+
+```text
+Marketing Skills обновлены частично. Повторите запрос: «Обнови Marketing Skills».
+```

@@ -19,8 +19,9 @@ The local lock includes `a1-editor-in-chief`. The failed inventory output contai
 
 ## Must Change
 
-- Stops the update and reports that the upstream inventory could not be verified.
-- Identifies that no installed state was changed.
+- Stops the whole update before the mutation barrier because the source collection could not be verified.
+- States plainly that the update could not be prepared and nothing changed.
+- Gives one retry action without exposing the failed command.
 
 ## Must Preserve
 
@@ -31,7 +32,8 @@ The local lock includes `a1-editor-in-chief`. The failed inventory output contai
 - Interpreting the empty failed output as an empty upstream repository.
 - Removing `a1-editor-in-chief` or refreshing any skill after the inventory failure.
 - Claiming that Marketing Skills is current.
+- Showing the failed command, client state, lock files, installer keys, or diagnostic alternatives.
 
 ## Output Contract
 
-- Reports the failed inventory command and a safe retry action.
+- Returns exactly `Не удалось подготовить обновление. Ничего не изменено. Повторите запрос позже.` in Russian.

@@ -61,7 +61,42 @@ For each scope calculate:
 
 A missing folder with a valid source lock entry is repaired during synchronization. If the scope has source-owned lock entries but no managed client can be recovered from the installed inventory, stop without changing that scope; do not use auto-detection, installer history, or every client as a fallback.
 
-## 4. Remove Deleted Skills Automatically
+## 4. Mutation Barrier
+
+Before any installation change, complete every read-only check for the whole run:
+
+- verify the Node.js, `npm`, and `npx` capability required by `skills`;
+- verify the complete upstream inventory;
+- identify every active exact-source global and current-project scope;
+- parse every active scope's source-owned lock state;
+- read every active scope's installed inventory;
+- calculate every managed client set;
+- resolve every reported client label to a supported key; and
+- calculate the complete deleted, new, repair, and refresh plan for every scope.
+
+Treat this as one mutation barrier across all active scopes. Do not run `npx skills add`, `npx skills remove`, or `scripts/prune-lock.mjs` until every item above succeeds for every active scope. If any result is missing, unreadable, ambiguous, empty where a managed set is required, or unmappable, stop the whole run. Do not mutate an earlier scope merely because its own preflight passed.
+
+### Unknown-client recovery
+
+If any source-owned installed skill reports a client label that this installed updater cannot map, stop the whole run before the mutation barrier. Never ask the user for a key, invent one, omit the client, or update only the known clients.
+
+Locate the running `a1-update` copy to determine its installation scope. Give one short message in the user's language stating that the update could not be prepared and nothing changed. Then provide exactly one copy-ready bootstrap command that refreshes `a1-update` in that same scope before the user retries the original request. Do not pass `--agent`: current `npx skills` detects the AI client running the command and selects it non-interactively.
+
+Global updater:
+
+```bash
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --global --yes
+```
+
+Current-project updater:
+
+```bash
+npx skills@latest add ztemerbekov/marketing-skills --skill a1-update --yes
+```
+
+Return only the command that matches the running updater. Do not name the unresolved client, show a client table, explain a lock file, expose an `--agent` key, or offer alternative commands.
+
+## 5. Remove Deleted Skills Automatically
 
 Only after a successful upstream inventory, remove deleted names without confirmation.
 
@@ -89,7 +124,7 @@ node scripts/prune-lock.mjs \
 
 Repeat `--skill` for multiple names. Use the global or current-project lock path established in step 2. The helper accepts only entries owned by `ztemerbekov/marketing-skills`, preserves unrelated entries and top-level metadata, sorts project skill keys, and writes atomically. If removal failed or any deleted skill is still installed, do not prune its lock entry.
 
-## 5. Synchronize the Managed Set
+## 6. Synchronize the Managed Set
 
 Re-add every upstream skill from the canonical source into the scope's complete managed client set. This one operation refreshes tracked skills, repairs incomplete installations, and installs new upstream skills. All upstream skills share the same managed client set by definition.
 
@@ -116,11 +151,11 @@ Repeat `--skill` for every upstream name and `--agent` for every key in the mana
 
 Do not preserve or back up manual changes inside installed skill folders.
 
-## 6. Record Membership Changes
+## 7. Record Membership Changes
 
-Do not ask whether to install new upstream skills. They are already included in step 5. Record the names that were new before synchronization so the final response can mention only collection membership changes without exposing clients or scopes.
+Do not ask whether to install new upstream skills. They are already included in step 6. Record the names that were new before synchronization so the final response can mention only collection membership changes without exposing clients or scopes.
 
-## 7. Verify
+## 8. Verify
 
 Run the applicable `list --json` commands again. Confirm that:
 
@@ -131,3 +166,14 @@ Run the applicable `list --json` commands again. Confirm that:
 - unrelated installed skills are unchanged.
 
 For success, follow the concise output contract in `SKILL.md`. Report partial completion as partial completion, not success.
+
+## Mid-write Failure
+
+Mutation begins as soon as the first `add`, `remove`, or lock-helper operation succeeds. If any later mutating command or post-write verification fails:
+
+1. Stop every remaining write in the current scope and every later active scope.
+2. Do not reinstall a removed skill, restore a lock snapshot, reverse a successful add, or attempt any other automatic rollback.
+3. Preserve an internal record of the operations that completed, the command that failed, and the operations that remain so explicit diagnostics can be accurate.
+4. Tell the user only that the update completed partially and give one retry action: repeat the original Marketing Skills update request. The retry starts with a new complete preflight against the real current state.
+
+Do not expose client names, scopes, lock files, installer keys, command traces, or alternative recovery actions in the ordinary failure response.

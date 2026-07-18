@@ -5,8 +5,8 @@ This record is the semantic release gate for `a1-update`. Structural and isolate
 ## Certification Status
 
 - Status: `PENDING`
-- Candidate runtime revision: Issue #16 candidate digest `e5cd8e654a63fa28591d834093a4bfbbbc2d75fa19911053159af3163c690e78`
-- Decision: the Issue #16 focused gate passes under the explicitly accepted constrained fallback, including human semantic judgment, repository verification, and independent Standards and Spec rereviews. Full updater release certification remains pending for prerequisite and failure branches, which are redesigned by Issue #17.
+- Candidate runtime revision: Issue #17 candidate digest `ad8694fcf98fdd70b8b71a88f1a3d61a037f3a6715f0e436f4ad497db3195a0d`
+- Decision: the Issue #16 managed-set gate passes. Issue #17 recovery outputs have preliminary evidence on the exact current candidate and await explicit constrained-fallback acceptance, human semantic judgment, repository verification, and independent Standards and Spec reviews.
 
 ## Domain Boundary Decision
 
@@ -14,7 +14,7 @@ The updater belongs to the existing single marketing-skills repository context. 
 
 ## Environment
 
-The current candidate environment, installation mode, complete outputs, criteria evidence, reviewer, fallback approval, and isolation difference are recorded in the [Issue #16 managed-set run](a1-update-managed-set-run-2026-07-18.md).
+The managed-set evidence is recorded in the [Issue #16 run](a1-update-managed-set-run-2026-07-18.md). The current candidate environment, installation mode, complete recovery outputs, criteria evidence, pending reviewer, and isolation difference are recorded in the [Issue #17 run](a1-update-recovery-run-2026-07-18.md).
 
 ## Judgment Rule
 
@@ -34,7 +34,11 @@ Submit each case's exact instruction and complete fixture without paraphrasing. 
 | [`update-scope-out-003`](../skills/a1-update/evals/cases/update-scope-out-003.md) | `PASS` | Out-of-scope boundary response passed human judgment. |
 | [`update-scope-mixed-004`](../skills/a1-update/evals/cases/update-scope-mixed-004.md) | `PASS` | Mixed-job refusal passed human judgment. |
 | [`update-scope-completed-input-005`](../skills/a1-update/evals/cases/update-scope-completed-input-005.md) | `PASS` | Completed-inventory verification trace passed human judgment. |
+| [`update-preflight-failure-006`](../skills/a1-update/evals/cases/update-preflight-failure-006.md) | `PENDING` | Issue #17 runtime contract is implemented; installed semantic evidence is pending. |
+| [`update-unknown-client-recovery-007`](../skills/a1-update/evals/cases/update-unknown-client-recovery-007.md) | `PENDING` | Issue #17 recovery contract is implemented; installed semantic evidence is pending. |
 | [`update-prerequisite-001`](../skills/a1-update/evals/cases/update-prerequisite-001.md) | `PENDING` | Runtime policy is structurally covered; no system-package fixture run yet. |
+| [`update-prerequisite-refusal-008`](../skills/a1-update/evals/cases/update-prerequisite-refusal-008.md) | `PENDING` | Issue #17 refusal contract is implemented; installed semantic evidence is pending. |
+| [`update-mid-write-failure-009`](../skills/a1-update/evals/cases/update-mid-write-failure-009.md) | `PENDING` | Issue #17 partial-completion contract is implemented; installed semantic evidence is pending. |
 | [`update-upstream-failure-001`](../skills/a1-update/evals/cases/update-upstream-failure-001.md) | `PENDING` | Fail-closed contract is present; installed failure fixture pending. |
 
 ## Release Evidence

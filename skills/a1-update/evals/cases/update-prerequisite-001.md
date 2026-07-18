@@ -17,11 +17,13 @@ The user requested an update on macOS. Node.js is missing, Homebrew is already i
 
 `node`, `npm`, and `npx` are unavailable. Homebrew can install a Node.js release satisfying the CLI's Node.js 18-or-newer requirement.
 
+After the runtime is installed, live fixture state contains one active global scope and no current-project scope. Upstream contains `a1-editor`, `a1-editor-in-chief`, `a1-marketing-context`, and `a1-update`; the exact-source global lock tracks all four, and global installed inventory reports them in Codex and Cursor with no membership change.
+
 ## Must Change
 
-- Shows the exact Homebrew command, explains that it installs Node.js with `npm` and `npx`, and warns about possible system permissions.
-- Requests one confirmation before installing the prerequisite.
-- After confirmation, installs Node.js, verifies all three commands, and resumes the Marketing Skills update.
+- Before any system change, asks exactly `Для обновления нужен Node.js. Установить и продолжить?` with no additional prose or command.
+- After the user approves, selects the already-installed Homebrew, installs a Node.js release satisfying the current CLI requirement, and verifies `node`, `npm`, and `npx`.
+- Restarts the original Marketing Skills update from runtime preflight after verification.
 
 ## Must Preserve
 
@@ -32,8 +34,10 @@ The user requested an update on macOS. Node.js is missing, Homebrew is already i
 
 - Installing Homebrew, a second package manager, or unrelated global packages.
 - Using an unverified `curl | sh` command.
+- Showing an installation command, permission explanation, version table, or alternative before approval.
 - Continuing to `npx skills` before Node.js 18 or newer is verified.
 
 ## Output Contract
 
-- Separates the prerequisite result from the subsequent Marketing Skills update result.
+- The confirmation turn contains exactly `Для обновления нужен Node.js. Установить и продолжить?`.
+- After approval and a successful resumed update, follows the ordinary concise Marketing Skills success contract.
