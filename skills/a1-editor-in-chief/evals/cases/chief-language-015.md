@@ -27,8 +27,8 @@ Explicitly run a1-editor-in-chief. This is a Russian internal note for marketpla
 
 ## Must Change
 
-- [ ] Choose shorten, delegate to Editor, and return concise Russian final copy under `Final Text`.
-- [ ] Use `What Changed` and write every change explanation in English.
+- [ ] Choose shorten, delegate to Editor, and return concise Russian final copy under a naturally localized English final-text heading.
+- [ ] Use a naturally localized English change-summary heading and write every change explanation in English.
 
 ## Must Preserve
 
@@ -37,7 +37,7 @@ Explicitly run a1-editor-in-chief. This is a Russian internal note for marketpla
 
 ## Forbidden
 
-- [ ] Do not use `Edited Version`, Russian service labels, Russian explanations, or English final copy.
+- [ ] Do not leak Editor-specific scaffolding, Russian service labels, Russian explanations, or English final copy.
 - [ ] Do not add non-material assumptions, warnings, input summaries, briefs, diagnosis, review notes, metrics, or product claims.
 
 ## Manual Run Record

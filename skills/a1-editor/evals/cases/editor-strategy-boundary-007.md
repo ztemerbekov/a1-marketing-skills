@@ -26,7 +26,7 @@ None.
 ## Must Change
 
 - [ ] По смыслу определить запрос как редактуру уже принятого позиционирования и сразу выполнить Shorten.
-- [ ] Вернуть `Edited Version` и `What Changed` без strategy-boundary response.
+- [ ] Вернуть естественно локализованные русские разделы с отредактированным текстом и описанием изменений без strategy-boundary response.
 
 ## Must Preserve
 

@@ -2,7 +2,7 @@
 
 - ID: `chief-language-017`
 - Operation: `Standard Edit` with variants
-- Risk: Chief's universal localization rule works only for its explicit English and Russian examples or leaks English Editor labels.
+- Risk: Chief's universal localization rule works only for English and Russian or leaks English Editor labels.
 - Scope Scenario: `In scope`
 
 ## Setup
@@ -28,7 +28,7 @@ Review Hub is a really very useful place where marketplace managers can view Ozo
 ## Must Change
 
 - [ ] Delegar en Editor y devolver dos variantes inglesas más claras y concisas, cada una de una sola frase con el enlace integrado.
-- [ ] Usar equivalentes naturales en español para el texto final, `Opción 1`, `Opción 2` y el resumen de cambios, con explicaciones en español.
+- [ ] Usar encabezados de resultado y etiquetas numeradas de opciones localizados naturalmente al español, con explicaciones en español.
 
 ## Must Preserve
 
@@ -37,7 +37,7 @@ Review Hub is a really very useful place where marketplace managers can view Ozo
 
 ## Forbidden
 
-- [ ] No usar `Final Text`, `Edited Version`, `What Changed`, `Option 1`, `Option 2`, etiquetas rusas ni explicaciones en inglés.
+- [ ] No usar etiquetas de servicio en inglés o ruso ni explicaciones en inglés, y no filtrar el scaffolding interno de Editor.
 - [ ] No mostrar Editor Brief, diagnosis, Chief Review, handoff mechanics ni un Editor response anidado.
 - [ ] No añadir funciones, métricas, garantías, CTA ni otras afirmaciones no confirmadas.
 

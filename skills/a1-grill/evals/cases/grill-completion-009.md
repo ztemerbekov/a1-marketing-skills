@@ -27,7 +27,7 @@ Next action under consideration: Request written placement terms from both admin
 
 ## Must Change
 
-- [ ] Return Russian level-two headings in this order: `Решение`, `Основания`, `Допущения`, `Отложено`, `Следующий шаг`.
+- [ ] Return naturally localized Russian level-two sections for the decision, rationale, assumptions, deferred branches, and next step, in that order.
 - [ ] Summarize the agreed result concisely and recommend exactly one next action without performing it.
 
 ## Must Preserve

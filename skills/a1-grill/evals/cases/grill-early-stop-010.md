@@ -27,7 +27,7 @@ Open: promise, evidence, channel, budget, and measurement.
 ## Must Change
 
 - [ ] Stop questioning immediately.
-- [ ] Return `## Partial Summary`, explicitly state that the grilling is incomplete, then use `### Resolved` and `### Open Branches`.
+- [ ] Return a naturally localized English level-two partial-summary heading, explicitly state that the grilling is incomplete, then use naturally localized English level-three sections for resolved decisions and open branches.
 - [ ] List only the supplied resolved decisions and still-open branches.
 
 ## Must Preserve
@@ -38,5 +38,5 @@ Open: promise, evidence, channel, budget, and measurement.
 ## Forbidden
 
 - [ ] Do not claim shared understanding or use the confirmed-completion output.
-- [ ] Do not add `Next Step`, resolve an open branch, or continue the interview.
+- [ ] Do not add a next-step section, resolve an open branch, or continue the interview.
 - [ ] Do not translate the supplied Russian name or audience term.

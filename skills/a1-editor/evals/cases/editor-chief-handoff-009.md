@@ -37,7 +37,7 @@ None.
 
 ## Forbidden
 
-- [ ] Не начинать chief workflow, не задавать gate questions, не создавать Editor Brief и не возвращать `Edited Version` или частичную редактуру.
+- [ ] Не начинать chief workflow, не задавать gate questions, не создавать Editor Brief и не возвращать служебные разделы редакторского результата или частичную редактуру.
 - [ ] Не предлагать новую аудиторию, позиционирование, сегмент, оффер, angle, message, claim или CTA.
 
 ## Manual Run Record

@@ -49,21 +49,12 @@ Load detailed text-, paragraph-, sentence-, or word-level references only when t
 
 ## Output
 
-Unless the user requests edited text only, return these localized sections in order, using each section label as a level-two Markdown heading:
+Unless the user requests edited text only, return these naturally localized level-two sections in order:
 
 1. Edited version: the rewritten text or two to three clearly different options.
 2. Change summary: one to five concise explanations tied to changes actually made.
 3. Assumptions: only when material or explicitly requested.
 
-Use the exact English or Russian labels below. For other languages, translate the same labels naturally.
-
-| Service element | English | Russian |
-|---|---|---|
-| Edited version | `Edited Version` | `Отредактированный текст` |
-| Change summary | `What Changed` | `Что изменилось` |
-| Assumptions | `Assumptions` | `Допущения` |
-| Numbered option | `Option N` | `Вариант N` |
-
-Keep options inside the edited-version section and put any descriptive difference after the localized option label.
+Keep options inside the edited-version section. Introduce each with a naturally localized numbered option label, followed by any descriptive difference.
 
 Before delivery, verify that every service label follows the Language rule. For an edited-text-only request, return only the edited text.

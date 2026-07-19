@@ -28,7 +28,7 @@ Explicitly run a1-editor-in-chief. This is a Russian internal note for marketpla
 ## Must Change
 
 - [ ] Choose shorten, delegate to Editor, and return concise Russian final copy.
-- [ ] Write the `What Changed` bullets in English.
+- [ ] Use a naturally localized English change-summary heading and write its bullets in English.
 
 ## Must Preserve
 

@@ -34,7 +34,7 @@ Install both skills. Provide the marketing context below.
 ## Must Change
 
 - [ ] Заполнить reader, goal, channel, constraints и voice из context без вопросов.
-- [ ] Выбрать restructure, делегировать Editor и вернуть reviewed text с `What Changed`.
+- [ ] Выбрать restructure, делегировать Editor и вернуть reviewed text с естественно локализованным русским разделом изменений.
 
 ## Must Preserve
 

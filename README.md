@@ -50,7 +50,7 @@ Marketing Context is useful for repeated work, but A1 Grill and Editor can work 
 
 **Use it when:** you want to sharpen positioning, an audience choice, an offer, pricing, messaging, a channel, campaign, funnel, retention decision, or marketing measurement before anyone executes it. Invoke `a1-grill` explicitly; ordinary marketing discussion does not start the interview.
 
-Questions, recommendations, and summary labels follow your instruction language. Supplied quotations, product names, and explicit terms stay in their original language unless you request translation.
+Questions and recommendations use your instruction language, and summary labels are localized naturally in it. Supplied quotations, product names, and explicit terms stay in their original language unless you request translation.
 
 **Try:**
 
@@ -94,7 +94,7 @@ The context belongs only to the current repository: there is no global or privat
 
 Marketing Context is useful for repeated work, but ordinary editing does not require it.
 
-Response headings, option labels, and explanations follow the language of your instruction. The edited copy keeps the source language unless you ask to translate it.
+Response headings and option labels are localized naturally in the language of your instruction, and explanations use that language. The edited copy keeps the source language unless you ask to translate it.
 
 **Try:**
 
@@ -117,7 +117,7 @@ Requests to create or rethink positioning, an offer, an audience, campaign messa
 
 **Use it when:** you already have the source material and approved marketing strategy, but the reader focus, message emphasis, editorial angle, argument order, structure, or voice still needs chief-editor judgment. Invoke Editor in Chief by name; the skill starts only when you explicitly invoke it.
 
-Final headings, option labels, explanations, assumptions, and warnings follow the language of your instruction. The reviewed copy keeps the source language unless you ask to translate it, and a request for final text only remains wrapper-free.
+Final headings and option labels are localized naturally in the language of your instruction; explanations, assumptions, and warnings use that language. The reviewed copy keeps the source language unless you ask to translate it, and a request for final text only remains wrapper-free.
 
 **Try:**
 

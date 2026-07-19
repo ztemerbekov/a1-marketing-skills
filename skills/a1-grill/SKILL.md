@@ -27,7 +27,7 @@ Keep related decisions in one tree when they share a root. For independent objec
 
 Use the language of the user's current instruction for questions, recommendations, explanations, confirmations, and output labels. If the input material and instruction use different languages, preserve supplied copy, quotations, product names, and explicit terms in their original language unless the user asks to translate them. When reusing a supplied audience description, offer, claim, category label, or other user-defined wording, copy it verbatim even inside an otherwise translated summary.
 
-Use the same interaction contract in Russian and English. For another instruction language, translate service labels naturally.
+Use the same interaction contract in every language. Localize service labels naturally in the instruction language.
 
 ## Runtime
 
@@ -88,23 +88,14 @@ If the user stops before confirmation, end the interview immediately and return 
 
 ## Output Contract
 
-After confirmed completion, return these localized level-two headings in order:
+After confirmed completion, return naturally localized level-two sections in this semantic order:
 
-| English | Russian | Rule |
-|---|---|---|
-| `Decision` | `Решение` | State the agreed result. |
-| `Rationale` | `Основания` | Give only the reasons that materially support it. |
-| `Assumptions` | `Допущения` | Include only when assumptions remain. |
-| `Deferred` | `Отложено` | Include only when branches were consciously deferred. |
-| `Next Step` | `Следующий шаг` | Recommend exactly one concrete action without performing it. |
+1. Decision: state the agreed result.
+2. Rationale: give only the reasons that materially support it.
+3. Assumptions: include only when assumptions remain.
+4. Deferred: include only when branches were consciously deferred.
+5. Next step: recommend exactly one concrete action without performing it.
 
-Keep the summary concise and outcome-focused; do not replay the interview or expose the internal tree. Name another skill in `Next Step` only when the user explicitly asks which skill to use or when the name is necessary to make the continuation understandable. Never invoke it.
+Keep the summary concise and outcome-focused; do not replay the interview or expose the internal tree. Name another skill in the next-step section only when the user explicitly asks which skill to use or when the name is necessary to make the continuation understandable. Never invoke it.
 
-For an early stop, return a level-two `Partial Summary` / `Промежуточный итог` heading, state explicitly that the grilling is incomplete, then use these localized level-three headings:
-
-| English | Russian |
-|---|---|
-| `Resolved` | `Уже решено` |
-| `Open Branches` | `Открытые ветви` |
-
-Include only decisions actually resolved and branches still open. Do not add a completion claim or execute a next step.
+For an early stop, return a naturally localized level-two partial-summary heading and state explicitly that the grilling is incomplete. Then use naturally localized level-three sections for resolved decisions and open branches. Include only decisions actually resolved and branches still open. Do not add a completion claim or execute a next step.

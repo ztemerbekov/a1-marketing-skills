@@ -2,7 +2,7 @@
 
 - ID: `editor-language-013`
 - Operation: `Standard Edit` with variants
-- Risk: The universal localization rule works only for its explicit English and Russian canonical examples.
+- Risk: The universal localization rule works only for English and Russian.
 - Scope Scenario: `In scope`
 
 ## Setup
@@ -26,7 +26,7 @@ Review Hub is a really very useful place where teams can view Ozon and Wildberri
 ## Must Change
 
 - [ ] Devolver dos variantes inglesas más claras y concisas.
-- [ ] Usar equivalentes naturales en español para `Versión editada`, `Opción 1`, `Opción 2` y `Qué cambió`, con explicaciones en español.
+- [ ] Usar encabezados de resultado y etiquetas numeradas de opciones localizados naturalmente al español, con explicaciones en español.
 
 ## Must Preserve
 
@@ -35,7 +35,7 @@ Review Hub is a really very useful place where teams can view Ozon and Wildberri
 
 ## Forbidden
 
-- [ ] No usar `Edited Version`, `What Changed`, `Option 1`, `Option 2`, etiquetas rusas ni explicaciones en inglés.
+- [ ] No usar etiquetas de servicio en inglés o ruso ni explicaciones en inglés.
 - [ ] No añadir funciones, métricas, garantías, CTA ni otras afirmaciones no confirmadas.
 
 ## Manual Run Record

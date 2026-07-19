@@ -11,6 +11,7 @@ Notable user-facing changes to A1 Marketing Skills are recorded here. Git tags a
 - Keep Editor in Chief explicitly invoked across supported clients.
 - Simplify repository validation and contributor guidance around structural checks and pull-request evidence.
 - Make A1 Editor repair incorrect grammar, grammatical government, and lexical collocations even when the source meaning remains understandable.
+- Let A1 Grill, Editor, and Editor in Chief localize output labels naturally instead of requiring exact English or Russian wording.
 
 ### Removed
 

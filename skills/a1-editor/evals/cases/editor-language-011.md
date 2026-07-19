@@ -25,8 +25,8 @@ Shorten this Russian internal note. Keep the edited copy in Russian, preserve ev
 
 ## Must Change
 
-- [ ] Return concise Russian edited copy under `Edited Version`.
-- [ ] Use `What Changed` and write every change explanation in English.
+- [ ] Return concise Russian edited copy under a naturally localized English edited-version heading.
+- [ ] Use a naturally localized English change-summary heading and write every change explanation in English.
 
 ## Must Preserve
 
@@ -35,7 +35,7 @@ Shorten this Russian internal note. Keep the edited copy in Russian, preserve ev
 
 ## Forbidden
 
-- [ ] Do not use `Отредактированный текст`, `Что изменилось`, Russian explanations, or English edited copy.
+- [ ] Do not use Russian service labels, Russian explanations, or English edited copy.
 - [ ] Do not add non-material assumptions, warnings, process notes, metrics, or product claims.
 
 ## Manual Run Record

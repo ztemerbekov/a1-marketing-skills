@@ -30,24 +30,14 @@ Load only the local reference selected by the active stage. Do not inspect or co
 
 ## Output Contract
 
-Unless the user requests final text only, return these localized sections in order, using each section label as a level-two Markdown heading:
+Unless the user requests final text only, return these naturally localized level-two sections in order:
 
 1. Final text: the reviewed copy or requested options.
 2. Change summary: one to five concise editorial changes.
 3. Assumptions: only when material or explicitly requested.
 4. Warnings: only when material, explicitly requested, or review remains unresolved.
 
-Use the exact English or Russian labels below. For other languages, translate the same labels naturally.
-
-| Service element | English | Russian |
-|---|---|---|
-| Final text | `Final Text` | `Итоговый текст` |
-| Change summary | `What Changed` | `Что изменилось` |
-| Assumptions | `Assumptions` | `Допущения` |
-| Warnings | `Warnings` | `Предупреждения` |
-| Numbered option | `Option N` | `Вариант N` |
-
-Keep options inside the final-text section and put any descriptive difference after the localized option label.
+Keep options inside the final-text section. Introduce each with a naturally localized numbered option label, followed by any descriptive difference.
 
 The delegated Editor response is internal. Return the reviewed copy once without Editor headings. Do not expose an input summary, diagnosis, handoff mechanics, review rubric, `Chief Review`, or process notes by default. Keep the Editor Brief internal unless the user explicitly asks to inspect it.
 

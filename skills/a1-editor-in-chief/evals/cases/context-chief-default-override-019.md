@@ -52,7 +52,7 @@ Review Hub собирает отзывы Ozon и Wildberries в одном сп�
 
 ## Output Contract
 
-`Normal reviewed Chief result with concise What Changed and no context-maintenance output.`
+`Normal reviewed Chief result with a concise, naturally localized change summary and no context-maintenance output.`
 
 ## Manual Run Record
 

@@ -28,7 +28,7 @@ Review Hub brings Ozon and Wildberries reviews into one list and will increase s
 ## Must Change
 
 - [ ] Выбрать bounded editorial direction, делегировать Editor и вернуть два английских варианта без неподтверждённого обещания.
-- [ ] Использовать точные русские служебные элементы `Итоговый текст`, `Вариант 1`, `Вариант 2`, `Что изменилось`, `Допущения` и `Предупреждения`.
+- [ ] Естественно локализовать на русский служебные заголовки для итогового текста, описания изменений, допущений и предупреждений, а также подписи двух вариантов.
 - [ ] Объяснить изменения, допущение и предупреждение по-русски.
 
 ## Must Preserve
@@ -38,7 +38,7 @@ Review Hub brings Ozon and Wildberries reviews into one list and will increase s
 
 ## Forbidden
 
-- [ ] Не использовать `Final Text`, `Edited Version`, `What Changed`, `Assumptions`, `Warnings`, `Option 1`, `Option 2` или английские пояснения.
+- [ ] Не использовать английские служебные элементы или пояснения.
 - [ ] Не сохранять и не перефразировать обещание роста продаж; не добавлять метрики, гарантии, CTA или другие неподтверждённые утверждения.
 - [ ] Не показывать Editor Brief, diagnosis, Chief Review, handoff mechanics или отдельный вложенный Editor response.
 
