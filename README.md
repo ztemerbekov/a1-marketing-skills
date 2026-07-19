@@ -4,7 +4,7 @@
 
 **English** | [Русский](./README.ru.md)
 
-A1 Marketing Skills helps marketers, founders, and writers work with AI agents in ordinary language. The collection can remember product context, improve existing copy, and clarify complex editorial assignments.
+A1 Marketing Skills helps marketers, founders, and writers work with AI agents in ordinary language. The collection can remember product context, pressure-test marketing decisions, improve existing copy, and clarify complex editorial assignments.
 
 ## Contents
 
@@ -27,19 +27,40 @@ If this is your first time using A1 Marketing Skills, start with [Marketing Cont
 
 | Skill | Best for |
 |-------|----------|
+| [A1 Grill](skills/a1-grill/)<br>`a1-grill` | Sharpen a marketing idea, decision, or plan through constructive questioning before execution. |
 | [Editor](skills/a1-editor/)<br>`a1-editor` | Improve existing text: shorten, clarify, strengthen, or restructure it without inventing facts. |
 | [Editor in Chief](skills/a1-editor-in-chief/)<br>`a1-editor-in-chief` | Turning a confirmed editorial assignment into a reviewed edit without creating general marketing strategy. |
 | [Marketing Context](skills/a1-marketing-context/)<br>`a1-marketing-context` | Creating or incrementally updating one repository-local context from confirmed marketing information. |
 
 Use this quick rule:
 
+- Have a marketing idea, decision, or plan that still needs pressure-testing? Explicitly invoke **A1 Grill**.
 - Want the current repository to remember confirmed product, audience, voice, or proof for future work? Explicitly ask **Marketing Context** to save or update it.
 - Already have text and know what should change? Use **Editor**.
 - Have confirmed product and marketing inputs, but need to decide the editorial reader focus, message emphasis, angle, structure, or voice? Explicitly invoke **Editor in Chief**.
 
-Marketing Context is useful for repeated work, but Editor does not require it to improve a supplied text.
+Marketing Context is useful for repeated work, but A1 Grill and Editor can work from current material without it. A1 Grill asks before reading an existing context.
 
 ## Meet the skills
+
+<details>
+<summary><strong>A1 Grill</strong></summary>
+
+**What it does:** constructively pressure-tests one marketing idea, decision, or plan through an adaptive decision tree. Each turn gives one concrete recommendation and asks one question. The session ends only after you confirm shared understanding, then returns a concise decision summary.
+
+**Use it when:** you want to sharpen positioning, an audience choice, an offer, pricing, messaging, a channel, campaign, funnel, retention decision, or marketing measurement before anyone executes it. Invoke `a1-grill` explicitly; ordinary marketing discussion does not start the interview.
+
+Questions, recommendations, and summary labels follow your instruction language. Supplied quotations, product names, and explicit terms stay in their original language unless you request translation.
+
+**Try:**
+
+```text
+Use a1-grill. Grill this idea one decision at a time: launch a Telegram channel to generate qualified leads for our marketplace analytics service.
+```
+
+A1 Grill derives the questions from the active decision instead of running a fixed marketing checklist. It examines supplied materials and readily available facts, asks permission before reading an existing `.agents/marketing-context.md`, and lets you stop with a clearly partial summary. It does not execute the decision, create marketing materials, or conduct full market research.
+
+</details>
 
 <details>
 <summary><strong>Marketing Context</strong></summary>
@@ -157,6 +178,7 @@ Remove the current global collection from every connected client:
 npx skills@latest remove \
   a1-editor \
   a1-editor-in-chief \
+  a1-grill \
   a1-marketing-context \
   --global \
   --yes
@@ -172,6 +194,7 @@ Update the installed global skills with the official CLI:
 npx skills@latest update \
   a1-editor \
   a1-editor-in-chief \
+  a1-grill \
   a1-marketing-context \
   --global \
   --yes
