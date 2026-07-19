@@ -1,11 +1,12 @@
 # Changelog
 
-Notable user-facing changes to Marketing Skills are recorded here. Git tags and GitHub Releases identify published versions.
+Notable user-facing changes to A1 Marketing Skills are recorded here. Git tags and GitHub Releases identify published versions.
 
 ## Unreleased
 
 ### Changed
 
+- Rename the collection and repository to A1 Marketing Skills.
 - Use the official `npx skills` CLI for installation and updates.
 - Keep Editor in Chief explicitly invoked across supported clients.
 - Simplify repository validation and contributor guidance around structural checks and pull-request evidence.

@@ -1,10 +1,10 @@
-![Marketing Skills](./assets/marketing-skills-evolution.png)
+![A1 Marketing Skills](./assets/marketing-skills-evolution.png)
 
-# Marketing Skills
+# A1 Marketing Skills
 
 [English](./README.md) | **Русский**
 
-Marketing Skills помогает маркетологам, предпринимателям и авторам работать с ИИ-агентами обычными словами. Набор умеет сохранять сведения о продукте, улучшать готовые тексты и ставить сложные редакторские задачи.
+A1 Marketing Skills помогает маркетологам, предпринимателям и авторам работать с ИИ-агентами обычными словами. Набор умеет сохранять сведения о продукте, улучшать готовые тексты и ставить сложные редакторские задачи.
 
 ## Содержание
 
@@ -18,12 +18,12 @@ Marketing Skills помогает маркетологам, предприним
 ## Быстрый старт
 
 ```bash
-npx skills@latest add ztemerbekov/marketing-skills -g
+npx skills@latest add ztemerbekov/a1-marketing-skills -g
 ```
 
 ## Какой навык выбрать
 
-Если вы впервые работаете с Marketing Skills, начните с [Маркетингового контекста](skills/a1-marketing-context/): он сохранит сведения о продукте, которые пригодятся другим навыкам.
+Если вы впервые работаете с A1 Marketing Skills, начните с [Маркетингового контекста](skills/a1-marketing-context/): он сохранит сведения о продукте, которые пригодятся другим навыкам.
 
 | Навык | Когда использовать |
 |-------|----------|
@@ -128,7 +128,7 @@ npx skills@latest add ztemerbekov/marketing-skills -g
 Выполните команду в любой папке:
 
 ```bash
-npx skills@latest add ztemerbekov/marketing-skills -g
+npx skills@latest add ztemerbekov/a1-marketing-skills -g
 ```
 
 Установщик покажет доступные навыки и найденные ИИ-клиенты. Выберите клиентов, которыми уже пользуетесь, и нужные навыки; рекомендуем установить весь набор.
@@ -141,7 +141,7 @@ npx skills@latest add ztemerbekov/marketing-skills -g
 Откройте терминал в проекте и уберите `-g`:
 
 ```bash
-npx skills@latest add ztemerbekov/marketing-skills
+npx skills@latest add ztemerbekov/a1-marketing-skills
 ```
 
 Этот вариант нужен, когда проект должен хранить собственные версии навыков. В остальных случаях выбирайте глобальную установку.
@@ -149,7 +149,7 @@ npx skills@latest add ztemerbekov/marketing-skills
 </details>
 
 <details>
-<summary><strong>Удаление Marketing Skills</strong></summary>
+<summary><strong>Удаление A1 Marketing Skills</strong></summary>
 
 Удалить текущий глобальный набор из всех подключённых клиентов:
 

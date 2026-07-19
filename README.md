@@ -1,10 +1,10 @@
-![Marketing Skills](./assets/marketing-skills-evolution.png)
+![A1 Marketing Skills](./assets/marketing-skills-evolution.png)
 
-# Marketing Skills
+# A1 Marketing Skills
 
 **English** | [Русский](./README.ru.md)
 
-Marketing Skills helps marketers, founders, and writers work with AI agents in ordinary language. The collection can remember product context, improve existing copy, and clarify complex editorial assignments.
+A1 Marketing Skills helps marketers, founders, and writers work with AI agents in ordinary language. The collection can remember product context, improve existing copy, and clarify complex editorial assignments.
 
 ## Contents
 
@@ -18,12 +18,12 @@ Marketing Skills helps marketers, founders, and writers work with AI agents in o
 ## Start here
 
 ```bash
-npx skills@latest add ztemerbekov/marketing-skills -g
+npx skills@latest add ztemerbekov/a1-marketing-skills -g
 ```
 
 ## Choose a skill
 
-If this is your first time using Marketing Skills, start with [Marketing Context](skills/a1-marketing-context/). It saves product information that the other skills can reuse.
+If this is your first time using A1 Marketing Skills, start with [Marketing Context](skills/a1-marketing-context/). It saves product information that the other skills can reuse.
 
 | Skill | Best for |
 |-------|----------|
@@ -128,7 +128,7 @@ The same `npx skills` installer works with the supported clients below. This rep
 Run from any directory:
 
 ```bash
-npx skills@latest add ztemerbekov/marketing-skills -g
+npx skills@latest add ztemerbekov/a1-marketing-skills -g
 ```
 
 The installer shows the available skills and detected AI clients. Select the clients you already use and choose the skills you want; installing the complete collection is recommended.
@@ -141,7 +141,7 @@ The installer shows the available skills and detected AI clients. Select the cli
 Open a terminal in the project and omit `-g`:
 
 ```bash
-npx skills@latest add ztemerbekov/marketing-skills
+npx skills@latest add ztemerbekov/a1-marketing-skills
 ```
 
 Use this when the project must carry its own skill versions. Otherwise prefer the global installation.
@@ -149,7 +149,7 @@ Use this when the project must carry its own skill versions. Otherwise prefer th
 </details>
 
 <details>
-<summary><strong>Remove Marketing Skills</strong></summary>
+<summary><strong>Remove A1 Marketing Skills</strong></summary>
 
 Remove the current global collection from every connected client:
 

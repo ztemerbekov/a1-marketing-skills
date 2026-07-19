@@ -1,6 +1,6 @@
 # Issue Tracker: GitHub
 
-Issues and PRDs live in GitHub Issues for `ztemerbekov/marketing-skills`. Use the `gh` CLI.
+Issues and PRDs live in GitHub Issues for `ztemerbekov/a1-marketing-skills`. Use the `gh` CLI.
 
 External pull requests are not a request surface for triage.
 

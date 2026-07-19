@@ -8,6 +8,6 @@ Use canonical glossary terms in issue titles, specifications, tests, and skill i
 
 ## Reassess When Adding Skills
 
-Whenever a new skill is added, determine whether it belongs to the existing marketing-skills domain or introduces an independently evolving domain with its own vocabulary and decisions.
+Whenever a new skill is added, determine whether it belongs to the existing a1-marketing-skills domain or introduces an independently evolving domain with its own vocabulary and decisions.
 
 If multiple contexts would make the boundaries clearer, raise the question with the user and recommend `CONTEXT-MAP.md`. Do not create or migrate to a multi-context layout without discussing it first.
