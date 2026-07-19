@@ -67,7 +67,7 @@ The context belongs only to the current repository: there is no global or privat
 <details>
 <summary><strong>Editor</strong></summary>
 
-**What it does:** improves text you already have by shortening, clarifying, strengthening, or restructuring it. It preserves facts, numbers, and your voice without adding new promises.
+**What it does:** improves text you already have by shortening, clarifying, strengthening, or restructuring it. It also repairs grammar, grammatical government, and unnatural word combinations even when the source meaning remains understandable. It preserves facts, numbers, and your voice without adding new promises.
 
 **Use it when:** the text already exists and you know what should change. Include the complete text and state any important constraints up front.
 

@@ -9,6 +9,7 @@ Notable user-facing changes to Marketing Skills are recorded here. Git tags and 
 - Use the official `npx skills` CLI for installation and updates.
 - Keep Editor in Chief explicitly invoked across supported clients.
 - Simplify repository validation and contributor guidance around structural checks and pull-request evidence.
+- Make A1 Editor repair incorrect grammar, grammatical government, and lexical collocations even when the source meaning remains understandable.
 
 ### Removed
 
