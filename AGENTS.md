@@ -1,155 +1,80 @@
 # AGENTS.md
 
-Guidelines for AI agents working in this repository.
+Guidelines for agents working in this repository.
 
 ## Repository Purpose
 
-This repository contains marketing-focused Agent Skills. Skills should be useful across Codex, Claude Code, Cursor, and other clients that understand the Agent Skills folder format.
+This repository publishes marketing-focused Agent Skills for clients that understand the Agent Skills folder format.
 
-## Agent skills
+## Project Workflow
 
-### Issue tracker
+- Work is tracked in GitHub Issues. See `docs/agents/issue-tracker.md`.
+- Use the canonical triage labels from `docs/agents/triage-labels.md`.
+- This is a single-context repository. Follow `docs/agents/domain.md` and reassess the boundary before adding a skill.
 
-Work is tracked in GitHub Issues. External pull requests are not a triage request surface. See `docs/agents/issue-tracker.md`.
+## Skill Structure
 
-### Triage labels
+Canonical skills live as direct children of `skills/`. Each directory must be self-contained and installable directly from GitHub without a build or sync step.
 
-Use the canonical `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, and `wontfix` labels. See `docs/agents/triage-labels.md`.
+Every skill must:
 
-### Domain docs
+- have a lowercase `a1-` name that matches its directory;
+- include `SKILL.md` with `name` and `description` frontmatter;
+- include a `## Language` section that preserves the input language for rewritten copy and uses the instruction language for explanations unless the user asks otherwise;
+- keep detailed canon, examples, rubrics, and templates in local `references/` when they would make `SKILL.md` unwieldy;
+- use relative links only to files inside its own directory.
 
-This is currently a single-context repository: use root `CONTEXT.md` and `docs/adr/` when they exist. When adding a skill, reassess whether it introduces a distinct domain context; raise the need for `CONTEXT-MAP.md` with the user before creating one. See `docs/agents/domain.md`.
+Evaluation suites are optional maintainer material. When present, keep them under the skill's `evals/` directory; they must never be runtime dependencies.
+
+## Invocation Compatibility
+
+Model-invoked skills are the default and need no invocation metadata.
+
+For a user-invoked skill, keep both client controls in sync:
+
+- `disable-model-invocation: true` in `SKILL.md` frontmatter;
+- `policy.allow_implicit_invocation: false` in `agents/openai.yaml`.
+
+Use client-specific metadata only when it protects a concrete client behavior. Do not add copied skill trees, platform rules, plugins, or manual installers unless an issue explicitly restores that distribution surface.
 
 ## README Languages
 
-`README.md` is the default English README.
-
-`README.ru.md` is the Russian translation.
-
-Keep the language switcher near the top of both files:
+`README.md` is English and `README.ru.md` is Russian. Keep the language switcher near the top of both files:
 
 - `README.md`: `**English** | [Русский](./README.ru.md)`
 - `README.ru.md`: `[English](./README.md) | **Русский**`
 
-When changing installation, architecture, platform-support, or development instructions in one README, update the other README in the same change.
+Update both files together when the skill inventory, installation, platform support, or user-facing behavior changes. The READMEs are maintained by people, not generated.
 
-## Architecture
+## Design Sources
 
-Canonical skills live under `skills/`:
+- `docs/a1-skill-design-contract.md` owns shared skill-design principles.
+- `docs/a1-marketing-glossary.md` owns shared operational vocabulary.
+- A skill's `SKILL.md` and local references own that skill's behavior.
+- Pull requests own change-specific semantic evidence. `CHANGELOG.md`, Git tags, and GitHub Releases own release history.
 
-```text
-skills/
-  a1-marketing-context/
-  a1-editor/
-  a1-editor-in-chief/
-  a1-update/
-```
+## Simplicity Guardrails
 
-Each skill directory must be self-contained and installable directly from GitHub. Do not require users to run a build or sync step after installation.
-
-Public installation and updates use the cross-agent `npx skills` CLI. Do not add client-specific plugin metadata, rules, copied skill trees, or manual installers unless a future issue explicitly restores that compatibility surface.
-
-`scripts/` contains maintainer tools only and is not required after installation.
-
-## A1 Design Contract
-
-Every new or materially changed skill must follow the canonical [A1 skill design contract](docs/a1-skill-design-contract.md). Use the [A1 marketing glossary](docs/a1-marketing-glossary.md) for shared operational terms.
-
-Before declaring a new or materially changed skill complete, use the [A1 skill completion checklist](docs/a1-skill-completion-checklist.md). Record the installed semantic run and any remaining limitations; structural validation alone is not a semantic pass.
-
-## Skill Format
-
-Every skill must include `SKILL.md` with YAML frontmatter:
-
-```yaml
----
-name: skill-name
-description: What the skill does and when to use it.
----
-```
-
-Rules:
-
-- `name` must match the directory name.
-- Use lowercase letters, digits, and hyphens.
-- Name every skill with the `a1-` prefix so the skill list sorts this repository's skills together and near the top. Use lowercase canonical names such as `a1-editor`, not display-style names such as `A1-Editor`.
-- Keep `description` specific; include trigger phrases and scope boundaries.
-- Keep `SKILL.md` concise. Put detailed canon, rubrics, examples, and templates in `references/`.
-- Use relative links from `SKILL.md` to files inside the same skill directory.
-- Every skill must include this exact language policy:
-
-```markdown
-## Language
-
-Detect the user's language and work in that language by default. If the input text and user instruction use different languages, preserve the input text language for rewritten copy and use the instruction language for explanations unless the user asks otherwise.
-```
-
-## Compatibility Philosophy
-
-Behavior over spec purity.
-
-This repository follows the Agent Skills format, with documented pragmatic extensions when they protect critical runtime behavior.
-
-Allowed extensions:
-
-- `disable-model-invocation: true` may be used for command-only skills such as `a1-editor-in-chief`, where accidental auto-triggering would produce the wrong workflow.
-- `agents/openai.yaml` may provide UI-only display metadata for a canonical skill. It must not redefine runtime behavior, duplicate the skill tree, or be required by clients that ignore it.
-
-When adding a non-standard field:
-
-- Document it here.
-- Teach validators to accept it.
-- Keep the scope narrow.
-- Do not add platform-specific hacks just because they are convenient.
-
-## Current Skills
-
-### a1-marketing-context
-
-Public, Model-invoked context-maintenance skill for explicit natural-language setup and update intent.
-
-Uses Auto-draft for ordinary explicit requests and starts a one-question-at-a-time interview only when explicitly requested. It creates and incrementally updates one public `.agents/marketing-context.md` per repository from confirmed information, preserves unrelated additions, and never creates hypotheses or writes passively after installation, project opening, a generic marketing mention, or another skill finding no context.
-
-### a1-editor
-
-Public, auto-triggered rewrite skill.
-
-Uses a soft gate: if the user provides text and an editing command, it works immediately. It should not block on missing marketing context, audience, channel, or constraints. It must not invent facts or unsupported claims.
-
-### a1-editor-in-chief
-
-Public, command-only bounded chief-editor skill.
-
-Classifies scope before all other work, accepts completed product and marketing decisions as inputs, and uses an adaptive gate for only the material editorial facts that remain unclear. It chooses the editing operation, creates an internal Editor Brief, delegates all text execution to `a1-editor`, reviews the result, and may request at most one corrective Editor pass. It does not create market research, segmentation, pricing, positioning, GTM, product strategy, or general marketing strategy.
-
-### a1-update
-
-Public, explicitly requested update skill.
-
-Uses `npx skills` to synchronize the complete current collection only in installations tracked from `ztemerbekov/marketing-skills`. It treats clients already connected to any Marketing Skill in one scope as that scope's managed client set, repairs incomplete installations, and applies refreshes, additions, and upstream deletions without confirmation. It must not update unrelated sources, scan other projects, or connect clients outside the managed set.
-
-It completes one read-only preflight across every active scope before the first ordinary collection change. Ordinary preflight failures leave all scopes unchanged. An unknown client mapping may trigger one source-pinned automatic updater refresh only after every other read-only check succeeds; the updater reloads, restarts complete preflight, and never exposes a recovery command or installer key. Missing or outdated Node.js uses the exact one-question confirmation contract and only an already available trusted installer. A failure after any mutation begins stops later writes, reports partial completion with one retry action, and never attempts automatic rollback.
-
-## Cross-Client Distribution
-
-Do not put Claude-only command injection syntax, Cursor-only MDC behavior, or Codex-only assumptions into canonical `skills/*/SKILL.md` files unless we explicitly accept that as a documented behavior-over-spec extension.
-
-Keep the canonical Agent Skills folders compatible with the clients supported by `npx skills`. Client selection and linking belong to the installer, not to repository adapters.
-
-## Change Reporting
-
-After every code or documentation change, include a suggested commit title in the response.
+- Give every fact one canonical owner; link to it instead of copying it.
+- Validate only facts with an objective machine answer. Do not turn documentation wording or human judgment into string assertions.
+- Add automation only for demonstrated repeated work, and state what manual step or older mechanism it replaces.
+- Do not add permanent run reports, certification records, candidate digests, or model-output archives; put that evidence in the pull request or release.
+- Before adding a generator, manifest, dependency, adapter, process document, or required gate, explain the need, maintenance cost, and replacement plan to the user and wait for approval.
+- Infrastructure simplification must preserve confirmed product behavior. Do not reopen settled product decisions without a concrete conflict.
+- For every new maintenance mechanism, ask what can now be removed.
 
 ## Validation
 
 Run:
 
 ```bash
+bash -n scripts/validate-skills.sh
 ./scripts/validate-skills.sh
+git diff --check
 ```
 
-Before changing README skill lists, run:
+When a change affects runtime behavior, run the relevant manual eval cases and record the evidence in the pull request.
 
-```bash
-node scripts/sync-readmes.js
-```
+## Change Reporting
+
+After every code or documentation change, include a suggested commit title in the response.

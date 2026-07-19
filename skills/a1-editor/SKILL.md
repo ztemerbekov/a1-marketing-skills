@@ -1,8 +1,6 @@
 ---
 name: a1-editor
 description: 'Fast marketing text editor with a safe strategy boundary. Use when the user wants to shorten, rewrite, clean up, clarify, improve, strengthen, or explain edits to existing text. Also use for requests to create or rethink positioning, offers, audiences, campaign messaging, landing-page structure, or other marketing architecture: explain the editing boundary and stop. Recommend explicit a1-editor-in-chief invocation only when completed strategy is supplied and the user wants bounded editorial direction before text execution. Russian editing triggers include "сократи", "почисти", "убери воду", "усиль", "перепиши", and "отредактируй"; strategy-boundary triggers include "позиционирование", "оффер", "аудитория", "кампания", and "структура лендинга". Explicit information-style triggers include "в информационном стиле", "в инфостиле", "по Ильяхову", and "по Пиши, сокращай". Editing works with a soft gate.'
-metadata:
-  version: "0.1.0"
 ---
 
 # Editor

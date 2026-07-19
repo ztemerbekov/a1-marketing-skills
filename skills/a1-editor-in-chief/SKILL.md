@@ -2,8 +2,6 @@
 name: a1-editor-in-chief
 description: 'Bounded chief-editor workflow for editorial direction, internal brief creation, A1 Editor delegation, and reviewed delivery. Use only when explicitly invoked.'
 disable-model-invocation: true
-metadata:
-  version: "0.1.0"
 ---
 
 # Editor in Chief

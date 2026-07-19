@@ -1,4 +1,0 @@
-interface:
-  display_name: "A1 Update"
-  short_description: "Update only the Marketing Skills collection"
-  default_prompt: "Use $a1-update to update my installed Marketing Skills from main."

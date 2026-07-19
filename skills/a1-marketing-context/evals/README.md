@@ -12,7 +12,7 @@ Each case embeds the exact user instruction, repository state, authoritative inp
 2. complete setup and repository state;
 3. exact user instruction and input;
 4. **Must change**, **Must preserve**, and **Forbidden** criteria;
-5. the applicable output contract and manual run record.
+5. the applicable output contract.
 
 Use [the case template](case-template.md). Name every file exactly `<ID>.md`.
 
@@ -37,18 +37,17 @@ Use [the case template](case-template.md). Name every file exactly `<ID>.md`.
 - [legacy fallback migration is explicit and lossless](cases/context-legacy-migration-021.md)
 - [immediate interview stop creates no empty context](cases/context-interview-empty-stop-022.md)
 
-Consumer integration regressions live in the self-contained evaluation packages of the consumers they evaluate. The Issue #9 release record combines those Editor and Chief cases with this setup suite and pins the full candidate skill set.
+Consumer integration regressions live in the self-contained evaluation packages of the consumers they evaluate.
 
 Across the suite, scope coverage includes `In scope`, `Out of scope`, `Mixed job`, and `Completed external input`.
 
 ## Manual Run Protocol
 
 1. Prefer a clean supported client with only the exact candidate skill set required by the case installed in a temporary repository matching the case setup. Setup-only cases require Marketing Context; consumer-integration cases also require the named Editor or Chief dependency.
-2. If security policy blocks it, use the explicitly accepted constrained fallback: load the exact required candidate skill set in the current supported client and record the policy block, one combined digest over every installed candidate directory, isolation difference, and fallback approver.
-3. Reproduce only the repository state and interaction steps declared by the case.
-4. Submit exact instructions and inputs without paraphrasing. Record every file write and the complete user-facing output.
-5. Judge every **Must change**, **Must preserve**, and **Forbidden** item, then judge the output contract separately.
-6. Treat ambiguous evidence as failure. Mark a case pass only when every criterion passes.
-7. Record the client, model, combined candidate revision or digest, date, reviewer, and fallback mode.
+2. Reproduce only the repository state and interaction steps declared by the case.
+3. Submit exact instructions and inputs without paraphrasing. Record every file write and the complete user-facing output in temporary run notes.
+4. Judge every **Must change**, **Must preserve**, and **Forbidden** item, then judge the output contract separately.
+5. Treat ambiguous evidence as failure. Mark a case pass only when every criterion passes.
+6. Summarize the tested cases, client, model, revision, and limitations in the pull request or release notes.
 
 Structural validation checks the package shape and permanent boundary assertions. It does not replace human semantic judgment.

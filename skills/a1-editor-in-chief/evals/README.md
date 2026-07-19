@@ -4,7 +4,7 @@ This self-contained manual package protects the bounded chief-editor workflow. R
 
 ## Case Format
 
-Each case contains a stable ID, operation, risk, optional scope scenario, exact setup, exact user instruction, complete input, **Must change**, **Must preserve**, **Forbidden**, and a manual run record. Criteria describe observable behavior rather than golden wording.
+Each case contains a stable ID, operation, risk, optional scope scenario, exact setup, exact user instruction, complete input, **Must change**, **Must preserve**, and **Forbidden**. Criteria describe observable behavior rather than golden wording.
 
 For a changed scope boundary, cover `In scope`, `Out of scope`, `Mixed job`, and `Completed external input`. Out-of-scope and mixed-job cases name every forbidden partial output.
 
@@ -34,10 +34,10 @@ Use [the case template](case-template.md) for new cases. Filenames must match th
 
 ## Manual Run Protocol
 
-1. Prefer a clean agent session with the exact chief and Editor candidate installed according to the case setup.
-2. If security policy blocks it, use the explicitly accepted constrained fallback and record the policy block, candidate digest, isolation difference, and fallback approver.
-3. Submit the exact instruction and input without paraphrasing.
-4. Record the complete output and judge every criterion plus the applicable output contract.
-5. Treat ambiguous evidence as failure. Record the client, model, date, revision, reviewer, and fallback mode.
+1. Prefer a clean agent session with the exact Chief and Editor candidates installed according to the case setup.
+2. Submit the exact instruction and input without paraphrasing.
+3. Record the complete output in temporary run notes and judge every criterion plus the applicable output contract.
+4. Treat ambiguous evidence as failure.
+5. Summarize the tested cases, client, model, revision, and limitations in the pull request or release notes.
 
 Structural validation never substitutes for semantic judgment.

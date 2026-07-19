@@ -1,0 +1,5 @@
+interface:
+  display_name: "A1 Editor in Chief"
+  short_description: "Direct and review a bounded edit"
+policy:
+  allow_implicit_invocation: false

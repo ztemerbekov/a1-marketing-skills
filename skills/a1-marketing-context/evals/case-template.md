@@ -39,21 +39,3 @@
 ## Output Contract
 
 `<applicable normal confirmation, one-question stop, refusal, or no-op>`
-
-## Manual Run Record
-
-- Date: `YYYY-MM-DD`
-- Client and model: `<client / model>`
-- Candidate revision: `<digest or commit>`
-- Reviewer: `<name>`
-
-### Criterion Evidence
-
-- Must change: `<pass/fail and evidence>`
-- Must preserve: `<pass/fail and evidence>`
-- Forbidden: `<pass/fail and evidence>`
-- Output contract: `<pass/fail and evidence>`
-
-### Result
-
-`PASS` or `FAIL`

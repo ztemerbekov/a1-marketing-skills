@@ -17,7 +17,6 @@ Every case contains:
 5. **Must change** criteria for observable problems the result must correct.
 6. **Must preserve** criteria for meaning, facts, voice, structure, and explicit constraints that must survive.
 7. **Forbidden** criteria for inventions, unsupported claims, operation-boundary violations, or partial outputs that must not appear.
-8. A manual run record with evidence and a pass/fail result.
 
 Name every case file exactly `<ID>.md`, using the stable ID declared inside the file. The repository validator enforces this mapping so a reported case ID always resolves directly to its filename.
 
@@ -73,14 +72,14 @@ Every materially changed scope boundary must have coverage for four scenarios ac
 
 ## Manual Run Protocol
 
-1. Prefer a clean agent session with the current `skills/a1-editor/` directory installed. If security policy blocks it, use the explicitly accepted constrained fallback: load the exact candidate in the current supported client and record the policy block, candidate digest, isolation difference, and fallback approver.
+1. Prefer a clean agent session with the current `skills/a1-editor/` directory installed.
 2. Reproduce only the setup written in the case. If marketing context is `None`, do not add one.
 3. Submit the exact user instruction and input without paraphrasing.
-4. Save the complete output in the case's temporary run notes or another review artifact. Do not rewrite the criteria after seeing the result.
-5. Review every **Must change**, **Must preserve**, and **Forbidden** item manually. Record a short output excerpt or concrete observation as evidence.
+4. Save the complete output in temporary run notes. Do not rewrite the criteria after seeing the result.
+5. Review every **Must change**, **Must preserve**, and **Forbidden** item manually. Record a short output excerpt or concrete observation as evidence in the pull request or release notes.
 6. Mark an item pass only when the evidence is clear. Treat ambiguous evidence as a failure and explain why.
-7. Mark the case pass only when every criterion passes. Record the client, model, skill revision, date, reviewer, and fallback mode when used so later runs are comparable.
+7. Mark the case pass only when every criterion passes. Summarize the tested cases, client, model, revision, and limitations in the pull request or release notes.
 
 Run relevant cases after changes to the editor's routing, gates, source boundary, operations, output contract, or canon. Run the full manual suite before a release that changes editor behavior.
 
-Automated repository validation checks only that this evaluation contract and template have the required structure. Semantic quality remains a human judgment during the pilot.
+Automated repository validation checks only the package structure. Semantic quality remains a human judgment.

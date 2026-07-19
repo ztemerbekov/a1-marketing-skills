@@ -36,12 +36,3 @@ None.
 ## Forbidden
 
 - [ ] `<forbidden invention, process leak, extra pass, or partial output>`
-
-## Manual Run Record
-
-- Status: `NOT RUN`
-- Evidence: `<complete during manual evaluation>`
-
-### Result
-
-`PASS` or `FAIL`

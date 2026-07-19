@@ -1,41 +1,41 @@
 # Contributing
 
-Marketing Skills keeps user documentation separate from maintainer documentation. Start with the [maintainer guide](docs/maintainers/README.md) for the repository architecture, compatibility policy, canonical design records, and release evidence.
-
 ## Before You Change Anything
 
-1. Read [AGENTS.md](AGENTS.md) for the repository rules.
-2. Work from a GitHub issue with a clear scope and acceptance criteria.
-3. Check the current Git status and preserve unrelated work.
-4. Treat `skills/` as the canonical runtime. Public installation and updates use `npx skills`; do not create client-specific copies as alternate sources of truth.
-
-When installation, skill inventory, platform support, or user-facing behavior changes, update `README.md` and `README.ru.md` together.
+1. Read [AGENTS.md](AGENTS.md) and the relevant skill instructions.
+2. Work from a GitHub Issue with clear scope and acceptance criteria.
+3. Check Git status and preserve unrelated work.
+4. Identify the canonical owner of every rule you plan to change.
 
 ## Make the Change
 
-- Keep every skill self-contained and installable directly from GitHub.
-- Keep `SKILL.md` concise and place detailed canon, examples, rubrics, and templates in the skill's `references/` directory.
-- Preserve the required language policy and frontmatter rules documented in `AGENTS.md`.
-- Keep user-facing explanations in the READMEs. Put design, architecture, compatibility, and release details in the maintainer documentation.
+- Keep every skill self-contained and directly installable from GitHub.
+- Prefer changing an existing source of truth over adding a parallel document or tool.
+- Update `README.md` and `README.ru.md` together when the inventory, installation path, platform support, or user-facing behavior changes.
+- Add or update only the eval cases relevant to changed behavior. Evals are optional maintainer material, not runtime dependencies.
+- Update `CHANGELOG.md` under `Unreleased` for user-facing changes.
+
+Before adding automation or process infrastructure, answer:
+
+1. What repeated problem does it solve?
+2. Why can the existing owner not solve it?
+3. What manual step or older mechanism does it replace?
+4. What ongoing maintenance does it introduce?
+
+If the answers do not show a net simplification, do not add it.
 
 ## Validate
 
-If the skill inventory or README tables may have changed, synchronize them:
+Run the repository checks:
 
 ```bash
-node scripts/sync-readmes.js
-```
-
-Run the full repository validation before committing:
-
-```bash
+bash -n scripts/validate-skills.sh
 ./scripts/validate-skills.sh
+git diff --check
 ```
 
-Also check shell syntax for changed shell scripts and use `git diff --check` before the final commit.
+For behavior changes, run the relevant manual eval cases without changing their criteria after seeing the output. Record prompts, results, and human judgment in the pull request rather than adding a permanent run report.
 
-## Complete and Certify
+## Release
 
-Use the [A1 skill completion checklist](docs/a1-skill-completion-checklist.md) before declaring a new or materially changed skill complete. Runtime behavior changes require criteria-based eval coverage and an installed semantic run; structural validation and metadata synchronization are not substitutes for semantic evidence.
-
-Record durable design decisions and release evidence in the canonical documents linked from the [maintainer guide](docs/maintainers/README.md). Documentation-only changes do not require a new semantic certification when runtime behavior is unchanged.
+Use one repository version. Git tags and GitHub Releases identify published versions; `CHANGELOG.md` summarizes notable user-facing changes. Do not maintain independent versions inside individual skills.

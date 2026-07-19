@@ -4,7 +4,7 @@
 
 **English** | [Русский](./README.ru.md)
 
-Marketing Skills helps marketers, founders, and writers work with AI agents in ordinary language. The collection can remember product context, improve existing copy, clarify complex editorial assignments, and keep itself up to date without changing unrelated skills.
+Marketing Skills helps marketers, founders, and writers work with AI agents in ordinary language. The collection can remember product context, improve existing copy, and clarify complex editorial assignments.
 
 ## Contents
 
@@ -25,14 +25,11 @@ npx skills@latest add ztemerbekov/marketing-skills -g
 
 If this is your first time using Marketing Skills, start with [Marketing Context](skills/a1-marketing-context/). It saves product information that the other skills can reuse.
 
-<!-- SKILLS:START -->
 | Skill | Best for |
 |-------|----------|
 | [Editor](skills/a1-editor/)<br>`a1-editor` | Improve existing text: shorten, clarify, strengthen, or restructure it without inventing facts. |
 | [Editor in Chief](skills/a1-editor-in-chief/)<br>`a1-editor-in-chief` | Turning a confirmed editorial assignment into a reviewed edit without creating general marketing strategy. |
 | [Marketing Context](skills/a1-marketing-context/)<br>`a1-marketing-context` | Creating or incrementally updating one repository-local context from confirmed marketing information. |
-| [Update](skills/a1-update/)<br>`a1-update` | Synchronize the complete Marketing Skills collection without changing unrelated skills or connecting new clients. |
-<!-- SKILLS:END -->
 
 Use this quick rule:
 
@@ -114,23 +111,6 @@ Editor in Chief does not create market research, segmentation, pricing, position
 
 </details>
 
-<details>
-<summary><strong>Update</strong></summary>
-
-**What it does:** installs the latest Marketing Skills in every app where you use them. It does not change skills from other collections.
-
-**Use it when:** you want fixes and new capabilities. New skills are installed automatically everywhere the collection is already connected.
-
-**Try:**
-
-```text
-Update Marketing Skills.
-```
-
-See [Update](#update) for details.
-
-</details>
-
 ## Install
 
 The same `npx skills` installer works with the supported clients below. This repository no longer uses separate client plugins, rules, or manual-copy installers.
@@ -152,8 +132,6 @@ npx skills@latest add ztemerbekov/marketing-skills -g
 ```
 
 The installer shows the available skills and detected AI clients. Select the clients you already use and choose the skills you want; installing the complete collection is recommended.
-
-If the terminal says it cannot find `npx`, install [Node.js](https://nodejs.org/en/download), reopen the terminal, and run the command again.
 
 </details>
 
@@ -180,7 +158,6 @@ npx skills@latest remove \
   a1-editor \
   a1-editor-in-chief \
   a1-marketing-context \
-  a1-update \
   --global \
   --yes
 ```
@@ -189,50 +166,18 @@ npx skills@latest remove \
 
 ## Update
 
-<details>
-<summary><strong>Moving from the previous skill names</strong></summary>
-
-If you installed Marketing Skills before the names changed, remove the two previous skills and install the current collection:
+Update the installed global skills with the official CLI:
 
 ```bash
-npx skills@latest remove \
-  a1-setup-marketing-context \
-  a1-update-marketing-skills \
+npx skills@latest update \
+  a1-editor \
+  a1-editor-in-chief \
+  a1-marketing-context \
   --global \
   --yes
-npx skills@latest add ztemerbekov/marketing-skills -g
 ```
 
-For a project-only installation, run both commands in that project, omit `--global` from the removal command, and omit `-g` from the installation command.
-
-</details>
-
-The easiest way to update is to ask your AI agent:
-
-```text
-Update Marketing Skills.
-```
-
-Here is what happens:
-
-- installed Marketing Skills are updated in every app where you use them;
-- new skills are installed automatically in those same apps;
-- skills that are no longer part of the collection are removed automatically;
-- skills from other collections do not change;
-- manual changes inside installed skill files are lost.
-
-The agent handles the update itself. If it needs your permission, it asks one short question.
-
-<details>
-<summary><strong>Update from the terminal</strong></summary>
-
-If you prefer the terminal, run the installation command again and select the skills and apps you want to update:
-
-```bash
-npx skills@latest add ztemerbekov/marketing-skills -g
-```
-
-</details>
+For a project-only installation, run the command in that project and omit `--global`. To discover newly published skills, run the installation command again and select what you want to add.
 
 ## Help and feedback
 
