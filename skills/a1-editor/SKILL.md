@@ -49,23 +49,13 @@ Load detailed text-, paragraph-, sentence-, or word-level references only when t
 
 ## Output
 
-For every accepted request except an explicit edited-text-only request, return these semantic sections in this order, with every user-facing label localized under the Language rule:
+Unless the user requests edited text only, return these localized sections in order, using each section label as a level-two Markdown heading:
 
-```markdown
-## [localized Edited version label]
+1. Edited version: the rewritten text or two to three clearly different options.
+2. Change summary: one to five concise explanations tied to changes actually made.
+3. Assumptions: only when material or explicitly requested.
 
-[rewritten text, or localized numbered options]
-
-## [localized What changed label]
-
-- [one to five concise explanations of changes actually made]
-
-## [localized Assumptions label]
-
-- [only when materially relevant]
-```
-
-Use these canonical labels when their language applies:
+Use the exact English or Russian labels below. For other languages, translate the same labels naturally.
 
 | Service element | English | Russian |
 |---|---|---|
@@ -74,6 +64,6 @@ Use these canonical labels when their language applies:
 | Assumptions | `Assumptions` | `Допущения` |
 | Numbered option | `Option N` | `Вариант N` |
 
-Use the exact canonical English or Russian label when that language applies; do not replace it with a synonym, singular form, or alternate wording. For other languages, use natural localized equivalents of the same semantic labels. Do not mix the edited-copy language into the service elements when the explanation language differs.
+Keep options inside the edited-version section and put any descriptive difference after the localized option label.
 
-Always start with the localized edited-version heading and include the localized change-summary section unless the user explicitly asks for only the edited text. Variants stay inside the edited-version section; provide two or three clearly different options, use localized option labels, and put any descriptive difference after—not instead of—the canonical option label. If the user explicitly asks to disclose an assumption, treat that section as material and place it after the change summary rather than before the result. If the user asks to explain edits, tie the explanation to specific changes. Preserve an edited-text-only request without headings, explanations, assumptions, warnings, or option labels.
+Before delivery, verify that every service label follows the Language rule. For an edited-text-only request, return only the edited text.

@@ -30,27 +30,14 @@ Load only the local reference selected by the active stage. Do not inspect or co
 
 ## Output Contract
 
-For every completed run except an explicit final-text-only request, return these semantic sections in this order, with every user-facing label localized under the Language rule:
+Unless the user requests final text only, return these localized sections in order, using each section label as a level-two Markdown heading:
 
-```markdown
-## [localized Final text label]
+1. Final text: the reviewed copy or requested options.
+2. Change summary: one to five concise editorial changes.
+3. Assumptions: only when material or explicitly requested.
+4. Warnings: only when material, explicitly requested, or review remains unresolved.
 
-[reviewed text, or localized numbered options]
-
-## [localized What changed label]
-
-- [one to five concise editorial changes]
-
-## [localized Assumptions label]
-
-- [only when material]
-
-## [localized Warnings label]
-
-- [only when material or when review remains unresolved]
-```
-
-Use these canonical labels when their language applies:
+Use the exact English or Russian labels below. For other languages, translate the same labels naturally.
 
 | Service element | English | Russian |
 |---|---|---|
@@ -60,24 +47,10 @@ Use these canonical labels when their language applies:
 | Warnings | `Warnings` | `Предупреждения` |
 | Numbered option | `Option N` | `Вариант N` |
 
-Use the exact canonical English or Russian label when that language applies; do not replace it with a synonym, singular form, or alternate wording. For other languages, use natural localized equivalents of the same semantic labels. Determine labels from the explanation language, never from the final-copy language. For example, a Spanish instruction with English copy uses Spanish scaffolding such as `Texto final`, `Opción N`, and `Qué cambió`, never `Final Text` or `Variant N`; apply the same mapping principle to every other language:
+Keep options inside the final-text section and put any descriptive difference after the localized option label.
 
-```markdown
-## Texto final
+The delegated Editor response is internal. Return the reviewed copy once without Editor headings. Do not expose an input summary, diagnosis, handoff mechanics, review rubric, `Chief Review`, or process notes by default. Keep the Editor Brief internal unless the user explicitly asks to inspect it.
 
-**Opción 1**
-
-[English copy]
-
-## Qué cambió
-```
-
-Always start a wrapped delivery with the localized final-text heading and include the localized change-summary section. Variants stay inside the final-text section; use localized option labels and put any descriptive difference after—not instead of—the canonical option label. Omit assumptions and warnings when they are not material. Treat an explicit request to disclose either as material and place assumptions before warnings. A material unresolved review failure must use the localized warnings section.
-
-The delegated Editor response is internal input to Chief review. Never expose or nest Editor headings such as `Edited Version`; deliver the reviewed copy once under this Chief contract. Preserve an explicit final-text-only request without headings, explanations, assumptions, warnings, option labels, or process notes.
-
-Immediately before returning a wrapped delivery, inspect every heading and option label, including bold inline markers such as `**Variant 1:**`. If any service label does not use the explanation language or still uses Editor scaffolding, relabel the complete marker before delivery without changing the reviewed copy. A wrapped response with even one service label in another language is incomplete.
-
-Keep the Editor Brief internal unless the user explicitly asks to inspect it. Do not expose an input summary, diagnosis, handoff mechanics, review rubric, or `Chief Review` section by default.
+Before delivery, verify that every service label follows the Language rule and no Editor scaffolding remains. For a final-text-only request, return only the reviewed copy.
 
 Boundary refusals, missing-dependency responses, and blocking questions use the shorter response defined by the stage that stops the run.
