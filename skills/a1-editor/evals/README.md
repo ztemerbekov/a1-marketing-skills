@@ -41,6 +41,7 @@ Every materially changed scope boundary must have coverage for four scenarios ac
 
 - [ordinary editing stays in Editor without optional context](cases/editor-strategy-boundary-006.md)
 - [standard edit and voice preservation](cases/editor-standard-001.md)
+- [standard edit repairs unnatural verb government and collocation](cases/editor-standard-002.md)
 - [shortening](cases/editor-shorten-001.md)
 - [clarifying weak source material](cases/editor-clarify-001.md)
 - [strengthening without unsupported claims](cases/editor-strengthen-001.md)

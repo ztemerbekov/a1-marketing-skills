@@ -18,9 +18,9 @@ If no specific intent dominates, use **Standard Edit**. Never ask the user to se
 
 Use for `edit`, `rewrite`, `clean up`, `improve`, `отредактируй`, `перепиши`, `почисти`, `убери воду`, and equivalent generic editing intent.
 
-Improve clarity, flow, density, and correctness while preserving facts, qualifications, meaningful voice, structure that already works, and user constraints.
+Improve clarity, flow, density, and correctness while preserving facts, qualifications, meaningful voice, structure that already works, and user constraints. When the source contains incorrect grammar, verb government, lexical collocation, or otherwise unnatural wording, apply the language-correctness check in [sentence-level.md](sentence-level.md) even when the intended meaning can still be inferred.
 
-**Complete when:** the text is observably clearer or tighter, and no deeper change was made without a specific reason in the source or instruction.
+**Complete when:** the text is observably clearer, tighter, or more correct, and no deeper change was made without a specific reason in the source or instruction.
 
 ## Shorten
 
@@ -93,7 +93,7 @@ After selecting the operation, load detailed references only for defects that op
 |---------------------|-----------|
 | Main point, reader value, global order, or tone | [text-level.md](text-level.md) |
 | Mixed paragraph topics, weak openings, sequence, or lists | [paragraph-level.md](paragraph-level.md) |
-| Overload, hidden actors, word order, or hedging | [sentence-level.md](sentence-level.md) |
+| Grammar, government, collocation, unnatural wording, overload, hidden actors, word order, or hedging | [sentence-level.md](sentence-level.md) |
 | Filler, jargon, intensifiers, vague words, or cliches | [word-level.md](word-level.md) |
 
 Do not load all four level references by default. **Restructure** usually needs text and paragraph levels; **Clarify** usually needs sentence and paragraph levels; other operations select only the levels evidenced by the source.

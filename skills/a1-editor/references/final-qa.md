@@ -24,6 +24,7 @@ This is the authoritative final acceptance check for `a1-editor`. Run it after t
 ## 4. Editorial Improvement
 
 - The result is observably clearer, tighter, stronger, or easier to follow according to the selected operation.
+- The shared language-correctness principle in [canon-core.md](canon-core.md) passes: grammar, grammatical government, collocation, and wording are natural in the edited copy's language.
 - Useful detail was not removed merely to make the text shorter or smoother.
 - The result does not become choppy, generic, or falsely confident.
 
