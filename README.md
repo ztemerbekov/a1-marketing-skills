@@ -1,6 +1,6 @@
 ![A1 Marketing Skills](./assets/marketing-skills-evolution.png)
 
-<h1><img src="./assets/a1-logo.svg" alt="A1 logo" width="50"> A1 Marketing Skills</h1>
+<h1><img src="./assets/a1-logo.svg" alt="A1 logo" width="48"> Marketing Skills</h1>
 
 **English** | [Русский](./README.ru.md)
 
