@@ -30,6 +30,7 @@ If this is your first time using A1 Marketing Skills, start with [Marketing Cont
 | [A1 Grill](skills/a1-grill/)<br>`a1-grill` | Sharpen a marketing idea, decision, or plan through constructive questioning before execution. |
 | [Editor](skills/a1-editor/)<br>`a1-editor` | Improve existing text: shorten, clarify, strengthen, or restructure it without inventing facts. |
 | [Editor in Chief](skills/a1-editor-in-chief/)<br>`a1-editor-in-chief` | Turning a confirmed editorial assignment into a reviewed edit without creating general marketing strategy. |
+| [Humanize](skills/a1-humanize/)<br>`a1-humanize` | Remove recognizable AI-writing patterns from supplied copy without inventing facts or flattening its voice. |
 | [Marketing Context](skills/a1-marketing-context/)<br>`a1-marketing-context` | Creating or incrementally updating one repository-local context from confirmed marketing information. |
 
 Use this quick rule:
@@ -37,6 +38,7 @@ Use this quick rule:
 - Have a marketing idea, decision, or plan that still needs pressure-testing? Explicitly invoke **A1 Grill**.
 - Want the current repository to remember confirmed product, audience, voice, or proof for future work? Explicitly ask **Marketing Context** to save or update it.
 - Already have text and know what should change? Use **Editor**.
+- Want to remove recognizable AI-writing patterns from existing copy? Use **Humanize**.
 - Have confirmed product and marketing inputs, but need to decide the editorial reader focus, message emphasis, angle, structure, or voice? Explicitly invoke **Editor in Chief**.
 
 Marketing Context is useful for repeated work, but A1 Grill and Editor can work from current material without it. A1 Grill asks before reading an existing context.
@@ -111,6 +113,25 @@ Requests to create or rethink positioning, an offer, an audience, campaign messa
 </details>
 
 <details>
+<summary><strong>Humanize</strong></summary>
+
+**What it does:** removes recognizable AI-writing patterns from copy you already have while preserving its meaning, facts, language, and useful voice. It works in English, Russian, and other input languages; it does not add a personal reaction, a product claim, or other new content.
+
+**Use it when:** you explicitly want existing copy to sound less AI-generated. Invoke `a1-humanize` by name or ask naturally to humanize the text. By default, it returns only the final rewrite.
+
+**Try:**
+
+```text
+Humanize this paragraph. Keep every fact and return only the final rewrite:
+
+[your text]
+```
+
+Humanize works only with text supplied in the conversation. It does not read or overwrite files or Marketing Context. A request to create an offer, CTA, positioning, audience, campaign, or other marketing strategy is outside its boundary; a request that mixes that work with humanization stops before any partial rewrite.
+
+</details>
+
+<details>
 <summary><strong>Editor in Chief</strong></summary>
 
 **What it does:** sets bounded editorial direction inside confirmed product and marketing inputs. It resolves available sources, asks one decision question only when necessary, creates an internal Editor Brief, delegates all text work to Editor, and reviews the result with at most one corrective pass.
@@ -179,6 +200,7 @@ npx skills@latest remove \
   a1-editor \
   a1-editor-in-chief \
   a1-grill \
+  a1-humanize \
   a1-marketing-context \
   --global \
   --yes
@@ -195,6 +217,7 @@ npx skills@latest update \
   a1-editor \
   a1-editor-in-chief \
   a1-grill \
+  a1-humanize \
   a1-marketing-context \
   --global \
   --yes
