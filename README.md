@@ -1,4 +1,4 @@
-<h1><img src="./assets/a1-logo.svg" alt="A1" width="46"> Marketing Skills</h1>
+# A1 marketing skills
 
 **English** | [Русский](./README.ru.md)
 
