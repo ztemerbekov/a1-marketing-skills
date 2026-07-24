@@ -173,6 +173,12 @@ Run from any directory:
 npx skills@latest add ztemerbekov/a1-marketing-skills -g
 ```
 
+Or paste this into Codex or another AI coding agent:
+
+```text
+Install A1 Marketing Skills globally for me. Run `npx skills@latest add ztemerbekov/a1-marketing-skills -g`, select every installed AI client that supports global skills, and install the complete collection. Do not install it in PromptScript: it supports project-only skills.
+```
+
 The installer shows the available skills and detected AI clients. Select the clients you already use and choose the skills you want; installing the complete collection is recommended.
 
 </details>
