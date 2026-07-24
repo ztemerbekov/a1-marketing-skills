@@ -101,6 +101,10 @@ git diff --check
 
 When a change affects runtime behavior, run the relevant manual eval cases and record the evidence in the pull request.
 
+Use the smallest manual set that covers the behavior and risks changed by a pull request. Run the full suite for every affected skill before a release that changes its runtime behavior. Documentation-only and packaging-only changes do not require a semantic run.
+
+Record case IDs, client, model, revision, pass/fail results, concrete evidence, and limitations in the pull request or GitHub Release. Do not commit permanent run reports or model outputs.
+
 ## Change Reporting
 
 After every code or documentation change, include a suggested commit title in the response.
