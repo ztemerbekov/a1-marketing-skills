@@ -94,13 +94,7 @@ An ordinary save or update request uses Auto-draft. An interview starts only whe
 **Try:**
 
 ```text
-Add this audience to the marketing context: marketplace operations managers.
-
-Remember our tone of voice: practical, calm, and direct.
-
-Record the editorial policy from confirmed materials in this repository.
-
-Remember these restrictions and prohibitions: [list stop words, brand constraints, and taboo topics].
+Record our Tone of Voice (attached file) and target audience (second file) in the marketing context.
 ```
 
 Read the [full Marketing Context behavior](./skills/a1-marketing-context/SKILL.md).
