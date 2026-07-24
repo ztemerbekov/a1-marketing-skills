@@ -98,6 +98,8 @@ Marketing Context is useful for repeated work, but ordinary editing does not req
 
 Response headings and option labels are localized naturally in the language of your instruction, and explanations use that language. The edited copy keeps the source language unless you ask to translate it.
 
+If you explicitly request only the edited text, the response contains only that text: no headings, explanations, or support footer.
+
 **Try:**
 
 ```text
@@ -117,7 +119,7 @@ Requests to create or rethink positioning, an offer, an audience, campaign messa
 
 **What it does:** removes recognizable AI-writing patterns from copy you already have while preserving its meaning, facts, language, and useful voice. It works in English, Russian, and other input languages; it does not add a personal reaction, a product claim, or other new content.
 
-**Use it when:** you explicitly want existing copy to sound less AI-generated. Invoke `a1-humanize` by name or ask naturally to humanize the text. By default, it returns only the final rewrite.
+**Use it when:** you explicitly want existing copy to sound less AI-generated. Invoke `a1-humanize` by name or ask naturally to humanize the text. By default, it returns the final rewrite with a support footer; an explicit request for only the final rewrite suppresses the footer.
 
 **Try:**
 
@@ -138,7 +140,7 @@ Humanize works only with text supplied in the conversation. It does not read or 
 
 **Use it when:** you already have the source material and approved marketing strategy, but the reader focus, message emphasis, editorial angle, argument order, structure, or voice still needs chief-editor judgment. Invoke Editor in Chief by name; the skill starts only when you explicitly invoke it.
 
-Final headings and option labels are localized naturally in the language of your instruction; explanations, assumptions, and warnings use that language. The reviewed copy keeps the source language unless you ask to translate it, and a request for final text only remains wrapper-free.
+Final headings and option labels are localized naturally in the language of your instruction; explanations, assumptions, and warnings use that language. The reviewed copy keeps the source language unless you ask to translate it, and a request for final text only remains wrapper-free and footer-free.
 
 **Try:**
 
@@ -255,7 +257,7 @@ For a project-only installation, run the command in that project and omit `--glo
 
 ## Help and feedback
 
-Questions, improvement ideas, or something that did not work as expected? Join the discussion in [A1 Marketing Skills](https://t.me/a1_marketing_skills). Remove confidential information before posting. Every completed skill result includes the same link.
+Questions, improvement ideas, or something that did not work as expected? Join the discussion in [A1 Marketing Skills](https://t.me/a1_marketing_skills). Remove confidential information before posting. Every completed skill result includes the same link unless the user explicitly requests only the final artifact.
 
 ## For contributors
 
