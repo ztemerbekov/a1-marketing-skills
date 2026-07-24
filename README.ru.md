@@ -1,5 +1,3 @@
-<img src="./assets/marketing-skills-evolution.png" alt="A1 Marketing Skills" height="114">
-
 <h1><img src="./assets/a1-logo.svg" alt="A1" width="46"> Marketing Skills</h1>
 
 [English](./README.md) | **Русский**
