@@ -129,6 +129,7 @@ Missing audience, channel, goal, or Marketing Context does not block a safe edit
 **Try:**
 
 ```text
+/a1-editor
 Edit this in Ilyakhov’s style and keep it to three paragraphs:
 
 [paste your draft]
