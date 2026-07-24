@@ -1,12 +1,12 @@
-![A1 Marketing Skills](./assets/marketing-skills-evolution.png)
+<img src="./assets/marketing-skills-evolution.png" alt="A1 Marketing Skills" height="114">
 
-<h1><img src="./assets/a1-logo.svg" alt="A1 logo" width="46"> Marketing Skills</h1>
+<h1><img src="./assets/a1-logo.svg" alt="A1" width="46"> Marketing Skills</h1>
 
 **English** | [Русский](./README.ru.md)
 
 **Hand over the routine to AI agents—freeing marketing teams to focus on strategy, vision, and growth-driving decisions.**
 
-A1 Marketing Skills is a collection of Agent Skills built for the whole marketing team. It draws a clear line between execution and decision-making: agents take on repeatable operational work, while marketers keep expert control, clear focus, and ownership of growth decisions.
+<p><img src="./assets/a1-logo.svg" alt="A1" width="28"> <strong>Marketing Skills</strong> is a collection of Agent Skills built for the whole marketing team. It draws a clear line between execution and decision-making: agents take on repeatable operational work, while marketers keep expert control, clear focus, and ownership of growth decisions.</p>
 
 ---
 
