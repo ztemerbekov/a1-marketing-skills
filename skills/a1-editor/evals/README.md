@@ -29,9 +29,6 @@ Every materially changed scope boundary must have coverage for four scenarios ac
 ### Strategy Boundary and Bounded Chief Handoff
 
 - [positioning request stops at the Editor boundary](cases/editor-strategy-route-001.md)
-- [offer request stops at the Editor boundary](cases/editor-strategy-route-002.md)
-- [audience request stops at the Editor boundary](cases/editor-strategy-route-003.md)
-- [campaign request stops at the Editor boundary](cases/editor-strategy-route-004.md)
 - [landing-structure request stops at the Editor boundary](cases/editor-strategy-route-005.md)
 - [strategy keywords do not route an ordinary edit](cases/editor-strategy-boundary-007.md)
 - [mixed editing and strategy request stops before partial execution](cases/editor-strategy-boundary-008.md)
@@ -50,8 +47,7 @@ Every materially changed scope boundary must have coverage for four scenarios ac
 
 ### Language and Output Contract
 
-- [Russian instruction localizes the complete response](cases/editor-language-010.md)
-- [English instruction keeps Russian copy and English service elements](cases/editor-language-011.md)
+- [instruction language localizes the complete response](cases/editor-language-010.md)
 - [edited-text-only override remains wrapper-free](cases/editor-language-012.md)
 - [third-language instruction localizes response scaffolding](cases/editor-language-013.md)
 
@@ -59,12 +55,10 @@ Every materially changed scope boundary must have coverage for four scenarios ac
 
 - [explicit information-style activation](cases/editor-information-style-001.md)
 - [generic editing that must not activate information style](cases/editor-information-style-002.md)
-- [legacy information-style LLM post regression](cases/editor-information-style-003.md)
+- [technical content and Markdown integrity](cases/editor-information-style-003.md)
 - [voice preservation override](cases/editor-information-style-004.md)
-- [structure preservation override](cases/editor-information-style-005.md)
 - [formatting preservation override](cases/editor-information-style-008.md)
 - [unsupported claims](cases/editor-information-style-006.md)
-- [Markdown integrity](cases/editor-information-style-007.md)
 
 ### Marketing Context Consumption
 

@@ -45,4 +45,4 @@ Before delivery, verify that every service label follows the Language rule and n
 
 Boundary refusals, missing-dependency responses, and blocking questions use the shorter response defined by the stage that stops the run.
 
-After every successful final result, append exactly one support footer in the instruction language inviting questions, ideas, or problem reports via [A1 Marketing Skills](https://t.me/a1_marketing_skills). Omit it from interim and unsuccessful responses.
+After every successful final result that does not use the final-text-only override, append exactly one support footer in the instruction language inviting questions, ideas, or problem reports via [A1 Marketing Skills](https://t.me/a1_marketing_skills). Omit it from final-text-only, interim, and unsuccessful responses.

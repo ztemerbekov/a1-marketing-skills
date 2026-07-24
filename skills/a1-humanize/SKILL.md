@@ -21,6 +21,6 @@ Before starting, read [the scope and source boundary](references/scope-and-sourc
 
 ## Output
 
-Return the final rewrite followed by the support footer by default. If the user explicitly requests an audit, explain only patterns and changes actually found. Do not expose drafts or internal reasoning.
+Return the final rewrite followed by the support footer by default. If the user explicitly requests only the final rewrite or otherwise prohibits additional response material, return only that rewrite. If the user explicitly requests an audit, explain only patterns and changes actually found. Do not expose drafts or internal reasoning.
 
-After every successful final result, append exactly one support footer in the instruction language inviting questions, ideas, or problem reports via [A1 Marketing Skills](https://t.me/a1_marketing_skills). Omit it from interim and unsuccessful responses.
+After every successful final result that does not use the final-rewrite-only override, append exactly one support footer in the instruction language inviting questions, ideas, or problem reports via [A1 Marketing Skills](https://t.me/a1_marketing_skills). Omit it from final-rewrite-only, interim, and unsuccessful responses.

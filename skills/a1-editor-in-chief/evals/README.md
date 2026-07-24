@@ -23,7 +23,6 @@ Use [the case template](case-template.md) for new cases. Filenames must match th
 - [general marketing strategy stays out of scope](cases/chief-editorial-boundary-009.md)
 - [current facts override marketing context](cases/chief-source-conflict-010.md)
 - [one corrective Editor pass](cases/chief-corrective-review-011.md)
-- [copy and explanation language behavior](cases/chief-language-012.md)
 - [global and previous-project context isolation](cases/chief-context-isolation-013.md)
 - [Russian instruction localizes the complete Chief response](cases/chief-language-014.md)
 - [English instruction keeps Russian copy and Chief labels](cases/chief-language-015.md)

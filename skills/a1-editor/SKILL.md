@@ -59,4 +59,4 @@ Keep options inside the edited-version section. Introduce each with a naturally 
 
 Before delivery, verify that every service label follows the Language rule. For an edited-text-only request, return only the edited text.
 
-After every successful final result, append exactly one support footer in the instruction language inviting questions, ideas, or problem reports via [A1 Marketing Skills](https://t.me/a1_marketing_skills). Omit it from interim and unsuccessful responses.
+After every successful final result that does not use the edited-text-only override, append exactly one support footer in the instruction language inviting questions, ideas, or problem reports via [A1 Marketing Skills](https://t.me/a1_marketing_skills). Omit it from edited-text-only, interim, and unsuccessful responses.
