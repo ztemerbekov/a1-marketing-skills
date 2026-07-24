@@ -165,7 +165,7 @@ npx skills@latest add ztemerbekov/a1-marketing-skills -g
 </p>
 
 <details open>
-<summary><strong>Выборочная установка в Claude Code</strong></summary>
+<summary><strong>Установка в Claude Code</strong></summary>
 
 Один раз добавьте marketplace в Claude Code:
 
@@ -173,7 +173,15 @@ npx skills@latest add ztemerbekov/a1-marketing-skills -g
 /plugin marketplace add ztemerbekov/a1-marketing-skills
 ```
 
-Затем установите любой из независимых наборов:
+Для полной установки выберите Marketing Suite:
+
+```text
+/plugin install a1-marketing-suite@a1-marketing-skills
+```
+
+Marketing Suite автоматически установит Core и Editorial. У него нет собственных навыков или команд: запускайте установленные навыки через неймспейсы наборов, например `/a1-core:a1-grill` и `/a1-editorial:a1-editor`.
+
+Либо установите любой из независимых наборов:
 
 ```text
 /plugin install a1-core@a1-marketing-skills
