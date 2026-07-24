@@ -111,9 +111,8 @@ After you confirm shared understanding, Grill returns the decision, its rational
 **Try:**
 
 ```text
-Use a1-grill. Grill this idea one decision at a time:
-launch a Telegram channel to generate qualified leads
-for our marketplace analytics service.
+/a1-grill We have an idea to launch a Telegram channel to attract B2B leads to our service.
+Help us break down the hypothesis and show where the weak points and blind spots are.
 ```
 
 Read the [full A1 Grill behavior](./skills/a1-grill/SKILL.md).
