@@ -165,7 +165,7 @@ Claude Code can install the functional collections from its marketplace. The `np
 </p>
 
 <details open>
-<summary><strong>Install selectively in Claude Code</strong></summary>
+<summary><strong>Install in Claude Code</strong></summary>
 
 In Claude Code, add the marketplace once:
 
@@ -173,7 +173,15 @@ In Claude Code, add the marketplace once:
 /plugin marketplace add ztemerbekov/a1-marketing-skills
 ```
 
-Then install either independent collection:
+For the complete collection, install Marketing Suite:
+
+```text
+/plugin install a1-marketing-suite@a1-marketing-skills
+```
+
+Marketing Suite installs Core and Editorial automatically. It has no skills or commands of its own: invoke the installed skills through their collection namespaces, such as `/a1-core:a1-grill` and `/a1-editorial:a1-editor`.
+
+Alternatively, install either independent collection:
 
 ```text
 /plugin install a1-core@a1-marketing-skills

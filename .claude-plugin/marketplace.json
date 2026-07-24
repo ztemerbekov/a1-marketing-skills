@@ -29,6 +29,17 @@
         "./skills/a1-editor-in-chief",
         "./skills/a1-humanize"
       ]
+    },
+    {
+      "name": "a1-marketing-suite",
+      "displayName": "Marketing Suite",
+      "description": "Marketing Suite: installs the Core and Editorial collections",
+      "source": "./plugins/a1-marketing-suite",
+      "strict": false,
+      "dependencies": [
+        "a1-core",
+        "a1-editorial"
+      ]
     }
   ]
 }
