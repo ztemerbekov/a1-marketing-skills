@@ -54,7 +54,6 @@ Result: Revised copy plus a short change summary.
 - [Other installation options](#other-installation-options)
 - [Update or remove](#update-or-remove)
 - [Help and feedback](#help-and-feedback)
-- [Contribute](#contribute)
 
 ## Quick start
 
@@ -266,7 +265,3 @@ For project-only skills, run the command in that project and use `--project` wit
 ## Help and feedback
 
 Questions, improvement ideas, or something that did not work as expected? Join the discussion in [A1 Marketing Skills](https://t.me/a1_marketing_skills).
-
-## Contribute
-
-Want to improve a skill or propose a new one? Start with the repository's [GitHub Issues](https://github.com/ztemerbekov/a1-marketing-skills/issues). Maintainer workflow and skill-design constraints are documented in [`AGENTS.md`](./AGENTS.md).
