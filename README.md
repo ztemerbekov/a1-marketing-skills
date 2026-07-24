@@ -148,6 +148,7 @@ It never reads or overwrites project files. A request that combines humanization
 **Try:**
 
 ```text
+/a1-humanize
 Humanize this text and break up the AI-generated rhythm:
 
 [paste your text]
