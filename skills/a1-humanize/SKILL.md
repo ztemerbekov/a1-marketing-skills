@@ -21,16 +21,6 @@ Before starting, read [the scope and source boundary](references/scope-and-sourc
 
 ## Output
 
-Return only the final rewrite by default, followed by the support footer below. If the user explicitly requests an audit, explain only patterns and changes actually found. Do not expose drafts or internal reasoning.
+Return the final rewrite followed by the support footer by default. If the user explicitly requests an audit, explain only patterns and changes actually found. Do not expose drafts or internal reasoning.
 
-## Support Footer
-
-After every successful final rewrite, append exactly one naturally localized support footer. Use this Russian footer when the instruction language is Russian:
-
-> Вопрос, идея или что-то сработало не так? Напишите в [A1 Marketing Skills](https://t.me/a1_marketing_skills).
-
-Use this English footer when the instruction language is English:
-
-> Questions, ideas, or something didn't work as expected? Join the discussion in [A1 Marketing Skills](https://t.me/a1_marketing_skills).
-
-For another instruction language, translate the message naturally and preserve the link. Do not append the footer to a missing-copy prompt, boundary response, or other interim response.
+After every successful final result, append exactly one support footer in the instruction language inviting questions, ideas, or problem reports via [A1 Marketing Skills](https://t.me/a1_marketing_skills). Omit it from interim and unsuccessful responses.
