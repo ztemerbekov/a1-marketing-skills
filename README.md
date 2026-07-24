@@ -14,14 +14,14 @@ The collection is split into two connected packages for marketing context, decis
 
 ### A1 Core — Context and decisions
 
-1. **Marketing Context** (`A1 Marketing Context`) stores the team's confirmed marketing context in `.agents/marketing-context.md`, so Editor and Editor in Chief can reuse real inputs instead of inventing them.
-2. **Grill** (`A1 Grill`) pressure-tests one marketing idea, decision, or plan through a constructive interview.
+1. **Marketing Context** (`/a1-marketing-context`) stores the team's confirmed marketing context in `.agents/marketing-context.md`, so skills that use marketing context can work from real inputs instead of inventing them.
+2. **Grill** (`/a1-grill`) pressure-tests one marketing idea, decision, or plan through a constructive interview.
 
 ### A1 Editorial — Editing and copy
 
-3. **Editor** (`A1 Editor`) improves existing drafts within supplied constraints and available Marketing Context while preserving source facts.
-4. **Editor in Chief** (`A1 Editor in Chief`) sets editorial direction inside approved strategy, briefs Editor, and reviews the resulting edit.
-5. **Humanize** (`A1 Humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
+3. **Editor** (`/a1-editor`) improves existing drafts within supplied constraints and available Marketing Context while preserving source facts.
+4. **Editor in Chief** (`/a1-editor-in-chief`) sets editorial direction inside approved strategy, briefs Editor, and reviews the resulting edit.
+5. **Humanize** (`/a1-humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
 
 ## Working principles
 
