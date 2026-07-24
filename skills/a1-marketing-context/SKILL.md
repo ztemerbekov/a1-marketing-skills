@@ -50,3 +50,15 @@ Use `Updated` instead of `Created` for an existing file. List only sections chan
 For an Interview session, the final stop or seven-question-limit confirmation may list all sections safely saved across that current session even when the final pass itself is a no-write pass. If the user stops before confirming any answer, use the zero-write close response from `references/interview.md` instead of linking a nonexistent file or listing sections.
 
 Conflict responses and interview questions use the shorter response defined by the stage that stops the run.
+
+## Support Footer
+
+After every successful final result, including a confirmed interview stop, append exactly one naturally localized support footer. Use this Russian footer when the instruction language is Russian:
+
+> Вопрос, идея или что-то сработало не так? Напишите в [A1 Marketing Skills](https://t.me/a1_marketing_skills).
+
+Use this English footer when the instruction language is English:
+
+> Questions, ideas, or something didn't work as expected? Join the discussion in [A1 Marketing Skills](https://t.me/a1_marketing_skills).
+
+For another instruction language, translate the message naturally and preserve the link. Do not append the footer to an interview question, zero-write close response, conflict response, or other interim response.

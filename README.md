@@ -227,7 +227,7 @@ For a project-only installation, run the command in that project and omit `--glo
 
 ## Help and feedback
 
-If a skill produces a bad result, remove confidential information and email the input, instruction, output, and expected behavior to [z.temerbekov@gmail.com](mailto:z.temerbekov@gmail.com).
+Questions, improvement ideas, or something that did not work as expected? Join the discussion in [A1 Marketing Skills](https://t.me/a1_marketing_skills). Remove confidential information before posting. Every completed skill result includes the same link.
 
 ## For contributors
 

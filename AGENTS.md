@@ -12,6 +12,30 @@ This repository publishes marketing-focused Agent Skills for clients that unders
 - Use the canonical triage labels from `docs/agents/triage-labels.md`.
 - This is a single-context repository. Follow `docs/agents/domain.md` and reassess the boundary before adding a skill.
 
+## Git Delivery Flow
+
+For every implementation change, follow this order:
+
+1. Create or identify the GitHub Issue that defines the work and its acceptance criteria.
+2. Inspect the worktree and preserve unrelated changes.
+3. Update the base branch and create a `codex/` branch before editing tracked files.
+4. Make the scoped changes and run the relevant validation.
+5. Inspect the diff, then stage only the files that belong to the Issue and commit them.
+6. Push the feature branch and open a draft pull request against `main`.
+7. Merge the pull request into `main` only after the user explicitly authorizes the merge.
+
+Pushing a feature branch never authorizes a merge. Do not commit implementation changes directly to `main`.
+
+## GitHub authentication
+
+Use the globally configured GitHub CLI authentication (`gh`) from the macOS system Keychain.
+
+- Never ask the user to log in per repository.
+- Never read, print, copy, store, or add GitHub tokens to repository files, prompts, `.env` files, or commits.
+- Before a GitHub operation, run `gh auth status`.
+- If `gh` reports an invalid or unavailable token inside a sandbox, retry the required command with permission to access the macOS Keychain. Do not ask the user to re-authenticate unless global `gh auth status` also fails.
+- Use `gh` for GitHub Issues and pull requests; use the configured Git HTTPS credentials for `git fetch`, `git pull`, and `git push`.
+
 ## Skill Structure
 
 Canonical skills live as direct children of `skills/`. Each directory must be self-contained and installable directly from GitHub without a build or sync step.

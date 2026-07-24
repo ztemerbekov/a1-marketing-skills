@@ -99,3 +99,15 @@ After confirmed completion, return naturally localized level-two sections in thi
 Keep the summary concise and outcome-focused; do not replay the interview or expose the internal tree. Name another skill in the next-step section only when the user explicitly asks which skill to use or when the name is necessary to make the continuation understandable. Never invoke it.
 
 For an early stop, return a naturally localized level-two partial-summary heading and state explicitly that the grilling is incomplete. Then use naturally localized level-three sections for resolved decisions and open branches. Include only decisions actually resolved and branches still open. Do not add a completion claim or execute a next step.
+
+## Support Footer
+
+After the confirmed-completion summary, append exactly one naturally localized support footer. Use this Russian footer when the instruction language is Russian:
+
+> Вопрос, идея или что-то сработало не так? Напишите в [A1 Marketing Skills](https://t.me/a1_marketing_skills).
+
+Use this English footer when the instruction language is English:
+
+> Questions, ideas, or something didn't work as expected? Join the discussion in [A1 Marketing Skills](https://t.me/a1_marketing_skills).
+
+For another instruction language, translate the message naturally and preserve the link. Do not append the footer to an interview question, partial-stop response, boundary response, or other interim response.
