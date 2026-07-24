@@ -4,13 +4,13 @@
     "name": "Zinnur Temerbekov"
   },
   "metadata": {
-    "description": "Keep confirmed marketing context updated, stress-test marketing decisions, and refine supplied drafts using safe, strategy-bounded editorial tools"
+    "description": "Hand over the routine to AI agents—freeing marketing teams to focus on strategy, vision, and growth-driving decisions."
   },
   "plugins": [
     {
       "name": "a1-core",
       "displayName": "A1 Core",
-      "description": "Maintain confirmed marketing context and stress-test positioning, messaging, or decisions through constructive idea-validation interviews",
+      "description": "Maintain single-source marketing context and stress-test decisions before your team acts on them.",
       "keywords": [
         "marketing-context",
         "idea-validation",
@@ -27,7 +27,7 @@
     {
       "name": "a1-editorial",
       "displayName": "A1 Editorial",
-      "description": "Polish supplied drafts with strategy-safe editing rules, reviewed editorial guidance, and AI-pattern removal that preserves voice and facts",
+      "description": "Hand routine editorial work to AI agents—polish drafts, review copy, and remove AI patterns while preserving voice and facts.",
       "keywords": [
         "editing",
         "copy-editing",
@@ -47,7 +47,7 @@
     {
       "name": "a1-marketing-suite",
       "displayName": "A1 Marketing Suite",
-      "description": "Manage marketing context, pressure-test ideas, and refine draft copy. Installs both A1 Core and A1 Editorial without adding separate skills",
+      "description": "The complete AI skill suite for marketing teams—combining strategic decision support with full-cycle editorial automation.",
       "keywords": [
         "marketing",
         "editing",
