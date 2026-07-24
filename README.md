@@ -155,10 +155,7 @@ It never reads or overwrites project files. A request that combines humanization
 **Try:**
 
 ```text
-Humanize this paragraph. Keep every fact
-and return only the final rewrite:
-
-[paste your text]
+/a1-humanize [paste your text]
 ```
 
 Read the [full Humanize behavior](./skills/a1-humanize/SKILL.md).
