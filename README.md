@@ -15,7 +15,7 @@ The collection is split into two connected packages for marketing context, decis
 ### A1 Core — Context and decisions
 
 1. **Marketing Context** (`/a1-marketing-context`) stores the team's confirmed marketing context in `.agents/marketing-context.md`, so skills that use marketing context can work from real inputs instead of inventing them.
-2. **Grill** (`/a1-grill`) pressure-tests one marketing idea, decision, or plan through a constructive interview.
+2. **Grill** (`/a1-grill`) pressure-tests a marketing idea, decision, or plan through a constructive interview.
 
 ### A1 Editorial — Editing and copy
 
