@@ -93,15 +93,15 @@ An ordinary save or update request uses Auto-draft. An interview starts only whe
 
 **Try:**
 
-- **Basic setup:** “Set up marketing context from confirmed information in this repository.”
+```text
+Add this audience to the marketing context: marketplace operations managers.
 
-- **Brand foundation and positioning:** “Add the brand foundation, mission, and the company’s key themes to the context.”
+Remember our tone of voice: practical, calm, and direct.
 
-- **Product and audience:** “Update only the audience: marketplace operations managers.”
+Record the editorial policy from confirmed materials in this repository.
 
-- **Tone of voice and editorial policy:** “Record our tone of voice, formatting rules, and editorial policy.”
-
-- **Restrictions and prohibitions:** “Record stop words, brand constraints, and taboo topics in the context.”
+Remember these restrictions and prohibitions: [list stop words, brand constraints, and taboo topics].
+```
 
 Read the [full Marketing Context behavior](./skills/a1-marketing-context/SKILL.md).
 
@@ -261,3 +261,5 @@ For project-only skills, run the command in that project and use `--project` wit
 ## Help and feedback
 
 Questions, improvement ideas, or something that did not work as expected? Join the discussion in [A1 Marketing Skills](https://t.me/a1_marketing_skills).
+
+<img src="./assets/marketing-skills-evolution.png" alt="A1 Marketing Skills" height="114">
