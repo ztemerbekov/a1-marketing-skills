@@ -65,7 +65,7 @@ The shortest path to a useful result is a global install followed by an Editor r
 
 2. When the installer asks, choose the AI agents you already use and select `a1-editor` or any other skills you want.
 
-3. Open the project that contains your draft in the selected agent and start a new task:
+3. Open the project that contains your draft in the selected agent. Editor can start from an ordinary-language request:
 
    ```text
    Make this paragraph clearer and shorter. Keep every fact and do not add new claims.
@@ -74,7 +74,27 @@ The shortest path to a useful result is a global install followed by an Editor r
    [paste your draft]
    ```
 
-   Editor starts from this ordinary-language request. It does not require Marketing Context or a setup interview.
+   Or invoke the skill directly and include the task in the same prompt:
+
+   - **Codex**
+
+     ```text
+     $a1-editor Make this draft clearer and shorter without adding new claims: [paste your draft]
+     ```
+
+   - **Claude Code after `npx skills`**
+
+     ```text
+     /a1-editor Make this draft clearer and shorter without adding new claims: [paste your draft]
+     ```
+
+   - **Claude Code from the marketplace**
+
+     ```text
+     /a1-editorial:a1-editor Make this draft clearer and shorter without adding new claims: [paste your draft]
+     ```
+
+   The invocation changes by client and installation path; the editing workflow is the same. Editor does not require Marketing Context or a setup interview.
 
 4. For repeated work in one repository, add shared context:
 
@@ -83,8 +103,6 @@ The shortest path to a useful result is a global install followed by an Editor r
    ```
 
    This explicit request creates or updates `.agents/marketing-context.md`. Installation alone never creates the file.
-
-> The primary command uses the current [`skills` CLI](https://github.com/vercel-labs/skills). Its `-g` flag makes the selected skills available across projects for the chosen agents.
 
 ## Meet the skills
 
