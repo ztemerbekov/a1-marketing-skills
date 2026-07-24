@@ -7,3 +7,6 @@ node_modules/
 
 # Skill install artifacts (npx skills add)
 skills-lock.json
+
+# Local marketing context
+.agents/marketing-context.md
