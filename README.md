@@ -172,12 +172,10 @@ Use it when approved strategy already exists but reader focus, message emphasis,
 **Try:**
 
 ```text
-Use a1-editor-in-chief. The audience and positioning below are approved.
-Choose the strongest editorial angle and argument order for this email,
-have Editor rewrite it, and review the result.
+/a1-editor-in-chief Choose the best angle for a B2B audience and rewrite the text.
 
-Approved strategy: [audience and positioning]
-Source text: [paste your text]
+Approved strategy: [audience and task]
+Source text: [paste your draft]
 ```
 
 Read the [full Editor in Chief behavior](./skills/a1-editor-in-chief/SKILL.md).
