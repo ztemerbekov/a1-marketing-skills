@@ -115,13 +115,15 @@ An ordinary save or update request uses Auto-draft. An interview starts only whe
 
 **Try:**
 
-```text
-Set up marketing context from confirmed information in this repository.
+- **Basic setup:** “Set up marketing context from confirmed information in this repository.”
 
-Remember our approved tone of voice: practical, calm, and direct.
+- **Brand foundation and positioning:** “Add the brand foundation, mission, and the company’s key themes to the context.”
 
-Update only the audience: marketplace operations managers.
-```
+- **Product and audience:** “Update only the audience: marketplace operations managers.”
+
+- **Tone of voice and editorial policy:** “Record our tone of voice, formatting rules, and editorial policy.”
+
+- **Restrictions and prohibitions:** “Record stop words, brand constraints, and taboo topics in the context.”
 
 Read the [full Marketing Context behavior](./skills/a1-marketing-context/SKILL.md).
 
