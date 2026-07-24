@@ -136,10 +136,9 @@ Missing audience, channel, goal, or Marketing Context does not block a safe edit
 **Try:**
 
 ```text
-Make this landing-page section clearer and shorter.
-Keep every number and do not add new promises:
+Edit this in Ilyakhov’s style:
 
-[paste your text]
+[paste your draft]
 ```
 
 Read the [full Editor behavior](./skills/a1-editor/SKILL.md).
