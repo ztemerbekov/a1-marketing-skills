@@ -155,7 +155,7 @@ npx skills@latest add ztemerbekov/a1-marketing-skills -g
 
 ## Установка
 
-Один установщик `npx skills` работает со всеми поддерживаемыми клиентами ниже. Отдельные расширения, правила и ручное копирование для конкретных клиентов больше не используются.
+В Claude Code можно установить функциональные наборы из marketplace. Путь через `npx skills` по-прежнему доступен для Claude Code и остальных поддерживаемых клиентов ниже.
 
 <p>
   <img src="./assets/codex.webp" alt="Codex" width="16" height="16"> Codex &nbsp;&nbsp;
@@ -165,6 +165,26 @@ npx skills@latest add ztemerbekov/a1-marketing-skills -g
 </p>
 
 <details open>
+<summary><strong>Выборочная установка в Claude Code</strong></summary>
+
+Один раз добавьте marketplace в Claude Code:
+
+```text
+/plugin marketplace add ztemerbekov/a1-marketing-skills
+```
+
+Затем установите любой из независимых наборов:
+
+```text
+/plugin install a1-core@a1-marketing-skills
+/plugin install a1-editorial@a1-marketing-skills
+```
+
+Core включает Marketing Context и A1 Grill: запускайте их как `/a1-core:a1-marketing-context` и `/a1-core:a1-grill`. Editorial включает Editor, Editor in Chief и Humanize: запускайте их как `/a1-editorial:a1-editor`, `/a1-editorial:a1-editor-in-chief` и `/a1-editorial:a1-humanize`.
+
+</details>
+
+<details>
 <summary><strong>Глобальная установка через npx skills</strong></summary>
 
 Выполните команду в любой папке:
@@ -173,7 +193,7 @@ npx skills@latest add ztemerbekov/a1-marketing-skills -g
 npx skills@latest add ztemerbekov/a1-marketing-skills -g
 ```
 
-Установщик покажет доступные навыки и найденные ИИ-клиенты. Выберите клиентов, которыми уже пользуетесь, и нужные навыки; рекомендуем установить весь набор.
+Установщик покажет пять реальных навыков и найденные ИИ-клиенты. Выберите клиентов, которыми уже пользуетесь, и нужные навыки: в клиентах со slash-командами они сохранят ненеймспейсные имена, например `/a1-editor`.
 
 </details>
 

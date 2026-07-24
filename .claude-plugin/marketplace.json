@@ -1,0 +1,34 @@
+{
+  "name": "a1-marketing-skills",
+  "owner": {
+    "name": "Zinnur Temerbekov"
+  },
+  "metadata": {
+    "description": "Functional marketing skill collections for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "a1-core",
+      "displayName": "Core",
+      "description": "Core: Marketing Context and A1 Grill",
+      "source": "./plugins/a1-core",
+      "strict": false,
+      "skills": [
+        "./skills/a1-marketing-context",
+        "./skills/a1-grill"
+      ]
+    },
+    {
+      "name": "a1-editorial",
+      "displayName": "Editorial",
+      "description": "Editorial: Editor, Editor in Chief, and Humanize",
+      "source": "./plugins/a1-editorial",
+      "strict": false,
+      "skills": [
+        "./skills/a1-editor",
+        "./skills/a1-editor-in-chief",
+        "./skills/a1-humanize"
+      ]
+    }
+  ]
+}
