@@ -155,7 +155,7 @@ Editor in Chief does not create market research, segmentation, pricing, position
 
 ## Install
 
-The same `npx skills` installer works with the supported clients below. This repository no longer uses separate client plugins, rules, or manual-copy installers.
+Claude Code can install the functional collections from its marketplace. The `npx skills` path remains available for Claude Code and the other supported clients below.
 
 <p>
   <img src="./assets/codex.webp" alt="Codex" width="16" height="16"> Codex &nbsp;&nbsp;
@@ -165,6 +165,26 @@ The same `npx skills` installer works with the supported clients below. This rep
 </p>
 
 <details open>
+<summary><strong>Install selectively in Claude Code</strong></summary>
+
+In Claude Code, add the marketplace once:
+
+```text
+/plugin marketplace add ztemerbekov/a1-marketing-skills
+```
+
+Then install either independent collection:
+
+```text
+/plugin install a1-core@a1-marketing-skills
+/plugin install a1-editorial@a1-marketing-skills
+```
+
+Core provides Marketing Context and A1 Grill; invoke them as `/a1-core:a1-marketing-context` and `/a1-core:a1-grill`. Editorial provides Editor, Editor in Chief, and Humanize; invoke them as `/a1-editorial:a1-editor`, `/a1-editorial:a1-editor-in-chief`, and `/a1-editorial:a1-humanize`.
+
+</details>
+
+<details>
 <summary><strong>Install globally with npx skills</strong></summary>
 
 Run from any directory:
@@ -173,7 +193,7 @@ Run from any directory:
 npx skills@latest add ztemerbekov/a1-marketing-skills -g
 ```
 
-The installer shows the available skills and detected AI clients. Select the clients you already use and choose the skills you want; installing the complete collection is recommended.
+The installer shows the five real skills and detected AI clients. Select the clients you already use and choose the skills you want; they retain their unnamespaced names, such as `/a1-editor`, in clients that expose slash invocation.
 
 </details>
 
