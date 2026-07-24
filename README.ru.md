@@ -173,13 +173,13 @@ npx skills@latest add ztemerbekov/a1-marketing-skills -g
 /plugin marketplace add ztemerbekov/a1-marketing-skills
 ```
 
-Для полной установки выберите Marketing Suite:
+Для полной установки выберите A1 Marketing Suite:
 
 ```text
 /plugin install a1-marketing-suite@a1-marketing-skills
 ```
 
-Marketing Suite автоматически установит Core и Editorial. У него нет собственных навыков или команд: запускайте установленные навыки через неймспейсы наборов, например `/a1-core:a1-grill` и `/a1-editorial:a1-editor`.
+A1 Marketing Suite автоматически установит A1 Core и A1 Editorial. У него нет собственных навыков или команд: запускайте установленные навыки через неймспейсы наборов, например `/a1-core:a1-grill` и `/a1-editorial:a1-editor`.
 
 Либо установите любой из независимых наборов:
 
@@ -188,7 +188,7 @@ Marketing Suite автоматически установит Core и Editorial.
 /plugin install a1-editorial@a1-marketing-skills
 ```
 
-Core включает Marketing Context и A1 Grill: запускайте их как `/a1-core:a1-marketing-context` и `/a1-core:a1-grill`. Editorial включает Editor, Editor in Chief и Humanize: запускайте их как `/a1-editorial:a1-editor`, `/a1-editorial:a1-editor-in-chief` и `/a1-editorial:a1-humanize`.
+A1 Core включает Marketing Context и A1 Grill: запускайте их как `/a1-core:a1-marketing-context` и `/a1-core:a1-grill`. A1 Editorial включает Editor, Editor in Chief и Humanize: запускайте их как `/a1-editorial:a1-editor`, `/a1-editorial:a1-editor-in-chief` и `/a1-editorial:a1-humanize`.
 
 </details>
 
@@ -201,7 +201,7 @@ Core включает Marketing Context и A1 Grill: запускайте их �
 npx skills@latest add ztemerbekov/a1-marketing-skills -g
 ```
 
-Установщик покажет пять реальных навыков и найденные ИИ-клиенты. Выберите клиентов, которыми уже пользуетесь, и нужные навыки: в клиентах со slash-командами они сохранят ненеймспейсные имена, например `/a1-editor`.
+Установщик сгруппирует пять реальных навыков в A1 Core и A1 Editorial и покажет найденные ИИ-клиенты. Выберите клиентов, которыми уже пользуетесь, и нужные навыки: в клиентах со slash-командами они сохранят ненеймспейсные имена, например `/a1-editor`.
 
 </details>
 
