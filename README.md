@@ -129,7 +129,7 @@ Missing audience, channel, goal, or Marketing Context does not block a safe edit
 **Try:**
 
 ```text
-Edit this in Ilyakhov’s style:
+Edit this in Ilyakhov’s style and keep it to three paragraphs:
 
 [paste your draft]
 ```
@@ -148,7 +148,9 @@ It never reads or overwrites project files. A request that combines humanization
 **Try:**
 
 ```text
-/a1-humanize [paste your text]
+Humanize this text and break up the AI-generated rhythm:
+
+[paste your text]
 ```
 
 Read the [full Humanize behavior](./skills/a1-humanize/SKILL.md).
