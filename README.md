@@ -8,7 +8,7 @@ A1 Marketing Skills is a collection of Agent Skills built for the whole marketin
 
 ---
 
-## Five skills in the system
+## What agents can already do
 
 The collection is split into two connected packages for marketing context, decisions, and copy.
 
