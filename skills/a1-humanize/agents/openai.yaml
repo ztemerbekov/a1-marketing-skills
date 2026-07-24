@@ -1,0 +1,3 @@
+interface:
+  display_name: "A1 Humanize"
+  short_description: "Remove AI patterns from supplied copy"

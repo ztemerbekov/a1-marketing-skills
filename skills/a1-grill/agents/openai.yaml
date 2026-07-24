@@ -1,5 +1,5 @@
 interface:
   display_name: "A1 Grill"
-  short_description: "Sharpen a marketing decision constructively"
+  short_description: "Sharpen a marketing idea, decision, or plan"
 policy:
   allow_implicit_invocation: false
