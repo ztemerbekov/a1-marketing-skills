@@ -167,10 +167,10 @@ Use it when approved strategy already exists but reader focus, message emphasis,
 **Try:**
 
 ```text
-/a1-editor-in-chief Choose the best angle for a B2B audience and rewrite the text.
+/a1-editor-in-chief
+Review the draft. Find the strongest angle for marketing directors and rewrite the text for that purpose.
 
-Approved strategy: [audience and task]
-Source text: [paste your draft]
+[paste your draft]
 ```
 
 Read the [full Editor in Chief behavior](./skills/a1-editor-in-chief/SKILL.md).
