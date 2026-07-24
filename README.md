@@ -35,12 +35,12 @@ The collection is split into two connected packages for marketing context, decis
 Here is a complete context-to-edit loop:
 
 ```text
-You: Set up marketing context from confirmed information in this repository.
-Result: Confirmed reusable facts are saved to .agents/marketing-context.md.
+You: Analyze the files in project folder X and build a basic marketing context from them.
+Result: The agent extracts the positioning, target audience, and brand rules and records them in .agents/marketing-context.md.
 
-You: Make this landing-page paragraph clearer and shorter. Keep every fact:
+You: Edit this in Ilyakhov’s style and break up the AI-generated rhythm:
      [paste your draft]
-Result: Revised copy plus a short change summary.
+Result: Clean, finished copy without fluff or AI clichés that preserves every fact.
 ```
 
 ---
