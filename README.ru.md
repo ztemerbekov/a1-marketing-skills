@@ -262,4 +262,4 @@ npx skills@latest remove \
 
 Есть вопрос, идея или что-то сработало не так? Напишите в [A1 Marketing Skills](https://t.me/a1_marketing_skills).
 
-<img src="./assets/marketing-skills-evolution.png" alt="A1 Marketing Skills" height="114">
+<img src="./assets/marketing-skills-evolution.png" alt="A1 Marketing Skills">
