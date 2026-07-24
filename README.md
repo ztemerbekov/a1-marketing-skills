@@ -74,28 +74,6 @@ The shortest path to a useful result is a global install followed by an Editor r
    [paste your draft]
    ```
 
-   Or invoke the skill directly and include the task in the same prompt:
-
-   - **Codex**
-
-     ```text
-     $a1-editor Make this draft clearer and shorter without adding new claims: [paste your draft]
-     ```
-
-   - **Claude Code after `npx skills`**
-
-     ```text
-     /a1-editor Make this draft clearer and shorter without adding new claims: [paste your draft]
-     ```
-
-   - **Claude Code from the marketplace**
-
-     ```text
-     /a1-editorial:a1-editor Make this draft clearer and shorter without adding new claims: [paste your draft]
-     ```
-
-   The invocation changes by client and installation path; the editing workflow is the same. Editor does not require Marketing Context or a setup interview.
-
 4. For repeated work in one repository, add shared context:
 
    ```text
