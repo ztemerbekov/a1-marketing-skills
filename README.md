@@ -4,13 +4,33 @@
 
 **English** | [Русский](./README.ru.md)
 
-A1 Marketing Skills gives marketing teams five installable workflows for AI agents: keep confirmed product context, pressure-test marketing decisions, edit copy, remove recognizable AI-writing patterns, and turn approved strategy into a reviewed edit. The collection separates decision work from execution, so teams can hand over routine work without handing over expert control.
+**Hand over the routine to AI agents—freeing marketing teams to focus on strategy, vision, and growth-driving decisions.**
 
-- **Five focused skills.** A1 Core contains Marketing Context and Grill; A1 Editorial contains Editor, Editor in Chief, and Humanize.
-- **Reusable context.** Marketing Context stores only confirmed, repository-specific information in `.agents/marketing-context.md`, where Editor and Editor in Chief can reuse it.
-- **Source fidelity.** Editor and Humanize preserve supplied facts, qualifications, names, numbers, and claims instead of inventing the missing marketing behind a draft.
-- **Language-aware.** Rewritten copy stays in its source language, while questions and explanations follow the language of your instruction unless you request otherwise.
-- **Flexible install.** Use the `skills` CLI with Codex, Claude Code, Cursor, Antigravity, and other supported agents, or install the functional collections from the Claude Code marketplace.
+A1 Marketing Skills is a collection of Agent Skills built for the whole marketing team. It draws a clear line between execution and decision-making: agents take on repeatable operational work, while marketers keep expert control, clear focus, and ownership of growth decisions.
+
+---
+
+## Five skills in the system
+
+The collection is split into two connected packages for marketing context, decisions, and copy.
+
+### A1 Core — Context and decisions
+
+1. **Marketing Context** (`A1 Marketing Context`) stores the team's confirmed marketing context in `.agents/marketing-context.md`, so Editor and Editor in Chief can reuse real inputs instead of inventing them.
+2. **Grill** (`A1 Grill`) pressure-tests one marketing idea, decision, or plan through a constructive interview.
+
+### A1 Editorial — Editing and copy
+
+3. **Editor** (`A1 Editor`) improves existing drafts within supplied constraints and available Marketing Context while preserving source facts.
+4. **Editor in Chief** (`A1 Editor in Chief`) sets editorial direction inside approved strategy, briefs Editor, and reviews the resulting edit.
+5. **Humanize** (`A1 Humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
+
+## Working principles
+
+- **One marketing context.** Saved, confirmed team inputs live in `.agents/marketing-context.md`, giving context-aware workflows one shared source instead of made-up inputs.
+- **Source fidelity.** The editorial skills preserve facts, numbers, terms, qualifications, and authorial meaning without adding missing claims, proof, or strategy.
+
+---
 
 ## See it in one minute
 
@@ -30,7 +50,6 @@ Result: Revised copy plus a short change summary.
 ## Contents
 
 - [Quick start](#quick-start)
-- [Choose a skill](#choose-a-skill)
 - [Meet the skills](#meet-the-skills)
 - [Other installation options](#other-installation-options)
 - [Update or remove](#update-or-remove)
@@ -69,24 +88,6 @@ The shortest path to a useful result is a global install followed by an Editor r
    This explicit request creates or updates `.agents/marketing-context.md`. Installation alone never creates the file.
 
 > The primary command uses the current [`skills` CLI](https://github.com/vercel-labs/skills). Its `-g` flag makes the selected skills available across projects for the chosen agents.
-
----
-
-## Choose a skill
-
-Pick the smallest workflow that matches the job:
-
-| Skill | Use it to | How it starts |
-|---|---|---|
-| [Marketing Context](./skills/a1-marketing-context/) `a1-marketing-context` | Save confirmed product, audience, positioning, voice, proof, vocabulary, and goals for reuse in one repository. | Ask explicitly to set up, remember, save, or update marketing context. |
-| [A1 Grill](./skills/a1-grill/) `a1-grill` | Sharpen one marketing idea, decision, or plan before execution. | Invoke `a1-grill` explicitly. |
-| [Editor](./skills/a1-editor/) `a1-editor` | Shorten, clarify, strengthen, restructure, or clean up existing marketing copy. | Paste editable text and state the change you want. |
-| [Humanize](./skills/a1-humanize/) `a1-humanize` | Remove recognizable AI-writing patterns from supplied copy while preserving its meaning and voice. | Ask explicitly to humanize supplied text or make it sound less AI-generated. |
-| [Editor in Chief](./skills/a1-editor-in-chief/) `a1-editor-in-chief` | Choose editorial direction inside approved strategy, brief Editor, and review the resulting edit. | Invoke `a1-editor-in-chief` explicitly. |
-
-Marketing Context is useful for repeated work, but it is optional for Editor. Grill asks before reading an existing context. Humanize never reads project files or Marketing Context.
-
-> Editor, Humanize, Marketing Context, and Editor in Chief do not invent missing marketing strategy. Grill challenges one marketing decision at a time but does not execute the result.
 
 ## Meet the skills
 
