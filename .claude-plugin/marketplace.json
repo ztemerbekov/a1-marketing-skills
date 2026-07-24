@@ -4,13 +4,19 @@
     "name": "Zinnur Temerbekov"
   },
   "metadata": {
-    "description": "Functional marketing skill collections for Claude Code"
+    "description": "Keep confirmed marketing context updated, stress-test marketing decisions, and refine supplied drafts using safe, strategy-bounded editorial tools"
   },
   "plugins": [
     {
       "name": "a1-core",
       "displayName": "A1 Core",
-      "description": "A1 Core: Marketing Context and A1 Grill",
+      "description": "Maintain confirmed marketing context and stress-test positioning, messaging, or decisions through constructive idea-validation interviews",
+      "keywords": [
+        "marketing-context",
+        "idea-validation",
+        "marketing-decisions",
+        "marketing"
+      ],
       "source": "./skills",
       "strict": false,
       "skills": [
@@ -21,7 +27,15 @@
     {
       "name": "a1-editorial",
       "displayName": "A1 Editorial",
-      "description": "A1 Editorial: Editor, Editor in Chief, and Humanize",
+      "description": "Polish supplied drafts with strategy-safe editing rules, reviewed editorial guidance, and AI-pattern removal that preserves voice and facts",
+      "keywords": [
+        "editing",
+        "copy-editing",
+        "copywriting",
+        "marketing-copy",
+        "editorial-guidance",
+        "humanize"
+      ],
       "source": "./skills",
       "strict": false,
       "skills": [
@@ -33,7 +47,14 @@
     {
       "name": "a1-marketing-suite",
       "displayName": "A1 Marketing Suite",
-      "description": "A1 Marketing Suite: installs the A1 Core and A1 Editorial collections",
+      "description": "Manage marketing context, pressure-test ideas, and refine draft copy. Installs both A1 Core and A1 Editorial without adding separate skills",
+      "keywords": [
+        "marketing",
+        "editing",
+        "humanize",
+        "idea-validation",
+        "marketing-suite"
+      ],
       "source": "./plugins/a1-marketing-suite",
       "strict": false,
       "dependencies": [
