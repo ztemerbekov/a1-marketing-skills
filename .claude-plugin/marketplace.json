@@ -9,31 +9,31 @@
   "plugins": [
     {
       "name": "a1-core",
-      "displayName": "Core",
-      "description": "Core: Marketing Context and A1 Grill",
-      "source": "./plugins/a1-core",
+      "displayName": "A1 Core",
+      "description": "A1 Core: Marketing Context and A1 Grill",
+      "source": "./skills",
       "strict": false,
       "skills": [
-        "./skills/a1-marketing-context",
-        "./skills/a1-grill"
+        "./a1-marketing-context",
+        "./a1-grill"
       ]
     },
     {
       "name": "a1-editorial",
-      "displayName": "Editorial",
-      "description": "Editorial: Editor, Editor in Chief, and Humanize",
-      "source": "./plugins/a1-editorial",
+      "displayName": "A1 Editorial",
+      "description": "A1 Editorial: Editor, Editor in Chief, and Humanize",
+      "source": "./skills",
       "strict": false,
       "skills": [
-        "./skills/a1-editor",
-        "./skills/a1-editor-in-chief",
-        "./skills/a1-humanize"
+        "./a1-editor",
+        "./a1-editor-in-chief",
+        "./a1-humanize"
       ]
     },
     {
       "name": "a1-marketing-suite",
-      "displayName": "Marketing Suite",
-      "description": "Marketing Suite: installs the Core and Editorial collections",
+      "displayName": "A1 Marketing Suite",
+      "description": "A1 Marketing Suite: installs the A1 Core and A1 Editorial collections",
       "source": "./plugins/a1-marketing-suite",
       "strict": false,
       "dependencies": [

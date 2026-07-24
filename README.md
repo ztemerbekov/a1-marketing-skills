@@ -173,13 +173,13 @@ In Claude Code, add the marketplace once:
 /plugin marketplace add ztemerbekov/a1-marketing-skills
 ```
 
-For the complete collection, install Marketing Suite:
+For the complete collection, install A1 Marketing Suite:
 
 ```text
 /plugin install a1-marketing-suite@a1-marketing-skills
 ```
 
-Marketing Suite installs Core and Editorial automatically. It has no skills or commands of its own: invoke the installed skills through their collection namespaces, such as `/a1-core:a1-grill` and `/a1-editorial:a1-editor`.
+A1 Marketing Suite installs A1 Core and A1 Editorial automatically. It has no skills or commands of its own: invoke the installed skills through their collection namespaces, such as `/a1-core:a1-grill` and `/a1-editorial:a1-editor`.
 
 Alternatively, install either independent collection:
 
@@ -188,7 +188,7 @@ Alternatively, install either independent collection:
 /plugin install a1-editorial@a1-marketing-skills
 ```
 
-Core provides Marketing Context and A1 Grill; invoke them as `/a1-core:a1-marketing-context` and `/a1-core:a1-grill`. Editorial provides Editor, Editor in Chief, and Humanize; invoke them as `/a1-editorial:a1-editor`, `/a1-editorial:a1-editor-in-chief`, and `/a1-editorial:a1-humanize`.
+A1 Core provides Marketing Context and A1 Grill; invoke them as `/a1-core:a1-marketing-context` and `/a1-core:a1-grill`. A1 Editorial provides Editor, Editor in Chief, and Humanize; invoke them as `/a1-editorial:a1-editor`, `/a1-editorial:a1-editor-in-chief`, and `/a1-editorial:a1-humanize`.
 
 </details>
 
@@ -201,7 +201,7 @@ Run from any directory:
 npx skills@latest add ztemerbekov/a1-marketing-skills -g
 ```
 
-The installer shows the five real skills and detected AI clients. Select the clients you already use and choose the skills you want; they retain their unnamespaced names, such as `/a1-editor`, in clients that expose slash invocation.
+The installer groups the five real skills under A1 Core and A1 Editorial and shows the detected AI clients. Select the clients you already use and choose the skills you want; they retain their unnamespaced names, such as `/a1-editor`, in clients that expose slash invocation.
 
 </details>
 
