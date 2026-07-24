@@ -40,7 +40,7 @@ Result: The agent extracts the positioning, target audience, and brand rules and
 
 You: Edit this in Ilyakhov’s style and break up the AI-generated rhythm:
      [paste your draft]
-Result: Clean, finished copy without fluff or AI clichés that preserves every fact.
+Result: Clean, finished copy in the brand’s Tone of Voice, without fluff or AI clichés.
 ```
 
 ---
