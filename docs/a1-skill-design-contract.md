@@ -6,6 +6,12 @@ Use this contract when creating or materially changing an A1 skill. It defines d
 
 Give each public skill one outcome a user can recognize and request without knowing the internal method. A materially different interaction contract is a reason to split a skill; an operation variant is not.
 
+## Client Presentation
+
+Treat client-facing metadata as part of the public skill contract. The display name identifies the skill; the short description states its one recognizable user job in plain language and must not broaden its scope or imply unsupported outcomes.
+
+Use only metadata fields the client officially supports. When the schema provides one global string, use one concise English default rather than inventing locale variants. Keep presentation and invocation metadata consistent with the skill's runtime contract.
+
 ## Invocation
 
 Choose invocation from user expectations:
