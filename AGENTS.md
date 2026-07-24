@@ -26,6 +26,8 @@ For every implementation change, follow this order:
 
 Pushing a feature branch never authorizes a merge. Do not commit implementation changes directly to `main`.
 
+When a branch deletion is requested, verify both the remote branch and its local counterpart. Delete each one when present, then report the verified state of both.
+
 ## GitHub authentication
 
 Use the globally configured GitHub CLI authentication (`gh`) from the macOS system Keychain.
