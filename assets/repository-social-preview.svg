@@ -1,40 +1,10 @@
 <svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#111827"/>
-      <stop offset="0.58" stop-color="#172554"/>
-      <stop offset="1" stop-color="#312E81"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="89" y1="0" x2="514" y2="0" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FB7185"/>
-      <stop offset="0.46" stop-color="#FBBF24"/>
-      <stop offset="1" stop-color="#A78BFA"/>
-    </linearGradient>
-    <filter id="shadow" x="395" y="234" width="865" height="308" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#020617" flood-opacity="0.48"/>
-    </filter>
-  </defs>
-
-  <rect width="1280" height="640" fill="url(#background)"/>
-  <circle cx="1122" cy="80" r="310" fill="#6D28D9" fill-opacity="0.16"/>
-  <circle cx="86" cy="658" r="254" fill="#DB2777" fill-opacity="0.1"/>
-
-  <g opacity="0.36" stroke="#C4B5FD">
-    <path d="M76 100H512"/>
-    <path d="M76 540H512"/>
-    <path d="M76 100V540"/>
-  </g>
-  <rect x="76" y="100" width="64" height="64" rx="16" fill="white" fill-opacity="0.13" stroke="white" stroke-opacity="0.24"/>
-  <path d="M95 143V121H107.5C113.299 121 118 125.701 118 131.5C118 137.299 113.299 142 107.5 142H101L95 143Z" fill="#F8FAFC"/>
-  <path d="M108 143L117 154H101L94 143H108Z" fill="#F8FAFC" fill-opacity="0.88"/>
-
-  <rect x="76" y="207" width="422" height="7" rx="3.5" fill="url(#accent)"/>
-  <text x="76" y="275" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="700" letter-spacing="-1.8">A1 Marketing Skills</text>
-  <text x="76" y="338" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="400">Practical skills for marketing teams</text>
-  <text x="76" y="380" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="400">working with AI agents.</text>
-  <text x="76" y="486" fill="#C4B5FD" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" letter-spacing="2.8">CONTEXT  •  DECISIONS  •  COPY</text>
-
-  <g filter="url(#shadow)">
-    <image href="marketing-skills-evolution.png" x="421" y="274" width="805" height="180" preserveAspectRatio="xMidYMid meet"/>
-  </g>
+  <rect width="1280" height="640" fill="#FFF9F0"/>
+  <rect x="68" y="68" width="15" height="15" rx="2" fill="#F0452F"/>
+  <text x="104" y="82" fill="#1C1917" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="1.5">A1 / OPEN-SOURCE AGENT SKILLS</text>
+  <text x="68" y="216" fill="#1C1917" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" letter-spacing="-4">Marketing</text>
+  <text x="68" y="300" fill="#1C1917" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700" letter-spacing="-4">Skills</text>
+  <text x="73" y="353" fill="#57534E" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="400">For marketers working with AI agents in plain language.</text>
+  <path d="M68 389H1212" stroke="#1C1917" stroke-width="2"/>
+  <image href="marketing-skills-evolution.png" x="94" y="401" width="1092" height="243" preserveAspectRatio="xMidYMid meet"/>
 </svg>
