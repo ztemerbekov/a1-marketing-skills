@@ -275,5 +275,3 @@ For project-only skills, run the command in that project and use `--project` wit
 ## Help and feedback
 
 Questions, improvement ideas, or something that did not work as expected? Join the discussion in [A1 Marketing Skills](https://t.me/a1_marketing_skills).
-
-<img src="./assets/marketing-skills-evolution.png" alt="A1 Marketing Skills">
