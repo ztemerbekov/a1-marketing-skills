@@ -1,6 +1,6 @@
 <h1><img src="./assets/a1-logo.svg" alt="A1" width="42"> Marketing Skills</h1>
 
-**English** | [Русский](./README.ru.md)
+**English ·** [Русский](./README.ru.md)
 
 **Hand over the routine to AI agents—freeing marketing teams to focus on strategy, vision, and growth-driving decisions.**
 
