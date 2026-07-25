@@ -15,7 +15,7 @@ Show the assessment for every intervention. For `LOW` with no flags, one compact
 
 - **LOW:** transparent and reversible choice support; users can understand, refuse, and undo it without meaningful penalty.
 - **MODERATE:** materially steers a decision or has a plausible downside, but terms and exit remain clear.
-- **HIGH:** relies on deception, hides a material term or exit, exploits a vulnerable state, uses data beyond reasonable expectation, or creates compulsive pressure.
+- **HIGH:** relies on deception, hides a material term or exit, exploits a vulnerable state, uses data beyond reasonable expectation, creates compulsive pressure, or makes leaving materially harder than joining.
 
 ## Warning format
 
@@ -27,6 +27,13 @@ When severity is `MODERATE` or `HIGH`, say:
 4. an added countermetric or reversibility condition.
 
 Continue with the safe, transparent version unless the user explicitly changes the task. For example, replace invented scarcity with a real deadline and its reason; replace hidden cancellation with an obvious exit; replace fabricated social proof with verified, dated evidence or no claim.
+
+## Goals, action, and retention safeguards
+
+- **Compulsion:** do not use variable rewards, streak loss, repeated cues, or automated plans to make stopping difficult. Give the user pause, notification, and deletion controls; measure wellbeing and displacement where repeated use is the intended outcome.
+- **Obstructed exit:** entry, refusal, cancellation, and disabling an automated plan must be comparably clear. Do not frame an irrecoverable past investment, earned progress, or a threat to freedom as a penalty for leaving.
+- **Vulnerability:** do not target children, people in crisis, people with addiction or impulse-control risks, or people facing financial or health pressure with retention, fear, or automaticity tactics. Use additional safeguards and a voluntary alternative.
+- **Reversibility:** preserve a clear undo, pause, cancellation, or data/plan reset. When a learned cue–response pattern or disappointment can persist, add a longer-horizon countermetric rather than treating immediate conversion or retention as sufficient.
 
 ## Non-negotiable truthfulness boundary
 

@@ -32,7 +32,7 @@ If this is your first time using A1 Marketing Skills, start with [Marketing Cont
 | [Editor in Chief](skills/a1-editor-in-chief/)<br>`a1-editor-in-chief` | Turning a confirmed editorial assignment into a reviewed edit without creating general marketing strategy. |
 | [Humanize](skills/a1-humanize/)<br>`a1-humanize` | Remove recognizable AI-writing patterns from supplied copy without inventing facts or flattening its voice. |
 | [Marketing Context](skills/a1-marketing-context/)<br>`a1-marketing-context` | Creating or incrementally updating one repository-local context from confirmed marketing information. |
-| [A1 Psychology](skills/a1-psy/)<br>`a1-psy` | Diagnose choice-architecture hypotheses behind a marketing choice or related metric change, then design a truthful test. |
+| [A1 Psychology](skills/a1-psy/)<br>`a1-psy` | Diagnose bounded choice, goals, action, repeated-behavior, or post-choice hypotheses, then design a truthful test. |
 
 Use this quick rule:
 
@@ -41,7 +41,7 @@ Use this quick rule:
 - Already have text and know what should change? Use **Editor**.
 - Want to remove recognizable AI-writing patterns from existing copy? Use **Humanize**.
 - Have confirmed product and marketing inputs, but need to decide the editorial reader focus, message emphasis, angle, structure, or voice? Explicitly invoke **Editor in Chief**.
-- Need an evidence-bounded explanation of a choice-architecture change or related metric? Use **A1 Psychology**.
+- Need an evidence-bounded explanation of a choice, goals/action, repeated-behavior, or post-choice outcome? Use **A1 Psychology**.
 
 Marketing Context is useful for repeated work, but A1 Grill and Editor can work from current material without it. A1 Grill asks before reading an existing context.
 
@@ -160,9 +160,9 @@ Editor in Chief does not create market research, segmentation, pricing, position
 <details>
 <summary><strong>A1 Psychology</strong></summary>
 
-**What it does:** diagnoses a choice-architecture change or related marketing metric through a small set of testable psychological hypotheses. It separates what was observed from what caused it, makes uncertainty explicit, and designs a truthful, reversible experiment with countermetrics.
+**What it does:** diagnoses a choice, goals/action, repeated-behavior, or post-choice marketing outcome through a small set of testable psychological hypotheses. It separates what was observed from what caused it, makes uncertainty explicit, and designs a truthful, reversible experiment with countermetrics.
 
-**Use it when:** you want to understand a behavioral mechanism behind plan choice, an option comparison, a default, a price reference, or a related conversion change. It analyzes only the supported choice-architecture hypotheses; it does not investigate traffic, analytics, attribution, technical failures, or unrelated psychological mechanisms.
+**Use it when:** you want to understand a behavioral mechanism behind plan choice, an option comparison, a default, a price reference, a goal/action plan, repeated behavior, or post-choice satisfaction. It analyzes only its supported, evidence-bounded hypotheses; it does not investigate traffic, analytics, attribution, technical failures, or unrelated psychological mechanisms.
 
 **Try:**
 
@@ -170,7 +170,7 @@ Editor in Chief does not create market research, segmentation, pricing, position
 Use a1-psy to diagnose why our plan-selection conversion fell after a page change. Give only evidence-bounded hypotheses and a falsifiable test.
 ```
 
-The first release covers choice architecture: status quo, defaults, choice overload, loss aversion, anchoring, decoys, and framing. It warns when a proposed intervention is deceptive or otherwise risky, then helps test a transparent alternative.
+It covers choice architecture plus sunk cost, implementation intentions, regulatory focus and fit, cue–response automaticity, psychological reactance, expectancy–disconfirmation, IKEA, and goal-gradient. It warns when a proposed intervention is deceptive or otherwise risky, then helps test a transparent alternative.
 
 </details>
 
