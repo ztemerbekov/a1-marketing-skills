@@ -34,10 +34,14 @@ The collection is split into two connected packages for marketing context, decis
 
 Here is a complete context-to-edit loop:
 
-> **You:** Analyze the files in project folder X and build a basic marketing context from them.<br>
-> **Result:** The agent extracts the positioning, target audience, and brand rules and records them in `.agents/marketing-context.md` so that every later skill invocation automatically uses the context and you do not need to provide the inputs again.<br>
-> **You:** Edit this in Ilyakhov’s style and rewrite it so it sounds human—the AI writing is obvious:<br>
-> `[paste your draft]`<br>
+> **You:** Analyze the files in project folder X and build a basic marketing context from them.
+>
+> **Result:** The agent extracts the positioning, target audience, and brand rules and records them in `.agents/marketing-context.md` so that every later skill invocation automatically uses the context and you do not need to provide the inputs again.
+>
+> **You:** Edit this in Ilyakhov’s style and rewrite it so it sounds human—the AI writing is obvious:
+>
+> `[paste your draft]`
+>
 > **Result:** Clean, finished copy in the brand’s Tone of Voice without fluff or AI clichés, rewritten according to the principles of “Write, Cut.”
 
 ---
