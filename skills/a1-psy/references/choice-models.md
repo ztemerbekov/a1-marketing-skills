@@ -148,7 +148,7 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## M33 — Framing
 
-- **Tier:** core.
+- **Tier:** child. The canonical tier is owned by the [model index](model-index.md).
 - **Mechanism:** equivalent descriptions or reference points can lead to different choices because people interpret the decision differently.
 - **Diagnostic signals:** alternatives are materially equivalent; only the presentation of outcomes, risk, or reference point changes; comprehension is preserved.
 - **Distinguish from:** changed economics, omitted terms, loss aversion, anchoring, and manipulation through ambiguity. If the meaning changes, this is not a clean framing test.

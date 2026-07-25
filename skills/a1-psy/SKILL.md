@@ -32,12 +32,13 @@ Localize the notice when the user is not writing Russian. A metric decline by it
 
 ## Workflow
 
-1. Read [the diagnostic spine](references/diagnostic-spine.md) for every accepted diagnosis.
+1. Read [the model index](references/model-index.md) and [the diagnostic spine](references/diagnostic-spine.md) for every accepted diagnosis. Do not select a name absent from the index.
 2. Read the relevant model family: [choice models](references/choice-models.md) for options, prices, plan selection, comparison, goals, action, repeated behavior, or post-choice decisions; [attention, belief, and experience models](references/attention-belief-experience-models.md) for familiarity, accessibility, belief selection, comprehension, affective judgment, or remembered experience. Read both only when both mechanisms are genuinely in play. For a named covered model, read its owning family reference.
 3. If the user names a framework, broad theory, analyst error, or an apparent psychological cause that may only be a descriptor, read [framework and analyst guardrails](references/framework-and-analyst-guardrails.md).
-4. Read [the evidence ledger](references/evidence-ledger.md) for every diagnosis and every named-model explanation that needs its limitation or evidence status.
-5. Before proposing an intervention, read [ethics](references/ethics.md).
-6. Produce the response contract from the diagnostic spine. Do not invoke more models simply to appear comprehensive.
+4. A `RESEARCH` position may be explained only when the user explicitly asks about it. State that it is research-only and do not offer it as an ordinary diagnosis or intervention recommendation.
+5. Read [the evidence ledger](references/evidence-ledger.md) for every diagnosis and every named-model explanation that needs its limitation or evidence status.
+6. Before proposing an intervention, read [ethics](references/ethics.md).
+7. Produce the response contract from the diagnostic spine. Do not invoke more models simply to appear comprehensive.
    For social questions, also read [social-influence models](references/social-influence-models.md). Preserve the source, reference group, baseline, public/private context, and outcome of any social-evidence claim.
 
 ### Pricing routing
