@@ -121,9 +121,11 @@ Read the [full Marketing Context behavior](./skills/a1-marketing-context/SKILL.m
 
 <br>
 
-Grill runs a constructively demanding interview around one marketing idea, decision, or plan. Each turn leads with one recommendation and ends with one question. It follows the dependencies of the actual decision instead of applying a fixed checklist.
+A1 Grill is a tough but constructive review of a marketing idea or plan. No hand-holding or fluff, but no toxicity or passive aggression either—like a direct conversation with a colleague.
 
-After you confirm shared understanding, Grill returns the decision, its rationale, any remaining assumptions or deferred branches, and one recommended next step. It does not execute the plan, create marketing materials, or perform full market research.
+Each step brings one clear recommendation and one precise question. The skill analyzes the decision deeply instead of following a checklist.
+
+What you get: A1 Grill returns an actionable decision, surfaces risks and assumptions, and gives you one concrete next step.
 
 **Try:**
 
