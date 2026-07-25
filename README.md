@@ -91,7 +91,31 @@ An ordinary save or update request uses Auto-draft. An interview starts only whe
 
 **Try:**
 
-> Record our Tone of Voice (attached file) and target audience (second file) in the marketing context.
+> Analyze the attached files and record our Brand Voice, Customer Profiles, editorial policy, brand restrictions, and stop-word list in the context.
+
+[or]
+
+> Record the target-audience profiles, segments, ICP (Ideal Customer Profile), and key pain points of B2B buyers from the presentation in the context.
+
+[or]
+
+> Add the brand positioning, UVP (value proposition), mission, and key themes from the file to the context.
+
+[or]
+
+> Capture our Tone of Voice, communication character, layout principles, and examples of the brand voice in action in the context.
+
+[or]
+
+> Record the editorial policy, formatting rules, structure requirements, and rules for presenting numerical facts in the context.
+
+[or]
+
+> Save the brand prohibitions, legal taboos, stop-word list, and rules for mentioning competitors’ products in the context.
+
+[or]
+
+> Record the key products, their features translated into customer benefits, and the main offers for the current campaign in the context.
 
 Read the [full Marketing Context behavior](./skills/a1-marketing-context/SKILL.md).
 
