@@ -85,9 +85,12 @@ The shortest path to a useful result is a global install followed by an Editor r
 <details>
 <summary><strong>Marketing Context — keep confirmed information reusable</strong></summary>
 
-Marketing Context creates or incrementally updates one repository-local `.agents/marketing-context.md`. It records confirmed information from the user and authoritative project material; it never creates or evaluates hypotheses.
+Marketing Context creates or incrementally updates `.agents/marketing-context.md`—a single source of confirmed inputs about your brand for future tasks.
 
-An ordinary save or update request uses Auto-draft. An interview starts only when you explicitly ask for guided questions; it asks one question at a time, saves confirmed progress after each answer, and stops after at most seven questions in one pass.
+You can start an update in two ways:
+
+- **Ordinary request or command:** the skill collects confirmed facts from the supplied documents and builds the context.
+- **Step-by-step interview:** if the files do not contain enough information, ask the skill to ask questions. It starts a short conversation, asks one question at a time, and saves confirmed progress after each answer.
 
 **Try:**
 
