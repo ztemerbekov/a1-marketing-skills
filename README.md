@@ -85,6 +85,8 @@ The shortest path to a useful result is a global install followed by an Editor r
 <details>
 <summary><strong>Marketing Context — keep confirmed information reusable</strong></summary>
 
+<br>
+
 Marketing Context creates or incrementally updates `.agents/marketing-context.md`—a single source of confirmed inputs about your brand for future tasks.
 
 You can start an update in two ways:
@@ -129,6 +131,8 @@ Read the [full Marketing Context behavior](./skills/a1-marketing-context/SKILL.m
 <details>
 <summary><strong>A1 Grill — pressure-test a decision before acting</strong></summary>
 
+<br>
+
 Grill runs a constructively demanding interview around one marketing idea, decision, or plan. Each turn leads with one recommendation and ends with one question. It follows the dependencies of the actual decision instead of applying a fixed checklist.
 
 After you confirm shared understanding, Grill returns the decision, its rationale, any remaining assumptions or deferred branches, and one recommended next step. It does not execute the plan, create marketing materials, or perform full market research.
@@ -145,6 +149,8 @@ Read the [full A1 Grill behavior](./skills/a1-grill/SKILL.md).
 
 <details>
 <summary><strong>Editor — improve existing copy without inventing facts</strong></summary>
+
+<br>
 
 Editor starts when you provide editable text and an editing intent. It can shorten, clarify, strengthen, restructure, repair grammar, or apply information style while preserving traceable facts, claims, qualifications, numbers, and useful voice.
 
@@ -165,6 +171,8 @@ Read the [full Editor behavior](./skills/a1-editor/SKILL.md).
 <details>
 <summary><strong>Humanize — remove AI patterns without flattening the voice</strong></summary>
 
+<br>
+
 Humanize works only with completed copy supplied in the conversation. It detects patterns by function across languages, preserves supported content and meaningful authorial choices, and does not add claims, opinions, anecdotes, offers, or CTAs.
 
 It never reads or overwrites project files. A request that combines humanization with new marketing strategy stops before any partial rewrite.
@@ -183,6 +191,8 @@ Read the [full Humanize behavior](./skills/a1-humanize/SKILL.md).
 
 <details>
 <summary><strong>Editor in Chief — direct and review a high-stakes edit</strong></summary>
+
+<br>
 
 Editor in Chief works inside confirmed product and marketing inputs. It resolves the source material, chooses bounded editorial direction, creates an internal brief, delegates all text work to Editor, and reviews the result with at most one corrective pass.
 
