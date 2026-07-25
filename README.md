@@ -32,6 +32,7 @@ If this is your first time using A1 Marketing Skills, start with [Marketing Cont
 | [Editor in Chief](skills/a1-editor-in-chief/)<br>`a1-editor-in-chief` | Turning a confirmed editorial assignment into a reviewed edit without creating general marketing strategy. |
 | [Humanize](skills/a1-humanize/)<br>`a1-humanize` | Remove recognizable AI-writing patterns from supplied copy without inventing facts or flattening its voice. |
 | [Marketing Context](skills/a1-marketing-context/)<br>`a1-marketing-context` | Creating or incrementally updating one repository-local context from confirmed marketing information. |
+| [A1 Psychology](skills/a1-psy/)<br>`a1-psy` | Diagnose choice-architecture hypotheses behind a marketing choice or related metric change, then design a truthful test. |
 
 Use this quick rule:
 
@@ -40,6 +41,7 @@ Use this quick rule:
 - Already have text and know what should change? Use **Editor**.
 - Want to remove recognizable AI-writing patterns from existing copy? Use **Humanize**.
 - Have confirmed product and marketing inputs, but need to decide the editorial reader focus, message emphasis, angle, structure, or voice? Explicitly invoke **Editor in Chief**.
+- Need an evidence-bounded explanation of a choice-architecture change or related metric? Use **A1 Psychology**.
 
 Marketing Context is useful for repeated work, but A1 Grill and Editor can work from current material without it. A1 Grill asks before reading an existing context.
 
@@ -155,6 +157,23 @@ Editor in Chief does not create market research, segmentation, pricing, position
 
 </details>
 
+<details>
+<summary><strong>A1 Psychology</strong></summary>
+
+**What it does:** diagnoses a choice-architecture change or related marketing metric through a small set of testable psychological hypotheses. It separates what was observed from what caused it, makes uncertainty explicit, and designs a truthful, reversible experiment with countermetrics.
+
+**Use it when:** you want to understand a behavioral mechanism behind plan choice, an option comparison, a default, a price reference, or a related conversion change. It analyzes only the supported choice-architecture hypotheses; it does not investigate traffic, analytics, attribution, technical failures, or unrelated psychological mechanisms.
+
+**Try:**
+
+```text
+Use a1-psy to diagnose why our plan-selection conversion fell after a page change. Give only evidence-bounded hypotheses and a falsifiable test.
+```
+
+The first release covers choice architecture: status quo, defaults, choice overload, loss aversion, anchoring, decoys, and framing. It warns when a proposed intervention is deceptive or otherwise risky, then helps test a transparent alternative.
+
+</details>
+
 ## Install
 
 Claude Code can install the functional collections from its marketplace. The `npx skills` path remains available for Claude Code and the other supported clients below.
@@ -175,7 +194,7 @@ In Claude Code, add the marketplace once:
 /plugin marketplace add ztemerbekov/a1-marketing-skills
 ```
 
-For the complete collection, install A1 Marketing Suite:
+For the currently packaged Claude Code collections, install A1 Marketing Suite:
 
 ```text
 /plugin install a1-marketing-suite@a1-marketing-skills
@@ -192,6 +211,8 @@ Alternatively, install either independent collection:
 
 A1 Core provides Marketing Context and A1 Grill; invoke them as `/a1-core:a1-marketing-context` and `/a1-core:a1-grill`. A1 Editorial provides Editor, Editor in Chief, and Humanize; invoke them as `/a1-editorial:a1-editor`, `/a1-editorial:a1-editor-in-chief`, and `/a1-editorial:a1-humanize`.
 
+`a1-psy` is currently available through `npx skills` below as a standalone installed skill.
+
 </details>
 
 <details>
@@ -203,7 +224,7 @@ Run from any directory:
 npx skills@latest add ztemerbekov/a1-marketing-skills -g
 ```
 
-The installer groups the five real skills under A1 Core and A1 Editorial and shows the detected AI clients. Select the clients you already use and choose the skills you want; they retain their unnamespaced names, such as `/a1-editor`, in clients that expose slash invocation.
+The installer offers all six skills and shows the detected AI clients. Select the clients you already use and choose the skills you want; they retain their unnamespaced names, such as `/a1-editor`, in clients that expose slash invocation.
 
 </details>
 
@@ -232,6 +253,7 @@ npx skills@latest remove \
   a1-grill \
   a1-humanize \
   a1-marketing-context \
+  a1-psy \
   --global \
   --yes
 ```
@@ -249,6 +271,7 @@ npx skills@latest update \
   a1-grill \
   a1-humanize \
   a1-marketing-context \
+  a1-psy \
   --global \
   --yes
 ```
