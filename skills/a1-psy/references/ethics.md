@@ -38,3 +38,21 @@ Continue with the safe, transparent version unless the user explicitly changes t
 ## Non-negotiable truthfulness boundary
 
 Never invent or imply facts that are not true: availability, deadlines, inventory, popularity, reviews, customer counts, authority, comparisons, product capability, research, effect size, consent, or user choice. Do not recommend hiding material conditions or making decline/cancellation harder to find.
+
+## Pricing and payment warning
+
+When a pricing or payment proposal involves deception, hidden fees, a false
+reference/comparator, or coercive payment pressure, give a **two-axis
+warning** even if another model is being discussed:
+
+1. **Truthfulness axis:** identify the inaccurate or omitted price, comparator,
+   payment term, renewal, fee, or condition.
+2. **Payment-autonomy axis:** identify pressure, reduced ability to compare,
+   overspending/debt risk, or an asymmetric cancellation/refund path.
+
+Then continue with a truthful alternative: disclose the total price and timing,
+use only verifiable comparators with their source/period, keep payment and exit
+terms equally clear, and test the transparent version. Include price
+comprehension, trust, refunds/cancellation, and durable behavior as
+countermetrics alongside revenue or margin. Do not call an offer free when a
+material payment, data cost, renewal, or unavoidable fee remains.

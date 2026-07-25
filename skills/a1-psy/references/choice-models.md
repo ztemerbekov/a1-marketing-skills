@@ -154,3 +154,161 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 - **Distinguish from:** changed economics, omitted terms, loss aversion, anchoring, and manipulation through ambiguity. If the meaning changes, this is not a clean framing test.
 - **Useful test:** test matched, plain-language frames with equal facts and disclosure; compare selection, comprehension, confidence, and downstream outcomes. A difference without comprehension preservation is not a clean win.
 - **Applicability limit:** framing is a family of effects, not one universal mechanism.
+
+## Pricing and valuation model cards
+
+Route these cards only when the actual price/reference/payment experience,
+outcome, and horizon match the card. The [evidence ledger](evidence-ledger.md)
+owns grades, sources, and evidence limits. Revenue, a price ending, a plan, or
+a payment method alone does not select a card.
+
+## M07 — Endowment effect
+
+- **Tier:** core.
+- **Mechanism:** genuine ownership or entitlement changes valuation or exchange
+  relative to an otherwise comparable non-ownership state.
+- **Diagnostic signals:** assigned credible ownership/entitlement, an identical
+  good or right, symmetric exchange terms, and an ownership-linked change in
+  WTA, WTP, retention, or exchange.
+- **Distinguish from:** loss aversion, status quo, sunk cost, IKEA effect,
+  switching friction, and a generic WTA–WTP gap. Ownership is required; a
+  reluctance to pay or switch is insufficient.
+- **Useful test:** randomize true temporary ownership versus neutral hold/no
+  ownership with the same instructions and exit terms; measure exchange or
+  incentive-compatible valuation, comprehension, regret, coercion, returns,
+  and later behavior. No asymmetry after procedure controls falsifies it.
+- **Applicability limit:** procedure, market experience, attachment, good type,
+  and stakes can change or erase the result; do not manufacture ownership or
+  trap a user in a trial.
+
+## M10 — Present bias / temporal discounting
+
+- **Tier:** core.
+- **Mechanism:** an immediate outcome receives extra decision weight relative
+  to future outcomes, producing a dynamic preference reversal; temporal
+  discounting is the broader family.
+- **Diagnostic signals:** equivalent sooner/later trade-offs are measured at
+  two times and choice shifts when one outcome becomes immediate.
+- **Distinguish from:** ordinary impatience, liquidity constraints, uncertainty,
+  transaction costs, procrastination, and a delayed charge. A payment due later
+  is not itself present-bias evidence.
+- **Useful test:** ask the same incentivized trade-off ex ante and when one
+  outcome is immediate; measure reversal and voluntary commitment. Track
+  completion, cancellation, regret, debt/affordability, trust, and durable
+  behavior. No systematic reversal falsifies it.
+- **Applicability limit:** money, effort, consumption, domain, and elicitation
+  differ; do not use delayed harms or auto-renewal to exploit a possible bias.
+
+## M19 — Mental accounting
+
+- **Tier:** core.
+- **Mechanism:** people label, budget, bracket, or evaluate transactions in
+  mental accounts that make otherwise fungible money non-fungible.
+- **Diagnostic signals:** a budget/label/account or transaction framing changes
+  a financial choice despite equal total economics; the relevant account is
+  measured or manipulated.
+- **Distinguish from:** framing, sunk cost, loss aversion, pain of paying, and
+  ordinary affordability. A price label without a changed account is not
+  enough.
+- **Useful test:** randomize a truthful, equally complete budget or transaction
+  presentation; measure account perception and choice, then revenue/margin,
+  comprehension, regret, refunds, cancellation, trust, and durable use. No
+  account change or no incremental choice change falsifies it.
+- **Applicability limit:** scenarios, income context, culture, and specific
+  accounting operation matter; do not partition or hide a price to obscure its
+  total.
+
+## N15 — Reference price
+
+- **Tier:** core.
+- **Mechanism:** an internal remembered/expected price or an external displayed
+  price becomes a comparison standard for price judgment and transaction value.
+- **Diagnostic signals:** a credible, measured internal standard or a verified
+  external comparator changes price judgment or choice.
+- **Distinguish from:** anchoring, a false crossed-out price, discount language,
+  price–quality inference, and generic price salience. A comparator without
+  provenance is not a reference-price manipulation.
+- **Useful test:** randomize a truthful, verifiable price-history or comparison
+  disclosure; measure the recalled/expected reference before choice, then WTP
+  or selection. Track comprehension, affordability, regret, complaints,
+  refunds/cancellation, trust, and margin. No reference change, or a result
+  explained by quality information, falsifies it.
+- **Applicability limit:** reference formation adapts with price history,
+  promotion frequency, expertise, and horizon; high-stakes comparisons need an
+  auditable source and period.
+
+## N16 — Pain of paying
+
+- **Tier:** core.
+- **Mechanism:** immediate or anticipated negative affect when a person becomes
+  aware of losing financial resources at payment.
+- **Diagnostic signals:** a transparent payment-coupling/salience manipulation
+  changes measured payment affect or awareness before the spending outcome.
+- **Distinguish from:** cashless effect, payment method, price sensitivity,
+  frugality, mental accounting, and convenience. A card, installment, or
+  payment-method effect never proves pain as the mediator.
+- **Useful test:** randomize an equally convenient, fully disclosed payment
+  display and measure payment affect before actual spend; test temporal
+  mediation. Track overspending/debt, comprehension, regret, refunds,
+  cancellation, trust, and durable behavior. Spend without changed pain, or
+  changed pain without its predicted role, falsifies it.
+- **Applicability limit:** payment data, credit exposure, B2B expense accounts,
+  repeat use, and high stakes require safeguards; never decouple a user from
+  the total, fees, renewal, or exit terms.
+
+## M09 — Zero-price effect
+
+- **Tier:** child.
+- **Mechanism:** demand changes discontinuously when a very-low positive total
+  price becomes a true zero, beyond a smooth price response.
+- **Diagnostic signals:** a zero total relevant price, a very-low positive
+  comparator, identical quality/information, and equal incidental and future
+  costs; uptake and use are measured separately.
+- **Distinguish from:** ordinary elasticity, freemium, gift/reciprocity,
+  transaction friction, and price–quality inference. A hidden fee, required
+  paid renewal, data cost, or 1-unit price is not zero.
+- **Useful test:** compare true 0 with a minimal real price under identical full
+  disclosure; measure uptake and total/quality of use. Track activation,
+  support burden, retention, refunds/cancellation, trust, and margin. A smooth
+  response through zero or a preregistered reversed margin falsifies it.
+- **Applicability limit:** incidental costs, social norms, and extensive versus
+  intensive use can reverse the effect; never label a material-cost offer free.
+
+## M35 — Charm pricing / left-digit effect
+
+- **Tier:** child.
+- **Mechanism:** a price crossing a left-digit boundary (for example, 2.99
+  versus 3.00) can be encoded as lower by more than the nominal difference.
+- **Diagnostic signals:** the ending crosses the left digit, numerical distance
+  and currency are controlled, and price perception or choice is measured.
+- **Distinguish from:** any 9-ending, discounting, reference price, anchoring,
+  and rounded-price fluency. A 9-ending that does not cross a left digit does
+  not establish this model.
+- **Useful test:** randomize economically comparable left-digit crossing and
+  non-crossing pairs; measure perception, completed purchase, and contribution
+  margin. Track quality inference, returns, support, trust, and repeat choice.
+  No crossing interaction, or a gross lift erased by margin/returns, falsifies
+  it.
+- **Applicability limit:** perception does not guarantee purchase or revenue;
+  effects are sensitive to involvement, expertise, premium positioning, and
+  bias correction.
+
+## N17 — Price–quality inference
+
+- **Tier:** core.
+- **Mechanism:** under quality uncertainty, people use price as an extrinsic
+  cue to infer quality before direct experience.
+- **Diagnostic signals:** price is varied independently of an identical
+  offering; perceived quality is measured before experience and should be more
+  responsive when diagnostic intrinsic information is weak.
+- **Distinguish from:** actual price–quality correlation, prestige/status,
+  signaling equilibrium, reference price, and a higher-price revenue result.
+  Premium language or a price increase alone is not evidence.
+- **Useful test:** randomize price while keeping the offering and diagnostic
+  evidence constant; measure pre-use quality belief, choice, and experienced
+  quality later. Track affordability, expectation gap, returns/refunds,
+  cancellation, trust, margin, and durable behavior. No cue under uncertainty,
+  or an unexplained persistence after identical experience, falsifies it.
+- **Applicability limit:** category, expertise, quality observability,
+  information, and actual price-quality ecology matter; do not imply quality
+  that the product cannot substantiate.

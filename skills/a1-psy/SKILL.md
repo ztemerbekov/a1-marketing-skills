@@ -38,6 +38,10 @@ Localize the notice when the user is not writing Russian. A metric decline by it
 4. Before proposing an intervention, read [ethics](references/ethics.md).
 5. Produce the response contract from the diagnostic spine. Do not invoke more models simply to appear comprehensive.
 
+### Pricing routing
+
+Price, a plan card, a payment button, or a changed number is not enough to select a pricing model. Read the relevant [choice-model card](references/choice-models.md) and route only when its required actual manipulation/reference, payment or choice experience, outcome, and horizon match. Otherwise retain no primary hypothesis and name the smallest missing observation. Use a child model as primary only when it is the narrowest best-supported match; price perception, revenue change, or payment method never warrants hard-coded model selection.
+
 ## Response contract
 
 For a diagnosis, include:
