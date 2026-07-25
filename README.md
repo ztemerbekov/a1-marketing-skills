@@ -96,32 +96,20 @@ You can start an update in two ways:
 
 **Try:**
 
-**Full review**
+Context can be updated as a whole or with individual confirmed sections—just specify what to save and which source to use.
 
 > Analyze the attached files and record our Brand Voice, Customer Profiles, editorial policy, brand restrictions, and stop-word list in the context.
-
-**Audience and ICP**
-
+>
 > Record the target-audience profiles, segments, ICP (Ideal Customer Profile), and key pain points of B2B buyers from the presentation in the context.
-
-**Positioning and UVP**
-
+>
 > Add the brand positioning, UVP (value proposition), mission, and key themes from the file to the context.
-
-**Tone of Voice**
-
+>
 > Capture our Tone of Voice, communication character, layout principles, and examples of the brand voice in action in the context.
-
-**Editorial policy**
-
+>
 > Record the editorial policy, formatting rules, structure requirements, and rules for presenting numerical facts in the context.
-
-**Restrictions and taboos**
-
+>
 > Save the brand prohibitions, legal taboos, stop-word list, and rules for mentioning competitors’ products in the context.
-
-**Products and offers**
-
+>
 > Record the key products, their features translated into customer benefits, and the main offers for the current campaign in the context.
 
 Read the [full Marketing Context behavior](./skills/a1-marketing-context/SKILL.md).
