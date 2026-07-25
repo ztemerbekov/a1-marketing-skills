@@ -1,4 +1,4 @@
 interface:
   display_name: "A1 Psychology"
-  short_description: "Evidence-bounded choice-architecture diagnosis"
-  default_prompt: "Use $a1-psy to diagnose a choice-architecture change with testable psychological hypotheses."
+  short_description: "Evidence-bounded choice and social-influence diagnosis"
+  default_prompt: "Use $a1-psy to diagnose a marketing choice or social-influence outcome with testable psychological hypotheses."
