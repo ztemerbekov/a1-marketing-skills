@@ -38,6 +38,7 @@ Localize the notice when the user is not writing Russian. A metric decline by it
 4. Read [the evidence ledger](references/evidence-ledger.md) for every diagnosis and every named-model explanation that needs its limitation or evidence status.
 5. Before proposing an intervention, read [ethics](references/ethics.md).
 6. Produce the response contract from the diagnostic spine. Do not invoke more models simply to appear comprehensive.
+   For social questions, also read [social-influence models](references/social-influence-models.md). Preserve the source, reference group, baseline, public/private context, and outcome of any social-evidence claim.
 
 ### Pricing routing
 

@@ -7,15 +7,20 @@ The user keeps the final ethical choice. This skill identifies behavioral risk, 
 For every proposed intervention, assign:
 
 - **Severity:** `LOW`, `MODERATE`, or `HIGH`.
-- **Flags:** zero or more of `deception`, `false-scarcity`, `fabricated-proof`, `obstructed-exit`, `vulnerability`, `privacy`, `compulsion`.
+- **Flags:** zero or more of `deception`, `false-scarcity`, `fabricated-proof`,
+  `ambiguous-source`, `obstructed-exit`, `vulnerability`, `privacy`,
+  `profiling`, `exclusion`, `coercion`, `compulsion`.
 
-Show the assessment for every intervention. For `LOW` with no flags, one compact line is enough: `Ethics assessment: LOW; flags: none.` For `MODERATE` or `HIGH`, show the full warning below.
+Show the assessment for every intervention. For `LOW` with no flags, one compact line is enough: `Ethics assessment: LOW; flags: none.` For `MODERATE` or `HIGH`, show the full warning below. Source ambiguity is a material omission when a social-evidence or authority claim lacks a reference group, provenance, baseline, or domain relevance; do not fill it with a generic popularity claim.
 
 ## How to determine severity
 
 - **LOW:** transparent and reversible choice support; users can understand, refuse, and undo it without meaningful penalty.
 - **MODERATE:** materially steers a decision or has a plausible downside, but terms and exit remain clear.
-- **HIGH:** relies on deception, hides a material term or exit, exploits a vulnerable state, uses data beyond reasonable expectation, creates compulsive pressure, or makes leaving materially harder than joining.
+- **HIGH:** relies on deception, hides a material term or exit, exploits a
+  vulnerable state, profiles sensitive susceptibility, excludes or punishes
+  refusal, uses data beyond reasonable expectation, creates compulsive
+  pressure, or coerces through status or social sanctions.
 
 ## Warning format
 
@@ -56,3 +61,5 @@ terms equally clear, and test the transparent version. Include price
 comprehension, trust, refunds/cancellation, and durable behavior as
 countermetrics alongside revenue or margin. Do not call an offer free when a
 material payment, data cost, renewal, or unavoidable fee remains.
+
+Never recommend hidden debt; inferring a sensitive identity or vulnerability; excluding, shaming, or penalizing a person for declining; hiding material conditions; or making decline/cancellation harder to find.
