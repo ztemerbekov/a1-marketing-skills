@@ -6,6 +6,8 @@
 
 A1 Marketing Skills helps marketers, founders, and writers work with AI agents in ordinary language. The collection can remember product context, pressure-test marketing decisions, improve existing copy, and clarify complex editorial assignments.
 
+> **Repository social preview:** upload [`assets/repository-social-preview.png`](./assets/repository-social-preview.png) in the repository’s GitHub **Settings → Social preview**. The image is designed at 1280×640 px with a 40 px safe area.
+
 ## Contents
 
 - [Start here](#start-here)
