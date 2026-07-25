@@ -68,18 +68,15 @@ The shortest path to a useful result is a global install followed by an Editor r
 
 3. Open the project that contains your draft in the selected agent. Editor can start from an ordinary-language request:
 
-   ```text
-   Make this paragraph clearer and shorter. Keep every fact and do not add new claims.
-   Return only the edited text:
-
-   [paste your draft]
-   ```
+   > Make this paragraph clearer and shorter. Keep every fact and do not add new claims.
+   >
+   > Return only the edited text:
+   >
+   > `[paste your draft]`
 
 4. For repeated work in one repository, add shared context:
 
-   ```text
-   Set up marketing context from confirmed information in this repository.
-   ```
+   > Set up marketing context from confirmed information in this repository.
 
    This explicit request creates or updates `.agents/marketing-context.md`. Installation alone never creates the file.
 
@@ -94,9 +91,7 @@ An ordinary save or update request uses Auto-draft. An interview starts only whe
 
 **Try:**
 
-```text
-Record our Tone of Voice (attached file) and target audience (second file) in the marketing context.
-```
+> Record our Tone of Voice (attached file) and target audience (second file) in the marketing context.
 
 Read the [full Marketing Context behavior](./skills/a1-marketing-context/SKILL.md).
 
@@ -111,10 +106,9 @@ After you confirm shared understanding, Grill returns the decision, its rational
 
 **Try:**
 
-```text
-/a1-grill We have an idea to launch a Telegram channel to attract B2B leads to our service.
-Help us break down the hypothesis and show where the weak points and blind spots are.
-```
+> `/a1-grill` We have an idea to launch a Telegram channel to attract B2B leads to our service.
+>
+> Help us break down the hypothesis and show where the weak points and blind spots are.
 
 Read the [full A1 Grill behavior](./skills/a1-grill/SKILL.md).
 
@@ -129,12 +123,11 @@ Missing audience, channel, goal, or Marketing Context does not block a safe edit
 
 **Try:**
 
-```text
-/a1-editor
-Edit this in Ilyakhov’s style and keep it to three paragraphs:
-
-[paste your draft]
-```
+> `/a1-editor`
+>
+> Edit this in Ilyakhov’s style and keep it to three paragraphs:
+>
+> `[paste your draft]`
 
 Read the [full Editor behavior](./skills/a1-editor/SKILL.md).
 
@@ -149,12 +142,11 @@ It never reads or overwrites project files. A request that combines humanization
 
 **Try:**
 
-```text
-/a1-humanize
-Humanize this text and break up the AI-generated rhythm:
-
-[paste your text]
-```
+> `/a1-humanize`
+>
+> Humanize this text and break up the AI-generated rhythm:
+>
+> `[paste your text]`
 
 Read the [full Humanize behavior](./skills/a1-humanize/SKILL.md).
 
@@ -169,12 +161,11 @@ Use it when approved strategy already exists but reader focus, message emphasis,
 
 **Try:**
 
-```text
-/a1-editor-in-chief
-Review the draft. Find the strongest angle for marketing directors and rewrite the text for that purpose.
-
-[paste your draft]
-```
+> `/a1-editor-in-chief`
+>
+> Review the draft. Find the strongest angle for marketing directors and rewrite the text for that purpose.
+>
+> `[paste your draft]`
 
 Read the [full Editor in Chief behavior](./skills/a1-editor-in-chief/SKILL.md).
 
