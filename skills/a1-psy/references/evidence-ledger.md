@@ -292,3 +292,20 @@ Price may act as a quality cue under uncertainty; it is not evidence that
 charging more improves actual quality, demand, or revenue. Category, expertise,
 intrinsic diagnostic information, product familiarity, geography, design, and
 era moderate the inference; no local effect size is claimed.
+
+## Support positions
+
+Support positions are not local causal forecasts. `U` means no single effect grade applies because the position is a regularity, taxonomy, intervention dimension, or formal framework rather than one intervention mechanism.
+
+- **M01 Correspondence Bias / FAE (B):** Gilbert & Malone (1995), [DOI](https://doi.org/10.1037/0033-2909.117.1.21). Attribution error is distinct from situation-sensitive explanation.
+- **M23 Commitment and Consistency (B):** Lokhorst et al. (2013), [DOI](https://doi.org/10.1177/0013916511411477); Baca-Motes et al. (2013), [DOI](https://doi.org/10.1086/667226). Operations are heterogeneous and should not be collapsed.
+- **M37 Hick–Hyman Law (B):** Hick (1952), [DOI](https://doi.org/10.1080/17470215208416600); Proctor & Schneider (2018), [DOI](https://doi.org/10.1080/17470218.2017.1322622). Evidence concerns constrained choice reaction time, not conversion.
+- **M38 Nudge / Choice Architecture (B):** Mertens et al. (2022), [DOI](https://doi.org/10.1073/pnas.2107346118), with [correction](https://doi.org/10.1073/pnas.2204059119); DellaVigna & Linos (2022), [DOI](https://doi.org/10.3982/ecta18709). Heterogeneous intervention class; publication-bias and scale concerns remain.
+- **M41 COM-B (B):** Michie et al. (2011), [DOI](https://doi.org/10.1186/1748-5908-6-42); Keyworth et al. (2020), [DOI](https://doi.org/10.1111/bjhp.12417). Framework and measures are not causal intervention proof.
+- **M42 Survivorship Bias (A):** Mangel & Samaniego (1984), [DOI](https://doi.org/10.1080/01621459.1984.10478038); Hernán et al. (2004), [DOI](https://doi.org/10.1097/01.ede.0000135174.63482.43); Elwert & Winship (2014), [DOI](https://doi.org/10.1146/annurev-soc-071913-043455). Selection/collider structure determines the bias.
+- **N02 Intention–Behavior Gap (U):** Webb & Sheeran (2006), [DOI](https://doi.org/10.1037/0033-2909.132.2.249). It describes incomplete translation, not a mechanism.
+- **N14 Reference-Dependent Choice (U):** Kahneman & Tversky (1979), [DOI](https://doi.org/10.2307/1914185). Theory family; use narrower reference operations.
+- **N21 Implementation Friction (U):** intervention dimension, intentionally without one traceable effect source because time, search, money, motor, uncertainty, and cognitive-cost frictions have distinct operations and evidence bases. Name the subtype and cite its active model or direct evidence; never report a generic friction effect.
+- **N23 Signaling Theory (B):** Spence (1973), [DOI](https://doi.org/10.2307/1882010); Connelly et al. (2010), [DOI](https://doi.org/10.1177/0149206310388419). Separating conditions and mimicry costs are often untested locally.
+- **N25 Theory of Planned Behavior (B):** Ajzen (1991), [DOI](https://doi.org/10.1016/0749-5978(91)90020-T); Armitage & Conner (2001), [DOI](https://doi.org/10.1348/014466601164939). Prediction does not establish intervention causality.
+- **N26 Elaboration Likelihood Model (B):** Carpenter (2014), [DOI](https://doi.org/10.1111/hcre.12054); Kitchen et al. (2014), [DOI](https://doi.org/10.1108/ejm-12-2011-0776). Processing routes and behavior transfer require direct measurement.
