@@ -142,9 +142,11 @@ Read the [full A1 Grill behavior](./skills/a1-grill/SKILL.md).
 
 <br>
 
-Editor starts when you provide editable text and an editing intent. It can shorten, clarify, strengthen, restructure, repair grammar, or apply information style while preserving traceable facts, claims, qualifications, numbers, and useful voice.
+**Editor** starts when you need to polish any finished text. It can easily cut the fluff, clarify the meaning, tune the style, or rewrite the whole thing in Ilyakhov’s information style. All facts, numbers, and your distinctive voice stay intact—it invents nothing and loses nothing.
 
-Missing audience, channel, goal, or Marketing Context does not block a safe edit. Requests to create positioning, an offer, an audience, campaign messaging, or another strategic decision stop at the editing boundary.
+It does not need a detailed explanation of the audience, channel, or goal—it can still produce a strong edit.
+
+*Limitations:* Editor only works with text. If you need to create positioning, an offer, or a campaign strategy from scratch, that is a job for other skills.
 
 **Try:**
 
