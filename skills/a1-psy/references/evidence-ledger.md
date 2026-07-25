@@ -1,4 +1,4 @@
-# Evidence ledger: choice diagnosis
+# Evidence ledger
 
 Evidence grades are operational confidence labels for this skill: **A** has strong synthesis and/or robust foundational evidence; **B** has useful evidence with meaningful limits or heterogeneous synthesis; **C** is conceptually relevant but especially contested or context-sensitive. None implies a local causal result or a promised effect size.
 
@@ -53,3 +53,58 @@ Transport to ordinary product settings is uncertain; verify asymmetric dominance
 - Kühberger (1998), meta-analysis, [DOI](https://doi.org/10.1006/obhd.1998.2781).
 
 Framing effects have documented boundary conditions; maintain factual equivalence and check comprehension.
+
+## M02 — Mere Exposure Effect (A)
+
+- Zajonc (1968), foundational experiments, [DOI](https://doi.org/10.1037/h0025848).
+- Bornstein (1989), meta-analysis of 208 experiments, [DOI](https://doi.org/10.1037/0033-2909.106.2.265).
+- Montoya et al. (2017), meta-analysis of 268 exposure curves from 81 articles, [DOI](https://doi.org/10.1037/bul0000085).
+
+Evidence supports a moderated, nonlinear exposure–liking pattern. Recognition, familiarity, liking, purchase, and retention are distinct outcomes; dose, modality, and wear-out constrain local inference.
+
+## M03 — Availability Heuristic (B)
+
+- Tversky & Kahneman (1973), foundational retrievability account, [DOI](https://doi.org/10.1016/0010-0285(73)90033-9).
+- Schwarz et al. (1991), retrieval-ease experiments, [DOI](https://doi.org/10.1037/0022-3514.61.2.195).
+- Weingarten & Hutchinson (2018), meta-analysis of 263 studies and 582 effects, [DOI](https://doi.org/10.1037/bul0000122).
+- Folkes (1988), consumer perceived-risk experiments, [DOI](https://doi.org/10.1086/209141).
+
+Evidence is strongest for specific retrieval-ease and judgment paradigms. It does not let vividness or salience alone establish the operation, and laboratory judgments need local transport testing.
+
+## M04 — Confirmation Bias (B)
+
+- Nickerson (1998), taxonomy review, [DOI](https://doi.org/10.1037/1089-2680.2.2.175).
+- Klayman & Ha (1987), positive-test strategy boundary, [DOI](https://doi.org/10.1037/0033-295X.94.2.211).
+- Hart et al. (2009), meta-analysis of 91 studies, [DOI](https://doi.org/10.1037/a0015701).
+
+Selective exposure has evidence with moderators, but it is one subcomponent. The umbrella label requires a measured prior belief and a specified evidence-selection, search, or interpretation operation.
+
+## N08 — Processing Fluency (B)
+
+- Alter & Oppenheimer (2009), review, [DOI](https://doi.org/10.1177/1088868309341564).
+- Unkelbach (2007), learned reversal of the fluency–truth relation, [DOI](https://doi.org/10.1037/0278-7393.33.1.219).
+
+Fluency effects depend on subtype, attribution, learned diagnosticity, and actual legibility. Ease is not a universal signal of truth, quality, or persuasion; a laboratory judgment is not a purchase forecast.
+
+## N20 — Affect Heuristic (B)
+
+- Finucane et al. (2000), risk–benefit judgments, [DOI](https://doi.org/10.1002/(SICI)1099-0771(200001/03)13:1%3C1::AID-BDM333%3E3.0.CO;2-S).
+- Slovic et al. (2007), review, [DOI](https://doi.org/10.1016/j.ejor.2005.04.006).
+- Efendić et al. (2022), replication and extension, [DOI](https://doi.org/10.1177/19485506211056761).
+
+The evidence concerns affective risk–benefit judgment. Integral affect, incidental mood, and discrete emotions require separate operations; do not transfer a valence judgment directly to purchase or retention.
+
+## M15 — Peak–End Effect (B)
+
+- Kahneman et al. (1993), retrospective episode-choice experiment, [DOI](https://doi.org/10.1111/j.1467-9280.1993.tb00589.x).
+- Alaybek et al. (2022), meta-analysis, [DOI](https://doi.org/10.1016/j.obhdp.2022.104149), with [corrigendum](https://doi.org/10.1016/j.obhdp.2023.104278).
+
+The corrected synthesis remains heterogeneous. Peak–end and duration neglect concern retrospective evaluation under particular designs; average experience can also predict outcomes, and experience measures do not establish purchase or retention effects.
+
+## M18 — Curse of Knowledge (B)
+
+- Camerer, Loewenstein & Weber (1989), economic experiments, [DOI](https://doi.org/10.1086/261651).
+- Hinds (1999), expert prediction of novice performance, [DOI](https://doi.org/10.1037/1076-898X.5.2.205).
+- Damen et al. (2021), feedback and perspective-taking, [DOI](https://doi.org/10.1177/1747021820987080).
+
+Evidence supports privileged-knowledge prediction error in particular task families, but there is no dedicated meta-analysis for the broad construct. Expert–novice asymmetry and prediction-versus-observed-novice performance are required for a local diagnosis.
