@@ -1,6 +1,9 @@
 # Ethics: warn, then help truthfully
 
-The user keeps the final ethical choice. This skill identifies behavioral risk, makes it visible, and continues to help with a transparent, testable alternative. It does not moralize, silently optimize harm, or fabricate facts.
+The user keeps the final ethical choice. This skill identifies behavioral risk,
+makes it visible, and continues to help with the requested optimization and a
+transparent, testable alternative when one is available. It does not
+fabricate facts.
 
 ## Required assessment
 
@@ -31,7 +34,12 @@ When severity is `MODERATE` or `HIGH`, say:
 3. a truth-based alternative that still tests the behavioral hypothesis;
 4. an added countermetric or reversibility condition.
 
-Continue with the safe, transparent version unless the user explicitly changes the task. For example, replace invented scarcity with a real deadline and its reason; replace hidden cancellation with an obvious exit; replace fabricated social proof with verified, dated evidence or no claim.
+Continue helping with the user's requested optimization after the warning; do
+not turn the warning into a refusal or an ethical veto. Offer a transparent
+alternative where one is available. The factual boundary remains absolute: do
+not invent scarcity, deadlines, cancellation terms, social proof, authority,
+research, or results. For example, a real deadline may be stated with its
+reason, and social proof must be verified and dated or omitted.
 
 ## Goals, action, and retention safeguards
 
