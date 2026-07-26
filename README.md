@@ -1,194 +1,239 @@
-![A1 Marketing Skills](./assets/marketing-skills-evolution.png)
-
-<h1><img src="./assets/a1-logo.svg" alt="A1 logo" width="46"> Marketing Skills</h1>
+<h1><img src="./assets/a1-logo.svg" alt="A1" width="42"> Marketing Skills</h1>
 
 **English** | [Русский](./README.ru.md)
 
-A1 Marketing Skills helps marketers, founders, and writers work with AI agents in ordinary language. The collection can remember product context, pressure-test marketing decisions, improve existing copy, and clarify complex editorial assignments.
+**Hand over the routine to AI agents—freeing marketing teams to focus on strategy, vision, and growth-driving decisions.**
+
+A1 Marketing Skills is a collection of Agent Skills built for the whole marketing team. It draws a clear line between execution and decision-making: agents take on repeatable operational work, while marketers keep expert control, clear focus, and ownership of growth decisions.
+
+---
+
+## What agents can already do
+
+The collection combines two connected packages for marketing context, decisions, and copy with a standalone consumer psychology skill.
+
+### A1 Core — Context and decisions
+
+1. **Marketing Context** (`/a1-marketing-context`) stores the team's confirmed marketing context in `.agents/marketing-context.md`, so skills that use marketing context can work from real inputs instead of inventing them.
+2. **Grill** (`/a1-grill`) pressure-tests a marketing idea, decision, or plan through a constructive interview.
+
+### A1 Editorial — Editing and copy
+
+3. **Editor** (`/a1-editor`) improves existing drafts within supplied constraints and available Marketing Context while preserving source facts.
+4. **Editor in Chief** (`/a1-editor-in-chief`) sets editorial direction inside approved strategy, briefs Editor, and reviews the resulting edit.
+5. **Humanize** (`/a1-humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
+
+### Consumer Psychology
+
+6. **Consumer Psychology** (`/a1-psy`) audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
+
+## Working principles
+
+- **One marketing context.** Saved, confirmed team inputs live in `.agents/marketing-context.md`, giving context-aware workflows one shared source instead of made-up inputs.
+- **Source fidelity.** The editorial skills preserve facts, numbers, terms, qualifications, and authorial meaning without adding missing claims, proof, or strategy.
+
+---
+
+## See it in one minute
+
+Here is a complete context-to-edit loop:
+
+> **You:** Analyze the files in project folder X and build a basic marketing context from them.
+>
+> **Result:** The agent extracts the positioning, target audience, and brand rules and records them in `.agents/marketing-context.md` so that every later skill invocation automatically uses the context and you do not need to provide the inputs again.
+>
+> **You:** Edit this in Ilyakhov’s style and rewrite it so it sounds human—the AI writing is obvious:
+>
+> `[paste your draft]`
+>
+> **Result:** Clean, finished copy in the brand’s Tone of Voice without fluff or AI clichés, rewritten according to the principles of “Write, Cut.”
+
+---
 
 ## Contents
 
-- [Start here](#start-here)
-- [Choose a skill](#choose-a-skill)
+- [Quick start](#quick-start)
 - [Meet the skills](#meet-the-skills)
-- [Install](#install)
-- [Update](#update)
+- [Other installation options](#other-installation-options)
+- [Update or remove](#update-or-remove)
 - [Help and feedback](#help-and-feedback)
 
-## Start here
+## Quick start
 
-```bash
-npx skills@latest add ztemerbekov/a1-marketing-skills -g
-```
+The shortest path to a useful result is a global install followed by an Editor request.
 
-## Choose a skill
+1. Open a terminal and install the collection:
 
-If this is your first time using A1 Marketing Skills, start with [Marketing Context](skills/a1-marketing-context/). It saves product information that the other skills can reuse.
+   ```bash
+   npx skills@latest add ztemerbekov/a1-marketing-skills -g
+   ```
 
-| Skill | Best for |
-|-------|----------|
-| [A1 Grill](skills/a1-grill/)<br>`a1-grill` | Sharpen a marketing idea, decision, or plan through constructive questioning before execution. |
-| [Editor](skills/a1-editor/)<br>`a1-editor` | Improve existing text: shorten, clarify, strengthen, or restructure it without inventing facts. |
-| [Editor in Chief](skills/a1-editor-in-chief/)<br>`a1-editor-in-chief` | Turning a confirmed editorial assignment into a reviewed edit without creating general marketing strategy. |
-| [Humanize](skills/a1-humanize/)<br>`a1-humanize` | Remove recognizable AI-writing patterns from supplied copy without inventing facts or flattening its voice. |
-| [Marketing Context](skills/a1-marketing-context/)<br>`a1-marketing-context` | Creating or incrementally updating one repository-local context from confirmed marketing information. |
-| [A1 Psychology](skills/a1-psy/)<br>`a1-psy` | Diagnose choice-architecture hypotheses behind a marketing choice or related metric change, then design a truthful test. |
+2. When the installer asks, choose the AI agents you already use and select `a1-editor` or any other skills you want.
 
-Use this quick rule:
+3. Open the project that contains your draft in the selected agent. Editor can start from an ordinary-language request:
 
-- Have a marketing idea, decision, or plan that still needs pressure-testing? Explicitly invoke **A1 Grill**.
-- Want the current repository to remember confirmed product, audience, voice, or proof for future work? Explicitly ask **Marketing Context** to save or update it.
-- Already have text and know what should change? Use **Editor**.
-- Want to remove recognizable AI-writing patterns from existing copy? Use **Humanize**.
-- Have confirmed product and marketing inputs, but need to decide the editorial reader focus, message emphasis, angle, structure, or voice? Explicitly invoke **Editor in Chief**.
-- Need an evidence-bounded explanation of a choice-architecture change or related metric? Use **A1 Psychology**.
+   > Make this paragraph clearer and shorter. Keep every fact and do not add new claims.
+   >
+   > Return only the edited text:
+   >
+   > `[paste your draft]`
 
-Marketing Context is useful for repeated work, but A1 Grill and Editor can work from current material without it. A1 Grill asks before reading an existing context.
+4. For repeated work in one repository, add shared context:
+
+   > Set up marketing context from confirmed information in this repository.
+
+   This explicit request creates or updates `.agents/marketing-context.md`. Installation alone never creates the file.
 
 ## Meet the skills
 
 <details>
-<summary><strong>A1 Grill</strong></summary>
+<summary><strong>Marketing Context — keep confirmed information reusable</strong></summary>
 
-**What it does:** constructively pressure-tests one marketing idea, decision, or plan through an adaptive decision tree. Each turn gives one concrete recommendation and asks one question. The session ends only after you confirm shared understanding, then returns a concise decision summary.
+<br>
 
-**Use it when:** you want to sharpen positioning, an audience choice, an offer, pricing, messaging, a channel, campaign, funnel, retention decision, or marketing measurement before anyone executes it. Invoke `a1-grill` explicitly; ordinary marketing discussion does not start the interview.
+Marketing Context creates or incrementally updates `.agents/marketing-context.md`—a single source of confirmed inputs about your brand for future tasks.
 
-Questions and recommendations use your instruction language, and summary labels are localized naturally in it. Supplied quotations, product names, and explicit terms stay in their original language unless you request translation.
+You can start an update in two ways:
+
+- **Ordinary request or command:** the skill collects confirmed facts from the supplied documents and builds the context.
+- **Step-by-step interview:** if the files do not contain enough information, ask the skill to ask questions. It starts a short conversation, asks one question at a time, and saves confirmed progress after each answer.
 
 **Try:**
 
-```text
-Use a1-grill. Grill this idea one decision at a time: launch a Telegram channel to generate qualified leads for our marketplace analytics service.
-```
+Context can be updated as a whole or with individual confirmed sections—just specify what to save and which source to use.
 
-A1 Grill derives the questions from the active decision instead of running a fixed marketing checklist. It examines supplied materials and readily available facts, asks permission before reading an existing `.agents/marketing-context.md`, and lets you stop with a clearly partial summary. It does not execute the decision, create marketing materials, or conduct full market research.
+> Analyze the attached files and record our Brand Voice, Customer Profiles, editorial policy, brand restrictions, and stop-word list in the context.
+>
+> Record the target-audience profiles, segments, ICP (Ideal Customer Profile), and key pain points of B2B buyers from the presentation in the context.
+>
+> Add the brand positioning, UVP (value proposition), mission, and key themes from the file to the context.
+>
+> Capture our Tone of Voice, communication character, layout principles, and examples of the brand voice in action in the context.
+>
+> Record the editorial policy, formatting rules, structure requirements, and rules for presenting numerical facts in the context.
+>
+> Save the brand prohibitions, legal taboos, stop-word list, and rules for mentioning competitors’ products in the context.
+>
+> Record the key products, their features translated into customer benefits, and the main offers for the current campaign in the context.
+
+Read the [full Marketing Context behavior](./skills/a1-marketing-context/SKILL.md).
 
 </details>
 
 <details>
-<summary><strong>Marketing Context</strong></summary>
+<summary><strong>A1 Grill — pressure-test a decision before acting</strong></summary>
 
-**What it does:** creates or incrementally updates one shared `.agents/marketing-context.md` in the current repository. Auto-draft records only confirmed user information and direct facts from authoritative project material. A one-section partial context is valid; unrelated additions survive later updates.
+<br>
 
-**Use it when:** you explicitly want the repository to remember or update approved product facts, audience, positioning, voice, proof, terminology, examples, or goals.
+A1 Grill is a tough but constructive review of a marketing idea or plan. No hand-holding or fluff, but no toxicity or passive aggression either—like a direct conversation with a colleague.
+
+Each step brings one clear recommendation and one precise question. The skill analyzes the decision deeply instead of following a checklist.
+
+What you get: A1 Grill returns an actionable decision, surfaces risks and assumptions, and gives you one concrete next step.
 
 **Try:**
 
-```text
-Set up marketing context from confirmed information in this repository.
+> `/a1-grill`
+>
+> We have an idea to launch a Telegram channel to attract B2B leads to our service. Help us break down the hypothesis and show where the weak points and blind spots are.
 
-Remember our approved tone of voice: practical, calm, and direct.
-
-Update only the audience: marketplace operations managers.
-```
-
-For guided setup, ask naturally: “Interview me to set up marketing context.” Questions arrive one at a time, stop after at most seven in one pass, and confirmed partial progress is saved if you stop early.
-
-The context belongs only to the current repository: there is no global or private profile. Installation, opening a project, mentioning marketing, or another skill finding no context never causes a write. Marketing Context records completed facts and decisions; it does not create or evaluate hypotheses.
+Read the [full A1 Grill behavior](./skills/a1-grill/SKILL.md).
 
 </details>
 
 <details>
-<summary><strong>Editor</strong></summary>
+<summary><strong>Editor — improve existing copy without inventing facts</strong></summary>
 
-**What it does:** improves text you already have by shortening, clarifying, strengthening, or restructuring it. It also repairs grammar, grammatical government, and unnatural word combinations even when the source meaning remains understandable. It preserves facts, numbers, and your voice without adding new promises.
+<br>
 
-**Use it when:** the text already exists and you know what should change. Include the complete text and state any important constraints up front.
+**Editor** starts when you need to polish any finished text. It can easily cut the fluff, clarify the meaning, tune the style, or rewrite the whole thing in Ilyakhov’s information style. All facts, numbers, and your distinctive voice stay intact—it invents nothing and loses nothing.
 
-Marketing Context is useful for repeated work, but ordinary editing does not require it.
+It does not need a detailed explanation of the audience, channel, or goal—it can still produce a strong edit.
 
-Response headings and option labels are localized naturally in the language of your instruction, and explanations use that language. The edited copy keeps the source language unless you ask to translate it.
-
-If you explicitly request only the edited text, the response contains only that text: no headings, explanations, or support footer.
+*Limitations:* Editor only works with text. If you need to create positioning, an offer, or a campaign strategy from scratch, that is a job for other skills.
 
 **Try:**
 
-```text
-Make this landing-page section clearer and shorter. Keep every number and do not add new promises:
+> `/a1-editor`
+>
+> Edit this in Ilyakhov’s style and keep it to three paragraphs:
+>
+> `[paste your draft]`
 
-[your text]
-```
-
-For information-style editing, ask for it explicitly: “Edit this in information style” or “по Ильяхову.” A generic request such as “clean this up” keeps the standard, more conservative editing behavior.
-
-Requests to create or rethink positioning, an offer, an audience, campaign messaging, or a landing-page structure are outside Editor's text-editing boundary, and Editor in Chief does not create them either. When those strategic inputs are already approved and you want bounded editorial direction before execution, Editor can recommend that you explicitly invoke `a1-editor-in-chief`; it does not start the chief workflow automatically.
+Read the [full Editor behavior](./skills/a1-editor/SKILL.md).
 
 </details>
 
 <details>
-<summary><strong>Humanize</strong></summary>
+<summary><strong>Humanize — remove AI patterns without flattening the voice</strong></summary>
 
-**What it does:** removes recognizable AI-writing patterns from copy you already have while preserving its meaning, facts, language, and useful voice. It works in English, Russian, and other input languages; it does not add a personal reaction, a product claim, or other new content.
+<br>
 
-**Use it when:** you explicitly want existing copy to sound less AI-generated. Invoke `a1-humanize` by name or ask naturally to humanize the text. By default, it returns the final rewrite with a support footer; an explicit request for only the final rewrite suppresses the footer.
+Humanize works only with completed copy supplied in the conversation. It detects patterns by function across languages, preserves supported content and meaningful authorial choices, and does not add claims, opinions, anecdotes, offers, or CTAs.
+
+It never reads or overwrites project files. A request that combines humanization with new marketing strategy stops before any partial rewrite.
 
 **Try:**
 
-```text
-Humanize this paragraph. Keep every fact and return only the final rewrite:
+> `/a1-humanize`
+>
+> Humanize this text and break up the AI-generated rhythm:
+>
+> `[paste your text]`
 
-[your text]
-```
-
-Humanize works only with text supplied in the conversation. It does not read or overwrite files or Marketing Context. A request to create an offer, CTA, positioning, audience, campaign, or other marketing strategy is outside its boundary; a request that mixes that work with humanization stops before any partial rewrite.
+Read the [full Humanize behavior](./skills/a1-humanize/SKILL.md).
 
 </details>
 
 <details>
-<summary><strong>Editor in Chief</strong></summary>
+<summary><strong>Editor in Chief — direct and review a high-stakes edit</strong></summary>
 
-**What it does:** sets bounded editorial direction inside confirmed product and marketing inputs. It resolves available sources, asks one decision question only when necessary, creates an internal Editor Brief, delegates all text work to Editor, and reviews the result with at most one corrective pass.
+<br>
 
-**Use it when:** you already have the source material and approved marketing strategy, but the reader focus, message emphasis, editorial angle, argument order, structure, or voice still needs chief-editor judgment. Invoke Editor in Chief by name; the skill starts only when you explicitly invoke it.
+Editor in Chief works inside confirmed product and marketing inputs. It resolves the source material, chooses bounded editorial direction, creates an internal brief, delegates all text work to Editor, and reviews the result with at most one corrective pass.
 
-Final headings and option labels are localized naturally in the language of your instruction; explanations, assumptions, and warnings use that language. The reviewed copy keeps the source language unless you ask to translate it, and a request for final text only remains wrapper-free and footer-free.
+Use it when approved strategy already exists but reader focus, message emphasis, editorial angle, argument order, structure, or voice still needs a chief editor's judgment. It does not create positioning, segmentation, pricing, an offer, a campaign strategy, GTM, or product strategy.
 
 **Try:**
 
-```text
-Use a1-editor-in-chief. The audience and positioning below are approved. Choose the strongest editorial angle and argument order for this email, have Editor rewrite it, and review the result.
+> `/a1-editor-in-chief`
+>
+> Review the draft. Find the strongest angle for marketing directors and rewrite the text for that purpose.
+>
+> `[paste your draft]`
 
-Approved strategy: [audience and positioning]
-Source text: [your text]
-```
-
-Editor in Chief does not create market research, segmentation, pricing, positioning, GTM, product strategy, or general marketing strategy. You can supply those completed decisions as source material for an editorial assignment.
+Read the [full Editor in Chief behavior](./skills/a1-editor-in-chief/SKILL.md).
 
 </details>
 
 <details>
-<summary><strong>A1 Psychology</strong></summary>
+<summary><strong>Consumer Psychology — audit hypotheses with peer-reviewed research</strong></summary>
 
-**What it does:** diagnoses a choice-architecture change or related marketing metric through a small set of testable psychological hypotheses. It separates what was observed from what caused it, makes uncertainty explicit, and designs a truthful, reversible experiment with countermetrics.
+<br>
 
-**Use it when:** you want to understand a behavioral mechanism behind plan choice, an option comparison, a default, a price reference, or a related conversion change. It analyzes only the supported choice-architecture hypotheses; it does not investigate traffic, analytics, attribution, technical failures, or unrelated psychological mechanisms.
+**What it does:** audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
+
+**Use it when:** you explicitly invoke `a1-psy` to validate a consumer hypothesis before launch or explain a marketing test result. It works only from the current request and directly supplied completed inputs; it does not investigate traffic, analytics, attribution, technical failures, or unrelated psychological mechanisms.
 
 **Try:**
 
-```text
-Use a1-psy to diagnose why our plan-selection conversion fell after a page change. Give only evidence-bounded hypotheses and a falsifiable test.
-```
+> `/a1-psy`
+>
+> Diagnose why our plan-selection conversion fell after a page change. Give only evidence-bounded hypotheses and a falsifiable test.
 
-The first release covers choice architecture: status quo, defaults, choice overload, loss aversion, anchoring, decoys, and framing. It warns when a proposed intervention is deceptive or otherwise risky, then helps test a transparent alternative.
+The skill covers the model families documented in its local references. It provides analysis, hypotheses, experiments, metrics, countermetrics, and implementation-risk warnings; it does not create copy, pages, tariffs, campaigns, or production implementation. It warns when a proposed intervention is deceptive or otherwise risky, then helps test a transparent alternative.
+
+It also treats broad frameworks and analyst errors as guardrails: they can route analysis or be explained directly, but are not presented as a user's primary psychological cause.
 
 </details>
 
-## Install
+---
 
-Claude Code can install the functional collections from its marketplace. The `npx skills` path remains available for Claude Code and the other supported clients below.
+## Other installation options
 
-<p>
-  <img src="./assets/codex.webp" alt="Codex" width="16" height="16"> Codex &nbsp;&nbsp;
-  <img src="./assets/claude.webp" alt="Claude Code" width="16" height="16"> Claude Code &nbsp;&nbsp;
-  <img src="./assets/cursor.webp" alt="Cursor" width="16" height="16"> Cursor &nbsp;&nbsp;
-  <img src="./assets/antigravity.webp" alt="Antigravity" width="16" height="16"> Antigravity
-</p>
+### Claude Code marketplace
 
-<details open>
-<summary><strong>Install in Claude Code</strong></summary>
-
-In Claude Code, add the marketplace once:
+Add the marketplace once:
 
 ```text
 /plugin marketplace add ztemerbekov/a1-marketing-skills
@@ -200,69 +245,33 @@ For the currently packaged Claude Code collections, install A1 Marketing Suite:
 /plugin install a1-marketing-suite@a1-marketing-skills
 ```
 
-A1 Marketing Suite installs A1 Core and A1 Editorial automatically. It has no skills or commands of its own: invoke the installed skills through their collection namespaces, such as `/a1-core:a1-grill` and `/a1-editorial:a1-editor`.
+A1 Marketing Suite installs both functional collections as dependencies and has no skills or commands of its own:
 
-Alternatively, install either independent collection:
+- **A1 Core:** `/a1-core:a1-marketing-context` and `/a1-core:a1-grill`
+- **A1 Editorial:** `/a1-editorial:a1-editor`, `/a1-editorial:a1-humanize`, and `/a1-editorial:a1-editor-in-chief`
+
+To install only one collection:
 
 ```text
 /plugin install a1-core@a1-marketing-skills
 /plugin install a1-editorial@a1-marketing-skills
 ```
 
-A1 Core provides Marketing Context and A1 Grill; invoke them as `/a1-core:a1-marketing-context` and `/a1-core:a1-grill`. A1 Editorial provides Editor, Editor in Chief, and Humanize; invoke them as `/a1-editorial:a1-editor`, `/a1-editorial:a1-editor-in-chief`, and `/a1-editorial:a1-humanize`.
+`a1-psy` is currently available as a standalone skill through `npx skills`.
 
-`a1-psy` is currently available through `npx skills` below as a standalone installed skill.
+### One project only
 
-</details>
-
-<details>
-<summary><strong>Install globally with npx skills</strong></summary>
-
-Run from any directory:
-
-```bash
-npx skills@latest add ztemerbekov/a1-marketing-skills -g
-```
-
-The installer offers all six skills and shows the detected AI clients. Select the clients you already use and choose the skills you want; they retain their unnamespaced names, such as `/a1-editor`, in clients that expose slash invocation.
-
-</details>
-
-<details>
-<summary><strong>Install only in the current project</strong></summary>
-
-Open a terminal in the project and omit `-g`:
+Run the primary command inside the project and omit `-g`:
 
 ```bash
 npx skills@latest add ztemerbekov/a1-marketing-skills
 ```
 
-Use this when the project must carry its own skill versions. Otherwise prefer the global installation.
+Project installation keeps the selected skill versions with that project. For the CLI's full current agent list and installation behavior, see the upstream [`skills` documentation](https://github.com/vercel-labs/skills).
 
-</details>
+## Update or remove
 
-<details>
-<summary><strong>Remove A1 Marketing Skills</strong></summary>
-
-Remove the current global collection from every connected client:
-
-```bash
-npx skills@latest remove \
-  a1-editor \
-  a1-editor-in-chief \
-  a1-grill \
-  a1-humanize \
-  a1-marketing-context \
-  a1-psy \
-  --global \
-  --yes
-```
-
-</details>
-
-## Update
-
-Update the installed global skills with the official CLI:
+Update the six globally installed skills:
 
 ```bash
 npx skills@latest update \
@@ -276,12 +285,22 @@ npx skills@latest update \
   --yes
 ```
 
-For a project-only installation, run the command in that project and omit `--global`. To discover newly published skills, run the installation command again and select what you want to add.
+Remove them from the global installation:
+
+```bash
+npx skills@latest remove \
+  a1-editor \
+  a1-editor-in-chief \
+  a1-grill \
+  a1-humanize \
+  a1-marketing-context \
+  a1-psy \
+  --global \
+  --yes
+```
+
+For project-only skills, run the command in that project and use `--project` with `update`; omit `--global` from `remove`.
 
 ## Help and feedback
 
-Questions, improvement ideas, or something that did not work as expected? Join the discussion in [A1 Marketing Skills](https://t.me/a1_marketing_skills). Remove confidential information before posting. Every completed skill result includes the same link unless the user explicitly requests only the final artifact.
-
-## For contributors
-
-Developing or maintaining this repository? See [Contributing](./CONTRIBUTING.md).
+Questions, improvement ideas, or something that did not work as expected? Join the discussion in [A1 Marketing Skills](https://t.me/a1_marketing_skills).
