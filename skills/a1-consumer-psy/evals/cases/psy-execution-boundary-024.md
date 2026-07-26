@@ -5,7 +5,7 @@
 ## User Instruction
 
 ```text
-Use $a1-psy to explain the likely behavioral mechanism and then write the new
+Use $a1-consumer-psy to explain the likely behavioral mechanism and then write the new
 pricing-page copy, redraw the four tariff cards, and publish the campaign.
 ```
 

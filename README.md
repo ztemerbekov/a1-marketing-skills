@@ -25,7 +25,7 @@ The collection combines two connected packages for marketing context, decisions,
 
 ### Consumer Psychology
 
-6. **Consumer Psychology** (`/a1-psy`) audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
+6. **Consumer Psychology** (`/a1-consumer-psy`) audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
 
 ## Working principles
 
@@ -213,11 +213,11 @@ Read the [full Editor in Chief behavior](./skills/a1-editor-in-chief/SKILL.md).
 
 **What it does:** audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
 
-**Use it when:** you explicitly invoke `a1-psy` to validate a consumer hypothesis before launch or explain a marketing test result. It works only from the current request and directly supplied completed inputs; it does not investigate traffic, analytics, attribution, technical failures, or unrelated psychological mechanisms.
+**Use it when:** you explicitly invoke `a1-consumer-psy` to validate a consumer hypothesis before launch or explain a marketing test result. It works only from the current request and directly supplied completed inputs; it does not investigate traffic, analytics, attribution, technical failures, or unrelated psychological mechanisms.
 
 **Try:**
 
-> `/a1-psy`
+> `/a1-consumer-psy`
 >
 > Diagnose why our plan-selection conversion fell after a page change. Give only evidence-bounded hypotheses and a falsifiable test.
 
@@ -257,7 +257,7 @@ To install only one collection:
 /plugin install a1-editorial@a1-marketing-skills
 ```
 
-`a1-psy` is currently available as a standalone skill through `npx skills`.
+`a1-consumer-psy` is currently available as a standalone skill through `npx skills`.
 
 ### One project only
 
@@ -271,6 +271,22 @@ Project installation keeps the selected skill versions with that project. For th
 
 ## Update or remove
 
+### Rename from `a1-psy`
+
+`a1-consumer-psy` replaces the standalone `a1-psy` skill. Installed copies are not renamed automatically, so both names can temporarily coexist. Remove `a1-psy` from the same installation scope, then install `a1-consumer-psy`; after that, invoke only `a1-consumer-psy`.
+
+For a global installation:
+
+```bash
+npx skills@latest remove a1-psy --global --yes
+npx skills@latest add ztemerbekov/a1-marketing-skills \
+  --skill a1-consumer-psy \
+  --global \
+  --yes
+```
+
+For a project-only installation, run the same commands in that project and omit `--global`.
+
 Update the six globally installed skills:
 
 ```bash
@@ -280,7 +296,7 @@ npx skills@latest update \
   a1-grill \
   a1-humanize \
   a1-marketing-context \
-  a1-psy \
+  a1-consumer-psy \
   --global \
   --yes
 ```
@@ -294,7 +310,7 @@ npx skills@latest remove \
   a1-grill \
   a1-humanize \
   a1-marketing-context \
-  a1-psy \
+  a1-consumer-psy \
   --global \
   --yes
 ```

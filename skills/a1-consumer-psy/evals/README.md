@@ -1,6 +1,6 @@
-# A1 Psychology Evaluation
+# Consumer Psychology Evaluation
 
-This manual suite tests `a1-psy` through its installed public interaction.
+This manual suite tests `a1-consumer-psy` through its installed public interaction.
 Each case is a non-canonical regression fixture: runtime instructions must not
 copy its scenario, wording, or expected model choice.
 
@@ -8,7 +8,7 @@ copy its scenario, wording, or expected model choice.
 
 Before merging or releasing a revision that changes runtime behavior:
 
-1. Install the candidate `a1-psy` revision in a clean client session.
+1. Install the candidate `a1-consumer-psy` revision in a clean client session.
 2. Run every case below, covering all 18 parent runtime-behavior families.
 3. Reproduce only the setup written in each case and submit its exact user
    instruction and input without paraphrasing.

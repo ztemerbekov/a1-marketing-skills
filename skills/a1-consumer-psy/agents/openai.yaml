@@ -1,6 +1,6 @@
 interface:
   display_name: "Consumer Psychology"
   short_description: "Audit consumer psychology hypotheses and explain test outcomes using peer-reviewed research."
-  default_prompt: "Use $a1-psy to validate consumer hypotheses or explain marketing test results using peer-reviewed research."
+  default_prompt: "Use $a1-consumer-psy to validate consumer hypotheses or explain marketing test results using peer-reviewed research."
 policy:
   allow_implicit_invocation: false

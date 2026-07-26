@@ -1,6 +1,6 @@
-# A1 Psychology model index
+# Consumer Psychology model index
 
-This is the canonical installed registry for `a1-psy`: it owns the stable ID,
+This is the canonical installed registry for `a1-consumer-psy`: it owns the stable ID,
 canonical name, tier, grade, aliases, destination, and short boundary for each
 included position.
 

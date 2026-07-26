@@ -1,5 +1,5 @@
 ---
-name: a1-psy
+name: a1-consumer-psy
 description: Audit consumer psychology hypotheses or analyze test outcomes using peer-reviewed research to explain user behavior, identify flaws, and set evidence limits.
 disable-model-invocation: true
 ---

@@ -5,7 +5,7 @@
 ## User Instruction
 
 ```text
-Use $a1-psy to diagnose the behavioral mechanism and propose a test.
+Use $a1-consumer-psy to diagnose the behavioral mechanism and propose a test.
 ```
 
 ## Input
