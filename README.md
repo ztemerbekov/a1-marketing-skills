@@ -1,6 +1,6 @@
 <h1><img src="./assets/a1-logo.svg" alt="A1" width="42"> Marketing Skills</h1>
 
-**English ·** [Русский](./README.ru.md)
+**English** | [Русский](./README.ru.md)
 
 **Hand over the routine to AI agents—freeing marketing teams to focus on strategy, vision, and growth-driving decisions.**
 
@@ -10,7 +10,7 @@ A1 Marketing Skills is a collection of Agent Skills built for the whole marketin
 
 ## What agents can already do
 
-The collection is split into two connected packages for marketing context, decisions, and copy.
+The collection combines two connected packages for marketing context, decisions, and copy with a standalone psychology skill.
 
 ### A1 Core — Context and decisions
 
@@ -22,6 +22,10 @@ The collection is split into two connected packages for marketing context, decis
 3. **Editor** (`/a1-editor`) improves existing drafts within supplied constraints and available Marketing Context while preserving source facts.
 4. **Editor in Chief** (`/a1-editor-in-chief`) sets editorial direction inside approved strategy, briefs Editor, and reviews the resulting edit.
 5. **Humanize** (`/a1-humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
+
+### A1 Psychology — Choice architecture
+
+6. **A1 Psychology** (`/a1-psy`) diagnoses testable choice-architecture hypotheses behind a marketing decision or related metric change and helps design a truthful experiment.
 
 ## Working principles
 
@@ -202,6 +206,25 @@ Read the [full Editor in Chief behavior](./skills/a1-editor-in-chief/SKILL.md).
 
 </details>
 
+<details>
+<summary><strong>A1 Psychology — diagnose choice architecture with testable hypotheses</strong></summary>
+
+<br>
+
+**What it does:** diagnoses a choice-architecture change or related marketing metric through a small set of testable psychological hypotheses. It separates what was observed from what caused it, makes uncertainty explicit, and designs a truthful, reversible experiment with countermetrics.
+
+**Use it when:** you want to understand a behavioral mechanism behind plan choice, an option comparison, a default, a price reference, or a related conversion change. It analyzes only the supported choice-architecture hypotheses; it does not investigate traffic, analytics, attribution, technical failures, or unrelated psychological mechanisms.
+
+**Try:**
+
+> `/a1-psy`
+>
+> Diagnose why our plan-selection conversion fell after a page change. Give only evidence-bounded hypotheses and a falsifiable test.
+
+The first release covers choice architecture: status quo, defaults, choice overload, loss aversion, anchoring, decoys, and framing. It warns when a proposed intervention is deceptive or otherwise risky, then helps test a transparent alternative.
+
+</details>
+
 ---
 
 ## Other installation options
@@ -214,7 +237,7 @@ Add the marketplace once:
 /plugin marketplace add ztemerbekov/a1-marketing-skills
 ```
 
-Install the complete suite:
+For the currently packaged Claude Code collections, install A1 Marketing Suite:
 
 ```text
 /plugin install a1-marketing-suite@a1-marketing-skills
@@ -232,6 +255,8 @@ To install only one collection:
 /plugin install a1-editorial@a1-marketing-skills
 ```
 
+`a1-psy` is currently available as a standalone skill through `npx skills`.
+
 ### One project only
 
 Run the primary command inside the project and omit `-g`:
@@ -244,7 +269,7 @@ Project installation keeps the selected skill versions with that project. For th
 
 ## Update or remove
 
-Update the five globally installed skills:
+Update the six globally installed skills:
 
 ```bash
 npx skills@latest update \
@@ -253,6 +278,7 @@ npx skills@latest update \
   a1-grill \
   a1-humanize \
   a1-marketing-context \
+  a1-psy \
   --global \
   --yes
 ```
@@ -266,6 +292,7 @@ npx skills@latest remove \
   a1-grill \
   a1-humanize \
   a1-marketing-context \
+  a1-psy \
   --global \
   --yes
 ```
