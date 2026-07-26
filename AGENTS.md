@@ -105,11 +105,24 @@ bash -n scripts/validate-skills.sh
 git diff --check
 ```
 
-When a change affects runtime behavior, run the relevant manual eval cases and record the evidence in the pull request.
+These deterministic checks verify objective package structure and whitespace only. They are required for every pull request, but never prove semantic quality or replace a manual semantic evaluation.
 
-Use the smallest manual set that covers the behavior and risks changed by a pull request. Run the full suite for every affected skill before a release that changes its runtime behavior. Documentation-only and packaging-only changes do not require a semantic run.
+### Semantic evaluation gates
 
-Record case IDs, client, model, revision, pass/fail results, concrete evidence, and limitations in the pull request or GitHub Release. Do not commit permanent run reports or model outputs.
+Classify every pull request before choosing manual cases:
+
+| Risk class | Change | Required semantic evaluation |
+| --- | --- | --- |
+| Documentation or packaging | No runtime behavior changes. | None. Run the deterministic checks. |
+| Bounded runtime | One model or behavior family changes without changing shared routing or a cross-family contract. | Run the smallest existing criteria-based set that covers the changed behavior and its directly adjacent safety risks. |
+| Cross-cutting runtime | A change to scope, invocation, diagnostic spine, catalog, routing, shared evidence ownership, ethics routing, or another behavior shared by multiple families. | Run the full manual suite for every affected skill. |
+| Release candidate or client/model migration | A release candidate, or a change of the client or model used to exercise runtime behavior. | Run the full manual suite for every affected skill. |
+
+Treat an uncertain classification, ambiguous result, failed selected case, or behavior discovered outside the selected family as an automatic escalation to the full manual suite for every affected skill.
+
+Evaluation cases must remain criteria-based installed-client public interactions: score `Must Change`, `Must Preserve`, and `Forbidden` behavior. Do not introduce golden-output snapshots or assertions about internal file layout as semantic tests.
+
+In the pull request or GitHub Release, record the risk class and rationale; selected case IDs; client, model, and revision; pass/fail results with concrete evidence; and limitations. Do not commit permanent run reports, candidate digests, or model outputs.
 
 ## Change Reporting
 

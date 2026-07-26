@@ -26,6 +26,8 @@ Every materially changed scope boundary must have coverage for four scenarios ac
 
 ## Starter Suite
 
+Use the repository's [risk-based semantic-evaluation gates](../../../AGENTS.md#semantic-evaluation-gates) before choosing a manual run. For a bounded runtime change, select cases from the affected group below and directly adjacent safety cases. A full `a1-editor` run means every case below; run it when the repository policy selects the full-suite gate.
+
 ### Strategy Boundary and Bounded Chief Handoff
 
 - [positioning request stops at the Editor boundary](cases/editor-strategy-route-001.md)
@@ -76,6 +78,4 @@ Every materially changed scope boundary must have coverage for four scenarios ac
 6. Mark an item pass only when the evidence is clear. Treat ambiguous evidence as a failure and explain why.
 7. Mark the case pass only when every criterion passes. Summarize the tested cases, client, model, revision, and limitations in the pull request or release notes.
 
-Run relevant cases after changes to the editor's routing, gates, source boundary, operations, output contract, or canon. Run the full manual suite before a release that changes editor behavior.
-
-Automated repository validation checks only the package structure. Semantic quality remains a human judgment.
+The repository policy defines escalation; structural validation checks package shape only and never replaces human semantic judgment.

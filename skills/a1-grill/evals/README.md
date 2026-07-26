@@ -4,6 +4,8 @@ This self-contained manual suite protects the explicit, adaptive A1 Grill intera
 
 ## Suite
 
+Use the repository's [risk-based semantic-evaluation gates](../../../AGENTS.md#semantic-evaluation-gates) before choosing a manual run. For a bounded runtime change, select the cases that cover the changed interaction behavior and directly adjacent safety cases. A full `a1-grill` run means every case below; run it when the repository policy selects the full-suite gate.
+
 - [missing focal object](cases/grill-entry-001.md)
 - [adaptive raw idea](cases/grill-adaptive-002.md)
 - [mixed grilling and execution request](cases/grill-scope-mixed-003.md)
@@ -26,4 +28,4 @@ This self-contained manual suite protects the explicit, adaptive A1 Grill intera
 4. Treat ambiguous evidence as failure.
 5. Record the tested cases, client, model, revision, results, and limitations in the pull request or release notes.
 
-Structural validation never substitutes for semantic judgment.
+The repository policy defines escalation; structural validation never substitutes for semantic judgment.

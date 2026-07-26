@@ -2,7 +2,11 @@
 
 This manual suite checks the public prompt contract without a single golden rewrite. Cases are maintainer material, not runtime dependencies.
 
-Run each case in a clean session using only its instruction and input. Judge every **Must Change**, **Must Preserve**, and **Forbidden** criterion from saved output; ambiguity fails. Record the model, client, revision, evidence, and limitations in the pull request or release notes.
+Run each selected case in a clean session using only its instruction and input. Judge every **Must Change**, **Must Preserve**, and **Forbidden** criterion from saved output; ambiguity fails. Record the model, client, revision, evidence, and limitations in the pull request or release notes.
+
+## Selecting a run
+
+Use the repository's [risk-based semantic-evaluation gates](../../../AGENTS.md#semantic-evaluation-gates) before choosing a manual run. For a bounded runtime change, select the cases that cover the changed rewriting behavior and directly adjacent safety cases. A full `a1-humanize` run means every case below; run it when the repository policy selects the full-suite gate.
 
 ## Cases
 
