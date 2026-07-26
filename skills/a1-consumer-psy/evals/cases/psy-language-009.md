@@ -16,7 +16,11 @@
 
 ## Must Change
 
-- [ ] Объяснить на русском, сохранить `Most popular` точно, рассмотреть framing условно и предложить правдивый тест с comprehension или trust countermetric.
+- [ ] Начать с `Executive Summary`, объяснить на русском, сохранить `Most
+  popular` точно, рассмотреть фрейминг (framing) условно и предложить
+  правдивый тест с comprehension или trust countermetric.
+- [ ] Для любого оставленного механизма использовать русское название с
+  английским термином в скобках и не показывать internal catalog notation.
 
 ## Must Preserve
 

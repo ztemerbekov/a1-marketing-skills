@@ -34,6 +34,10 @@ unchanged. Average decision time increased.
   already checked separately.
 - [ ] Separate the observed metric change from any causal hypothesis and keep
   every retained explanation conditional.
+- [ ] Start the successful diagnosis with an English `Executive Summary`; use
+  only English mechanism terms and no internal catalog notation.
+- [ ] Include numbered citations for material scientific claims and an English
+  `Sources` section.
 - [ ] Propose a falsifiable hypothesis, a minimum test, one primary metric, and
   relevant countermetrics.
 - [ ] After the successful diagnosis, include a short English footer linking to
@@ -48,6 +52,8 @@ unchanged. Average decision time increased.
 ## Forbidden
 
 - [ ] Do not include Cyrillic characters anywhere in the response.
+- [ ] Do not include catalog IDs, catalog roles, evidence grades, or internal
+  ethics flags anywhere in the response.
 - [ ] Do not ask the user to confirm technical, measurement, attribution,
   traffic, or experiment-allocation checks.
 - [ ] Do not perform or propose a technical audit as part of

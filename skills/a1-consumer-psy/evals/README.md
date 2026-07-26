@@ -23,7 +23,7 @@ For every selected case:
 | 2. Scope classification | In-scope, mixed, and completed-external-input requests stay distinct. | `psy-mixed-scope-003`, `psy-completed-input-004` |
 | 3. Independent input | Analysis uses the current request and directly supplied materials only. | `psy-independent-input-023` |
 | 4. Metric-change boundary | A post-change observation is not mistaken for a cause or a technical investigation. | `psy-post-change-001`, `psy-no-primary-002`, `psy-goals-no-primary-016` |
-| 5. Hypothesis discipline | Primary and secondary hypotheses need discriminating observations and instrumentation. | `psy-secondary-010`, `psy-belief-ambiguity-013` |
+| 5. Hypothesis discipline | Retained hypotheses need discriminating observations, instrumentation, readable roles, and separate confidence. | `psy-secondary-010`, `psy-belief-ambiguity-013`, `psy-executive-readable-audit-027`, `psy-recommendation-ready-028` |
 | 6. Evidence and transport | Research status never becomes a local-effect guarantee. | `psy-evidence-008`, `psy-transport-014` |
 | 7. Choice complexity and defaults | Choice-set complexity and preselection remain conditional, reversible hypotheses. | `psy-benign-006`, `psy-completed-input-004` |
 | 8. Goals, plans, and habits | Goal progress, if–then plans, and automaticity keep their required operations. | `psy-goal-progress-014`, `psy-if-then-011`, `psy-habit-frequency-013` |
@@ -37,4 +37,4 @@ For every selected case:
 | 16. Identity, autonomy, and vulnerability | Identity and reactance protect voluntary, non-exploitative choice. | `psy-identity-vulnerability-015`, `psy-freedom-threat-012` |
 | 17. Truth and dark-pattern risk | Fabricated scarcity or proof is warned about while a truthful test remains available. | `psy-false-scarcity-005`, `psy-scarcity-source-014`, `psy-social-evidence-source-013` |
 | 18. Catalog and execution boundary | Guardrails, research-only/unlisted positions, and production work remain outside ordinary diagnosis. | `psy-guardrail-framework-018`, `psy-guardrail-hick-016`, `psy-guardrail-routing-017`, `psy-guardrail-survivorship-019`, `psy-research-only-020`, `psy-unlisted-model-021`, `psy-execution-boundary-024` |
-| 19. Language and localized output | Runtime messages follow the instruction language while supplied copy and terms keep their language. | `psy-language-009`, `psy-language-post-change-026` |
+| 19. Language and localized output | Runtime messages follow the instruction language, use the public mechanism terminology for that language, and preserve supplied copy. | `psy-language-009`, `psy-language-post-change-026`, `psy-language-third-language-029` |
