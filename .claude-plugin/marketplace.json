@@ -10,18 +10,20 @@
     {
       "name": "a1-core",
       "displayName": "A1 Core",
-      "description": "Maintain single-source marketing context and stress-test decisions before your team acts on them.",
+      "description": "Stress-test marketing strategies and validate consumer psychology hypotheses to eliminate costly missteps before your team executes.",
       "keywords": [
         "marketing-context",
         "idea-validation",
+        "consumer-psychology",
         "marketing-decisions",
         "marketing"
       ],
       "source": "./skills",
       "strict": false,
       "skills": [
-        "./a1-marketing-context",
-        "./a1-grill"
+        "./a1-grill",
+        "./a1-consumer-psy",
+        "./a1-marketing-context"
       ]
     },
     {
