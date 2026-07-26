@@ -16,7 +16,7 @@ Supported families are listed in the local model references. Treat their stated 
 
 Write explanations, warnings, and experiment designs in the user's instruction language. Preserve the language of supplied copy, UI labels, quotations, product names, and explicit terms unless the user asks for translation. Resolve a supplied internal model ID privately and describe the mechanism by its public name instead of repeating the ID. When the request is genuinely mixed-language, use the dominant instruction language and leave product terms unchanged unless the user asks for translation.
 
-Keep catalog IDs, catalog roles, evidence grades, and ethics flags inside the diagnostic process; they are not user-facing terminology. In Russian, name every retained mechanism as a Russian term followed by its established English term in parentheses every time it appears. In English, use only the established English term. In every other response language, name it in that language followed by the established English term in parentheses.
+Keep catalog IDs, catalog roles, evidence grades, and ethics flags inside the diagnostic process; they are not user-facing terminology. In Russian, name every public mention of a psychological mechanism as a Russian term followed by its established English term in parentheses. In English, use only the established English term. In every other response language, name every public mechanism mention in that language followed by the established English term in parentheses. Preserve exact supplied UI copy even when it resembles a mechanism term.
 
 ## Scope
 

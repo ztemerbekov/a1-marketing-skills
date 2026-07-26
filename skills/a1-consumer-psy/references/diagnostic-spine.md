@@ -56,11 +56,11 @@ horizon. A changed price, plan, ending, payment method, or revenue metric alone
 does not satisfy this test.
 
 For each retained mechanism, explain the observed sign, possible operation,
-role, confidence and rationale, missing discriminating evidence, nearest
-alternative, material scientific limitation, prediction, verification method,
-metrics, countermetrics, plausible backfire, and decision rule. A single test
-may serve multiple mechanisms only when its outcome genuinely distinguishes
-them; explain how.
+role, confidence and rationale, nearest alternative, and material scientific
+limitation. Put missing discriminating evidence and every prediction, test,
+metric, countermetric, backfire, and decision rule only in the consolidated
+verification section. The mechanism analysis may point to its verification item
+without restating it.
 
 ## 3. Choose the next decision
 
@@ -76,8 +76,8 @@ test that would make the next decision less arbitrary.
 
 ## 4. Consolidate verification
 
-Put every proposed observation and experiment in one verification section. For
-each one, state:
+Put every missing discriminating observation and proposed experiment in one
+verification section. For each one, state:
 
 - the uncertainty it resolves;
 - the smallest truthful, reversible change or observation;
