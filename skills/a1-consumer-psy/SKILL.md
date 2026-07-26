@@ -42,10 +42,6 @@ Localize the notice when the user is not writing Russian. A metric decline by it
 6. Before proposing an intervention, read [ethics](references/ethics.md).
 7. Produce the response contract from the diagnostic spine. Give behavioral analysis, hypotheses, experiments, metrics, countermetrics, and implementation-risk warnings—not production artifacts. Do not invoke more models simply to appear comprehensive. For social questions, preserve the source, reference group, baseline, public/private context, and outcome of any social-evidence claim.
 
-### Pricing routing
-
-Price, a plan card, a payment button, or a changed number is not enough to select a pricing model. Read the relevant [pricing and valuation dossier](references/dossiers/choice-pricing-valuation.md) and route only when its required actual manipulation/reference, payment or choice experience, outcome, and horizon match. Otherwise retain no primary hypothesis and name the smallest missing observation. Use a child model as primary only when it is the narrowest best-supported match; price perception, revenue change, or payment method never warrants hard-coded model selection.
-
 ## Response contract
 
 The [diagnostic spine](references/diagnostic-spine.md) is the canonical owner of the diagnosis output contract: preserve visible uncertainty, a smallest defensible hypothesis set, a falsifiable test, proportionate evidence limits, and an ethics warning when triggered.
