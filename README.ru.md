@@ -266,22 +266,6 @@ npx skills@latest add ztemerbekov/a1-marketing-skills
 
 ## Обновление и удаление
 
-### Переименование с `a1-psy`
-
-`a1-consumer-psy` заменяет самостоятельный навык `a1-psy`. Установленные копии не переименовываются автоматически, поэтому старое и новое имена могут временно существовать одновременно. Удалите `a1-psy` из той же области установки, затем установите `a1-consumer-psy`; после этого вызывайте только `a1-consumer-psy`.
-
-Для глобальной установки:
-
-```bash
-npx skills@latest remove a1-psy --global --yes
-npx skills@latest add ztemerbekov/a1-marketing-skills \
-  --skill a1-consumer-psy \
-  --global \
-  --yes
-```
-
-Для установки в одном проекте выполните те же команды в этом проекте и уберите `--global`.
-
 Обновите шесть глобально установленных навыков:
 
 ```bash
