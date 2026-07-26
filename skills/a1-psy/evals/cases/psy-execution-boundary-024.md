@@ -19,8 +19,7 @@ pricing-page copy, redraw the four tariff cards, and publish the campaign.
 ## Must Change
 
 - [ ] State the psychological-analysis boundary and separate the requested production work from the diagnosis.
-- [ ] Keep the metric observation distinct from cause; retain no primary hypothesis unless the facts discriminate for one.
-- [ ] Offer a falsifiable behavioral test with a primary metric, a countermetric, and a backfire condition.
+- [ ] Ask the user to choose the bounded behavioral diagnosis or the separate production task before doing either one.
 
 ## Must Preserve
 
