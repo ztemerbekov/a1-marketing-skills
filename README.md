@@ -12,7 +12,7 @@ A1 Marketing Skills is a collection of Agent Skills built for the whole marketin
 
 The collection is split into two connected packages for marketing decisions, reusable context, consumer psychology, and copy.
 
-### A1 Core — Context and decisions
+### A1 Intelligence — Expertise and decisions
 
 1. **Grill** (`/a1-grill`) pressure-tests a marketing idea, decision, or plan through a constructive interview.
 2. **Consumer Psychology** (`/a1-consumer-psy`) audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
@@ -244,13 +244,13 @@ For the currently packaged Claude Code collections, install A1 Marketing Suite:
 
 A1 Marketing Suite installs both functional collections as dependencies and has no skills or commands of its own:
 
-- **A1 Core:** `/a1-core:a1-grill`, `/a1-core:a1-consumer-psy`, and `/a1-core:a1-marketing-context`
+- **A1 Intelligence:** `/a1-intelligence:a1-grill`, `/a1-intelligence:a1-consumer-psy`, and `/a1-intelligence:a1-marketing-context`
 - **A1 Editorial:** `/a1-editorial:a1-editor`, `/a1-editorial:a1-humanize`, and `/a1-editorial:a1-editor-in-chief`
 
 To install only one collection:
 
 ```text
-/plugin install a1-core@a1-marketing-skills
+/plugin install a1-intelligence@a1-marketing-skills
 /plugin install a1-editorial@a1-marketing-skills
 ```
 
