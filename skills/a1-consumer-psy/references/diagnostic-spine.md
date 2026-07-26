@@ -1,71 +1,141 @@
 # Diagnostic spine
 
-Use this sequence for every accepted diagnosis.
+Use this sequence for every accepted diagnosis. The catalog, its IDs, roles,
+evidence grades, and ethics flags help choose and limit a mechanism internally;
+the public report explains the resulting reasoning in the user's language.
 
-## 1. Separate observation from explanation
+## 1. Establish the decision context
 
-State the observed behavior or metric and the supplied context. Do not convert correlation, timing, a plausible narrative, or a named bias into a causal finding.
+Separate three things before choosing a mechanism:
 
-For a post-change metric request, show the scope notice from `SKILL.md` first. It is an analytic assumption, not a claim that the user personally completed an audit.
+- **Observed facts:** supplied behavior, interface details, data, and context.
+- **Interpretations:** the causal explanations that remain possible.
+- **Unknowns:** the smallest missing observations that would discriminate among
+  those explanations.
+
+Do not convert correlation, timing, a plausible narrative, or a named bias into
+a causal finding. For a post-change metric request, show the scope notice from
+SKILL.md before the diagnosis. It is an analytic assumption, not a claim that
+the user personally completed an audit.
 
 ## 2. Choose the smallest defensible hypothesis set
 
-Use the active model reference to test whether the facts meet the model's diagnostic conditions.
+Use the active model reference to test whether the facts meet the model's
+diagnostic conditions. Before selecting a cause, check whether a named label is
+a support or research-only position in the [model index](model-index.md) and
+follow its pointer. Such a position may clarify a boundary or prevent a false
+synonym; it is not a retained causal hypothesis in an ordinary diagnosis.
 
-Before selecting a cause, check whether a named label is a `SUPPORT` position in the [model index](model-index.md) and follow its guardrail-dossier pointer. A support position may route analysis, reject a false synonym, or identify an analyst error; it is never a primary or secondary psychological cause in an ordinary diagnosis. If it is the user's only candidate, explain the guardrail and return to a named active mechanism or `No primary hypothesis yet`. When the user asks to explain a support framework itself, explain it concisely under the same language and evidence rules, without a live-metric wrapper.
+- Select one **leading hypothesis** only when the facts favor it over its
+  nearest alternatives.
+- Add zero to two **alternative hypotheses** only when each is distinct and
+  decision-useful.
+- Use a **conditional mechanism** when a defining operation might be present
+  but an important observation is missing.
+- State that there is no leading hypothesis yet when the evidence does not
+  discriminate. Do not fill the gap with a generic list of biases.
 
-- Select **one primary** only when the facts favor it over its nearest alternatives.
-- Add **zero to two secondary** hypotheses only if each is distinct and decision-useful.
-- Select **no primary** when the evidence does not discriminate. Name the uncertainty plainly; do not fill the gap with a generic list of biases.
+Give every retained mechanism a separate diagnostic confidence assessment:
 
-Never use a user example as a rule that a particular interface change must imply a particular model.
+- **High confidence:** its defining operation is directly present or observed
+  and few plausible alternatives remain.
+- **Medium confidence:** relevant signs exist, but a material implementation
+  detail, outcome, or context is unknown.
+- **Low confidence:** the mechanism is compatible with the observation but
+  cannot be separated from alternatives without more evidence.
 
-For pricing/valuation models, retain a hypothesis only when the evidence
-matches all four dimensions: (1) the actual manipulation or reference source,
-(2) the experienced payment or choice process, (3) the measured outcome, and
-(4) the relevant horizon. A changed price, plan, ending, payment method, or
-revenue metric alone does not satisfy this test. Child models may be primary
-only when they are the narrowest best match; otherwise state that there is no
-primary hypothesis yet.
+Always explain the confidence with the case-specific observation that supports
+or limits it. In the public report, use the terminology rule in SKILL.md; do
+not expose catalog notation as a substitute for an explanation.
 
-For **each retained hypothesis**, provide a compact hypothesis card containing its diagnostic signs, missing discriminating evidence, evidence-context limitation, prediction, minimum test, primary metric, countermetrics, plausible backfire, and decision rule. A single experiment may serve multiple cards only when it genuinely distinguishes all of them; say how its outcome separates them.
+Never use a user example as a rule that a particular interface change must
+imply a particular model. For pricing and valuation models, retain a hypothesis
+only when the evidence matches the actual manipulation or reference source, the
+experienced payment or choice process, the measured outcome, and the relevant
+horizon. A changed price, plan, ending, payment method, or revenue metric alone
+does not satisfy this test.
 
-## 3. Say what would distinguish it
+For each retained mechanism, explain the observed sign, possible operation,
+role, confidence and rationale, missing discriminating evidence, nearest
+alternative, material scientific limitation, prediction, verification method,
+metrics, countermetrics, plausible backfire, and decision rule. A single test
+may serve multiple mechanisms only when its outcome genuinely distinguishes
+them; explain how.
 
-Ask for no information unless it makes the next recommendation materially less arbitrary. When information is missing, name the smallest useful observation: for example, selection share by option, whether an option was preselected, or the comparison order people saw.
+## 3. Choose the next decision
 
-## 4. Design a falsifiable move
+Make a product recommendation only when the supplied evidence supports the
+diagnosis strongly enough to justify it. When a direct problem with truthfulness,
+source provenance, material disclosure, total-price clarity, or exit clarity is
+visible, recommend correcting that observable problem while stating that its
+behavioral or commercial effect remains unproven.
 
-Offer a reversible, truth-based intervention or experiment. Specify:
+When evidence is insufficient for a confident diagnosis, do not make a product
+recommendation. Name the smallest useful observation or falsifiable diagnostic
+test that would make the next decision less arbitrary.
 
-- **Prediction:** what should differ if the hypothesis is right.
-- **Variant:** the smallest change that tests the mechanism.
-- **Primary metric:** the intended behavioral outcome.
-- **Countermetrics:** harms, quality, reversals, complaints, refunds, retention, or equity metrics relevant to the change.
-- **Plausible backfire:** what could worsen even if the primary metric improves, and how the countermetrics would reveal it.
-- **Decision rule:** what result would weaken or reject the hypothesis.
+## 4. Consolidate verification
 
-Do not promise an uplift. Do not invent a sample-size requirement or statistical result.
+Put every proposed observation and experiment in one verification section. For
+each one, state:
 
-For pricing tests, select the behavior metric together with the relevant
-economic and durable outcomes: revenue and contribution margin where pricing
-changes, plus refunds, cancellation, trust, comprehension, and durable
-behavior where applicable. A perceptual result, a higher start rate, or gross
-revenue alone is not a complete win condition.
+- the uncertainty it resolves;
+- the smallest truthful, reversible change or observation;
+- the prediction if the mechanism is right;
+- the primary metric;
+- the countermetrics for harm, quality, reversals, complaints, refunds,
+  retention, trust, or equity when relevant;
+- the plausible backfire and how the countermetrics reveal it; and
+- the result that would weaken or reject the hypothesis.
 
-## 5. Explain evidence proportionately
+Do not promise an uplift or invent a sample-size requirement or statistical
+result. For pricing tests, pair the behavior metric with relevant economic and
+durable outcomes; gross revenue or a higher start rate alone is not a complete
+win condition.
 
-Give each retained hypothesis its model's evidence grade and one material limitation. Mention sources only from the selected dossier's co-located evidence record and only at the precision those sources support. Identify which of these dimensions materially limit the local inference: evidence quality, directness, population, outcome, horizon, and transportability. A research effect is not a guaranteed local product effect.
+## 5. Explain science and local limits
+
+Use only sources from the selected dossier's co-located evidence record and at
+the precision those sources support. Cite each material scientific claim with a
+compact numbered citation at the point of the claim, then include a Sources
+section that gives the work, year, link, what it supports, and the material
+limit on local transfer.
+
+Explain the evidence in plain language. Identify material limits of evidence
+quality, directness, population, outcome, horizon, or transportability. A
+research effect is not a local product prediction.
+
+## 6. Present ethics in human language
+
+When ethics is triggered, state the localized severity, the observed feature
+that creates the risk, the possible harm and affected users, the uncertainty,
+the truthful alternative where applicable, and a verification or reversibility
+condition. Do not expose internal flag labels.
 
 ## Output shape
 
-Use compact, readable sections appropriate to the user's language:
+Use detailed, executive-readable sections in the user's instruction language:
 
-1. `Observation and boundary`
-2. `Working hypothesis` (or `No primary hypothesis yet`)
-3. `What would distinguish it`
-4. `Test`
-5. `Evidence and limits`
-6. `Ethics warning` when triggered
+1. Executive Summary
+2. Observations and unknowns
+3. Hypothesis map (or an explicit unresolved state)
+4. Detailed mechanism analysis
+5. Alternative explanations when it prevents a likely misdiagnosis
+6. Scientific support and transport limits
+7. How to verify the hypotheses
+8. Ethics risks when triggered
+9. Decision status and next step
+10. Sources
 
-Omit sections that would be empty, except that uncertainty must remain visible when no primary hypothesis is selected.
+The executive summary is required for a successful diagnosis. It stands on its
+own: state the observed situation, leading interpretation or unresolved state,
+diagnostic confidence, material unknowns, and decision status without creating
+a recommendation. Observations and unknowns, the hypothesis map or unresolved
+state, detailed analysis, decision status, and sources are also required.
+
+Omit other sections when they would be empty or add no decision-useful
+information. Use tables only when comparing alternatives across the same
+dimensions. Keep one main idea per paragraph and do not repeat an evidence gap
+or test in multiple sections. End with one decision status—sufficient evidence
+for a product recommendation, additional evidence required, or hypothesis not
+supported—and one next step rather than a duplicate summary.

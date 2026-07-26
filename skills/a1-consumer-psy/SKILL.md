@@ -16,6 +16,8 @@ Supported families are listed in the local model references. Treat their stated 
 
 Write explanations, warnings, and experiment designs in the user's instruction language. Preserve the language of supplied copy, UI labels, quotations, product names, explicit terms, and model IDs unless the user asks for translation. When the request is genuinely mixed-language, use the dominant instruction language and leave product terms unchanged unless the user asks for translation.
 
+Keep catalog IDs, catalog roles, evidence grades, and ethics flags inside the diagnostic process; they are not user-facing terminology. In Russian, name every retained mechanism as a Russian term followed by its established English term in parentheses every time it appears. In English, use only the established English term. In every other response language, name it in that language followed by the established English term in parentheses.
+
 ## Scope
 
 Classify the complete request before analysis.
@@ -40,7 +42,7 @@ For a causal request about a changed metric, add one short notice in the user's 
 
 ## Response contract
 
-The [diagnostic spine](references/diagnostic-spine.md) is the canonical owner of the diagnosis output contract: preserve visible uncertainty, a smallest defensible hypothesis set, a falsifiable test, proportionate evidence limits, and an ethics warning when triggered.
+The [diagnostic spine](references/diagnostic-spine.md) is the canonical owner of the diagnosis output contract: preserve visible uncertainty, a smallest defensible hypothesis set, a falsifiable test, proportionate evidence limits, and an ethics warning when triggered. Its public report is detailed and executive-readable; internal catalog notation stays in the local references and reasoning.
 
 For a general explanation of a named model, explain it directly; do not add the metric-change scope notice unless the user is asking about a concrete change. Treat one canonical covered model name or alias anywhere in the complete request as the named model; do not ask the user to name it again. Ask for clarification only when no model is named or several distinct models are named.
 
