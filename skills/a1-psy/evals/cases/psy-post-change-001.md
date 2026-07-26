@@ -8,7 +8,7 @@
 
 ## Setup
 
-### Marketing Context
+### Completed external input
 
 None.
 

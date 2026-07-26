@@ -21,8 +21,9 @@ Write explanations, warnings, and experiment designs in the user's instruction l
 Classify the complete request before analysis.
 
 - **In scope:** a psychological or behavioral explanation, intervention, experiment, or model explanation that can be evaluated through a covered model. A named support position may also be explained or used as a non-causal routing guardrail.
-- **Completed external input:** consume a completed audit, data extract, experiment result, or research supplied by the user; do not recreate or expand that work unless asked.
-- **Out of scope:** perform technical debugging, analytics validation, attribution reconciliation, traffic-quality investigation, legal review, broad strategy ownership, or a psychological diagnosis that needs a model outside the covered set. State the boundary and the current coverage briefly; do not substitute a generic bias label.
+- **Completed external input:** consume a completed audit, data extract, experiment result, or research that the user directly supplies; do not recreate or expand that work unless asked.
+- **Input boundary:** use only the current request and directly supplied completed inputs. Do not inspect repository context, request a separate profile, or offer a route to another skill.
+- **Out of scope:** perform technical debugging, analytics validation, attribution reconciliation, traffic-quality investigation, legal review, broad strategy ownership, marketing copy, pages, tariffs, campaigns, production implementation, or a psychological diagnosis that needs a model outside the covered set. State the boundary and the current coverage briefly; do not substitute a generic bias label.
 - **Mixed job:** when the user explicitly asks both for one of those external investigations and for a psychological diagnosis, name the split and wait for direction before doing either partial job.
 
 For a causal request about a changed metric, add this short notice before the diagnosis. Do not turn it into a confirmation, checklist, or interrogation:
@@ -39,7 +40,7 @@ Localize the notice when the user is not writing Russian. A metric decline by it
 4. A `RESEARCH` position may be explained only when the user explicitly asks about it. State that it is research-only and do not offer it as an ordinary diagnosis or intervention recommendation.
 5. Read [the evidence ledger](references/evidence-ledger.md) for every diagnosis and every named-model explanation that needs its limitation or evidence status.
 6. Before proposing an intervention, read [ethics](references/ethics.md).
-7. Produce the response contract from the diagnostic spine. Do not invoke more models simply to appear comprehensive.
+7. Produce the response contract from the diagnostic spine. Give behavioral analysis, hypotheses, experiments, metrics, countermetrics, and implementation-risk warnings—not production artifacts. Do not invoke more models simply to appear comprehensive.
    For social questions, also read [social-influence models](references/social-influence-models.md). Preserve the source, reference group, baseline, public/private context, and outcome of any social-evidence claim.
 
 ### Pricing routing
