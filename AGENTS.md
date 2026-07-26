@@ -28,6 +28,12 @@ Pushing a feature branch never authorizes a merge. Do not commit implementation 
 
 When a branch deletion is requested, verify both the remote branch and its local counterpart. Delete each one when present, then report the verified state of both.
 
+## New Skill Release Approval
+
+Before releasing a newly created skill to `main`, present its final manifest to the maintainer and obtain explicit approval. This is a release gate: it applies to the commit or merge that introduces the new skill to `main`, not to changes in an already released skill or exploratory commits on a feature branch.
+
+The review must include the final skill name, directory name, `description`, every other manifest field, and any e-mail/contact field. Do not release provisional, placeholder, or intermediate values to `main`. If an approved manifest value changes, present the revised manifest for approval again before release.
+
 ## GitHub authentication
 
 Use the globally configured GitHub CLI authentication (`gh`) from the macOS system Keychain.
