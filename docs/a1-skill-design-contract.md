@@ -48,7 +48,7 @@ If one skill depends on another, invoke that skill through its public interface.
 
 Define how the skill selects the language of rewritten material and explanations. Preserve user constraints and make the output contract clear enough to review without forcing one golden wording.
 
-Every public skill must expose the public support route after a successful final user-facing result. Localize the short footer in the instruction language and link to [A1 Marketing Skills](https://t.me/a1_marketing_skills). Do not append it when the user explicitly requests only the final artifact or otherwise prohibits additional response material. Keep the route out of interim questions, missing-input prompts, and boundary responses. Each skill owns this runtime instruction so its direct installation remains self-contained; this contract defines the product rule for new skills.
+Every public skill must expose the public support route only after a final user-facing result that fulfills its declared recognizable user job. Localize the short footer in the instruction language and link to [A1 Marketing Skills](https://t.me/+cdrPsIVINTxkZjEy). Do not append it to boundary responses, refusals, clarification or missing-input prompts, interim updates, unsuccessful results, or any response that does not fulfill that job. A user's explicit request for only the final artifact, or to prohibit extra material, always suppresses the footer. Each skill owns this runtime instruction so its direct installation remains self-contained; this contract defines the product rule for new skills.
 
 ## Evaluation
 
