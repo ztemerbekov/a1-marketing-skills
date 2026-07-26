@@ -8,7 +8,6 @@ Before a claim about other people is displayed or tested, identify its **referen
 
 ## N11 — Social Identity
 
-- **Tier:** core.
 - **Mechanism:** self-definition through a meaningful group membership can affect group-contingent comparison, norms, and behavior.
 - **Diagnostic signals:** self-identification or a valid categorization is present; the group is meaningful and relevant; behavior differs in the predicted in-group/out-group direction.
 - **Distinguish from:** demographic targeting, similarity, generic popularity, descriptive or injunctive norms, normative pressure, and an authority claim. Group membership is neither consent to persuasion nor proof that all members share a preference.
@@ -18,7 +17,6 @@ Before a claim about other people is displayed or tested, identify its **referen
 
 ## M21 — Bandwagon cues / descriptive norms
 
-- **Tier:** child.
 - **Mechanism:** truthful information that a relevant group performs an action can change perceived prevalence and choice. A **descriptive norm** says what the group does; an **injunctive norm** says what it approves. “Social proof” is only a practitioner umbrella, never a diagnosis.
 - **Diagnostic signals:** a truthful, relevant reference group; an auditable baseline and time window; a clear descriptive versus injunctive cue; and a public/private context. The displayed outcome must match the claim.
 - **Distinguish from:** N12 approval/sanction motive, N13 private evidence-based belief update, N11 identity, M24 expertise, M22 exchange, M27 scarcity, and a mere review count. Popularity does not establish quality, approval, independence, or correctness.
@@ -28,7 +26,6 @@ Before a claim about other people is displayed or tested, identify its **referen
 
 ## M22 — Reciprocity Principle
 
-- **Tier:** core.
 - **Mechanism:** a real, intentional, unconditional benefit from a source can change the probability of a later reciprocal action.
 - **Diagnostic signals:** the same source provides a useful benefit before the request, with no concealed purchase condition; timing, benefit value, baseline action rate, and actual response are known.
 - **Distinguish from:** loyalty, discounting, a reciprocal concession, commitment, liking, gratitude, and an operational change that merely removes friction or shifts a benefit mechanically. A gift effect alone does not identify a debt norm rather than gratitude or liking.
@@ -38,7 +35,6 @@ Before a claim about other people is displayed or tested, identify its **referen
 
 ## M24 — Authority / source credibility
 
-- **Tier:** child.
 - **Mechanism:** with message content held constant, truthful domain-relevant **expertise**, **trustworthiness**, or a disclosed **legitimate power** role can change judgment or action.
 - **Diagnostic signals:** verified, domain-relevant credentials; a source and conflicts disclosed; identical evidence/content; and a source effect on an accuracy-sensitive or behavioral outcome.
 - **Distinguish from:** social status or fame, celebrity endorsement, liking, popularity, obedience, and an authority costume. Expertise, trustworthiness, legitimate power, social status, and obedience are separate variables: formal rank must not substitute for evidence or meaningful choice.
@@ -48,7 +44,6 @@ Before a claim about other people is displayed or tested, identify its **referen
 
 ## M27 — Scarcity cues
 
-- **Tier:** child.
 - **Mechanism:** a truthful cue about objectively limited availability can affect valuation or urgency.
 - **Diagnostic signals:** real stock, capacity, deadline, or eligibility limit; its source and audit trail; the actual baseline availability; and a claim that is removed when the constraint ends.
 - **Distinguish from:** popularity/demand, bandwagon cues, loss framing, uniqueness, price promotion, and fake urgency. Do not replace one scarcity source with another or infer real scarcity from high interest.
@@ -58,7 +53,6 @@ Before a claim about other people is displayed or tested, identify its **referen
 
 ## N12 — Normative Social Influence
 
-- **Tier:** child.
 - **Mechanism:** a person conforms publicly to obtain approval or avoid disapproval or sanctions.
 - **Diagnostic signals:** behavior is more sensitive to public visibility, relevant-group approval, or sanctions than to private choice; private belief is measured separately.
 - **Distinguish from:** an injunctive-norm message (which may not activate the motive), M21 descriptive prevalence, N13 information about reality, and general compliance. A public choice is not proof of private acceptance.
@@ -68,7 +62,6 @@ Before a claim about other people is displayed or tested, identify its **referen
 
 ## N13 — Informational Social Influence
 
-- **Tier:** child.
 - **Mechanism:** people use others’ judgments or behavior as evidence about reality or the correct action, especially under uncertainty.
 - **Diagnostic signals:** a private belief or accuracy-sensitive choice moves with truthful, diagnostic, independent social evidence; source sample, independence, and uncertainty are known.
 - **Distinguish from:** M21 descriptive prevalence, N12 approval pressure, M24 source expertise, and generic popularity. Observed prevalence can activate several mechanisms; it is not informational influence by itself.

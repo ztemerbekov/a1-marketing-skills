@@ -4,7 +4,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## M06 — Sunk-Cost Effect
 
-- **Tier:** core.
 - **Mechanism:** a past, irrecoverable investment of money, time, or effort increases continuation, use, or further investment even when future costs and benefits are held constant.
 - **Diagnostic signals:** a real past investment is personally salient and cannot be recovered; future value, exit friction, and alternatives can be compared separately; the outcome is continuation or additional investment.
 - **Distinguish from:** visible progress or utilization alone, goal-gradient, endowment, loss aversion, a contractual penalty, switching cost, or a better future offer. A paid subscription is not enough: the investment must be irrecoverable and not merely a future cancellation cost.
@@ -14,7 +13,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## M08 — IKEA Effect
 
-- **Tier:** child of psychological ownership / effort justification.
 - **Mechanism:** successfully making or assembling a product can increase its valuation relative to a comparable finished product.
 - **Diagnostic signals:** the person performs meaningful personal labor, completes the creation successfully, retains a comparable output, and then values or chooses it.
 - **Distinguish from:** ownership without production, generic effort justification, customization, co-creation, or selection by people who already like the product. Mere configuration or an unfinished task does not establish this model.
@@ -24,7 +22,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## M14 — Goal-Gradient Effect
 
-- **Tier:** child of goal pursuit / progress.
 - **Mechanism:** action rate can accelerate as a person perceives they are closer to a defined, attainable reward or goal.
 - **Diagnostic signals:** an explicit goal and reward exist; progress and remaining distance are visible; repeated within-goal actions can be measured; the progress is real.
 - **Distinguish from:** generic goal setting, sunk cost, habit, a deadline, near-miss, or selection among people already close to completion. A progress bar alone is not evidence.
@@ -34,7 +31,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## N01 — Implementation Intentions
 
-- **Tier:** core.
 - **Mechanism:** a contingent “if cue X, then response Y” plan can connect an identifiable opportunity to a feasible, goal-directed response.
 - **Diagnostic signals:** the person has a meaningful voluntary goal; a stable, detectable cue and feasible action are specified; the plan is more than a reminder, schedule, or general intention.
 - **Distinguish from:** a goal intention, reminder, calendar event, habit, or generic planning. There is no implementation-intention diagnosis without both a goal and a contingent cue–response link.
@@ -44,7 +40,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## N03 — Regulatory Focus Theory
 
-- **Tier:** core.
 - **Mechanism:** promotion-oriented pursuit emphasizes advancement and aspirations, while prevention-oriented pursuit emphasizes security and duties; these orientations can shape strategy and goal evaluation.
 - **Diagnostic signals:** focus is measured with a validated instrument before the outcome or induced cleanly; strategy and behavior are measured separately from message valence.
 - **Distinguish from:** gain/loss framing, approach/avoidance, optimism/pessimism, risk aversion, or a one-dimensional personality score. Promotion wording by itself does not diagnose focus.
@@ -54,7 +49,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## N04 — Regulatory Fit
 
-- **Tier:** child of N03 Regulatory Focus Theory.
 - **Mechanism:** alignment between an actual regulatory orientation and the manner of pursuit may produce engagement or a “feeling right” that transfers to evaluation or action.
 - **Diagnostic signals:** focus and eager/vigilant pursuit strategy are independently varied or validly measured; the claimed result is an interaction, not a high score for one tailored message.
 - **Distinguish from:** regulatory focus itself, generic personalization, message congruence, clarity, valence, or familiarity. A “matched” treatment without an actual focus-by-strategy test is not regulatory fit.
@@ -64,7 +58,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## N22 — Habit / Cue–Response Automaticity
 
-- **Tier:** core.
 - **Mechanism:** repeated behavior in a stable context can create a learned disposition for a cue to trigger a response with reduced deliberation.
 - **Diagnostic signals:** a recurring contextual cue and context-stable repetition are present; automaticity or cue dependence is measured; behavior persists under lower intention or changes when the cue/context changes.
 - **Distinguish from:** frequency, loyalty, retention, streaks, reminders, implementation intentions, reward learning, or an engagement metric. Frequent use is not evidence of a habit.
@@ -74,7 +67,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## N27 — Psychological Reactance Theory
 
-- **Tier:** core.
 - **Mechanism:** a perceived threat to or removal of a valued freedom can motivate resistance, often expressed through intertwined anger and counterarguing.
 - **Diagnostic signals:** a valued choice or exit exists; controlling language, coercion, or a restricted alternative precedes perceived freedom threat, resistance, or restoration behavior.
 - **Distinguish from:** annoyance, disagreement, low trust, churn, a generic boomerang effect, poor evidence, or identity threat. Refusal without a perceived freedom threat is not enough.
@@ -84,7 +76,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## N29 — Expectancy–Disconfirmation Model
 
-- **Tier:** core.
 - **Mechanism:** a person compares perceived performance with a prior expectation; positive or negative disconfirmation contributes to satisfaction.
 - **Diagnostic signals:** expectations are measured before the experience; actual or perceived performance, disconfirmation, and satisfaction are measured as distinct constructs in sequence.
 - **Distinguish from:** satisfaction, retention, loyalty, regret, or post-choice dissonance. A satisfaction score does not establish prior expectations, disconfirmation, or future retention.
@@ -94,7 +85,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## M11 — Status-quo bias
 
-- **Tier:** core.
 - **Mechanism:** a person disproportionately retains the current state or prior choice.
 - **Diagnostic signals:** an explicit current choice exists; switching requires action; stable users retain an existing option more than comparable new users.
 - **Distinguish from:** a default (preselected option), switching friction, inertia, endowment, sunk cost, or omission. A non-switch is not automatically status-quo bias.
@@ -103,7 +93,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## M12 — Default effect
 
-- **Tier:** core.
 - **Mechanism:** an option is selected more often when it is preselected or applied automatically while opting out remains possible.
 - **Diagnostic signals:** a real preselection or automatic enrollment exists; users can change it; selection differs from an otherwise comparable active-choice flow.
 - **Distinguish from:** status quo, recommendation, visual salience, forced choice, and hidden consent. No preselection means this card is not the primary explanation.
@@ -112,7 +101,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## M13 — Choice overload
 
-- **Tier:** child.
 - **Mechanism:** a choice set can impair decision or satisfaction when its complexity exceeds a user's ability or motivation to evaluate it.
 - **Diagnostic signals:** the change increased meaningful alternatives, attributes, comparability burden, or decision stakes; users delay, abandon, or choose poorly relative to a simpler, informative alternative.
 - **Distinguish from:** generic more-options-is-bad stories, poor information hierarchy, unsuitable options, traffic mismatch, or a decoy/anchor. There is no universal option-count threshold.
@@ -121,7 +109,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## M30 — Loss aversion
 
-- **Tier:** child.
 - **Mechanism:** comparable losses can receive more decision weight than gains; this is one component of prospect theory, not a synonym for any reluctance to pay or change.
 - **Diagnostic signals:** equivalent gain-versus-loss descriptions lead to different choices while the factual outcome, stakes, and timing are held constant.
 - **Distinguish from:** endowment, status quo, risk aversion, switching cost, and bad offer economics.
@@ -130,7 +117,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## M31 — Anchoring
 
-- **Tier:** core.
 - **Mechanism:** an initial relevant numeric reference can shift later numerical judgment or willingness to pay.
 - **Diagnostic signals:** users see an earlier number before estimating, comparing, or choosing; comparable groups receive different credible references; later judgments shift toward the reference.
 - **Distinguish from:** an informative market price, a transparent comparison, decoy effects, or framing. A number merely appearing on a page is not proof of anchoring.
@@ -139,7 +125,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## M32 — Decoy effect
 
-- **Tier:** child.
 - **Mechanism:** adding an asymmetrically dominated third option can alter preference between two target options.
 - **Diagnostic signals:** a binary choice becomes a ternary set; the added option is genuinely worse than one target on all relevant dimensions and comparable to it; target shares are measured.
 - **Distinguish from:** a merely unattractive plan, a transparent lower-value tier, anchor, or choice overload. Without asymmetric dominance, do not use this model.
@@ -148,7 +133,6 @@ These are diagnosis tools, not labels to apply because an interface contains pri
 
 ## M33 — Framing
 
-- **Tier:** child. The canonical tier is owned by the [model index](model-index.md).
 - **Mechanism:** equivalent descriptions or reference points can lead to different choices because people interpret the decision differently.
 - **Diagnostic signals:** alternatives are materially equivalent; only the presentation of outcomes, risk, or reference point changes; comprehension is preserved.
 - **Distinguish from:** changed economics, omitted terms, loss aversion, anchoring, and manipulation through ambiguity. If the meaning changes, this is not a clean framing test.
@@ -164,7 +148,6 @@ a payment method alone does not select a card.
 
 ## M07 — Endowment effect
 
-- **Tier:** core.
 - **Mechanism:** genuine ownership or entitlement changes valuation or exchange
   relative to an otherwise comparable non-ownership state.
 - **Diagnostic signals:** assigned credible ownership/entitlement, an identical
@@ -183,7 +166,6 @@ a payment method alone does not select a card.
 
 ## M10 — Present bias / temporal discounting
 
-- **Tier:** core.
 - **Mechanism:** an immediate outcome receives extra decision weight relative
   to future outcomes, producing a dynamic preference reversal; temporal
   discounting is the broader family.
@@ -201,7 +183,6 @@ a payment method alone does not select a card.
 
 ## M19 — Mental accounting
 
-- **Tier:** core.
 - **Mechanism:** people label, budget, bracket, or evaluate transactions in
   mental accounts that make otherwise fungible money non-fungible.
 - **Diagnostic signals:** a budget/label/account or transaction framing changes
@@ -220,7 +201,6 @@ a payment method alone does not select a card.
 
 ## N15 — Reference price
 
-- **Tier:** core.
 - **Mechanism:** an internal remembered/expected price or an external displayed
   price becomes a comparison standard for price judgment and transaction value.
 - **Diagnostic signals:** a credible, measured internal standard or a verified
@@ -239,7 +219,6 @@ a payment method alone does not select a card.
 
 ## N16 — Pain of paying
 
-- **Tier:** core.
 - **Mechanism:** immediate or anticipated negative affect when a person becomes
   aware of losing financial resources at payment.
 - **Diagnostic signals:** a transparent payment-coupling/salience manipulation
@@ -258,7 +237,6 @@ a payment method alone does not select a card.
 
 ## M09 — Zero-price effect
 
-- **Tier:** child.
 - **Mechanism:** demand changes discontinuously when a very-low positive total
   price becomes a true zero, beyond a smooth price response.
 - **Diagnostic signals:** a zero total relevant price, a very-low positive
@@ -276,7 +254,6 @@ a payment method alone does not select a card.
 
 ## M35 — Charm pricing / left-digit effect
 
-- **Tier:** child.
 - **Mechanism:** a price crossing a left-digit boundary (for example, 2.99
   versus 3.00) can be encoded as lower by more than the nominal difference.
 - **Diagnostic signals:** the ending crosses the left digit, numerical distance
@@ -295,7 +272,6 @@ a payment method alone does not select a card.
 
 ## N17 — Price–quality inference
 
-- **Tier:** core.
 - **Mechanism:** under quality uncertainty, people use price as an extrinsic
   cue to infer quality before direct experience.
 - **Diagnostic signals:** price is varied independently of an identical

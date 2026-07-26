@@ -1,5 +1,11 @@
 # Evidence ledger
 
+## Review basis
+
+- Scientific-evidence review date: 25 July 2026.
+- Scope: evidence map used to adjudicate this catalog.
+- Limit: this is not a systematic review, certification, or a prediction of local marketing effects.
+
 Evidence grades are operational confidence labels for this skill: **A** has strong synthesis and/or robust foundational evidence; **B** has useful evidence with meaningful limits or heterogeneous synthesis; **C** is conceptually relevant but especially contested or context-sensitive. None implies a local causal result or a promised effect size.
 
 ## M06 — Sunk-Cost Effect (B)

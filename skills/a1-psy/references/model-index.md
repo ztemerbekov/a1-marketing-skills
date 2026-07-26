@@ -2,17 +2,19 @@
 
 This is the canonical installed registry for `a1-psy`: it owns the stable ID,
 canonical name, tier, grade, aliases, destination, and short boundary for each
-included position. It intentionally contains **59** positions: 20 `CORE`, 18
-`CHILD`, 12 `SUPPORT`, and 9 `RESEARCH`.
+included position.
 
-`CORE` and `CHILD` can be selected in an ordinary diagnosis when their
-operation matches. `SUPPORT` may route or constrain analysis but is never the
-primary psychological cause. `RESEARCH` is unavailable to ordinary diagnosis;
-explain it only when the user explicitly asks, keeping its uncertainty and
-non-runtime status visible.
+## Catalog at a glance
 
-The installed catalog intentionally has no records for excluded or unresolved
-candidates. A requested name absent from this index is not a selectable model.
+| Catalog role | Positions | May be selected in an ordinary diagnosis? | What it is for |
+| --- | ---: | --- | --- |
+| `CORE` + `CHILD` | **38** (20 + 18) | Yes, when the operation matches | Primary or secondary behavioral hypotheses. |
+| `SUPPORT` | **12** | No | Guardrails, routing, or non-causal explanations. |
+| `RESEARCH` | **9** | No; explicit named explanation only | Explain the named position with its uncertainty; do not recommend it as an ordinary intervention. |
+| Outside the installed catalog | **12** (10 excluded + 2 unresolved) | No | No record, route, or substitute label. |
+| **Installed total** | **59** | — | 20 `CORE`, 18 `CHILD`, 12 `SUPPORT`, and 9 `RESEARCH`. |
+
+A requested name absent from this index is not a selectable model.
 
 ## CORE — 20
 
