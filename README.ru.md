@@ -319,4 +319,4 @@ npx skills@latest remove \
 
 ## Помощь и обратная связь
 
-Есть вопрос, идея или что-то сработало не так? Напишите в [A1 Marketing Skills](https://t.me/+cdrPsIVINTxkZjEy).
+Есть вопрос, идея или что-то сработало не так? Напишите в [A1 Marketing Skills](https://t.me/+XIOtNfseTgA3MWZi).
