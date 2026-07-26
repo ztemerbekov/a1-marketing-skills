@@ -10,22 +10,19 @@ A1 Marketing Skills is a collection of Agent Skills built for the whole marketin
 
 ## What agents can already do
 
-The collection combines two connected packages for marketing context, decisions, and copy with a standalone consumer psychology skill.
+The collection is split into two connected packages for marketing decisions, reusable context, consumer psychology, and copy.
 
 ### A1 Core — Context and decisions
 
-1. **Marketing Context** (`/a1-marketing-context`) stores the team's confirmed marketing context in `.agents/marketing-context.md`, so skills that use marketing context can work from real inputs instead of inventing them.
-2. **Grill** (`/a1-grill`) pressure-tests a marketing idea, decision, or plan through a constructive interview.
+1. **Grill** (`/a1-grill`) pressure-tests a marketing idea, decision, or plan through a constructive interview.
+2. **Consumer Psychology** (`/a1-consumer-psy`) audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
+3. **Marketing Context** (`/a1-marketing-context`) stores the team's confirmed marketing context in `.agents/marketing-context.md`, so skills that use marketing context can work from real inputs instead of inventing them.
 
 ### A1 Editorial — Editing and copy
 
-3. **Editor** (`/a1-editor`) improves existing drafts within supplied constraints and available Marketing Context while preserving source facts.
-4. **Editor in Chief** (`/a1-editor-in-chief`) sets editorial direction inside approved strategy, briefs Editor, and reviews the resulting edit.
-5. **Humanize** (`/a1-humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
-
-### Consumer Psychology
-
-6. **Consumer Psychology** (`/a1-consumer-psy`) audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
+4. **Editor** (`/a1-editor`) improves existing drafts within supplied constraints and available Marketing Context while preserving source facts.
+5. **Editor in Chief** (`/a1-editor-in-chief`) sets editorial direction inside approved strategy, briefs Editor, and reviews the resulting edit.
+6. **Humanize** (`/a1-humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
 
 ## Working principles
 
@@ -247,7 +244,7 @@ For the currently packaged Claude Code collections, install A1 Marketing Suite:
 
 A1 Marketing Suite installs both functional collections as dependencies and has no skills or commands of its own:
 
-- **A1 Core:** `/a1-core:a1-marketing-context` and `/a1-core:a1-grill`
+- **A1 Core:** `/a1-core:a1-grill`, `/a1-core:a1-consumer-psy`, and `/a1-core:a1-marketing-context`
 - **A1 Editorial:** `/a1-editorial:a1-editor`, `/a1-editorial:a1-humanize`, and `/a1-editorial:a1-editor-in-chief`
 
 To install only one collection:
@@ -256,8 +253,6 @@ To install only one collection:
 /plugin install a1-core@a1-marketing-skills
 /plugin install a1-editorial@a1-marketing-skills
 ```
-
-`a1-consumer-psy` is currently available as a standalone skill through `npx skills`.
 
 ### One project only
 
