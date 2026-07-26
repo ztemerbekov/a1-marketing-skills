@@ -1,18 +1,26 @@
-# Issue Tracker: GitHub
+# Issue tracker: GitHub
 
-Issues and PRDs live in GitHub Issues for `ztemerbekov/a1-marketing-skills`. Use the `gh` CLI.
+Issues and PRDs for this repo live as GitHub issues. Use the `gh` CLI for all operations.
 
-External pull requests are not a request surface for triage.
+## Conventions
 
-## Operations
+- **Create an issue**: `gh issue create --title "..." --body "..."`
+- **Read an issue**: `gh issue view <number> --comments`
+- **List issues**: `gh issue list --state open`
+- **Comment on an issue**: `gh issue comment <number> --body "..."`
+- **Apply / remove labels**: `gh issue edit <number> --add-label "..."` / `--remove-label "..."`
+- **Close**: `gh issue close <number> --comment "..."`
 
-- Create: `gh issue create`
-- Read: `gh issue view <number> --comments`
-- List: `gh issue list`
-- Comment: `gh issue comment <number>`
-- Label: `gh issue edit <number> --add-label <label>`
-- Close: `gh issue close <number>`
+Infer the repo from `git remote -v` — `gh` does this automatically when run inside a clone.
 
-When a skill says "publish to the issue tracker," create a GitHub issue.
+## Pull requests as a triage surface
 
-When it says "fetch the relevant ticket," read the full issue and comments.
+**PRs as a request surface: no.**
+
+## When a skill says "publish to the issue tracker"
+
+Create a GitHub issue.
+
+## When a skill says "fetch the relevant ticket"
+
+Run `gh issue view <number> --comments`.

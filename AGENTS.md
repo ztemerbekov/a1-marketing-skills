@@ -6,6 +6,20 @@ Guidelines for agents working in this repository.
 
 This repository publishes marketing-focused Agent Skills for clients that understand the Agent Skills folder format.
 
+## Agent skills
+
+### Issue tracker
+
+Issues and PRDs are tracked in GitHub Issues for `ztemerbekov/a1-marketing-skills`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+The five canonical triage roles use their default GitHub label names. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+This is a single-context repository. See `docs/agents/domain.md`.
+
 ## Project Workflow
 
 - Work is tracked in GitHub Issues. See `docs/agents/issue-tracker.md`.
