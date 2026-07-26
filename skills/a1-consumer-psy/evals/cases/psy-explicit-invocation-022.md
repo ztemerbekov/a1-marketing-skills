@@ -5,7 +5,7 @@
 ## User Instruction
 
 ```text
-Use $a1-psy to explain a named model without diagnosing a live metric.
+Use $a1-consumer-psy to explain a named model without diagnosing a live metric.
 ```
 
 ## Input
@@ -21,7 +21,7 @@ Explain the default effect and one important limitation.
 
 ## Must Preserve
 
-- [ ] Treat the explicit $a1-psy invocation as the entry point for this interaction.
+- [ ] Treat the explicit $a1-consumer-psy invocation as the entry point for this interaction.
 
 ## Forbidden
 
