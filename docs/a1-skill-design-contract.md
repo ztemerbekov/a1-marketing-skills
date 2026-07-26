@@ -38,6 +38,18 @@ Use the lightest gate that makes execution safe. Missing optional context must n
 
 Prefer current user instructions and supplied material. Treat repository context as defaults unless its facts, evidence, or explicit prohibitions are protected. Never invent facts, proof, claims, decisions, or source authority.
 
+## Repository Marketing Context Resolution
+
+When a skill is explicitly permitted to consume repository Marketing Context, resolve exactly one source in the current repository, in this order:
+
+1. `.agents/marketing-context.md`;
+2. `.claude/marketing-context.md`, only when the canonical path is absent;
+3. `marketing-context.md` at the repository root, only when both earlier paths are absent.
+
+Read only the first existing path. Do not inspect, merge, or let a lower-priority context affect an ordinary run. This order selects an eligible source; it does not replace a skill-specific gate. A skill may require consent before reading, and context maintenance may require explicit authorization before migration or legacy-file removal. A material conflict between confirmed facts remains a user decision regardless of path precedence.
+
+Skills that are not permitted to consume repository Marketing Context must state that boundary and must not apply this resolution rule. Each installable skill owns its self-contained runtime instruction; this contract is the canonical design rule rather than a runtime dependency.
+
 ## Self-Contained Runtime
 
 An installed skill must contain everything required for its behavior. Keep the main instruction concise, load detailed local references only when the active branch needs them, and never depend on maintainer evals or repository-level process documents at runtime.

@@ -10,7 +10,7 @@ Read [invocation-and-scope.md](invocation-and-scope.md). Confirm explicit contex
 
 ## 2. Locate Repository State
 
-Work only in the current repository. Locate `.agents/marketing-context.md` and, only for safe legacy migration, `.claude/marketing-context.md` and root `marketing-context.md`. Treat `.agents/marketing-context.md` as the sole writable marketing context; do not search for a global profile or choose a last-used repository.
+Work only in the current repository. Locate context paths in this order: `.agents/marketing-context.md`, then `.claude/marketing-context.md`, then root `marketing-context.md`. Treat the first existing path as the active candidate for ordinary context resolution and `.agents/marketing-context.md` as the sole writable marketing context. A canonical file makes lower-priority legacy files inactive for the run. When canonical context is absent and both legacy paths exist, identify both for the migration gate but do not read, merge, migrate, or remove either one before the user resolves that gate. Do not search for a global profile or choose a last-used repository.
 
 **Complete when:** the current repository and the presence of the canonical and repository-local legacy files are known without creating any state.
 

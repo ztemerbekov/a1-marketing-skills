@@ -28,7 +28,7 @@ Start immediately when the user provides:
 1. Editable text
 2. An editing command or intent
 
-Marketing context is optional. Read `.agents/marketing-context.md` when it exists; otherwise optionally check `.claude/marketing-context.md` and `marketing-context.md`. If none exists, continue from the user's text and instruction.
+Marketing context is optional. Read only the first existing repository context in this order: `.agents/marketing-context.md`, then `.claude/marketing-context.md` when the canonical path is absent, then root `marketing-context.md` when both earlier paths are absent. Do not read or merge a lower-priority context. If none exists, continue from the user's text and instruction.
 
 Do not block on missing audience, channel, goal, tone, constraints, or marketing context. Ask only when editable text is missing or every safe edit would choose between materially different meanings. If any safe useful edit is possible, make it and briefly state a material limitation instead of asking.
 

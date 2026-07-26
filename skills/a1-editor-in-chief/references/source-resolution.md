@@ -4,7 +4,7 @@ Resolve the assignment from available sources in this order:
 
 1. Current user instructions and current task materials.
 2. Clearly applicable facts and decisions already supplied in the conversation.
-3. `.agents/marketing-context.md`, when present; otherwise optionally `.claude/marketing-context.md` or `marketing-context.md`.
+3. The first existing repository marketing context in this order: `.agents/marketing-context.md`; otherwise `.claude/marketing-context.md`; otherwise root `marketing-context.md`. Read no lower-priority context after selecting one.
 
 Resolve repository paths only inside the current repository. Never read a global marketing profile, a last-used pointer, or context from another or previously active repository.
 

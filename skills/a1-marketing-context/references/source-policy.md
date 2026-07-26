@@ -6,7 +6,7 @@ Record only information traceable to one of these sources:
 2. Material the user explicitly identifies as authoritative.
 3. Direct factual statements in authoritative project artifacts such as the repository README, product documentation, approved landing copy, or package metadata.
 4. The existing `.agents/marketing-context.md`.
-5. A repository-local `.claude/marketing-context.md` or root `marketing-context.md` only when the canonical file is absent and the migration rule in [merge-and-conflicts.md](merge-and-conflicts.md) is followed.
+5. The first eligible repository-local legacy context: `.claude/marketing-context.md` when canonical context is absent, otherwise root `marketing-context.md` only when both earlier paths are absent. Use it only when the migration rule in [merge-and-conflicts.md](merge-and-conflicts.md) is followed. When both legacy paths exist without canonical context, use neither as content until the migration gate resolves.
 
 Repository inspection is evidence collection, not research. Do not derive audience, positioning, benefits, claims, market alternatives, business goals, or product behavior from source code, filenames, dependencies, common practice, model knowledge, or what seems likely.
 

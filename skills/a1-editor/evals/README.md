@@ -64,6 +64,7 @@ Every materially changed scope boundary must have coverage for four scenarios ac
 
 - [task-specific audience and voice override context defaults](cases/context-editor-default-override-017.md)
 - [protected context conflict stops before editing](cases/context-editor-protected-conflict-018.md)
+- [canonical context wins over legacy fallbacks](cases/context-editor-precedence-019.md)
 
 ## Manual Run Protocol
 

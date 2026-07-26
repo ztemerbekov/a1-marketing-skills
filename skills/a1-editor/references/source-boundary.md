@@ -8,9 +8,8 @@ Use only:
 
 1. The editable text supplied by the user.
 2. The user's explicit instruction and constraints in the current request.
-3. `.agents/marketing-context.md`, when it exists.
-4. `.claude/marketing-context.md` or `marketing-context.md` only when `.agents/marketing-context.md` is absent.
-5. Facts the user supplied earlier in the conversation only when they clearly apply to the current text.
+3. The first existing repository marketing context in this order: `.agents/marketing-context.md`; otherwise `.claude/marketing-context.md`; otherwise root `marketing-context.md`. Read no lower-priority context after selecting one.
+4. Facts the user supplied earlier in the conversation only when they clearly apply to the current text.
 
 The instruction authorizes a transformation; it is not evidence for a new fact or marketing claim. Marketing context is optional. Its absence never blocks an otherwise safe edit.
 

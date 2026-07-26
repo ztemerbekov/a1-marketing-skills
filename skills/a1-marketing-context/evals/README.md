@@ -36,6 +36,7 @@ Use [the case template](case-template.md). Name every file exactly `<ID>.md`.
 - [mixed context and hypothesis job is fully refused](cases/context-mixed-hypothesis-016.md)
 - [legacy fallback migration is explicit and lossless](cases/context-legacy-migration-021.md)
 - [immediate interview stop creates no empty context](cases/context-interview-empty-stop-022.md)
+- [two legacy contexts stop migration](cases/context-legacy-precedence-023.md)
 
 Consumer integration regressions live in the self-contained evaluation packages of the consumers they evaluate.
 

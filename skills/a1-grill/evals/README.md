@@ -14,6 +14,9 @@ This self-contained manual suite protects the explicit, adaptive A1 Grill intera
 - [upstream decision revision](cases/grill-revision-008.md)
 - [confirmed Russian completion](cases/grill-completion-009.md)
 - [English early stop with mixed-language input](cases/grill-early-stop-010.md)
+- [Claude-local fallback consent](cases/grill-context-fallback-consent-011.md)
+- [root fallback refusal](cases/grill-context-root-refusal-012.md)
+- [canonical context wins over fallbacks](cases/grill-context-precedence-013.md)
 
 ## Manual Run Protocol
 
