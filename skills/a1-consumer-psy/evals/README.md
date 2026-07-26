@@ -37,3 +37,4 @@ For every selected case:
 | 16. Identity, autonomy, and vulnerability | Identity and reactance protect voluntary, non-exploitative choice. | `psy-identity-vulnerability-015`, `psy-freedom-threat-012` |
 | 17. Truth and dark-pattern risk | Fabricated scarcity or proof is warned about while a truthful test remains available. | `psy-false-scarcity-005`, `psy-scarcity-source-014`, `psy-social-evidence-source-013` |
 | 18. Catalog and execution boundary | Guardrails, research-only/unlisted positions, and production work remain outside ordinary diagnosis. | `psy-guardrail-framework-018`, `psy-guardrail-hick-016`, `psy-guardrail-routing-017`, `psy-guardrail-survivorship-019`, `psy-research-only-020`, `psy-unlisted-model-021`, `psy-execution-boundary-024` |
+| 19. Language and localized output | Runtime messages follow the instruction language while supplied copy and terms keep their language. | `psy-language-009`, `psy-language-post-change-026` |
