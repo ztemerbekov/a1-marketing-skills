@@ -18,6 +18,8 @@ Use [the case template](case-template.md). Name every file exactly `<ID>.md`.
 
 ## Suite
 
+Use the repository's [risk-based semantic-evaluation gates](../../../AGENTS.md#semantic-evaluation-gates) before choosing a manual run. For a bounded runtime change, select the cases that cover the changed context behavior and directly adjacent safety cases. A full `a1-marketing-context` run means every case below; run it when the repository policy selects the full-suite gate.
+
 - [natural Auto-draft invocation](cases/context-natural-invocation-001.md)
 - [passive events cause no write](cases/context-passive-noop-002.md)
 - [direct field update](cases/context-direct-update-003.md)
@@ -51,4 +53,4 @@ Across the suite, scope coverage includes `In scope`, `Out of scope`, `Mixed job
 5. Treat ambiguous evidence as failure. Mark a case pass only when every criterion passes.
 6. Summarize the tested cases, client, model, revision, and limitations in the pull request or release notes.
 
-Structural validation checks the package shape and permanent boundary assertions. It does not replace human semantic judgment.
+The repository policy defines escalation; structural validation checks objective package shape only and does not replace human semantic judgment.

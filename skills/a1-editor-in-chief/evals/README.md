@@ -12,6 +12,8 @@ Use [the case template](case-template.md) for new cases. Filenames must match th
 
 ## Suite
 
+Use the repository's [risk-based semantic-evaluation gates](../../../AGENTS.md#semantic-evaluation-gates) before choosing a manual run. For a bounded runtime change, select the cases that cover the changed workflow and directly adjacent safety cases. A full `a1-editor-in-chief` run means every case below; run it when the repository policy selects the full-suite gate.
+
 - [missing Editor dependency](cases/chief-dependency-001.md)
 - [explicit invocation and adaptive gate](cases/chief-explicit-002.md)
 - [complete assignment and minimal output](cases/chief-explicit-003.md)
@@ -40,4 +42,4 @@ Use [the case template](case-template.md) for new cases. Filenames must match th
 4. Treat ambiguous evidence as failure.
 5. Summarize the tested cases, client, model, revision, and limitations in the pull request or release notes.
 
-Structural validation never substitutes for semantic judgment.
+The repository policy defines escalation; structural validation never substitutes for semantic judgment.

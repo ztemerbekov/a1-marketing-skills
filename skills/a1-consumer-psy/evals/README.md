@@ -4,22 +4,16 @@ This manual suite tests `a1-consumer-psy` through its installed public interacti
 Each case is a non-canonical regression fixture: runtime instructions must not
 copy its scenario, wording, or expected model choice.
 
-## Mandatory release gate
+## Selecting a run
 
-Before merging or releasing a revision that changes runtime behavior:
+Use the repository's [risk-based semantic-evaluation gates](../../../AGENTS.md#semantic-evaluation-gates) before choosing a manual run. For a bounded runtime change, select the cases in the changed parent family below and directly adjacent safety cases. A full `a1-consumer-psy` run means every case cited in this README; run it when the repository policy selects the full-suite gate.
+
+For every selected case:
 
 1. Install the candidate `a1-consumer-psy` revision in a clean client session.
-2. Run every case below, covering all 18 parent runtime-behavior families.
-3. Reproduce only the setup written in each case and submit its exact user
-   instruction and input without paraphrasing.
-4. Judge every `Must Change`, `Must Preserve`, and `Forbidden` criterion.
-5. Treat ambiguous evidence as failure. In the pull request or release, record
-   the case IDs, client, model, revision, pass/fail evidence, and limitations.
-
-Structural validation confirms package shape only. It does not replace this
-semantic evaluation, and no PR may claim manual semantic validation before this
-run has occurred. A case can support a closely adjacent family; a full run means
-every listed case, not a sample of 18.
+2. Reproduce only the setup written in the case and submit its exact user instruction and input without paraphrasing.
+3. Judge every `Must Change`, `Must Preserve`, and `Forbidden` criterion.
+4. Treat ambiguous evidence as failure. Record the required evidence in the pull request or release under the repository policy.
 
 ## Coverage map
 
