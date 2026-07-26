@@ -43,9 +43,7 @@ Complete this stage when one in-scope root object is clear and any mixed-job bou
 
 ### 2. Resolve sources and facts
 
-Read user-supplied and explicitly identified materials before asking for facts they contain. Find readily discoverable objective facts with the available environment or tools rather than asking the user to retrieve them.
-
-Check only which first eligible repository context path exists, in this order: `.agents/marketing-context.md`, then `.claude/marketing-context.md` when the canonical path is absent, then root `marketing-context.md` when both earlier paths are absent. Do not read any content during this check or inspect a lower-priority path after selecting one. When an eligible path exists and the user has not already made a clear choice for this session, ask early whether to use it. Recommend using it because it can supply confirmed project information, and explain that declining gives a clean-slate grilling. Read only the selected path after consent. Continue silently when no eligible path exists, and continue without it when consent is declined.
+Use the current conversation and directly supplied or explicitly identified task materials as the complete context for the grilling. Read the selected materials before asking for facts they contain. Find readily discoverable objective facts with the available environment or tools rather than asking the user to retrieve them.
 
 Separate facts, assumptions, and decisions:
 
@@ -54,7 +52,7 @@ Separate facts, assumptions, and decisions:
 - Leave decisions to the user while attaching one recommended answer to each decision question.
 - When a missing fact requires substantial customer, competitive, or market research, make it an assumption or deferred branch and recommend a concrete, proportionate validation step. Keep narrow fact-finding as interview legwork; keep full research outside this job.
 
-Complete this stage when source permission is resolved, facts available for the current branch have been gathered, and remaining uncertainty is labeled. Repeat the necessary legwork when later branches expose new factual dependencies.
+Complete this stage when facts available for the current branch have been gathered and remaining uncertainty is labeled. Repeat the necessary legwork when later branches expose new factual dependencies.
 
 ### 3. Build the adaptive decision tree
 
