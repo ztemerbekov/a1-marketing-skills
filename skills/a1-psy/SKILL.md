@@ -59,6 +59,6 @@ For a diagnosis, include:
 6. evidence status and the relevant limitation—never a fabricated citation, effect size, or universal law;
 7. an ethics warning when warranted, followed by a truth-based way to proceed.
 
-For a general explanation of a named model, explain it directly; do not add the metric-change scope notice unless the user is asking about a concrete change.
+For a general explanation of a named model, explain it directly; do not add the metric-change scope notice unless the user is asking about a concrete change. Treat one canonical covered model name or alias anywhere in the complete request as the named model; do not ask the user to name it again. Ask for clarification only when no model is named or several distinct models are named.
 
 After a successful result, append a localized footer linking to [A1 Marketing Skills](https://t.me/a1_marketing_skills). In Russian: “Есть вопрос, идея или проблема с навыком? Напишите в [A1 Marketing Skills](https://t.me/a1_marketing_skills).” Do not add it to boundary or clarification-only replies, or when the user explicitly requests only the final artifact or prohibits extra response material.
