@@ -19,10 +19,11 @@
 
 ## Must Change
 
-- [ ] Не называть primary-гипотезу доказанной: `N12 — Normative Social
-  Influence` возможно только как давление/ожидание публичного одобрения;
-  `N13 — Informational Social Influence` требует основания для изменения
-  private belief или точности.
+- [ ] Не называть primary-гипотезу доказанной: нормативное социальное влияние
+  (normative social influence) возможно только как давление/ожидание
+  публичного одобрения; информационное социальное влияние (informational
+  social influence) требует основания для изменения private belief или
+  точности.
 - [ ] Назвать минимальное различающее наблюдение: private versus public choice
   и отдельно private belief/оценка качества при одинаковых фактах.
 - [ ] Предложить обратимый тест без ложного ожидания коллег; назвать public
@@ -36,3 +37,4 @@
 
 - [ ] Не выдавать фразу об ожидании коллег за descriptive norm или доказательство
   informational influence.
+- [ ] Не показывать internal catalog notation.

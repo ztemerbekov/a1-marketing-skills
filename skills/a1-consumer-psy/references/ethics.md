@@ -7,14 +7,17 @@ fabricate facts.
 
 ## Required assessment
 
-For every proposed intervention, assign:
+For every proposed intervention, assess severity internally as low, moderate, or
+high and identify any applicable risk conditions. The internal condition names
+guide the diagnosis; never display them as user-facing codes.
 
-- **Severity:** `LOW`, `MODERATE`, or `HIGH`.
-- **Flags:** zero or more of `deception`, `false-scarcity`, `fabricated-proof`,
-  `ambiguous-source`, `obstructed-exit`, `vulnerability`, `privacy`,
-  `profiling`, `exclusion`, `coercion`, `compulsion`.
-
-Show the assessment for every intervention. For `LOW` with no flags, one compact line is enough: `Ethics assessment: LOW; flags: none.` For `MODERATE` or `HIGH`, show the full warning below. Source ambiguity is a material omission when a social-evidence or authority claim lacks a reference group, provenance, baseline, or domain relevance; do not fill it with a generic popularity claim.
+Show the assessment for every intervention in the user's instruction language.
+For a low-risk intervention, one compact sentence may state that the choice is
+transparent, reversible, and easy to refuse. For a moderate- or high-risk
+intervention, give the full warning below. Source ambiguity is a material
+omission when a social-evidence or authority claim lacks a reference group,
+provenance, baseline, or domain relevance; do not fill it with a generic
+popularity claim.
 
 ## How to determine severity
 
@@ -27,12 +30,13 @@ Show the assessment for every intervention. For `LOW` with no flags, one compact
 
 ## Warning format
 
-When severity is `MODERATE` or `HIGH`, say:
+When severity is moderate or high, say:
 
-1. the severity and applicable flags;
-2. the concrete mechanism of potential harm;
-3. a truth-based alternative that still tests the behavioral hypothesis;
-4. an added countermetric or reversibility condition.
+1. the localized severity and why it applies;
+2. the concrete interface feature, possible harm, and affected users;
+3. what is observed versus still uncertain;
+4. a truth-based alternative that still tests the behavioral hypothesis; and
+5. an added countermetric or reversibility condition.
 
 Continue helping with the user's requested optimization after the warning; do
 not turn the warning into a refusal or an ethical veto. Offer a transparent
@@ -54,14 +58,14 @@ Never invent or imply facts that are not true: availability, deadlines, inventor
 
 ## Pricing and payment warning
 
-When a pricing or payment proposal involves deception, hidden fees, a false
-reference/comparator, or coercive payment pressure, give a **two-axis
-warning** even if another model is being discussed:
+When a pricing or payment proposal involves a misleading claim, hidden fee,
+false comparator, or payment pressure, explain two related risks even if
+another model is being discussed:
 
-1. **Truthfulness axis:** identify the inaccurate or omitted price, comparator,
+1. **Truthfulness:** identify the inaccurate or omitted price, comparator,
    payment term, renewal, fee, or condition.
-2. **Payment-autonomy axis:** identify pressure, reduced ability to compare,
-   overspending/debt risk, or an asymmetric cancellation/refund path.
+2. **Payment autonomy:** identify pressure, reduced ability to compare,
+   overspending or debt risk, or an asymmetric cancellation or refund path.
 
 Then continue with a truthful alternative: disclose the total price and timing,
 use only verifiable comparators with their source/period, keep payment and exit
