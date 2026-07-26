@@ -223,6 +223,8 @@ Read the [full Editor in Chief behavior](./skills/a1-editor-in-chief/SKILL.md).
 
 The first release covers choice architecture: status quo, defaults, choice overload, loss aversion, anchoring, decoys, and framing. It warns when a proposed intervention is deceptive or otherwise risky, then helps test a transparent alternative.
 
+It also treats broad frameworks and analyst errors as guardrails: they can route analysis or be explained directly, but are not presented as a user's primary psychological cause.
+
 </details>
 
 ---

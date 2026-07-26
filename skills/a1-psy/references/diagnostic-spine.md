@@ -12,11 +12,21 @@ For a post-change metric request, show the scope notice from `SKILL.md` first. I
 
 Use the active model reference to test whether the facts meet the model's diagnostic conditions.
 
+Before selecting a cause, check whether a named label is a support position in `framework-and-analyst-guardrails.md`. A support position may route analysis, reject a false synonym, or identify an analyst error; it is never a primary or secondary psychological cause in an ordinary diagnosis. If it is the user's only candidate, explain the guardrail and return to a named active mechanism or `No primary hypothesis yet`. When the user asks to explain a support framework itself, explain it concisely under the same language and evidence rules, without a live-metric wrapper.
+
 - Select **one primary** only when the facts favor it over its nearest alternatives.
 - Add **zero to two secondary** hypotheses only if each is distinct and decision-useful.
 - Select **no primary** when the evidence does not discriminate. Name the uncertainty plainly; do not fill the gap with a generic list of biases.
 
 Never use a user example as a rule that a particular interface change must imply a particular model.
+
+For pricing/valuation models, retain a hypothesis only when the evidence
+matches all four dimensions: (1) the actual manipulation or reference source,
+(2) the experienced payment or choice process, (3) the measured outcome, and
+(4) the relevant horizon. A changed price, plan, ending, payment method, or
+revenue metric alone does not satisfy this test. Child models may be primary
+only when they are the narrowest best match; otherwise state that there is no
+primary hypothesis yet.
 
 For **each retained hypothesis**, provide a compact hypothesis card containing its diagnostic signs, missing discriminating evidence, evidence-context limitation, prediction, minimum test, primary metric, countermetrics, plausible backfire, and decision rule. A single experiment may serve multiple cards only when it genuinely distinguishes all of them; say how its outcome separates them.
 
@@ -36,6 +46,12 @@ Offer a reversible, truth-based intervention or experiment. Specify:
 - **Decision rule:** what result would weaken or reject the hypothesis.
 
 Do not promise an uplift. Do not invent a sample-size requirement or statistical result.
+
+For pricing tests, select the behavior metric together with the relevant
+economic and durable outcomes: revenue and contribution margin where pricing
+changes, plus refunds, cancellation, trust, comprehension, and durable
+behavior where applicable. A perceptual result, a higher start rate, or gross
+revenue alone is not a complete win condition.
 
 ## 5. Explain evidence proportionately
 
