@@ -118,15 +118,15 @@ Read the [full Marketing Context behavior](./skills/a1-marketing-context/SKILL.m
 </details>
 
 <details>
-<summary><strong>A1 Grill — pressure-test a decision before acting</strong></summary>
+<summary><strong>Grill — pressure-test a decision before acting</strong></summary>
 
 <br>
 
-A1 Grill is a tough but constructive review of a marketing idea or plan. No hand-holding or fluff, but no toxicity or passive aggression either—like a direct conversation with a colleague.
+Grill is a tough but constructive review of a marketing idea or plan. No hand-holding or fluff, but no toxicity or passive aggression either—like a direct conversation with a colleague.
 
 Each step brings one clear recommendation and one precise question. The skill analyzes the decision deeply instead of following a checklist.
 
-What you get: A1 Grill returns an actionable decision, surfaces risks and assumptions, and gives you one concrete next step.
+What you get: Grill returns an actionable decision, surfaces risks and assumptions, and gives you one concrete next step.
 
 **Try:**
 
@@ -134,7 +134,7 @@ What you get: A1 Grill returns an actionable decision, surfaces risks and assump
 >
 > We have an idea to launch a Telegram channel to attract B2B leads to our service. Help us break down the hypothesis and show where the weak points and blind spots are.
 
-Read the [full A1 Grill behavior](./skills/a1-grill/SKILL.md).
+Read the [full Grill behavior](./skills/a1-grill/SKILL.md).
 
 </details>
 
