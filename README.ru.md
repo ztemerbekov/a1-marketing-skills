@@ -12,7 +12,7 @@ A1 Marketing Skills — это набор навыков для ИИ-агент�
 
 Набор разделён на два взаимосвязанных пакета для работы с маркетинговыми решениями, общим контекстом, психологией потребителя и текстом.
 
-### A1 Intelligence — Экспертиза и решения
+### A1 Core — Экспертиза и решения
 
 1. **Прожарка** (`/a1-grill`) проверяет на прочность маркетинговую идею, решение или план через конструктивное интервью.
 2. **Психология потребителя** (`/a1-consumer-psy`) проверяет гипотезы психологии потребителя перед запуском и объясняет фактические результаты тестов по научной базе, отсеивая псевдонаучные мифы.
@@ -244,13 +244,13 @@ A1 Marketing Skills — это набор навыков для ИИ-агент�
 
 A1 Marketing Suite устанавливает оба функциональных набора как зависимости и не содержит собственных навыков или команд:
 
-- **A1 Intelligence:** `/a1-intelligence:a1-grill`, `/a1-intelligence:a1-consumer-psy` и `/a1-intelligence:a1-marketing-context`
+- **A1 Core:** `/a1-core:a1-grill`, `/a1-core:a1-consumer-psy` и `/a1-core:a1-marketing-context`
 - **A1 Editorial:** `/a1-editorial:a1-editor`, `/a1-editorial:a1-humanize` и `/a1-editorial:a1-editor-in-chief`
 
 Чтобы установить только один набор:
 
 ```text
-/plugin install a1-intelligence@a1-marketing-skills
+/plugin install a1-core@a1-marketing-skills
 /plugin install a1-editorial@a1-marketing-skills
 ```
 

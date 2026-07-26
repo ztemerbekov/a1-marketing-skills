@@ -8,8 +8,8 @@
   },
   "plugins": [
     {
-      "name": "a1-intelligence",
-      "displayName": "A1 Intelligence",
+      "name": "a1-core",
+      "displayName": "A1 Core",
       "description": "Stress-test marketing strategies and validate consumer psychology hypotheses to eliminate costly missteps before your team executes.",
       "keywords": [
         "marketing-context",
@@ -60,7 +60,7 @@
       "source": "./plugins/a1-marketing-suite",
       "strict": false,
       "dependencies": [
-        "a1-intelligence",
+        "a1-core",
         "a1-editorial"
       ]
     }
