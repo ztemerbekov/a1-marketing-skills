@@ -18,7 +18,7 @@ No product case is supplied.
 
 - [ ] Answer in English; explain subjective ease, attribution/diagnosticity, and at least perceptual versus retrieval or conceptual subtype.
 - [ ] State that ease is not inherently truth, quality, or persuasion and can reverse when people learn a different interpretation.
-- [ ] Give a named limitation from the evidence ledger.
+- [ ] Give a named limitation from the selected dossier's co-located evidence record.
 
 ## Must Preserve
 
