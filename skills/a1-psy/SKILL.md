@@ -24,7 +24,7 @@ Classify the complete request before analysis.
 - **Completed external input:** consume a completed audit, data extract, experiment result, or research that the user directly supplies; do not recreate or expand that work unless asked.
 - **Input boundary:** use only the current request and directly supplied completed inputs. Do not inspect repository context, request a separate profile, or offer a route to another skill.
 - **Out of scope:** perform technical debugging, analytics validation, attribution reconciliation, traffic-quality investigation, legal review, broad strategy ownership, marketing copy, pages, tariffs, campaigns, production implementation, or a psychological diagnosis that needs a model outside the covered set. State the boundary and the current coverage briefly; do not substitute a generic bias label.
-- **Mixed job:** when the user explicitly asks both for one of those external investigations and for a psychological diagnosis, name the split and wait for direction before doing either partial job.
+- **Mixed job:** when the user explicitly asks both for a separate out-of-scope job—including an external investigation or production artifact—and for a psychological diagnosis, name the split and wait for direction before doing either partial job.
 
 For a causal request about a changed metric, add this short notice before the diagnosis. Do not turn it into a confirmation, checklist, or interrogation:
 

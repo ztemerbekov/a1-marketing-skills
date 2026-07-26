@@ -25,7 +25,7 @@ every listed case, not a sample of 18.
 
 | Parent runtime-behavior family | What the cases protect | Case IDs |
 | --- | --- | --- |
-| 1. Explicit entry | A deliberate skill invocation starts the interaction. | `psy-explicit-invocation-022` |
+| 1. Explicit entry | A deliberate invocation starts the interaction; an uninvoked psychology request does not select the skill. | `psy-explicit-invocation-022`, `psy-no-implicit-invocation-025` |
 | 2. Scope classification | In-scope, mixed, and completed-external-input requests stay distinct. | `psy-mixed-scope-003`, `psy-completed-input-004` |
 | 3. Independent input | Analysis uses the current request and directly supplied materials only. | `psy-independent-input-023` |
 | 4. Metric-change boundary | A post-change observation is not mistaken for a cause or a technical investigation. | `psy-post-change-001`, `psy-no-primary-002`, `psy-goals-no-primary-016` |
