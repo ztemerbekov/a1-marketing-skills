@@ -266,22 +266,6 @@ Project installation keeps the selected skill versions with that project. For th
 
 ## Update or remove
 
-### Rename from `a1-psy`
-
-`a1-consumer-psy` replaces the standalone `a1-psy` skill. Installed copies are not renamed automatically, so both names can temporarily coexist. Remove `a1-psy` from the same installation scope, then install `a1-consumer-psy`; after that, invoke only `a1-consumer-psy`.
-
-For a global installation:
-
-```bash
-npx skills@latest remove a1-psy --global --yes
-npx skills@latest add ztemerbekov/a1-marketing-skills \
-  --skill a1-consumer-psy \
-  --global \
-  --yes
-```
-
-For a project-only installation, run the same commands in that project and omit `--global`.
-
 Update the six globally installed skills:
 
 ```bash
