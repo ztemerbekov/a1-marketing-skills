@@ -45,7 +45,7 @@ Complete this stage when one in-scope root object is clear and any mixed-job bou
 
 Read user-supplied and explicitly identified materials before asking for facts they contain. Find readily discoverable objective facts with the available environment or tools rather than asking the user to retrieve them.
 
-Check only whether `.agents/marketing-context.md` exists; do not read it during the check. When it exists and the user has not already made a clear choice for this session, ask early whether to use it. Recommend using it because it can supply confirmed project information, and explain that declining gives a clean-slate grilling. Read it only after consent. Continue silently when it is absent, and continue without it when consent is declined.
+Check only which first eligible repository context path exists, in this order: `.agents/marketing-context.md`, then `.claude/marketing-context.md` when the canonical path is absent, then root `marketing-context.md` when both earlier paths are absent. Do not read any content during this check or inspect a lower-priority path after selecting one. When an eligible path exists and the user has not already made a clear choice for this session, ask early whether to use it. Recommend using it because it can supply confirmed project information, and explain that declining gives a clean-slate grilling. Read only the selected path after consent. Continue silently when no eligible path exists, and continue without it when consent is declined.
 
 Separate facts, assumptions, and decisions:
 

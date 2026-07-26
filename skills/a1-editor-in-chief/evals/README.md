@@ -30,6 +30,7 @@ Use [the case template](case-template.md) for new cases. Filenames must match th
 - [third-language instruction localizes Chief delivery](cases/chief-language-017.md)
 - [task-specific audience and voice override context defaults](cases/context-chief-default-override-019.md)
 - [protected context conflict stops before the brief](cases/context-chief-protected-conflict-020.md)
+- [canonical context wins over legacy fallbacks](cases/context-chief-precedence-021.md)
 
 ## Manual Run Protocol
 

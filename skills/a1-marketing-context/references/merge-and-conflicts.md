@@ -31,11 +31,11 @@ Do not ask a generic `which is correct?` when the values can be named. Do not me
 
 ## Legacy Migration
 
-If `.agents/marketing-context.md` is absent but `.claude/marketing-context.md` or root `marketing-context.md` exists, do not strand or silently supersede the legacy values.
+If `.agents/marketing-context.md` is absent and exactly one legacy path exists, do not strand or silently supersede its values. The eligible legacy path is `.claude/marketing-context.md` when present; otherwise it is root `marketing-context.md`.
 
 - If the user has not explicitly authorized migration, make no change. Name the legacy path and ask one concrete question: whether to migrate its complete content into `.agents/marketing-context.md`, apply the requested patch, and remove the legacy source after the canonical write succeeds.
 - After explicit authorization, preserve the complete legacy content, including custom headings, comments, ordering, and formatting. Add a self-describing schema semantics note when it is missing; name the legacy headings actually retained, rather than referring only to absent canonical headings. Apply only the requested or confirmed missing values, write the canonical file first, then remove the authorized legacy source. The only file written is `.agents/marketing-context.md`.
-- If both legacy paths exist, or migration would require choosing between incompatible values, make no change and ask one concrete question naming the paths and the choice required. Do not merge them or delete either one without explicit direction.
+- If both legacy paths exist, do not let path precedence authorize a migration. Make no change and ask one concrete question naming both paths and the migration choice required. Do not read, merge, choose for migration, or delete either one without explicit direction. If migration would require choosing between incompatible values, use the same no-write question.
 
 A migration is complete only when the canonical write succeeds and the explicitly authorized legacy source is removed, leaving one public marketing context in the repository. If the canonical file already exists, it is authoritative; do not import or mutate a leftover fallback during an unrelated update.
 
