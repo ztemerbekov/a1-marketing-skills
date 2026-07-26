@@ -19,6 +19,8 @@ Use the repository's [risk-based semantic-evaluation gates](../../../AGENTS.md#s
 - [Claude-local fallback consent](cases/grill-context-fallback-consent-011.md)
 - [root fallback refusal](cases/grill-context-root-refusal-012.md)
 - [canonical context wins over fallbacks](cases/grill-context-precedence-013.md)
+- [direct product design boundary](cases/grill-product-design-boundary-014.md)
+- [product feature as marketing input](cases/grill-product-feature-input-015.md)
 
 ## Manual Run Protocol
 

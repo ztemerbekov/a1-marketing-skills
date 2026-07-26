@@ -17,7 +17,7 @@ The one user job is to sharpen one marketing object at any stage of maturity. Tr
 Classify the complete request before gathering optional context or starting the interview:
 
 - **In scope:** grill one marketing idea, decision, or plan.
-- **Out of scope:** product architecture, implementation, hiring, operations, financing, or general company strategy whose central outcome is not audience or market behavior. State the boundary and stop. For a genuinely ambiguous adjacent request, ask one question about the central outcome.
+- **Out of scope:** designing product architecture, product functionality, or its implementation. Treat product facts and proposed features only as inputs to a marketing decision. When the requested result is the product solution itself, state the boundary and stop. For a genuinely ambiguous adjacent request, ask one question about the central outcome.
 - **Mixed job:** when grilling is combined with execution, content creation, full research, or another independent job, state that this skill performs only the grilling. Recommend proceeding with the grilling alone, ask whether to do so, and wait before starting either part.
 - **Completed external input:** accept finished plans, research, copy, briefs, and other artifacts as source material. Acceptance does not authorize creating, rewriting, or extending those artifacts.
 
