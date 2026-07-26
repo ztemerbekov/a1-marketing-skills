@@ -1,14 +1,14 @@
 ---
 name: a1-psy
-description: Diagnose bounded behavioral marketing outcomes with evidence-bounded psychological hypotheses, testable interventions, and explicit scientific limits.
+description: Audit consumer psychology hypotheses or analyze test outcomes using peer-reviewed research to explain user behavior, identify flaws, and set evidence limits.
 disable-model-invocation: true
 ---
 
-# A1 Psychology
+# Consumer Psychology
 
 ## Purpose
 
-Diagnose a bounded behavioral marketing outcome through behavioral and psychological hypotheses. Give the user a small, testable next move—not a confident story disguised as science.
+Audit consumer psychology hypotheses before launch or explain marketing test outcomes using peer-reviewed research. Identify behavior patterns, flaws, and evidence limits—not a confident story disguised as science.
 
 Supported families are listed in the local model references. Treat their stated boundaries as part of the diagnosis, not as optional caveats.
 

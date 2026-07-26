@@ -10,7 +10,7 @@ A1 Marketing Skills is a collection of Agent Skills built for the whole marketin
 
 ## What agents can already do
 
-The collection combines two connected packages for marketing context, decisions, and copy with a standalone psychology skill.
+The collection combines two connected packages for marketing context, decisions, and copy with a standalone consumer psychology skill.
 
 ### A1 Core — Context and decisions
 
@@ -23,9 +23,9 @@ The collection combines two connected packages for marketing context, decisions,
 4. **Editor in Chief** (`/a1-editor-in-chief`) sets editorial direction inside approved strategy, briefs Editor, and reviews the resulting edit.
 5. **Humanize** (`/a1-humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
 
-### A1 Psychology — Choice architecture
+### Consumer Psychology
 
-6. **A1 Psychology** (`/a1-psy`) diagnoses testable choice-architecture hypotheses behind a marketing decision or related metric change and helps design a truthful experiment.
+6. **Consumer Psychology** (`/a1-psy`) audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
 
 ## Working principles
 
@@ -207,13 +207,13 @@ Read the [full Editor in Chief behavior](./skills/a1-editor-in-chief/SKILL.md).
 </details>
 
 <details>
-<summary><strong>A1 Psychology — diagnose choice architecture with testable hypotheses</strong></summary>
+<summary><strong>Consumer Psychology — audit hypotheses with peer-reviewed research</strong></summary>
 
 <br>
 
-**What it does:** diagnoses a choice-architecture change or related marketing metric through a small set of testable psychological hypotheses. It separates what was observed from what caused it, makes uncertainty explicit, and designs a truthful, reversible experiment with countermetrics.
+**What it does:** audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
 
-**Use it when:** you want to understand a behavioral mechanism behind plan choice, an option comparison, a default, a price reference, or a related conversion change. It analyzes only the supported choice-architecture hypotheses; it does not investigate traffic, analytics, attribution, technical failures, or unrelated psychological mechanisms.
+**Use it when:** you explicitly invoke `a1-psy` to validate a consumer hypothesis before launch or explain a marketing test result. It works only from the current request and directly supplied completed inputs; it does not investigate traffic, analytics, attribution, technical failures, or unrelated psychological mechanisms.
 
 **Try:**
 
@@ -221,7 +221,7 @@ Read the [full Editor in Chief behavior](./skills/a1-editor-in-chief/SKILL.md).
 >
 > Diagnose why our plan-selection conversion fell after a page change. Give only evidence-bounded hypotheses and a falsifiable test.
 
-The first release covers choice architecture: status quo, defaults, choice overload, loss aversion, anchoring, decoys, and framing. It warns when a proposed intervention is deceptive or otherwise risky, then helps test a transparent alternative.
+The skill covers the model families documented in its local references. It provides analysis, hypotheses, experiments, metrics, countermetrics, and implementation-risk warnings; it does not create copy, pages, tariffs, campaigns, or production implementation. It warns when a proposed intervention is deceptive or otherwise risky, then helps test a transparent alternative.
 
 It also treats broad frameworks and analyst errors as guardrails: they can route analysis or be explained directly, but are not presented as a user's primary psychological cause.
 
