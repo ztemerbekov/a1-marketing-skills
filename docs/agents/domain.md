@@ -1,13 +1,24 @@
 # Domain Docs
 
-The repository currently uses a single domain context.
+## Before exploring, read these
 
-Before working, read root `CONTEXT.md` and relevant ADRs under `docs/adr/` when they exist. Their absence does not block work.
+- `CONTEXT.md` at the repo root; or
+- `CONTEXT-MAP.md` at the repo root if it exists; and
+- relevant ADRs under `docs/adr/`.
 
-Use canonical glossary terms in issue titles, specifications, tests, and skill instructions. Surface conflicts with existing terminology or ADRs instead of silently overriding them.
+If these files do not exist, proceed silently. Domain-modeling work creates them only when terms or decisions are genuinely resolved.
 
-## Reassess When Adding Skills
+## File structure
 
-Whenever a new skill is added, determine whether it belongs to the existing a1-marketing-skills domain or introduces an independently evolving domain with its own vocabulary and decisions.
+This is a single-context repository:
 
-If multiple contexts would make the boundaries clearer, raise the question with the user and recommend `CONTEXT-MAP.md`. Do not create or migrate to a multi-context layout without discussing it first.
+```
+/
+├── CONTEXT.md
+├── docs/adr/
+└── src/
+```
+
+## Use the glossary's vocabulary
+
+When naming a domain concept, use the term defined in `CONTEXT.md`. If it conflicts with an ADR, surface that conflict rather than silently overriding it.
