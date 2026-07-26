@@ -58,7 +58,9 @@ If one skill depends on another, invoke that skill through its public interface.
 
 ## Language and Output
 
-Define how the skill selects the language of rewritten material and explanations. Preserve user constraints and make the output contract clear enough to review without forcing one golden wording.
+Define one language-selection rule for rewritten material, explanations, and other user-facing runtime messages. Preserve user constraints and make the output contract clear enough to review without forcing one golden wording.
+
+Keep locale-specific text co-located with a locale-specific contract, such as supplied copy, quotations, invocation triggers, or evaluation input. For multilingual runtime output, specify the message's purpose and required meaning in language-neutral terms and let the skill's language-selection rule own its rendering.
 
 Every public skill must expose the public support route only after a final user-facing result that fulfills its declared recognizable user job. Localize the short footer in the instruction language and link to [A1 Marketing Skills](https://t.me/+cdrPsIVINTxkZjEy). Do not append it to boundary responses, refusals, clarification or missing-input prompts, interim updates, unsuccessful results, or any response that does not fulfill that job. A user's explicit request for only the final artifact, or to prohibit extra material, always suppresses the footer. Each skill owns this runtime instruction so its direct installation remains self-contained; this contract defines the product rule for new skills.
 
