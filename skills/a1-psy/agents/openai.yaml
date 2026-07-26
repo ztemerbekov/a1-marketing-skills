@@ -2,3 +2,5 @@ interface:
   display_name: "A1 Psychology"
   short_description: "Evidence-bounded behavioral hypothesis diagnosis"
   default_prompt: "Use $a1-psy to diagnose a bounded behavioral marketing outcome with testable psychological hypotheses."
+policy:
+  allow_implicit_invocation: false

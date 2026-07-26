@@ -1,6 +1,7 @@
 ---
 name: a1-psy
 description: Diagnose bounded behavioral marketing outcomes with evidence-bounded psychological hypotheses, testable interventions, and explicit scientific limits.
+disable-model-invocation: true
 ---
 
 # A1 Psychology
