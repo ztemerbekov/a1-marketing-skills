@@ -35,29 +35,20 @@ Localize the notice when the user is not writing Russian. A metric decline by it
 ## Workflow
 
 1. Read [the model index](references/model-index.md) and [the diagnostic spine](references/diagnostic-spine.md) for every accepted diagnosis. Do not select a name absent from the index.
-2. Read the relevant model family: [choice models](references/choice-models.md) for options, prices, plan selection, comparison, goals, action, repeated behavior, or post-choice decisions; [attention, belief, and experience models](references/attention-belief-experience-models.md) for familiarity, accessibility, belief selection, comprehension, affective judgment, or remembered experience. Read both only when both mechanisms are genuinely in play. For a named covered model, read its owning family reference.
-3. If the user names a framework, broad theory, analyst error, or an apparent psychological cause that may only be a descriptor, read [framework and analyst guardrails](references/framework-and-analyst-guardrails.md).
-4. A `RESEARCH` position may be explained only when the user explicitly asks about it. State that it is research-only and do not offer it as an ordinary diagnosis or intervention recommendation. When it is named alongside a live outcome, explain why its narrow operation cannot diagnose that outcome; do not propose a test or intervention based on that position.
-5. Read [the evidence ledger](references/evidence-ledger.md) for every diagnosis and every named-model explanation that needs its limitation or evidence status.
+2. Follow the index pointer for a named covered model. For an unnamed diagnosis, read only the smallest relevant dossier: [goals, action, and post-choice](references/dossiers/choice-goals-action-post-choice.md), [options, defaults, and comparison](references/dossiers/choice-options-defaults-comparison.md), [pricing and valuation](references/dossiers/choice-pricing-valuation.md), [attention, belief, and experience](references/dossiers/attention-belief-experience.md), or [social influence](references/dossiers/social-influence.md). Read another dossier only when both mechanisms are genuinely in play.
+3. If the user names a framework, broad theory, analyst error, or an apparent psychological cause that may only be a descriptor, follow its index pointer to [the guardrail dossier](references/dossiers/guardrails.md).
+4. A `RESEARCH` position may be explained only when the user explicitly asks about it. Follow its index pointer to [the research-only dossier](references/dossiers/research-only.md), state that it is research-only, and do not offer it as an ordinary diagnosis or intervention recommendation. When it is named alongside a live outcome, explain why its narrow operation cannot diagnose that outcome; do not propose a test or intervention based on that position.
+5. Read the selected model section's co-located evidence record for every diagnosis and every named-model explanation that needs its limitation or evidence status.
 6. Before proposing an intervention, read [ethics](references/ethics.md).
-7. Produce the response contract from the diagnostic spine. Give behavioral analysis, hypotheses, experiments, metrics, countermetrics, and implementation-risk warnings—not production artifacts. Do not invoke more models simply to appear comprehensive.
-   For social questions, also read [social-influence models](references/social-influence-models.md). Preserve the source, reference group, baseline, public/private context, and outcome of any social-evidence claim.
+7. Produce the response contract from the diagnostic spine. Give behavioral analysis, hypotheses, experiments, metrics, countermetrics, and implementation-risk warnings—not production artifacts. Do not invoke more models simply to appear comprehensive. For social questions, preserve the source, reference group, baseline, public/private context, and outcome of any social-evidence claim.
 
 ### Pricing routing
 
-Price, a plan card, a payment button, or a changed number is not enough to select a pricing model. Read the relevant [choice-model card](references/choice-models.md) and route only when its required actual manipulation/reference, payment or choice experience, outcome, and horizon match. Otherwise retain no primary hypothesis and name the smallest missing observation. Use a child model as primary only when it is the narrowest best-supported match; price perception, revenue change, or payment method never warrants hard-coded model selection.
+Price, a plan card, a payment button, or a changed number is not enough to select a pricing model. Read the relevant [pricing and valuation dossier](references/dossiers/choice-pricing-valuation.md) and route only when its required actual manipulation/reference, payment or choice experience, outcome, and horizon match. Otherwise retain no primary hypothesis and name the smallest missing observation. Use a child model as primary only when it is the narrowest best-supported match; price perception, revenue change, or payment method never warrants hard-coded model selection.
 
 ## Response contract
 
-For a diagnosis, include:
-
-1. the observation and its limit (what happened is not yet why it happened);
-2. one primary hypothesis only when the provided facts discriminate for it; otherwise explicitly say there is no primary hypothesis yet;
-3. up to two secondary hypotheses, only when they offer a genuinely distinct explanation;
-4. the missing observation that would distinguish hypotheses;
-5. a falsifiable intervention or test, with a primary metric, at least one countermetric, and plausible backfire conditions;
-6. evidence status and the relevant limitation—never a fabricated citation, effect size, or universal law;
-7. an ethics warning when warranted, followed by a truth-based way to proceed.
+The [diagnostic spine](references/diagnostic-spine.md) is the canonical owner of the diagnosis output contract: preserve visible uncertainty, a smallest defensible hypothesis set, a falsifiable test, proportionate evidence limits, and an ethics warning when triggered.
 
 For a general explanation of a named model, explain it directly; do not add the metric-change scope notice unless the user is asking about a concrete change. Treat one canonical covered model name or alias anywhere in the complete request as the named model; do not ask the user to name it again. Ask for clarification only when no model is named or several distinct models are named.
 

@@ -12,7 +12,7 @@ For a post-change metric request, show the scope notice from `SKILL.md` first. I
 
 Use the active model reference to test whether the facts meet the model's diagnostic conditions.
 
-Before selecting a cause, check whether a named label is a support position in `framework-and-analyst-guardrails.md`. A support position may route analysis, reject a false synonym, or identify an analyst error; it is never a primary or secondary psychological cause in an ordinary diagnosis. If it is the user's only candidate, explain the guardrail and return to a named active mechanism or `No primary hypothesis yet`. When the user asks to explain a support framework itself, explain it concisely under the same language and evidence rules, without a live-metric wrapper.
+Before selecting a cause, check whether a named label is a `SUPPORT` position in the [model index](model-index.md) and follow its guardrail-dossier pointer. A support position may route analysis, reject a false synonym, or identify an analyst error; it is never a primary or secondary psychological cause in an ordinary diagnosis. If it is the user's only candidate, explain the guardrail and return to a named active mechanism or `No primary hypothesis yet`. When the user asks to explain a support framework itself, explain it concisely under the same language and evidence rules, without a live-metric wrapper.
 
 - Select **one primary** only when the facts favor it over its nearest alternatives.
 - Add **zero to two secondary** hypotheses only if each is distinct and decision-useful.
@@ -55,7 +55,7 @@ revenue alone is not a complete win condition.
 
 ## 5. Explain evidence proportionately
 
-Give each retained hypothesis its model's evidence grade and one material limitation. Mention sources only from the local evidence ledger and only at the precision those sources support. Identify which of these dimensions materially limit the local inference: evidence quality, directness, population, outcome, horizon, and transportability. A research effect is not a guaranteed local product effect.
+Give each retained hypothesis its model's evidence grade and one material limitation. Mention sources only from the selected dossier's co-located evidence record and only at the precision those sources support. Identify which of these dimensions materially limit the local inference: evidence quality, directness, population, outcome, horizon, and transportability. A research effect is not a guaranteed local product effect.
 
 ## Output shape
 
