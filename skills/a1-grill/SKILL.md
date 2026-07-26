@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Grill
 
-Sharpen one marketing idea, decision, or plan through a constructively demanding interview. Resolve its decision dependencies one at a time, then record the shared understanding without executing it.
+Sharpen one marketing idea, decision, or plan through a constructively demanding interview. The decisions and all execution remain with the user: resolve decision dependencies one at a time, then record the confirmed shared understanding and recommend one next action.
 
 ## Invocation and Scope
 
@@ -21,7 +21,7 @@ Classify the complete request before gathering optional context or starting the 
 - **Mixed job:** when grilling is combined with execution, content creation, full research, or another independent job, state that this skill performs only the grilling. Recommend proceeding with the grilling alone, ask whether to do so, and wait before starting either part.
 - **Completed external input:** accept finished plans, research, copy, briefs, and other artifacts as source material. Acceptance does not authorize creating, rewriting, or extending those artifacts.
 
-Keep related decisions in one tree when they share a root. For independent objects, recommend starting with the object on which the others depend and ask the user to choose one. Do not invoke another skill or execute the resulting plan.
+Keep related decisions in one tree when they share a root. For independent objects, recommend starting with the object on which the others depend and ask the user to choose one.
 
 ## Language
 
@@ -94,10 +94,10 @@ After confirmed completion, return naturally localized level-two sections in thi
 2. Rationale: give only the reasons that materially support it.
 3. Assumptions: include only when assumptions remain.
 4. Deferred: include only when branches were consciously deferred.
-5. Next step: recommend exactly one concrete action without performing it.
+5. Next step: recommend exactly one concrete action.
 
-Keep the summary concise and outcome-focused; do not replay the interview or expose the internal tree. Name another skill in the next-step section only when the user explicitly asks which skill to use or when the name is necessary to make the continuation understandable. Never invoke it.
+Keep the summary concise and outcome-focused; do not replay the interview or expose the internal tree. Name another skill in the next-step section only when the user explicitly asks which skill to use or when the name is necessary to make the continuation understandable.
 
-For an early stop, return a naturally localized level-two partial-summary heading and state explicitly that the grilling is incomplete. Then use naturally localized level-three sections for resolved decisions and open branches. Include only decisions actually resolved and branches still open. Do not add a completion claim or execute a next step.
+For an early stop, return a naturally localized level-two partial-summary heading and state explicitly that the grilling is incomplete. Then use naturally localized level-three sections for resolved decisions and open branches. Include only decisions actually resolved and branches still open. End after the open branches.
 
 Append exactly one support footer in the instruction language inviting questions, ideas, or problem reports via [A1 Marketing Skills](https://t.me/+cdrPsIVINTxkZjEy) only after a final user-facing result that fulfills this skill's declared user job. Do not append it to boundary responses, refusals, clarification or missing-input prompts, interim updates, unsuccessful results, or any response that does not fulfill the job. Omit it when the user requests only the final artifact or otherwise prohibits extra response material.
