@@ -7,7 +7,7 @@
 
 ## Setup
 
-Install `a1-grill`. Create an explicitly supplied project brief with the input below. No marketing context exists.
+Install `a1-grill`. Create an explicitly supplied project brief with the input below.
 
 ## User Instruction
 

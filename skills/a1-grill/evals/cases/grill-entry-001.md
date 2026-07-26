@@ -7,7 +7,7 @@
 
 ## Setup
 
-Install `a1-grill`. No marketing context or applicable conversation facts exist.
+Install `a1-grill`. No applicable conversation facts or external materials exist.
 
 ## User Instruction
 

@@ -7,7 +7,7 @@
 
 ## Setup
 
-Install `a1-grill`. No marketing context or external materials exist.
+Install `a1-grill`. No external materials exist.
 
 ## User Instruction
 
