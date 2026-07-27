@@ -12,7 +12,7 @@ Use [the case template](case-template.md) for new cases. Filenames must match th
 
 ## Suite
 
-Use the repository's [risk-based semantic-evaluation gates](../../../AGENTS.md#semantic-evaluation-gates) before choosing a manual run. For a bounded runtime change, select the cases that cover the changed workflow and directly adjacent safety cases. A full `a1-editor-in-chief` run means every case below; run it when the repository policy selects the full-suite gate.
+Run this suite only when the maintainer explicitly requests semantic evaluation, for example before a release. A focused run uses the cases that answer the requested question; a full `a1-editor-in-chief` run means every case below.
 
 - [missing Editor dependency](cases/chief-dependency-001.md)
 - [explicit invocation and adaptive gate](cases/chief-explicit-002.md)

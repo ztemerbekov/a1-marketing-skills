@@ -6,7 +6,7 @@ copy its scenario, wording, or expected model choice.
 
 ## Selecting a run
 
-Use the repository's [risk-based semantic-evaluation gates](../../../AGENTS.md#semantic-evaluation-gates) before choosing a manual run. For a bounded runtime change, select the cases in the changed parent family below and directly adjacent safety cases. A full `a1-consumer-psy` run means every case cited in this README; run it when the repository policy selects the full-suite gate.
+Run this suite only when the maintainer explicitly requests semantic evaluation, for example before a release. A focused run uses the cases that answer the requested question; a full `a1-consumer-psy` run means every case cited in this README.
 
 For every selected case:
 

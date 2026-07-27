@@ -26,7 +26,7 @@ Every materially changed scope boundary must have coverage for four scenarios ac
 
 ## Starter Suite
 
-Use the repository's [risk-based semantic-evaluation gates](../../../AGENTS.md#semantic-evaluation-gates) before choosing a manual run. For a bounded runtime change, select cases from the affected group below and directly adjacent safety cases. A full `a1-editor` run means every case below; run it when the repository policy selects the full-suite gate.
+Run this suite only when the maintainer explicitly requests semantic evaluation, for example before a release. A focused run uses the cases that answer the requested question; a full `a1-editor` run means every case below.
 
 ### Strategy Boundary and Bounded Chief Handoff
 
