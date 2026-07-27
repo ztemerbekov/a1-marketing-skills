@@ -25,4 +25,4 @@ Explain the default effect and one important limitation.
 
 ## Forbidden
 
-- [ ] Do not add a metric-change scope note or claim a guaranteed effect.
+- [ ] Do not claim a guaranteed effect.

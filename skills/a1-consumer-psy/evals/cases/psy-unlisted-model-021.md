@@ -23,7 +23,7 @@ the Zeigarnik effect and tell us how to create more unfinished tasks.
 
 ## Must Preserve
 
-- [ ] Keep the response in English and do not turn it into a technical-audit checklist.
+- [ ] Keep the response in English.
 
 ## Forbidden
 

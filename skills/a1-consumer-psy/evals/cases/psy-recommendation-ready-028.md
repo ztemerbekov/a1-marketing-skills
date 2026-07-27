@@ -4,11 +4,10 @@
 - Operation: `Psychological diagnosis`
 - Risk: A recommendation-ready diagnosis either suppresses a justified action,
   treats a default as blanket consent, or exposes internal ethics notation.
-- Scope Scenario: `In scope`
 
 ## Setup
 
-### Completed external input
+### Supplied material
 
 ```text
 В готовом A/B-тесте прозрачный предвыбранный годовой план выбирали 42% новых

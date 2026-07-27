@@ -5,11 +5,10 @@
 - Risk: An evidence-limited interface diagnosis exposes internal taxonomy,
   converts a plausible mechanism into a recommendation, or loses research
   detail while trying to become readable.
-- Scope Scenario: `In scope`
 
 ## Setup
 
-### Completed external input
+### Supplied material
 
 None.
 

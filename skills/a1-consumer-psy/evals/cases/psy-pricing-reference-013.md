@@ -7,7 +7,7 @@
 
 ## Setup
 
-### Completed external input
+### Supplied material
 
 None.
 

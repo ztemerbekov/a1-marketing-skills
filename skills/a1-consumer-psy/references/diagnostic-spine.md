@@ -14,17 +14,13 @@ Separate three things before choosing a mechanism:
   those explanations.
 
 Do not convert correlation, timing, a plausible narrative, or a named bias into
-a causal finding. For a post-change metric request, show the scope notice from
-SKILL.md before the diagnosis. It is an analytic assumption, not a claim that
-the user personally completed an audit.
+a causal finding.
 
 ## 2. Choose the smallest defensible hypothesis set
 
 Use the active model reference to test whether the facts meet the model's
-diagnostic conditions. Before selecting a cause, check whether a named label is
-a support or research-only position in the [model index](model-index.md) and
-follow its pointer. Such a position may clarify a boundary or prevent a false
-synonym; it is not a retained causal hypothesis in an ordinary diagnosis.
+diagnostic conditions. Before selecting a cause, follow the catalog role,
+boundary, and dossier pointer owned by the [model index](model-index.md).
 
 - Select one **leading hypothesis** only when the facts favor it over its
   nearest alternatives.

@@ -24,4 +24,4 @@ The decoy effect.
 
 ## Forbidden
 
-- [ ] Do not add a metric-change scope notice or claim reliable natural-environment effects.
+- [ ] Do not claim reliable natural-environment effects.

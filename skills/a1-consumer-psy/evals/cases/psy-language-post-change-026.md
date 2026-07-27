@@ -2,13 +2,12 @@
 
 - ID: `psy-language-post-change-026`
 - Operation: `Psychological diagnosis`
-- Risk: A locale-specific runtime template leaks into an otherwise English
+- Risk: Internal notation or non-English terminology leaks into an English
   metric-change diagnosis.
-- Scope Scenario: `In scope`
 
 ## Setup
 
-### Completed external input
+### Supplied material
 
 None.
 
@@ -28,10 +27,6 @@ unchanged. Average decision time increased.
 
 ## Must Change
 
-- [ ] Before the diagnosis, give a short English notice that limits the
-  analysis to psychological and behavioral hypotheses and treats technical,
-  measurement, attribution, traffic-composition, and other external causes as
-  already checked separately.
 - [ ] Separate the observed metric change from any causal hypothesis and keep
   every retained explanation conditional.
 - [ ] Start the successful diagnosis with an English `Executive Summary`; use
@@ -54,9 +49,5 @@ unchanged. Average decision time increased.
 - [ ] Do not include Cyrillic characters anywhere in the response.
 - [ ] Do not include catalog IDs, catalog roles, evidence grades, or internal
   ethics flags anywhere in the response.
-- [ ] Do not ask the user to confirm technical, measurement, attribution,
-  traffic, or experiment-allocation checks.
-- [ ] Do not perform or propose a technical audit as part of
-  `a1-consumer-psy`.
 - [ ] Do not claim that the added plan proves Choice Overload, Framing, Decoy,
   or another psychological model.

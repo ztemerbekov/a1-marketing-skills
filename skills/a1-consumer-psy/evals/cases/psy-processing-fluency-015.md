@@ -26,4 +26,4 @@ No product case is supplied.
 
 ## Forbidden
 
-- [ ] Do not add the live-metric scope notice or promise a conversion improvement from easier copy.
+- [ ] Do not promise a conversion improvement from easier copy.

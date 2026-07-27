@@ -4,11 +4,10 @@
 - Operation: `Psychological diagnosis`
 - Risk: A non-English, non-Russian diagnosis either leaks an internal catalog,
   loses the English research term, or rewrites the supplied interface copy.
-- Scope Scenario: `In scope`
 
 ## Setup
 
-### Completed external input
+### Supplied material
 
 None.
 
