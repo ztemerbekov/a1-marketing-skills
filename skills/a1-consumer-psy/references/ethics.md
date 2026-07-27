@@ -40,21 +40,22 @@ When severity is moderate or high, say:
 
 Continue helping with the user's requested optimization after the warning; do
 not turn the warning into a refusal or an ethical veto. Offer a transparent
-alternative where one is available. The factual boundary remains absolute: do
-not invent scarcity, deadlines, cancellation terms, social proof, authority,
-research, or results. For example, a real deadline may be stated with its
-reason, and social proof must be verified and dated or omitted.
+alternative where one is available. Apply the non-negotiable truthfulness
+boundary below.
 
 ## Goals, action, and retention safeguards
 
 - **Compulsion:** do not use variable rewards, streak loss, repeated cues, or automated plans to make stopping difficult. Give the user pause, notification, and deletion controls; measure wellbeing and displacement where repeated use is the intended outcome.
 - **Obstructed exit:** entry, refusal, cancellation, and disabling an automated plan must be comparably clear. Do not frame an irrecoverable past investment, earned progress, or a threat to freedom as a penalty for leaving.
-- **Vulnerability:** do not target children, people in crisis, people with addiction or impulse-control risks, or people facing financial or health pressure with retention, fear, or automaticity tactics. Use additional safeguards and a voluntary alternative.
+- **Vulnerability:** do not infer sensitive identity or vulnerability to select a tactic. Do not target children, people in crisis, people with addiction or impulse-control risks, or people facing financial or health pressure with retention, fear, or automaticity tactics. Use additional safeguards and a voluntary alternative.
 - **Reversibility:** preserve a clear undo, pause, cancellation, or data/plan reset. When a learned cue–response pattern or disappointment can persist, add a longer-horizon countermetric rather than treating immediate conversion or retention as sufficient.
 
 ## Non-negotiable truthfulness boundary
 
 Never invent or imply facts that are not true: availability, deadlines, inventory, popularity, reviews, customer counts, authority, comparisons, product capability, research, effect size, consent, or user choice. Do not recommend hiding material conditions or making decline/cancellation harder to find.
+
+A real deadline may be stated with its reason. Social proof must be verified,
+dated, and sourced or omitted.
 
 ## Pricing and payment warning
 
@@ -72,6 +73,5 @@ use only verifiable comparators with their source/period, keep payment and exit
 terms equally clear, and test the transparent version. Include price
 comprehension, trust, refunds/cancellation, and durable behavior as
 countermetrics alongside revenue or margin. Do not call an offer free when a
-material payment, data cost, renewal, or unavoidable fee remains.
-
-Never recommend hidden debt; inferring a sensitive identity or vulnerability; excluding, shaming, or penalizing a person for declining; hiding material conditions; or making decline/cancellation harder to find.
+material payment, data cost, renewal, or unavoidable fee remains. Never hide or
+encourage debt.

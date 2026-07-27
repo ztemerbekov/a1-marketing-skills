@@ -2,15 +2,8 @@
 
 - ID: `psy-post-change-001`
 - Operation: `Psychological diagnosis`
-- Risk: The skill treats sequence as proof, turns a scope note into a technical
-  interrogation, or hard-codes a pricing fixture as a runtime branch.
-- Scope Scenario: `In scope`
-
-## Setup
-
-### Completed external input
-
-None.
+- Risk: The skill treats sequence as proof or hard-codes a pricing fixture as
+  a runtime branch.
 
 ## User Instruction
 
@@ -29,8 +22,6 @@ None.
 
 ## Must Change
 
-- [ ] Коротко обозначить, что анализ ограничен психологическими и
-  поведенческими гипотезами, без требования подтверждать технические проверки.
 - [ ] Отделить наблюдаемое падение метрики от гипотезы о причине.
 - [ ] Выбрать не более одной primary и двух secondary моделей, только если
   признаки из входа это поддерживают; допустим вывод, что primary-модель пока
@@ -49,10 +40,6 @@ None.
 
 ## Forbidden
 
-- [ ] Не спрашивать, проверил ли пользователь трафик, баги, атрибуцию,
-  инструментацию или распределение эксперимента.
 - [ ] Не утверждать, что добавление тарифа доказало Choice Overload, Decoy,
   Anchoring или другую модель.
 - [ ] Не выбирать модель только потому, что в примере есть тарифы.
-- [ ] Не предлагать технический аудит, проверку трафика или производство
-  готового лендинга как часть работы `a1-consumer-psy`.

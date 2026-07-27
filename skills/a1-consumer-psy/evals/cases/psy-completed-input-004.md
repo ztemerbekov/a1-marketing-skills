@@ -1,4 +1,4 @@
-# PSY-COMPLETED-INPUT-004 — Completed audit accepted
+# PSY-COMPLETED-INPUT-004 — Supplied audit observation
 
 - ID: `psy-completed-input-004`
 
@@ -16,7 +16,7 @@
 
 ## Must Change
 
-- [ ] Принять готовый аудит без его воспроизведения; рассмотреть Default Effect как обоснованную рабочую primary-гипотезу и отличить её от рекомендации или скрытого согласия.
+- [ ] Рассмотреть Default Effect как обоснованную рабочую primary-гипотезу и отличить её от рекомендации или скрытого согласия.
 - [ ] Предложить сравнение с active choice и countermetrics: opt-out, cancellation, satisfaction или complaints.
 
 ## Must Preserve
@@ -25,4 +25,4 @@
 
 ## Forbidden
 
-- [ ] Не утверждать, что default доказывает причинность, и не требовать другого технического подтверждения.
+- [ ] Не утверждать, что default доказывает причинность.
