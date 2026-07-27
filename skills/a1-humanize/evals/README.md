@@ -6,7 +6,7 @@ Run each selected case in a clean session using only its instruction and input. 
 
 ## Selecting a run
 
-Use the repository's [risk-based semantic-evaluation gates](../../../AGENTS.md#semantic-evaluation-gates) before choosing a manual run. For a bounded runtime change, select the cases that cover the changed rewriting behavior and directly adjacent safety cases. A full `a1-humanize` run means every case below; run it when the repository policy selects the full-suite gate.
+Run this suite only when the maintainer explicitly requests semantic evaluation, for example before a release. A focused run uses the cases that answer the requested question; a full `a1-humanize` run means every case below.
 
 ## Cases
 

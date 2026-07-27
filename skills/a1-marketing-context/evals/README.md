@@ -18,7 +18,7 @@ Use [the case template](case-template.md). Name every file exactly `<ID>.md`.
 
 ## Suite
 
-Use the repository's [risk-based semantic-evaluation gates](../../../AGENTS.md#semantic-evaluation-gates) before choosing a manual run. For a bounded runtime change, select the cases that cover the changed context behavior and directly adjacent safety cases. A full `a1-marketing-context` run means every case below; run it when the repository policy selects the full-suite gate.
+Run this suite only when the maintainer explicitly requests semantic evaluation, for example before a release. A focused run uses the cases that answer the requested question; a full `a1-marketing-context` run means every case below.
 
 - [natural Auto-draft invocation](cases/context-natural-invocation-001.md)
 - [passive events cause no write](cases/context-passive-noop-002.md)
