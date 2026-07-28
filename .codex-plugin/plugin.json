@@ -16,9 +16,9 @@
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "A1 Marketing Suite",
+    "displayName": "A1 Marketing Skills",
     "shortDescription": "Marketing decisions and editorial workflows",
-    "longDescription": "A portable suite of marketing skills for stress-testing decisions, maintaining confirmed context, auditing consumer psychology, and editing copy.",
+    "longDescription": "A portable collection of marketing skills for stress-testing decisions, maintaining confirmed context, auditing consumer psychology, and editing copy.",
     "developerName": "Zinnur Temerbekov",
     "category": "Productivity",
     "capabilities": [
