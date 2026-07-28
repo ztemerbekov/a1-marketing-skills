@@ -244,7 +244,7 @@ A1 Marketing Skills — это набор навыков для ИИ-агент�
 
 ```bash
 codex plugin marketplace add ztemerbekov/a1-marketing-skills
-codex plugin add a1-marketing-suite@a1-marketing-skills
+codex plugin add a1-marketing-skills@a1-marketing-skills
 ```
 
 После установки начните новую сессию, чтобы Codex загрузил навыки плагина. Marketplace репозитория и сам плагин также можно открыть и управлять ими через `/plugins`.
@@ -270,7 +270,7 @@ cursor-agent plugin marketplace add https://github.com/ztemerbekov/a1-marketing-
 Для полной установки A1 Marketing Skills:
 
 ```text
-/plugin install a1-marketing-suite@a1-marketing-skills
+/plugin install a1-marketing-skills@a1-marketing-skills
 ```
 
 В полную установку входят оба набора:

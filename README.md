@@ -244,7 +244,7 @@ Add the repository marketplace once:
 
 ```bash
 codex plugin marketplace add ztemerbekov/a1-marketing-skills
-codex plugin add a1-marketing-suite@a1-marketing-skills
+codex plugin add a1-marketing-skills@a1-marketing-skills
 ```
 
 Start a new Codex session after installation so it can load the bundled skills. You can also browse the repository marketplace and manage the plugin through `/plugins`.
@@ -270,7 +270,7 @@ Add the marketplace once:
 For the complete A1 Marketing Skills installation:
 
 ```text
-/plugin install a1-marketing-suite@a1-marketing-skills
+/plugin install a1-marketing-skills@a1-marketing-skills
 ```
 
 The complete installation includes both collections:

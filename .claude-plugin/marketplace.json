@@ -48,7 +48,7 @@
       ]
     },
     {
-      "name": "a1-marketing-suite",
+      "name": "a1-marketing-skills",
       "displayName": "A1 Marketing Skills",
       "description": "The complete A1 Marketing Skills installation for Claude Code, combining strategic decision support with full-cycle editorial automation.",
       "keywords": [
@@ -56,9 +56,9 @@
         "editing",
         "humanize",
         "idea-validation",
-        "marketing-suite"
+        "marketing-skills"
       ],
-      "source": "./plugins/a1-marketing-suite",
+      "source": "./plugins/a1-marketing-skills",
       "strict": false,
       "dependencies": [
         "a1-core",

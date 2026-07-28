@@ -8,7 +8,7 @@
   },
   "plugins": [
     {
-      "name": "a1-marketing-suite",
+      "name": "a1-marketing-skills",
       "source": "./",
       "description": "Marketing decision support and editorial workflows for AI agents."
     }

@@ -7,9 +7,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-MARKETPLACE_SLUG = "a1-marketing-skills"
-FULL_PLUGIN_SLUG = "a1-marketing-suite"
+PRODUCT_SLUG = "a1-marketing-skills"
 PRODUCT_DISPLAY_NAME = "A1 Marketing Skills"
+CLAUDE_FULL_PLUGIN_SOURCE = f"./plugins/{PRODUCT_SLUG}"
 SKILLS_PATH = "./skills/"
 REPOSITORY_URL = "https://github.com/ztemerbekov/a1-marketing-skills.git"
 
@@ -72,7 +72,7 @@ for label, marketplace in (
         marketplace,
         MANIFEST_PATHS[label],
         "name",
-        MARKETPLACE_SLUG,
+        PRODUCT_SLUG,
     )
 
 for label, manifest in (
@@ -80,7 +80,7 @@ for label, manifest in (
     ("cursor manifest", cursor_manifest),
 ):
     path = MANIFEST_PATHS[label]
-    check_value(manifest, path, "name", FULL_PLUGIN_SLUG)
+    check_value(manifest, path, "name", PRODUCT_SLUG)
     check_value(manifest, path, "skills", SKILLS_PATH)
     skills_value = manifest.get("skills")
     skills_dir = (
@@ -106,20 +106,20 @@ if not isinstance(codex_version, str) or not re.fullmatch(
         f"version must use MAJOR.MINOR.PATCH semver, found {codex_version!r}",
     )
 
-claude_suite = plugin_entry(
+claude_full_plugin = plugin_entry(
     claude_marketplace,
     MANIFEST_PATHS["claude marketplace"],
-    FULL_PLUGIN_SLUG,
+    PRODUCT_SLUG,
 )
-codex_suite = plugin_entry(
+codex_full_plugin = plugin_entry(
     codex_marketplace,
     MANIFEST_PATHS["codex marketplace"],
-    FULL_PLUGIN_SLUG,
+    PRODUCT_SLUG,
 )
-cursor_suite = plugin_entry(
+cursor_full_plugin = plugin_entry(
     cursor_marketplace,
     MANIFEST_PATHS["cursor marketplace"],
-    FULL_PLUGIN_SLUG,
+    PRODUCT_SLUG,
 )
 
 codex_marketplace_interface = codex_marketplace.get("interface")
@@ -157,38 +157,50 @@ check_value(
     PRODUCT_DISPLAY_NAME,
 )
 check_value(
-    claude_suite,
+    claude_full_plugin,
     MANIFEST_PATHS["claude marketplace"],
     "displayName",
     PRODUCT_DISPLAY_NAME,
 )
+check_value(
+    claude_full_plugin,
+    MANIFEST_PATHS["claude marketplace"],
+    "source",
+    CLAUDE_FULL_PLUGIN_SOURCE,
+)
+claude_full_plugin_dir = ROOT / CLAUDE_FULL_PLUGIN_SOURCE.removeprefix("./")
+if not claude_full_plugin_dir.is_dir():
+    fail(
+        MANIFEST_PATHS["claude marketplace"],
+        f"{PRODUCT_SLUG!r} source does not resolve to a directory",
+    )
 
-if codex_suite.get("source") != {
+if codex_full_plugin.get("source") != {
     "source": "url",
     "url": REPOSITORY_URL,
 }:
     fail(
         MANIFEST_PATHS["codex marketplace"],
-        f"{FULL_PLUGIN_SLUG!r} source must point to {REPOSITORY_URL}",
+        f"{PRODUCT_SLUG!r} source must point to {REPOSITORY_URL}",
     )
-if codex_suite.get("policy") != {
+if codex_full_plugin.get("policy") != {
     "installation": "AVAILABLE",
     "authentication": "ON_INSTALL",
 }:
     fail(
         MANIFEST_PATHS["codex marketplace"],
-        f"{FULL_PLUGIN_SLUG!r} must use the approved installation and authentication policy",
+        f"{PRODUCT_SLUG!r} must use the approved installation and authentication policy",
     )
-if codex_suite.get("category") != "Productivity":
+if codex_full_plugin.get("category") != "Productivity":
     fail(
         MANIFEST_PATHS["codex marketplace"],
-        f"{FULL_PLUGIN_SLUG!r} category must be 'Productivity'",
+        f"{PRODUCT_SLUG!r} category must be 'Productivity'",
     )
 
-if cursor_suite.get("source") != "./":
+if cursor_full_plugin.get("source") != "./":
     fail(
         MANIFEST_PATHS["cursor marketplace"],
-        f"{FULL_PLUGIN_SLUG!r} source must be './'",
+        f"{PRODUCT_SLUG!r} source must be './'",
     )
 
 claude_plugins = {
@@ -196,11 +208,11 @@ claude_plugins = {
     for entry in claude_marketplace.get("plugins", [])
     if isinstance(entry, dict) and isinstance(entry.get("name"), str)
 }
-declared_dependencies = claude_suite.get("dependencies", [])
+declared_dependencies = claude_full_plugin.get("dependencies", [])
 if not isinstance(declared_dependencies, list):
     fail(
         MANIFEST_PATHS["claude marketplace"],
-        f"{FULL_PLUGIN_SLUG!r} dependencies must be an array",
+        f"{PRODUCT_SLUG!r} dependencies must be an array",
     )
     declared_dependencies = []
 declared_skills = []
@@ -209,7 +221,7 @@ for dependency in declared_dependencies:
     if package is None:
         fail(
             MANIFEST_PATHS["claude marketplace"],
-            f"{FULL_PLUGIN_SLUG!r} references missing dependency {dependency!r}",
+            f"{PRODUCT_SLUG!r} references missing dependency {dependency!r}",
         )
         continue
     package_skills = package.get("skills", [])
@@ -276,7 +288,7 @@ if sorted(declared_skills) != canonical_skills:
         details.append(f"duplicated: {', '.join(duplicates)}")
     fail(
         MANIFEST_PATHS["claude marketplace"],
-        "suite composition must cover every canonical skill exactly once"
+        "full plugin composition must cover every canonical skill exactly once"
         + (f" ({'; '.join(details)})" if details else ""),
     )
 
@@ -287,7 +299,7 @@ if failures:
     sys.exit(1)
 
 print(
-    "Marketplace summary: marketplace slug, full-plugin slug, and product display "
-    "name are synchronized by role across Claude, Codex, and Cursor; "
+    "Marketplace summary: product slug and display name are synchronized across "
+    "Claude, Codex, and Cursor; "
     f"{len(canonical_skills)} canonical skills covered"
 )
