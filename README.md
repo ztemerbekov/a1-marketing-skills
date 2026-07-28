@@ -180,6 +180,8 @@ Humanize works only with completed copy supplied in the conversation. It detects
 
 It never reads or overwrites project files. A request that combines humanization with new marketing strategy stops before any partial rewrite.
 
+A1 Humanize is adapted from [Humanizer by Siqi Chen](https://github.com/blader/humanizer) under the MIT License. See the skill’s [license and attribution](./skills/a1-humanize/references/license-and-attribution.md).
+
 **Try:**
 
 > `/a1-humanize`
