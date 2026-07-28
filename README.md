@@ -238,12 +238,6 @@ It also treats broad frameworks and analyst errors as guardrails: they can route
 
 ## Other installation options
 
-**Naming:** A1 Marketing Skills is the product, repository, and marketplace name. The
-stable full-install plugin slug is `a1-marketing-suite`; it remains in installation
-commands for compatibility. Claude Code uses that slug for a dependency-only
-meta-plugin, while Codex and Cursor use it for their native full plugin. All clients
-display the installed product as **A1 Marketing Skills**.
-
 ### Codex marketplace
 
 Add the repository marketplace once:
@@ -273,13 +267,13 @@ Add the marketplace once:
 /plugin marketplace add ztemerbekov/a1-marketing-skills
 ```
 
-For the complete A1 Marketing Skills installation in Claude Code, install the full-plugin slug:
+For the complete A1 Marketing Skills installation:
 
 ```text
 /plugin install a1-marketing-suite@a1-marketing-skills
 ```
 
-The `a1-marketing-suite` meta-plugin installs both functional collections as dependencies and has no skills or commands of its own:
+The complete installation includes both collections:
 
 - **A1 Core:** `/a1-core:a1-grill`, `/a1-core:a1-consumer-psy`, and `/a1-core:a1-marketing-context`
 - **A1 Editorial:** `/a1-editorial:a1-copy-editing`, its Russian alias `/a1-editorial:a1-redaktura`, `/a1-editorial:a1-humanize`, and `/a1-editorial:a1-editor-in-chief`
