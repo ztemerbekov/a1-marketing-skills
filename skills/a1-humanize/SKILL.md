@@ -17,7 +17,7 @@ Apply patterns by function rather than an English-only word list. Detect equival
 
 ## Scope and Sources
 
-Before starting, read [the scope and source boundary](references/scope-and-sources.md). If the request is in scope, follow [the humanization loop](references/humanization-loop.md) and load [the pattern catalog](references/pattern-catalog.md) during every run. [The upstream notice](references/upstream.md) is provenance only.
+Before starting, read [the scope and source boundary](references/scope-and-sources.md). If the request is in scope, follow [the humanization loop](references/humanization-loop.md) and load [the pattern catalog](references/pattern-catalog.md) during every run.
 
 ## Output
 

@@ -1,14 +1,20 @@
-# Upstream Notice
+# License and Attribution
 
-`a1-humanize` is an independent, self-contained adaptation of [blader/humanizer](https://github.com/blader/humanizer), version `2.9.1`, pinned at commit [`523374dee72d67c7b2b5f858ea0094ffda49c3ac`](https://github.com/blader/humanizer/commit/523374dee72d67c7b2b5f858ea0094ffda49c3ac).
+`a1-humanize` is distributed under the MIT License.
 
-The catalog is also based on Wikipedia’s [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup.
+- Original A1 material and modifications: Copyright (c) 2026 Zinnur Temerbekov.
+- Adapted material: [blader/humanizer](https://github.com/blader/humanizer), version `2.9.1`, pinned at commit [`523374dee72d67c7b2b5f858ea0094ffda49c3ac`](https://github.com/blader/humanizer/commit/523374dee72d67c7b2b5f858ea0094ffda49c3ac), Copyright (c) 2025 Siqi Chen.
 
-Review later upstream changes manually. Do not add a runtime dependency or automatic synchronization. Port only compatible changes.
+This is a self-contained adaptation, not an official release of or an endorsement by the original project. Its pattern catalog is also informed by Wikipedia’s [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup.
+
+Review later changes to the original project manually. Do not add a runtime dependency or automatic synchronization. Port only compatible changes.
+
+The MIT terms below apply to each copyright holder’s respective material.
 
 ```text
 MIT License
 
+Copyright (c) 2026 Zinnur Temerbekov
 Copyright (c) 2025 Siqi Chen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

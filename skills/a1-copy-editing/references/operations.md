@@ -77,8 +77,6 @@ Select this branch only when the user explicitly asks for information style with
 
 - `в информационном стиле`;
 - `в инфостиле`;
-- `по Ильяхову`;
-- `по «Пиши, сокращай»`;
 - `use information style` or `apply information-style editing`;
 - equivalent unambiguous wording in the user's language.
 
