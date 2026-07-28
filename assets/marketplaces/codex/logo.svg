@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title description">
+  <title id="title">A1 Marketing Skills</title>
+  <desc id="description">A white A1 monogram in a white circle on an orange rounded square over a red background.</desc>
+  <rect width="640" height="640" fill="#F8161E"/>
+  <rect x="73" y="73" width="494" height="494" rx="116" fill="#FB5724"/>
+  <circle cx="320" cy="321" r="182" fill="#FCFBFA"/>
+  <g fill="#FB5724">
+    <path fill-rule="evenodd" d="M198 413 265 231h41l67 182h-39l-15-42h-68l-15 42h-38Zm62-71h50l-25-70-25 70Z"/>
+    <path d="M369 254 408 232h29v181h-37V276l-31 12v-34Z"/>
+  </g>
+</svg>

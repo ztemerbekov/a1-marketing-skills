@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 
 import json
+import math
 import re
+import struct
 import sys
-from pathlib import Path
+import xml.etree.ElementTree as ET
+import zlib
+from pathlib import Path, PurePosixPath
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -12,6 +16,14 @@ FULL_PLUGIN_SLUG = "a1-marketing-suite"
 PRODUCT_DISPLAY_NAME = "A1 Marketing Skills"
 SKILLS_PATH = "./skills/"
 REPOSITORY_URL = "https://github.com/ztemerbekov/a1-marketing-skills.git"
+CODEX_LOGO_PATH = "./assets/marketplaces/codex/logo.svg"
+CODEX_COMPOSER_ICON_PATH = "./assets/marketplaces/codex/composer-icon.svg"
+CURSOR_LOGO_PATH = "assets/marketplaces/cursor/logo.png"
+MAX_CODEX_IMAGE_BYTES = 5 * 1024 * 1024
+SUPPORTED_CODEX_IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".svg"}
+SVG_NUMBER = re.compile(
+    r"[-+]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][-+]?\d+)?"
+)
 
 MANIFEST_PATHS = {
     "claude marketplace": ROOT / ".claude-plugin/marketplace.json",
@@ -55,6 +67,165 @@ def check_value(document, path, key, expected):
     actual = document.get(key)
     if actual != expected:
         fail(path, f"{key!r} must be {expected!r}, found {actual!r}")
+
+
+def resolve_asset(manifest_path, declared_path, *, require_dot_prefix):
+    if not isinstance(declared_path, str):
+        fail(manifest_path, "declared asset path must be a string")
+        return None
+    if not declared_path:
+        fail(manifest_path, "declared asset path must not be empty")
+        return None
+    if declared_path != declared_path.strip():
+        fail(manifest_path, "declared asset path must not have outer whitespace")
+        return None
+    if any(ord(character) < 32 or ord(character) == 127 for character in declared_path):
+        fail(manifest_path, "declared asset path must not contain control characters")
+        return None
+    if require_dot_prefix and not declared_path.startswith("./"):
+        fail(manifest_path, "Codex branding asset paths must start with './'")
+        return None
+    relative_path = declared_path.removeprefix("./")
+    pure_path = PurePosixPath(relative_path)
+    if (
+        pure_path.is_absolute()
+        or not pure_path.parts
+        or ".." in pure_path.parts
+        or re.match(r"^[A-Za-z]:", relative_path)
+    ):
+        fail(manifest_path, f"unsafe declared asset path: {declared_path!r}")
+        return None
+    resolved_path = (ROOT / Path(*pure_path.parts)).resolve()
+    try:
+        resolved_path.relative_to(ROOT)
+    except ValueError:
+        fail(manifest_path, f"declared asset path escapes the plugin: {declared_path!r}")
+        return None
+    if not resolved_path.is_file():
+        fail(manifest_path, f"declared asset does not resolve to a regular file: {declared_path!r}")
+        return None
+    return resolved_path
+
+
+def parse_svg_number(value):
+    if not isinstance(value, str) or not SVG_NUMBER.fullmatch(value.strip()):
+        return None
+    number = float(value)
+    return number if math.isfinite(number) else None
+
+
+def validate_codex_svg(path):
+    if path.suffix.lower() not in SUPPORTED_CODEX_IMAGE_EXTENSIONS:
+        fail(path, f"unsupported Codex image extension: {path.suffix!r}")
+        return
+    if path.stat().st_size > MAX_CODEX_IMAGE_BYTES:
+        fail(path, "Codex image must not exceed 5 MiB")
+    if path.suffix.lower() != ".svg":
+        fail(path, "approved Codex marketplace exports must be SVG files")
+        return
+    try:
+        text = path.read_bytes().decode("utf-8")
+    except UnicodeDecodeError:
+        fail(path, "SVG must contain valid UTF-8 XML")
+        return
+    try:
+        root = ET.fromstring(text)
+    except ET.ParseError as error:
+        fail(path, f"malformed SVG XML: {error}")
+        return
+    if root.tag.rsplit("}", 1)[-1] != "svg":
+        fail(path, "SVG root element must be <svg>")
+        return
+
+    view_box = root.get("viewBox")
+    if view_box is not None:
+        values = [
+            value
+            for value in re.split(r"[\s,]+", view_box.strip())
+            if value
+        ]
+        if len(values) != 4:
+            fail(path, "SVG viewBox must contain four numeric values")
+            return
+        numbers = [parse_svg_number(value) for value in values]
+        if any(number is None for number in numbers):
+            fail(path, "SVG viewBox dimensions must be numeric and unitless")
+            return
+        width, height = numbers[2], numbers[3]
+    else:
+        width = parse_svg_number(root.get("width"))
+        height = parse_svg_number(root.get("height"))
+        if width is None or height is None:
+            fail(path, "SVG must define a numeric viewBox or numeric width and height")
+            return
+
+    if width <= 0 or height <= 0:
+        fail(path, "SVG dimensions must be positive finite numbers")
+    elif not math.isclose(width, height, rel_tol=0, abs_tol=1e-9):
+        fail(path, f"SVG dimensions must be square, found {width:g}×{height:g}")
+    elif width < 48:
+        fail(path, f"SVG dimensions must be at least 48×48, found {width:g}×{height:g}")
+
+
+def validate_cursor_png(path):
+    if path.suffix.lower() != ".png":
+        fail(path, "approved Cursor marketplace export must be a PNG file")
+        return
+    data = path.read_bytes()
+    if not data.startswith(b"\x89PNG\r\n\x1a\n"):
+        fail(path, "Cursor logo does not contain a PNG signature")
+        return
+
+    offset = 8
+    dimensions = None
+    seen_idat = False
+    seen_iend = False
+    chunk_index = 0
+    while offset < len(data):
+        if len(data) - offset < 12:
+            fail(path, "Cursor logo contains a truncated PNG chunk")
+            return
+        length = struct.unpack(">I", data[offset : offset + 4])[0]
+        chunk_type = data[offset + 4 : offset + 8]
+        chunk_end = offset + 12 + length
+        if chunk_end > len(data):
+            fail(path, "Cursor logo contains a truncated PNG chunk")
+            return
+        chunk_data = data[offset + 8 : offset + 8 + length]
+        expected_crc = struct.unpack(">I", data[offset + 8 + length : chunk_end])[0]
+        actual_crc = zlib.crc32(chunk_type + chunk_data) & 0xFFFFFFFF
+        if actual_crc != expected_crc:
+            fail(path, f"Cursor logo contains an invalid {chunk_type!r} chunk checksum")
+            return
+        if chunk_index == 0:
+            if chunk_type != b"IHDR" or length != 13:
+                fail(path, "Cursor logo must begin with a valid PNG IHDR chunk")
+                return
+            width, height = struct.unpack(">II", chunk_data[:8])
+            dimensions = (width, height)
+        elif chunk_type == b"IHDR":
+            fail(path, "Cursor logo contains more than one PNG IHDR chunk")
+            return
+        if chunk_type == b"IDAT":
+            seen_idat = True
+        if chunk_type == b"IEND":
+            if length != 0 or chunk_end != len(data):
+                fail(path, "Cursor logo contains an invalid PNG IEND chunk")
+                return
+            seen_iend = True
+            break
+        offset = chunk_end
+        chunk_index += 1
+
+    if dimensions != (512, 512):
+        found = (
+            f"{dimensions[0]}×{dimensions[1]}"
+            if dimensions is not None
+            else "no dimensions"
+        )
+        fail(path, f"Cursor logo must be the approved 512×512 export, found {found}")
+    if not seen_idat or not seen_iend:
+        fail(path, "Cursor logo must contain PNG image data and a terminal IEND chunk")
 
 
 claude_marketplace = load_json("claude marketplace")
@@ -149,6 +320,41 @@ else:
         "displayName",
         PRODUCT_DISPLAY_NAME,
     )
+    check_value(
+        codex_plugin_interface,
+        MANIFEST_PATHS["codex manifest"],
+        "logo",
+        CODEX_LOGO_PATH,
+    )
+    check_value(
+        codex_plugin_interface,
+        MANIFEST_PATHS["codex manifest"],
+        "composerIcon",
+        CODEX_COMPOSER_ICON_PATH,
+    )
+    codex_logo = resolve_asset(
+        MANIFEST_PATHS["codex manifest"],
+        codex_plugin_interface.get("logo"),
+        require_dot_prefix=True,
+    )
+    codex_composer_icon = resolve_asset(
+        MANIFEST_PATHS["codex manifest"],
+        codex_plugin_interface.get("composerIcon"),
+        require_dot_prefix=True,
+    )
+    if codex_logo is not None:
+        validate_codex_svg(codex_logo)
+    if codex_composer_icon is not None:
+        validate_codex_svg(codex_composer_icon)
+    if (
+        codex_logo is not None
+        and codex_composer_icon is not None
+        and codex_logo == codex_composer_icon
+    ):
+        fail(
+            MANIFEST_PATHS["codex manifest"],
+            "logo and composerIcon must use separate approved exports",
+        )
 
 check_value(
     cursor_manifest,
@@ -156,6 +362,37 @@ check_value(
     "displayName",
     PRODUCT_DISPLAY_NAME,
 )
+check_value(
+    cursor_manifest,
+    MANIFEST_PATHS["cursor manifest"],
+    "logo",
+    CURSOR_LOGO_PATH,
+)
+cursor_logo = resolve_asset(
+    MANIFEST_PATHS["cursor manifest"],
+    cursor_manifest.get("logo"),
+    require_dot_prefix=False,
+)
+if cursor_logo is not None:
+    validate_cursor_png(cursor_logo)
+
+for unsupported_field in ("logo", "icon"):
+    if unsupported_field in claude_marketplace:
+        fail(
+            MANIFEST_PATHS["claude marketplace"],
+            f"Claude marketplace must not declare unsupported {unsupported_field!r} metadata",
+        )
+for plugin in claude_marketplace.get("plugins", []):
+    if not isinstance(plugin, dict):
+        continue
+    for unsupported_field in ("logo", "icon"):
+        if unsupported_field in plugin:
+            fail(
+                MANIFEST_PATHS["claude marketplace"],
+                f"Claude plugin {plugin.get('name')!r} must not declare unsupported "
+                f"{unsupported_field!r} metadata",
+            )
+
 check_value(
     claude_suite,
     MANIFEST_PATHS["claude marketplace"],
