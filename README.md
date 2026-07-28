@@ -39,7 +39,7 @@ Here is a complete context-to-edit loop:
 >
 > **Result:** The agent extracts the positioning, target audience, and brand rules and records them in `.agents/marketing-context.md` so that every later skill invocation automatically uses the context and you do not need to provide the inputs again.
 >
-> **You:** Edit this in Ilyakhov’s style and rewrite it so it sounds human—the AI writing is obvious:
+> **You:** Make this clear and concise, then rewrite it so it sounds human—the AI writing is obvious:
 >
 > `[paste your draft]`
 >
@@ -143,7 +143,7 @@ Read the [full Grill behavior](./skills/a1-grill/SKILL.md).
 
 <br>
 
-Use **A1 Copy Editing** to polish a finished text or get editorial feedback before making changes. It can cut fluff, clarify meaning, tune the style, apply Ilyakhov’s information style when explicitly requested, or review the draft without silently rewriting it. Facts, numbers, and the author’s distinctive voice stay intact, while the user keeps final editorial control.
+Use **A1 Copy Editing** to polish a finished text or get editorial feedback before making changes. It can cut fluff, clarify meaning, tune the style, apply information-style editing when explicitly requested, or review the draft without silently rewriting it. Facts, numbers, and the author’s distinctive voice stay intact, while the user keeps final editorial control.
 
 It does not need a detailed explanation of the audience, channel, or goal—it can still produce a strong edit.
 
@@ -155,7 +155,7 @@ Russian-speaking users can invoke the same behavior explicitly with `/a1-redaktu
 
 > `/a1-copy-editing`
 >
-> Edit this in Ilyakhov’s style and keep it to three paragraphs:
+> Rewrite this in information style and keep it to three paragraphs:
 >
 > `[paste your draft]`
 

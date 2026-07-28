@@ -1,6 +1,6 @@
 ---
 name: a1-copy-editing
-description: 'Copy-edit or review existing marketing text when the user asks to edit, rewrite, shorten, clarify, simplify, strengthen, restructure, clean up, critique, give feedback on, analyze, or explain existing copy. Also use for Russian requests such as "отредачь", "отредактируй", "почисти текст", "сократи", "убери канцелярит", "сделай проще", "причешите текст", "дай фидбек на текст", "разбери мой текст", "слишком водянисто", "убери воду", or explicit information-style requests such as "по Ильяхову". Also use on requests to create or rethink marketing strategy and confirmed-strategy requests so the skill can apply its strategy boundary and route only eligible work to a1-editor-in-chief.'
+description: 'Copy-edit or review existing marketing text when the user asks to edit, rewrite, shorten, clarify, simplify, strengthen, restructure, clean up, critique, give feedback on, analyze, or explain existing copy. Also use for Russian requests such as "отредачь", "отредактируй", "почисти текст", "сократи", "убери канцелярит", "сделай проще", "причешите текст", "дай фидбек на текст", "разбери мой текст", "слишком водянисто", "убери воду", or explicit information-style requests such as "перепиши в информационном стиле" and "перепиши в инфостиле". Also use on requests to create or rethink marketing strategy and confirmed-strategy requests so the skill can apply its strategy boundary and route only eligible work to a1-editor-in-chief.'
 ---
 
 # Copy Editing
