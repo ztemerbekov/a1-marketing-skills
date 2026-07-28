@@ -238,6 +238,27 @@ It also treats broad frameworks and analyst errors as guardrails: they can route
 
 ## Other installation options
 
+### Codex marketplace
+
+Add the repository marketplace once:
+
+```bash
+codex plugin marketplace add ztemerbekov/a1-marketing-skills
+codex plugin add a1-marketing-suite@a1-marketing-skills
+```
+
+Start a new Codex session after installation so it can load the bundled skills. You can also browse the repository marketplace and manage the plugin through `/plugins`.
+
+### Cursor marketplace
+
+Add the repository marketplace once:
+
+```bash
+cursor-agent plugin marketplace add https://github.com/ztemerbekov/a1-marketing-skills
+```
+
+Start `cursor-agent`, open `/plugin`, choose **A1 Marketing Skills**, and install **A1 Marketing Suite** at user or project scope.
+
 ### Claude Code marketplace
 
 Add the marketplace once:

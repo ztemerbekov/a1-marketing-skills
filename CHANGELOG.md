@@ -6,6 +6,7 @@ Notable user-facing changes to A1 Marketing Skills are recorded here. Git tags a
 
 ### Changed
 
+- Add native Codex and Cursor marketplace manifests for A1 Marketing Suite with cross-client identity and composition validation.
 - Add A1 Humanize for removing recognizable AI-writing patterns from supplied copy while preserving its supported content and voice.
 - Rename the collection and repository to A1 Marketing Skills.
 - Use the official `npx skills` CLI for installation and updates.
