@@ -20,7 +20,7 @@ The collection is split into two connected packages for marketing decisions, reu
 
 ### A1 Editorial — Editing and copy
 
-4. **A1 Copy Editing** (`/a1-copy-editing`) improves or reviews existing drafts within supplied constraints and available Marketing Context while preserving source facts and human editorial control.
+4. **A1 Copy Editing** (`/a1-copy-editing`, with the Russian command alias `/a1-redaktura`) improves or reviews existing drafts within supplied constraints and available Marketing Context while preserving source facts and human editorial control.
 5. **Editor in Chief** (`/a1-editor-in-chief`) sets editorial direction inside approved strategy, briefs A1 Copy Editing, and reviews the resulting edit.
 6. **Humanize** (`/a1-humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
 
@@ -65,7 +65,7 @@ The shortest path to a useful result is a global install followed by an A1 Copy 
    npx skills@latest add ztemerbekov/a1-marketing-skills -g
    ```
 
-2. When the installer asks, choose the AI agents you already use and select `a1-copy-editing` or any other skills you want.
+2. When the installer asks, choose the AI agents you already use and select `a1-copy-editing` or any other skills you want. To use the explicit Russian command, select both `a1-copy-editing` and its `a1-redaktura` alias.
 
 3. Open the project that contains your draft in the selected agent. A1 Copy Editing can start from an ordinary-language request:
 
@@ -149,6 +149,8 @@ It does not need a detailed explanation of the audience, channel, or goal—it c
 
 *Limitations:* A1 Copy Editing only works with existing text. If you need to create positioning, an offer, or a campaign strategy from scratch, that is a job for other skills.
 
+Russian-speaking users can invoke the same behavior explicitly with `/a1-redaktura`. It is a command alias, not a separate editing capability, and requires `a1-copy-editing` to be installed alongside it.
+
 **Try:**
 
 > `/a1-copy-editing`
@@ -156,6 +158,8 @@ It does not need a detailed explanation of the audience, channel, or goal—it c
 > Edit this in Ilyakhov’s style and keep it to three paragraphs:
 >
 > `[paste your draft]`
+
+For the Russian command alias, replace `/a1-copy-editing` with `/a1-redaktura`.
 
 Or ask for a review without an automatic rewrite:
 
@@ -251,7 +255,7 @@ For the currently packaged Claude Code collections, install A1 Marketing Suite:
 A1 Marketing Suite installs both functional collections as dependencies and has no skills or commands of its own:
 
 - **A1 Core:** `/a1-core:a1-grill`, `/a1-core:a1-consumer-psy`, and `/a1-core:a1-marketing-context`
-- **A1 Editorial:** `/a1-editorial:a1-copy-editing`, `/a1-editorial:a1-humanize`, and `/a1-editorial:a1-editor-in-chief`
+- **A1 Editorial:** `/a1-editorial:a1-copy-editing`, its Russian alias `/a1-editorial:a1-redaktura`, `/a1-editorial:a1-humanize`, and `/a1-editorial:a1-editor-in-chief`
 
 To install only one collection:
 
@@ -272,11 +276,12 @@ Project installation keeps the selected skill versions with that project. For th
 
 ## Update or remove
 
-Update the six globally installed skills:
+Update the six capabilities and the Russian command alias:
 
 ```bash
 npx skills@latest update \
   a1-copy-editing \
+  a1-redaktura \
   a1-editor-in-chief \
   a1-grill \
   a1-humanize \
@@ -291,6 +296,7 @@ Remove them from the global installation:
 ```bash
 npx skills@latest remove \
   a1-copy-editing \
+  a1-redaktura \
   a1-editor-in-chief \
   a1-grill \
   a1-humanize \

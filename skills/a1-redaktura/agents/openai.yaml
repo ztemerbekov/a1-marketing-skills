@@ -1,0 +1,5 @@
+interface:
+  display_name: "A1 Редактура"
+  short_description: "Russian command for A1 Copy Editing"
+policy:
+  allow_implicit_invocation: false
