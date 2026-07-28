@@ -1,6 +1,6 @@
-# A1 Editor Evaluation
+# A1 Copy Editing Evaluation
 
-This directory is the self-contained manual evaluation package for `a1-editor`. It protects important operations and safety boundaries without requiring one golden rewrite or an automated LLM judge.
+This directory is the self-contained manual evaluation package for `a1-copy-editing`. It protects important operations and safety boundaries without requiring one golden rewrite or an automated LLM judge.
 
 Evaluation files are maintainer material. Runtime instructions do not need to load them during ordinary editing requests.
 
@@ -26,26 +26,31 @@ Every materially changed scope boundary must have coverage for four scenarios ac
 
 ## Starter Suite
 
-Run this suite only when the maintainer explicitly requests semantic evaluation, for example before a release. A focused run uses the cases that answer the requested question; a full `a1-editor` run means every case below.
+Run this suite only when the maintainer explicitly requests semantic evaluation, for example before a release. A focused run uses the cases that answer the requested question; a full `a1-copy-editing` run means every case below.
 
 ### Strategy Boundary and Bounded Chief Handoff
 
-- [positioning request stops at the Editor boundary](cases/editor-strategy-route-001.md)
-- [landing-structure request stops at the Editor boundary](cases/editor-strategy-route-005.md)
+- [positioning request stops at the Copy Editing boundary](cases/editor-strategy-route-001.md)
+- [landing-structure request stops at the Copy Editing boundary](cases/editor-strategy-route-005.md)
 - [strategy keywords do not route an ordinary edit](cases/editor-strategy-boundary-007.md)
 - [mixed editing and strategy request stops before partial execution](cases/editor-strategy-boundary-008.md)
 - [completed strategy plus editorial direction routes to explicit bounded Chief invocation](cases/editor-chief-handoff-009.md)
 
-### Standard Editor
+### Standard Copy Editing
 
-- [ordinary editing stays in Editor without optional context](cases/editor-strategy-boundary-006.md)
+- [ordinary editing stays in Copy Editing without optional context](cases/editor-strategy-boundary-006.md)
 - [standard edit and voice preservation](cases/editor-standard-001.md)
 - [standard edit repairs unnatural verb government and collocation](cases/editor-standard-002.md)
+- [ordinary Russian trigger language starts a standard edit](cases/editor-standard-003.md)
 - [shortening](cases/editor-shorten-001.md)
 - [clarifying weak source material](cases/editor-clarify-001.md)
 - [strengthening without unsupported claims](cases/editor-strengthen-001.md)
 - [restructuring](cases/editor-restructure-001.md)
 - [significant ambiguity](cases/editor-ambiguity-001.md)
+
+### Text Review
+
+- [feedback request diagnoses the text without silently rewriting it](cases/editor-review-001.md)
 
 ### Language and Output Contract
 
@@ -70,7 +75,7 @@ Run this suite only when the maintainer explicitly requests semantic evaluation,
 
 ## Manual Run Protocol
 
-1. Prefer a clean agent session with the current `skills/a1-editor/` directory installed.
+1. Prefer a clean agent session with the current `skills/a1-copy-editing/` directory installed.
 2. Reproduce only the setup written in the case. If marketing context is `None`, do not add one.
 3. Submit the exact user instruction and input without paraphrasing.
 4. Save the complete output in temporary run notes. Do not rewrite the criteria after seeing the result.

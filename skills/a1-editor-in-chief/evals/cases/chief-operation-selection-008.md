@@ -1,8 +1,8 @@
-# chief-operation-selection-008 — Chief Selects the Editor Operation
+# chief-operation-selection-008 — Chief Selects the Copy Editing Operation
 
 - ID: `chief-operation-selection-008`
 - Operation: `Clarify`
-- Risk: The chief asks the user for an internal operation or exposes Editor internals while selecting it.
+- Risk: The chief asks the user for an internal operation or exposes Copy Editing internals while selecting it.
 - Scope Scenario: `In scope`
 
 ## Setup
@@ -16,7 +16,7 @@ None.
 ## User Instruction
 
 ```text
-Явно запускаю a1-editor-in-chief. Для внутренней инструкции менеджеру сделай порядок действий понятнее, сохрани все факты и покажи Editor Brief.
+Явно запускаю a1-editor-in-chief. Для внутренней инструкции менеджеру сделай порядок действий понятнее, сохрани все факты и покажи Copy Editing Brief.
 ```
 
 ## Input
@@ -27,8 +27,8 @@ None.
 
 ## Must Change
 
-- [ ] Самостоятельно выбрать `clarify` и указать только этот operation label в показанном Editor Brief.
-- [ ] Передать brief Editor, проверить результат и вернуть понятную последовательность.
+- [ ] Самостоятельно выбрать `clarify` и указать только этот operation label в показанном Copy Editing Brief.
+- [ ] Передать brief Copy Editing, проверить результат и вернуть понятную последовательность.
 
 ## Must Preserve
 
@@ -38,7 +38,7 @@ None.
 ## Forbidden
 
 - [ ] Не спрашивать пользователя, какую операцию выбрать.
-- [ ] Не перечислять или deep-link internal Editor references и не копировать его operation rules.
+- [ ] Не перечислять или deep-link internal Copy Editing references и не копировать его operation rules.
 
 ## Manual Run Record
 

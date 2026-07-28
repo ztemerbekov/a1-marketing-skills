@@ -1,14 +1,14 @@
-# context-editor-protected-conflict-018 — Editor Surfaces a Protected Conflict
+# context-editor-protected-conflict-018 — Copy Editing Surfaces a Protected Conflict
 
 - ID: `context-editor-protected-conflict-018`
 - Mode: `Consumer integration`
-- Risk: Editor silently follows source copy that contradicts a protected product fact and explicit prohibition.
+- Risk: Copy Editing silently follows source copy that contradicts a protected product fact and explicit prohibition.
 - Scope Scenario: `In scope`
 
 ## Setup
 
 ```text
-Install A1 Editor and provide the canonical marketing context below. Do not invoke Marketing Context setup.
+Install A1 Copy Editing and provide the canonical marketing context below. Do not invoke Marketing Context setup.
 ```
 
 ## User Instruction

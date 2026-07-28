@@ -1,7 +1,7 @@
 # Eval Case: <short behavior name>
 
 - ID: `chief-<behavior>-<number>`
-- Operation: `<chief stage or Editor operation>`
+- Operation: `<chief stage or Copy Editing operation>`
 - Risk: `<regression this case protects against>`
 - Scope Scenario: `<In scope | Out of scope | Mixed job | Completed external input, when applicable>`
 

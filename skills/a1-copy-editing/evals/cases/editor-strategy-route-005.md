@@ -1,4 +1,4 @@
-# editor-strategy-route-005 — Landing Structure Request Stops at Editor Boundary
+# editor-strategy-route-005 — Landing Structure Request Stops at Copy Editing Boundary
 
 - ID: `editor-strategy-route-005`
 - Operation: `Strategy Boundary`
@@ -26,7 +26,7 @@ None.
 ## Must Change
 
 - [ ] Определить запрос как создание новой marketing structure, а не как restructure существующего текста.
-- [ ] Коротко объяснить границу A1 Editor и указать, что `a1-editor-in-chief` тоже не создаёт архитектуру лендинга и может принять её только как готовый вход.
+- [ ] Коротко объяснить границу A1 Copy Editing и указать, что `a1-editor-in-chief` тоже не создаёт архитектуру лендинга и может принять её только как готовый вход.
 
 ## Must Preserve
 
@@ -37,7 +37,7 @@ None.
 
 - [ ] Не предлагать hero, benefits, proof, objections, pricing, FAQ, CTA или порядок блоков.
 - [ ] Не рекомендовать `a1-editor-in-chief` как способ создать структуру лендинга с нуля.
-- [ ] Не задавать вопросы chief gate, не создавать Editor Brief и не начинать chief workflow автоматически.
+- [ ] Не задавать вопросы chief gate, не создавать Copy Editing Brief и не начинать chief workflow автоматически.
 
 ## Manual Run Record
 

@@ -2,12 +2,12 @@
 
 - ID: `chief-language-014`
 - Operation: `Standard Edit` with variants
-- Risk: English source copy or delegated Editor headings cause Chief to return English or mixed-language response scaffolding.
+- Risk: English source copy or delegated Copy Editing headings cause Chief to return English or mixed-language response scaffolding.
 - Scope Scenario: `In scope`
 
 ## Setup
 
-Install both `a1-editor-in-chief` and `a1-editor`. No marketing context is available.
+Install both `a1-editor-in-chief` and `a1-copy-editing`. No marketing context is available.
 
 ### Marketing Context
 
@@ -27,7 +27,7 @@ Review Hub brings Ozon and Wildberries reviews into one list and will increase s
 
 ## Must Change
 
-- [ ] Выбрать bounded editorial direction, делегировать Editor и вернуть два английских варианта без неподтверждённого обещания.
+- [ ] Выбрать bounded editorial direction, делегировать Copy Editing и вернуть два английских варианта без неподтверждённого обещания.
 - [ ] Естественно локализовать на русский служебные заголовки для итогового текста, описания изменений, допущений и предупреждений, а также подписи двух вариантов.
 - [ ] Объяснить изменения, допущение и предупреждение по-русски.
 
@@ -40,7 +40,7 @@ Review Hub brings Ozon and Wildberries reviews into one list and will increase s
 
 - [ ] Не использовать английские служебные элементы или пояснения.
 - [ ] Не сохранять и не перефразировать обещание роста продаж; не добавлять метрики, гарантии, CTA или другие неподтверждённые утверждения.
-- [ ] Не показывать Editor Brief, diagnosis, Chief Review, handoff mechanics или отдельный вложенный Editor response.
+- [ ] Не показывать Copy Editing Brief, diagnosis, Chief Review, handoff mechanics или отдельный вложенный Copy Editing response.
 
 ## Manual Run Record
 

@@ -7,7 +7,7 @@ description: 'Remove recognizable AI-writing patterns from supplied copy while p
 
 Turn supplied copy into a more natural human-written version without inventing the marketing behind it.
 
-This public, model-invoked skill starts when the user explicitly invokes `a1-humanize` or makes an unambiguous humanization request. Generic requests to edit, clean up, shorten, clarify, or strengthen text belong to `a1-editor`.
+This public, model-invoked skill starts when the user explicitly invokes `a1-humanize` or makes an unambiguous humanization request. Generic requests to edit, clean up, shorten, clarify, or strengthen text belong to `a1-copy-editing`.
 
 ## Language
 

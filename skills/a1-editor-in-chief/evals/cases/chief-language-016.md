@@ -2,12 +2,12 @@
 
 - ID: `chief-language-016`
 - Operation: `Shorten`
-- Risk: Chief or delegated Editor adds localized service sections when the user explicitly requested only final copy.
+- Risk: Chief or delegated Copy Editing adds localized service sections when the user explicitly requested only final copy.
 - Scope Scenario: `In scope`
 
 ## Setup
 
-Install both `a1-editor-in-chief` and `a1-editor`. No marketing context is available.
+Install both `a1-editor-in-chief` and `a1-copy-editing`. No marketing context is available.
 
 ### Marketing Context
 
@@ -27,7 +27,7 @@ Review Hub brings Ozon and Wildberries reviews together in one list, and the tea
 
 ## Must Change
 
-- [ ] Делегировать сокращение Editor, проверить результат и вернуть только одно более компактное английское предложение.
+- [ ] Делегировать сокращение Copy Editing, проверить результат и вернуть только одно более компактное английское предложение.
 
 ## Must Preserve
 
@@ -35,7 +35,7 @@ Review Hub brings Ozon and Wildberries reviews together in one list, and the tea
 
 ## Forbidden
 
-- [ ] Не добавлять Chief- или Editor-заголовки, подписи вариантов, пояснения, допущения, предупреждения, brief, diagnosis или review notes на любом языке.
+- [ ] Не добавлять Chief- или Copy Editing-заголовки, подписи вариантов, пояснения, допущения, предупреждения, brief, diagnosis или review notes на любом языке.
 - [ ] Не добавлять функции, метрики, автоматизацию, CTA или другие неподтверждённые утверждения.
 
 ## Manual Run Record

@@ -8,7 +8,7 @@
 ## Setup
 
 ```text
-Install A1 Editor in Chief and A1 Editor. Provide the canonical marketing context below.
+Install A1 Editor in Chief and A1 Copy Editing. Provide the canonical marketing context below.
 ```
 
 ## User Instruction
@@ -43,7 +43,7 @@ Editable text:
 
 ## Forbidden
 
-- [ ] Do not create an Editor Brief, delegate, rewrite, keep or remove Amazon, or select a winning fact.
+- [ ] Do not create a Copy Editing Brief, delegate, rewrite, keep or remove Amazon, or select a winning fact.
 - [ ] Do not update context, ask a second question, or treat current material as an automatic protected-input override.
 
 ## Output Contract

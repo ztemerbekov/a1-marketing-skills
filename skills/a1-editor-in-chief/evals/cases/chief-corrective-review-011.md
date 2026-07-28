@@ -1,13 +1,13 @@
-# chief-corrective-review-011 — Chief Allows One Corrective Editor Pass
+# chief-corrective-review-011 — Chief Allows One Corrective Copy Editing Pass
 
 - ID: `chief-corrective-review-011`
 - Operation: `Chief Review`
-- Risk: The chief patches a failing draft itself, loops through Editor, or hides an unresolved failure.
+- Risk: The chief patches a failing draft itself, loops through Copy Editing, or hides an unresolved failure.
 - Scope Scenario: `In scope`
 
 ## Setup
 
-Install both skills. In the evaluation harness, the first Editor result changes `до 10 магазинов` to `10 магазинов`. On the single corrective call, Editor restores `до 10 магазинов` and otherwise keeps the same safe edit. Record both Editor calls.
+Install both skills. In the evaluation harness, the first Copy Editing result changes `до 10 магазинов` to `10 магазинов`. On the single corrective call, Copy Editing restores `до 10 магазинов` and otherwise keeps the same safe edit. Record both Copy Editing calls.
 
 ### Marketing Context
 
@@ -27,17 +27,17 @@ None.
 
 ## Must Change
 
-- [ ] Отклонить первый Editor result за потерю квалификации и отправить один corrective note с неизменным brief.
+- [ ] Отклонить первый Copy Editing result за потерю квалификации и отправить один corrective note с неизменным brief.
 - [ ] Проверить второй result и вернуть его только после восстановления `до 10 магазинов`.
 
 ## Must Preserve
 
 - [ ] Сохранить 1 900 рублей в месяц, тариф Start и квалификацию лимита.
-- [ ] Использовать Editor для обоих текстовых passes.
+- [ ] Использовать Copy Editing для обоих текстовых passes.
 
 ## Forbidden
 
-- [ ] Не исправлять текст локально в chief role и не делать третий Editor call.
+- [ ] Не исправлять текст локально в chief role и не делать третий Copy Editing call.
 - [ ] Не скрывать failed first review, не добавлять скидку, trial, CTA или другой тарифный факт.
 
 ## Manual Run Record

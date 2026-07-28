@@ -7,7 +7,7 @@
 
 ## Setup
 
-Install Chief and Editor. Use this exact filesystem harness and record every context-discovery `open`, `read`, or metadata lookup. Reads of the installed candidate skill files and direct harness messages are required runtime inputs and are outside this context-discovery log:
+Install Chief and Copy Editing. Use this exact filesystem harness and record every context-discovery `open`, `read`, or metadata lookup. Reads of the installed candidate skill files and direct harness messages are required runtime inputs and are outside this context-discovery log:
 
 ```text
 Current working repository: /tmp/chief-isolation/current-repo
@@ -52,7 +52,7 @@ Current repository: None.
 
 ## Must Change
 
-- [ ] Without questions, create the bounded assignment, delegate to Editor, review, and return the clarified current-repository text.
+- [ ] Without questions, create the bounded assignment, delegate to Copy Editing, review, and return the clarified current-repository text.
 
 ## Must Preserve
 
@@ -62,7 +62,7 @@ Current repository: None.
 ## Forbidden
 
 - [ ] The context-discovery access log must contain no profile, context, or sentinel lookup outside `/tmp/chief-isolation/current-repo`; do not mention, warn about, or use procurement directors, Monday, 09:00, Amazon, or the previous repository's prohibitions.
-- [ ] Do not ask for context, create context, use a global or last-used pointer, expose the brief, or bypass Editor.
+- [ ] Do not ask for context, create context, use a global or last-used pointer, expose the brief, or bypass Copy Editing.
 
 ## Manual Run Record
 

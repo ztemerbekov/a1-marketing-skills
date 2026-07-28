@@ -11,8 +11,9 @@ Notable user-facing changes to A1 Marketing Skills are recorded here. Git tags a
 - Use the official `npx skills` CLI for installation and updates.
 - Keep Editor in Chief explicitly invoked across supported clients.
 - Simplify repository validation and contributor guidance around structural checks and pull-request evidence.
-- Make A1 Editor repair incorrect grammar, grammatical government, and lexical collocations even when the source meaning remains understandable.
-- Let A1 Grill, Editor, and Editor in Chief localize output labels naturally instead of requiring exact English or Russian wording.
+- Rename A1 Editor to A1 Copy Editing, recognize ordinary Russian editing requests, and support review-only feedback without silently rewriting the source.
+- Make A1 Copy Editing repair incorrect grammar, grammatical government, and lexical collocations even when the source meaning remains understandable.
+- Let A1 Grill, A1 Copy Editing, and Editor in Chief localize output labels naturally instead of requiring exact English or Russian wording.
 
 ### Removed
 

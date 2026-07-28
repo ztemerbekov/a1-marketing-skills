@@ -2,12 +2,12 @@
 
 - ID: `chief-language-017`
 - Operation: `Standard Edit` with variants
-- Risk: Chief's universal localization rule works only for English and Russian or leaks English Editor labels.
+- Risk: Chief's universal localization rule works only for English and Russian or leaks English Copy Editing labels.
 - Scope Scenario: `In scope`
 
 ## Setup
 
-Install both `a1-editor-in-chief` and `a1-editor`. No marketing context is available.
+Install both `a1-editor-in-chief` and `a1-copy-editing`. No marketing context is available.
 
 ### Marketing Context
 
@@ -27,7 +27,7 @@ Review Hub is a really very useful place where marketplace managers can view Ozo
 
 ## Must Change
 
-- [ ] Delegar en Editor y devolver dos variantes inglesas más claras y concisas, cada una de una sola frase con el enlace integrado.
+- [ ] Delegar en Copy Editing y devolver dos variantes inglesas más claras y concisas, cada una de una sola frase con el enlace integrado.
 - [ ] Usar encabezados de resultado y etiquetas numeradas de opciones localizados naturalmente al español, con explicaciones en español.
 
 ## Must Preserve
@@ -37,8 +37,8 @@ Review Hub is a really very useful place where marketplace managers can view Ozo
 
 ## Forbidden
 
-- [ ] No usar etiquetas de servicio en inglés o ruso ni explicaciones en inglés, y no filtrar el scaffolding interno de Editor.
-- [ ] No mostrar Editor Brief, diagnosis, Chief Review, handoff mechanics ni un Editor response anidado.
+- [ ] No usar etiquetas de servicio en inglés o ruso ni explicaciones en inglés, y no filtrar el scaffolding interno de Copy Editing.
+- [ ] No mostrar Copy Editing Brief, diagnosis, Chief Review, handoff mechanics ni un Copy Editing response anidado.
 - [ ] No añadir funciones, métricas, garantías, CTA ni otras afirmaciones no confirmadas.
 
 ## Manual Run Record

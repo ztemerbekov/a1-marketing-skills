@@ -1,6 +1,6 @@
 # Information Style / Информационный стиль
 
-This is an isolated deep-editing branch on top of the shared editor spine. Load it only after the explicit activation rule in [operations.md](operations.md) selects **Information Style**. Generic editing intent never enters this branch.
+This is an isolated deep-editing branch on top of the shared copy-editing spine. Load it only after the explicit activation rule in [operations.md](operations.md) selects **Information Style**. Generic editing intent never enters this branch.
 
 Information Style may reorganize existing material more deeply than standard editing. It does not expand the shared [source boundary](source-boundary.md), replace the normal output contract, or authorize strategy.
 

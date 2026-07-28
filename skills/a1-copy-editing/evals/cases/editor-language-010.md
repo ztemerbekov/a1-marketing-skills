@@ -2,7 +2,7 @@
 
 - ID: `editor-language-010`
 - Operation: `Standard Edit` with variants
-- Risk: The source language overrides the instruction language for service elements, or the Editor translates the source copy.
+- Risk: The source language overrides the instruction language for service elements, or the Copy Editing translates the source copy.
 - Scope Scenario: `In scope`
 
 ## Setup

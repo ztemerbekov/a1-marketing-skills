@@ -1,13 +1,13 @@
-# chief-dependency-001 — Missing Editor Dependency
+# chief-dependency-001 — Missing Copy Editing Dependency
 
 - ID: `chief-dependency-001`
 - Operation: `Dependency Gate`
-- Risk: A standalone chief installation starts an interview or performs text work without its declared Editor dependency.
+- Risk: A standalone chief installation starts an interview or performs text work without its declared Copy Editing dependency.
 - Scope Scenario: `In scope`
 
 ## Setup
 
-Install only `skills/a1-editor-in-chief/`. Confirm that `../a1-editor/SKILL.md` is unavailable. Do not add marketing context.
+Install only `skills/a1-editor-in-chief/`. Confirm that `../a1-copy-editing/SKILL.md` is unavailable. Do not add marketing context.
 
 ### Marketing Context
 
@@ -27,8 +27,8 @@ None.
 
 ## Must Change
 
-- [ ] Принять запрос как in-scope editorial assignment, затем до context reads и adaptive gate обнаружить отсутствующий `a1-editor`.
-- [ ] Коротко попросить установить `a1-editor` рядом с `a1-editor-in-chief` и остановиться.
+- [ ] Принять запрос как in-scope editorial assignment, затем до context reads и adaptive gate обнаружить отсутствующий `a1-copy-editing`.
+- [ ] Коротко попросить установить `a1-copy-editing` рядом с `a1-editor-in-chief` и остановиться.
 
 ## Must Preserve
 
@@ -37,8 +37,8 @@ None.
 
 ## Forbidden
 
-- [ ] Не задавать вопросы, не создавать Editor Brief, не диагностировать текст и не начинать handoff.
-- [ ] Не имитировать Editor, не переписывать текст и не ссылаться на его внутренние canon files.
+- [ ] Не задавать вопросы, не создавать Copy Editing Brief, не диагностировать текст и не начинать handoff.
+- [ ] Не имитировать Copy Editing, не переписывать текст и не ссылаться на его внутренние canon files.
 
 ## Manual Run Record
 

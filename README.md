@@ -20,8 +20,8 @@ The collection is split into two connected packages for marketing decisions, reu
 
 ### A1 Editorial — Editing and copy
 
-4. **Editor** (`/a1-editor`) improves existing drafts within supplied constraints and available Marketing Context while preserving source facts.
-5. **Editor in Chief** (`/a1-editor-in-chief`) sets editorial direction inside approved strategy, briefs Editor, and reviews the resulting edit.
+4. **A1 Copy Editing** (`/a1-copy-editing`) improves or reviews existing drafts within supplied constraints and available Marketing Context while preserving source facts and human editorial control.
+5. **Editor in Chief** (`/a1-editor-in-chief`) sets editorial direction inside approved strategy, briefs A1 Copy Editing, and reviews the resulting edit.
 6. **Humanize** (`/a1-humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
 
 ## Working principles
@@ -57,7 +57,7 @@ Here is a complete context-to-edit loop:
 
 ## Quick start
 
-The shortest path to a useful result is a global install followed by an Editor request.
+The shortest path to a useful result is a global install followed by an A1 Copy Editing request.
 
 1. Open a terminal and install the collection:
 
@@ -65,9 +65,9 @@ The shortest path to a useful result is a global install followed by an Editor r
    npx skills@latest add ztemerbekov/a1-marketing-skills -g
    ```
 
-2. When the installer asks, choose the AI agents you already use and select `a1-editor` or any other skills you want.
+2. When the installer asks, choose the AI agents you already use and select `a1-copy-editing` or any other skills you want.
 
-3. Open the project that contains your draft in the selected agent. Editor can start from an ordinary-language request:
+3. Open the project that contains your draft in the selected agent. A1 Copy Editing can start from an ordinary-language request:
 
    > Make this paragraph clearer and shorter. Keep every fact and do not add new claims.
    >
@@ -139,25 +139,31 @@ Read the [full Grill behavior](./skills/a1-grill/SKILL.md).
 </details>
 
 <details>
-<summary><strong>Editor — improve existing copy without inventing facts</strong></summary>
+<summary><strong>A1 Copy Editing — improve or review existing copy without inventing facts</strong></summary>
 
 <br>
 
-**Editor** starts when you need to polish any finished text. It can easily cut the fluff, clarify the meaning, tune the style, or rewrite the whole thing in Ilyakhov’s information style. All facts, numbers, and your distinctive voice stay intact—it invents nothing and loses nothing.
+Use **A1 Copy Editing** to polish a finished text or get editorial feedback before making changes. It can cut fluff, clarify meaning, tune the style, apply Ilyakhov’s information style when explicitly requested, or review the draft without silently rewriting it. Facts, numbers, and the author’s distinctive voice stay intact, while the user keeps final editorial control.
 
 It does not need a detailed explanation of the audience, channel, or goal—it can still produce a strong edit.
 
-*Limitations:* Editor only works with text. If you need to create positioning, an offer, or a campaign strategy from scratch, that is a job for other skills.
+*Limitations:* A1 Copy Editing only works with existing text. If you need to create positioning, an offer, or a campaign strategy from scratch, that is a job for other skills.
 
 **Try:**
 
-> `/a1-editor`
+> `/a1-copy-editing`
 >
 > Edit this in Ilyakhov’s style and keep it to three paragraphs:
 >
 > `[paste your draft]`
 
-Read the [full Editor behavior](./skills/a1-editor/SKILL.md).
+Or ask for a review without an automatic rewrite:
+
+> Give feedback on this copy and prioritize what I should fix first. Do not rewrite it yet:
+>
+> `[paste your draft]`
+
+Read the [full A1 Copy Editing behavior](./skills/a1-copy-editing/SKILL.md).
 
 </details>
 
@@ -187,7 +193,7 @@ Read the [full Humanize behavior](./skills/a1-humanize/SKILL.md).
 
 <br>
 
-Editor in Chief works inside confirmed product and marketing inputs. It resolves the source material, chooses bounded editorial direction, creates an internal brief, delegates all text work to Editor, and reviews the result with at most one corrective pass.
+Editor in Chief works inside confirmed product and marketing inputs. It resolves the source material, chooses bounded editorial direction, creates an internal brief, delegates all text work to A1 Copy Editing, and reviews the result with at most one corrective pass.
 
 Use it when approved strategy already exists but reader focus, message emphasis, editorial angle, argument order, structure, or voice still needs a chief editor's judgment. It does not create positioning, segmentation, pricing, an offer, a campaign strategy, GTM, or product strategy.
 
@@ -245,7 +251,7 @@ For the currently packaged Claude Code collections, install A1 Marketing Suite:
 A1 Marketing Suite installs both functional collections as dependencies and has no skills or commands of its own:
 
 - **A1 Core:** `/a1-core:a1-grill`, `/a1-core:a1-consumer-psy`, and `/a1-core:a1-marketing-context`
-- **A1 Editorial:** `/a1-editorial:a1-editor`, `/a1-editorial:a1-humanize`, and `/a1-editorial:a1-editor-in-chief`
+- **A1 Editorial:** `/a1-editorial:a1-copy-editing`, `/a1-editorial:a1-humanize`, and `/a1-editorial:a1-editor-in-chief`
 
 To install only one collection:
 
@@ -270,7 +276,7 @@ Update the six globally installed skills:
 
 ```bash
 npx skills@latest update \
-  a1-editor \
+  a1-copy-editing \
   a1-editor-in-chief \
   a1-grill \
   a1-humanize \
@@ -284,7 +290,7 @@ Remove them from the global installation:
 
 ```bash
 npx skills@latest remove \
-  a1-editor \
+  a1-copy-editing \
   a1-editor-in-chief \
   a1-grill \
   a1-humanize \

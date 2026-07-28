@@ -1,6 +1,6 @@
 # Source Boundary / Граница источников
 
-This is the authoritative source boundary for `a1-editor` and shared editor execution. Other runtime files may point here but must not redefine this boundary.
+This is the authoritative source boundary for `a1-copy-editing` and its shared editing and review execution. Other runtime files may point here but must not redefine this boundary.
 
 ## Allowed Sources / Разрешенные источники
 

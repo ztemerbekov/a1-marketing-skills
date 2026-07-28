@@ -4,7 +4,7 @@ Classify the whole request before dependency checks, context reads, questions, b
 
 ## Declared Scope
 
-- **User job and in-scope work:** set editorial direction for supplied material inside confirmed product and marketing inputs, brief `a1-editor`, review its result, and deliver it.
+- **User job and in-scope work:** set editorial direction for supplied material inside confirmed product and marketing inputs, brief `a1-copy-editing`, review its result, and deliver it.
 - **Editorial decisions the chief may make:** reader focus, confirmed message emphasis, angle, argument hierarchy, text structure, and voice.
 - **Out-of-scope work:** create, complete, research, choose, or silently infer GTM, market research, segmentation, pricing, product strategy, positioning, offer strategy, campaign strategy, or general marketing strategy.
 - **Completed external inputs:** finished GTM, positioning, segmentation, pricing, research, or other marketing strategy may be accepted as source material. Accepting it never authorizes the chief to create or repair it.
