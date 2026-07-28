@@ -1,0 +1,37 @@
+{
+  "name": "a1-marketing-suite",
+  "version": "0.1.0",
+  "description": "Marketing decision support and editorial workflows for AI agents.",
+  "author": {
+    "name": "Zinnur Temerbekov"
+  },
+  "homepage": "https://github.com/ztemerbekov/a1-marketing-skills",
+  "repository": "https://github.com/ztemerbekov/a1-marketing-skills",
+  "license": "MIT",
+  "keywords": [
+    "marketing",
+    "copy-editing",
+    "consumer-psychology",
+    "marketing-context"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "A1 Marketing Skills",
+    "shortDescription": "Marketing decisions and editorial workflows",
+    "longDescription": "A portable collection of marketing skills for stress-testing decisions, maintaining confirmed context, auditing consumer psychology, and editing copy.",
+    "developerName": "Zinnur Temerbekov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/ztemerbekov/a1-marketing-skills",
+    "defaultPrompt": [
+      "Stress-test this marketing plan before we execute it.",
+      "Set up marketing context from confirmed repository information.",
+      "Edit this marketing copy without changing its facts."
+    ],
+    "composerIcon": "./assets/a1-logo.svg",
+    "logo": "./assets/a1-logo.svg"
+  }
+}

@@ -306,6 +306,10 @@ done
 
 validate_consumer_psy_dossiers
 
+if ! python3 scripts/validate-marketplaces.py; then
+  failures=$((failures + 1))
+fi
+
 echo
 echo "Summary: $skills_checked skills checked, $evals_checked eval cases checked, $failures failures"
 

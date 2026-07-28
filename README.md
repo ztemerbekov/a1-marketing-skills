@@ -238,6 +238,27 @@ It also treats broad frameworks and analyst errors as guardrails: they can route
 
 ## Other installation options
 
+### Codex marketplace
+
+Add the repository marketplace once:
+
+```bash
+codex plugin marketplace add ztemerbekov/a1-marketing-skills
+codex plugin add a1-marketing-suite@a1-marketing-skills
+```
+
+Start a new Codex session after installation so it can load the bundled skills. You can also browse the repository marketplace and manage the plugin through `/plugins`.
+
+### Cursor marketplace
+
+Add the repository marketplace once:
+
+```bash
+cursor-agent plugin marketplace add https://github.com/ztemerbekov/a1-marketing-skills
+```
+
+Start `cursor-agent`, open `/plugin`, choose the **A1 Marketing Skills** marketplace, and install the **A1 Marketing Skills** plugin at user or project scope.
+
 ### Claude Code marketplace
 
 Add the marketplace once:
@@ -246,13 +267,13 @@ Add the marketplace once:
 /plugin marketplace add ztemerbekov/a1-marketing-skills
 ```
 
-For the currently packaged Claude Code collections, install A1 Marketing Suite:
+For the complete A1 Marketing Skills installation:
 
 ```text
 /plugin install a1-marketing-suite@a1-marketing-skills
 ```
 
-A1 Marketing Suite installs both functional collections as dependencies and has no skills or commands of its own:
+The complete installation includes both collections:
 
 - **A1 Core:** `/a1-core:a1-grill`, `/a1-core:a1-consumer-psy`, and `/a1-core:a1-marketing-context`
 - **A1 Editorial:** `/a1-editorial:a1-copy-editing`, its Russian alias `/a1-editorial:a1-redaktura`, `/a1-editorial:a1-humanize`, and `/a1-editorial:a1-editor-in-chief`

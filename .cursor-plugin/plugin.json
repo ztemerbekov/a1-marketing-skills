@@ -1,0 +1,25 @@
+{
+  "name": "a1-marketing-suite",
+  "displayName": "A1 Marketing Skills",
+  "version": "0.1.0",
+  "description": "Marketing decision support and editorial workflows for AI agents.",
+  "author": {
+    "name": "Zinnur Temerbekov"
+  },
+  "homepage": "https://github.com/ztemerbekov/a1-marketing-skills",
+  "repository": "https://github.com/ztemerbekov/a1-marketing-skills",
+  "license": "MIT",
+  "logo": "assets/a1-logo.svg",
+  "keywords": [
+    "marketing",
+    "copy-editing",
+    "consumer-psychology",
+    "marketing-context"
+  ],
+  "category": "productivity",
+  "tags": [
+    "marketing",
+    "editorial"
+  ],
+  "skills": "./skills/"
+}
