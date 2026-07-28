@@ -10,9 +10,13 @@
   "license": "MIT",
   "keywords": [
     "marketing",
-    "copy-editing",
+    "marketing-decisions",
+    "idea-validation",
     "consumer-psychology",
-    "marketing-context"
+    "marketing-context",
+    "copy-editing",
+    "editorial-review",
+    "humanize"
   ],
   "skills": "./skills/",
   "interface": {
