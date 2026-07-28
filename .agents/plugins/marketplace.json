@@ -5,7 +5,7 @@
   },
   "plugins": [
     {
-      "name": "a1-marketing-suite",
+      "name": "a1-marketing-skills",
       "source": {
         "source": "url",
         "url": "https://github.com/ztemerbekov/a1-marketing-skills.git"
