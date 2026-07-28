@@ -14,6 +14,20 @@ ROOT = Path(__file__).resolve().parent.parent
 PRODUCT_SLUG = "a1-marketing-skills"
 PRODUCT_DISPLAY_NAME = "A1 Marketing Skills"
 CLAUDE_FULL_PLUGIN_SOURCE = f"./plugins/{PRODUCT_SLUG}"
+CLAUDE_PACKAGES = {
+    "a1-core": {
+        "displayName": "A1 Core",
+        "category": "productivity",
+    },
+    "a1-editorial": {
+        "displayName": "A1 Editorial",
+        "category": "productivity",
+    },
+    PRODUCT_SLUG: {
+        "displayName": PRODUCT_DISPLAY_NAME,
+        "category": "productivity",
+    },
+}
 SKILLS_PATH = "./skills/"
 REPOSITORY_URL = "https://github.com/ztemerbekov/a1-marketing-skills.git"
 CODEX_LOGO_PATH = "./assets/marketplaces/codex/logo.svg"
@@ -67,6 +81,22 @@ def check_value(document, path, key, expected):
     actual = document.get(key)
     if actual != expected:
         fail(path, f"{key!r} must be {expected!r}, found {actual!r}")
+
+
+def keyword_set(document, path, subject):
+    keywords = document.get("keywords")
+    if not isinstance(keywords, list):
+        fail(path, f"{subject} keywords must be an array")
+        return None
+    if not all(isinstance(keyword, str) for keyword in keywords):
+        fail(path, f"{subject} keywords must contain only strings")
+        return None
+    duplicates = sorted(
+        keyword for keyword in set(keywords) if keywords.count(keyword) > 1
+    )
+    if duplicates:
+        fail(path, f"{subject} keywords contain duplicates: {', '.join(duplicates)}")
+    return set(keywords)
 
 
 def resolve_asset(manifest_path, declared_path, *, require_dot_prefix):
@@ -277,11 +307,23 @@ if not isinstance(codex_version, str) or not re.fullmatch(
         f"version must use MAJOR.MINOR.PATCH semver, found {codex_version!r}",
     )
 
-claude_full_plugin = plugin_entry(
-    claude_marketplace,
-    MANIFEST_PATHS["claude marketplace"],
-    PRODUCT_SLUG,
-)
+claude_plugin_entries = {}
+for name, expected_metadata in CLAUDE_PACKAGES.items():
+    entry = plugin_entry(
+        claude_marketplace,
+        MANIFEST_PATHS["claude marketplace"],
+        name,
+    )
+    claude_plugin_entries[name] = entry
+    for key, expected_value in expected_metadata.items():
+        check_value(
+            entry,
+            MANIFEST_PATHS["claude marketplace"],
+            key,
+            expected_value,
+        )
+
+claude_full_plugin = claude_plugin_entries[PRODUCT_SLUG]
 codex_full_plugin = plugin_entry(
     codex_marketplace,
     MANIFEST_PATHS["codex marketplace"],
@@ -362,6 +404,51 @@ check_value(
     "displayName",
     PRODUCT_DISPLAY_NAME,
 )
+
+full_plugin_keywords = {
+    "Claude marketplace": (
+        keyword_set(
+            claude_full_plugin,
+            MANIFEST_PATHS["claude marketplace"],
+            "full plugin",
+        ),
+        MANIFEST_PATHS["claude marketplace"],
+    ),
+    "Codex manifest": (
+        keyword_set(
+            codex_manifest,
+            MANIFEST_PATHS["codex manifest"],
+            "full plugin",
+        ),
+        MANIFEST_PATHS["codex manifest"],
+    ),
+    "Cursor manifest": (
+        keyword_set(
+            cursor_manifest,
+            MANIFEST_PATHS["cursor manifest"],
+            "full plugin",
+        ),
+        MANIFEST_PATHS["cursor manifest"],
+    ),
+}
+claude_keywords = full_plugin_keywords["Claude marketplace"][0]
+if claude_keywords is not None:
+    for label, (keywords, path) in full_plugin_keywords.items():
+        if keywords is None or keywords == claude_keywords:
+            continue
+        missing = sorted(claude_keywords - keywords)
+        extra = sorted(keywords - claude_keywords)
+        details = []
+        if missing:
+            details.append(f"missing: {', '.join(missing)}")
+        if extra:
+            details.append(f"extra: {', '.join(extra)}")
+        fail(
+            path,
+            f"{label} full-plugin keywords must match Claude marketplace"
+            + (f" ({'; '.join(details)})" if details else ""),
+        )
+
 check_value(
     cursor_manifest,
     MANIFEST_PATHS["cursor manifest"],
@@ -393,12 +480,6 @@ for plugin in claude_marketplace.get("plugins", []):
                 f"{unsupported_field!r} metadata",
             )
 
-check_value(
-    claude_full_plugin,
-    MANIFEST_PATHS["claude marketplace"],
-    "displayName",
-    PRODUCT_DISPLAY_NAME,
-)
 check_value(
     claude_full_plugin,
     MANIFEST_PATHS["claude marketplace"],
@@ -536,7 +617,8 @@ if failures:
     sys.exit(1)
 
 print(
-    "Marketplace summary: product slug and display name are synchronized across "
-    "Claude, Codex, and Cursor; "
+    "Marketplace summary: product slug, display names, and full-plugin keywords "
+    "are synchronized across Claude, Codex, and Cursor; "
+    "Claude package categories validated; "
     f"{len(canonical_skills)} canonical skills covered"
 )
