@@ -14,6 +14,11 @@ ROOT = Path(__file__).resolve().parent.parent
 PRODUCT_SLUG = "a1-marketing-skills"
 PRODUCT_DISPLAY_NAME = "A1 Marketing Skills"
 CLAUDE_FULL_PLUGIN_SOURCE = f"./plugins/{PRODUCT_SLUG}"
+CLAUDE_PLUGIN_CATEGORIES = {
+    "a1-core": "productivity",
+    "a1-editorial": "productivity",
+    PRODUCT_SLUG: "productivity",
+}
 SKILLS_PATH = "./skills/"
 REPOSITORY_URL = "https://github.com/ztemerbekov/a1-marketing-skills.git"
 CODEX_LOGO_PATH = "./assets/marketplaces/codex/logo.svg"
@@ -277,11 +282,23 @@ if not isinstance(codex_version, str) or not re.fullmatch(
         f"version must use MAJOR.MINOR.PATCH semver, found {codex_version!r}",
     )
 
-claude_full_plugin = plugin_entry(
-    claude_marketplace,
-    MANIFEST_PATHS["claude marketplace"],
-    PRODUCT_SLUG,
-)
+claude_plugin_entries = {
+    name: plugin_entry(
+        claude_marketplace,
+        MANIFEST_PATHS["claude marketplace"],
+        name,
+    )
+    for name in CLAUDE_PLUGIN_CATEGORIES
+}
+for name, expected_category in CLAUDE_PLUGIN_CATEGORIES.items():
+    check_value(
+        claude_plugin_entries[name],
+        MANIFEST_PATHS["claude marketplace"],
+        "category",
+        expected_category,
+    )
+
+claude_full_plugin = claude_plugin_entries[PRODUCT_SLUG]
 codex_full_plugin = plugin_entry(
     codex_marketplace,
     MANIFEST_PATHS["codex marketplace"],

@@ -11,6 +11,7 @@
       "name": "a1-core",
       "displayName": "A1 Core",
       "description": "Stress-test marketing strategies and validate consumer psychology hypotheses to eliminate costly missteps before your team executes.",
+      "category": "productivity",
       "keywords": [
         "marketing-context",
         "idea-validation",
@@ -30,6 +31,7 @@
       "name": "a1-editorial",
       "displayName": "A1 Editorial",
       "description": "Support editorial teams with AI—polish drafts, review copy, and remove AI patterns while preserving voice, facts, and human control.",
+      "category": "productivity",
       "keywords": [
         "editing",
         "copy-editing",
@@ -51,6 +53,7 @@
       "name": "a1-marketing-skills",
       "displayName": "A1 Marketing Skills",
       "description": "The complete A1 Marketing Skills installation for Claude Code, combining strategic decision support with full-cycle editorial automation.",
+      "category": "productivity",
       "keywords": [
         "marketing",
         "editing",
