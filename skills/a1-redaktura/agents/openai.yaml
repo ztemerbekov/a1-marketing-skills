@@ -1,6 +1,5 @@
 interface:
   display_name: "A1 Редактура"
-  short_description: "Russian command for safe copy editing"
-  default_prompt: "Use $a1-redaktura to edit or review my existing marketing text."
+  short_description: "Russian command for A1 Copy Editing"
 policy:
   allow_implicit_invocation: false
