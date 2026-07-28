@@ -28,7 +28,7 @@ None.
 ## Must Change
 
 - [ ] Принять completed strategy как source material и выполнить bounded editorial workflow без вопросов.
-- [ ] Усилить существующий пятничный сценарий через Editor и вернуть minimal reviewed output.
+- [ ] Усилить существующий пятничный сценарий через Copy Editing и вернуть minimal reviewed output.
 
 ## Must Preserve
 

@@ -2,7 +2,7 @@
 
 - ID: `editor-chief-handoff-009`
 - Operation: `Completed-Strategy Chief Handoff`
-- Risk: Editor either starts a direct edit when editorial direction is the requested job or presents Chief as a creator of the already approved strategy.
+- Risk: Copy Editing either starts a direct edit when editorial direction is the requested job or presents Chief as a creator of the already approved strategy.
 - Scope Scenario: `Completed external input`
 
 ## Setup
@@ -33,11 +33,11 @@ None.
 ## Must Preserve
 
 - [ ] Ответить на русском и назвать утверждённые аудиторию и позиционирование готовыми входами, а не предметом нового выбора.
-- [ ] Сохранить явное ограничение не переписывать email в текущем Editor run.
+- [ ] Сохранить явное ограничение не переписывать email в текущем Copy Editing run.
 
 ## Forbidden
 
-- [ ] Не начинать chief workflow, не задавать gate questions, не создавать Editor Brief и не возвращать служебные разделы редакторского результата или частичную редактуру.
+- [ ] Не начинать chief workflow, не задавать gate questions, не создавать Copy Editing Brief и не возвращать служебные разделы редакторского результата или частичную редактуру.
 - [ ] Не предлагать новую аудиторию, позиционирование, сегмент, оффер, angle, message, claim или CTA.
 
 ## Manual Run Record

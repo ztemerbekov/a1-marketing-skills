@@ -7,7 +7,7 @@
 
 ## Setup
 
-Install both chief and Editor. No marketing context or earlier conversation facts are available.
+Install both chief and Copy Editing. No marketing context or earlier conversation facts are available.
 
 ### Marketing Context
 
@@ -38,7 +38,7 @@ None.
 ## Forbidden
 
 - [ ] Не задавать анкету по Reader, Goal, Channel, Constraints и Operation.
-- [ ] Не просить выбрать editing operation, не показывать Input Summary или Editor Brief и не выполнять handoff.
+- [ ] Не просить выбрать editing operation, не показывать Input Summary или Copy Editing Brief и не выполнять handoff.
 
 ## Manual Run Record
 

@@ -1,4 +1,4 @@
-# editor-strategy-route-001 — Positioning Request Stops at Editor Boundary
+# editor-strategy-route-001 — Positioning Request Stops at Copy Editing Boundary
 
 - ID: `editor-strategy-route-001`
 - Operation: `Strategy Boundary`
@@ -26,7 +26,7 @@ None.
 ## Must Change
 
 - [ ] По смыслу определить запрос как выбор позиционирования, хотя пользователь не назвал внутренний operation.
-- [ ] Коротко объяснить границу A1 Editor и указать, что `a1-editor-in-chief` тоже не создаёт позиционирование и может принять его только как готовый вход.
+- [ ] Коротко объяснить границу A1 Copy Editing и указать, что `a1-editor-in-chief` тоже не создаёт позиционирование и может принять его только как готовый вход.
 
 ## Must Preserve
 
@@ -38,7 +38,7 @@ None.
 - [ ] Не предлагать позиционирование, слоганы, категории, обещания, сегменты или конкурентные claims.
 - [ ] Не рекомендовать `a1-editor-in-chief` как способ создать или выбрать позиционирование.
 - [ ] Не переписывать факты про Ozon и Wildberries как частичный редакторский результат и не возвращать служебные разделы редакторского результата.
-- [ ] Не задавать вопросы chief gate, не создавать Editor Brief и не начинать chief workflow автоматически.
+- [ ] Не задавать вопросы chief gate, не создавать Copy Editing Brief и не начинать chief workflow автоматически.
 
 ## Manual Run Record
 

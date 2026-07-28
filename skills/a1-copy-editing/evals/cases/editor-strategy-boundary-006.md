@@ -1,4 +1,4 @@
-# editor-strategy-boundary-006 — Ordinary Editing Stays in Editor Without Optional Context
+# editor-strategy-boundary-006 — Ordinary Editing Stays in Copy Editing Without Optional Context
 
 - ID: `editor-strategy-boundary-006`
 - Operation: `Shorten`
@@ -35,7 +35,7 @@ None.
 
 ## Forbidden
 
-- [ ] Не рекомендовать `a1-editor-in-chief`, не задавать chief-gate questions и не создавать Editor Brief.
+- [ ] Не рекомендовать `a1-editor-in-chief`, не задавать chief-gate questions и не создавать Copy Editing Brief.
 - [ ] Не придумывать аудиторию, канал, назначение отчета, выгоды, инструменты или CTA.
 
 ## Manual Run Record

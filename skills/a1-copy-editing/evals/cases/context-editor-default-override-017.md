@@ -1,14 +1,14 @@
-# context-editor-default-override-017 — Editor May Override Context Defaults
+# context-editor-default-override-017 — Copy Editing May Override Context Defaults
 
 - ID: `context-editor-default-override-017`
 - Mode: `Consumer integration`
-- Risk: Editor treats an audience or voice default as an immutable product fact and blocks a valid task-specific edit.
+- Risk: Copy Editing treats an audience or voice default as an immutable product fact and blocks a valid task-specific edit.
 - Scope Scenario: `In scope`
 
 ## Setup
 
 ```text
-Install A1 Editor and provide the canonical marketing context below. Do not invoke Marketing Context setup.
+Install A1 Copy Editing and provide the canonical marketing context below. Do not invoke Marketing Context setup.
 ```
 
 ## User Instruction
@@ -55,7 +55,7 @@ Review Hub collects Ozon and Wildberries reviews in one list, so you can review 
 
 ## Output Contract
 
-`Normal Editor result for agency owners, without a context-maintenance confirmation or question.`
+`Normal Copy Editing result for agency owners, without a context-maintenance confirmation or question.`
 
 ## Manual Run Record
 

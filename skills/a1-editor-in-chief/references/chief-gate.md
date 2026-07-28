@@ -27,6 +27,6 @@ Block only when:
 
 Ask one concise decision question about the decisive fork, then stop. Do not send a questionnaire, ask for internal operation names, or collect nice-to-have background. On the next turn, resolve sources again before continuing.
 
-If one safe editorial direction is available, proceed and place any material assumption in the Editor Brief. Do not ask merely to make the brief more detailed.
+If one safe editorial direction is available, proceed and place any material assumption in the Copy Editing Brief. Do not ask merely to make the brief more detailed.
 
 **Complete when:** usable task material and one safe editorial direction are available, or one decisive question has been asked and the run has stopped.

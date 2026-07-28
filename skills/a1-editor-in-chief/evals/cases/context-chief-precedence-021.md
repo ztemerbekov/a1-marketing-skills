@@ -7,7 +7,7 @@
 
 ## Setup
 
-Install `a1-editor-in-chief` and `a1-editor` in a repository containing all three contexts below.
+Install `a1-editor-in-chief` and `a1-copy-editing` in a repository containing all three contexts below.
 
 ### Marketing Context
 
@@ -43,7 +43,7 @@ marketing-context.md:
 
 ## Must Change
 
-- [ ] Build a bounded assignment without a context-conflict question, delegate to Editor, review, and return the clarified text.
+- [ ] Build a bounded assignment without a context-conflict question, delegate to Copy Editing, review, and return the clarified text.
 
 ## Must Preserve
 

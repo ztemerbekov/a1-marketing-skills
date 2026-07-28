@@ -2,12 +2,12 @@
 
 - ID: `chief-explicit-003`
 - Operation: `Clarify`
-- Risk: A complete assignment is questioned again, exposes internal process, or lets the chief rewrite without Editor.
+- Risk: A complete assignment is questioned again, exposes internal process, or lets the chief rewrite without Copy Editing.
 - Scope Scenario: `In scope`
 
 ## Setup
 
-Install both chief and Editor. No marketing context is available.
+Install both chief and Copy Editing. No marketing context is available.
 
 ### Marketing Context
 
@@ -27,7 +27,7 @@ None.
 
 ## Must Change
 
-- [ ] Без дополнительных вопросов выбрать `clarify`, создать скрытый Editor Brief, делегировать текст Editor и проверить результат.
+- [ ] Без дополнительных вопросов выбрать `clarify`, создать скрытый Copy Editing Brief, делегировать текст Copy Editing и проверить результат.
 - [ ] Вернуть только естественно локализованные русские разделы с итоговым текстом и одним-пятью пунктами описания изменений.
 
 ## Must Preserve
@@ -37,7 +37,7 @@ None.
 
 ## Forbidden
 
-- [ ] Не показывать Input Summary, diagnosis, Editor Brief, handoff, `Chief Review`, assumptions или warnings без материальной причины.
+- [ ] Не показывать Input Summary, diagnosis, Copy Editing Brief, handoff, `Chief Review`, assumptions или warnings без материальной причины.
 - [ ] Не добавлять аудиторию, выгоды, метрики, CTA, offer, proof, новую маркетинговую структуру или факты.
 
 ## Manual Run Record

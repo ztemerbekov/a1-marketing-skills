@@ -1,6 +1,6 @@
 # Canon Core
 
-This is the compact editorial principle set for `a1-editor`. It guides editing quality after the operation and source boundary are already fixed; it does not redefine either contract.
+This is the compact editorial principle set for `a1-copy-editing`. It guides editing quality after the operation and source boundary are already fixed; it does not redefine either contract.
 
 The principles are written in Russian because they primarily control Russian text editing behavior.
 

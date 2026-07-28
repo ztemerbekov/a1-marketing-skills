@@ -1,6 +1,6 @@
 ---
 name: a1-editor-in-chief
-description: 'Bounded chief-editor workflow for editorial direction, internal brief creation, A1 Editor delegation, and reviewed delivery. Use only when explicitly invoked.'
+description: 'Bounded chief-editor workflow for editorial direction, internal brief creation, A1 Copy Editing delegation, and reviewed delivery. Use only when explicitly invoked.'
 disable-model-invocation: true
 ---
 
@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 Turn a confirmed editorial assignment into a reviewed edit without becoming a general marketing strategist or rewriting the text yourself.
 
-This is a public, User-invoked skill. Its one user job is to make bounded editorial-strategy decisions, create an internal Editor Brief, delegate text execution to `a1-editor`, review the result, and deliver the final answer.
+This is a public, User-invoked skill. Its one user job is to make bounded editorial-strategy decisions, create an internal Copy Editing Brief, delegate text execution to `a1-copy-editing`, review the result, and deliver the final answer.
 
 ## Invocation Contract
 
@@ -26,7 +26,7 @@ Use the explanation language for every user-facing service element, including se
 
 Follow [the chief spine](references/chief-spine.md) in order. It is the single authority for every stage, its order, and its completion criterion.
 
-Load only the local reference selected by the active stage. Do not inspect or copy Editor's internal references: `a1-editor` owns text execution and its canon.
+Load only the local reference selected by the active stage. Do not inspect or copy A1 Copy Editing's internal references: `a1-copy-editing` owns text execution and its canon.
 
 ## Output Contract
 
@@ -39,9 +39,9 @@ Unless the user requests final text only, return these naturally localized level
 
 Keep options inside the final-text section. Introduce each with a naturally localized numbered option label, followed by any descriptive difference.
 
-The delegated Editor response is internal. Return the reviewed copy once without Editor headings. Do not expose an input summary, diagnosis, handoff mechanics, review rubric, `Chief Review`, or process notes by default. Keep the Editor Brief internal unless the user explicitly asks to inspect it.
+The delegated Copy Editing response is internal. Return the reviewed copy once without Copy Editing headings. Do not expose an input summary, diagnosis, handoff mechanics, review rubric, `Chief Review`, or process notes by default. Keep the Copy Editing Brief internal unless the user explicitly asks to inspect it.
 
-Before delivery, verify that every service label follows the Language rule and no Editor scaffolding remains. For a final-text-only request, return only the reviewed copy.
+Before delivery, verify that every service label follows the Language rule and no Copy Editing scaffolding remains. For a final-text-only request, return only the reviewed copy.
 
 Boundary refusals, missing-dependency responses, and blocking questions use the shorter response defined by the stage that stops the run.
 

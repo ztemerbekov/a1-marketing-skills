@@ -8,7 +8,7 @@
 ## Setup
 
 ```text
-Install A1 Editor in Chief and A1 Editor. Provide the canonical marketing context below.
+Install A1 Editor in Chief and A1 Copy Editing. Provide the canonical marketing context below.
 ```
 
 ## User Instruction
@@ -38,7 +38,7 @@ Review Hub собирает отзывы Ozon и Wildberries в одном сп�
 ## Must Change
 
 - [ ] Build the assignment and final email for an agency owner in a direct voice, using the explicit task values over defaults.
-- [ ] Complete the bounded Chief-to-Editor workflow without a decision question.
+- [ ] Complete the bounded Chief-to-Copy Editing workflow without a decision question.
 
 ## Must Preserve
 

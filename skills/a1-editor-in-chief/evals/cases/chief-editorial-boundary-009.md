@@ -37,7 +37,7 @@ None.
 
 ## Forbidden
 
-- [ ] Не упоминать missing Editor, не читать context, не задавать questions и не создавать brief.
+- [ ] Не упоминать missing Copy Editing, не читать context, не задавать questions и не создавать brief.
 - [ ] Не предлагать исследования, сегменты, позиционирование, цены, GTM, гипотезы или частичный текст.
 
 ## Manual Run Record

@@ -7,7 +7,7 @@
 
 ## Setup
 
-Install only the chief so Editor is missing. No marketing context is available.
+Install only the chief so Copy Editing is missing. No marketing context is available.
 
 ### Marketing Context
 
@@ -37,7 +37,7 @@ None.
 
 ## Forbidden
 
-- [ ] Не упоминать отсутствующий Editor, не читать context, не задавать вопросы и не создавать brief.
+- [ ] Не упоминать отсутствующий Copy Editing, не читать context, не задавать вопросы и не создавать brief.
 - [ ] Не редактировать абзац частично и не предлагать сегмент, цену, GTM, позиционирование или другие стратегии.
 
 ## Manual Run Record

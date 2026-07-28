@@ -2,12 +2,12 @@
 
 - ID: `chief-language-015`
 - Operation: `Shorten`
-- Risk: Chief follows the Russian source language or leaks delegated Editor labels instead of using the English instruction language.
+- Risk: Chief follows the Russian source language or leaks delegated Copy Editing labels instead of using the English instruction language.
 - Scope Scenario: `In scope`
 
 ## Setup
 
-Install both `a1-editor-in-chief` and `a1-editor`. No marketing context is available.
+Install both `a1-editor-in-chief` and `a1-copy-editing`. No marketing context is available.
 
 ### Marketing Context
 
@@ -27,7 +27,7 @@ Explicitly run a1-editor-in-chief. This is a Russian internal note for marketpla
 
 ## Must Change
 
-- [ ] Choose shorten, delegate to Editor, and return concise Russian final copy under a naturally localized English final-text heading.
+- [ ] Choose shorten, delegate to Copy Editing, and return concise Russian final copy under a naturally localized English final-text heading.
 - [ ] Use a naturally localized English change-summary heading and write every change explanation in English.
 
 ## Must Preserve
@@ -37,7 +37,7 @@ Explicitly run a1-editor-in-chief. This is a Russian internal note for marketpla
 
 ## Forbidden
 
-- [ ] Do not leak Editor-specific scaffolding, Russian service labels, Russian explanations, or English final copy.
+- [ ] Do not leak Copy Editing-specific scaffolding, Russian service labels, Russian explanations, or English final copy.
 - [ ] Do not add non-material assumptions, warnings, input summaries, briefs, diagnosis, review notes, metrics, or product claims.
 
 ## Manual Run Record

@@ -2,12 +2,12 @@
 
 - ID: `context-editor-precedence-019`
 - Operation: `Clarify`
-- Risk: Editor reads or merges lower-priority legacy context after finding canonical context.
+- Risk: Copy Editing reads or merges lower-priority legacy context after finding canonical context.
 - Scope Scenario: `In scope`
 
 ## Setup
 
-Install `a1-editor` in a repository containing all three contexts below.
+Install `a1-copy-editing` in a repository containing all three contexts below.
 
 ### Marketing Context
 
