@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title description">
+  <title id="title">A1 Marketing Skills composer icon</title>
+  <desc id="description">A small-size optimized white A1 monogram in a white circle on an orange rounded square over a red background.</desc>
+  <rect width="640" height="640" fill="#F8161E"/>
+  <rect x="52" y="52" width="536" height="536" rx="126" fill="#FB5724"/>
+  <circle cx="320" cy="321" r="202" fill="#FCFBFA"/>
+  <g fill="#FB5724" transform="translate(320 322) scale(1.08) translate(-320 -322)">
+    <path fill-rule="evenodd" d="M198 413 265 231h41l67 182h-39l-15-42h-68l-15 42h-38Zm62-71h50l-25-70-25 70Z"/>
+    <path d="M369 254 408 232h29v181h-37V276l-31 12v-34Z"/>
+  </g>
+</svg>

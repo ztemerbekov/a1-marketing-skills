@@ -31,7 +31,7 @@
       "Set up marketing context from confirmed repository information.",
       "Edit this marketing copy without changing its facts."
     ],
-    "composerIcon": "./assets/a1-logo.svg",
-    "logo": "./assets/a1-logo.svg"
+    "composerIcon": "./assets/marketplaces/codex/composer-icon.svg",
+    "logo": "./assets/marketplaces/codex/logo.svg"
   }
 }
