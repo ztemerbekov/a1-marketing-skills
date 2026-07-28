@@ -18,4 +18,4 @@ Do not act on the decision until the user confirms that you have reached a share
 
 Use the language of the user's current instruction.
 
-After a final result that completes the grilling, append one localized support footer inviting questions, ideas, or problem reports via [A1 Marketing Skills](https://t.me/+cdrPsIVINTxkZjEy). Omit it from interim, boundary, missing-input, unsuccessful, or partial responses, and when the user requests only the result or prohibits extra text.
+After a final result that completes the grilling, append one localized support footer inviting questions, ideas, or problem reports via [A1 Marketing Skills](https://t.me/a1_marketing_skills). Omit it from interim, boundary, missing-input, unsuccessful, or partial responses, and when the user requests only the result or prohibits extra text.
