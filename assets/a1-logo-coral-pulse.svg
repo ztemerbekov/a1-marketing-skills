@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 606.87 339" role="img" aria-labelledby="title description">
+  <title id="title">A1 — Coral Pulse</title>
+  <desc id="description">The original geometric A1 logo recolored with saturated coral, red, and magenta accents.</desc>
+  <defs>
+    <linearGradient id="a-left" x1="45" y1="40" x2="250" y2="285" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF9B00"/>
+      <stop offset=".42" stop-color="#FF4B16"/>
+      <stop offset="1" stop-color="#FF005C"/>
+    </linearGradient>
+    <linearGradient id="a-base" x1="0" y1="305" x2="360" y2="252" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF00C8"/>
+      <stop offset=".5" stop-color="#FF174D"/>
+      <stop offset="1" stop-color="#FF5A00"/>
+    </linearGradient>
+    <linearGradient id="a-right" x1="220" y1="5" x2="363" y2="337" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFC400"/>
+      <stop offset=".36" stop-color="#FF6A00"/>
+      <stop offset=".74" stop-color="#FF263D"/>
+      <stop offset="1" stop-color="#FF00A8"/>
+    </linearGradient>
+    <linearGradient id="one-cap" x1="410" y1="115" x2="556" y2="10" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF00C8"/>
+      <stop offset=".55" stop-color="#FF174D"/>
+      <stop offset="1" stop-color="#FF7A00"/>
+    </linearGradient>
+    <linearGradient id="one-stem" x1="535" y1="0" x2="535" y2="339" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFB000"/>
+      <stop offset=".3" stop-color="#FF5C00"/>
+      <stop offset=".68" stop-color="#FF174D"/>
+      <stop offset="1" stop-color="#FF00BE"/>
+    </linearGradient>
+    <linearGradient id="one-base" x1="463" y1="317" x2="607" y2="317" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF6120"/>
+      <stop offset=".48" stop-color="#FF174D"/>
+      <stop offset="1" stop-color="#FF00C8"/>
+    </linearGradient>
+  </defs>
+  <g aria-label="A">
+    <path fill="url(#a-left)" d="M.1,291C27.32,243.84,129.02,67.7,159.45,14.99,164.81,5.71,174.71,0,185.43,0h33.41C185.96,56.95,91.88,219.91,77.96,244.01c-.77,1.33.2,2.99,1.74,2.99h173.54l25.4,44H.1Z"/>
+    <path fill="url(#a-base)" d="M16.69,323.97,0,295H282.12c1.54,0,2.5-1.67,1.73-3L197.01,141.57l25.37-43.94,42.16,73.03c33.95,58.81,73.13,126.68,97.19,168.34H42.69c-10.73,0-20.64-5.73-26-15.03Z"/>
+    <path fill="url(#a-right)" d="M220.64,92.63c-10.85,18.78-69.6,120.54-86.82,150.37H83.09C119.17,180.52,187.08,62.88,222.37,1.76c24.91,43.15,72.98,126.41,113.71,196.97L381.84,278c5.35,9.27,5.36,20.69.01,29.97l-16.7,29C343.99,300.33,238.88,118.26,224.09,92.64c-.77-1.33-2.69-1.34-3.45-.01Z"/>
+  </g>
+  <g aria-label="1">
+    <path fill="url(#one-cap)" d="M410.87,97.98,498.2,10.66C505.03,3.83,514.29,0,523.95,0h32.92L442.43,132.42l-31.56-34.44Z"/>
+    <path fill="url(#one-stem)" d="M512.87,0h44v317h-44V0Z"/>
+    <path fill="url(#one-base)" d="M462.87,295h144v44h-144v-44Z"/>
+  </g>
+</svg>
