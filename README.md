@@ -1,11 +1,4 @@
-<p>
-  <img src="./assets/a1-logo.svg" alt="A1 original logo" title="Original" width="120">
-  <img src="./assets/a1-logo-coral-pulse.svg" alt="A1 Coral Pulse logo" title="Coral Pulse" width="120">
-  <img src="./assets/a1-logo-liquid-sunset.svg" alt="A1 Liquid Sunset logo" title="Liquid Sunset" width="120">
-  <img src="./assets/a1-logo-warm-glow.svg" alt="A1 Warm Glow logo" title="Warm Glow" width="120">
-</p>
-
-<h1>Marketing Skills</h1>
+<h1><img src="./assets/a1-logo-warm-glow.svg" alt="A1" width="42"> Marketing Skills</h1>
 
 **English** | [Русский](./README.ru.md)
 
