@@ -31,19 +31,18 @@ Run this suite only when the maintainer explicitly requests semantic evaluation,
 ### Invocation Boundary
 
 - [a conversational documentation complaint does not select an editable draft](cases/editor-invocation-boundary-020.md)
+- [an explicit invocation without a selected draft requests one](cases/editor-missing-draft-001.md)
 - [an explicitly selected draft activates text review](cases/editor-invocation-boundary-021.md)
 - [pasted copy with ordinary editing intent activates editing](cases/editor-invocation-boundary-022.md)
 
-### Strategy Boundary
+### Entry Contract
 
-- [explicit positioning request stops at the Copy Editing boundary](cases/editor-strategy-route-001.md)
-- [explicit landing-structure request stops at the Copy Editing boundary](cases/editor-strategy-route-005.md)
-- [strategy keywords do not route an ordinary edit](cases/editor-strategy-boundary-007.md)
-- [mixed editing and strategy request stops before partial execution](cases/editor-strategy-boundary-008.md)
+- [a completed user-supplied draft remains editable](cases/editor-completed-input-007.md)
+- [mixed editing and new-copy request stops before partial execution](cases/editor-mixed-job-008.md)
 
 ### Standard Copy Editing
 
-- [ordinary editing stays in Copy Editing without optional context](cases/editor-strategy-boundary-006.md)
+- [ordinary editing continues without optional context](cases/editor-optional-context-006.md)
 - [standard edit and voice preservation](cases/editor-standard-001.md)
 - [standard edit repairs unnatural verb government and collocation](cases/editor-standard-002.md)
 - [ordinary Russian trigger language starts a standard edit](cases/editor-standard-003.md)

@@ -1,6 +1,6 @@
-# editor-strategy-boundary-006 — Ordinary Editing Stays in Copy Editing Without Optional Context
+# editor-optional-context-006 — Ordinary Editing Continues Without Optional Context
 
-- ID: `editor-strategy-boundary-006`
+- ID: `editor-optional-context-006`
 - Operation: `Shorten`
 - Risk: Missing audience, channel, goal, or marketing context unnecessarily blocks a safe edit.
 - Scope Scenario: `In scope`

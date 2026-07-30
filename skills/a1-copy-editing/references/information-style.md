@@ -2,7 +2,7 @@
 
 This is an isolated deep-editing branch on top of the shared copy-editing spine. Load it only after the explicit activation rule in [operations.md](operations.md) selects **Information Style**. Generic editing intent never enters this branch.
 
-Information Style may reorganize existing material more deeply than standard editing. It does not expand the shared [source boundary](source-boundary.md), replace the normal output contract, or authorize strategy.
+Information Style may reorganize existing material more deeply than standard editing while remaining inside the shared [source boundary](source-boundary.md) and normal output contract.
 
 ## Constraint Overrides / Приоритет ограничений
 
@@ -36,7 +36,6 @@ When Markdown improvement is allowed:
 - preserve link text when it carries meaning and always preserve link targets exactly;
 - preserve URLs, code spans, code fences, commands, formulas, equations, table values, and blockquote meaning without corruption;
 - keep list nesting and code-fence boundaries valid;
-- do not add a heading that implies a missing marketing block or new conclusion.
 
 When formatting must be preserved, do not add, remove, reorder, or convert Markdown structures. The constraint override is stricter than the branch's permission to improve formatting.
 
