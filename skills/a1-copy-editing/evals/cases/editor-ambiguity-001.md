@@ -1,7 +1,7 @@
 # editor-ambiguity-001 — Ask Only for Significant Ambiguity
 
 - ID: `editor-ambiguity-001`
-- Operation: `Clarify / Soft Gate`
+- Operation: `Clarify / Ambiguity Gate`
 - Risk: The editor silently chooses a materially different product meaning.
 
 ## Setup

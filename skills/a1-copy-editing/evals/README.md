@@ -28,10 +28,16 @@ Every materially changed scope boundary must have coverage for four scenarios ac
 
 Run this suite only when the maintainer explicitly requests semantic evaluation, for example before a release. A focused run uses the cases that answer the requested question; a full `a1-copy-editing` run means every case below.
 
+### Invocation Boundary
+
+- [a conversational documentation complaint does not select an editable draft](cases/editor-invocation-boundary-020.md)
+- [an explicitly selected draft activates text review](cases/editor-invocation-boundary-021.md)
+- [pasted copy with ordinary editing intent activates editing](cases/editor-invocation-boundary-022.md)
+
 ### Strategy Boundary and Bounded Chief Handoff
 
-- [positioning request stops at the Copy Editing boundary](cases/editor-strategy-route-001.md)
-- [landing-structure request stops at the Copy Editing boundary](cases/editor-strategy-route-005.md)
+- [explicit positioning request stops at the Copy Editing boundary](cases/editor-strategy-route-001.md)
+- [explicit landing-structure request stops at the Copy Editing boundary](cases/editor-strategy-route-005.md)
 - [strategy keywords do not route an ordinary edit](cases/editor-strategy-boundary-007.md)
 - [mixed editing and strategy request stops before partial execution](cases/editor-strategy-boundary-008.md)
 - [completed strategy plus editorial direction routes to explicit bounded Chief invocation](cases/editor-chief-handoff-009.md)
