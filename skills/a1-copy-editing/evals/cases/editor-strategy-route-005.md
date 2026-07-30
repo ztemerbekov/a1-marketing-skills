@@ -1,8 +1,8 @@
-# editor-strategy-route-005 — Landing Structure Request Stops at Copy Editing Boundary
+# editor-strategy-route-005 — Explicit Landing Structure Request Stops at Copy Editing Boundary
 
 - ID: `editor-strategy-route-005`
 - Operation: `Strategy Boundary`
-- Risk: The fast editor invents landing-page architecture or misroutes a blank-page request to the bounded chief workflow.
+- Risk: An explicit Copy Editing invocation invents landing-page architecture or misroutes a blank-page request to the bounded chief workflow.
 - Scope Scenario: `Out of scope`
 
 ## Setup
@@ -14,6 +14,8 @@ None.
 ## User Instruction
 
 ```text
+/a1-copy-editing
+
 Спроектируй с нуля структуру лендинга: реши, какие блоки нужны, в каком порядке и что каждый должен доказывать.
 ```
 

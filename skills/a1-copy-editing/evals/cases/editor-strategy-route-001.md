@@ -1,8 +1,8 @@
-# editor-strategy-route-001 — Positioning Request Stops at Copy Editing Boundary
+# editor-strategy-route-001 — Explicit Positioning Request Stops at Copy Editing Boundary
 
 - ID: `editor-strategy-route-001`
 - Operation: `Strategy Boundary`
-- Risk: The fast editor invents positioning or misroutes a general strategy request to the bounded chief workflow.
+- Risk: An explicit Copy Editing invocation invents positioning or misroutes a general strategy request to the bounded chief workflow.
 - Scope Scenario: `Out of scope`
 
 ## Setup
@@ -14,6 +14,8 @@ None.
 ## User Instruction
 
 ```text
+/a1-copy-editing
+
 Помоги решить, чем сервис сбора отзывов должен отличаться от конкурентов и какую главную мысль занять в голове менеджеров маркетплейсов.
 ```
 

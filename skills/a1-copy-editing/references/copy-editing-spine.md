@@ -2,19 +2,13 @@
 
 Every completed `a1-copy-editing` run follows these five stages in order. The process is invariant; the depth and detailed references are adaptive.
 
-## Soft Gate
-
-If editable text is missing, ask for it and stop before starting a run.
-
-When text and an editing or review intent are present, start immediately. Do not ask for marketing context, audience, channel, goal, tone, or constraints. If every safe edit or useful review would choose between materially different meanings, ask one concise blocking question and resume the same run after the answer. Otherwise use the safest useful interpretation and continue.
-
-Before using the safest useful interpretation, apply the canonical [Significant Ambiguity rule](source-boundary.md#significant-ambiguity--существенная-неоднозначность); that section owns concrete-name replacement and inference boundaries.
-
 ## 1. Determine Allowed Sources
 
 Read [source-boundary.md](source-boundary.md). Build an internal source map from the supplied text, current instruction, available marketing context, and any clearly applicable user-provided facts from the conversation.
 
-**Complete when:** every factual or marketing element allowed in the result has a traceable source, and unsupported additions are excluded.
+Apply the canonical [Significant Ambiguity rule](source-boundary.md#significant-ambiguity--существенная-неоднозначность) before interpreting ambiguous source material. Ask one concise blocking question only when every safe edit or useful review would choose between materially different meanings; otherwise use the safest useful interpretation.
+
+**Complete when:** every factual or marketing element allowed in the result has a traceable source, unsupported additions are excluded, and any significant ambiguity is either resolved by one question or preserved safely.
 
 ## 2. Select the Operation
 

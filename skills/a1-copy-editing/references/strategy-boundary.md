@@ -1,6 +1,6 @@
 # Strategy Boundary
 
-This boundary runs before dependency checks, context gathering, the copy-editing soft gate, or any editing or review work. It classifies the whole request before deciding whether `a1-copy-editing` may begin a run.
+This boundary runs before the entry contract, context gathering, or any editing or review work. It classifies the whole request before deciding whether `a1-copy-editing` may begin a run.
 
 ## Declared Scope
 
@@ -23,7 +23,7 @@ Editing existing wording about one of these subjects is still editing when the u
 
 ## Editing and Review Requests Stay Here
 
-Start the ordinary Copy Editing run when the user supplies editable material and an editing or review intent. Missing audience, channel, goal, constraints, or marketing context does not turn that request into strategy and does not justify routing it elsewhere.
+Start the ordinary Copy Editing run when the user selects editable material and directs an editing or review intent at it. Missing audience, channel, goal, constraints, or marketing context does not turn that request into strategy and does not justify routing it elsewhere.
 
 If a request combines a safe edit or review with a strategic decision, do not perform either part. A1 Copy Editing's user job is editing and review, not orchestration, so even a useful separable result would be forbidden partial execution.
 

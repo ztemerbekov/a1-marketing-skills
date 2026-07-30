@@ -1,6 +1,6 @@
 ---
 name: a1-copy-editing
-description: 'Copy-edit or review existing marketing text when the user asks to edit, rewrite, shorten, clarify, simplify, strengthen, restructure, clean up, critique, give feedback on, analyze, or explain existing copy. Also use for Russian requests such as "отредачь", "отредактируй", "почисти текст", "сократи", "убери канцелярит", "сделай проще", "причешите текст", "дай фидбек на текст", "разбери мой текст", "слишком водянисто", "убери воду", or explicit information-style requests such as "перепиши в информационном стиле" and "перепиши в инфостиле". Also use on requests to create or rethink marketing strategy and confirmed-strategy requests so the skill can apply its strategy boundary and route only eligible work to a1-editor-in-chief.'
+description: Copy-edit or review an existing marketing or editorial draft when the user selects that draft as the target—by pasting, attaching, or explicitly naming it—and requests changes or feedback.
 ---
 
 # Copy Editing
@@ -23,14 +23,16 @@ Only requests to edit or review existing material enter the copy-editing spine. 
 
 ## Entry Contract
 
-Start immediately when the user provides:
+Accept a request when both inputs are present:
 
-1. Editable text
-2. An editing, feedback, or review command or intent
+1. A user-selected existing draft: text the user pasted or attached in the conversation, or a document they explicitly selected as the editing target.
+2. An editing, feedback, or review intent directed at that draft.
+
+When the user explicitly invokes this skill without selecting a draft, ask them to paste, attach, or name the draft and stop.
 
 Marketing context is optional. Read only the first existing repository context in this order: `.agents/marketing-context.md`, then `.claude/marketing-context.md` when the canonical path is absent, then root `marketing-context.md` when both earlier paths are absent. Do not read or merge a lower-priority context. If none exists, continue from the user's text and instruction.
 
-Do not block on missing audience, channel, goal, tone, constraints, or marketing context. Ask only when editable text is missing or every safe edit or useful review would choose between materially different meanings. If any safe useful result is possible, produce it and briefly state a material limitation instead of asking.
+Do not block on missing audience, channel, goal, tone, constraints, or marketing context. Ask only when every safe edit or useful review would choose between materially different meanings. If any safe useful result is possible, produce it and briefly state a material limitation instead of asking.
 
 Do not infer strategy from missing optional inputs. An ordinary editing or review request still starts immediately when audience, channel, goal, constraints, or marketing context are absent.
 
