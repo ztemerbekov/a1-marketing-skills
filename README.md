@@ -61,7 +61,7 @@ The shortest path to a useful result is a global install followed by an A1 Copy 
 
 1. Open a terminal and install the collection. The same one-line command works in Bash, Command Prompt, and PowerShell:
 
-   ```text
+   ```bash
    npx skills@latest add ztemerbekov/a1-marketing-skills -g
    ```
 
@@ -291,7 +291,7 @@ To install only one collection:
 
 Run the primary command inside the project and omit `-g`:
 
-```text
+```bash
 npx skills@latest add ztemerbekov/a1-marketing-skills
 ```
 
@@ -301,13 +301,13 @@ Project installation keeps the selected skill versions with that project. For th
 
 Update the six capabilities and the Russian command alias:
 
-```text
+```bash
 npx skills@latest update a1-copy-editing a1-redaktura a1-editor-in-chief a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
 ```
 
 Remove them from the global installation:
 
-```text
+```bash
 npx skills@latest remove a1-copy-editing a1-redaktura a1-editor-in-chief a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
 ```
 
