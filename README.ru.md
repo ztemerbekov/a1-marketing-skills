@@ -59,9 +59,9 @@ A1 Marketing Skills — это набор навыков для ИИ-агент�
 
 Самый короткий путь к полезному результату — глобальная установка и первый запрос к A1 Copy Editing.
 
-1. Откройте терминал и установите набор:
+1. Откройте терминал и установите набор. Одна и та же однострочная команда работает в Bash, Command Prompt и PowerShell:
 
-   ```bash
+   ```text
    npx skills@latest add ztemerbekov/a1-marketing-skills -g
    ```
 
@@ -291,7 +291,7 @@ cursor-agent plugin marketplace add https://github.com/ztemerbekov/a1-marketing-
 
 Выполните основную команду внутри проекта и уберите `-g`:
 
-```bash
+```text
 npx skills@latest add ztemerbekov/a1-marketing-skills
 ```
 
@@ -301,32 +301,14 @@ npx skills@latest add ztemerbekov/a1-marketing-skills
 
 Обновите шесть возможностей и русский командный алиас:
 
-```bash
-npx skills@latest update \
-  a1-copy-editing \
-  a1-redaktura \
-  a1-editor-in-chief \
-  a1-grill \
-  a1-humanize \
-  a1-marketing-context \
-  a1-consumer-psy \
-  --global \
-  --yes
+```text
+npx skills@latest update a1-copy-editing a1-redaktura a1-editor-in-chief a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
 ```
 
 Удалите их из глобальной установки:
 
-```bash
-npx skills@latest remove \
-  a1-copy-editing \
-  a1-redaktura \
-  a1-editor-in-chief \
-  a1-grill \
-  a1-humanize \
-  a1-marketing-context \
-  a1-consumer-psy \
-  --global \
-  --yes
+```text
+npx skills@latest remove a1-copy-editing a1-redaktura a1-editor-in-chief a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
 ```
 
 Для проектных навыков выполните команду внутри проекта: используйте `--project` с `update` и уберите `--global` из `remove`.

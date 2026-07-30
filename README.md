@@ -59,9 +59,9 @@ Here is a complete context-to-edit loop:
 
 The shortest path to a useful result is a global install followed by an A1 Copy Editing request.
 
-1. Open a terminal and install the collection:
+1. Open a terminal and install the collection. The same one-line command works in Bash, Command Prompt, and PowerShell:
 
-   ```bash
+   ```text
    npx skills@latest add ztemerbekov/a1-marketing-skills -g
    ```
 
@@ -291,7 +291,7 @@ To install only one collection:
 
 Run the primary command inside the project and omit `-g`:
 
-```bash
+```text
 npx skills@latest add ztemerbekov/a1-marketing-skills
 ```
 
@@ -301,32 +301,14 @@ Project installation keeps the selected skill versions with that project. For th
 
 Update the six capabilities and the Russian command alias:
 
-```bash
-npx skills@latest update \
-  a1-copy-editing \
-  a1-redaktura \
-  a1-editor-in-chief \
-  a1-grill \
-  a1-humanize \
-  a1-marketing-context \
-  a1-consumer-psy \
-  --global \
-  --yes
+```text
+npx skills@latest update a1-copy-editing a1-redaktura a1-editor-in-chief a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
 ```
 
 Remove them from the global installation:
 
-```bash
-npx skills@latest remove \
-  a1-copy-editing \
-  a1-redaktura \
-  a1-editor-in-chief \
-  a1-grill \
-  a1-humanize \
-  a1-marketing-context \
-  a1-consumer-psy \
-  --global \
-  --yes
+```text
+npx skills@latest remove a1-copy-editing a1-redaktura a1-editor-in-chief a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
 ```
 
 For project-only skills, run the command in that project and use `--project` with `update`; omit `--global` from `remove`.
