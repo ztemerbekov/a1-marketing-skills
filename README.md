@@ -315,4 +315,5 @@ For project-only skills, run the command in that project and use `--project` wit
 
 ## Help and feedback
 
-Questions, improvement ideas, or something that did not work as expected? Join the discussion in <img src="./assets/a1-logo.svg" alt="A1" width="22">&nbsp;[Marketing&nbsp;Skills](https://t.me/a1_marketing_skills).
+Questions, improvement ideas, or something that did not work as expected?<br>
+Join the discussion in <img src="./assets/a1-logo.svg" alt="A1" width="22">&nbsp;[Marketing&nbsp;Skills](https://t.me/a1_marketing_skills).
