@@ -19,7 +19,7 @@ Use the explanation language for every user-facing service element, including se
 
 Before applying the entry contract, read [the strategy boundary](references/strategy-boundary.md) and classify the whole request by meaning.
 
-Only requests to edit or review existing material enter the copy-editing spine. If the user asks to create or rethink a strategic decision, return the concise boundary response from that reference and stop. Recommend `a1-editor-in-chief` only under the completed-strategy handoff rule; a recommendation is not permission to start its workflow because the user must invoke it explicitly.
+Only requests to edit or review existing material enter the copy-editing spine. If the user asks to create or rethink a strategic decision, return the concise boundary response from that reference and stop.
 
 ## Entry Contract
 

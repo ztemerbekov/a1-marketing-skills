@@ -35,7 +35,7 @@ None.
 
 ## Forbidden
 
-- [ ] Не рекомендовать `a1-editor-in-chief`, не задавать chief-gate questions и не создавать Copy Editing Brief.
+- [ ] Не запрашивать необязательное редакционное планирование или отдельный бриф до выполнения редактуры.
 - [ ] Не менять differentiation, audience, offer, claims или продуктовые факты.
 
 ## Manual Run Record

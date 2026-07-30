@@ -2,7 +2,7 @@
 
 - ID: `editor-strategy-route-005`
 - Operation: `Strategy Boundary`
-- Risk: An explicit Copy Editing invocation invents landing-page architecture or misroutes a blank-page request to the bounded chief workflow.
+- Risk: An explicit Copy Editing invocation invents landing-page architecture or treats contextual facts as a draft.
 - Scope Scenario: `Out of scope`
 
 ## Setup
@@ -28,7 +28,7 @@ None.
 ## Must Change
 
 - [ ] Определить запрос как создание новой marketing structure, а не как restructure существующего текста.
-- [ ] Коротко объяснить границу A1 Copy Editing и указать, что `a1-editor-in-chief` тоже не создаёт архитектуру лендинга и может принять её только как готовый вход.
+- [ ] Коротко объяснить, что A1 Copy Editing не создаёт архитектуру лендинга с нуля.
 
 ## Must Preserve
 
@@ -38,8 +38,7 @@ None.
 ## Forbidden
 
 - [ ] Не предлагать hero, benefits, proof, objections, pricing, FAQ, CTA или порядок блоков.
-- [ ] Не рекомендовать `a1-editor-in-chief` как способ создать структуру лендинга с нуля.
-- [ ] Не задавать вопросы chief gate, не создавать Copy Editing Brief и не начинать chief workflow автоматически.
+- [ ] Не задавать уточняющие вопросы и не начинать другой редакторский workflow автоматически.
 
 ## Manual Run Record
 

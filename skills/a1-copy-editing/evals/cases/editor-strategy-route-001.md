@@ -2,7 +2,7 @@
 
 - ID: `editor-strategy-route-001`
 - Operation: `Strategy Boundary`
-- Risk: An explicit Copy Editing invocation invents positioning or misroutes a general strategy request to the bounded chief workflow.
+- Risk: An explicit Copy Editing invocation invents positioning or treats contextual facts as editable copy.
 - Scope Scenario: `Out of scope`
 
 ## Setup
@@ -28,7 +28,7 @@ None.
 ## Must Change
 
 - [ ] По смыслу определить запрос как выбор позиционирования, хотя пользователь не назвал внутренний operation.
-- [ ] Коротко объяснить границу A1 Copy Editing и указать, что `a1-editor-in-chief` тоже не создаёт позиционирование и может принять его только как готовый вход.
+- [ ] Коротко объяснить, что A1 Copy Editing не создаёт и не выбирает позиционирование.
 
 ## Must Preserve
 
@@ -38,9 +38,8 @@ None.
 ## Forbidden
 
 - [ ] Не предлагать позиционирование, слоганы, категории, обещания, сегменты или конкурентные claims.
-- [ ] Не рекомендовать `a1-editor-in-chief` как способ создать или выбрать позиционирование.
 - [ ] Не переписывать факты про Ozon и Wildberries как частичный редакторский результат и не возвращать служебные разделы редакторского результата.
-- [ ] Не задавать вопросы chief gate, не создавать Copy Editing Brief и не начинать chief workflow автоматически.
+- [ ] Не задавать уточняющие вопросы и не начинать другой редакторский workflow автоматически.
 
 ## Manual Run Record
 

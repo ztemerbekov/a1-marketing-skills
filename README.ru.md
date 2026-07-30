@@ -21,8 +21,7 @@ A1 Marketing Skills — это набор навыков для ИИ-агент�
 ### A1 Editorial — Редактура и тексты
 
 4. **A1 Copy Editing** (`/a1-copy-editing`, русский алиас `/a1-redaktura`) редактирует или разбирает готовые черновики внутри переданных ограничений и доступного Маркетингового контекста, сохраняя факты исходника и контроль человека над финальными решениями.
-5. **Шеф-редактор** (`/a1-editor-in-chief`) задаёт редакционное направление внутри утверждённой стратегии, ставит задачу A1 Copy Editing и проверяет итоговую редактуру.
-6. **Оживить текст** (`/a1-humanize`) убирает узнаваемые AI-паттерны, сохраняя естественный ритм, голос и фактуру автора.
+5. **Оживить текст** (`/a1-humanize`) убирает узнаваемые AI-паттерны, сохраняя естественный ритм, голос и фактуру автора.
 
 ## Главные принципы работы
 
@@ -195,27 +194,6 @@ A1 Humanize адаптирован из [Humanizer автора Siqi Chen](https
 </details>
 
 <details>
-<summary><strong>Шеф-редактор — направляет и проверяет ответственную редактуру</strong></summary>
-
-<br>
-
-Шеф-редактор работает внутри подтверждённых продуктовых и маркетинговых решений. Он разрешает источники, выбирает ограниченное редакционное направление, создаёт внутренний бриф, передаёт всю работу с текстом в A1 Copy Editing и проверяет результат не более чем с одним корректирующим проходом.
-
-Используйте его, когда утверждённая стратегия уже есть, но фокус на читателе, акцент сообщения, редакционный угол, порядок аргументов, структура или голос ещё требуют решения шеф-редактора. Навык не создаёт позиционирование, сегментацию, цену, оффер, стратегию кампании, GTM или продуктовую стратегию.
-
-**Попробуйте:**
-
-> `/a1-editor-in-chief`
->
-> Посмотри черновик. Найди самый сильный угол подачи для директоров по маркетингу и перепиши текст под эту задачу.
->
-> `[вставьте черновик]`
-
-Полное поведение описано в [инструкции Шеф-редактора](./skills/a1-editor-in-chief/SKILL.md).
-
-</details>
-
-<details>
 <summary><strong>Психология потребителя — проверяет гипотезы по научной базе</strong></summary>
 
 <br>
@@ -278,7 +256,7 @@ cursor-agent plugin marketplace add https://github.com/ztemerbekov/a1-marketing-
 В полную установку входят оба набора:
 
 - **A1 Core:** `/a1-core:a1-grill`, `/a1-core:a1-consumer-psy` и `/a1-core:a1-marketing-context`
-- **A1 Editorial:** `/a1-editorial:a1-copy-editing`, его русский алиас `/a1-editorial:a1-redaktura`, `/a1-editorial:a1-humanize` и `/a1-editorial:a1-editor-in-chief`
+- **A1 Editorial:** `/a1-editorial:a1-copy-editing`, его русский алиас `/a1-editorial:a1-redaktura` и `/a1-editorial:a1-humanize`
 
 Чтобы установить только один набор:
 
@@ -299,16 +277,16 @@ npx skills@latest add ztemerbekov/a1-marketing-skills
 
 ## Обновление и удаление
 
-Обновите шесть возможностей и русский командный алиас:
+Обновите пять возможностей и русский командный алиас:
 
 ```bash
-npx skills@latest update a1-copy-editing a1-redaktura a1-editor-in-chief a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
+npx skills@latest update a1-copy-editing a1-redaktura a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
 ```
 
 Удалите их из глобальной установки:
 
 ```bash
-npx skills@latest remove a1-copy-editing a1-redaktura a1-editor-in-chief a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
+npx skills@latest remove a1-copy-editing a1-redaktura a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
 ```
 
 Для проектных навыков выполните команду внутри проекта: используйте `--project` с `update` и уберите `--global` из `remove`.

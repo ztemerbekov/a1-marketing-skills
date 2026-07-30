@@ -2,7 +2,7 @@
 
 - ID: `editor-strategy-boundary-006`
 - Operation: `Shorten`
-- Risk: Missing audience, channel, goal, or marketing context incorrectly routes a safe edit to Editor in Chief.
+- Risk: Missing audience, channel, goal, or marketing context unnecessarily blocks a safe edit.
 - Scope Scenario: `In scope`
 
 ## Setup
@@ -35,7 +35,7 @@ None.
 
 ## Forbidden
 
-- [ ] Не рекомендовать `a1-editor-in-chief`, не задавать chief-gate questions и не создавать Copy Editing Brief.
+- [ ] Не запрашивать необязательные аудиторию, канал, цель или marketing context до выполнения безопасной редактуры.
 - [ ] Не придумывать аудиторию, канал, назначение отчета, выгоды, инструменты или CTA.
 
 ## Manual Run Record

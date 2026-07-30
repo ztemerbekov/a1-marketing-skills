@@ -1,5 +1,0 @@
-interface:
-  display_name: "A1 Editor in Chief"
-  short_description: "Set editorial direction and review the resulting edit"
-policy:
-  allow_implicit_invocation: false
