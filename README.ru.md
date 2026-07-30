@@ -315,4 +315,4 @@ npx skills@latest remove a1-copy-editing a1-redaktura a1-editor-in-chief a1-gril
 
 ## Помощь и обратная связь
 
-Есть вопрос, идея или что-то сработало не так? Напишите в [A1 Marketing Skills](https://t.me/+XIOtNfseTgA3MWZi).
+Есть вопрос, идея или что-то сработало не так? Напишите в <img src="./assets/a1-logo.svg" alt="A1" width="22"> [Marketing Skills](https://t.me/a1_marketing_skills).
