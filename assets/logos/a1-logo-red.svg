@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 606.87 339" role="img" aria-labelledby="title description">
+  <title id="title">A1 — Ruby Red</title>
+  <desc id="description">The original geometric A1 logo recolored in ruby red and crimson tones.</desc>
+  <defs>
+    <linearGradient id="a-left" x1=".1" y1="72" x2="278.64" y2="258" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE1E6"/>
+      <stop offset=".48" stop-color="#FF6B6B"/>
+      <stop offset="1" stop-color="#FF1744"/>
+    </linearGradient>
+    <linearGradient id="a-base" x1="20" y1="315" x2="310" y2="205" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF89A0"/>
+      <stop offset=".48" stop-color="#FF365E"/>
+      <stop offset="1" stop-color="#D70032"/>
+    </linearGradient>
+    <linearGradient id="a-right" x1="228" y1="8" x2="362" y2="322" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF0F2"/>
+      <stop offset=".5" stop-color="#FF4D5A"/>
+      <stop offset="1" stop-color="#C40030"/>
+    </linearGradient>
+    <linearGradient id="one-cap" x1="415" y1="122" x2="557" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF7390"/>
+      <stop offset="1" stop-color="#E8104F"/>
+    </linearGradient>
+    <linearGradient id="one-stem" x1="535" y1="0" x2="535" y2="339" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF646F"/>
+      <stop offset=".55" stop-color="#FF244F"/>
+      <stop offset="1" stop-color="#A9002E"/>
+    </linearGradient>
+    <linearGradient id="one-base" x1="463" y1="317" x2="607" y2="317" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF3B30"/>
+      <stop offset="1" stop-color="#FF7390"/>
+    </linearGradient>
+  </defs>
+  <g aria-label="A">
+    <path fill="url(#a-left)" d="M.1,291C27.32,243.84,129.02,67.7,159.45,14.99,164.81,5.71,174.71,0,185.43,0h33.41C185.96,56.95,91.88,219.91,77.96,244.01c-.77,1.33.2,2.99,1.74,2.99h173.54l25.4,44H.1Z"/>
+    <path fill="url(#a-base)" d="M16.69,323.97,0,295H282.12c1.54,0,2.5-1.67,1.73-3L197.01,141.57l25.37-43.94,42.16,73.03c33.95,58.81,73.13,126.68,97.19,168.34H42.69c-10.73,0-20.64-5.73-26-15.03Z"/>
+    <path fill="url(#a-right)" d="M220.64,92.63c-10.85,18.78-69.6,120.54-86.82,150.37H83.09C119.17,180.52,187.08,62.88,222.37,1.76c24.91,43.15,72.98,126.41,113.71,196.97L381.84,278c5.35,9.27,5.36,20.69.01,29.97l-16.7,29C343.99,300.33,238.88,118.26,224.09,92.64c-.77-1.33-2.69-1.34-3.45-.01Z"/>
+  </g>
+  <g aria-label="1">
+    <path fill="url(#one-cap)" d="M410.87,97.98,498.2,10.66C505.03,3.83,514.29,0,523.95,0h32.92L442.43,132.42l-31.56-34.44Z"/>
+    <path fill="url(#one-stem)" d="M512.87,0h44v317h-44V0Z"/>
+    <path fill="url(#one-base)" d="M462.87,295h144v44h-144v-44Z"/>
+  </g>
+</svg>
