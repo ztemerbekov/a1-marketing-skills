@@ -92,6 +92,8 @@ Use client-specific metadata only when it protects a concrete client behavior. D
 
 Update both files together when the skill inventory, installation, platform support, or user-facing behavior changes. The READMEs are maintained by people, not generated.
 
+Keep every `npx skills update` and `npx skills remove` example in both READMEs on one physical line. Do not use shell-specific line-continuation syntax in these examples.
+
 ## Design Sources
 
 - `docs/a1-skill-design-contract.md` owns shared skill-design principles.
