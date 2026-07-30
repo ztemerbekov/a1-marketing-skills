@@ -2,7 +2,7 @@
 
 - ID: `editor-restructure-001`
 - Operation: `Restructure`
-- Risk: Reordering turns into a new landing-page architecture or loses commercial conditions.
+- Risk: Reordering introduces source-unsupported sections or loses commercial conditions.
 
 ## Setup
 

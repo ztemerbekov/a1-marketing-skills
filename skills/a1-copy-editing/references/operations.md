@@ -47,7 +47,7 @@ Use the observable function as the entire rewrite if it is the only supported co
 
 Use for `strengthen`, `make persuasive`, `make it sell`, `усиль`, `сделай убедительнее`, `сделай продающе`, `докрути`, and equivalent intent.
 
-Foreground existing reader value, proof, useful action, or supported feature-to-outcome connections. Replace unsupported evaluations with observable material already present or make them more cautious. Do not create missing persuasion assets.
+Foreground existing reader value, proof, useful action, or supported feature-to-outcome connections. Replace unsupported evaluations with observable material already present or make them more cautious. Strengthen only persuasion assets already present in the allowed sources.
 
 Treat source uncertainty as a constraint, not as weak wording to remove. When an outcome is tentative and the source supplies only a related feature, either preserve the hedge on that outcome or remove the outcome and keep the supported feature. Never keep the same outcome while deleting `may`, `might`, `possibly`, `возможно`, `может`, or an equivalent qualification. A feature is not proof of an inferred speed, revenue, or business result.
 
@@ -59,7 +59,7 @@ Use for `restructure`, `improve structure`, `make it flow`, `перестрой`
 
 Group related ideas, put context before conclusions when useful, move the strongest existing point earlier, and use headings or lists only to represent material already present. Respect explicit instructions to preserve order or formatting.
 
-**Complete when:** the reader can follow the existing material more easily and no new marketing block or architecture has been introduced.
+**Complete when:** the reader can follow the existing material more easily and every structural unit remains traceable to the allowed sources.
 
 ## Text Review
 
@@ -67,7 +67,7 @@ Use for `review this text`, `give feedback on this copy`, `critique this`, `anal
 
 Identify the most consequential strengths and problems in the supplied text. Prioritize findings by reader impact, tie each finding to observable source material, and recommend a specific next move. Distinguish language, clarity, structure, voice, evidence, and unsupported-claim problems when that distinction helps the user act.
 
-Do not return a full rewritten version, apply recommendations silently, or invent missing audience, proof, positioning, or strategy. Short illustrative micro-edits are allowed only when they make a recommendation concrete and remain inside the source boundary.
+Return prioritized findings and recommendations rather than a full rewritten version. Use short illustrative micro-edits only when they make a recommendation concrete and remain inside the source boundary.
 
 **Complete when:** the user can see what works, what needs attention first, why it matters, and what to do next without losing ownership of the text.
 

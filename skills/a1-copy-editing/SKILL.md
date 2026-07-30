@@ -5,7 +5,7 @@ description: Copy-edit or review an existing marketing or editorial draft when t
 
 # Copy Editing
 
-Improve or review existing marketing text immediately without inventing the marketing behind it.
+Improve or review a user-selected existing draft while preserving its source-supported meaning.
 
 This is a public, Model-invoked skill for marketing and editorial teams. The user should be able to paste text, state an editing or review intent in ordinary language, and receive a source-faithful result without a setup interview.
 
@@ -15,26 +15,21 @@ Detect the user's language and work in that language by default. If the input te
 
 Use the explanation language for every user-facing service element, including section headings, option labels, change notes, assumptions, warnings, limitations, and similar response scaffolding. Localize these elements naturally. Do not translate skill names, commands, paths, code, URLs, product names, or explicitly supplied terms.
 
-## Request Boundary
-
-Before applying the entry contract, read [the strategy boundary](references/strategy-boundary.md) and classify the whole request by meaning.
-
-Only requests to edit or review existing material enter the copy-editing spine. If the user asks to create or rethink a strategic decision, return the concise boundary response from that reference and stop. Recommend `a1-editor-in-chief` only under the completed-strategy handoff rule; a recommendation is not permission to start its workflow because the user must invoke it explicitly.
-
 ## Entry Contract
 
-Accept a request when both inputs are present:
+Accept a request when all conditions are true:
 
 1. A user-selected existing draft: text the user pasted or attached in the conversation, or a document they explicitly selected as the editing target.
 2. An editing, feedback, or review intent directed at that draft.
+3. Every requested deliverable edits or reviews that draft.
 
 When the user explicitly invokes this skill without selecting a draft, ask them to paste, attach, or name the draft and stop.
+
+For a mixed request, state that A1 Copy Editing edits or reviews selected existing drafts and stop without producing any deliverable.
 
 Marketing context is optional. Read only the first existing repository context in this order: `.agents/marketing-context.md`, then `.claude/marketing-context.md` when the canonical path is absent, then root `marketing-context.md` when both earlier paths are absent. Do not read or merge a lower-priority context. If none exists, continue from the user's text and instruction.
 
 Do not block on missing audience, channel, goal, tone, constraints, or marketing context. Ask only when every safe edit or useful review would choose between materially different meanings. If any safe useful result is possible, produce it and briefly state a material limitation instead of asking.
-
-Do not infer strategy from missing optional inputs. An ordinary editing or review request still starts immediately when audience, channel, goal, constraints, or marketing context are absent.
 
 ## Runtime
 

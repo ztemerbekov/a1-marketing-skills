@@ -13,7 +13,7 @@ This is the authoritative final acceptance check for `a1-copy-editing`. Run it a
 
 - The primary operation's completion criterion in [operations.md](operations.md) passes.
 - Secondary edits support the primary operation instead of replacing it.
-- No unrequested deep rewrite, strategy work, or information-style behavior took over the result.
+- The selected operation remains the dominant task, and Information Style appears only after explicit activation.
 - A **Text Review** result prioritizes source-grounded findings and does not include a full rewrite unless explicitly requested.
 
 ## 3. Meaning, Voice, and Constraints

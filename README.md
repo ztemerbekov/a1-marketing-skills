@@ -21,8 +21,7 @@ The collection is split into two connected packages for marketing decisions, reu
 ### A1 Editorial — Editing and copy
 
 4. **A1 Copy Editing** (`/a1-copy-editing`, with the Russian command alias `/a1-redaktura`) improves or reviews existing drafts within supplied constraints and available Marketing Context while preserving source facts and human editorial control.
-5. **Editor in Chief** (`/a1-editor-in-chief`) sets editorial direction inside approved strategy, briefs A1 Copy Editing, and reviews the resulting edit.
-6. **Humanize** (`/a1-humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
+5. **Humanize** (`/a1-humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
 
 ## Working principles
 
@@ -195,27 +194,6 @@ Read the [full Humanize behavior](./skills/a1-humanize/SKILL.md).
 </details>
 
 <details>
-<summary><strong>Editor in Chief — direct and review a high-stakes edit</strong></summary>
-
-<br>
-
-Editor in Chief works inside confirmed product and marketing inputs. It resolves the source material, chooses bounded editorial direction, creates an internal brief, delegates all text work to A1 Copy Editing, and reviews the result with at most one corrective pass.
-
-Use it when approved strategy already exists but reader focus, message emphasis, editorial angle, argument order, structure, or voice still needs a chief editor's judgment. It does not create positioning, segmentation, pricing, an offer, a campaign strategy, GTM, or product strategy.
-
-**Try:**
-
-> `/a1-editor-in-chief`
->
-> Review the draft. Find the strongest angle for marketing directors and rewrite the text for that purpose.
->
-> `[paste your draft]`
-
-Read the [full Editor in Chief behavior](./skills/a1-editor-in-chief/SKILL.md).
-
-</details>
-
-<details>
 <summary><strong>Consumer Psychology — audit hypotheses with peer-reviewed research</strong></summary>
 
 <br>
@@ -278,7 +256,7 @@ For the complete A1 Marketing Skills installation:
 The complete installation includes both collections:
 
 - **A1 Core:** `/a1-core:a1-grill`, `/a1-core:a1-consumer-psy`, and `/a1-core:a1-marketing-context`
-- **A1 Editorial:** `/a1-editorial:a1-copy-editing`, its Russian alias `/a1-editorial:a1-redaktura`, `/a1-editorial:a1-humanize`, and `/a1-editorial:a1-editor-in-chief`
+- **A1 Editorial:** `/a1-editorial:a1-copy-editing`, its Russian alias `/a1-editorial:a1-redaktura`, and `/a1-editorial:a1-humanize`
 
 To install only one collection:
 
@@ -299,16 +277,16 @@ Project installation keeps the selected skill versions with that project. For th
 
 ## Update or remove
 
-Update the six capabilities and the Russian command alias:
+Update the five capabilities and the Russian command alias:
 
 ```bash
-npx skills@latest update a1-copy-editing a1-redaktura a1-editor-in-chief a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
+npx skills@latest update a1-copy-editing a1-redaktura a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
 ```
 
 Remove them from the global installation:
 
 ```bash
-npx skills@latest remove a1-copy-editing a1-redaktura a1-editor-in-chief a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
+npx skills@latest remove a1-copy-editing a1-redaktura a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
 ```
 
 For project-only skills, run the command in that project and use `--project` with `update`; omit `--global` from `remove`.

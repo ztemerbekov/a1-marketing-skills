@@ -36,7 +36,6 @@
         "editing",
         "copy-editing",
         "editorial-review",
-        "editorial-direction",
         "marketing-copy",
         "humanize"
       ],
@@ -45,14 +44,13 @@
       "skills": [
         "./a1-copy-editing",
         "./a1-redaktura",
-        "./a1-editor-in-chief",
         "./a1-humanize"
       ]
     },
     {
       "name": "a1-marketing-skills",
       "displayName": "A1 Marketing Skills",
-      "description": "The complete A1 Marketing Skills installation for Claude Code, combining strategic decision support with full-cycle editorial automation.",
+      "description": "The complete A1 Marketing Skills installation for Claude Code, combining strategic decision support with focused editorial assistance.",
       "category": "productivity",
       "keywords": [
         "marketing",
