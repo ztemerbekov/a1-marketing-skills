@@ -14,7 +14,7 @@ The collection is split into two connected packages for marketing decisions, reu
 
 ### A1 Core — Expertise and decisions
 
-1. **Grill** (`/a1-grill`) pressure-tests a marketing idea, decision, or plan through a constructive interview.
+1. **Grill** (`/a1-grill`) pressure-tests a marketing idea, decision, or plan through a round-by-round interview.
 2. **Consumer Psychology** (`/a1-consumer-psy`) audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
 3. **Marketing Context** (`/a1-marketing-context`) stores the team's confirmed marketing context in `.agents/marketing-context.md`, so skills that use marketing context can work from real inputs instead of inventing them.
 
@@ -121,11 +121,11 @@ Read the [full Marketing Context behavior](./skills/a1-marketing-context/SKILL.m
 
 <br>
 
-Grill is a tough but constructive review of a marketing idea or plan. No hand-holding or fluff, but no toxicity or passive aggression either—like a direct conversation with a colleague.
+Grill maps a marketing idea, decision, or plan as a design tree and relentlessly interviews you until every relevant branch has been examined.
 
-Each step brings one clear recommendation and one precise question. The skill analyzes the decision deeply instead of following a checklist.
+Each round asks every question whose prerequisites are already settled. Questions are numbered and each includes the agent's recommended answer, so you can respond to the whole round by number. Your answers reshape the tree before the next round.
 
-What you get: Grill returns an actionable decision, surfaces risks and assumptions, and gives you one concrete next step.
+When a question needs a discoverable fact, Grill sends a background sub-agent to find it while continuing with independent questions. Decisions remain yours, and the skill does not act until you confirm that you and the agent share the same understanding.
 
 **Try:**
 
