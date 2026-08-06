@@ -56,7 +56,7 @@ Use the globally configured GitHub CLI authentication (`gh`) from the macOS syst
 - Never read, print, copy, store, or add GitHub tokens to repository files, prompts, `.env` files, or commits.
 - Before a GitHub operation, run `gh auth status`.
 - If `gh` reports an invalid or unavailable token inside a sandbox, retry the required command with permission to access the macOS Keychain. Do not ask the user to re-authenticate unless global `gh auth status` also fails.
-- Use `gh` for GitHub Issues and pull requests; use the configured Git HTTPS credentials for `git fetch`, `git pull`, and `git push`.
+- Use `gh` for GitHub Issues and pull requests; use the configured SSH key and SSH remote for `git fetch`, `git pull`, and `git push`.
 
 ## Skill Structure
 
