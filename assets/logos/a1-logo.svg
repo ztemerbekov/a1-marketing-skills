@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 606.87 339" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 541 339" role="img" aria-labelledby="title description">
   <title id="title">A1 — Warm Glow</title>
-  <desc id="description">The original geometric A1 logo recolored in warm yellow, orange, coral, and pink tones.</desc>
+  <desc id="description">The original geometric A paired with the compact primary numeral one.</desc>
   <defs>
     <linearGradient id="a-left" x1=".1" y1="72" x2="278.64" y2="258" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#FFD21A"/>
@@ -18,18 +18,11 @@
       <stop offset=".5" stop-color="#FF6A00"/>
       <stop offset="1" stop-color="#FF174C"/>
     </linearGradient>
-    <linearGradient id="one-cap" x1="415" y1="122" x2="557" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FF00A8"/>
-      <stop offset="1" stop-color="#FF324F"/>
-    </linearGradient>
-    <linearGradient id="one-stem" x1="535" y1="0" x2="535" y2="339" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FF5A00"/>
-      <stop offset=".55" stop-color="#FF2E2E"/>
+    <linearGradient id="one-ribbon" x1="431" y1="20" x2="507" y2="339" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFB300"/>
+      <stop offset=".2" stop-color="#FF6700"/>
+      <stop offset=".6" stop-color="#FF2E2E"/>
       <stop offset="1" stop-color="#FF008C"/>
-    </linearGradient>
-    <linearGradient id="one-base" x1="463" y1="317" x2="607" y2="317" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FF7800"/>
-      <stop offset="1" stop-color="#FF00A8"/>
     </linearGradient>
   </defs>
   <g aria-label="A">
@@ -38,8 +31,6 @@
     <path fill="url(#a-right)" d="M220.64,92.63c-10.85,18.78-69.6,120.54-86.82,150.37H83.09C119.17,180.52,187.08,62.88,222.37,1.76c24.91,43.15,72.98,126.41,113.71,196.97L381.84,278c5.35,9.27,5.36,20.69.01,29.97l-16.7,29C343.99,300.33,238.88,118.26,224.09,92.64c-.77-1.33-2.69-1.34-3.45-.01Z"/>
   </g>
   <g aria-label="1">
-    <path fill="url(#one-cap)" d="M410.87,97.98,498.2,10.66C505.03,3.83,514.29,0,523.95,0h32.92L442.43,132.42l-31.56-34.44Z"/>
-    <path fill="url(#one-stem)" d="M512.87,0h44v317h-44V0Z"/>
-    <path fill="url(#one-base)" d="M462.87,295h144v44h-144v-44Z"/>
+    <path fill="url(#one-ribbon)" d="M419,38,469,0h44v339h-44V44l-50,38V38Z"/>
   </g>
 </svg>
