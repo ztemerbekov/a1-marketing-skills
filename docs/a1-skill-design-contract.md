@@ -12,6 +12,8 @@ Treat client-facing metadata as part of the public skill contract. The display n
 
 Use only metadata fields the client officially supports. When the schema provides one global string, use one concise English default rather than inventing locale variants. Keep presentation and invocation metadata consistent with the skill's runtime contract.
 
+Every public A1 skill must include OpenAI client icons at `assets/icon-small.svg` and `assets/icon-large.svg` and reference those paths from `agents/openai.yaml`. Derive both from the canonical `assets/logos/a1-logo.svg`: preserve its vector paths, gradients, and proportions; center the visible logo bounds on a transparent square canvas; and add no background or decorative shape. Use a `192×192` canvas for the small icon and a `1024×1024` canvas for the large icon.
+
 ## Invocation
 
 Choose invocation from user expectations:
