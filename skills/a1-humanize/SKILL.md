@@ -1,6 +1,8 @@
 ---
 name: a1-humanize
 description: 'Remove recognizable AI-writing patterns from supplied copy while preserving its facts, meaning, language, and authorial voice. Use for explicit requests to humanize text or make it sound less AI-generated, including "очеловечь текст", "убери признаки AI", and "сделай менее AI-шным". Do not use for generic editing or for new marketing strategy, offers, CTAs, positioning, audience selection, or campaign messaging.'
+metadata:
+  author: Zinnur Temerbekov
 ---
 
 # Humanize

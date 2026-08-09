@@ -62,6 +62,8 @@ Use the globally configured GitHub CLI authentication (`gh`) from the macOS syst
 
 Canonical skills live as direct children of `skills/`. Each directory must be self-contained and installable directly from GitHub without a build or sync step.
 
+Before creating or materially changing a skill, or copying, translating, paraphrasing, or adapting external material into one, read and follow `docs/a1-skill-design-contract.md` before editing.
+
 Every skill must:
 
 - have a lowercase `a1-` name that matches its directory;

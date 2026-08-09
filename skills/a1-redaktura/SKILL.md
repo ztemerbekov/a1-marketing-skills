@@ -1,6 +1,8 @@
 ---
 name: a1-redaktura
 description: Russian command alias for a1-copy-editing.
+metadata:
+  author: Zinnur Temerbekov
 disable-model-invocation: true
 ---
 

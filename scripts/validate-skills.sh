@@ -22,6 +22,28 @@ frontmatter_value() {
     | sed 's/^"//; s/"$//; s/^'\''//; s/'\''$//'
 }
 
+frontmatter_nested_inline_value() {
+  local frontmatter="$1"
+  local parent="$2"
+  local key="$3"
+  printf '%s\n' "$frontmatter" \
+    | awk -v parent="$parent" -v key="$key" '
+        $0 == parent ":" {inside_parent=1; next}
+        inside_parent && /^[^[:space:]]/ {exit}
+        inside_parent && $0 ~ ("^  " key ":[[:space:]]*") {
+          if (found) {invalid=1; next}
+          value=$0
+          sub("^  " key ":[[:space:]]*", "", value)
+          found=1
+          next
+        }
+        found && /^  [^[:space:]]/ {exit}
+        found && !/^[[:space:]]*($|#)/ && /^   / {invalid=1}
+        END {if (found && !invalid) print value}
+      ' \
+    | sed 's/^"//; s/"$//; s/^'\''//; s/'\''$//'
+}
+
 validate_consumer_psy_dossiers() {
   local skill_dir="skills/a1-consumer-psy"
   local index_file="$skill_dir/references/model-index.md"
@@ -232,6 +254,7 @@ for skill_dir in "${skill_dirs[@]}"; do
   declared_name="$(frontmatter_value "$frontmatter" "name")"
   description="$(frontmatter_value "$frontmatter" "description")"
   disable_model_invocation="$(frontmatter_value "$frontmatter" "disable-model-invocation")"
+  author="$(frontmatter_nested_inline_value "$frontmatter" "metadata" "author")"
 
   if [[ -z "$declared_name" ]]; then
     fail "$skill_file" "Frontmatter is missing name"
@@ -248,6 +271,18 @@ for skill_dir in "${skill_dirs[@]}"; do
     || "$description" == "~" \
     || "$description" =~ ^[Nn][Uu][Ll][Ll]$ ]]; then
     fail "$skill_file" "Frontmatter requires a non-empty inline description"
+  fi
+
+  if [[ -z "$author" \
+    || "$author" == \|* \
+    || "$author" == \>* \
+    || "$author" == \#* \
+    || "$author" == \[* \
+    || "$author" == \{* \
+    || "$author" == "- "* \
+    || "$author" == "~" \
+    || "$author" =~ ^[Nn][Uu][Ll][Ll]$ ]]; then
+    fail "$skill_file" "Frontmatter requires metadata.author as a non-empty inline scalar"
   fi
 
   if printf '%s\n' "$frontmatter" | grep -Eq '^[[:space:]]*version:'; then
