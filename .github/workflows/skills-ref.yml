@@ -2,9 +2,15 @@ name: Agent Skills reference check
 
 on:
   pull_request:
+    paths:
+      - "skills/**"
+      - ".github/workflows/skills-ref.yml"
   push:
     branches:
       - main
+    paths:
+      - "skills/**"
+      - ".github/workflows/skills-ref.yml"
 
 permissions:
   contents: read
