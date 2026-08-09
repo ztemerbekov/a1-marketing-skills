@@ -87,7 +87,7 @@ The shortest path to a useful result is a global install followed by an A1 Copy 
 
 <br>
 
-Marketing Context creates or incrementally updates `.agents/marketing-context.md`—a single source of confirmed inputs about your brand for future tasks.
+Marketing Context creates or incrementally updates `.agents/marketing-context.md`—a single source of confirmed product, audience, positioning, voice, proof, vocabulary, copy-example, and business-goal inputs for future marketing work. Project and asset conventions remain in the repository instructions that own them.
 
 You can start an update in two ways:
 
@@ -98,15 +98,15 @@ You can start an update in two ways:
 
 Context can be updated as a whole or with individual confirmed sections—just specify what to save and which source to use.
 
-> Analyze the attached files and record our Brand Voice, Customer Profiles, editorial policy, brand restrictions, and stop-word list in the context.
+> Analyze the attached files and record our Brand Voice, Customer Profiles, editorial policy, messaging restrictions, and stop-word list in the context.
 >
 > Record the target-audience profiles, segments, ICP (Ideal Customer Profile), and key pain points of B2B buyers from the presentation in the context.
 >
 > Add the brand positioning, UVP (value proposition), mission, and key themes from the file to the context.
 >
-> Capture our Tone of Voice, communication character, layout principles, and examples of the brand voice in action in the context.
+> Capture our Tone of Voice, communication character, verbal messaging principles, and examples of the brand voice in action in the context.
 >
-> Record the editorial policy, formatting rules, structure requirements, and rules for presenting numerical facts in the context.
+> Record the editorial policy, copy-structure requirements, and rules for wording numerical facts in the context.
 >
 > Save the brand prohibitions, legal taboos, stop-word list, and rules for mentioning competitors’ products in the context.
 >

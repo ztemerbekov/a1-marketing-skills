@@ -39,6 +39,7 @@ Run this suite only when the maintainer explicitly requests semantic evaluation,
 - [legacy fallback migration is explicit and lossless](cases/context-legacy-migration-021.md)
 - [immediate interview stop creates no empty context](cases/context-interview-empty-stop-022.md)
 - [two legacy contexts stop migration](cases/context-legacy-precedence-023.md)
+- [non-marketing remember request stays outside context](cases/context-nonmarketing-memory-024.md)
 
 Consumer integration regressions live in the self-contained evaluation packages of the consumers they evaluate.
 

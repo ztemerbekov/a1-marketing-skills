@@ -1,6 +1,6 @@
 ---
 name: a1-marketing-context
-description: 'Marketing context: create or incrementally update one public context for the current repository from confirmed information. Use when the user explicitly asks to set it up, says "запомни наш tone of voice", saves approved facts, or updates positioning. Use Auto-draft by default; start Interview only when explicitly requested. Passive context discovery never authorizes a write.'
+description: 'Marketing context: maintain confirmed product facts, audience, positioning, brand voice, verbal messaging, proof, vocabulary, copy examples, or business-goal inputs that the user explicitly wants reused in future marketing work. Use Auto-draft by default; start Interview only when explicitly requested. Passive context discovery never authorizes a write.'
 ---
 
 # Marketing Context
