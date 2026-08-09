@@ -254,13 +254,16 @@ for skill_dir in "${skill_dirs[@]}"; do
     fail "$skill_file" "Skill versions belong to repository releases, not skill frontmatter"
   fi
 
+  openai_metadata="${skill_dir}agents/openai.yaml"
   if [[ "$disable_model_invocation" == "true" ]]; then
-    openai_metadata="${skill_dir}agents/openai.yaml"
     if [[ ! -f "$openai_metadata" ]]; then
       fail "$skill_file" "Command-only skills require agents/openai.yaml"
     elif ! grep -Eq '^[[:space:]]*allow_implicit_invocation:[[:space:]]*false[[:space:]]*$' "$openai_metadata"; then
       fail "$openai_metadata" "Command-only skills must disable implicit invocation"
     fi
+  elif [[ -f "$openai_metadata" ]] \
+    && grep -Eq '^[[:space:]]*allow_implicit_invocation:[[:space:]]*false[[:space:]]*$' "$openai_metadata"; then
+    fail "$openai_metadata" "Implicit invocation is disabled but SKILL.md does not set disable-model-invocation: true"
   fi
 
   if ! awk -v frontmatter_end="$frontmatter_end" 'NR > frontmatter_end && $0 == "## Language" {found=1} END {exit !found}' "$skill_file"; then
