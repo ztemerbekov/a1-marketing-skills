@@ -70,6 +70,8 @@ Every skill must:
 - keep detailed canon, examples, rubrics, and templates in local `references/` when they would make `SKILL.md` unwieldy;
 - use relative links only to files inside its own directory.
 
+When adding or materially changing a skill, follow the human-facing documentation contract in `docs/a1-skill-design-contract.md`.
+
 Evaluation suites are optional maintainer material. When present, keep them under the skill's `evals/` directory; they must never be runtime dependencies.
 
 ## Invocation Compatibility
