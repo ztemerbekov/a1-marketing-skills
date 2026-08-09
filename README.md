@@ -16,14 +16,14 @@ The collection is split into two connected packages for marketing decisions, reu
 
 ### A1 Core — Expertise and decisions
 
-1. **Grill** (`/a1-grill`) pressure-tests a marketing idea, decision, or plan through a round-by-round interview.
-2. **Consumer Psychology** (`/a1-consumer-psy`) audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
-3. **Marketing Context** (`/a1-marketing-context`) stores the team's confirmed marketing context in `.agents/marketing-context.md`, so skills that use marketing context can work from real inputs instead of inventing them.
+1. **[Grill](./docs/skills/a1-grill.md)** (`/a1-grill`) pressure-tests a marketing idea, decision, or plan through a round-by-round interview.
+2. **[Consumer Psychology](./docs/skills/a1-consumer-psy.md)** (`/a1-consumer-psy`) audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
+3. **[Marketing Context](./docs/skills/a1-marketing-context.md)** (`/a1-marketing-context`) stores the team's confirmed marketing context in `.agents/marketing-context.md`, so skills that use marketing context can work from real inputs instead of inventing them.
 
 ### A1 Editorial — Editing and copy
 
-4. **A1 Copy Editing** (`/a1-copy-editing`, with the Russian command alias `/a1-redaktura`) improves or reviews existing drafts within supplied constraints and available Marketing Context while preserving source facts and human editorial control.
-5. **Humanize** (`/a1-humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
+4. **[A1 Copy Editing](./docs/skills/a1-copy-editing.md)** (`/a1-copy-editing`, with the Russian command alias [`/a1-redaktura`](./docs/skills/a1-redaktura.md)) improves or reviews existing drafts within supplied constraints and available Marketing Context while preserving source facts and human editorial control.
+5. **[Humanize](./docs/skills/a1-humanize.md)** (`/a1-humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
 
 ## Working principles
 
@@ -38,7 +38,7 @@ Here is a complete context-to-edit loop:
 
 > **You:** Analyze the files in project folder X and build a basic marketing context from them.
 >
-> **Result:** The agent extracts the positioning, target audience, and brand rules and records them in `.agents/marketing-context.md` so that every later skill invocation automatically uses the context and you do not need to provide the inputs again.
+> **Result:** The agent extracts the positioning, target audience, and brand rules and records them in `.agents/marketing-context.md` so that compatible context-aware skills can reuse the inputs instead of asking for them again.
 >
 > **You:** Make this clear and concise, then rewrite it so it sounds human—the AI writing is obvious:
 >
@@ -114,7 +114,7 @@ Context can be updated as a whole or with individual confirmed sections—just s
 >
 > Record the key products, their features translated into customer benefits, and the main offers for the current campaign in the context.
 
-Read the [full Marketing Context behavior](./skills/a1-marketing-context/SKILL.md).
+Read the [Marketing Context guide](./docs/skills/a1-marketing-context.md).
 
 </details>
 
@@ -135,7 +135,7 @@ When a question needs a discoverable fact, Grill sends a background sub-agent to
 >
 > We have an idea to launch a Telegram channel to attract B2B leads to our service. Help us break down the hypothesis and show where the weak points and blind spots are.
 
-Read the [full Grill behavior](./skills/a1-grill/SKILL.md).
+Read the [Grill guide](./docs/skills/a1-grill.md).
 
 </details>
 
@@ -168,7 +168,7 @@ Or ask for a review without an automatic rewrite:
 >
 > `[paste your draft]`
 
-Read the [full A1 Copy Editing behavior](./skills/a1-copy-editing/SKILL.md).
+Read the [A1 Copy Editing guide](./docs/skills/a1-copy-editing.md).
 
 </details>
 
@@ -191,7 +191,7 @@ A1 Humanize is adapted from [Humanizer by Siqi Chen](https://github.com/blader/h
 >
 > `[paste your text]`
 
-Read the [full Humanize behavior](./skills/a1-humanize/SKILL.md).
+Read the [Humanize guide](./docs/skills/a1-humanize.md).
 
 </details>
 
@@ -213,6 +213,8 @@ Read the [full Humanize behavior](./skills/a1-humanize/SKILL.md).
 The skill covers the model families documented in its local references. It provides analysis, hypotheses, experiments, metrics, countermetrics, and implementation-risk warnings; it does not create copy, pages, tariffs, campaigns, or production implementation. It warns when a proposed intervention is deceptive or otherwise risky, then helps test a transparent alternative.
 
 It also treats broad frameworks and analyst errors as guardrails: they can route analysis or be explained directly, but are not presented as a user's primary psychological cause.
+
+Read the [Consumer Psychology guide](./docs/skills/a1-consumer-psy.md).
 
 </details>
 

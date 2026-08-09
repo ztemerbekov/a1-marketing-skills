@@ -14,6 +14,26 @@ Use only metadata fields the client officially supports. When the schema provide
 
 Every public A1 skill must include OpenAI client icons at `assets/icon-small.svg` and `assets/icon-large.svg` and reference those paths from `agents/openai.yaml`. Derive both from the canonical `assets/logos/a1-logo.svg`: preserve its vector paths, gradients, and proportions; center the visible logo bounds on a transparent square canvas; and add no background or decorative shape. Use a `192×192` canvas for the small icon and a `1024×1024` canvas for the large icon.
 
+## Human-Facing Skill Documentation
+
+Document each public skill for people in a paired English and Russian page under `docs/skills/`:
+
+- `docs/skills/<skill-name>.md` is the English page;
+- `docs/skills/<skill-name>.ru.md` is the Russian page.
+
+Keep the language switcher near the top of both files:
+
+- English: `**English** | [Русский](./<skill-name>.ru.md)`;
+- Russian: `[English](./<skill-name>.md) | **Русский**`.
+
+The page helps a person decide when to use the skill and recognize whether it worked. It is not a runtime instruction and must not reproduce the procedure, templates, or detailed canon owned by `SKILL.md` and its local references.
+
+Cover the skill's one recognizable user job and defining constraint; when to use it, including its invocation mode and trigger boundary; common questions supported by real user questions, issues, or change history; user-observable signs that it is working; and its boundaries with neighboring skills. Size common questions to the available evidence rather than padding the section, and localize headings naturally in each language.
+
+Update the English and Russian pages together when documented behavior changes. `README.md` and `README.ru.md` remain landing pages and catalogs: keep their catalog entries concise and link each skill to the matching language page. The paired pages own the detailed human-facing contract. While an extended skill overview remains in either README, treat it as a non-canonical summary and keep both README versions aligned with the paired pages.
+
+Add both pages when introducing a new public skill. When renaming or removing a skill, move or remove both pages and update both README links in the same change. Use complete content rather than empty placeholders.
+
 ## Invocation
 
 Choose invocation from user expectations:
