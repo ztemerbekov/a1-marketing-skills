@@ -296,4 +296,4 @@ npx skills@latest remove a1-copy-editing a1-redaktura a1-grill a1-humanize a1-ma
 ## Помощь и обратная связь
 
 Есть вопрос, идея или что-то сработало не так?<br>
-Напишите в <img src="./assets/logos/a1-logo.svg" alt="A1" width="22">&nbsp;[Marketing&nbsp;Skills](https://t.me/a1_marketing_skills).
+Напишите в <img src="./assets/logos/a1-logo.svg" alt="A1" width="20">&nbsp;[Marketing&nbsp;Skills](https://t.me/a1_marketing_skills).
