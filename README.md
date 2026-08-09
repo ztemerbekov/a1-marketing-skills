@@ -2,6 +2,8 @@
 
 **English** | [Русский](./README.ru.md)
 
+[![skills.sh](https://skills.sh/b/ztemerbekov/a1-marketing-skills)](https://skills.sh/ztemerbekov/a1-marketing-skills)
+
 **Hand over the routine to AI agents—freeing marketing teams to focus on strategy, vision, and growth-driving decisions.**
 
 A1 Marketing Skills is a collection of Agent Skills built for the whole marketing team. It draws a clear line between execution and decision-making: agents take on repeatable operational work, while marketers keep expert control, clear focus, and ownership of growth decisions.
