@@ -43,6 +43,7 @@ Last updated: YYYY-MM-DD
 - **Overridable defaults:** `Audience Defaults`, `Brand Voice Defaults`, and `Business Goal Defaults` guide downstream work when the current task is silent. An explicit current task may use a different reader, voice, or goal without updating the stored context.
 - **Protected inputs:** `Product Facts`, `Claims and Evidence`, and `Explicit Prohibitions` constrain downstream work. A consumer must preserve them or surface a material conflict; ordinary task wording must not silently replace them.
 - **Confirmed decisions:** `Positioning`, `Market and Alternatives`, `Jobs, Pains, and Motivations`, `Messaging Rules`, `Words to Use`, and `Examples` are reusable approved inputs. They may be changed in the file only through an explicit context update.
+- **Messaging Rules:** approved verbal message hierarchy, recurring talking points, and communication constraints.
 
 The setup skill changes protected inputs or confirmed decisions only when the user explicitly updates them or explicitly designates an authoritative replacement source.
 
