@@ -72,6 +72,14 @@ Every skill must:
 
 Evaluation suites are optional maintainer material. When present, keep them under the skill's `evals/` directory; they must never be runtime dependencies.
 
+## External Source Provenance
+
+Before copying, translating, paraphrasing, or materially adapting an external skill, prompt, template, rubric, or other authored material, identify its source and license. Present the maintainer with a provenance and attribution plan, then wait for explicit approval before adding the material.
+
+The plan must state the exact source and pinned revision, the nature of the reuse, the upstream license and copyright holder, any required notices, the proposed self-contained attribution location, and whether skill metadata or user-facing documentation should change. Distinguish authorship of the A1 adaptation from authorship of upstream material; do not silently add an upstream author to `metadata.author` or omit required upstream attribution.
+
+When the source license requires attribution or notice preservation, offer only compliant choices: include the required material or do not use the source. Renaming, translating, paraphrasing, or making small edits does not by itself remove the provenance requirement. Keep approved license and attribution material inside the skill directory so direct installations preserve it. If the source has no clear reuse license, do not copy or adapt it without a maintainer-approved compliant basis.
+
 ## Invocation Compatibility
 
 Model-invoked skills are the default and need no invocation metadata.
