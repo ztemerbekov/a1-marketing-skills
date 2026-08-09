@@ -30,9 +30,9 @@ The page helps a person decide when to use the skill and recognize whether it wo
 
 Cover the skill's one recognizable user job and defining constraint; when to use it, including its invocation mode and trigger boundary; common questions supported by real user questions, issues, or change history; user-observable signs that it is working; and its boundaries with neighboring skills. Size common questions to the available evidence rather than padding the section, and localize headings naturally in each language.
 
-Update the English and Russian pages together when documented behavior changes. `README.md` and `README.ru.md` remain landing pages and catalogs: keep their descriptions concise and link each skill to the matching language page once that page exists instead of copying the detailed page body.
+Update the English and Russian pages together when documented behavior changes. `README.md` and `README.ru.md` remain landing pages and catalogs: keep their descriptions concise and link each skill to the matching language page instead of copying the detailed page body.
 
-Add both pages when introducing a new public skill. Migrate existing skills through separately scoped work, with complete content rather than empty placeholders; until a pair exists, preserve the current README links and descriptions.
+Add both pages when introducing a new public skill. When renaming or removing a skill, move or remove both pages and update both README links in the same change. Use complete content rather than empty placeholders.
 
 ## Invocation
 
