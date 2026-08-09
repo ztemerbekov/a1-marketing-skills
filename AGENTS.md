@@ -10,7 +10,7 @@ This repository publishes marketing-focused Agent Skills for clients that unders
 
 ### Issue tracker
 
-Issues and PRDs are tracked in GitHub Issues for `ztemerbekov/a1-marketing-skills`. See `docs/agents/issue-tracker.md`.
+Material work and PRDs are tracked in GitHub Issues for `ztemerbekov/a1-marketing-skills`. Small maintenance changes may be tracked by their pull request. See `docs/agents/issue-tracker.md`.
 
 ### Triage labels
 
@@ -22,21 +22,27 @@ This is a single-context repository. See `docs/agents/domain.md`.
 
 ## Project Workflow
 
-- Work is tracked in GitHub Issues. See `docs/agents/issue-tracker.md`.
+- Track material work and PRDs according to `docs/agents/issue-tracker.md`.
 - Use the canonical triage labels from `docs/agents/triage-labels.md`.
 - This is a single-context repository. Follow `docs/agents/domain.md` and reassess the boundary before adding a skill.
 
-## Git Delivery Flow
+## Delivery Modes
 
-For every implementation change, follow this order:
+Choose the delivery mode before making a GitHub write.
 
-1. Create or identify the GitHub Issue that defines the work and its acceptance criteria.
-2. Inspect the worktree and preserve unrelated changes.
+- **Local change:** the user asks to edit files without asking to commit, push, open a pull request, merge, release, or otherwise publish. Inspect the worktree, preserve unrelated changes, make the scoped edit, and run the iteration validation below. Keep follow-up tweaks in the same working state. A local change requires no Issue, base update, branch setup, commit, push, or pull request.
+- **Publish change:** the user explicitly asks to publish or requests a Git operation. Follow the publish flow below. Reuse an existing Issue, branch, and open pull request when they already cover the same scope.
+
+### Publish flow
+
+1. Inspect the worktree and preserve unrelated changes.
+2. For material work, create or identify the GitHub Issue that defines the acceptance criteria. For a small maintenance change, the pull request description may own the criteria.
 3. Update the base branch and create a `codex/` branch before editing tracked files.
-4. Make the scoped changes and run the relevant validation.
-5. Inspect the diff, then stage only the files that belong to the Issue and commit them.
+4. Make the scoped changes. Batch related follow-up tweaks in the same branch and pull request.
+5. Run the final validation once after the final edit, inspect the diff, stage only the scoped files, and commit them.
 6. Push the feature branch and open a draft pull request against `main`.
-7. Merge the pull request into `main` only after the user explicitly authorizes the merge.
+7. Hand off the draft pull request without waiting for GitHub Actions unless the user requested CI verification or a merge.
+8. Merge the pull request into `main` only after the user explicitly authorizes the merge.
 
 Pushing a feature branch never authorizes a merge. Do not commit implementation changes directly to `main`.
 
@@ -54,7 +60,7 @@ Use the globally configured GitHub CLI authentication (`gh`) from the macOS syst
 
 - Never ask the user to log in per repository.
 - Never read, print, copy, store, or add GitHub tokens to repository files, prompts, `.env` files, or commits.
-- Before a GitHub operation, run `gh auth status`.
+- Before the first GitHub operation in a task, run `gh auth status` once. Reuse that result for the rest of the task unless authentication fails.
 - If `gh` reports an invalid or unavailable token inside a sandbox, retry the required command with permission to access the macOS Keychain. Do not ask the user to re-authenticate unless global `gh auth status` also fails.
 - Use `gh` for GitHub Issues and pull requests; use the configured SSH key and SSH remote for `git fetch`, `git pull`, and `git push`.
 
@@ -117,7 +123,17 @@ Keep every `npx skills update` and `npx skills remove` example in both READMEs o
 
 ## Validation
 
-Run:
+### During iteration
+
+Run the narrowest check that covers the current batch of edits:
+
+- For changes limited to `README.md`, `README.ru.md`, or `docs/`, run `git diff --check`.
+- For changes limited to existing marketplace metadata or assets under `.claude-plugin/`, `.agents/plugins/`, `.codex-plugin/`, `.cursor-plugin/`, or `assets/marketplaces/`, run `python3 scripts/validate-marketplaces.py` and `git diff --check`.
+- For skill source, evaluation cases, scripts, workflows, or any other package behavior, run the relevant targeted check. Use the full suite when no narrower deterministic check proves the change.
+
+### Before a pull request
+
+For a documentation-only pull request, run `git diff --check`. For every other pull request, run the full suite once after the final edit:
 
 ```bash
 bash -n scripts/validate-skills.sh
@@ -125,7 +141,7 @@ bash -n scripts/validate-skills.sh
 git diff --check
 ```
 
-These deterministic checks verify objective package structure and whitespace only. They are required for every pull request, but never prove semantic quality or replace a manual semantic evaluation.
+These deterministic checks verify objective package structure and whitespace only. They never prove semantic quality or replace a manual semantic evaluation.
 
 ### Manual semantic evaluation
 

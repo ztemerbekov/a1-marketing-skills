@@ -1,6 +1,6 @@
 # Issue tracker: GitHub
 
-Issues and PRDs for this repo live as GitHub issues. Use the `gh` CLI for all operations.
+Material implementation work and PRDs for this repo live as GitHub issues. A small maintenance change may use its pull request description as the work record and acceptance criteria. Use the `gh` CLI for GitHub Issue operations.
 
 ## Conventions
 

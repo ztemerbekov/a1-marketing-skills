@@ -2,8 +2,26 @@ name: Validate skills
 
 on:
   pull_request:
+    paths:
+      - "skills/**"
+      - "scripts/**"
+      - ".claude-plugin/**"
+      - ".agents/plugins/**"
+      - ".codex-plugin/**"
+      - ".cursor-plugin/**"
+      - "assets/marketplaces/**"
+      - ".github/workflows/validate.yml"
   push:
     branches: [main]
+    paths:
+      - "skills/**"
+      - "scripts/**"
+      - ".claude-plugin/**"
+      - ".agents/plugins/**"
+      - ".codex-plugin/**"
+      - ".cursor-plugin/**"
+      - "assets/marketplaces/**"
+      - ".github/workflows/validate.yml"
 
 jobs:
   validate:
