@@ -1,6 +1,8 @@
 ---
 name: a1-grill
 description: Relentlessly stress-test one marketing idea, decision, or plan through round-by-round grilling
+metadata:
+  author: Zinnur Temerbekov
 disable-model-invocation: true
 ---
 

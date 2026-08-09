@@ -1,6 +1,8 @@
 ---
 name: a1-consumer-psy
 description: Audit consumer psychology hypotheses or analyze test outcomes using peer-reviewed research to explain user behavior, identify flaws, and set evidence limits.
+metadata:
+  author: Zinnur Temerbekov
 disable-model-invocation: true
 ---
 
