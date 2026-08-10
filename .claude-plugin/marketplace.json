@@ -13,6 +13,8 @@
       "description": "Stress-test marketing strategies and validate consumer psychology hypotheses to eliminate costly missteps before your team executes.",
       "category": "productivity",
       "keywords": [
+        "Маркетинговые скиллы",
+        "Marketing Skills",
         "marketing",
         "marketing-decisions",
         "idea-validation",
@@ -33,6 +35,8 @@
       "description": "Support editorial teams with AI—polish drafts, review copy, and remove AI patterns while preserving voice, facts, and human control.",
       "category": "productivity",
       "keywords": [
+        "Маркетинговые скиллы",
+        "Marketing Skills",
         "editing",
         "copy-editing",
         "editorial-review",
@@ -50,9 +54,11 @@
     {
       "name": "a1-marketing-skills",
       "displayName": "A1 Marketing Skills",
-      "description": "The complete A1 Marketing Skills installation for Claude Code, combining strategic decision support with focused editorial assistance.",
+      "description": "A1 Marketing Skills for Claude Code combines strategic decision support with focused editorial assistance.",
       "category": "productivity",
       "keywords": [
+        "Маркетинговые скиллы",
+        "Marketing Skills",
         "marketing",
         "marketing-decisions",
         "idea-validation",
