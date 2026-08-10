@@ -12,7 +12,43 @@ Treat client-facing metadata as part of the public skill contract. The display n
 
 Use only metadata fields the client officially supports. When the schema provides one global string, use one concise English default rather than inventing locale variants. Keep presentation and invocation metadata consistent with the skill's runtime contract.
 
+English is this repository's primary language and the default language for client metadata. Write `description`, `shortDescription`, `longDescription`, and the `description` in `SKILL.md` frontmatter as one English value. Do not add a Russian translation or a bilingual product-name parenthetical to a description. A skill description may quote a non-English user phrase only when the literal phrase defines a real invocation trigger rather than a localized metadata variant.
+
 Every public A1 skill must include OpenAI client icons at `assets/icon-small.svg` and `assets/icon-large.svg` and reference those paths from `agents/openai.yaml`. Derive both from the canonical `assets/logos/a1-logo.svg`: preserve its vector paths, gradients, and proportions; center the visible logo bounds on a transparent square canvas; and add no background or decorative shape. Use a `192×192` canvas for the small icon and a `1024×1024` canvas for the large icon.
+
+## Plugin Packaging and Bilingual Discoverability
+
+Treat plugin packaging and Marketplace discoverability as part of the public skill contract. A public skill collection is complete only when its skills and all applicable client packaging work together.
+
+Create and maintain the applicable client manifests together:
+
+- `.codex-plugin/plugin.json`;
+- `.agents/plugins/marketplace.json`;
+- `.claude-plugin/marketplace.json`;
+- `.cursor-plugin/plugin.json`;
+- `.cursor-plugin/marketplace.json`;
+- `agents/openai.yaml` inside every public skill.
+
+Use only fields supported by each client's schema. Keep Marketplace files free of unsupported search fields; put search metadata in that client's plugin manifest when the schema supports it.
+
+Use these canonical product names for this repository's public collection:
+
+- Russian: `A1 Маркетинговые скиллы`;
+- English: `A1 Marketing Skills`.
+
+Apply the canonical names consistently:
+
+- Global client display names and English-language surfaces use `A1 Marketing Skills`; Russian-language surfaces use `A1 Маркетинговые скиллы`.
+- Client, plugin, and skill descriptions that mention the collection use the English form `A1 Marketing Skills` only.
+- Use the canonical forms rather than mixed-script or improvised name variants.
+- Add the concise Russian and English search forms below to every supported `keywords` field. They deliberately omit the `A1` prefix, which remains part of product and display names. Keep `tags` limited to category terms; do not duplicate these collection-name search forms there.
+
+```json
+[
+  "Маркетинговые скиллы",
+  "Marketing Skills"
+]
+```
 
 ## Human-Facing Skill Documentation
 

@@ -13,6 +13,9 @@ from pathlib import Path, PurePosixPath
 ROOT = Path(__file__).resolve().parent.parent
 PRODUCT_SLUG = "a1-marketing-skills"
 PRODUCT_DISPLAY_NAME = "A1 Marketing Skills"
+PRODUCT_DISPLAY_NAME_RU = "A1 Маркетинговые скиллы"
+PRODUCT_DISPLAY_NAMES = {PRODUCT_DISPLAY_NAME_RU, PRODUCT_DISPLAY_NAME}
+PRODUCT_SEARCH_NAMES = {"Маркетинговые скиллы", "Marketing Skills"}
 CLAUDE_FULL_PLUGIN_SOURCE = f"./plugins/{PRODUCT_SLUG}"
 CLAUDE_PACKAGES = {
     "a1-core": {
@@ -97,6 +100,23 @@ def keyword_set(document, path, subject):
     if duplicates:
         fail(path, f"{subject} keywords contain duplicates: {', '.join(duplicates)}")
     return set(keywords)
+
+
+def require_product_search_names(values, path, subject):
+    if values is None:
+        return
+    missing = sorted(PRODUCT_SEARCH_NAMES - values)
+    if missing:
+        fail(
+            path,
+            f"{subject} must include required search names: {', '.join(missing)}",
+        )
+    prefixed = sorted(PRODUCT_DISPLAY_NAMES & values)
+    if prefixed:
+        fail(
+            path,
+            f"{subject} must omit A1-prefixed product names: {', '.join(prefixed)}",
+        )
 
 
 def resolve_asset(manifest_path, declared_path, *, require_dot_prefix):
@@ -324,6 +344,16 @@ for name, expected_metadata in CLAUDE_PACKAGES.items():
         )
 
 claude_full_plugin = claude_plugin_entries[PRODUCT_SLUG]
+claude_full_description = claude_full_plugin.get("description")
+if (
+    not isinstance(claude_full_description, str)
+    or PRODUCT_DISPLAY_NAME not in claude_full_description
+    or PRODUCT_DISPLAY_NAME_RU in claude_full_description
+):
+    fail(
+        MANIFEST_PATHS["claude marketplace"],
+        f"full plugin description must use {PRODUCT_DISPLAY_NAME!r} in English only",
+    )
 codex_full_plugin = plugin_entry(
     codex_marketplace,
     MANIFEST_PATHS["codex marketplace"],
@@ -431,6 +461,40 @@ full_plugin_keywords = {
         MANIFEST_PATHS["cursor manifest"],
     ),
 }
+for label, (keywords, path) in full_plugin_keywords.items():
+    require_product_search_names(keywords, path, f"{label} full-plugin keywords")
+
+for package_name in ("a1-core", "a1-editorial"):
+    package_keywords = keyword_set(
+        claude_plugin_entries[package_name],
+        MANIFEST_PATHS["claude marketplace"],
+        f"{package_name} plugin",
+    )
+    require_product_search_names(
+        package_keywords,
+        MANIFEST_PATHS["claude marketplace"],
+        f"{package_name} plugin keywords",
+    )
+
+cursor_tags = cursor_manifest.get("tags")
+if not isinstance(cursor_tags, list) or not all(
+    isinstance(tag, str) for tag in cursor_tags
+):
+    fail(
+        MANIFEST_PATHS["cursor manifest"],
+        "full plugin tags must be an array of strings",
+    )
+else:
+    forbidden_tags = sorted(
+        (PRODUCT_SEARCH_NAMES | PRODUCT_DISPLAY_NAMES) & set(cursor_tags)
+    )
+    if forbidden_tags:
+        fail(
+            MANIFEST_PATHS["cursor manifest"],
+            "full plugin tags must omit product-name search terms: "
+            + ", ".join(forbidden_tags),
+        )
+
 claude_keywords = full_plugin_keywords["Claude marketplace"][0]
 if claude_keywords is not None:
     for label, (keywords, path) in full_plugin_keywords.items():
@@ -617,7 +681,7 @@ if failures:
     sys.exit(1)
 
 print(
-    "Marketplace summary: product slug, display names, and full-plugin keywords "
+    "Marketplace summary: product slug, display names, and bilingual search names "
     "are synchronized across Claude, Codex, and Cursor; "
     "Claude package categories validated; "
     f"{len(canonical_skills)} canonical skills covered"
