@@ -222,6 +222,10 @@ Read the [Consumer Psychology guide](./docs/skills/a1-consumer-psy.md).
 
 ## Other installation options
 
+### Agent Plugins v1 package
+
+The repository root targets the [Agent Plugins v1.0.0](https://agent-plugins.org/specification) portable package format: `plugin.json` owns the portable identity, and `skills/` is the portable discovery location. Agent Plugins standardizes package layout, not one universal installation or marketplace flow. Use the documented route for your client below; the existing client manifests remain the source of client-specific presentation and installation behavior.
+
 ### Codex marketplace
 
 Add the repository marketplace once:

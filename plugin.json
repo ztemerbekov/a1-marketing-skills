@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "a1-marketing-skills",
+  "version": "0.1.0",
+  "description": "Marketing decision support and editorial workflows for AI agents.",
+  "author": {
+    "name": "Zinnur Temerbekov"
+  },
+  "homepage": "https://github.com/ztemerbekov/a1-marketing-skills",
+  "repository": "https://github.com/ztemerbekov/a1-marketing-skills",
+  "license": "MIT",
+  "keywords": [
+    "Маркетинговые скиллы",
+    "Marketing Skills",
+    "marketing",
+    "marketing-decisions",
+    "idea-validation",
+    "consumer-psychology",
+    "marketing-context",
+    "copy-editing",
+    "editorial-review",
+    "humanize"
+  ]
+}

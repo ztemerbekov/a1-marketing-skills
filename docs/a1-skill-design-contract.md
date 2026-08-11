@@ -22,12 +22,15 @@ Treat plugin packaging and Marketplace discoverability as part of the public ski
 
 Create and maintain the applicable client manifests together:
 
+- `plugin.json` for the Agent Plugins v1 portable identity;
 - `.codex-plugin/plugin.json`;
 - `.agents/plugins/marketplace.json`;
 - `.claude-plugin/marketplace.json`;
 - `.cursor-plugin/plugin.json`;
 - `.cursor-plugin/marketplace.json`;
 - `agents/openai.yaml` inside every public skill.
+
+The root `plugin.json` owns the collection's portable identity and contains only fields supported by the Agent Plugins v1 schema. Portable skills remain immediate children of `skills/`; do not declare a custom skills path in the portable manifest. Client manifests and marketplace catalogs remain adapters for client-owned presentation, installation, policy, and distribution behavior. Do not remove an adapter until its consumer and replacement are verified.
 
 Use only fields supported by each client's schema. Keep Marketplace files free of unsupported search fields; put search metadata in that client's plugin manifest when the schema supports it.
 
