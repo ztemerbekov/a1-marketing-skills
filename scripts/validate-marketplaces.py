@@ -11,12 +11,35 @@ from pathlib import Path, PurePosixPath
 
 
 ROOT = Path(__file__).resolve().parent.parent
-PRODUCT_SLUG = "a1-marketing-skills"
 PRODUCT_DISPLAY_NAME = "A1 Marketing Skills"
 PRODUCT_DISPLAY_NAME_RU = "A1 Маркетинговые скиллы"
 PRODUCT_DISPLAY_NAMES = {PRODUCT_DISPLAY_NAME_RU, PRODUCT_DISPLAY_NAME}
 PRODUCT_SEARCH_NAMES = {"Маркетинговые скиллы", "Marketing Skills"}
-CLAUDE_FULL_PLUGIN_SOURCE = f"./plugins/{PRODUCT_SLUG}"
+AGENT_PLUGINS_SCHEMA = (
+    "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json"
+)
+PORTABLE_MANIFEST_FIELDS = {
+    "$schema",
+    "name",
+    "version",
+    "description",
+    "author",
+    "homepage",
+    "repository",
+    "license",
+    "keywords",
+    "extensions",
+}
+PORTABLE_SHARED_FIELDS = (
+    "name",
+    "version",
+    "description",
+    "author",
+    "homepage",
+    "repository",
+    "license",
+    "keywords",
+)
 CLAUDE_PACKAGES = {
     "a1-core": {
         "displayName": "A1 Core",
@@ -24,10 +47,6 @@ CLAUDE_PACKAGES = {
     },
     "a1-editorial": {
         "displayName": "A1 Editorial",
-        "category": "productivity",
-    },
-    PRODUCT_SLUG: {
-        "displayName": PRODUCT_DISPLAY_NAME,
         "category": "productivity",
     },
 }
@@ -43,6 +62,7 @@ SVG_NUMBER = re.compile(
 )
 
 MANIFEST_PATHS = {
+    "portable manifest": ROOT / "plugin.json",
     "claude marketplace": ROOT / ".claude-plugin/marketplace.json",
     "codex marketplace": ROOT / ".agents/plugins/marketplace.json",
     "codex manifest": ROOT / ".codex-plugin/plugin.json",
@@ -283,6 +303,76 @@ codex_marketplace = load_json("codex marketplace")
 codex_manifest = load_json("codex manifest")
 cursor_marketplace = load_json("cursor marketplace")
 cursor_manifest = load_json("cursor manifest")
+portable_manifest = load_json("portable manifest")
+
+portable_manifest_path = MANIFEST_PATHS["portable manifest"]
+if not isinstance(portable_manifest, dict):
+    fail(portable_manifest_path, "portable manifest must be a JSON object")
+    portable_manifest = {}
+
+unknown_portable_fields = sorted(
+    set(portable_manifest) - PORTABLE_MANIFEST_FIELDS
+)
+if unknown_portable_fields:
+    fail(
+        portable_manifest_path,
+        "portable manifest contains unsupported top-level fields: "
+        + ", ".join(unknown_portable_fields),
+    )
+
+check_value(portable_manifest, portable_manifest_path, "$schema", AGENT_PLUGINS_SCHEMA)
+portable_name = portable_manifest.get("name")
+if (
+    not isinstance(portable_name, str)
+    or not 1 <= len(portable_name) <= 64
+    or re.fullmatch(r"[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?", portable_name)
+    is None
+    or "--" in portable_name
+    or ".." in portable_name
+):
+    fail(
+        portable_manifest_path,
+        "name must satisfy the Agent Plugins v1 name constraints",
+    )
+full_plugin_name = portable_name if isinstance(portable_name, str) else ""
+claude_full_plugin_source = f"./plugins/{full_plugin_name}"
+
+for field in ("version", "description", "homepage", "repository", "license"):
+    if field in portable_manifest and not isinstance(portable_manifest[field], str):
+        fail(portable_manifest_path, f"{field!r} must be a string")
+
+portable_author = portable_manifest.get("author")
+if portable_author is not None:
+    if not isinstance(portable_author, dict):
+        fail(portable_manifest_path, "'author' must be an object")
+    else:
+        unknown_author_fields = sorted(
+            set(portable_author) - {"name", "email", "url"}
+        )
+        if unknown_author_fields:
+            fail(
+                portable_manifest_path,
+                "author contains unsupported fields: "
+                + ", ".join(unknown_author_fields),
+            )
+        for field, value in portable_author.items():
+            if not isinstance(value, str):
+                fail(
+                    portable_manifest_path,
+                    f"author field {field!r} must be a string",
+                )
+
+portable_extensions = portable_manifest.get("extensions")
+if portable_extensions is not None:
+    if not isinstance(portable_extensions, dict):
+        fail(portable_manifest_path, "'extensions' must be an object")
+    else:
+        for namespace, value in portable_extensions.items():
+            if not isinstance(namespace, str) or not isinstance(value, dict):
+                fail(
+                    portable_manifest_path,
+                    "each extension namespace must map to an object",
+                )
 
 for label, marketplace in (
     ("claude marketplace", claude_marketplace),
@@ -293,7 +383,7 @@ for label, marketplace in (
         marketplace,
         MANIFEST_PATHS[label],
         "name",
-        PRODUCT_SLUG,
+        portable_name,
     )
 
 for label, manifest in (
@@ -301,7 +391,7 @@ for label, manifest in (
     ("cursor manifest", cursor_manifest),
 ):
     path = MANIFEST_PATHS[label]
-    check_value(manifest, path, "name", PRODUCT_SLUG)
+    check_value(manifest, path, "name", portable_name)
     check_value(manifest, path, "skills", SKILLS_PATH)
     skills_value = manifest.get("skills")
     skills_dir = (
@@ -312,23 +402,32 @@ for label, manifest in (
     if skills_dir is None or not skills_dir.is_dir():
         fail(path, f"skills path does not resolve to a directory: {manifest.get('skills')!r}")
 
-codex_version = codex_manifest.get("version")
-cursor_version = cursor_manifest.get("version")
-if codex_version != cursor_version:
-    fail(
-        MANIFEST_PATHS["cursor manifest"],
-        f"version must match Codex manifest {codex_version!r}, found {cursor_version!r}",
-    )
-if not isinstance(codex_version, str) or not re.fullmatch(
-    r"(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)", codex_version
+for field in PORTABLE_SHARED_FIELDS:
+    expected = portable_manifest.get(field)
+    for label, manifest in (
+        ("codex manifest", codex_manifest),
+        ("cursor manifest", cursor_manifest),
+    ):
+        check_value(manifest, MANIFEST_PATHS[label], field, expected)
+
+portable_version = portable_manifest.get("version")
+if not isinstance(portable_version, str) or not re.fullmatch(
+    r"(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)", portable_version
 ):
     fail(
-        MANIFEST_PATHS["codex manifest"],
-        f"version must use MAJOR.MINOR.PATCH semver, found {codex_version!r}",
+        portable_manifest_path,
+        f"version must use MAJOR.MINOR.PATCH semver, found {portable_version!r}",
     )
 
 claude_plugin_entries = {}
-for name, expected_metadata in CLAUDE_PACKAGES.items():
+claude_package_expectations = {
+    **CLAUDE_PACKAGES,
+    full_plugin_name: {
+        "displayName": PRODUCT_DISPLAY_NAME,
+        "category": "productivity",
+    },
+}
+for name, expected_metadata in claude_package_expectations.items():
     entry = plugin_entry(
         claude_marketplace,
         MANIFEST_PATHS["claude marketplace"],
@@ -343,7 +442,7 @@ for name, expected_metadata in CLAUDE_PACKAGES.items():
             expected_value,
         )
 
-claude_full_plugin = claude_plugin_entries[PRODUCT_SLUG]
+claude_full_plugin = claude_plugin_entries[full_plugin_name]
 claude_full_description = claude_full_plugin.get("description")
 if (
     not isinstance(claude_full_description, str)
@@ -357,12 +456,12 @@ if (
 codex_full_plugin = plugin_entry(
     codex_marketplace,
     MANIFEST_PATHS["codex marketplace"],
-    PRODUCT_SLUG,
+    full_plugin_name,
 )
 cursor_full_plugin = plugin_entry(
     cursor_marketplace,
     MANIFEST_PATHS["cursor marketplace"],
-    PRODUCT_SLUG,
+    full_plugin_name,
 )
 
 codex_marketplace_interface = codex_marketplace.get("interface")
@@ -436,6 +535,14 @@ check_value(
 )
 
 full_plugin_keywords = {
+    "Portable manifest": (
+        keyword_set(
+            portable_manifest,
+            portable_manifest_path,
+            "full plugin",
+        ),
+        portable_manifest_path,
+    ),
     "Claude marketplace": (
         keyword_set(
             claude_full_plugin,
@@ -548,13 +655,13 @@ check_value(
     claude_full_plugin,
     MANIFEST_PATHS["claude marketplace"],
     "source",
-    CLAUDE_FULL_PLUGIN_SOURCE,
+    claude_full_plugin_source,
 )
-claude_full_plugin_dir = ROOT / CLAUDE_FULL_PLUGIN_SOURCE.removeprefix("./")
+claude_full_plugin_dir = ROOT / claude_full_plugin_source.removeprefix("./")
 if not claude_full_plugin_dir.is_dir():
     fail(
         MANIFEST_PATHS["claude marketplace"],
-        f"{PRODUCT_SLUG!r} source does not resolve to a directory",
+        f"{full_plugin_name!r} source does not resolve to a directory",
     )
 
 if codex_full_plugin.get("source") != {
@@ -563,7 +670,7 @@ if codex_full_plugin.get("source") != {
 }:
     fail(
         MANIFEST_PATHS["codex marketplace"],
-        f"{PRODUCT_SLUG!r} source must point to {REPOSITORY_URL}",
+        f"{full_plugin_name!r} source must point to {REPOSITORY_URL}",
     )
 if codex_full_plugin.get("policy") != {
     "installation": "AVAILABLE",
@@ -571,18 +678,18 @@ if codex_full_plugin.get("policy") != {
 }:
     fail(
         MANIFEST_PATHS["codex marketplace"],
-        f"{PRODUCT_SLUG!r} must use the approved installation and authentication policy",
+        f"{full_plugin_name!r} must use the approved installation and authentication policy",
     )
 if codex_full_plugin.get("category") != "Productivity":
     fail(
         MANIFEST_PATHS["codex marketplace"],
-        f"{PRODUCT_SLUG!r} category must be 'Productivity'",
+        f"{full_plugin_name!r} category must be 'Productivity'",
     )
 
 if cursor_full_plugin.get("source") != "./":
     fail(
         MANIFEST_PATHS["cursor marketplace"],
-        f"{PRODUCT_SLUG!r} source must be './'",
+        f"{full_plugin_name!r} source must be './'",
     )
 
 claude_plugins = {
@@ -594,7 +701,7 @@ declared_dependencies = claude_full_plugin.get("dependencies", [])
 if not isinstance(declared_dependencies, list):
     fail(
         MANIFEST_PATHS["claude marketplace"],
-        f"{PRODUCT_SLUG!r} dependencies must be an array",
+        f"{full_plugin_name!r} dependencies must be an array",
     )
     declared_dependencies = []
 declared_skills = []
@@ -603,7 +710,7 @@ for dependency in declared_dependencies:
     if package is None:
         fail(
             MANIFEST_PATHS["claude marketplace"],
-            f"{PRODUCT_SLUG!r} references missing dependency {dependency!r}",
+            f"{full_plugin_name!r} references missing dependency {dependency!r}",
         )
         continue
     package_skills = package.get("skills", [])
@@ -677,12 +784,13 @@ if sorted(declared_skills) != canonical_skills:
 if failures:
     for failure in failures:
         print(f"FAIL {failure}")
-    print(f"\nMarketplace summary: {len(failures)} failures")
+    print(f"\nPackaging summary: {len(failures)} failures")
     sys.exit(1)
 
 print(
-    "Marketplace summary: product slug, display names, and bilingual search names "
-    "are synchronized across Claude, Codex, and Cursor; "
+    "Packaging summary: portable identity, product slug, display names, and "
+    "bilingual search names are synchronized across Agent Plugins, Claude, Codex, "
+    "and Cursor; "
     "Claude package categories validated; "
     f"{len(canonical_skills)} canonical skills covered"
 )
