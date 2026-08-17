@@ -10,13 +10,14 @@
     {
       "name": "a1-core",
       "displayName": "A1 Core",
-      "description": "Stress-test marketing strategies and validate consumer psychology hypotheses to eliminate costly missteps before your team executes.",
+      "description": "Map unclear marketing initiatives, stress-test strategies, and validate consumer psychology hypotheses before your team executes.",
       "category": "productivity",
       "keywords": [
         "Маркетинговые скиллы",
         "Marketing Skills",
         "marketing",
         "marketing-decisions",
+        "decision-mapping",
         "idea-validation",
         "consumer-psychology",
         "marketing-context"
@@ -24,6 +25,7 @@
       "source": "./skills",
       "strict": false,
       "skills": [
+        "./a1-wayfinder",
         "./a1-grill",
         "./a1-consumer-psy",
         "./a1-marketing-context"
@@ -61,6 +63,7 @@
         "Marketing Skills",
         "marketing",
         "marketing-decisions",
+        "decision-mapping",
         "idea-validation",
         "consumer-psychology",
         "marketing-context",

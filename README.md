@@ -16,14 +16,15 @@ The collection is split into two connected packages for marketing decisions, reu
 
 ### A1 Core — Expertise and decisions
 
-1. **[Grill](./docs/skills/a1-grill.md)** (`/a1-grill`) pressure-tests a marketing idea, decision, or plan through a round-by-round interview.
-2. **[Consumer Psychology](./docs/skills/a1-consumer-psy.md)** (`/a1-consumer-psy`) audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
-3. **[Marketing Context](./docs/skills/a1-marketing-context.md)** (`/a1-marketing-context`) stores the team's confirmed marketing context in `.agents/marketing-context.md`, so skills that use marketing context can work from real inputs instead of inventing them.
+1. **[Wayfinder](./docs/skills/a1-wayfinder.md)** (`/a1-wayfinder`) maps a large, unclear marketing initiative as one document and resolves its decisions one at a time until it is ready for a brief, strategy, or plan.
+2. **[Grill](./docs/skills/a1-grill.md)** (`/a1-grill`) pressure-tests a marketing idea, decision, or plan through a round-by-round interview.
+3. **[Consumer Psychology](./docs/skills/a1-consumer-psy.md)** (`/a1-consumer-psy`) audits consumer psychology hypotheses before launch and explains test outcomes using peer-reviewed research to identify flaws and behavioral drivers.
+4. **[Marketing Context](./docs/skills/a1-marketing-context.md)** (`/a1-marketing-context`) stores the team's confirmed marketing context in `.agents/marketing-context.md`, so skills that use marketing context can work from real inputs instead of inventing them.
 
 ### A1 Editorial — Editing and copy
 
-4. **[A1 Copy Editing](./docs/skills/a1-copy-editing.md)** (`/a1-copy-editing`, with the Russian command alias [`/a1-redaktura`](./docs/skills/a1-redaktura.md)) improves or reviews existing drafts within supplied constraints and available Marketing Context while preserving source facts and human editorial control.
-5. **[Humanize](./docs/skills/a1-humanize.md)** (`/a1-humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
+5. **[A1 Copy Editing](./docs/skills/a1-copy-editing.md)** (`/a1-copy-editing`, with the Russian command alias [`/a1-redaktura`](./docs/skills/a1-redaktura.md)) improves or reviews existing drafts within supplied constraints and available Marketing Context while preserving source facts and human editorial control.
+6. **[Humanize](./docs/skills/a1-humanize.md)** (`/a1-humanize`) removes recognizable AI-writing patterns while preserving the author's natural rhythm, voice, and specific details.
 
 ## Working principles
 
@@ -83,6 +84,27 @@ The shortest path to a useful result is a global install followed by an A1 Copy 
    This explicit request creates or updates `.agents/marketing-context.md`. Installation alone never creates the file.
 
 ## Meet the skills
+
+<details>
+<summary><strong>Wayfinder — find a route through a foggy initiative</strong></summary>
+
+<br>
+
+Wayfinder turns a marketing effort that is too large and unclear for one conversation into a shared decision map. The first run names the destination and charts the current frontier, blocked questions, fog, and out-of-scope boundary. Later runs resolve one decision at a time and update what becomes possible next.
+
+The map is one visible `wayfinder-<topic>.md` document, not a collection of GitHub issues or project tasks. Research, discussion, and disposable prototypes may support a choice; execution starts only after the route is clear.
+
+A1 Wayfinder is adapted from Matt Pocock's [`wayfinder`](https://github.com/mattpocock/skills/blob/38d62e71ed01fc05d5ae63b0807172e9546049d5/skills/engineering/wayfinder/SKILL.md) under the MIT License. See the skill's [license and attribution](./skills/a1-wayfinder/references/license-and-attribution.md).
+
+**Try:**
+
+> `/a1-wayfinder`
+>
+> We want to enter a new market, but we cannot yet write a useful brief or plan. Map the decisions we need to make before choosing the route.
+
+Read the [Wayfinder guide](./docs/skills/a1-wayfinder.md).
+
+</details>
 
 <details>
 <summary><strong>Marketing Context — keep confirmed information reusable</strong></summary>
@@ -263,7 +285,7 @@ For the complete A1 Marketing Skills installation:
 
 The complete installation includes both collections:
 
-- **A1 Core:** `/a1-core:a1-grill`, `/a1-core:a1-consumer-psy`, and `/a1-core:a1-marketing-context`
+- **A1 Core:** `/a1-core:a1-wayfinder`, `/a1-core:a1-grill`, `/a1-core:a1-consumer-psy`, and `/a1-core:a1-marketing-context`
 - **A1 Editorial:** `/a1-editorial:a1-copy-editing`, its Russian alias `/a1-editorial:a1-redaktura`, and `/a1-editorial:a1-humanize`
 
 To install only one collection:
@@ -285,16 +307,16 @@ Project installation keeps the selected skill versions with that project. For th
 
 ## Update or remove
 
-Update the five capabilities and the Russian command alias:
+Update the six capabilities and the Russian command alias:
 
 ```bash
-npx skills@latest update a1-copy-editing a1-redaktura a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
+npx skills@latest update a1-copy-editing a1-redaktura a1-wayfinder a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
 ```
 
 Remove them from the global installation:
 
 ```bash
-npx skills@latest remove a1-copy-editing a1-redaktura a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
+npx skills@latest remove a1-copy-editing a1-redaktura a1-wayfinder a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
 ```
 
 For project-only skills, run the command in that project and use `--project` with `update`; omit `--global` from `remove`.
