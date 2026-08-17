@@ -3,7 +3,7 @@
 `a1-humanize` is distributed under the MIT License.
 
 - Original A1 material and modifications: Copyright (c) 2026 Zinnur Temerbekov.
-- Adapted material: [blader/humanizer](https://github.com/blader/humanizer), version `2.9.1`, pinned at commit [`523374dee72d67c7b2b5f858ea0094ffda49c3ac`](https://github.com/blader/humanizer/commit/523374dee72d67c7b2b5f858ea0094ffda49c3ac), Copyright (c) 2025 Siqi Chen.
+- Adapted material: [blader/humanizer](https://github.com/blader/humanizer), version `2.11.0`, pinned at commit [`43c97670b563cfa75e4f16ef00c32e933104d10a`](https://github.com/blader/humanizer/commit/43c97670b563cfa75e4f16ef00c32e933104d10a), Copyright (c) 2025 Siqi Chen.
 
 This is a self-contained adaptation, not an official release of or an endorsement by the original project. Its pattern catalog is also informed by Wikipedia’s [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), maintained by WikiProject AI Cleanup.
 

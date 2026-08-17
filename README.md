@@ -177,9 +177,9 @@ Read the [A1 Copy Editing guide](./docs/skills/a1-copy-editing.md).
 
 <br>
 
-Humanize works only with completed copy supplied in the conversation. It detects patterns by function across languages, preserves supported content and meaningful authorial choices, and does not add claims, opinions, anecdotes, offers, or CTAs.
+Humanize follows Humanizer 2.11.0: the same 35 patterns, examples, voice calibration, false-positive guard, and draft → audit → final process. It preserves the writer's facts, meaning, and voice and never invents facts, names, numbers, dates, quotations, or citations.
 
-It never reads or overwrites project files. A request that combines humanization with new marketing strategy stops before any partial rewrite.
+It accepts text and an optional writing sample in the conversation and never reads or overwrites project files or Marketing Context. By default it returns a draft, a short audit, and the final rewrite; an explicit final-only request returns only the rewrite.
 
 A1 Humanize is adapted from [Humanizer by Siqi Chen](https://github.com/blader/humanizer) under the MIT License. See the skill’s [license and attribution](./skills/a1-humanize/references/license-and-attribution.md).
 

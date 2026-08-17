@@ -2,7 +2,7 @@
 
 - ID: `humanize-voice-sample-004`
 - Operation: `Humanize with voice calibration`
-- Risk: The skill ignores a deliberate voice habit or transfers facts and opinions from the sample.
+- Risk: The skill ignores a deliberate voice habit or transfers content from the sample.
 - Scope Scenario: `In scope`
 
 ## User Instruction
@@ -29,4 +29,4 @@ Review Hub serves as a pivotal solution for teams, delivering clarity, efficienc
 
 ## Forbidden
 
-- [ ] Do not add Friday, first person, a habit, opinion, joke, reaction, capability, proof, or CTA.
+- [ ] Do not add Friday, first person, a habit, or other factual content from the sample; do not invent a capability, proof, or CTA.

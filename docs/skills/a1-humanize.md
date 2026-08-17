@@ -4,48 +4,50 @@
 
 ## What it does
 
-A1 Humanize removes recognizable AI-writing patterns from supplied finished copy while preserving its facts, meaning, language, and authorial voice. It looks for patterns by function rather than relying on an English-only list of suspicious words.
+A1 Humanize rewrites text that sounds AI-generated while keeping the writer's facts, meaning, and voice. Its runtime follows Humanizer 2.11.0: the same 35 patterns, examples, voice calibration, false-positive guard, and rewrite process.
 
-The defining constraint is transformation without invention. The skill can change rhythm, structure, transitions, vocabulary, and phrasing, but it cannot add marketing strategy, claims, proof, offers, calls to action, audiences, opinions, jokes, anecdotes, or emotions that are absent from the allowed source material.
+The defining constraint is source fidelity. The rewrite must not invent facts, names, numbers, dates, quotations, or citations. It may change structure and rhythm, and it may add an opinion or reaction only when the text and writer's voice call for one.
 
 ## When to use it
 
-Ask explicitly to humanize supplied copy or make it sound less AI-generated. The skill is model-invoked for an unambiguous humanization request and can also be invoked directly with `/a1-humanize`.
+Ask explicitly to humanize supplied prose or make it sound less AI-generated. The skill is model-invoked for an unambiguous humanization request and can also be invoked directly with `/a1-humanize`.
 
-Use [A1 Copy Editing](./a1-copy-editing.md) for generic editing, shortening, clarification, restructuring, or review. Humanize is for finished copy whose recognizable AI patterns are the specific problem.
+Use [A1 Copy Editing](./a1-copy-editing.md) when the main job is generic editing, shortening, clarification, restructuring, or review rather than removing AI-writing patterns.
 
-## Source boundary
+## Input and file boundary
 
-The skill uses only the supplied target text, current explicit instructions, and an explicitly supplied personal voice sample. It does not read or overwrite project files and does not read Marketing Context.
+The skill uses text supplied in the conversation, current instructions, and an explicitly supplied writing sample. It does not read or overwrite project files and does not read Marketing Context. Paste the target text into the conversation.
 
-A voice sample may guide rhythm, vocabulary, punctuation, paragraph openings, transitions, and deliberate quirks. It never supplies factual or marketing content.
+A writing sample guides sentence length, word choice, punctuation, recurring phrases, transitions, and deliberate quirks. Its factual content does not transfer into the rewrite.
+
+## What it returns
+
+For pasted text, the default response contains a draft, a short list of patterns that still sounded AI-generated, and the final rewrite. A request for only the final rewrite suppresses the draft, audit, and support footer.
+
+When another task invokes A1 Humanize as one embedded step, it returns only the rewritten text.
 
 ## Common questions
 
-**How is this different from ordinary copy editing?**
+**Does one watched word or an em dash prove that text is AI-generated?**
 
-Copy editing improves clarity, structure, correctness, density, or persuasion within the sources. Humanize targets recognizable AI-writing patterns while preserving the finished copy's supported content and voice.
+No. The skill looks for clusters and context. It preserves deliberate repetition, real alternatives, useful disclaimers, quotations, proper names, unusual details, and other signs of a writer's actual choices.
+
+**Can it match my own voice?**
+
+Yes. Supply a sample of your writing with the target text. The sample's habits take priority over general style rules, including the usual rule against em and en dashes.
 
 **Can it humanize a file in my project?**
 
-Not by reading or overwriting the file itself. Supply the completed copy in the conversation and select it as the target.
-
-**Can it add personality through jokes, anecdotes, or stronger opinions?**
-
-Only when those elements already exist in the allowed material. Humanize may restore natural expression, but it cannot fabricate personality or marketing substance.
-
-**What happens when the request also asks for a new offer or CTA?**
-
-That is a mixed request. The skill stops before a partial rewrite because creating the missing marketing strategy is outside its job.
+Not by reading or overwriting the file. Paste the completed prose into the conversation.
 
 ## It's working if
 
-- Recognizable AI rhythm and phrasing are reduced without flattening distinctive voice.
-- Facts, names, numbers, qualifications, quotations, citations, links, and commands remain supported and intact.
-- The rewritten copy keeps its original language unless translation was requested.
-- No new marketing claim, proof, offer, audience, or CTA appears.
-- A request for only the final rewrite returns only that rewrite.
+- The rewrite removes real AI-writing patterns without flattening deliberate voice.
+- Every source claim and qualification survives unless it was unsupported filler.
+- No new fact, name, number, date, quotation, or citation appears.
+- Legitimate caveats, objections, alternatives, and repeated openings stay intact.
+- The output matches the requested mode.
 
 ## Where it fits
 
-A1 Humanize is the AI-pattern removal skill in A1 Editorial. It is narrower than [A1 Copy Editing](./a1-copy-editing.md) and intentionally independent of [Marketing Context](./a1-marketing-context.md). It is adapted from Humanizer by Siqi Chen; see the local [license and attribution](../../skills/a1-humanize/references/license-and-attribution.md).
+A1 Humanize is the AI-pattern removal skill in A1 Editorial. It is adapted from Humanizer by Siqi Chen with file mode removed for A1's source boundary; see the local [license and attribution](../../skills/a1-humanize/references/license-and-attribution.md).

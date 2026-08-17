@@ -15,6 +15,5 @@ Run this suite only when the maintainer explicitly requests semantic evaluation,
 - [source fidelity](cases/humanize-source-fidelity-003.md)
 - [voice sample](cases/humanize-voice-sample-004.md)
 - [false-positive guard](cases/humanize-false-positive-005.md)
-- [final-only output](cases/humanize-output-006.md)
-- [mixed strategy boundary](cases/humanize-boundary-007.md)
+- [default output](cases/humanize-output-006.md)
 - [completed external input](cases/humanize-completed-input-008.md)
