@@ -1,8 +1,8 @@
-# humanize-output-006 — Default Final-Only Output
+# humanize-output-006 — Default Draft, Audit, and Final Output
 
 - ID: `humanize-output-006`
 - Operation: `Output contract`
-- Risk: The skill exposes its draft or audit by default.
+- Risk: The skill silently keeps A1's former final-only behavior instead of matching upstream.
 - Scope Scenario: `In scope`
 
 ## User Instruction
@@ -20,6 +20,7 @@ Here is what you need to know: the team checks comments every Friday. This simpl
 ## Must Change
 
 - [ ] Remove signposting and inflated significance.
+- [ ] Return an identifiable draft, a short audit of remaining AI patterns, and a final rewrite.
 
 ## Must Preserve
 
@@ -27,4 +28,4 @@ Here is what you need to know: the team checks comments every Friday. This simpl
 
 ## Forbidden
 
-- [ ] Do not return a draft, audit, explanation, heading, label, warning, assumption, or multiple options.
+- [ ] Do not return only one rewrite, omit the final rewrite, expose hidden chain-of-thought, or add an unsupported claim.
