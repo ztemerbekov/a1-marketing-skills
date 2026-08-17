@@ -6,6 +6,8 @@
 
 A1 Humanize removes recognizable AI-writing patterns from supplied finished copy while preserving its facts, meaning, language, and authorial voice. It looks for patterns by function rather than relying on an English-only list of suspicious words.
 
+Its 35-pattern catalog also catches repetitive sentence openings, casual announcements that merely introduce the next point, staged defenses against objections no one raised, and discarded alternatives left behind by the drafting process.
+
 The defining constraint is transformation without invention. The skill can change rhythm, structure, transitions, vocabulary, and phrasing, but it cannot add marketing strategy, claims, proof, offers, calls to action, audiences, opinions, jokes, anecdotes, or emotions that are absent from the allowed source material.
 
 ## When to use it
@@ -34,6 +36,10 @@ Not by reading or overwriting the file itself. Supply the completed copy in the 
 
 Only when those elements already exist in the allowed material. Humanize may restore natural expression, but it cannot fabricate personality or marketing substance.
 
+**Will it remove every disclaimer, objection, or rejected alternative?**
+
+No. It preserves useful scope, safety and legal notices, named or fully engaged objections, and alternatives a reader could reasonably consider. It removes only defensive or discarded drafting material that adds no real content.
+
 **What happens when the request also asks for a new offer or CTA?**
 
 That is a mixed request. The skill stops before a partial rewrite because creating the missing marketing strategy is outside its job.
@@ -41,6 +47,7 @@ That is a mixed request. The skill stops before a partial rewrite because creati
 ## It's working if
 
 - Recognizable AI rhythm and phrasing are reduced without flattening distinctive voice.
+- Repetitive openings, defenses against unraised objections, and discarded drafting alternatives are changed only when they do no useful rhetorical or factual work.
 - Facts, names, numbers, qualifications, quotations, citations, links, and commands remain supported and intact.
 - The rewritten copy keeps its original language unless translation was requested.
 - No new marketing claim, proof, offer, audience, or CTA appears.

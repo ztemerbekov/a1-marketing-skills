@@ -177,7 +177,7 @@ Read the [A1 Copy Editing guide](./docs/skills/a1-copy-editing.md).
 
 <br>
 
-Humanize works only with completed copy supplied in the conversation. It detects patterns by function across languages, preserves supported content and meaningful authorial choices, and does not add claims, opinions, anecdotes, offers, or CTAs.
+Humanize works only with completed copy supplied in the conversation. Its 35-pattern catalog works by function across languages, including repetitive openings, empty conversational signposting, defenses against unraised objections, and discarded drafting alternatives. It preserves supported content and meaningful authorial choices and does not add claims, opinions, anecdotes, offers, or CTAs.
 
 It never reads or overwrites project files. A request that combines humanization with new marketing strategy stops before any partial rewrite.
 
