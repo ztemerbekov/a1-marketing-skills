@@ -13,6 +13,7 @@
     "Marketing Skills",
     "marketing",
     "marketing-decisions",
+    "decision-mapping",
     "idea-validation",
     "consumer-psychology",
     "marketing-context",
@@ -24,7 +25,7 @@
   "interface": {
     "displayName": "A1 Marketing Skills",
     "shortDescription": "Marketing decisions and editorial workflows",
-    "longDescription": "A portable collection of marketing skills for stress-testing decisions, maintaining confirmed context, auditing consumer psychology, and editing copy.",
+    "longDescription": "A portable collection of marketing skills for mapping unclear initiatives, stress-testing decisions, maintaining confirmed context, auditing consumer psychology, and editing copy.",
     "developerName": "Zinnur Temerbekov",
     "category": "Productivity",
     "capabilities": [
@@ -33,6 +34,7 @@
     ],
     "websiteURL": "https://github.com/ztemerbekov/a1-marketing-skills",
     "defaultPrompt": [
+      "Map this unclear marketing initiative into the decisions we need to make.",
       "Stress-test this marketing plan before we execute it.",
       "Set up marketing context from confirmed repository information.",
       "Edit this marketing copy without changing its facts."

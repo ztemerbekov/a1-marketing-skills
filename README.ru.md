@@ -16,14 +16,15 @@ A1 Маркетинговые скиллы — это набор навыков 
 
 ### A1 Core — Экспертиза и решения
 
-1. **[Прожарка](./docs/skills/a1-grill.ru.md)** (`/a1-grill`) проверяет на прочность маркетинговую идею, решение или план через интервью раундами.
-2. **[Психология потребителя](./docs/skills/a1-consumer-psy.ru.md)** (`/a1-consumer-psy`) проверяет гипотезы психологии потребителя перед запуском и объясняет фактические результаты тестов по научной базе, отсеивая псевдонаучные мифы.
-3. **[Маркетинговый контекст](./docs/skills/a1-marketing-context.ru.md)** (`/a1-marketing-context`) фиксирует подтверждённый маркетинговый контекст команды в `.agents/marketing-context.md`, чтобы навыки, работающие с контекстом, использовали реальные вводные, а не додумывали их.
+1. **[Wayfinder](./docs/skills/a1-wayfinder.ru.md)** (`/a1-wayfinder`) собирает большую и пока неясную маркетинговую инициативу в одну карту и последовательно закрывает решения до готовности к брифу, стратегии или плану.
+2. **[Прожарка](./docs/skills/a1-grill.ru.md)** (`/a1-grill`) проверяет на прочность маркетинговую идею, решение или план через интервью раундами.
+3. **[Психология потребителя](./docs/skills/a1-consumer-psy.ru.md)** (`/a1-consumer-psy`) проверяет гипотезы психологии потребителя перед запуском и объясняет фактические результаты тестов по научной базе, отсеивая псевдонаучные мифы.
+4. **[Маркетинговый контекст](./docs/skills/a1-marketing-context.ru.md)** (`/a1-marketing-context`) фиксирует подтверждённый маркетинговый контекст команды в `.agents/marketing-context.md`, чтобы навыки, работающие с контекстом, использовали реальные вводные, а не додумывали их.
 
 ### A1 Editorial — Редактура и тексты
 
-4. **[A1 Copy Editing](./docs/skills/a1-copy-editing.ru.md)** (`/a1-copy-editing`, русский алиас [`/a1-redaktura`](./docs/skills/a1-redaktura.ru.md)) редактирует или разбирает готовые черновики внутри переданных ограничений и доступного Маркетингового контекста, сохраняя факты исходника и контроль человека над финальными решениями.
-5. **[Оживить текст](./docs/skills/a1-humanize.ru.md)** (`/a1-humanize`) убирает узнаваемые AI-паттерны, сохраняя естественный ритм, голос и фактуру автора.
+5. **[A1 Copy Editing](./docs/skills/a1-copy-editing.ru.md)** (`/a1-copy-editing`, русский алиас [`/a1-redaktura`](./docs/skills/a1-redaktura.ru.md)) редактирует или разбирает готовые черновики внутри переданных ограничений и доступного Маркетингового контекста, сохраняя факты исходника и контроль человека над финальными решениями.
+6. **[Оживить текст](./docs/skills/a1-humanize.ru.md)** (`/a1-humanize`) убирает узнаваемые AI-паттерны, сохраняя естественный ритм, голос и фактуру автора.
 
 ## Главные принципы работы
 
@@ -83,6 +84,27 @@ A1 Маркетинговые скиллы — это набор навыков 
    Этот явный запрос создаёт или обновляет `.agents/marketing-context.md`. Сама установка никогда не создаёт этот файл.
 
 ## Подробнее о навыках
+
+<details>
+<summary><strong>Wayfinder — найти путь через туманную инициативу</strong></summary>
+
+<br>
+
+Wayfinder превращает маркетинговую инициативу, которая пока слишком велика и неясна для одного разговора, в общую карту решений. Первый запуск определяет конечную точку и наносит на карту текущий фронтир, заблокированные вопросы, туман и границы задачи. Следующие запуски закрывают по одному решению и пересчитывают, что стало возможным дальше.
+
+Карта хранится в одном видимом документе `wayfinder-<тема>.md`, а не в GitHub Issues или проектных задачах. Исследование, обсуждение и одноразовые прототипы могут помогать с выбором; исполнение начинается только после того, как путь найден.
+
+A1 Wayfinder адаптирован из [`wayfinder`](https://github.com/mattpocock/skills/blob/38d62e71ed01fc05d5ae63b0807172e9546049d5/skills/engineering/wayfinder/SKILL.md) Мэтта Покока и распространяется по лицензии MIT. Подробности — в разделе [«Лицензия и атрибуция»](./skills/a1-wayfinder/references/license-and-attribution.md).
+
+**Попробуйте:**
+
+> `/a1-wayfinder`
+>
+> Мы хотим выйти на новый рынок, но пока не можем написать полезный бриф или план. Построй карту решений, которые нужно принять до выбора пути.
+
+Подробности — в [документации Wayfinder](./docs/skills/a1-wayfinder.ru.md).
+
+</details>
 
 <details>
 <summary><strong>Маркетинговый контекст — сохраняет подтверждённую информацию для следующих задач</strong></summary>
@@ -263,7 +285,7 @@ cursor-agent plugin marketplace add https://github.com/ztemerbekov/a1-marketing-
 
 В полную установку входят оба набора:
 
-- **A1 Core:** `/a1-core:a1-grill`, `/a1-core:a1-consumer-psy` и `/a1-core:a1-marketing-context`
+- **A1 Core:** `/a1-core:a1-wayfinder`, `/a1-core:a1-grill`, `/a1-core:a1-consumer-psy` и `/a1-core:a1-marketing-context`
 - **A1 Editorial:** `/a1-editorial:a1-copy-editing`, его русский алиас `/a1-editorial:a1-redaktura` и `/a1-editorial:a1-humanize`
 
 Чтобы установить только один набор:
@@ -285,16 +307,16 @@ npx skills@latest add ztemerbekov/a1-marketing-skills
 
 ## Обновление и удаление
 
-Обновите пять возможностей и русский командный алиас:
+Обновите шесть возможностей и русский командный алиас:
 
 ```bash
-npx skills@latest update a1-copy-editing a1-redaktura a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
+npx skills@latest update a1-copy-editing a1-redaktura a1-wayfinder a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
 ```
 
 Удалите их из глобальной установки:
 
 ```bash
-npx skills@latest remove a1-copy-editing a1-redaktura a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
+npx skills@latest remove a1-copy-editing a1-redaktura a1-wayfinder a1-grill a1-humanize a1-marketing-context a1-consumer-psy --global --yes
 ```
 
 Для проектных навыков выполните команду внутри проекта: используйте `--project` с `update` и уберите `--global` из `remove`.
