@@ -1,0 +1,8 @@
+interface:
+  display_name: "Consumer Psychology"
+  short_description: "Audit consumer psychology hypotheses and explain test outcomes using peer-reviewed research."
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#FF6A00"
+policy:
+  allow_implicit_invocation: false

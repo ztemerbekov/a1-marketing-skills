@@ -1,0 +1,8 @@
+interface:
+  display_name: "A1 Редактура"
+  short_description: "Russian command for A1 Copy Editing"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#FF6A00"
+policy:
+  allow_implicit_invocation: false

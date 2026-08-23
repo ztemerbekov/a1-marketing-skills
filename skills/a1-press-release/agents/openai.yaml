@@ -1,0 +1,7 @@
+interface:
+  display_name: "A1 Press Release"
+  short_description: "Draft accurate routine press releases safely"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#FF6A00"
+  default_prompt: "Use $a1-press-release to turn these announcement facts into a concise release that makes its actual readiness clear."

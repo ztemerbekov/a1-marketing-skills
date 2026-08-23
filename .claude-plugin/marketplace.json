@@ -1,0 +1,94 @@
+{
+  "name": "a1-marketing-skills",
+  "owner": {
+    "name": "Zinnur Temerbekov"
+  },
+  "metadata": {
+    "description": "Hand over the routine to AI agents—freeing marketing teams to focus on strategy, vision, and growth-driving decisions."
+  },
+  "plugins": [
+    {
+      "name": "a1-core",
+      "displayName": "A1 Core",
+      "description": "Map unclear marketing initiatives, stress-test strategies, and validate consumer psychology hypotheses before your team executes.",
+      "category": "productivity",
+      "keywords": [
+        "Маркетинговые скиллы",
+        "Marketing Skills",
+        "marketing",
+        "marketing-decisions",
+        "decision-mapping",
+        "idea-validation",
+        "consumer-psychology",
+        "marketing-context"
+      ],
+      "source": "./skills",
+      "strict": false,
+      "skills": [
+        "./a1-wayfinder",
+        "./a1-grill",
+        "./a1-consumer-psy",
+        "./a1-marketing-context"
+      ]
+    },
+    {
+      "name": "a1-editorial",
+      "displayName": "A1 Editorial",
+      "description": "Support editorial teams with AI—write source-grounded articles, decision memos, promotional pages, and routine press releases; polish drafts; and remove AI patterns while preserving voice, facts, and human control.",
+      "category": "productivity",
+      "keywords": [
+        "Маркетинговые скиллы",
+        "Marketing Skills",
+        "editing",
+        "copy-editing",
+        "editorial-review",
+        "marketing-copy",
+        "article-writing",
+        "decision-memo",
+        "promo-page",
+        "press-release",
+        "humanize"
+      ],
+      "source": "./skills",
+      "strict": false,
+      "skills": [
+        "./a1-copy-editing",
+        "./a1-redaktura",
+        "./a1-article-writing",
+        "./a1-decision-memo",
+        "./a1-promo-page",
+        "./a1-press-release",
+        "./a1-humanize"
+      ]
+    },
+    {
+      "name": "a1-marketing-skills",
+      "displayName": "A1 Marketing Skills",
+      "description": "A1 Marketing Skills for Claude Code combines strategic decision support with source-grounded editorial writing and editing.",
+      "category": "productivity",
+      "keywords": [
+        "Маркетинговые скиллы",
+        "Marketing Skills",
+        "marketing",
+        "marketing-decisions",
+        "decision-mapping",
+        "idea-validation",
+        "consumer-psychology",
+        "marketing-context",
+        "copy-editing",
+        "editorial-review",
+        "article-writing",
+        "decision-memo",
+        "promo-page",
+        "press-release",
+        "humanize"
+      ],
+      "source": "./plugins/a1-marketing-skills",
+      "strict": false,
+      "dependencies": [
+        "a1-core",
+        "a1-editorial"
+      ]
+    }
+  ]
+}

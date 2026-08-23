@@ -1,0 +1,9 @@
+interface:
+  display_name: "A1 Wayfinder"
+  short_description: "Map unclear marketing work into decisions"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#FF6A00"
+  default_prompt: "Use $a1-wayfinder to turn this unclear marketing initiative into a shared decision map."
+policy:
+  allow_implicit_invocation: false

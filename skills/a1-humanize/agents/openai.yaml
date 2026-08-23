@@ -1,0 +1,7 @@
+interface:
+  display_name: "A1 Humanize"
+  short_description: "Make AI-written text sound like the writer"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#FF6A00"
+  default_prompt: "Use $a1-humanize to rewrite this text in my voice without changing its facts."

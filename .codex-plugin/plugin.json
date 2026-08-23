@@ -1,0 +1,51 @@
+{
+  "name": "a1-marketing-skills",
+  "version": "0.1.0",
+  "description": "Marketing decision support and editorial workflows for AI agents.",
+  "author": {
+    "name": "Zinnur Temerbekov"
+  },
+  "homepage": "https://github.com/ztemerbekov/a1-marketing-skills",
+  "repository": "https://github.com/ztemerbekov/a1-marketing-skills",
+  "license": "MIT",
+  "keywords": [
+    "Маркетинговые скиллы",
+    "Marketing Skills",
+    "marketing",
+    "marketing-decisions",
+    "decision-mapping",
+    "idea-validation",
+    "consumer-psychology",
+    "marketing-context",
+    "copy-editing",
+    "editorial-review",
+    "article-writing",
+    "decision-memo",
+    "promo-page",
+    "press-release",
+    "humanize"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "A1 Marketing Skills",
+    "shortDescription": "Marketing decisions and editorial workflows",
+    "longDescription": "A portable collection of marketing skills for mapping unclear initiatives, stress-testing decisions, maintaining confirmed context, auditing consumer psychology, and creating or editing source-grounded editorial work.",
+    "developerName": "Zinnur Temerbekov",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/ztemerbekov/a1-marketing-skills",
+    "defaultPrompt": [
+      "Map this unclear marketing initiative into the decisions we need to make.",
+      "Stress-test this marketing plan before we execute it.",
+      "Set up marketing context from confirmed repository information.",
+      "Edit this marketing copy without changing its facts.",
+      "Turn these sources into a useful article or decision memo.",
+      "Create a focused promotional page or routine press release from verified facts."
+    ],
+    "composerIcon": "./assets/marketplaces/codex/composer-icon.svg",
+    "logo": "./assets/marketplaces/codex/logo.svg"
+  }
+}

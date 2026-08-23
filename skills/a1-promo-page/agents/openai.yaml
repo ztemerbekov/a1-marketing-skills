@@ -1,0 +1,7 @@
+interface:
+  display_name: "A1 Promo Page"
+  short_description: "Build evidence-led copy for one promotional page"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#FF6A00"
+  default_prompt: "Use $a1-promo-page to turn these product facts into a focused promotional page for this audience and next action."

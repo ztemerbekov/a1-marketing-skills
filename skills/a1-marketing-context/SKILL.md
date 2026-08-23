@@ -1,0 +1,42 @@
+---
+name: a1-marketing-context
+description: 'Marketing context: maintain confirmed product facts, audience, positioning, brand voice, verbal messaging, proof, vocabulary, copy examples, or business-goal inputs that the user explicitly wants reused in future marketing work. Use Auto-draft by default; start Interview only when explicitly requested. Passive context discovery never authorizes a write.'
+metadata:
+  author: Zinnur Temerbekov
+---
+
+# Marketing Context
+
+Create or update the current repository's shared marketing context from confirmed information without turning setup into strategy work.
+
+This is a public, Model-invoked skill for explicit context-maintenance intent. Its one user job is to maintain `.agents/marketing-context.md` safely and incrementally.
+
+## Invocation Contract
+
+An ordinary explicit request such as `set up marketing context`, `remember our tone of voice`, or `update the audience` starts Auto-draft. Do not require the user to know the schema.
+
+An interview is a separate, deliberate branch. Start it only when the user explicitly asks to be interviewed or to answer setup questions. Natural language is sufficient; do not depend on client-specific slash commands or command syntax.
+
+Installation, opening a project, mentioning marketing, finding an existing context, or another skill reporting missing context is not write intent. In those situations, do not invoke this workflow, ask setup questions, create directories, or write files.
+
+## Runtime
+
+Follow [the context spine](references/context-spine.md) in order. It is the single authority for stage order and completion criteria.
+
+Load only the reference selected by the active stage. Evaluation cases are maintainer material and are never runtime dependencies.
+
+## Storage Contract
+
+Write only `.agents/marketing-context.md` inside the current repository. Create `.agents/` only after explicit write intent and only when a write will occur.
+
+Do not create or maintain global state, last-used profiles, private variants, additional repository contexts, or `CONTEXT-MAP.md`. Do not write fallback context files.
+
+## Output Contract
+
+After a successful write, briefly confirm whether `.agents/marketing-context.md` was created or updated, link the file, and list only the sections changed in this run. Show the full file only when the user explicitly asks for it.
+
+For an Interview session, the final stop or seven-question-limit confirmation may list all sections safely saved across that current session even when the final pass itself is a no-write pass. If the user stops before confirming any answer, use the zero-write close response from `references/interview.md` instead of linking a nonexistent file or listing sections.
+
+Conflict responses and interview questions use the shorter response defined by the stage that stops the run.
+
+Append exactly one support footer inviting questions, ideas, or problem reports via [A1 Marketing Skills](https://t.me/a1_marketing_skills) only after a final user-facing result that fulfills this skill's declared user job. Do not append it to boundary responses, refusals, clarification or missing-input prompts, interim updates, unsuccessful results, or any response that does not fulfill the job. Omit it when the user requests only the final artifact or otherwise prohibits extra response material.

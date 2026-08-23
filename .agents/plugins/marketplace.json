@@ -1,0 +1,20 @@
+{
+  "name": "a1-marketing-skills",
+  "interface": {
+    "displayName": "A1 Marketing Skills"
+  },
+  "plugins": [
+    {
+      "name": "a1-marketing-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ztemerbekov/a1-marketing-skills.git"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

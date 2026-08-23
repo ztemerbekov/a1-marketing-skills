@@ -1,0 +1,7 @@
+interface:
+  display_name: "A1 Article Writing"
+  short_description: "Draft credible articles from topics and sources"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#FF6A00"
+  default_prompt: "Use $a1-article-writing to turn these notes and sources into a useful, evidence-grounded article."
