@@ -1,0 +1,7 @@
+interface:
+  display_name: "A1 Presentation Copy"
+  short_description: "Structure a presentation and write slide copy"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#FF6A00"
+  default_prompt: "Use $a1-presentation-copy to turn these materials into a focused presentation outline and slide copy."

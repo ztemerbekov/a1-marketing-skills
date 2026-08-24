@@ -1,0 +1,7 @@
+interface:
+  display_name: "A1 Copywriting"
+  short_description: "Route new marketing copy to its format owner"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#FF6A00"
+  default_prompt: "Use $a1-copywriting to route this new marketing-copy request to the A1 skill that owns the deliverable."

@@ -34,11 +34,12 @@
     {
       "name": "a1-editorial",
       "displayName": "A1 Editorial",
-      "description": "Support editorial teams with AI—write source-grounded articles, decision memos, promotional pages, and routine press releases; polish drafts; and remove AI patterns while preserving voice, facts, and human control.",
+      "description": "Route and create source-grounded marketing communication—including articles, memos, pages, releases, cold emails, presentations, and company profiles—then polish drafts without losing voice, facts, or human control.",
       "category": "productivity",
       "keywords": [
         "Маркетинговые скиллы",
         "Marketing Skills",
+        "copywriting",
         "editing",
         "copy-editing",
         "editorial-review",
@@ -47,24 +48,31 @@
         "decision-memo",
         "promo-page",
         "press-release",
+        "cold-email",
+        "presentation-copy",
+        "company-profile",
         "humanize"
       ],
       "source": "./skills",
       "strict": false,
       "skills": [
+        "./a1-copywriting",
         "./a1-copy-editing",
         "./a1-redaktura",
         "./a1-article-writing",
         "./a1-decision-memo",
         "./a1-promo-page",
         "./a1-press-release",
+        "./a1-cold-email",
+        "./a1-presentation-copy",
+        "./a1-company-profile",
         "./a1-humanize"
       ]
     },
     {
       "name": "a1-marketing-skills",
       "displayName": "A1 Marketing Skills",
-      "description": "A1 Marketing Skills for Claude Code combines strategic decision support with source-grounded editorial writing and editing.",
+      "description": "A1 Marketing Skills for Claude Code combines strategic decision support with source-grounded marketing writing, routing, and editing.",
       "category": "productivity",
       "keywords": [
         "Маркетинговые скиллы",
@@ -75,12 +83,16 @@
         "idea-validation",
         "consumer-psychology",
         "marketing-context",
+        "copywriting",
         "copy-editing",
         "editorial-review",
         "article-writing",
         "decision-memo",
         "promo-page",
         "press-release",
+        "cold-email",
+        "presentation-copy",
+        "company-profile",
         "humanize"
       ],
       "source": "./plugins/a1-marketing-skills",

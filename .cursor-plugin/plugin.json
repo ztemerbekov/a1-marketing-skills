@@ -19,18 +19,23 @@
     "idea-validation",
     "consumer-psychology",
     "marketing-context",
+    "copywriting",
     "copy-editing",
     "editorial-review",
     "article-writing",
     "decision-memo",
     "promo-page",
     "press-release",
+    "cold-email",
+    "presentation-copy",
+    "company-profile",
     "humanize"
   ],
   "category": "productivity",
   "tags": [
     "marketing",
-    "editorial"
+    "editorial",
+    "copywriting"
   ],
   "skills": "./skills/"
 }
