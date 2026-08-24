@@ -8,7 +8,7 @@
   },
   "plugins": [
     {
-      "name": "a1-core",
+      "name": "marketing-strategies",
       "displayName": "Marketing Strategies",
       "description": "Preserve confirmed marketing context, map unclear initiatives, stress-test strategies, and validate consumer psychology hypotheses before your team executes.",
       "category": "productivity",
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "name": "a1-editorial",
+      "name": "editorial",
       "displayName": "Editorial",
       "description": "Create source-grounded marketing communication—including articles, memos, pages, releases, cold emails, presentations, and company profiles—and polish drafts while preserving voice, facts, and human control.",
       "category": "productivity",
@@ -98,8 +98,8 @@
       "source": "./plugins/a1-marketing-skills",
       "strict": false,
       "dependencies": [
-        "a1-core",
-        "a1-editorial"
+        "marketing-strategies",
+        "editorial"
       ]
     }
   ]
