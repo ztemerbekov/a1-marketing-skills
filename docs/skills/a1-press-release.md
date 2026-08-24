@@ -2,51 +2,52 @@
 
 **English** | [Русский](./a1-press-release.ru.md)
 
-## What it does
+Use A1 Press Release when you need to turn a real routine news event into a release that media can understand, verify, and reuse.
 
-A1 Press Release turns supplied routine announcement facts into either distribution-ready media copy or a clearly marked working draft. It puts the event and source-supported relevance first, supplies reusable detail, and makes participation, assets, and press contact easy to find.
+## The job
 
-The skill writes but does not approve facts. Crisis, emergency, legal-response, regulatory, earnings, securities, and investor-relations statements are outside its contract.
+You have a launch, opening, partnership, program, event, application period, research publication, operational milestone, or customer-relevant change. You want one new media announcement that makes the event, relevance, facts, action, and press contact easy to extract.
+
+The skill writes the release but does not verify confidential facts or grant internal approval. It never presents unresolved facts or proposed spokesperson wording as confirmed.
 
 ## When to use it
 
-Use it for a new launch, opening, partnership, program, event, application period, research publication, operational milestone, or customer-relevant change. The skill is model-invoked for that complete routine-release intent and may also be invoked as `/a1-press-release`.
+Ask for a new routine press release or media announcement. The skill can start from an unambiguous natural-language request or through `/a1-press-release`.
 
-Use [A1 Copy Editing](./a1-copy-editing.md) when a selected existing release only needs editing or review. Use [A1 Promo Page](./a1-promo-page.md) when the job is to sell one offer directly to a buyer.
+Crisis communications, accidents, emergencies, allegations, litigation responses, regulatory disclosures, earnings, securities, and investor-relations statements are outside its scope. Use [A1 Copy Editing](./a1-copy-editing.md) when a selected existing release only needs editing or review.
 
-## Output readiness
+## What you get
 
-The result is distribution-ready only when every critical fact is confirmed and every required permission is approved. Otherwise it remains a clearly marked working draft with unresolved facts or permissions listed separately. Proposed spokesperson wording is clearly marked for approval; it is never presented as something the person already said.
+When every critical fact and permission is confirmed, the result is marked distribution-ready. Otherwise it is a clearly marked working draft: unresolved material stays out of authoritative prose and appears in a separate confirmation list.
 
-Marketing Context is optional. It may supply approved organization facts, product claims, voice, and prohibitions, while the event itself must come from the current release sources.
+Proposed spokesperson wording is labeled for approval. Marketing Context may supply approved organization facts, product claims, voice, and prohibitions; the current event must still come from release-specific sources.
 
 ## Common questions
 
-**What if the announcement has no concrete event?**
+**What if there is no concrete news event?**
 
-The skill asks for the change, date, result, publication, opportunity, or other event that makes a release possible rather than inflating a general desire for publicity.
+The skill asks for the change, date, result, publication, opportunity, or milestone that makes an announcement possible. It does not inflate a general wish for publicity.
 
-**Can it write a quote for our CEO?**
+**Can it propose a CEO quote?**
 
-It can propose wording when explicitly asked, but labels it for approval. Only supplied approved words enter distribution-ready copy as an attributed quotation.
+Yes, when asked, but the wording remains approval-pending. Only supplied approved words can appear as a confirmed quotation.
 
-**Can it start before every fact has been approved?**
+**Can work begin before every fact is approved?**
 
-Yes. It returns a working draft and keeps unresolved facts out of authoritative prose. Confirmation and permission gaps must be closed before the result can be labeled distribution-ready.
+Yes. The result remains a working draft until the critical gaps are closed.
 
-**Can it handle a crisis statement or earnings release?**
+**Can it handle a crisis or earnings release?**
 
-No. Those formats require different approval, legal, regulatory, and risk controls.
+No. Those formats need different legal, regulatory, approval, and risk controls.
 
-## It's working if
+## How to recognize success
 
-- The headline and lead state what happened and why the intended media audience may care.
-- Dates, names, titles, links, figures, claims, and quotations are traceable and internally consistent.
-- The readiness label matches the actual confirmation and approval state.
-- Body paragraphs provide distinct facts that media can reuse.
-- Quotes add perspective rather than ceremony.
-- Action, boilerplate, press contact, and assets appear only when relevant and supplied.
+- The headline and lead say what happened and why the intended media audience may care.
+- Dates, names, titles, links, figures, claims, and quotations are traceable.
+- The readiness label matches the actual confirmation state.
+- Each body paragraph supplies distinct reusable information.
+- Contact, action, boilerplate, and assets appear only when relevant and supplied.
 
-## Where it fits
+## Related skills
 
-A1 Press Release owns new routine media announcements. A1 Copy Editing owns selected existing drafts, while A1 Promo Page speaks directly to potential buyers rather than media intermediaries.
+[A1 Copy Editing](./a1-copy-editing.md) improves a selected existing release. [A1 Promo Page](./a1-promo-page.md) presents an offer directly to a potential buyer; [A1 Article Writing](./a1-article-writing.md) creates long-form editorial work.

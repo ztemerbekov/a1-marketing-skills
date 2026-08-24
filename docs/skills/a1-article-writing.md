@@ -2,46 +2,48 @@
 
 **English** | [Русский](./a1-article-writing.ru.md)
 
-## What it does
+Use A1 Article Writing when you need to turn a topic or source pack into credible long-form work that gives a particular reader a useful result.
 
-A1 Article Writing turns a topic, brief, notes, interview, transcript, source pack, or completed research into a new long-form article or a reviewable outline. It builds the piece around a useful reader outcome and the evidence actually available.
+## The job
 
-The defining constraint is credibility. Facts, quotations, examples, claims, and conclusions must trace to supplied or verified sources. When the central promise lacks support, the skill produces an evidence plan or an honest partial result instead of generic filler.
+You have a topic, brief, notes, interview, transcript, research, or several sources. You want a new article, guide, case study, expert essay, or newsletter issue that a reader can understand and use without having to reconstruct the source material.
+
+The skill finds the reader outcome, chooses a structure that serves it, and writes only as far as the evidence allows. It does not fill missing facts with plausible prose.
 
 ## When to use it
 
-Ask for a new article, guide, case study, expert essay, or newsletter issue. The skill is model-invoked when a new long-form writing intent is clear; you may also invoke `/a1-article-writing` explicitly.
+Ask for an outline when you need the angle, evidence basis, and structure before drafting. Ask for a draft when the sources are ready and you need publishable long-form copy. The skill can start from an unambiguous natural-language request or through `/a1-article-writing`.
 
-Use [A1 Copy Editing](./a1-copy-editing.md) when the target is a selected finished draft and the job is editing or review. Use [A1 Promo Page](./a1-promo-page.md), [A1 Press Release](./a1-press-release.md), or [A1 Decision Memo](./a1-decision-memo.md) for those distinct formats.
+Use [A1 Copy Editing](./a1-copy-editing.md) when you already have a selected finished draft and want to improve or review it. A promotional page, press release, or internal decision document belongs to its format-specific skill.
 
-## Outline and draft
+## What you get
 
-An outline request returns an editorial brief, informative structure, and material evidence gaps. A draft request leads with the finished article, followed only by useful editorial notes or unresolved verification items.
+An outline includes the reader, intended outcome, format, angle, informative section plan, and material evidence gaps. A draft leads with the finished article and adds only the verification notes that still affect publication.
 
-Marketing Context is optional. It may supply confirmed product facts, audience defaults, voice, and prohibitions, but it never replaces article-specific evidence.
+Marketing Context may supply confirmed audience, product, and voice defaults. It never replaces evidence for the article itself.
 
 ## Common questions
 
-**Can it write from a topic alone?**
+**Can it start from a topic alone?**
 
-It can establish the reader outcome, angle, structure, and evidence plan. A publishable factual draft requires enough source material or an authorized research step.
+Yes. It can define the reader outcome, angle, structure, and evidence plan. A factual publishable draft still needs supplied sources or an authorized research step.
 
 **Can it turn an interview into an article?**
 
-Yes. The skill treats the interview as attributed source material, preserves distinctive approved quotations, and distinguishes personal experience from independently verified fact.
+Yes. The interview remains attributed source material. Personal experience is not presented as independently verified fact.
 
-**Does it use one universal article formula?**
+**Does it use one article formula?**
 
-No. It chooses questions, sequence, situations, comparison, thematic modules, claim-and-evidence, or narrative structure from the reader job and material.
+No. The structure follows the reader's job and the material: questions, stages, situations, comparison, themes, claim and evidence, or narrative.
 
-## It's working if
+## How to recognize success
 
-- The opening starts the useful work instead of announcing that the topic matters.
-- The structure follows the material and can be scanned when the format calls for it.
-- Claims, examples, and quotations are traceable and properly qualified.
-- Depth comes from mechanisms, cases, implementation, limits, and tradeoffs rather than repetition.
-- The article reads naturally and retains a credible voice.
+- The opening begins the reader's useful work.
+- The structure makes the argument and evidence easy to follow.
+- Facts, quotations, examples, and conclusions are traceable and properly qualified.
+- Depth comes from evidence, mechanisms, cases, limits, and trade-offs rather than repetition.
+- Missing support stays visible instead of becoming confident filler.
 
-## Where it fits
+## Related skills
 
-A1 Article Writing owns new long-form editorial work. A1 Copy Editing owns selected finished drafts; the format-specific A1 skills own promotional pages, routine media announcements, and internal decision documents.
+[A1 Copy Editing](./a1-copy-editing.md) improves selected existing drafts. [A1 Promo Page](./a1-promo-page.md), [A1 Press Release](./a1-press-release.md), and [A1 Decision Memo](./a1-decision-memo.md) create their own formats.

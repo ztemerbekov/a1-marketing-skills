@@ -2,55 +2,62 @@
 
 **English** | [Русский](./a1-wayfinder.ru.md)
 
-## What it does
+Use A1 Wayfinder when a marketing initiative is too large or unclear to brief directly and you need a shared route from uncertainty to a decision-ready brief, strategy, or plan.
 
-A1 Wayfinder turns a large, unclear marketing initiative into one shared decision map and works through its decisions one at a time until the route to a brief, strategy, or plan is clear.
+## The job
 
-The defining constraint is separation from execution. Research, discussion, comparison, or a disposable prototype may support a decision, but the skill does not turn the map into a campaign backlog or produce the destination itself.
+You have a broad initiative such as entering a market, repositioning a product, preparing a launch, or changing an acquisition model. You want to see what must be decided, what is blocked, and what can be resolved next without losing the reasoning between conversations.
+
+The skill creates one decision map and works through it one consequential choice at a time. It may research, compare, or build a disposable prototype to support a decision, but it does not execute the destination or turn the map into a delivery backlog.
 
 ## When to use it
 
-Invoke A1 Wayfinder deliberately with `/a1-wayfinder`; the agent does not start it automatically. Use it when an initiative is too broad or uncertain to brief or plan directly—for example, entering a market, repositioning a product, designing a launch, or choosing a new acquisition model.
+Invoke the skill deliberately with `/a1-wayfinder`; it does not start automatically. The first run charts the initiative and stops before resolving the first new decision. Later runs continue the same map and resolve at most one decision each.
 
-The first run charts the initiative. Later runs continue the same map and resolve at most one decision each, keeping the reasoning useful across conversations.
+Use [A1 Grill](./a1-grill.md) when one existing idea, decision, or plan needs an intensive stress test in a conversation. Use [A1 Marketing Context](./a1-marketing-context.md) when the job is to store confirmed reusable inputs rather than resolve open choices.
 
-Use [A1 Grill](./a1-grill.md) when one existing idea, decision, or plan needs an intensive stress test rather than a multi-session map. Use [Marketing Context](./a1-marketing-context.md) to preserve confirmed reusable inputs rather than work through open choices.
+## What you get
 
-## One marketer-readable map
+One readable `wayfinder-<topic>.md` document contains:
 
-The skill keeps the destination, confirmed decisions, current frontier, blocked questions, unresolved fog, and out-of-scope boundary in one document. It uses a document the user names or creates a visible `wayfinder-<topic>.md` file in a writable workspace. When no writable workspace is available, it returns the complete map in the conversation.
+- the observable destination;
+- confirmed decisions and their rationale;
+- the current frontier of answerable questions;
+- questions blocked by missing prerequisites;
+- relevant uncertainty that is not sharp enough to become a question;
+- the out-of-scope boundary.
 
-The map contains decision questions, not GitHub issues, tracker labels, assignments, engineering tickets, or an execution backlog.
+The map contains decision questions, not GitHub issues, assignments, engineering tickets, or production tasks. If no writable workspace exists, the complete map is returned in the conversation.
 
 ## Common questions
 
-**Does it create project tasks?**
+**Does it create a project plan?**
 
-No. It records the choices that must be made before planning or execution. Delivery tasks belong in the downstream plan after the route is clear.
+No. It identifies and resolves the choices required before a reliable brief, strategy, or execution plan can exist.
 
-**Does the agent make marketing decisions for me?**
+**Does the agent make decisions for me?**
 
-It gathers discoverable facts and gives concrete recommendations. Consequential choices about audience, positioning, promises, budget, risk, or brand remain open until you confirm them or an authoritative supplied source already settles them.
+It establishes discoverable facts and makes concrete recommendations. Consequential choices remain open until you confirm them or an authoritative supplied source settles them.
 
-**Can it use our existing marketing context?**
+**Can it use Marketing Context?**
 
-Yes. In a repository it may read the first supported Marketing Context file as defaults, but it never edits that context or turns its own assumptions into confirmed facts.
+Yes, as confirmed defaults when a supported repository file exists. It never edits that context or converts its own assumptions into confirmed decisions.
 
-**When is the map finished?**
+**When is the map complete?**
 
-The route is clear when no material frontier, blocked question, or fog remains before the destination can be handed to the appropriate person, planning process, or execution skill.
+When no material frontier, blocked question, or unresolved fog remains before the destination can move to its downstream owner.
 
-## It's working if
+## How to recognize success
 
-- The destination is observable and fixes the scope of the map.
-- Every open entry is a decision question rather than a production task.
-- Confirmed decisions are visibly separated from recommendations and assumptions.
-- Each continuation resolves at most one decision and recomputes what becomes possible next.
-- The map remains one readable document and never requires an issue tracker.
-- Completion produces a clear downstream handoff rather than silent execution.
+- The destination is concrete enough to define completion.
+- Every open item is a decision question rather than an execution task.
+- Facts, recommendations, assumptions, and confirmed decisions remain distinct.
+- Each continuation resolves at most one consequential decision.
+- The map remains one readable source of truth across sessions.
+- Completion ends with a clear downstream handoff.
 
-## Where it fits
+## Related skills
 
-A1 Wayfinder is a user-invoked decision-mapping skill in A1 Core. It sits upstream of a marketing brief, strategy, or execution plan. It does not replace market research, project management, campaign production, or Marketing Context maintenance.
+[A1 Grill](./a1-grill.md) pressure-tests one focused direction. [A1 Marketing Context](./a1-marketing-context.md) stores confirmed reusable inputs. A1 Wayfinder sits upstream of research, planning, and execution.
 
-A1 Wayfinder is adapted from Matt Pocock's [`wayfinder`](https://github.com/mattpocock/skills/blob/38d62e71ed01fc05d5ae63b0807172e9546049d5/skills/engineering/wayfinder/SKILL.md) under the MIT License. See the skill's [license and attribution](../../skills/a1-wayfinder/references/license-and-attribution.md).
+A1 Wayfinder is adapted from Matt Pocock's [`wayfinder`](https://github.com/mattpocock/skills/blob/38d62e71ed01fc05d5ae63b0807172e9546049d5/skills/engineering/wayfinder/SKILL.md) under the MIT License. See the local [license and attribution](../../skills/a1-wayfinder/references/license-and-attribution.md).

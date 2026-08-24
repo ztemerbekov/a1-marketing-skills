@@ -2,46 +2,48 @@
 
 **English** | [Русский](./a1-grill.ru.md)
 
-## What it does
+Use A1 Grill when you want to find the weak assumptions in one marketing idea, decision, or plan before you commit to it.
 
-A1 Grill stress-tests one marketing idea, decision, or plan through a round-by-round interview. It maps the subject as a design tree and asks the current **frontier**: every question whose prerequisites are already settled.
+## The job
 
-The defining constraint is ownership. The agent researches discoverable facts and recommends answers, but the decisions remain yours. It does not act on the result until you confirm that you and the agent share the same understanding.
+You have a direction that already sounds plausible, but its dependencies, trade-offs, and failure conditions may still be hidden. You want a rigorous conversation that reaches shared understanding before anyone starts executing.
+
+The skill maps the subject as a decision tree and questions the branches that are ready to discuss. It investigates discoverable facts and gives a recommended answer, but consequential decisions remain yours.
 
 ## When to use it
 
-Invoke A1 Grill deliberately with `/a1-grill`; the agent does not start it automatically. Use it before committing to a consequential marketing direction when assumptions, dependencies, trade-offs, or blind spots may still be hidden.
+Invoke the skill deliberately with `/a1-grill`; it does not start automatically. Use it for one marketing idea, decision, or plan when you are willing to answer several rounds of focused questions.
 
-Use [Consumer Psychology](./a1-consumer-psy.md) when the central question is whether a behavioral hypothesis is supported by research or what a completed test may mean. Use [Marketing Context](./a1-marketing-context.md) when the job is to preserve confirmed inputs for later work.
+Use [A1 Wayfinder](./a1-wayfinder.md) when the initiative is too broad for one decision tree and needs a map that survives across sessions. Use [A1 Consumer Psychology](./a1-consumer-psy.md) when the central question is whether a behavioral explanation is supported by research.
 
-## The round and the frontier
+## What you get
 
-Each round contains only questions that can be answered without first resolving another question in that same round. Every question is numbered, titled, and paired with the agent's recommended answer, so you can respond to the whole round by number.
+Each round contains the independent questions that can be answered now. Every question includes a concrete recommendation, so you can accept it, reject it, or replace it with your own decision. Your answers reshape the next round.
 
-Your answers reshape the design tree. The next round is recomputed from what has been settled rather than taken from a fixed questionnaire.
+The session ends with a shared account of the decisions, assumptions, and remaining uncertainty. It does not proceed to execution until you confirm that the understanding is complete.
 
 ## Common questions
 
-**Why does it ask several questions at once?**
+**Why does it ask several questions in one round?**
 
-A round is not a bulk questionnaire. It contains only the independent questions on the current frontier. A question that depends on another open answer waits for a later round.
+Only independent questions appear together. A question that depends on another open answer waits for a later round.
 
-**Will the agent make the decision for me?**
+**Will the agent decide for me?**
 
-No. Recommendations give you something concrete to react to, but the skill must put every decision to you and wait. Emptying the frontier is not permission to act; your final confirmation is still required.
+No. Its recommendation gives you a position to react to. The choice remains open until you answer.
 
-**What happens when a question depends on a fact I do not know?**
+**What if a question depends on a fact I do not know?**
 
-If the environment can answer it, the skill sends a background sub-agent to investigate. Independent questions continue while that research runs; only dependent questions wait.
+The skill investigates facts available from the supplied material or environment. It asks you for judgment or authority, not for information it can find itself.
 
-## It's working if
+## How to recognize success
 
-- A round is numbered and each question has a separate recommendation.
-- No question in a round depends on another unanswered question in that round.
-- Later rounds clearly follow from decisions made earlier.
-- Discoverable facts are investigated instead of delegated back to you.
-- The session stops for your confirmation instead of moving into execution.
+- Every question exposes a real decision, dependency, assumption, or trade-off.
+- Questions in the same round do not depend on one another.
+- Recommendations are concrete enough to accept or challenge.
+- Later rounds follow from earlier answers instead of a fixed questionnaire.
+- The session stops for confirmation before execution.
 
-## Where it fits
+## Related skills
 
-A1 Grill is a user-invoked decision-support skill in A1 Core. It sharpens a marketing decision before execution; it does not store reusable context, perform a consumer-psychology diagnosis, or implement the resulting plan.
+[A1 Wayfinder](./a1-wayfinder.md) maps a large, unclear initiative across sessions. [A1 Consumer Psychology](./a1-consumer-psy.md) checks a behavioral hypothesis against research. [A1 Marketing Context](./a1-marketing-context.md) stores confirmed reusable inputs.
