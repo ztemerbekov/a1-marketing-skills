@@ -22,7 +22,7 @@
 >
 > `/a1-cold-email`
 >
-> Write one cold email to the COO of Northwind Logistics. Use the attached recipient dossier, our implementation offer, and the two confirmed customer results. Ask whether a 15-minute fit check would be useful.
+> Напиши одно холодное письмо операционному директору Northwind Logistics. Используй приложенное досье получателя, наше предложение по внедрению и два подтверждённых результата клиентов. Спроси, будет ли полезен 15-минутный разговор, чтобы проверить, подходим ли мы друг другу.
 
 ## Частые вопросы
 
