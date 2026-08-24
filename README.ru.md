@@ -149,7 +149,7 @@ Copywriting превращает цель, сведения об аудитор�
 >
 > `/a1-copywriting`
 >
-> Write new marketing copy for a page that explains one consulting offer to operations leaders and asks them to book a diagnostic call. Use the attached offer, proof, price, and implementation terms.
+> Напиши новый текст для страницы, которая объясняет руководителям операционных подразделений одно консалтинговое предложение и предлагает записаться на диагностическую встречу. Используй приложенные описание предложения, доказательства, цену и условия внедрения.
 
 [Подробнее о Copywriting](./docs/skills/a1-copywriting.ru.md)
 
@@ -265,7 +265,7 @@ Cold Email превращает переданные факты о получа�
 >
 > `/a1-cold-email`
 >
-> Write one cold email to the COO of Northwind Logistics using the attached recipient dossier, our implementation offer, and two confirmed customer results.
+> Напиши одно холодное письмо операционному директору Northwind Logistics. Используй приложенное досье получателя, наше предложение по внедрению и два подтверждённых результата клиентов.
 
 [Подробнее о Cold Email](./docs/skills/a1-cold-email.ru.md)
 
@@ -284,7 +284,7 @@ Presentation Copy строит архитектуру сообщения или 
 >
 > `/a1-presentation-copy`
 >
-> Create a 10-slide live presentation for the COO from the attached pilot report. The goal is approval for a six-week rollout.
+> Создай текст для презентации из 10 слайдов для операционного директора по приложенному отчёту о пилоте. Цель — получить одобрение на шестинедельный запуск.
 
 [Подробнее о Presentation Copy](./docs/skills/a1-presentation-copy.ru.md)
 
@@ -303,7 +303,7 @@ Company Profile создаёт один публичный профиль ком
 >
 > `/a1-company-profile`
 >
-> Draft an About page for procurement leaders using the attached company history, service model, security policy, and approved customer evidence.
+> Напиши страницу «О компании» для руководителей по закупкам. Используй приложенные историю компании, описание модели услуг, политику безопасности и согласованные клиентские доказательства.
 
 [Подробнее о Company Profile](./docs/skills/a1-company-profile.ru.md)
 

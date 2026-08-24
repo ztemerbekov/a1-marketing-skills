@@ -22,7 +22,7 @@ A1 Copywriting превращает цель, сведения об аудито
 >
 > `/a1-copywriting`
 >
-> Write new marketing copy for a page that explains one consulting offer to operations leaders and asks them to book a diagnostic call. Use the attached offer, proof, price, and implementation terms.
+> Напиши новый текст для страницы, которая объясняет руководителям операционных подразделений одно консалтинговое предложение и предлагает записаться на диагностическую встречу. Используй приложенные описание предложения, доказательства, цену и условия внедрения.
 
 ## Частые вопросы
 

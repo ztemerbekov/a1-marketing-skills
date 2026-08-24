@@ -22,7 +22,7 @@
 >
 > `/a1-company-profile`
 >
-> Draft an About page for procurement leaders using the attached company history, service model, security policy, office list, and approved customer evidence. Do not infer a mission or values.
+> Напиши страницу «О компании» для руководителей по закупкам. Используй приложенные историю компании, описание модели услуг, политику безопасности, список офисов и согласованные клиентские доказательства. Не придумывай миссию и ценности.
 
 ## Частые вопросы
 

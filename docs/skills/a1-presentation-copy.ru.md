@@ -22,7 +22,7 @@
 >
 > `/a1-presentation-copy`
 >
-> Create a 10-slide live presentation for the COO. Use the attached pilot report and implementation plan. The goal is approval for a six-week rollout. Write takeaway headlines and on-slide copy.
+> Создай текст для презентации из 10 слайдов для операционного директора. Используй приложенные отчёт о пилоте и план внедрения. Цель — получить одобрение на шестинедельный запуск. Сформулируй заголовки-выводы и текст для слайдов.
 
 ## Частые вопросы
 

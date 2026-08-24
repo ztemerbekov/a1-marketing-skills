@@ -6,6 +6,7 @@ Notable user-facing changes to A1 Marketing Skills are recorded here. Git tags a
 
 ### Changed
 
+- Localize example prompts in the Russian README and skill documentation.
 - Give every OpenAI skill a vivid, outcome-focused starter prompt built around a concrete use case.
 - Restore Marketing Context to its skills.sh group, order the skills CLI groups as Marketing Strategies then Editorial, and align the Claude package display names.
 - Add A1 Copywriting for creating new marketing materials in the format a user's goal requires, together with A1 Cold Email, A1 Presentation Copy, and A1 Company Profile.
