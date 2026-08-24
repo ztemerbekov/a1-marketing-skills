@@ -48,4 +48,4 @@
 
 ## Соседние навыки
 
-[A1 Copywriting](./a1-copywriting.ru.md) направляет широкие запросы на новые тексты. [A1 Promo Page](./a1-promo-page.ru.md) отвечает за страницу одного предложения, а [A1 Press Release](./a1-press-release.ru.md) — за подтверждённый новостной повод.
+[A1 Copywriting](./a1-copywriting.ru.md) создаёт новый маркетинговый текст, когда удобнее начать с коммуникационной задачи, а не с выбора формата. Используйте [A1 Promo Page](./a1-promo-page.ru.md) для страницы одного предложения, а [A1 Press Release](./a1-press-release.ru.md) — для подтверждённого новостного повода.

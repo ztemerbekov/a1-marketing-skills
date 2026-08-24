@@ -1,6 +1,6 @@
 ---
 name: a1-copywriting
-description: Route a broad or explicitly invoked request for new marketing copy to the specialized A1 skill that owns the requested deliverable; use when the user asks for copywriting without already selecting one clear supported format.
+description: Turn a user's goal, facts, and source materials into finished marketing copy in the format the goal requires; use for broad copywriting requests or when the format is not yet clear.
 metadata:
   author: Zinnur Temerbekov
 ---

@@ -2,49 +2,50 @@
 
 **English** | [Русский](./a1-copywriting.ru.md)
 
-Use A1 Copywriting when you need new marketing copy but have not selected the A1 skill that owns the format.
+Use A1 Copywriting when you have a communication goal and source material and need finished marketing copy in the format that fits the job.
 
 ## The job
 
-A1 Copywriting is a thin router. It identifies the requested deliverable and hands the request to the matching specialist skill. It does not draft a second version, reinterpret the specialist's method, or combine several formats into one artifact.
+A1 Copywriting turns your goal, audience, facts, and source material into finished marketing copy. It can create promotional pages, press releases, articles, decision memos, cold emails, presentation copy, and company profiles while applying the requirements of each format.
 
 ## When to use it
 
-Invoke it for a broad request such as “write marketing copy” or when you want the system to choose among the supported formats. It can route promotional pages, press releases, articles, decision memos, cold emails, presentation copy, and company profiles.
+Start with a broad request such as “write marketing copy” or describe the result you need in ordinary language. You do not have to choose a writing workflow in advance. Include the intended audience, purpose, confirmed facts, useful evidence, and desired next step when they are available.
 
-If you already know the format, you may invoke its specialist directly. A selected existing draft is outside this router: use the relevant editing workflow yourself rather than asking A1 Copywriting to rewrite or review it.
+Use a dedicated format skill directly when you already know which one you need. A selected existing draft is a separate editing job and stays outside A1 Copywriting.
 
 ## What you get
 
-For one clear format, the owning skill takes over and returns its normal artifact. If a request contains several independently owned deliverables, the router names them and asks which one to start with. If no installed A1 skill owns the format, it says so instead of improvising a new workflow.
+One finished marketing text in the format that fits the stated goal, written according to that format's requirements. If the request contains several independent texts, A1 Copywriting asks which one to create first. If the requested format is not supported, it says so instead of substituting a generic text.
 
 > **Try asking:**
 >
 > `/a1-copywriting`
 >
-> We need new marketing copy for a page that explains one consulting offer and asks operations leaders to book a diagnostic call. Route this to the right A1 skill.
+> Write new marketing copy for a page that explains one consulting offer to operations leaders and asks them to book a diagnostic call. Use the attached offer, proof, price, and implementation terms.
 
 ## Common questions
 
-**Does the router write generic copy itself?**
+**Do I need to choose the format first?**
 
-No. Every supported artifact has one specialist owner, so standards and boundaries stay in that skill.
+No. Describe the audience, purpose, facts, and desired action. A1 Copywriting will use the appropriate supported format.
 
 **Does it edit existing copy?**
 
-No. A request targeting a selected draft is not a new-copy request and stays outside A1 Copywriting.
+No. It creates new marketing copy. Editing or reviewing a selected draft is a separate job.
 
-**Can it produce a landing page and cold email in one run?**
+**Can it create a landing page and a cold email in one request?**
 
-It identifies both owners and asks which deliverable to start with. Each specialist produces its own artifact.
+It will ask which text to create first so that each result can follow its own audience, evidence, and format requirements.
 
 ## How to recognize success
 
-- One supported format reaches one specialist owner.
-- The router adds no parallel draft, summary, or footer.
-- Existing-draft editing never enters the routing flow.
-- Mixed or unsupported requests remain explicit rather than being silently approximated.
+- The finished text matches the audience, purpose, and requested action.
+- Its structure and level of detail fit the communication format.
+- Claims remain grounded in supplied facts and evidence.
+- Missing material stays visible instead of becoming plausible invention.
+- A broad request produces specific, usable marketing copy.
 
 ## Related skills
 
-[A1 Promo Page](./a1-promo-page.md), [A1 Press Release](./a1-press-release.md), [A1 Article Writing](./a1-article-writing.md), [A1 Decision Memo](./a1-decision-memo.md), [A1 Cold Email](./a1-cold-email.md), [A1 Presentation Copy](./a1-presentation-copy.md), and [A1 Company Profile](./a1-company-profile.md) own the supported formats.
+[A1 Promo Page](./a1-promo-page.md), [A1 Press Release](./a1-press-release.md), [A1 Article Writing](./a1-article-writing.md), [A1 Decision Memo](./a1-decision-memo.md), [A1 Cold Email](./a1-cold-email.md), [A1 Presentation Copy](./a1-presentation-copy.md), and [A1 Company Profile](./a1-company-profile.md) can also be invoked directly when the required format is already known.

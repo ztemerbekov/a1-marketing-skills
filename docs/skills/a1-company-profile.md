@@ -48,4 +48,4 @@ Only when that biography is supporting evidence inside the company profile. A st
 
 ## Related skills
 
-[A1 Copywriting](./a1-copywriting.md) routes broad new-copy requests. [A1 Promo Page](./a1-promo-page.md) owns a page focused on one offer, while [A1 Press Release](./a1-press-release.md) owns a confirmed news event.
+[A1 Copywriting](./a1-copywriting.md) creates new marketing copy when you want to start from the communication goal rather than choose a format. Use [A1 Promo Page](./a1-promo-page.md) for a page focused on one offer and [A1 Press Release](./a1-press-release.md) for a confirmed news event.

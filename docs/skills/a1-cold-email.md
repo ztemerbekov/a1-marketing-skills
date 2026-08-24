@@ -48,4 +48,4 @@ It keeps the uncertainty visible and writes a proportionate question or stops fo
 
 ## Related skills
 
-[A1 Copywriting](./a1-copywriting.md) routes broad new-copy requests. [A1 Promo Page](./a1-promo-page.md) owns the offer page that an outreach message may point to.
+[A1 Copywriting](./a1-copywriting.md) creates new marketing copy when you want to start from the communication goal rather than choose a format. Use [A1 Promo Page](./a1-promo-page.md) for the offer page that an outreach message may point to.

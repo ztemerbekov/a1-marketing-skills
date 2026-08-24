@@ -38,7 +38,7 @@
 | [Grill](./docs/skills/a1-grill.ru.md)<br>`/a1-grill` | Найти слабые места в маркетинговой идее, решении или плане до начала работы. |
 | [Consumer Psychology](./docs/skills/a1-consumer-psy.ru.md)<br>`/a1-consumer-psy` | Проверить потребительскую гипотезу или объяснить результат теста с опорой на научные исследования. |
 | [Marketing Context](./docs/skills/a1-marketing-context.ru.md)<br>`/a1-marketing-context` | Сохранить подтверждённые сведения о продукте, аудитории и голосе бренда для следующих задач. |
-| [Copywriting](./docs/skills/a1-copywriting.ru.md)<br>`/a1-copywriting` | Направить широкий запрос на новый маркетинговый текст к A1-скиллу, который отвечает за этот формат. |
+| [Copywriting](./docs/skills/a1-copywriting.ru.md)<br>`/a1-copywriting` | Превратить коммуникационную задачу, факты и исходники в готовый маркетинговый текст подходящего формата. |
 | [Copy Editing](./docs/skills/a1-copy-editing.ru.md)<br>`/a1-copy-editing` | Отредактировать готовый текст без новых фактов и потери авторского голоса. |
 | [Article Writing](./docs/skills/a1-article-writing.ru.md)<br>`/a1-article-writing` | Подготовить статью, руководство, кейс или выпуск рассылки на основе переданных материалов и проверенных источников. |
 | [Decision Memo](./docs/skills/a1-decision-memo.ru.md)<br>`/a1-decision-memo` | Собрать внутреннюю записку, из которой сразу понятно, что произошло и какое решение нужно принять. |
@@ -130,19 +130,19 @@ Marketing Context собирает сведения о продукте, ауд�
 </details>
 
 <details>
-<summary><strong>Copywriting — направляет новый маркетинговый текст владельцу формата</strong></summary>
+<summary><strong>Copywriting — превращает вводные в готовый маркетинговый текст</strong></summary>
 
 <br>
 
-Copywriting — тонкий роутер для широких запросов на создание нового маркетингового текста. Он определяет материал и передаёт запрос A1-скиллу, который отвечает за промостраницы, пресс-релизы, статьи, служебные записки, холодные письма, тексты презентаций или профили компаний.
+Copywriting превращает цель, сведения об аудитории, факты и исходные материалы в готовый маркетинговый текст. Он может создавать промостраницы, пресс-релизы, статьи, служебные записки, холодные письма, тексты презентаций и профили компаний с учётом требований каждого формата.
 
-**Что на выходе:** обычный результат выбранного профильного скилла. Роутер не пишет параллельный черновик, не включает в свой процесс редактирование выбранного текста, спрашивает, с какого материала начать, если их несколько, и явно останавливается, когда установленного владельца формата нет.
+**Что на выходе:** один готовый маркетинговый текст в формате, подходящем заявленной цели. Если запрос содержит несколько самостоятельных текстов, скилл спросит, какой создать первым. Выбранный готовый черновик остаётся отдельной редакторской задачей.
 
 > **Попробуйте спросить:**
 >
 > `/a1-copywriting`
 >
-> We need new copy for a page that explains one consulting offer and asks operations leaders to book a diagnostic call. Route this to the right A1 skill.
+> Write new marketing copy for a page that explains one consulting offer to operations leaders and asks them to book a diagnostic call. Use the attached offer, proof, price, and implementation terms.
 
 [Подробнее о Copywriting](./docs/skills/a1-copywriting.ru.md)
 

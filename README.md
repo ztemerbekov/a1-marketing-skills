@@ -38,7 +38,7 @@
 | [Grill](./docs/skills/a1-grill.md)<br>`/a1-grill` | Find weak points in a marketing idea, decision, or plan before work begins. |
 | [Consumer Psychology](./docs/skills/a1-consumer-psy.md)<br>`/a1-consumer-psy` | Test a consumer hypothesis or explain a test result using scientific research. |
 | [Marketing Context](./docs/skills/a1-marketing-context.md)<br>`/a1-marketing-context` | Save confirmed product, audience, and brand-voice inputs for future work. |
-| [Copywriting](./docs/skills/a1-copywriting.md)<br>`/a1-copywriting` | Route a broad request for new marketing copy to the A1 skill that owns the format. |
+| [Copywriting](./docs/skills/a1-copywriting.md)<br>`/a1-copywriting` | Turn a communication goal, facts, and source material into finished marketing copy in the right format. |
 | [Copy Editing](./docs/skills/a1-copy-editing.md)<br>`/a1-copy-editing` | Edit an existing draft without adding facts or losing the author's voice. |
 | [Article Writing](./docs/skills/a1-article-writing.md)<br>`/a1-article-writing` | Create an article, guide, case study, or newsletter from supplied material and verified sources. |
 | [Decision Memo](./docs/skills/a1-decision-memo.md)<br>`/a1-decision-memo` | Build an internal memo that makes clear what happened and what decision is needed. |
@@ -130,19 +130,19 @@ Marketing Context stores product facts, audience, positioning, brand voice, evid
 </details>
 
 <details>
-<summary><strong>Copywriting — routes new marketing copy to its format owner</strong></summary>
+<summary><strong>Copywriting — turns your inputs into finished marketing copy</strong></summary>
 
 <br>
 
-Copywriting is a thin router for broad requests to create new marketing copy. It identifies the deliverable and hands the request to the A1 skill that owns promotional pages, press releases, articles, decision memos, cold emails, presentation copy, or company profiles.
+Copywriting turns a goal, audience, facts, and source material into finished marketing copy. It can create promotional pages, press releases, articles, decision memos, cold emails, presentation copy, and company profiles while applying the requirements of each format.
 
-**What you get:** the selected specialist's normal artifact. The router writes no parallel draft. It keeps selected-draft editing outside its flow, asks which artifact to start with when several are requested, and stops clearly when no installed A1 skill owns the format.
+**What you get:** one finished marketing text in the format that fits the stated goal. If the request contains several independent texts, the skill asks which one to create first. A selected existing draft remains a separate editing job.
 
 > **Try asking:**
 >
 > `/a1-copywriting`
 >
-> We need new copy for a page that explains one consulting offer and asks operations leaders to book a diagnostic call. Route this to the right A1 skill.
+> Write new marketing copy for a page that explains one consulting offer to operations leaders and asks them to book a diagnostic call. Use the attached offer, proof, price, and implementation terms.
 
 [Learn more about Copywriting](./docs/skills/a1-copywriting.md)
 
