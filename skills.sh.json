@@ -1,0 +1,27 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Marketing Strategy",
+      "description": "Turn marketing uncertainty into a clear next move: map the work, pressure-test decisions, and check behavioral hypotheses before execution.",
+      "skills": [
+        "a1-wayfinder",
+        "a1-grill",
+        "a1-consumer-psy"
+      ]
+    },
+    {
+      "title": "Editorial",
+      "description": "Turn a clear brief and trusted sources into publication-ready communication: create, structure, edit, and refine articles, memos, promotional pages, and announcements without inventing facts.",
+      "skills": [
+        "a1-copy-editing",
+        "a1-article-writing",
+        "a1-decision-memo",
+        "a1-promo-page",
+        "a1-press-release",
+        "a1-humanize"
+      ]
+    }
+  ]
+}
