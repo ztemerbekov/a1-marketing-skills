@@ -12,31 +12,23 @@
 
 ## Quick start
 
-Install the collection globally. The same command works in Bash, Command Prompt, and PowerShell:
+1. Open a terminal and install the collection:
 
-```bash
-npx skills@latest add ztemerbekov/a1-marketing-skills -g
-```
+   ```bash
+   npx skills@latest add ztemerbekov/a1-marketing-skills -g
+   ```
 
-Choose the AI agents you already use, then select the skills you need. Start a new session in the project that contains your materials and invoke a skill by command or describe the job in ordinary language:
+   To update the installed skills later, run `npx update-skills`.
 
-> `/a1-copy-editing`
->
-> Make this paragraph clearer and shorter. Preserve every fact and do not add new claims.
->
-> `[paste your draft]`
+2. Select the AI agents you use and the skills you need.
 
-To install skills in one project only, run the same command inside that project without `-g`:
+3. Start a new session in the project with your materials and try a simple request:
 
-```bash
-npx skills@latest add ztemerbekov/a1-marketing-skills
-```
-
-Already installed? Update your skills with one command:
-
-```bash
-npx update-skills
-```
+   > `/a1-copy-editing`
+   >
+   > Make this paragraph clearer and shorter. Preserve every fact and do not add new claims.
+   >
+   > `[paste your draft]`
 
 ## Skills
 
@@ -44,21 +36,21 @@ npx update-skills
 
 | Skill | Use it to |
 | --- | --- |
-| [Wayfinder](./docs/skills/a1-wayfinder.md) (`/a1-wayfinder`) | Map an unclear marketing initiative and resolve its decisions one at a time. |
-| [Grill](./docs/skills/a1-grill.md) (`/a1-grill`) | Pressure-test a marketing idea, decision, or plan through a structured interview. |
-| [Consumer Psychology](./docs/skills/a1-consumer-psy.md) (`/a1-consumer-psy`) | Audit consumer hypotheses and interpret test outcomes using peer-reviewed research. |
-| [Marketing Context](./docs/skills/a1-marketing-context.md) (`/a1-marketing-context`) | Store confirmed marketing inputs for reuse by compatible skills. |
+| [Wayfinder](./docs/skills/a1-wayfinder.md)<br>`/a1-wayfinder` | Map an unclear marketing initiative and resolve its decisions one at a time. |
+| [Grill](./docs/skills/a1-grill.md)<br>`/a1-grill` | Pressure-test a marketing idea, decision, or plan through a structured interview. |
+| [Consumer Psychology](./docs/skills/a1-consumer-psy.md)<br>`/a1-consumer-psy` | Audit consumer hypotheses and interpret test outcomes using peer-reviewed research. |
+| [Marketing Context](./docs/skills/a1-marketing-context.md)<br>`/a1-marketing-context` | Store confirmed marketing inputs for reuse by compatible skills. |
 
 ### Editorial
 
 | Skill | Use it to |
 | --- | --- |
-| [Copy Editing](./docs/skills/a1-copy-editing.md) (`/a1-copy-editing`, `/a1-redaktura`) | Edit or review an existing draft without inventing facts. |
-| [Article Writing](./docs/skills/a1-article-writing.md) (`/a1-article-writing`) | Turn a topic or source material into an article, guide, case study, or newsletter. |
-| [Decision Memo](./docs/skills/a1-decision-memo.md) (`/a1-decision-memo`) | Organize supplied material into a memo for a specific decision-maker. |
-| [Promo Page](./docs/skills/a1-promo-page.md) (`/a1-promo-page`) | Create the structure or copy for one promotional page, audience, and action. |
-| [Press Release](./docs/skills/a1-press-release.md) (`/a1-press-release`) | Draft a routine announcement and surface anything that still needs verification. |
-| [Humanize](./docs/skills/a1-humanize.md) (`/a1-humanize`) | Remove recognizable AI-writing patterns while preserving the author's voice and details. |
+| [Copy Editing](./docs/skills/a1-copy-editing.md)<br>`/a1-copy-editing` · `/a1-redaktura` | Edit or review an existing draft without inventing facts. |
+| [Article Writing](./docs/skills/a1-article-writing.md)<br>`/a1-article-writing` | Turn a topic or source material into an article, guide, case study, or newsletter. |
+| [Decision Memo](./docs/skills/a1-decision-memo.md)<br>`/a1-decision-memo` | Organize supplied material into a memo for a specific decision-maker. |
+| [Promo Page](./docs/skills/a1-promo-page.md)<br>`/a1-promo-page` | Create the structure or copy for one promotional page, audience, and action. |
+| [Press Release](./docs/skills/a1-press-release.md)<br>`/a1-press-release` | Draft a routine announcement and surface anything that still needs verification. |
+| [Humanize](./docs/skills/a1-humanize.md)<br>`/a1-humanize` | Remove recognizable AI-writing patterns while preserving the author's voice and details. |
 
 The Russian `/a1-redaktura` command is an alias for Copy Editing. Install it alongside `a1-copy-editing` when you want that command.
 
