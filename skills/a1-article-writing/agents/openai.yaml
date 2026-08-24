@@ -4,4 +4,4 @@ interface:
   icon_small: "./assets/icon-small.svg"
   icon_large: "./assets/icon-large.svg"
   brand_color: "#FF6A00"
-  default_prompt: "Use $a1-article-writing to turn these notes and sources into a useful, evidence-grounded article."
+  default_prompt: "Use $a1-article-writing to turn these interviews with Antarctic station cooks into a practical article about feeding a team through polar winter."

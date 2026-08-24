@@ -4,4 +4,4 @@ interface:
   icon_small: "./assets/icon-small.svg"
   icon_large: "./assets/icon-large.svg"
   brand_color: "#FF6A00"
-  default_prompt: "Use $a1-decision-memo to turn these notes into a memo that makes the decision, response, or status and its supporting detail easy to review."
+  default_prompt: "Use $a1-decision-memo to turn the failed Tokyo launch notes into a memo that helps the CEO decide whether to relaunch or withdraw."

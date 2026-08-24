@@ -4,4 +4,4 @@ interface:
   icon_small: "./assets/icon-small.svg"
   icon_large: "./assets/icon-large.svg"
   brand_color: "#FF6A00"
-  default_prompt: "Use $a1-cold-email to write one concise first-contact email from these recipient and offer facts."
+  default_prompt: "Use $a1-cold-email to write Elon Musk a first-contact email asking him to choose me for the first crewed flight to Mars, using my attached astronaut resume."

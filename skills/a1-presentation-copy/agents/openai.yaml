@@ -4,4 +4,4 @@ interface:
   icon_small: "./assets/icon-small.svg"
   icon_large: "./assets/icon-large.svg"
   brand_color: "#FF6A00"
-  default_prompt: "Use $a1-presentation-copy to turn these materials into a focused presentation outline and slide copy."
+  default_prompt: "Use $a1-presentation-copy to turn our flood-response report into a 10-slide briefing for the mayor's shelter decision before monsoon season."
