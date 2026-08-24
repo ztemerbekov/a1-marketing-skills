@@ -22,7 +22,7 @@
 
 2. Select the AI agents you use and the skills you need.
 
-3. Start a new session in the project with your materials and try a simple request:
+3. Start a new session and try:
 
    > `/a1-copy-editing`
    >
@@ -34,16 +34,16 @@
 
 | Skill | Use it to |
 | --- | --- |
-| [Wayfinder](./docs/skills/a1-wayfinder.md)<br>`/a1-wayfinder` | Map an unclear marketing initiative and resolve its decisions one at a time. |
-| [Grill](./docs/skills/a1-grill.md)<br>`/a1-grill` | Pressure-test a marketing idea, decision, or plan through a structured interview. |
-| [Consumer Psychology](./docs/skills/a1-consumer-psy.md)<br>`/a1-consumer-psy` | Audit consumer hypotheses and interpret test outcomes using peer-reviewed research. |
-| [Marketing Context](./docs/skills/a1-marketing-context.md)<br>`/a1-marketing-context` | Store confirmed marketing inputs for reuse by compatible skills. |
-| [Copy Editing](./docs/skills/a1-copy-editing.md)<br>`/a1-copy-editing` | Edit or review an existing draft without inventing facts. |
-| [Article Writing](./docs/skills/a1-article-writing.md)<br>`/a1-article-writing` | Turn a topic or source material into an article, guide, case study, or newsletter. |
-| [Decision Memo](./docs/skills/a1-decision-memo.md)<br>`/a1-decision-memo` | Organize supplied material into a memo for a specific decision-maker. |
-| [Promo Page](./docs/skills/a1-promo-page.md)<br>`/a1-promo-page` | Create the structure or copy for one promotional page, audience, and action. |
-| [Press Release](./docs/skills/a1-press-release.md)<br>`/a1-press-release` | Draft a routine announcement and surface anything that still needs verification. |
-| [Humanize](./docs/skills/a1-humanize.md)<br>`/a1-humanize` | Remove recognizable AI-writing patterns while preserving the author's voice and details. |
+| [Wayfinder](./docs/skills/a1-wayfinder.md)<br>`/a1-wayfinder` | Break an unclear marketing initiative into the decisions needed for a brief, strategy, or plan. |
+| [Grill](./docs/skills/a1-grill.md)<br>`/a1-grill` | Find weak points in a marketing idea, decision, or plan before work begins. |
+| [Consumer Psychology](./docs/skills/a1-consumer-psy.md)<br>`/a1-consumer-psy` | Test a consumer hypothesis or explain a test result using scientific research. |
+| [Marketing Context](./docs/skills/a1-marketing-context.md)<br>`/a1-marketing-context` | Save confirmed product, audience, and brand-voice inputs for future work. |
+| [Copy Editing](./docs/skills/a1-copy-editing.md)<br>`/a1-copy-editing` | Edit an existing draft without adding facts or losing the author's voice. |
+| [Article Writing](./docs/skills/a1-article-writing.md)<br>`/a1-article-writing` | Create an article, guide, case study, or newsletter from supplied material and verified sources. |
+| [Decision Memo](./docs/skills/a1-decision-memo.md)<br>`/a1-decision-memo` | Build an internal memo that makes clear what happened and what decision is needed. |
+| [Promo Page](./docs/skills/a1-promo-page.md)<br>`/a1-promo-page` | Create a promotional page for one audience with a clear offer, evidence, and next step. |
+| [Press Release](./docs/skills/a1-press-release.md)<br>`/a1-press-release` | Prepare a press release with confirmed facts for distribution or approval. |
+| [Humanize](./docs/skills/a1-humanize.md)<br>`/a1-humanize` | Remove visible signs of AI generation without losing facts, meaning, or the author's voice. |
 
 ## About the skills
 
@@ -306,5 +306,4 @@ If the installation method does not matter, use the [quick start](#quick-start) 
 
 ## Help and feedback
 
-Questions, improvement ideas, or something that did not work as expected?<br>
-Join the discussion in <img src="./assets/logos/a1-logo.svg" alt="A1" width="20">&nbsp;[Marketing&nbsp;Skills](https://t.me/a1_marketing_skills).
+Have questions or did something not work as expected? Message us on [Telegram](https://t.me/a1_marketing_skills).
