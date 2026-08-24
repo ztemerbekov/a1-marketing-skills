@@ -79,6 +79,8 @@ Every skill must:
 
 When adding or materially changing a skill, follow the human-facing documentation contract in `docs/a1-skill-design-contract.md`.
 
+When adding, renaming, or removing a canonical skill, update `skills.sh.json` in the same change so the skills.sh repository page stays current. Add user-facing skills to the appropriate grouping; intentionally ungrouped support skills and aliases may remain in `Other skills`.
+
 Evaluation suites are optional maintainer material. When present, keep them under the skill's `evals/` directory; they must never be runtime dependencies.
 
 ## Invocation Compatibility
