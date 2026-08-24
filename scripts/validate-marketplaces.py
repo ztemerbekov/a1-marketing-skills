@@ -42,11 +42,11 @@ PORTABLE_SHARED_FIELDS = (
 )
 CLAUDE_PACKAGES = {
     "a1-core": {
-        "displayName": "A1 Core",
+        "displayName": "Marketing Strategies",
         "category": "productivity",
     },
     "a1-editorial": {
-        "displayName": "A1 Editorial",
+        "displayName": "Editorial",
         "category": "productivity",
     },
 }

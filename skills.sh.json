@@ -3,12 +3,13 @@
   "notGrouped": "bottom",
   "groupings": [
     {
-      "title": "Marketing Strategy",
-      "description": "Turn marketing uncertainty into a clear next move: map the work, pressure-test decisions, and check behavioral hypotheses before execution.",
+      "title": "Marketing Strategies",
+      "description": "Turn marketing uncertainty into clear next moves: preserve confirmed context, map the work, pressure-test decisions, and check behavioral hypotheses before execution.",
       "skills": [
         "a1-wayfinder",
         "a1-grill",
-        "a1-consumer-psy"
+        "a1-consumer-psy",
+        "a1-marketing-context"
       ]
     },
     {
@@ -17,6 +18,7 @@
       "skills": [
         "a1-copywriting",
         "a1-copy-editing",
+        "a1-redaktura",
         "a1-article-writing",
         "a1-decision-memo",
         "a1-promo-page",

@@ -9,8 +9,8 @@
   "plugins": [
     {
       "name": "a1-core",
-      "displayName": "A1 Core",
-      "description": "Map unclear marketing initiatives, stress-test strategies, and validate consumer psychology hypotheses before your team executes.",
+      "displayName": "Marketing Strategies",
+      "description": "Preserve confirmed marketing context, map unclear initiatives, stress-test strategies, and validate consumer psychology hypotheses before your team executes.",
       "category": "productivity",
       "keywords": [
         "Маркетинговые скиллы",
@@ -33,7 +33,7 @@
     },
     {
       "name": "a1-editorial",
-      "displayName": "A1 Editorial",
+      "displayName": "Editorial",
       "description": "Create source-grounded marketing communication—including articles, memos, pages, releases, cold emails, presentations, and company profiles—and polish drafts while preserving voice, facts, and human control.",
       "category": "productivity",
       "keywords": [

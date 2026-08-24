@@ -6,6 +6,7 @@ Notable user-facing changes to A1 Marketing Skills are recorded here. Git tags a
 
 ### Changed
 
+- Restore Marketing Context and A1 Redaktura to their skills.sh groups, and align the Claude package display names as Marketing Strategies and Editorial.
 - Add A1 Copywriting for creating new marketing materials in the format a user's goal requires, together with A1 Cold Email, A1 Presentation Copy, and A1 Company Profile.
 - Add native Codex and Cursor marketplace manifests and use `a1-marketing-skills` as the marketplace and full-plugin slug across Claude Code, Codex, and Cursor.
 - Add A1 Humanize for removing recognizable AI-writing patterns from supplied copy while preserving its supported content and voice.
