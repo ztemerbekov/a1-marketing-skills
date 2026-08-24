@@ -2,46 +2,48 @@
 
 **English** | [Русский](./a1-promo-page.ru.md)
 
-## What it does
+Use A1 Promo Page when one audience needs to understand one offer, judge whether it fits, and take a clear next step.
 
-A1 Promo Page creates the content architecture or copy for one new landing, product, service, course, event, or signup page. It helps one primary audience understand the offer, evaluate fit through evidence, and take a transparent next step.
+## The job
 
-The defining constraint is source-supported persuasion. The skill can formulate a page-level value proposition from supplied facts, but it cannot invent product strategy, testimonials, results, comparisons, prices, guarantees, urgency, or scarcity.
+You have source-supported information about a product, service, course, event, or signup offer. You want the content architecture or copy for one new promotional page.
+
+The skill builds persuasion from the audience's situation, the offer's mechanism, evidence, conditions, and action. It may formulate a page-level value proposition from supplied facts, but it does not invent strategy, testimonials, results, comparisons, prices, guarantees, urgency, or scarcity.
 
 ## When to use it
 
-Ask for a new promotional-page blueprint, block structure, wire copy, or full page draft. The skill is model-invoked when that intent is clear; you may also invoke `/a1-promo-page` explicitly.
+Ask for a blueprint when you need page blocks, wire copy, or a content plan. Ask for a draft when you need the page copy in production order. The skill can start from an unambiguous natural-language request or through `/a1-promo-page`.
 
-Use [A1 Copy Editing](./a1-copy-editing.md) when a selected existing page needs editing or review. Use [A1 Article Writing](./a1-article-writing.md) for an educational long-form piece and [A1 Press Release](./a1-press-release.md) for a routine media announcement.
+Use [A1 Copy Editing](./a1-copy-editing.md) when a selected existing page needs editing or review. Use [A1 Article Writing](./a1-article-writing.md) for educational long-form content and [A1 Press Release](./a1-press-release.md) for a media announcement.
 
-## Blueprint and draft
+## What you get
 
-A blueprint explains each block's reader job, message, evidence, and useful visual. A draft returns page copy in production order and lists only material content requirements or source gaps outside the publishable copy.
+A blueprint gives each block a reader job, message, required evidence, and useful visual or artifact. A draft returns page copy in order and separately names only the missing proof, visuals, screenshots, examples, terms, or implementation inputs that prevent completion.
 
-Marketing Context is optional. It may supply confirmed offer facts, audience defaults, voice, proof, and prohibitions.
+Marketing Context may supply confirmed offer facts, audience defaults, voice, proof, and prohibitions.
 
 ## Common questions
 
-**Can it write a page for several audiences?**
+**Can one page address several audiences?**
 
-It selects one primary audience for each page version. Materially different outcomes, examples, proof, or terms usually call for separate variants.
+The skill chooses one primary audience per version. Materially different desired outcomes, evidence, examples, or terms usually require separate versions.
 
-**Will it invent placeholders for missing proof?**
+**Will it use placeholders for missing proof?**
 
-Only when the user explicitly asks for a working template. Placeholders name the exact missing input and never masquerade as publishable claims.
+Only when you explicitly ask for a working template. A placeholder names the missing input and never masquerades as a publishable claim.
 
 **Does it design or build the page?**
 
-No. It treats layout and visuals as content decisions and can write production notes, but final visual design, code, and publishing remain separate jobs.
+No. It treats layout and visuals as content decisions and may give production notes. Final visual design, code, and publishing remain separate work.
 
-## It's working if
+## How to recognize success
 
-- The first screen identifies the offer, reader relevance, and a real next action.
-- Important promises connect to mechanisms, evidence, and fit limits.
-- Visual notes show what the reader must learn rather than request decoration.
-- Price, package, conditions, and CTA are accurate and operational.
-- The page contains no fabricated social proof, comparison, urgency, or guarantee.
+- The first screen identifies the offer, its relevance, and a real next action.
+- Important promises connect to mechanism, evidence, and fit limits.
+- The page helps the reader evaluate fit rather than only creating excitement.
+- Price, package, conditions, and call to action are accurate and operational.
+- No social proof, comparison, urgency, scarcity, or guarantee is fabricated.
 
-## Where it fits
+## Related skills
 
-A1 Promo Page owns new promotional pages for one offer. A1 Copy Editing owns selected existing copy; A1 Article Writing and A1 Press Release own their distinct editorial formats.
+[A1 Copy Editing](./a1-copy-editing.md) improves selected existing page copy. [A1 Article Writing](./a1-article-writing.md) and [A1 Press Release](./a1-press-release.md) create different editorial formats.

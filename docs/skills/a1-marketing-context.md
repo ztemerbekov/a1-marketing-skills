@@ -2,50 +2,52 @@
 
 **English** | [Русский](./a1-marketing-context.ru.md)
 
-## What it does
+Use A1 Marketing Context when you want future marketing work to reuse confirmed facts, decisions, and voice without rebuilding the same brief each time.
 
-A1 Marketing Context maintains confirmed reusable marketing inputs in `.agents/marketing-context.md`: product facts, audience, positioning, brand voice, messaging, proof, vocabulary, examples, prohibitions, and business-goal defaults.
+## The job
 
-The defining constraint is confirmation. The skill records authoritative inputs and approved decisions; it does not invent strategy, turn hypotheses into facts, or infer marketing claims from source code and filenames.
+You have product facts, an audience definition, positioning, brand voice, approved messages, proof, vocabulary, examples, prohibitions, or business-goal defaults. You want one shared source that compatible skills can reuse.
+
+The skill stores only confirmed information. It does not invent strategy, promote a hypothesis to fact, or infer marketing claims from source code, filenames, or passive repository context.
 
 ## When to use it
 
-Use an explicit context-maintenance request such as “set up marketing context,” “remember our tone of voice,” or “update the audience.” An ordinary request starts Auto-draft. Ask for an interview only when you deliberately want guided questions one at a time.
+Make an explicit request such as “set up marketing context,” “remember our tone of voice,” or “update the audience.” A normal request starts Auto-draft. Ask for an interview only when you want guided questions one at a time.
 
-The skill is model-invoked for matching explicit maintenance intent, but passive events do nothing. Installing the skill, opening a repository, mentioning marketing, or discovering a missing context file never authorizes a write.
+Installing the skill, opening a repository, mentioning marketing, or discovering that context is missing never authorizes a write.
 
-## What it stores
+## What you get
 
-The skill writes only `.agents/marketing-context.md` in the current repository. It applies the smallest confirmed patch, preserves unrelated content, and allows a partial file with only the sections that have real inputs.
+The skill creates or updates only `.agents/marketing-context.md` in the current repository. It applies the smallest confirmed change, preserves unrelated content, and leaves unknown sections empty rather than completing them by inference.
 
-Audience, voice, and business goals may act as overridable defaults. Product facts, claims and evidence, and explicit prohibitions are protected inputs that downstream work must preserve or surface as conflicts.
+Audience, voice, and business goals may work as overridable defaults. Product facts, claims and evidence, and explicit prohibitions are protected inputs that downstream work must preserve or surface as conflicts.
 
 ## Common questions
 
-**Does installation create a context file?**
+**Does installation create the file?**
 
-No. A file is created or updated only after an explicit request to maintain reusable marketing context.
+No. A write occurs only after an explicit request to maintain reusable marketing context.
 
 **What is the difference between Auto-draft and Interview?**
 
-Auto-draft is the default: it extracts confirmed material from the sources you identify. Interview is a separate explicit branch that asks one question at a time and saves confirmed progress incrementally.
+Auto-draft extracts confirmed material from the sources you identify. Interview asks one question at a time and saves only answers you confirm.
 
-**Can it create positioning or strategy for me?**
+**Can it create positioning or strategy?**
 
-No. It can store completed, approved positioning or strategy inputs, but it does not create, compare, test, or evaluate them.
+No. It stores completed and approved inputs; it does not create, compare, test, or approve them.
 
-**Does every A1 skill automatically read Marketing Context?**
+**Does every A1 skill read the file?**
 
-No. Each skill must explicitly permit context consumption. For example, [A1 Copy Editing](./a1-copy-editing.md) may use the first eligible repository context, while other skills may intentionally work only from the current request.
+No. Each skill must explicitly support Marketing Context. Context consumption is optional and governed by that skill's own boundary.
 
-## It's working if
+## How to recognize success
 
 - Every stored value is traceable to a confirmed source.
-- Tentative ideas and hypotheses stay out of the file.
+- Hypotheses and tentative ideas remain marked as such or stay out of the file.
 - Only `.agents/marketing-context.md` is written.
-- Existing unrelated content survives a targeted update.
-- The confirmation names only the sections changed in the current run.
+- A targeted update preserves unrelated content.
+- The confirmation names only the sections changed in that run.
 
-## Where it fits
+## Related skills
 
-A1 Marketing Context is the reusable-input skill in A1 Core. It prepares confirmed defaults and constraints for context-aware work; it does not replace [A1 Grill](./a1-grill.md), consumer research, campaign strategy, or copy production.
+[A1 Grill](./a1-grill.md) works through an open decision. [A1 Wayfinder](./a1-wayfinder.md) maps a large uncertain initiative. Marketing Context stores decisions and inputs only after they are confirmed.

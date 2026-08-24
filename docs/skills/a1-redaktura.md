@@ -2,32 +2,38 @@
 
 **English** | [Русский](./a1-redaktura.ru.md)
 
-## What it does
+Use A1 Редактура when you want to start A1 Copy Editing through the explicit Russian command `/a1-redaktura`.
 
-A1 Редактура provides the explicit Russian command `/a1-redaktura` for [A1 Copy Editing](./a1-copy-editing.md). It passes the current request to the main editing skill, which performs the edit or review and owns all source and output rules.
+## The job
 
-The defining constraint is that this is an alias, not a second editing capability. It adds a deliberate Russian entry point without copying or changing the A1 Copy Editing runtime.
+You have selected an existing draft and want to edit or review it through a Russian command. The alias passes the entire current request to [A1 Copy Editing](./a1-copy-editing.md).
+
+This is an entry point, not a second editing capability. It adds no separate procedure, output format, or source policy.
 
 ## When to use it
 
-Install it alongside `a1-copy-editing` and invoke `/a1-redaktura` when you want an explicit Russian editing command. For ordinary natural-language editing requests, the model-invoked A1 Copy Editing skill can start without this alias.
+Install it together with `a1-copy-editing`, then invoke `/a1-redaktura`. For an ordinary natural-language editing request, A1 Copy Editing can start without the alias.
+
+## What you get
+
+The same editing or review result, constraints, optional context behavior, and success criteria as A1 Copy Editing.
 
 ## Common questions
 
-**Is A1 Редактура a different editor with Russian-specific rules?**
+**Does the alias have special Russian editing rules?**
 
-No. It runs the same A1 Copy Editing session and therefore preserves the same source fidelity, operations, and optional context behavior.
+No. It runs the same A1 Copy Editing session.
 
-**Can I install the alias without A1 Copy Editing?**
+**Can it be installed on its own?**
 
-No. The alias delegates the whole request to `a1-copy-editing`, so both skills must be installed.
+No. The alias delegates the request to `a1-copy-editing`, so both skills must be installed.
 
-## It's working if
+## How to recognize success
 
-- `/a1-redaktura` starts the same editing or review behavior as A1 Copy Editing.
-- No separate editing rules or output format appear in the alias.
-- Requests outside A1 Copy Editing's scope remain outside the alias's scope.
+- `/a1-redaktura` starts the same behavior as `/a1-copy-editing`.
+- No competing editing rules or output format appear.
+- Requests outside A1 Copy Editing's scope remain outside this alias.
 
-## Where it fits
+## Related skills
 
-A1 Редактура is a user-invoked command alias in A1 Editorial. Its only neighbor and dependency is [A1 Copy Editing](./a1-copy-editing.md), which remains the canonical editing capability.
+[A1 Copy Editing](./a1-copy-editing.md) is the canonical editing capability and the alias's only dependency.
