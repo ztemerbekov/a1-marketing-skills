@@ -50,4 +50,4 @@
 
 ## Соседние навыки
 
-[A1 Article Writing](./a1-article-writing.ru.md), [A1 Promo Page](./a1-promo-page.ru.md), [A1 Press Release](./a1-press-release.ru.md) и [A1 Decision Memo](./a1-decision-memo.ru.md) создают новые материалы своих форматов. [A1 Humanize](./a1-humanize.ru.md) убирает AI-паттерны. [A1 Редактура](./a1-redaktura.ru.md) служит русской командой для этого же навыка.
+[A1 Article Writing](./a1-article-writing.ru.md), [A1 Promo Page](./a1-promo-page.ru.md), [A1 Press Release](./a1-press-release.ru.md) и [A1 Decision Memo](./a1-decision-memo.ru.md) создают новые материалы своих форматов. [A1 Humanize](./a1-humanize.ru.md) убирает AI-паттерны.

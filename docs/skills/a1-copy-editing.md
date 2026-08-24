@@ -50,4 +50,4 @@ No. Every deliverable must edit or review the selected draft.
 
 ## Related skills
 
-[A1 Article Writing](./a1-article-writing.md), [A1 Promo Page](./a1-promo-page.md), [A1 Press Release](./a1-press-release.md), and [A1 Decision Memo](./a1-decision-memo.md) create new format-specific material. [A1 Humanize](./a1-humanize.md) handles AI-writing patterns. [A1 Редактура](./a1-redaktura.md) is a Russian command alias for this same skill.
+[A1 Article Writing](./a1-article-writing.md), [A1 Promo Page](./a1-promo-page.md), [A1 Press Release](./a1-press-release.md), and [A1 Decision Memo](./a1-decision-memo.md) create new format-specific material. [A1 Humanize](./a1-humanize.md) handles AI-writing patterns.
