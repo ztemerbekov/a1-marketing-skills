@@ -41,11 +41,11 @@ PORTABLE_SHARED_FIELDS = (
     "keywords",
 )
 CLAUDE_PACKAGES = {
-    "marketing-strategies": {
+    "1-marketing-strategies": {
         "displayName": "Marketing Strategies",
         "category": "productivity",
     },
-    "editorial": {
+    "2-editorial": {
         "displayName": "Editorial",
         "category": "productivity",
     },
@@ -571,7 +571,7 @@ full_plugin_keywords = {
 for label, (keywords, path) in full_plugin_keywords.items():
     require_product_search_names(keywords, path, f"{label} full-plugin keywords")
 
-for package_name in ("marketing-strategies", "editorial"):
+for package_name in ("1-marketing-strategies", "2-editorial"):
     package_keywords = keyword_set(
         claude_plugin_entries[package_name],
         MANIFEST_PATHS["claude marketplace"],
