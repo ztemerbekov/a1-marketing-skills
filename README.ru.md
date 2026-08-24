@@ -18,7 +18,7 @@
    npx skills@latest add ztemerbekov/a1-marketing-skills -g
    ```
 
-   Чтобы позже обновить установленные скиллы, запустите `npx update-skills`.
+   Чтобы позже обновить установленные скиллы, запустите `npx skills update`.
 
 2. Выберите AI-агентов, которыми пользуетесь, и нужные скиллы.
 
