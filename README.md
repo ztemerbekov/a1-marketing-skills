@@ -4,9 +4,7 @@
 
 [![skills.sh](https://skills.sh/b/ztemerbekov/a1-marketing-skills)](https://skills.sh/ztemerbekov/a1-marketing-skills)
 
-**Move recurring marketing work from your team's backlog to an AI agent—without giving up strategy or editorial judgment.**
-
-A1 Marketing Skills turns unclear initiatives into decisions and source material into finished marketing work. Use the collection to pressure-test a plan, keep team context reusable, audit consumer hypotheses, or create and improve articles, memos, promo pages, press releases, and everyday copy. The agent handles the repeatable work; the marketer keeps the brief, facts, voice, and final call.
+**Hand over the routine to AI agents — freeing marketing teams to focus on strategy, vision, and growth-driving decisions.**
 
 [Install the skills](#quick-start) · [See what each skill does](#skills)
 
