@@ -32,17 +32,28 @@
 
 ## Skills
 
+### Marketing Strategies
+
 | Skill | Use it to |
 | --- | --- |
 | [Wayfinder](./docs/skills/a1-wayfinder.md)<br>`/a1-wayfinder` | Break an unclear marketing initiative into the decisions needed for a brief, strategy, or plan. |
 | [Grill](./docs/skills/a1-grill.md)<br>`/a1-grill` | Find weak points in a marketing idea, decision, or plan before work begins. |
 | [Consumer Psychology](./docs/skills/a1-consumer-psy.md)<br>`/a1-consumer-psy` | Test a consumer hypothesis or explain a test result using scientific research. |
 | [Marketing Context](./docs/skills/a1-marketing-context.md)<br>`/a1-marketing-context` | Save confirmed product, audience, and brand-voice inputs for future work. |
+
+### Editorial
+
+| Skill | Use it to |
+| --- | --- |
+| [Copywriting](./docs/skills/a1-copywriting.md)<br>`/a1-copywriting` | Turn a communication goal, facts, and source material into finished marketing copy in the right format. |
 | [Copy Editing](./docs/skills/a1-copy-editing.md)<br>`/a1-copy-editing` | Edit an existing draft without adding facts or losing the author's voice. |
 | [Article Writing](./docs/skills/a1-article-writing.md)<br>`/a1-article-writing` | Create an article, guide, case study, or newsletter from supplied material and verified sources. |
 | [Decision Memo](./docs/skills/a1-decision-memo.md)<br>`/a1-decision-memo` | Build an internal memo that makes clear what happened and what decision is needed. |
 | [Promo Page](./docs/skills/a1-promo-page.md)<br>`/a1-promo-page` | Create a promotional page for one audience with a clear offer, evidence, and next step. |
 | [Press Release](./docs/skills/a1-press-release.md)<br>`/a1-press-release` | Prepare a press release with confirmed facts for distribution or approval. |
+| [Cold Email](./docs/skills/a1-cold-email.md)<br>`/a1-cold-email` | Write one personalized first-contact email from supplied recipient, offer, and proof facts. |
+| [Presentation Copy](./docs/skills/a1-presentation-copy.md)<br>`/a1-presentation-copy` | Structure a new presentation or write its slide-by-slide message from supplied material. |
+| [Company Profile](./docs/skills/a1-company-profile.md)<br>`/a1-company-profile` | Create a factual public company profile or About page for one primary audience. |
 | [Humanize](./docs/skills/a1-humanize.md)<br>`/a1-humanize` | Remove visible signs of AI generation without losing facts, meaning, or the author's voice. |
 
 ## About the skills
@@ -122,6 +133,25 @@ Marketing Context stores product facts, audience, positioning, brand voice, evid
 > Extract the confirmed product, audience, brand-voice, and prohibited-language inputs from the attached documents. Save them in Marketing Context.
 
 [Learn more about Marketing Context](./docs/skills/a1-marketing-context.md)
+
+</details>
+
+<details>
+<summary><strong>Copywriting — turns your inputs into finished marketing copy</strong></summary>
+
+<br>
+
+Copywriting turns a goal, audience, facts, and source material into finished marketing copy. It can create promotional pages, press releases, articles, decision memos, cold emails, presentation copy, and company profiles while applying the requirements of each format.
+
+**What you get:** one finished marketing text in the format that fits the stated goal. If the request contains several independent texts, the skill asks which one to create first. A selected existing draft remains a separate editing job.
+
+> **Try asking:**
+>
+> `/a1-copywriting`
+>
+> Write new marketing copy for a page that explains one consulting offer to operations leaders and asks them to book a diagnostic call. Use the attached offer, proof, price, and implementation terms.
+
+[Learn more about Copywriting](./docs/skills/a1-copywriting.md)
 
 </details>
 
@@ -219,6 +249,63 @@ Press Release covers routine launches, openings, partnerships, programs, events,
 > Write a press release from these launch facts. Determine whether it is ready for distribution and separately list everything that still needs verification.
 
 [Learn more about Press Release](./docs/skills/a1-press-release.md)
+
+</details>
+
+<details>
+<summary><strong>Cold Email — writes one relevant first-contact message</strong></summary>
+
+<br>
+
+Cold Email turns supplied recipient, relationship, sender, offer, and proof facts into one personalized outreach email. It establishes why this recipient should hear from this sender now and asks for a proportionate next step.
+
+**What you get:** one subject line and one short finished email. The skill does not research prospects, create sequences or bulk templates, continue an existing conversation, edit a selected draft, or invent familiarity, pain points, proof, urgency, or scarcity.
+
+> **Try asking:**
+>
+> `/a1-cold-email`
+>
+> Write one cold email to the COO of Northwind Logistics using the attached recipient dossier, our implementation offer, and two confirmed customer results.
+
+[Learn more about Cold Email](./docs/skills/a1-cold-email.md)
+
+</details>
+
+<details>
+<summary><strong>Presentation Copy — turns supplied material into a coherent slide sequence</strong></summary>
+
+<br>
+
+Presentation Copy builds the message architecture or slide-by-slide copy for one new presentation. It works from a defined audience, occasion, next step, and completed source material, with different density for live and standalone decks.
+
+**What you get:** an outline or a draft with one takeaway per slide, concise on-slide content, and supported visual instructions. It does not create a deck file, design slides, conduct research, invent data, or edit a selected existing deck.
+
+> **Try asking:**
+>
+> `/a1-presentation-copy`
+>
+> Create a 10-slide live presentation for the COO from the attached pilot report. The goal is approval for a six-week rollout.
+
+[Learn more about Presentation Copy](./docs/skills/a1-presentation-copy.md)
+
+</details>
+
+<details>
+<summary><strong>Company Profile — explains a company through supported facts and practices</strong></summary>
+
+<br>
+
+Company Profile creates one public company profile or About page for a primary audience and context. It answers what the company does, for whom, how it works, why it is credible, and what the reader should do next.
+
+**What you get:** an evidence-mapped outline or a finished profile with material source gaps kept visible. The skill does not invent positioning, mission, values, history, credentials, social impact, or culture; mission and values require confirmed decisions and observable practices.
+
+> **Try asking:**
+>
+> `/a1-company-profile`
+>
+> Draft an About page for procurement leaders using the attached company history, service model, security policy, and approved customer evidence.
+
+[Learn more about Company Profile](./docs/skills/a1-company-profile.md)
 
 </details>
 

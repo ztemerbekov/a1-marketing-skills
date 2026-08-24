@@ -1,0 +1,7 @@
+interface:
+  display_name: "A1 Company Profile"
+  short_description: "Write a factual company profile or About page"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#FF6A00"
+  default_prompt: "Use $a1-company-profile to write an About page for the family shipyard that has repaired Arctic research vessels since 1968, using our verified archive."

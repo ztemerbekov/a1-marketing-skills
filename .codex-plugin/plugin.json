@@ -1,7 +1,7 @@
 {
   "name": "a1-marketing-skills",
   "version": "0.1.0",
-  "description": "Marketing decision support and editorial workflows for AI agents.",
+  "description": "Marketing decision support and source-grounded writing and editing for AI agents.",
   "author": {
     "name": "Zinnur Temerbekov"
   },
@@ -17,19 +17,23 @@
     "idea-validation",
     "consumer-psychology",
     "marketing-context",
+    "copywriting",
     "copy-editing",
     "editorial-review",
     "article-writing",
     "decision-memo",
     "promo-page",
     "press-release",
+    "cold-email",
+    "presentation-copy",
+    "company-profile",
     "humanize"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "A1 Marketing Skills",
-    "shortDescription": "Marketing decisions and editorial workflows",
-    "longDescription": "A portable collection of marketing skills for mapping unclear initiatives, stress-testing decisions, maintaining confirmed context, auditing consumer psychology, and creating or editing source-grounded editorial work.",
+    "shortDescription": "Marketing decisions, writing, and editing",
+    "longDescription": "A portable collection of marketing skills for turning uncertainty into decisions and supplied facts into source-grounded articles, pages, releases, emails, presentations, company profiles, and polished drafts.",
     "developerName": "Zinnur Temerbekov",
     "category": "Productivity",
     "capabilities": [
@@ -41,9 +45,12 @@
       "Map this unclear marketing initiative into the decisions we need to make.",
       "Stress-test this marketing plan before we execute it.",
       "Set up marketing context from confirmed repository information.",
+      "Turn these facts and materials into the marketing copy I need.",
       "Edit this marketing copy without changing its facts.",
       "Turn these sources into a useful article or decision memo.",
-      "Create a focused promotional page or routine press release from verified facts."
+      "Create a focused promotional page or routine press release from verified facts.",
+      "Write one personalized cold email from the supplied recipient and offer facts.",
+      "Turn these supplied materials into presentation copy or a company profile."
     ],
     "composerIcon": "./assets/marketplaces/codex/composer-icon.svg",
     "logo": "./assets/marketplaces/codex/logo.svg"

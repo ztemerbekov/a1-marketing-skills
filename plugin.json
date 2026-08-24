@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "a1-marketing-skills",
   "version": "0.1.0",
-  "description": "Marketing decision support and editorial workflows for AI agents.",
+  "description": "Marketing decision support and source-grounded writing and editing for AI agents.",
   "author": {
     "name": "Zinnur Temerbekov"
   },
@@ -18,12 +18,16 @@
     "idea-validation",
     "consumer-psychology",
     "marketing-context",
+    "copywriting",
     "copy-editing",
     "editorial-review",
     "article-writing",
     "decision-memo",
     "promo-page",
     "press-release",
+    "cold-email",
+    "presentation-copy",
+    "company-profile",
     "humanize"
   ]
 }

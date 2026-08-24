@@ -4,4 +4,4 @@ interface:
   icon_small: "./assets/icon-small.svg"
   icon_large: "./assets/icon-large.svg"
   brand_color: "#FF6A00"
-  default_prompt: "Use $a1-copy-editing to make this selected draft clearer and more useful without changing its facts."
+  default_prompt: "Use $a1-copy-editing to tighten this founder's apology after a 12-hour outage without softening the admission or changing any facts."
