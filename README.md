@@ -32,12 +32,19 @@
 
 ## Skills
 
+### Marketing Strategies
+
 | Skill | Use it to |
 | --- | --- |
 | [Wayfinder](./docs/skills/a1-wayfinder.md)<br>`/a1-wayfinder` | Break an unclear marketing initiative into the decisions needed for a brief, strategy, or plan. |
 | [Grill](./docs/skills/a1-grill.md)<br>`/a1-grill` | Find weak points in a marketing idea, decision, or plan before work begins. |
 | [Consumer Psychology](./docs/skills/a1-consumer-psy.md)<br>`/a1-consumer-psy` | Test a consumer hypothesis or explain a test result using scientific research. |
 | [Marketing Context](./docs/skills/a1-marketing-context.md)<br>`/a1-marketing-context` | Save confirmed product, audience, and brand-voice inputs for future work. |
+
+### Editorial
+
+| Skill | Use it to |
+| --- | --- |
 | [Copywriting](./docs/skills/a1-copywriting.md)<br>`/a1-copywriting` | Turn a communication goal, facts, and source material into finished marketing copy in the right format. |
 | [Copy Editing](./docs/skills/a1-copy-editing.md)<br>`/a1-copy-editing` | Edit an existing draft without adding facts or losing the author's voice. |
 | [Article Writing](./docs/skills/a1-article-writing.md)<br>`/a1-article-writing` | Create an article, guide, case study, or newsletter from supplied material and verified sources. |

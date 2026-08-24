@@ -32,12 +32,19 @@
 
 ## Скиллы
 
+### Marketing Strategies
+
 | Скилл | Для чего использовать |
 | --- | --- |
 | [Wayfinder](./docs/skills/a1-wayfinder.ru.md)<br>`/a1-wayfinder` | Разложить неясную маркетинговую инициативу на решения, которые нужны для брифа, стратегии или плана. |
 | [Grill](./docs/skills/a1-grill.ru.md)<br>`/a1-grill` | Найти слабые места в маркетинговой идее, решении или плане до начала работы. |
 | [Consumer Psychology](./docs/skills/a1-consumer-psy.ru.md)<br>`/a1-consumer-psy` | Проверить потребительскую гипотезу или объяснить результат теста с опорой на научные исследования. |
 | [Marketing Context](./docs/skills/a1-marketing-context.ru.md)<br>`/a1-marketing-context` | Сохранить подтверждённые сведения о продукте, аудитории и голосе бренда для следующих задач. |
+
+### Editorial
+
+| Скилл | Для чего использовать |
+| --- | --- |
 | [Copywriting](./docs/skills/a1-copywriting.ru.md)<br>`/a1-copywriting` | Превратить коммуникационную задачу, факты и исходники в готовый маркетинговый текст подходящего формата. |
 | [Copy Editing](./docs/skills/a1-copy-editing.ru.md)<br>`/a1-copy-editing` | Отредактировать готовый текст без новых фактов и потери авторского голоса. |
 | [Article Writing](./docs/skills/a1-article-writing.ru.md)<br>`/a1-article-writing` | Подготовить статью, руководство, кейс или выпуск рассылки на основе переданных материалов и проверенных источников. |
