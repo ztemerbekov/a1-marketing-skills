@@ -79,9 +79,15 @@ Every skill must:
 
 When adding or materially changing a skill, follow the human-facing documentation contract in `docs/a1-skill-design-contract.md`.
 
-When adding, renaming, or removing a canonical skill, update `skills.sh.json` in the same change so the skills.sh repository page stays current. Add user-facing skills to the appropriate grouping; intentionally ungrouped support skills and aliases may remain in `Other skills`.
-
 Evaluation suites are optional maintainer material. When present, keep them under the skill's `evals/` directory; they must never be runtime dependencies.
+
+## Public Skill Surface Sync
+
+When a change adds, renames, removes, regroups, hides, restores, or changes the user-facing positioning of a canonical skill, read the **Client Presentation** and **Plugin Packaging and Bilingual Discoverability** sections of `docs/a1-skill-design-contract.md` and audit every surface listed there in the same change. Compare the Marketplace JSON catalogs side by side so they expose the same intended skill set, canonical display and group names, descriptions, slugs, and visibility. Update `skills.sh.json` and the paired README and skill-documentation pages whenever their inventory or grouping changes. User-facing skills belong in the appropriate group; intentionally ungrouped support skills and aliases may remain in `Other skills`.
+
+Every public skill's `agents/openai.yaml` must include a quoted, one-sentence English `interface.default_prompt` that explicitly invokes `$<skill-name>`. Treat it as storefront copy: use a vivid, recognizable case with concrete context, a meaningful stake, and the finished outcome or success signal the user wants. Prefer memorable people, moments, or constraints to generic placeholder inputs. Keep the case within the skill's declared scope and input gates. For a router skill, present the finished user job while keeping routing and other internal mechanics inside the runtime instructions.
+
+A public-surface change is complete only after every applicable manifest and catalog has been inspected, every affected `default_prompt` has received a manual user-outcome review, and the matching marketplace and repository validations pass. Semantic review belongs in the pull request; deterministic validation must cover structure rather than enforce preferred wording.
 
 ## Invocation Compatibility
 
