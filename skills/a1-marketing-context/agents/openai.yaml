@@ -4,4 +4,4 @@ interface:
   icon_small: "./assets/icon-small.svg"
   icon_large: "./assets/icon-large.svg"
   brand_color: "#FF6A00"
-  default_prompt: "Use $a1-marketing-context to remember that our funeral-planning app speaks with calm precision, never urgency, jokes, or euphemisms."
+  default_prompt: "Use $a1-marketing-context to remember that our stargazing cabins help city families see the Milky Way, and our voice is warm, precise, and never mystical."
