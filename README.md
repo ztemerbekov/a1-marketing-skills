@@ -6,7 +6,7 @@
 
 **Hand over the routine to AI agents — freeing marketing teams to focus on strategy, vision, and growth-driving decisions.**
 
-[Install the skills](#quick-start) · [See the skills](#skills) · [Learn more about each skill](#about-the-skills)
+[Install](#quick-start) · [See the skills](#skills) · [Learn more](#about-the-skills)
 
 ---
 
