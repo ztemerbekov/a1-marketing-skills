@@ -9,7 +9,7 @@ Use only four source classes:
 3. clearly applicable facts established earlier in the conversation;
 4. the first eligible repository Marketing Context source, when the current task permits it, checked in this order: `.agents/marketing-context.md`, `.claude/marketing-context.md` only when the canonical path is absent, then `marketing-context.md` at the repository root only when both earlier paths are absent.
 
-Current instructions control purpose, recipient, tone, channel, and output form. Supplied material controls its facts, figures, options, decisions, recommendations, owners, deadlines, quotations, and causal claims. Earlier conversation facts must be clearly applicable. Marketing Context supplies defaults and confirmed context only when relevant; a conflict with current instructions or supplied material remains unresolved rather than silently merged. Read only the first existing Marketing Context path.
+Current instructions control purpose, recipient, tone, channel, output form, and any facts or constraints they explicitly assert. Supplied material controls its facts, figures, options, decisions, recommendations, owners, deadlines, quotations, and causal claims. Earlier conversation facts must be clearly applicable. Marketing Context supplies defaults and confirmed context only when relevant; a conflict between current instructions and supplied material remains unresolved rather than silently merged. Read only the first existing Marketing Context path.
 
 ## Message map
 
@@ -34,7 +34,9 @@ Use `supplied fact`, `supplied option`, `supplied recommendation`, `decided acti
 
 ## Derivation and invention boundary
 
-Derive only a narrow consequence when explicit source criteria make the conclusion non-arbitrary and the derivation remains transparent in the message. Do not manufacture substantive options, causes, costs, estimates, owners, deadlines, risks, approvals, quotations, or certainty to make the message feel complete. Preserve material unknowns as unknowns.
+Keep every substantive claim, option, cause, cost, estimate, owner, deadline, risk, quotation, approval, certainty, and specialist conclusion source-supported. Derive only a narrow consequence when explicit source criteria make the conclusion non-arbitrary and the derivation remains transparent in the message. Preserve material unknowns as unknowns.
+
+### Diagnostic boundary
 
 Treat a generic diagnostic or recovery step as a substantive proposed action: investigating a cause, restoring data, rerunning an export, reconciling output, or checking logs is source-supported only when the allowed sources supply that action. When the sources contain no solution, options, or decision criteria, state that absence explicitly and request only source-supported decision, diagnostic input, or assignment; never fill the missing solution slot with a plausible process.
 
@@ -42,4 +44,12 @@ Ask one concise blocking question only when every accurate result would otherwis
 
 ## Source-faithful compression
 
-Compress correspondence, documents, and selected drafts into the facts and operational meaning the recipient needs. Preserve source-specific amounts, dates, names, events, statuses, dependencies, and decision distinctions whenever they affect what the recipient can understand, decide, act on, or reply to. For readiness or current-state claims, retain concrete operational identifiers supplied as evidence, such as analytics event names, test names, system fields, version markers, or release markers; a generic summary such as “analytics is ready” is insufficient when those identifiers let the recipient verify the claim. Omit source trail and decorative detail without changing meaning; ordinary wording and formatting may assemble the supplied meaning but may not add facts.
+Compress correspondence, documents, and selected drafts into the facts and operational meaning the recipient needs. Preserve source-specific amounts, dates, names, events, statuses, dependencies, and decision distinctions whenever they affect what the recipient can understand, decide, act on, or reply to. Omit source trail and decorative detail without changing meaning; ordinary wording and formatting may assemble the supplied meaning but may not add facts.
+
+### Comparison rule
+
+When options are supplied, retain every source-supported criterion and trade-off that can affect the recipient's choice, including cost presence or absence, timing, exposure, dependency, or consequence. Compress repeated explanation, not a decision-relevant comparison factor.
+
+### Evidence rule
+
+For readiness or current-state claims, retain concrete operational identifiers supplied as evidence, such as analytics event names, test names, system fields, version markers, or release markers; a generic summary such as “analytics is ready” is insufficient when those identifiers let the recipient verify the claim.

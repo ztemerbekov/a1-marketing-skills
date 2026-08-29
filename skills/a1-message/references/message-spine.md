@@ -4,7 +4,7 @@
 
 Identify one recipient, the message purpose, the required awareness, decision, action, or reply, and every explicit channel or format constraint.
 
-**Complete when:** one recipient and one source-supported communication job determine what the message must enable.
+**Complete when:** one recipient and one source-supported communication job are identified, all supplied material is inventoried, and every explicit channel or format constraint is recorded.
 
 ## 2. Build the message map
 
@@ -16,16 +16,16 @@ Read [`source-policy.md`](source-policy.md). Separate the main point, necessary 
 
 Read [`message-structure.md`](message-structure.md). Order the content by recipient value: main point, necessary context, proposed or decided response, timing, then supporting detail. Select only the blocks the job needs.
 
-**Complete when:** the opening can stand alone and the remaining content answers the recipient's likely operational questions without repeating the source trail.
+**Complete when:** the opening states the current situation and needed response, decision, action, or reply—even when a selected draft is chronological; every included block answers a recipient operational question; and no source chronology or trail is repeated.
 
 ## 4. Draft or rewrite one compact message
 
-Process forwarded material into a short conclusion-bearing summary. Preserve a selected draft's supported meaning while replacing its reading path when rewriting. Make what happened, what matters, what is proposed or decided, what is required, and the supported next step recoverable at a glance.
+Draft or rewrite exactly one compact message in the requested channel and form. For a selected draft, preserve its supported meaning while replacing its source order with the recipient's current operational question. Make each applicable element—what happened, why it matters, what is proposed or decided, what is required, and the supported next step—recoverable at a glance; omit elements the job does not need.
 
-**Complete when:** what happened, why it matters, what is proposed or decided, what is required, and the supported next step are recoverable at a glance.
+**Complete when:** exactly one compact message is ready in the requested channel and form, and every applicable element is recoverable at a glance without unsupported completion details.
 
 ## 5. Read `final-qa.md` and revise
 
 Read [`final-qa.md`](final-qa.md) and revise the message against every applicable checklist item.
 
-**Complete when:** avoidable clarification caused by the message is removed and every substantive statement remains source-faithful.
+**Complete when:** every applicable Final QA checklist item passes, the message is ready in its requested output form, and no unsupported completion detail remains.

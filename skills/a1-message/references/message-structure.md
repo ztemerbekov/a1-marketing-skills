@@ -10,11 +10,11 @@ Use this priority order:
 4. timing;
 5. supporting detail.
 
-Rewrite toward the recipient's current operational question even when the input is chronological. The opening must stand alone: it should name the current situation and the response, decision, action, or reply the recipient needs. Move history below the current state when chronology would delay the job.
+Put the recipient's current operational question first in every message, including a selected-draft rewrite. Open with the current situation and the response, decision, action, or reply the recipient needs; preserve the draft's supported meaning, not its source order. Move history below the current state when chronology would delay the job.
 
 ## Source processing
 
-Summarize a forward or correspondence chain into a short conclusion-bearing update. Preserve source-supported event names, dates, statuses, dependencies, and decision boundaries that matter to the recipient; for readiness or current-state claims, retain concrete operational identifiers such as analytics event names, test names, system fields, version markers, or release markers so the recipient can verify the claim. Compress the source trail around those details rather than replacing them with a generic “ready” summary, and never turn the message into a pasted thread. When rewriting a selected draft, preserve its supported facts, decision status, and requested tone while replacing its reading path.
+Summarize a forward or correspondence chain into a short conclusion-bearing update. Preserve source-supported event names, dates, statuses, dependencies, and decision boundaries that matter to the recipient. Apply the comparison and evidence rules in [`source-policy.md`](source-policy.md) when options or readiness/current-state claims are present. Compress the source trail around those details rather than replacing them with a generic summary, and summarize rather than paste the thread. When rewriting a selected draft, preserve its supported facts, decision status, and requested tone while replacing its source order with the recipient's current operational question.
 
 ## Blocks and channel
 
@@ -28,13 +28,13 @@ Choose optional blocks from the recipient's likely questions rather than applyin
 - requested action or reply;
 - supporting detail.
 
-Use a compact messenger form or an ordinary business-email form that fits the requested channel. Add a subject only when the user requests one or the selected email artifact requires it.
+Use a compact messenger form or an ordinary business-email form that fits the requested channel.
 
 ## Scanability and next steps
 
-When the source supplies a decision-driving amount, exposure, deadline, or action anchor that the recipient must scan, bold its shortest text span once. Keep emphasis sparse by limiting bold to those source-supported anchors; do not bold whole sentences or decorate routine prose.
+Bold every materially distinct, source-supported anchor that the recipient uses to decide or reply now. When present, separately bold the requested-option cost, monetary exposure, and response cutoff; include a current commitment when it is the action anchor. Sparse emphasis excludes background or supporting numbers, but does not omit a distinct decision anchor. Bold each shortest text span once; leave historical, superseded, and merely supporting dates unbolded even when they are source facts. Keep emphasis sparse and never bold whole sentences or decorate routine prose.
 
-Make an operational next step contain only source-supported actor, action, timing, dependency, and post-approval consequence. Treat any generic diagnostic or recovery action as substantive and include it only when the source supplies it. If an owner or deadline is missing, make that gap visible while preserving the supported action. If approval is pending, state the supported approval step and keep its consequence conditional.
+Make an operational next step contain only source-supported actor, action, timing, dependency, and post-approval consequence. Apply the diagnostic boundary in [`source-policy.md`](source-policy.md) before adding an investigation, restoration, rerun, reconciliation, or log-check action. If an owner or deadline is missing, make that gap visible while preserving the supported action. If approval is pending, state the supported approval step and keep its consequence conditional.
 
 ## Target test
 
