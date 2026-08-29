@@ -34,7 +34,7 @@
     {
       "name": "2-editorial",
       "displayName": "Editorial",
-      "description": "Create source-grounded marketing communication—including articles, memos, pages, releases, cold emails, presentations, and company profiles—and polish drafts while preserving voice, facts, and human control.",
+      "description": "Create source-grounded marketing communication—including articles, memos, workplace messages for existing contacts, pages, releases, cold emails, presentations, and company profiles—and polish drafts while preserving voice, facts, and human control.",
       "category": "productivity",
       "keywords": [
         "Маркетинговые скиллы",
@@ -46,6 +46,7 @@
         "marketing-copy",
         "article-writing",
         "decision-memo",
+        "business-message",
         "promo-page",
         "press-release",
         "cold-email",
@@ -60,6 +61,7 @@
         "./a1-copy-editing",
         "./a1-article-writing",
         "./a1-decision-memo",
+        "./a1-message",
         "./a1-promo-page",
         "./a1-press-release",
         "./a1-cold-email",
@@ -87,6 +89,7 @@
         "editorial-review",
         "article-writing",
         "decision-memo",
+        "business-message",
         "promo-page",
         "press-release",
         "cold-email",
