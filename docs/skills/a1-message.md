@@ -22,7 +22,7 @@ One finished workplace message with the main point first, enough context to unde
 >
 > `/a1-message`
 >
-> Use the forwarded warehouse-delay correspondence and shipment notes to write one message to our warehouse manager. Put the delay first, preserve the source-supported recommendation and approval status, and ask for approval by the supplied cutoff.
+> Use the campaign report and performance-contractor thread to write one message to Elon Musk explaining why a fictional campaign to recruit the first wave of Mars travelers missed its target. Lead with the cause, preserve the source-supported impact of pausing the ads and the status of the new creative assets, recommend a recovery plan grounded in the materials, and ask him to approve it by Friday at 4:00 p.m.
 
 ## Common questions
 
