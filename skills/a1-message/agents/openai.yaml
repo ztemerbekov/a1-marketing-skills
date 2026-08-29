@@ -1,0 +1,7 @@
+interface:
+  display_name: "A1 Message"
+  short_description: "Turn working context into one actionable message"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.svg"
+  brand_color: "#FF6A00"
+  default_prompt: "Use $a1-message to turn the warehouse delay notes, two recovery options, and Friday cutoff into one message the operations director can approve without chasing details."
