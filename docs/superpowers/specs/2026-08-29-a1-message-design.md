@@ -163,6 +163,25 @@ Each case scores `Must Change`, `Must Preserve`, and `Forbidden` behavior. No ca
 
 During implementation, run the narrowest relevant checks after coherent edit batches. Before the pull request, run:
 
+### Post-implementation agent-document audit
+
+After the complete runtime skill has been drafted, apply `writing-for-agents` and its skill mechanics as a dedicated review pass across `SKILL.md` and every runtime reference. The audit must inspect:
+
+- whether the description is a precise model-facing context pointer for both entry branches;
+- whether steps and reference occupy the right information tier;
+- whether each stage has a checkable and exhaustive completion criterion;
+- whether related definitions, rules, and limits are co-located;
+- whether any meaning is duplicated or scattered across files;
+- whether positive target behavior can replace avoidable negation;
+- whether any line is stale, irrelevant, an environmental cache, or a no-op;
+- whether the package has sprawl that should be pruned or disclosed.
+
+Record concrete findings in the working review, fix every material deficiency, and rerun the audit against the revised runtime files. The audit is complete when no material pointer, hierarchy, completion, co-location, duplication, relevance, or no-op defect remains.
+
+### Deterministic validation
+
+After the agent-document audit passes, run:
+
 ```bash
 bash -n scripts/validate-skills.sh
 ./scripts/validate-skills.sh
@@ -180,5 +199,6 @@ Manually compare every public catalog and review the final `default_prompt` for 
 - The message is conclusion-first, source-faithful, compact, scannable, and operational about the supported response or next step.
 - Missing material is handled without invention or unnecessary blocking.
 - Neighbor skills retain clear, documented boundaries.
+- A post-implementation `writing-for-agents` audit has found and resolved every material runtime-document defect before deterministic validation.
 - English and Russian documentation, manifests, catalogs, icons, and evaluation cases are complete and synchronized.
 - Every deterministic validation passes after the final edit.
