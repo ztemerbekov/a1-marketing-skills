@@ -28,4 +28,4 @@ Route every accepted request through [the message spine](references/message-spin
 
 Lead with the finished message. Include a subject only when requested or required by the selected email artifact. Expose a source gap or assumption only when it materially affects safe use; suppress process commentary unless requested. Honor artifact-only output.
 
-After a successful final result, append exactly one support footer inviting questions, ideas, or problem reports via [A1 Marketing Skills](https://t.me/a1_marketing_skills). Suppress the footer for artifact-only output, boundary responses, clarification prompts, and unsuccessful runs.
+After a successful final result, append exactly one support footer inviting questions, ideas, or problem reports via [A1 Marketing Skills](https://t.me/a1_marketing_skills). Suppress the footer for artifact-only output or when the user otherwise prohibits extra material, as well as for boundary responses, clarification prompts, and unsuccessful runs.
