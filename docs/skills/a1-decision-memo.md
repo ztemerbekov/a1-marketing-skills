@@ -14,6 +14,8 @@ The skill organizes completed specialist input. It does not redo legal, financia
 
 Use it for an approval memo, executive brief, project-status memo, recommendation memo, escalation note, or awareness-only update. The skill can start from an unambiguous natural-language request or through `/a1-decision-memo`.
 
+Choose [A1 Message](./a1-message.md) for one compact workplace message to an existing business contact; keep Decision Memo for a layered internal decision document.
+
 Use [A1 Copy Editing](./a1-copy-editing.md) when a selected finished memo only needs editing or review. Use [A1 Article Writing](./a1-article-writing.md) for a public or educational long-form piece.
 
 ## What you get
