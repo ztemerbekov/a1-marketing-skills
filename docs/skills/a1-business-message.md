@@ -12,7 +12,7 @@ A1 Business Message turns supplied workplace facts, notes, correspondence, docum
 
 Use it when a manager, colleague, employee, contractor, partner, or existing client needs to understand something, make a decision, approve a proposal, take an action, or reply. Start with an ordinary-language request or `/a1-business-message`.
 
-Bring either the material from which the message should be assembled, or one selected workplace-message draft that needs to be rewritten for the same job. Use [A1 Decision Memo](./a1-decision-memo.md) for a layered internal decision document, [A1 Cold Email](./a1-cold-email.md) for first contact, and [A1 Copy Editing](./a1-copy-editing.md) for general editing or review of a selected marketing or editorial draft.
+Bring either the material from which the message should be assembled, or one selected workplace-message draft that needs to be rewritten for the same job. Use [A1 Decision Memo](./a1-decision-memo.md) for a standalone layered, reference-ready internal document whose supporting detail, options, evidence, risks, recommendation, or decision record must remain inspectable, even when delivered by email. Retain Business Message for the lightest complete job that fits one compact send-ready message; the communication goal alone does not choose the boundary. If both shapes remain materially plausible and the choice would materially change depth or structure, ask which artifact shape the user wants. Use [A1 Cold Email](./a1-cold-email.md) for first contact and [A1 Copy Editing](./a1-copy-editing.md) for general editing or review of a selected marketing or editorial draft.
 
 ## What you get
 

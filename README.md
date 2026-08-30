@@ -201,7 +201,7 @@ Article Writing creates an article, guide, case study, expert piece, or newslett
 
 <br>
 
-Decision Memo turns reports, correspondence, notes, analysis, or chronology into one internal memo for a specific reader. The opening makes clear what happened, why it matters, and whether the reader must decide, respond, approve, or act.
+Decision Memo turns reports, correspondence, notes, analysis, or chronology into one standalone layered, reference-ready internal memo for a specific reader. The opening makes clear what happened, why it matters, and whether the reader must decide, respond, approve, or act; supporting detail remains inspectable even when the document is delivered by email.
 
 **What you get:** a self-contained summary followed by conclusions, options, risks, unknowns, next steps, and the necessary background. The skill organizes completed specialist input but does not redo legal, financial, or technical analysis or invent the decision.
 
@@ -220,7 +220,7 @@ Decision Memo turns reports, correspondence, notes, analysis, or chronology into
 
 <br>
 
-Business Message turns supplied working context or a selected workplace-message draft into one compact message for an existing business contact. It supports two input branches: assemble from facts, notes, correspondence, documents, tables, or transcript material; or rewrite one selected draft for the same source-supported communication job.
+Business Message turns supplied working context or a selected workplace-message draft into one compact send-ready message for an existing business contact. It supports two input branches: assemble from facts, notes, correspondence, documents, tables, or transcript material; or rewrite one selected draft for the same source-supported communication job. Use Decision Memo for a standalone layered, reference-ready internal document even when it is delivered by email.
 
 **What you get:** one message with the point first, enough context, clear recommendation or decision status, and an operational next step. It does not invent facts, solutions, owners, deadlines, approvals, or decisions; when the sources contain no solution or deadline, that gap remains visible.
 
