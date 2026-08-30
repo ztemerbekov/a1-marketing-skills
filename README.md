@@ -49,6 +49,7 @@
 | [Copy Editing](./docs/skills/a1-copy-editing.md)<br>`/a1-copy-editing` | Edit an existing draft without adding facts or losing the author's voice. |
 | [Article Writing](./docs/skills/a1-article-writing.md)<br>`/a1-article-writing` | Create an article, guide, case study, or newsletter from supplied material and verified sources. |
 | [Decision Memo](./docs/skills/a1-decision-memo.md)<br>`/a1-decision-memo` | Build an internal memo that makes clear what happened and what decision is needed. |
+| [Message](./docs/skills/a1-message.md)<br>`/a1-message` | Turn working context or a selected draft into one workplace message that is easy to understand and answer. |
 | [Promo Page](./docs/skills/a1-promo-page.md)<br>`/a1-promo-page` | Create a promotional page for one audience with a clear offer, evidence, and next step. |
 | [Press Release](./docs/skills/a1-press-release.md)<br>`/a1-press-release` | Prepare a press release with confirmed facts for distribution or approval. |
 | [Cold Email](./docs/skills/a1-cold-email.md)<br>`/a1-cold-email` | Write one personalized first-contact email from supplied recipient, offer, and proof facts. |
@@ -211,6 +212,25 @@ Decision Memo turns reports, correspondence, notes, analysis, or chronology into
 > Turn the launch notes, finance-team comments, and risk list into a memo for the COO, who must approve or postpone the launch.
 
 [Learn more about Decision Memo](./docs/skills/a1-decision-memo.md)
+
+</details>
+
+<details>
+<summary><strong>Message — turns working context into one answerable workplace message</strong></summary>
+
+<br>
+
+Message turns supplied working context or a selected workplace-message draft into one compact message for an existing business contact. It supports two input branches: assemble from facts, notes, correspondence, documents, tables, or transcript material; or rewrite one selected draft for the same source-supported communication job.
+
+**What you get:** one message with the point first, enough context, clear recommendation or decision status, and an operational next step. It does not invent facts, solutions, owners, deadlines, approvals, or decisions; when the sources contain no solution or deadline, that gap remains visible.
+
+> **Try asking:**
+>
+> `/a1-message`
+>
+> Use the campaign report and performance-contractor thread to write one message to Elon Musk explaining why a fictional campaign to recruit the first wave of Mars travelers missed its target. Lead with the cause, preserve the source-supported impact of pausing the ads and the status of the new creative assets, recommend a recovery plan grounded in the materials, and ask him to approve it by Friday at 4:00 p.m.
+
+[Learn more about Message](./docs/skills/a1-message.md)
 
 </details>
 

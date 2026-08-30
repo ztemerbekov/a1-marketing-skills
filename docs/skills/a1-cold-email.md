@@ -12,6 +12,8 @@ The skill turns supplied recipient, relationship, sender, offer, and proof facts
 
 Use it when no prior conversation exists and you need one new outreach email. Supply a recipient dossier or completed prospect research, the offer, relevant proof, and any sender context that makes the contact legitimate.
 
+Choose [A1 Message](./a1-message.md) when the recipient is an existing business contact or the conversation is continuing; keep Cold Email for first contact.
+
 It does not research prospects, create bulk templates or sequences, continue an existing conversation, or edit a selected draft.
 
 ## What you get
