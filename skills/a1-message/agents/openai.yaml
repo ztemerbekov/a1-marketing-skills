@@ -4,4 +4,4 @@ interface:
   icon_small: "./assets/icon-small.svg"
   icon_large: "./assets/icon-large.svg"
   brand_color: "#FF6A00"
-  default_prompt: "Use $a1-message to turn a report on a fictional campaign to recruit the first wave of Mars travelers and a performance-marketing contractor thread into one message Elon Musk can use to approve a recovery plan by Friday without chasing why the campaign missed its target, what pausing the ads changed, or whether the new creative assets are ready."
+  default_prompt: "Use $a1-message to brief my boss, Elon Musk, from this contractor thread on the fictional Mars campaign failure, recovery trade-offs, and decision needed by Friday."
