@@ -36,7 +36,7 @@ Check the assembled message against every applicable item in this checklist.
 
 - [ ] The message is compact for its requested messenger or business-email channel.
 - [ ] Tone and directness match the instruction and relationship.
-- [ ] The emphasis rule in [`message-structure.md`](message-structure.md) is satisfied: only sparse, current decision/reply anchors are bolded; historical, superseded, and merely supporting dates are not bolded merely because they are dates.
+- [ ] The emphasis rule in [`message-structure.md`](message-structure.md) is satisfied: apply sparse emphasis only when the requested channel or format supports it and the user has not prohibited formatting; otherwise preserve current decision/reply anchors as ordinary text and make them scannable through placement and wording. When emphasis is supported, historical, superseded, and merely supporting dates are not bolded merely because they are dates.
 - [ ] Sentences are concrete, readable, and free of process commentary unless requested.
 - [ ] The recipient set can recover every applicable element—what happened, why it matters, what is proposed or decided, what is required, and the supported next step—at a glance.
 
