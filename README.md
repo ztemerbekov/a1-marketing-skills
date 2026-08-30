@@ -49,7 +49,7 @@
 | [Copy Editing](./docs/skills/a1-copy-editing.md)<br>`/a1-copy-editing` | Edit an existing draft without adding facts or losing the author's voice. |
 | [Article Writing](./docs/skills/a1-article-writing.md)<br>`/a1-article-writing` | Create an article, guide, case study, or newsletter from supplied material and verified sources. |
 | [Decision Memo](./docs/skills/a1-decision-memo.md)<br>`/a1-decision-memo` | Build an internal memo that makes clear what happened and what decision is needed. |
-| [Business Message](./docs/skills/a1-business-message.md)<br>`/a1-business-message` | Turn working context or a selected draft into one workplace message that is easy to understand and answer. |
+| [Business Message](./docs/skills/a1-business-message.md)<br>`/a1-business-message` | Turn working context or a selected draft into one clear workplace message. |
 | [Landing Page Copy](./docs/skills/a1-landing-page-copy.md)<br>`/a1-landing-page-copy` | Create landing-page copy for one audience with a clear offer, evidence, and next step. |
 | [Press Release](./docs/skills/a1-press-release.md)<br>`/a1-press-release` | Prepare a press release with confirmed facts for distribution or approval. |
 | [Cold Email](./docs/skills/a1-cold-email.md)<br>`/a1-cold-email` | Write one personalized first-contact email from supplied recipient, offer, and proof facts. |
@@ -216,13 +216,13 @@ Decision Memo turns reports, correspondence, notes, analysis, or chronology into
 </details>
 
 <details>
-<summary><strong>Business Message — turns working context into one answerable workplace message</strong></summary>
+<summary><strong>Business Message — turns working context into one clear workplace message</strong></summary>
 
 <br>
 
-Business Message turns supplied working context or a selected workplace-message draft into one compact send-ready message for an existing business contact. It supports two input branches: assemble from facts, notes, correspondence, documents, tables, or transcript material; or rewrite one selected draft for the same source-supported communication job. Use Decision Memo for a standalone layered, reference-ready internal document even when it is delivered by email.
+Business Message turns supplied working context or a selected workplace-message draft into one compact send-ready message for one existing business contact or one coherent group of existing business contacts whose members share one communication job—awareness/status, decision, action, or reply—and need the same relevant facts and disclosure level. When audience jobs materially diverge by facts, action or decision, confidentiality or disclosure, or wording, it identifies the separate message jobs, asks which eligible message to start, and produces no partial message until you select one. It supports two input branches: assemble from facts, notes, correspondence, documents, tables, or transcript material; or rewrite one selected draft for the same source-supported communication job. Use Decision Memo for a standalone layered, reference-ready internal document even when it is delivered by email.
 
-**What you get:** one message with the point first, enough context, clear recommendation or decision status, and an operational next step. It does not invent facts, solutions, owners, deadlines, approvals, or decisions; when the sources contain no solution or deadline, that gap remains visible.
+**What you get:** one message with the point first and enough context; when the job calls for it, a clear recommendation or decision status and an operational next step. An awareness/status job can simply make the current status clear. It does not invent facts, solutions, owners, deadlines, approvals, or decisions; when the sources contain no solution or deadline, that gap remains visible.
 
 > **Try asking:**
 >
