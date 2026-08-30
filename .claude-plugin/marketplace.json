@@ -32,8 +32,8 @@
       ]
     },
     {
-      "name": "2-editorial",
-      "displayName": "Editorial",
+      "name": "2-writing-and-editing",
+      "displayName": "Writing & Editing",
       "description": "Create source-grounded marketing communication—including articles, memos, workplace messages for existing contacts, pages, releases, cold emails, presentations, and company profiles—and polish drafts while preserving voice, facts, and human control.",
       "category": "productivity",
       "keywords": [
@@ -47,7 +47,7 @@
         "article-writing",
         "decision-memo",
         "business-message",
-        "promo-page",
+        "landing-page-copy",
         "press-release",
         "cold-email",
         "presentation-copy",
@@ -61,8 +61,8 @@
         "./a1-copy-editing",
         "./a1-article-writing",
         "./a1-decision-memo",
-        "./a1-message",
-        "./a1-promo-page",
+        "./a1-business-message",
+        "./a1-landing-page-copy",
         "./a1-press-release",
         "./a1-cold-email",
         "./a1-presentation-copy",
@@ -90,7 +90,7 @@
         "article-writing",
         "decision-memo",
         "business-message",
-        "promo-page",
+        "landing-page-copy",
         "press-release",
         "cold-email",
         "presentation-copy",
@@ -101,7 +101,7 @@
       "strict": false,
       "dependencies": [
         "1-marketing-strategies",
-        "2-editorial"
+        "2-writing-and-editing"
       ]
     }
   ]

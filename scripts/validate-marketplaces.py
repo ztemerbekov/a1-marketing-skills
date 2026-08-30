@@ -45,8 +45,8 @@ CLAUDE_PACKAGES = {
         "displayName": "Marketing Strategies",
         "category": "productivity",
     },
-    "2-editorial": {
-        "displayName": "Editorial",
+    "2-writing-and-editing": {
+        "displayName": "Writing & Editing",
         "category": "productivity",
     },
 }
@@ -571,7 +571,7 @@ full_plugin_keywords = {
 for label, (keywords, path) in full_plugin_keywords.items():
     require_product_search_names(keywords, path, f"{label} full-plugin keywords")
 
-for package_name in ("1-marketing-strategies", "2-editorial"):
+for package_name in ("1-marketing-strategies", "2-writing-and-editing"):
     package_keywords = keyword_set(
         claude_plugin_entries[package_name],
         MANIFEST_PATHS["claude marketplace"],

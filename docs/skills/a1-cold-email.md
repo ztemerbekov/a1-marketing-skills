@@ -12,7 +12,7 @@ The skill turns supplied recipient, relationship, sender, offer, and proof facts
 
 Use it when no prior conversation exists and you need one new outreach email. Supply a recipient dossier or completed prospect research, the offer, relevant proof, and any sender context that makes the contact legitimate.
 
-Choose [A1 Message](./a1-message.md) when the recipient is an existing business contact or the conversation is continuing; keep Cold Email for first contact.
+Choose [A1 Business Message](./a1-business-message.md) when the recipient is an existing business contact or the conversation is continuing; keep Cold Email for first contact.
 
 It does not research prospects, create bulk templates or sequences, continue an existing conversation, or edit a selected draft.
 
@@ -50,4 +50,4 @@ It keeps the uncertainty visible and writes a proportionate question or stops fo
 
 ## Related skills
 
-[A1 Copywriting](./a1-copywriting.md) creates new marketing copy when you want to start from the communication goal rather than choose a format. Use [A1 Promo Page](./a1-promo-page.md) for the offer page that an outreach message may point to.
+[A1 Copywriting](./a1-copywriting.md) creates new written communication when you want to start from the communication goal rather than choose a format. Use [A1 Landing Page Copy](./a1-landing-page-copy.md) for the offer page that an outreach message may point to.

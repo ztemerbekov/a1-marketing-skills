@@ -1,11 +1,11 @@
 ---
-name: a1-message
+name: a1-business-message
 description: Draft or rewrite one self-contained workplace message from supplied facts, source material, or a selected draft when an existing business contact needs to understand, decide, act, or reply without avoidable follow-up.
 metadata:
   author: Zinnur Temerbekov
 ---
 
-# Message
+# Business Message
 
 Create or rewrite one self-contained workplace message so its recipient can understand, decide, act, or reply without avoidable follow-up.
 

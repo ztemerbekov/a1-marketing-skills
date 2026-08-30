@@ -48,4 +48,4 @@ Yes, when the source data supports them. A visual instruction never supplies mis
 
 ## Related skills
 
-[A1 Copywriting](./a1-copywriting.md) creates new marketing copy when you want to start from the communication goal rather than choose a format. Use [A1 Decision Memo](./a1-decision-memo.md) for a self-contained internal decision document rather than a presentation.
+[A1 Copywriting](./a1-copywriting.md) creates new written communication when you want to start from the communication goal rather than choose a format. Use [A1 Decision Memo](./a1-decision-memo.md) for a self-contained internal decision document rather than a presentation.

@@ -1,6 +1,6 @@
-# promo-offer-input-002 — Completed Offer Inputs Stay Source Bound
+# landing-page-offer-input-002 — Completed Offer Inputs Stay Source Bound
 
-- ID: `promo-offer-input-002`
+- ID: `landing-page-offer-input-002`
 - Operation: `Draft`
 - Risk: The skill fabricates proof, urgency, guarantees, or a stronger outcome to complete a promotional page.
 - Scope Scenario: `Completed external input`

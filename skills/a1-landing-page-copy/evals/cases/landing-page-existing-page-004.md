@@ -1,8 +1,8 @@
-# promo-existing-page-004 — Existing Page Routes to Copy Editing
+# landing-page-existing-page-004 — Existing Page Routes to Copy Editing
 
-- ID: `promo-existing-page-004`
+- ID: `landing-page-existing-page-004`
 - Operation: `Entry Contract`
-- Risk: Promo Page rewrites or re-architects a selected existing page during an editing-only request.
+- Risk: Landing Page Copy rewrites or re-architects a selected existing page during an editing-only request.
 - Scope Scenario: `Out of scope`
 
 ## User Instruction

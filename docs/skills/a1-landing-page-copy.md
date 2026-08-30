@@ -1,8 +1,8 @@
-# A1 Promo Page
+# A1 Landing Page Copy
 
-**English** | [Русский](./a1-promo-page.ru.md)
+**English** | [Русский](./a1-landing-page-copy.ru.md)
 
-Use A1 Promo Page when one audience needs to understand one offer, judge whether it fits, and take a clear next step.
+Use A1 Landing Page Copy when one audience needs to understand one offer, judge whether it fits, and take a clear next step.
 
 ## The job
 
@@ -12,7 +12,7 @@ The skill builds persuasion from the audience's situation, the offer's mechanism
 
 ## When to use it
 
-Ask for a blueprint when you need page blocks, wire copy, or a content plan. Ask for a draft when you need the page copy in production order. The skill can start from an unambiguous natural-language request or through `/a1-promo-page`.
+Ask for a blueprint when you need page blocks, wire copy, or a content plan. Ask for a draft when you need the page copy in production order. The skill can start from an unambiguous natural-language request or through `/a1-landing-page-copy`.
 
 Use [A1 Copy Editing](./a1-copy-editing.md) when a selected existing page needs editing or review. Use [A1 Article Writing](./a1-article-writing.md) for educational long-form content and [A1 Press Release](./a1-press-release.md) for a media announcement.
 

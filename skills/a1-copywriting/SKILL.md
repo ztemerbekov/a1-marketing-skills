@@ -1,24 +1,25 @@
 ---
 name: a1-copywriting
-description: Turn a user's goal, facts, and source materials into finished marketing copy in the format the goal requires; use for broad copywriting requests or when the format is not yet clear.
+description: Turn a user's communication goal, facts, and source materials into finished written communication in the format the goal requires; use for broad copywriting requests or when the format is not yet clear.
 metadata:
   author: Zinnur Temerbekov
 ---
 
 # Copywriting
 
-Route a request for one new marketing artifact to the A1 skill that owns that format. This skill classifies and hands off; it does not write copy.
+Route a request for one new written communication artifact to the A1 skill that owns that format. This skill classifies and hands off; it does not write copy.
 
 ## Entry Contract
 
-Accept a request when the user explicitly invokes this skill for new marketing copy or asks for copywriting without naming one unambiguous supported deliverable.
+Accept a request when the user explicitly invokes this skill for new written communication or asks for copywriting without naming one unambiguous supported deliverable.
 
 Classify the complete request before invoking another skill:
 
-- a landing, product, service, course, event, or signup page belongs to `a1-promo-page`;
+- a landing, product, service, course, event, or signup page belongs to `a1-landing-page-copy`;
 - a routine media announcement belongs to `a1-press-release`;
 - an article, guide, case study, expert essay, or newsletter issue belongs to `a1-article-writing`;
 - an internal document organized around a decision, response, or awareness update belongs to `a1-decision-memo`;
+- one compact workplace message for a manager, colleague, employee, contractor, partner, or existing client belongs to `a1-business-message`;
 - one personalized cold outreach email belongs to `a1-cold-email`;
 - a presentation outline or slide-by-slide copy belongs to `a1-presentation-copy`;
 - a public company profile or About page belongs to `a1-company-profile`.

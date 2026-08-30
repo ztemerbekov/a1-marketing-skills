@@ -1,4 +1,4 @@
-# Promo-Page Spine
+# Landing Page Copy Spine
 
 Every completed run follows these stages in order.
 

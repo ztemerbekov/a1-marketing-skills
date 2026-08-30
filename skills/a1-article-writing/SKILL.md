@@ -18,7 +18,7 @@ Select **Outline** when the user asks for a plan, structure, angle, or evidence 
 Route these neighboring jobs elsewhere:
 
 - editing or reviewing a user-selected finished draft belongs to `a1-copy-editing`;
-- a promotional page belongs to `a1-promo-page`;
+- a promotional page belongs to `a1-landing-page-copy`;
 - a routine media announcement belongs to `a1-press-release`;
 - an internal document organized around a decision belongs to `a1-decision-memo`.
 

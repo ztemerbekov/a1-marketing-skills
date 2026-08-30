@@ -19,7 +19,7 @@ The product launches on October 8. It imports approved support articles into an 
 
 ## Must Change
 
-- [ ] Identify `a1-promo-page` as the page owner and `a1-press-release` as the release owner.
+- [ ] Identify `a1-landing-page-copy` as the page owner and `a1-press-release` as the release owner.
 - [ ] Ask which deliverable to start.
 
 ## Must Preserve

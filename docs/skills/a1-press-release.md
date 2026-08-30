@@ -50,4 +50,4 @@ No. Those formats need different legal, regulatory, approval, and risk controls.
 
 ## Related skills
 
-[A1 Copy Editing](./a1-copy-editing.md) improves a selected existing release. [A1 Promo Page](./a1-promo-page.md) presents an offer directly to a potential buyer; [A1 Article Writing](./a1-article-writing.md) creates long-form editorial work.
+[A1 Copy Editing](./a1-copy-editing.md) improves a selected existing release. [A1 Landing Page Copy](./a1-landing-page-copy.md) presents an offer directly to a potential buyer; [A1 Article Writing](./a1-article-writing.md) creates long-form editorial work.

@@ -1,4 +1,4 @@
-# article-mixed-job-003 — Article and Promo Page Stop Before Partial Work
+# article-mixed-job-003 — Article and Landing Page Copy Stop Before Partial Work
 
 - ID: `article-mixed-job-003`
 - Operation: `Entry Contract`

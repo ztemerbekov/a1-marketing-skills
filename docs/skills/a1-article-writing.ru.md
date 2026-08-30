@@ -46,4 +46,4 @@
 
 ## Соседние навыки
 
-[A1 Copy Editing](./a1-copy-editing.ru.md) улучшает выбранные готовые черновики. [A1 Promo Page](./a1-promo-page.ru.md), [A1 Press Release](./a1-press-release.ru.md) и [A1 Decision Memo](./a1-decision-memo.ru.md) создают материалы своих форматов.
+[A1 Copy Editing](./a1-copy-editing.ru.md) улучшает выбранные готовые черновики. [A1 Landing Page Copy](./a1-landing-page-copy.ru.md), [A1 Press Release](./a1-press-release.ru.md) и [A1 Decision Memo](./a1-decision-memo.ru.md) создают материалы своих форматов.

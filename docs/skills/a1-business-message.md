@@ -1,16 +1,16 @@
-# A1 Message
+# A1 Business Message
 
-**English** | [Русский](./a1-message.ru.md)
+**English** | [Русский](./a1-business-message.ru.md)
 
-Use A1 Message when one existing business contact needs one clear workplace message built from supplied context or a selected draft.
+Use A1 Business Message when one existing business contact needs one clear workplace message built from supplied context or a selected draft.
 
 ## The job
 
-A1 Message turns supplied workplace facts, notes, correspondence, documents, tables, or transcript material into one compact message for an existing business contact. It can also rewrite one selected workplace-message draft for the same source-supported communication job. The result keeps the recipient's current question visible without turning missing facts into confident wording.
+A1 Business Message turns supplied workplace facts, notes, correspondence, documents, tables, or transcript material into one compact message for an existing business contact. It can also rewrite one selected workplace-message draft for the same source-supported communication job. The result keeps the recipient's current question visible without turning missing facts into confident wording.
 
 ## When to use it
 
-Use it when a manager, colleague, employee, contractor, partner, or existing client needs to understand something, make a decision, approve a proposal, take an action, or reply. Start with an ordinary-language request or `/a1-message`.
+Use it when a manager, colleague, employee, contractor, partner, or existing client needs to understand something, make a decision, approve a proposal, take an action, or reply. Start with an ordinary-language request or `/a1-business-message`.
 
 Bring either the material from which the message should be assembled, or one selected workplace-message draft that needs to be rewritten for the same job. Use [A1 Decision Memo](./a1-decision-memo.md) for a layered internal decision document, [A1 Cold Email](./a1-cold-email.md) for first contact, and [A1 Copy Editing](./a1-copy-editing.md) for general editing or review of a selected marketing or editorial draft.
 
@@ -20,7 +20,7 @@ One finished workplace message with the main point first, enough context to unde
 
 > **Try asking:**
 >
-> `/a1-message`
+> `/a1-business-message`
 >
 > Use the campaign report and performance-contractor thread to write one message to Elon Musk explaining why a fictional campaign to recruit the first wave of Mars travelers missed its target. Lead with the cause, preserve the source-supported impact of pausing the ads and the status of the new creative assets, recommend a recovery plan grounded in the materials, and ask him to approve it by Friday at 4:00 p.m.
 

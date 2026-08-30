@@ -6,6 +6,7 @@ Notable user-facing changes to A1 Marketing Skills are recorded here. Git tags a
 
 ### Changed
 
+- Rename Editorial to Writing & Editing, rename A1 Message to A1 Business Message, rename A1 Promo Page to A1 Landing Page Copy, and route broad existing-contact message requests from A1 Copywriting to A1 Business Message.
 - Localize example prompts in the Russian README and skill documentation.
 - Give every OpenAI skill a vivid, outcome-focused starter prompt built around a concrete use case.
 - Restore Marketing Context to its skills.sh group, order the skills CLI groups as Marketing Strategies then Editorial, and align the Claude package display names.

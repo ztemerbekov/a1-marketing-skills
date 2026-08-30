@@ -46,4 +46,4 @@ No. The structure follows the reader's job and the material: questions, stages, 
 
 ## Related skills
 
-[A1 Copy Editing](./a1-copy-editing.md) improves selected existing drafts. [A1 Promo Page](./a1-promo-page.md), [A1 Press Release](./a1-press-release.md), and [A1 Decision Memo](./a1-decision-memo.md) create their own formats.
+[A1 Copy Editing](./a1-copy-editing.md) improves selected existing drafts. [A1 Landing Page Copy](./a1-landing-page-copy.md), [A1 Press Release](./a1-press-release.md), and [A1 Decision Memo](./a1-decision-memo.md) create their own formats.

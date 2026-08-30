@@ -41,16 +41,16 @@
 | [Consumer Psychology](./docs/skills/a1-consumer-psy.md)<br>`/a1-consumer-psy` | Test a consumer hypothesis or explain a test result using scientific research. |
 | [Marketing Context](./docs/skills/a1-marketing-context.md)<br>`/a1-marketing-context` | Save confirmed product, audience, and brand-voice inputs for future work. |
 
-### Editorial
+### Writing & Editing
 
 | Skill | Use it to |
 | --- | --- |
-| [Copywriting](./docs/skills/a1-copywriting.md)<br>`/a1-copywriting` | Turn a communication goal, facts, and source material into finished marketing copy in the right format. |
+| [Copywriting](./docs/skills/a1-copywriting.md)<br>`/a1-copywriting` | Turn a communication goal, facts, and source material into finished written communication in the right format. |
 | [Copy Editing](./docs/skills/a1-copy-editing.md)<br>`/a1-copy-editing` | Edit an existing draft without adding facts or losing the author's voice. |
 | [Article Writing](./docs/skills/a1-article-writing.md)<br>`/a1-article-writing` | Create an article, guide, case study, or newsletter from supplied material and verified sources. |
 | [Decision Memo](./docs/skills/a1-decision-memo.md)<br>`/a1-decision-memo` | Build an internal memo that makes clear what happened and what decision is needed. |
-| [Message](./docs/skills/a1-message.md)<br>`/a1-message` | Turn working context or a selected draft into one workplace message that is easy to understand and answer. |
-| [Promo Page](./docs/skills/a1-promo-page.md)<br>`/a1-promo-page` | Create a promotional page for one audience with a clear offer, evidence, and next step. |
+| [Business Message](./docs/skills/a1-business-message.md)<br>`/a1-business-message` | Turn working context or a selected draft into one workplace message that is easy to understand and answer. |
+| [Landing Page Copy](./docs/skills/a1-landing-page-copy.md)<br>`/a1-landing-page-copy` | Create landing-page copy for one audience with a clear offer, evidence, and next step. |
 | [Press Release](./docs/skills/a1-press-release.md)<br>`/a1-press-release` | Prepare a press release with confirmed facts for distribution or approval. |
 | [Cold Email](./docs/skills/a1-cold-email.md)<br>`/a1-cold-email` | Write one personalized first-contact email from supplied recipient, offer, and proof facts. |
 | [Presentation Copy](./docs/skills/a1-presentation-copy.md)<br>`/a1-presentation-copy` | Structure a new presentation or write its slide-by-slide message from supplied material. |
@@ -138,13 +138,13 @@ Marketing Context stores product facts, audience, positioning, brand voice, evid
 </details>
 
 <details>
-<summary><strong>Copywriting — turns your inputs into finished marketing copy</strong></summary>
+<summary><strong>Copywriting — turns your inputs into finished written communication</strong></summary>
 
 <br>
 
-Copywriting turns a goal, audience, facts, and source material into finished marketing copy. It can create promotional pages, press releases, articles, decision memos, cold emails, presentation copy, and company profiles while applying the requirements of each format.
+Copywriting turns a goal, audience, facts, and source material into finished written communication. It can create landing-page copy, press releases, articles, decision memos, business messages, cold emails, presentation copy, and company profiles while applying the requirements of each format.
 
-**What you get:** one finished marketing text in the format that fits the stated goal. If the request contains several independent texts, the skill asks which one to create first. A selected existing draft remains a separate editing job.
+**What you get:** one finished text in the format that fits the stated goal. If the request contains several independent texts, the skill asks which one to create first. A selected existing draft remains a separate editing job.
 
 > **Try asking:**
 >
@@ -216,40 +216,40 @@ Decision Memo turns reports, correspondence, notes, analysis, or chronology into
 </details>
 
 <details>
-<summary><strong>Message — turns working context into one answerable workplace message</strong></summary>
+<summary><strong>Business Message — turns working context into one answerable workplace message</strong></summary>
 
 <br>
 
-Message turns supplied working context or a selected workplace-message draft into one compact message for an existing business contact. It supports two input branches: assemble from facts, notes, correspondence, documents, tables, or transcript material; or rewrite one selected draft for the same source-supported communication job.
+Business Message turns supplied working context or a selected workplace-message draft into one compact message for an existing business contact. It supports two input branches: assemble from facts, notes, correspondence, documents, tables, or transcript material; or rewrite one selected draft for the same source-supported communication job.
 
 **What you get:** one message with the point first, enough context, clear recommendation or decision status, and an operational next step. It does not invent facts, solutions, owners, deadlines, approvals, or decisions; when the sources contain no solution or deadline, that gap remains visible.
 
 > **Try asking:**
 >
-> `/a1-message`
+> `/a1-business-message`
 >
 > Use the campaign report and performance-contractor thread to write one message to Elon Musk explaining why a fictional campaign to recruit the first wave of Mars travelers missed its target. Lead with the cause, preserve the source-supported impact of pausing the ads and the status of the new creative assets, recommend a recovery plan grounded in the materials, and ask him to approve it by Friday at 4:00 p.m.
 
-[Learn more about Message](./docs/skills/a1-message.md)
+[Learn more about Business Message](./docs/skills/a1-business-message.md)
 
 </details>
 
 <details>
-<summary><strong>Promo Page — presents one offer to one audience with one action</strong></summary>
+<summary><strong>Landing Page Copy — presents one offer to one audience with one action</strong></summary>
 
 <br>
 
-Promo Page creates the structure or copy for a landing, product, service, course, event, or signup page. It helps one audience understand the offer, evaluate its supporting evidence, and take the next step.
+Landing Page Copy creates the structure or copy for a landing, product, service, course, event, or signup page. It helps one audience understand the offer, evaluate its supporting evidence, and take the next step.
 
 **What you get:** an ordered page blueprint or finished copy with the message, evidence, conditions, call to action, and requirements for useful visuals. The skill does not invent product strategy, testimonials, results, prices, guarantees, urgency, or scarcity.
 
 > **Try asking:**
 >
-> `/a1-promo-page`
+> `/a1-landing-page-copy`
 >
 > Write a page for this B2B service using the attached offer, customer evidence, price, and implementation terms.
 
-[Learn more about Promo Page](./docs/skills/a1-promo-page.md)
+[Learn more about Landing Page Copy](./docs/skills/a1-landing-page-copy.md)
 
 </details>
 
