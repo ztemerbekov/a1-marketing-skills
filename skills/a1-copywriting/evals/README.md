@@ -12,3 +12,4 @@ These manual cases protect hybrid route-or-write behavior, format ownership, mix
 - `copywriting-direct-ordinary-copy-006`: an ordinary marketing-copy request with no listed A1 owner is written directly.
 - `copywriting-specialist-boundary-007`: a specialist or high-stakes format remains outside generic fallback.
 - `copywriting-mixed-route-direct-008`: routed and direct-fallback deliverables are classified before the user chooses one.
+- `copywriting-route-decision-memo-009`: a layered, reference-ready decision document reaches Decision Memo even when delivered by email.

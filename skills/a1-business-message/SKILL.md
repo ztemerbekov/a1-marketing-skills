@@ -16,9 +16,9 @@ Accept one workplace message for a manager, colleague, employee, contractor, par
 - assemble a new message from supplied facts, notes, correspondence, documents, tables, or transcript material;
 - rewrite one selected workplace-message draft for the same source-supported communication job.
 
-The accepted artifact is one compact messenger or ordinary business-email message for an existing business relationship. A completed specialist analysis, report, legal review, financial model, technical assessment, or project plan may be used as input; performing or rethinking that analysis is outside this skill.
+The accepted artifact is one compact send-ready messenger or ordinary business-email message for an existing business contact. A completed specialist analysis, report, legal review, financial model, technical assessment, or project plan may be used as input; performing or rethinking that analysis is outside this skill.
 
-Classify cold first-contact outreach, public marketing or editorial copy, layered decision memos or reports, new specialist analysis, and multiple unrelated messages as outside scope. For a mixed request, identify the incompatible job and stop before producing partial output. When repository Marketing Context is relevant and permitted, use the first eligible source under the precedence in `references/source-policy.md`.
+Classify cold first-contact outreach, public marketing or editorial copy, a standalone layered reference-ready internal document, new specialist analysis, and multiple unrelated messages as outside scope. A layered reference-ready document remains with Decision Memo even when it is delivered by email or addressed to an existing business contact. Retain Business Message for the lightest complete job that fits one compact send-ready message. The communication goal alone—inform, decide, approve, or respond—does not override this shape boundary. When the format is unnamed and both shapes remain materially plausible, ask one artifact-shape question only when choosing depth or structure would materially change the result. For a mixed request, identify the incompatible job and stop before producing partial output. When repository Marketing Context is relevant and permitted, use the first eligible source under the precedence in `references/source-policy.md`.
 
 ## Runtime
 

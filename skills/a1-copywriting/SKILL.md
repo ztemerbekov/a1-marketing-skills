@@ -18,11 +18,13 @@ Classify the complete request before invoking another skill:
 - a landing, product, service, course, event, or signup page belongs to `a1-landing-page-copy`;
 - a routine media announcement belongs to `a1-press-release`;
 - an article, guide, case study, expert essay, or newsletter issue belongs to `a1-article-writing`;
-- an internal document organized around a decision, response, or awareness update belongs to `a1-decision-memo`;
-- one compact workplace message for a manager, colleague, employee, contractor, partner, or existing client belongs to `a1-business-message`;
+- a standalone layered, reference-ready internal decision, response, or awareness/status document whose supporting detail, including chronology as applicable, must remain inspectable belongs to `a1-decision-memo`;
+- one compact send-ready messenger or ordinary business-email message for an existing business contact belongs to `a1-business-message`;
 - one personalized cold outreach email belongs to `a1-cold-email`;
 - a presentation outline or slide-by-slide copy belongs to `a1-presentation-copy`;
 - a public company profile or About page belongs to `a1-company-profile`.
+
+The communication goal alone—inform, decide, approve, or respond—does not choose between `a1-decision-memo` and `a1-business-message`; artifact shape does. When the user has not named a format and both shapes remain materially plausible, ask one artifact-shape question only when choosing between compact send-ready and layered reference-ready output would materially change depth or structure. Otherwise use `a1-business-message` when the complete job fits one compact send-ready message.
 
 When no listed owner fits, use the **direct fallback** only for one new ordinary marketing-copy artifact such as ad copy, a social post, a tagline, a product blurb, or campaign copy. A specialist or high-stakes format—such as legal, regulatory, financial, medical, safety-critical, investor-relations, or crisis communication—stays outside this fallback; state the boundary and stop without drafting it.
 

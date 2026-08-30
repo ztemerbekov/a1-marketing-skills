@@ -14,7 +14,7 @@ The skill organizes completed specialist input. It does not redo legal, financia
 
 Use it for an approval memo, executive brief, project-status memo, recommendation memo, escalation note, or awareness-only update. The skill can start from an unambiguous natural-language request or through `/a1-decision-memo`.
 
-Choose [A1 Business Message](./a1-business-message.md) for one compact workplace message to an existing business contact; keep Decision Memo for a layered internal decision document.
+Choose [A1 Business Message](./a1-business-message.md) for one compact send-ready messenger or ordinary business-email message for an existing business contact; keep Decision Memo for a standalone layered, reference-ready internal decision, response, or awareness/status document whose supporting detail, including chronology as applicable, must remain inspectable, even when delivered by email. The communication goal alone does not choose the owner; artifact shape does. If both shapes remain materially plausible and the choice would materially change depth or structure, ask which artifact shape the user wants.
 
 Use [A1 Copy Editing](./a1-copy-editing.md) when a selected finished memo only needs editing or review. Use [A1 Article Writing](./a1-article-writing.md) for a public or educational long-form piece.
 

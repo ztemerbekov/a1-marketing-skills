@@ -1,4 +1,4 @@
-# copywriting-route-business-message-005 — Route One Business Message
+# copywriting-route-business-message-005 — Route One Compact Send-Ready Business Message
 
 - ID: `copywriting-route-business-message-005`
 - Operation: `Route`
@@ -8,7 +8,7 @@
 ## User Instruction
 
 ```text
-Use A1 Copywriting to write a message to our operations director asking her to approve the warehouse recovery option by Friday.
+Use A1 Copywriting to write one compact send-ready message to our operations director asking her to approve the warehouse recovery option by Friday. Keep it to the message she can send as-is; do not build a memo or reference document.
 ```
 
 ## Input
@@ -19,7 +19,7 @@ The operations director is an existing internal contact. The warehouse lead reco
 
 ## Must Change
 
-- [ ] Classify the deliverable as one workplace message for an existing business contact.
+- [ ] Classify the deliverable by its compact send-ready shape for an existing business contact, even though the communication goal is approval.
 - [ ] Invoke `a1-business-message` through its public interface.
 
 ## Must Preserve
@@ -31,3 +31,4 @@ The operations director is an existing internal contact. The warehouse lead reco
 
 - [ ] Do not write the message in A1 Copywriting.
 - [ ] Do not route the request to Cold Email or Decision Memo.
+- [ ] Do not expand the message into a standalone layered reference-ready document.
