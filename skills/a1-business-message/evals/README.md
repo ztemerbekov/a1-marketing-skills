@@ -10,3 +10,7 @@ These manual criteria-based cases protect source integrity, one-message scope, b
 - `message-no-solution-004`: a problem with no supplied solution remains explicit without fabricated analysis.
 - `message-missing-owner-deadline-005`: a useful message proceeds while missing ownership and timing stay visible.
 - `message-boundaries-006`: cold outreach, a layered memo, and public copy stop at neighboring-skill boundaries.
+- `message-marketing-context-007`: optional Marketing Context uses only the canonical eligible source, preserves higher-priority inputs, and never blocks when absent.
+- `message-coherent-group-008`: two coherent project-team cases—awareness/status with no CTA and a shared decision—remain one compact message each.
+- `message-incompatible-audiences-009`: materially different client and internal audience jobs are separated before any partial message is produced.
+- `message-plain-text-formatting-010`: a user-requested plain-text messenger message preserves decision anchors without Markdown emphasis or formatting.
