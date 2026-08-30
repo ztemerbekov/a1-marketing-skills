@@ -10,3 +10,4 @@ These manual criteria-based cases protect source integrity, one-message scope, b
 - `message-no-solution-004`: a problem with no supplied solution remains explicit without fabricated analysis.
 - `message-missing-owner-deadline-005`: a useful message proceeds while missing ownership and timing stay visible.
 - `message-boundaries-006`: cold outreach, a layered memo, and public copy stop at neighboring-skill boundaries.
+- `message-marketing-context-007`: optional Marketing Context uses only the canonical eligible source, preserves higher-priority inputs, and never blocks when absent.

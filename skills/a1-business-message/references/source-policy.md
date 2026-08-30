@@ -7,9 +7,9 @@ Use only four source classes:
 1. the current user instruction;
 2. the user-selected material, including a selected draft;
 3. clearly applicable facts established earlier in the conversation;
-4. the first eligible repository Marketing Context source, when the current task permits it, checked in this order: `.agents/marketing-context.md`, `.claude/marketing-context.md` only when the canonical path is absent, then `marketing-context.md` at the repository root only when both earlier paths are absent.
+4. The first eligible repository Marketing Context selected by `SKILL.md`.
 
-Current instructions control purpose, recipient, tone, channel, output form, and any facts or constraints they explicitly assert. Supplied material controls its facts, figures, options, decisions, recommendations, owners, deadlines, quotations, and causal claims. Earlier conversation facts must be clearly applicable. Marketing Context supplies defaults and confirmed context only when relevant; conflicts among current instructions, supplied material, earlier conversation facts, and Marketing Context remain unresolved rather than silently merged. Read only the first existing Marketing Context path.
+Current instructions control purpose, recipient, tone, channel, output form, and any facts or constraints they explicitly assert. Supplied material controls its facts, figures, options, decisions, recommendations, owners, deadlines, quotations, and causal claims. Earlier conversation facts must be clearly applicable. Marketing Context supplies defaults and confirmed context only when relevant; conflicts among current instructions, supplied material, earlier conversation facts, and Marketing Context remain unresolved rather than silently merged.
 
 ## Message map
 
