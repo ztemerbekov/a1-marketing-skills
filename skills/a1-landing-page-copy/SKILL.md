@@ -1,11 +1,11 @@
 ---
-name: a1-promo-page
+name: a1-landing-page-copy
 description: Create the content architecture or copy for one new landing, product, service, course, event, or signup page from source-supported offer inputs for one primary audience and action.
 metadata:
   author: Zinnur Temerbekov
 ---
 
-# Promo Page
+# Landing Page Copy
 
 Build a source-supported promotional page that helps one primary audience understand an offer, evaluate fit, and take a clear next step.
 
@@ -29,7 +29,7 @@ Marketing Context is optional. Read only the first existing repository context i
 
 ## Runtime
 
-Follow [the promo-page spine](references/promo-page-spine.md) for every accepted request. It is the single owner of stage order and reference routing.
+Follow [the landing-page-copy spine](references/landing-page-copy-spine.md) for every accepted request. It is the single owner of stage order and reference routing.
 
 Build the page from the reader's situation toward evidence and transaction. Treat layout and visuals as content decisions, while leaving final visual design and implementation to the user's chosen production workflow.
 

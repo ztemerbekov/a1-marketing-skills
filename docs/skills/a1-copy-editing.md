@@ -14,8 +14,6 @@ The skill works from the whole text down to paragraphs, sentences, and words. It
 
 Ask in ordinary language to edit, shorten, clarify, strengthen, restructure, apply information-style editing, or review the selected draft. The skill can start automatically when both the draft and editing intent are clear, or through `/a1-copy-editing`.
 
-Choose [A1 Message](./a1-message.md) for one compact workplace message to an existing business contact; keep A1 Copy Editing for general editing or review of a selected marketing or editorial draft.
-
 Use [A1 Humanize](./a1-humanize.md) when the narrow job is to remove recognizable AI-writing patterns. Use a format-specific skill when you need a new article, promo page, press release, or decision memo rather than changes to an existing draft.
 
 ## What you get
@@ -52,4 +50,4 @@ No. Every deliverable must edit or review the selected draft.
 
 ## Related skills
 
-[A1 Article Writing](./a1-article-writing.md), [A1 Promo Page](./a1-promo-page.md), [A1 Press Release](./a1-press-release.md), and [A1 Decision Memo](./a1-decision-memo.md) create new format-specific material. [A1 Humanize](./a1-humanize.md) handles AI-writing patterns.
+[A1 Article Writing](./a1-article-writing.md), [A1 Landing Page Copy](./a1-landing-page-copy.md), [A1 Press Release](./a1-press-release.md), and [A1 Decision Memo](./a1-decision-memo.md) create new format-specific material. [A1 Humanize](./a1-humanize.md) handles AI-writing patterns.

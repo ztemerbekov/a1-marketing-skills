@@ -12,7 +12,7 @@ The skill answers the primary audience's real questions about what the company d
 
 Ask for an outline when you need the reader questions, answers, and evidence map. Ask for a draft when the confirmed inputs are sufficient for publishable prose.
 
-The skill does not invent positioning, mission, values, history, credentials, social impact, or culture. It uses mission or values only when confirmed decisions and observable practices support them. A page built around one offer belongs to A1 Promo Page; a news event belongs to A1 Press Release.
+The skill does not invent positioning, mission, values, history, credentials, social impact, or culture. It uses mission or values only when confirmed decisions and observable practices support them. A page built around one offer belongs to A1 Landing Page Copy; a news event belongs to A1 Press Release.
 
 ## What you get
 
@@ -48,4 +48,4 @@ Only when that biography is supporting evidence inside the company profile. A st
 
 ## Related skills
 
-[A1 Copywriting](./a1-copywriting.md) creates new marketing copy when you want to start from the communication goal rather than choose a format. Use [A1 Promo Page](./a1-promo-page.md) for a page focused on one offer and [A1 Press Release](./a1-press-release.md) for a confirmed news event.
+[A1 Copywriting](./a1-copywriting.md) creates new written communication when you want to start from the communication goal rather than choose a format. Use [A1 Landing Page Copy](./a1-landing-page-copy.md) for a page focused on one offer and [A1 Press Release](./a1-press-release.md) for a confirmed news event.

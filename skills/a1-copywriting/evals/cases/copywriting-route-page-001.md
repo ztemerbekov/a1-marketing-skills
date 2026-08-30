@@ -2,7 +2,7 @@
 
 - ID: `copywriting-route-page-001`
 - Operation: `Route`
-- Risk: The router drafts generic page copy or duplicates the Promo Page workflow.
+- Risk: The router drafts generic page copy or duplicates the Landing Page Copy workflow.
 - Scope Scenario: `In scope`
 
 ## User Instruction
@@ -19,15 +19,15 @@ The one-day workshop teaches sales managers to run evidence-based pipeline revie
 
 ## Must Change
 
-- [ ] Invoke `a1-promo-page` through its public interface.
-- [ ] Let Promo Page classify the page mode and produce the result.
+- [ ] Invoke `a1-landing-page-copy` through its public interface.
+- [ ] Let Landing Page Copy classify the page mode and produce the result.
 
 ## Must Preserve
 
 - [ ] Preserve the complete request and supplied inputs during handoff.
-- [ ] Keep Promo Page as the sole owner of page questions, source policy, and output.
+- [ ] Keep Landing Page Copy as the sole owner of page questions, source policy, and output.
 
 ## Forbidden
 
 - [ ] Do not draft a headline, CTA, page block, blueprint, or source analysis in A1 Copywriting.
-- [ ] Do not reproduce or deep-link the private Promo Page canon.
+- [ ] Do not reproduce or deep-link the private Landing Page Copy canon.

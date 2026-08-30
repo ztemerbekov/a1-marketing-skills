@@ -1,6 +1,6 @@
-# promo-blueprint-001 — Blueprint Preserves the Offer
+# landing-page-blueprint-001 — Blueprint Preserves the Offer
 
-- ID: `promo-blueprint-001`
+- ID: `landing-page-blueprint-001`
 - Operation: `Blueprint`
 - Risk: Blueprint mode drifts into finished copy or hides missing offer facts.
 - Scope Scenario: `In scope`

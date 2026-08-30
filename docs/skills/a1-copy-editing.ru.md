@@ -14,8 +14,6 @@
 
 Обычными словами попросите отредактировать, сократить, прояснить, усилить, перестроить, применить инфостиль или разобрать выбранный текст. Навык может запуститься автоматически, когда понятны и черновик, и намерение, либо по команде `/a1-copy-editing`.
 
-Для одного компактного рабочего сообщения действующему деловому контакту выберите [A1 Message](./a1-message.ru.md); A1 Copy Editing оставляйте для общей правки или разбора выбранного маркетингового или редакторского черновика.
-
 Если нужно только убрать узнаваемые AI-паттерны, используйте [A1 Humanize](./a1-humanize.ru.md). Если нужен новый материал, а не правка готового черновика, выберите навык соответствующего формата.
 
 ## Что получится
@@ -52,4 +50,4 @@
 
 ## Соседние навыки
 
-[A1 Article Writing](./a1-article-writing.ru.md), [A1 Promo Page](./a1-promo-page.ru.md), [A1 Press Release](./a1-press-release.ru.md) и [A1 Decision Memo](./a1-decision-memo.ru.md) создают новые материалы своих форматов. [A1 Humanize](./a1-humanize.ru.md) убирает AI-паттерны.
+[A1 Article Writing](./a1-article-writing.ru.md), [A1 Landing Page Copy](./a1-landing-page-copy.ru.md), [A1 Press Release](./a1-press-release.ru.md) и [A1 Decision Memo](./a1-decision-memo.ru.md) создают новые материалы своих форматов. [A1 Humanize](./a1-humanize.ru.md) убирает AI-паттерны.

@@ -15,7 +15,7 @@ Accept a request when the user supplies notes, a report, correspondence, analysi
 
 A completed report, legal analysis, financial model, or project plan may be consumed as source material. Producing that specialist analysis is outside this skill. A request to choose a strategy without source-supported options or criteria is also outside scope.
 
-Route one compact workplace message to `a1-message`; retain Decision Memo for a layered internal decision document.
+Route one compact workplace message to `a1-business-message`; retain Decision Memo for a layered internal decision document.
 
 Editing or reviewing an already selected finished memo belongs to `a1-copy-editing`. A public article belongs to `a1-article-writing`; a media announcement belongs to `a1-press-release`.
 

@@ -40,7 +40,7 @@ In Outline mode, skip drafting after checking that the structure can fulfill the
 
 Write the article in the requested voice. Start with useful content, preserve source qualifications, explain through concrete cases or mechanisms, and make headings independently informative.
 
-Keep product mentions proportional to their actual role. A company article should remain useful even to a reader who does not buy, unless the user explicitly requested promotional content and should instead use `a1-promo-page`.
+Keep product mentions proportional to their actual role. A company article should remain useful even to a reader who does not buy, unless the user explicitly requested promotional content and should instead use `a1-landing-page-copy`.
 
 **Complete when:** the article fulfills its opening promise with source-supported material and the reader can follow or scan it without reconstructing the author's notes.
 

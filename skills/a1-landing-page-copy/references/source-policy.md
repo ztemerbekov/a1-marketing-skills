@@ -1,6 +1,6 @@
-# Promo-Page Source Policy
+# Landing Page Copy Source Policy
 
-This file owns the content boundary for `a1-promo-page`.
+This file owns the content boundary for `a1-landing-page-copy`.
 
 ## Allowed Sources
 

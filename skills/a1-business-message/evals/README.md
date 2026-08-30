@@ -1,4 +1,4 @@
-# A1 Message Evaluation
+# A1 Business Message Evaluation
 
 These manual criteria-based cases protect source integrity, one-message scope, both entry branches, no-fabrication behavior, and neighboring-skill routing without requiring a golden output.
 

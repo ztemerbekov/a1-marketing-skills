@@ -13,7 +13,7 @@ Write a concise first-contact email that gives one recipient a credible reason t
 
 Accept a request when every requested deliverable contributes to one new cold email for one identifiable recipient and one purpose. A recipient dossier, completed prospect research, offer brief, approved proof, and sender background are completed inputs this skill may consume.
 
-Route an existing business relationship or continued conversation to `a1-message`; retain Cold Email for first contact.
+Route an existing business relationship or continued conversation to `a1-business-message`; retain Cold Email for first contact.
 
 Route these neighboring jobs elsewhere:
 

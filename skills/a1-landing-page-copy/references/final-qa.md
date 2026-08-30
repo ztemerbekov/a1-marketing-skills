@@ -1,4 +1,4 @@
-# Promo-Page Final QA
+# Landing Page Copy Final QA
 
 Run this check against the complete result.
 

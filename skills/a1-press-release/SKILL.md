@@ -15,7 +15,7 @@ Accept a request when the user supplies a concrete routine news event or change 
 
 The skill consumes supplied facts and background; it does not verify confidential facts or grant internal approval. Crisis communications, accidents, emergencies, allegations, litigation responses, regulatory disclosures, earnings releases, securities communications, and other investor-relations statements are outside scope. State that boundary and stop without drafting.
 
-Generic editing or review of a selected finished release belongs to `a1-copy-editing`. A promotional product page belongs to `a1-promo-page`; a reported or educational long-form story belongs to `a1-article-writing`.
+Generic editing or review of a selected finished release belongs to `a1-copy-editing`. A promotional product page belongs to `a1-landing-page-copy`; a reported or educational long-form story belongs to `a1-article-writing`.
 
 For a mixed request, state the boundary and stop before producing any deliverable.
 

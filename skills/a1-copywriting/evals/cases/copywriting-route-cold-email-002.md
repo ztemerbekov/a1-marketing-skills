@@ -30,4 +30,4 @@ Northstar publicly lists three billing systems. Our service combines exports fro
 ## Forbidden
 
 - [ ] Do not write a subject line or email body in A1 Copywriting.
-- [ ] Do not route the request to Article Writing, Promo Page, or Press Release.
+- [ ] Do not route the request to Article Writing, Landing Page Copy, or Press Release.

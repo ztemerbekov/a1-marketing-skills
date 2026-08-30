@@ -19,8 +19,6 @@ Accept a request when all conditions are true:
 2. An editing, feedback, or review intent directed at that draft.
 3. Every requested deliverable edits or reviews that draft.
 
-Route a finished workplace-message job to `a1-message`; retain Copy Editing for editing or reviewing selected marketing and editorial drafts.
-
 When the user explicitly invokes this skill without selecting a draft, ask them to paste, attach, or name the draft and stop.
 
 For a mixed request, state that A1 Copy Editing edits or reviews selected existing drafts and stop without producing any deliverable.

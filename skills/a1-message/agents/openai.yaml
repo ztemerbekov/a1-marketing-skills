@@ -1,7 +1,0 @@
-interface:
-  display_name: "A1 Message"
-  short_description: "Turn working context into one message people can act on"
-  icon_small: "./assets/icon-small.svg"
-  icon_large: "./assets/icon-large.svg"
-  brand_color: "#FF6A00"
-  default_prompt: "Use $a1-message to brief my boss, Elon Musk, from this contractor thread on the fictional Mars campaign failure, recovery trade-offs, and decision needed by Friday."

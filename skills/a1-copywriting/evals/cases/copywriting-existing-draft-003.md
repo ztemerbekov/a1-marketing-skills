@@ -1,8 +1,8 @@
-# copywriting-existing-draft-003 — Existing Draft Stays Outside the Router
+# copywriting-existing-draft-003 — Existing Draft Stays Outside Copywriting
 
 - ID: `copywriting-existing-draft-003`
 - Operation: `Boundary`
-- Risk: The router mixes new-copy routing with selected-draft editing.
+- Risk: The hybrid skill mixes new-copy route-or-write behavior with selected-draft editing.
 - Scope Scenario: `Out of scope`
 
 ## User Instruction
@@ -19,13 +19,13 @@ Our innovative solution provides a comprehensive range of advanced capabilities 
 
 ## Must Change
 
-- [ ] State that A1 Copywriting routes only new marketing artifacts.
+- [ ] State that A1 Copywriting handles only new artifacts and does not edit selected drafts.
 - [ ] Stop without changing the paragraph.
 
 ## Must Preserve
 
 - [ ] Preserve the selected draft byte-for-byte.
-- [ ] Keep selected-draft work outside this router.
+- [ ] Keep selected-draft work outside this skill.
 
 ## Forbidden
 

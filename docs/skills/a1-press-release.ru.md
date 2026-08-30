@@ -50,4 +50,4 @@
 
 ## Соседние навыки
 
-[A1 Copy Editing](./a1-copy-editing.ru.md) улучшает выбранный готовый релиз. [A1 Promo Page](./a1-promo-page.ru.md) обращается напрямую к потенциальному покупателю, а [A1 Article Writing](./a1-article-writing.ru.md) создаёт длинные редакционные материалы.
+[A1 Copy Editing](./a1-copy-editing.ru.md) улучшает выбранный готовый релиз. [A1 Landing Page Copy](./a1-landing-page-copy.ru.md) обращается напрямую к потенциальному покупателю, а [A1 Article Writing](./a1-article-writing.ru.md) создаёт длинные редакционные материалы.

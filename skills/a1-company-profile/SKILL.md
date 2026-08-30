@@ -13,7 +13,7 @@ Explain what one company does, for whom, how it works, and what makes it credibl
 
 Accept a request when every requested deliverable contributes to one new public company profile or About page. Select **Outline** for content architecture or a fact plan. Select **Draft** for finished copy. Supplied company facts, history, operating details, policies, customer evidence, approved mission, values, and brand material are completed inputs this skill may consume.
 
-A page dedicated to selling one offer belongs to `a1-promo-page`. A routine media announcement belongs to `a1-press-release`. This skill does not invent corporate strategy, positioning, mission, values, history, credentials, social impact, or culture, and it does not edit a selected existing profile.
+A page dedicated to selling one offer belongs to `a1-landing-page-copy`. A routine media announcement belongs to `a1-press-release`. This skill does not invent corporate strategy, positioning, mission, values, history, credentials, social impact, or culture, and it does not edit a selected existing profile.
 
 For a mixed request, state the boundary and stop before producing profile content.
 

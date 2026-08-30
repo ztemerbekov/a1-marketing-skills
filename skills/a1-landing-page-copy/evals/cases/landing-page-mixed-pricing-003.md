@@ -1,6 +1,6 @@
-# promo-mixed-pricing-003 — Page and Pricing Strategy Stop Before Partial Work
+# landing-page-mixed-pricing-003 — Page and Pricing Strategy Stop Before Partial Work
 
-- ID: `promo-mixed-pricing-003`
+- ID: `landing-page-mixed-pricing-003`
 - Operation: `Entry Contract`
 - Risk: The skill invents pricing strategy or writes partial page copy before rejecting a mixed job.
 - Scope Scenario: `Mixed job`

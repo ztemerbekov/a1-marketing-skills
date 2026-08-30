@@ -19,7 +19,7 @@ The package connects one data source, delivers one dashboard, and includes a han
 
 ## Must Change
 
-- [ ] State that a page dedicated to selling one offer belongs to `a1-promo-page`.
+- [ ] State that a page dedicated to selling one offer belongs to `a1-landing-page-copy`.
 - [ ] Stop before producing profile or page content.
 
 ## Must Preserve
