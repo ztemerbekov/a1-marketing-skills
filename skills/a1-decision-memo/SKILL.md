@@ -15,7 +15,7 @@ Accept a request when the user supplies notes, a report, correspondence, analysi
 
 A completed report, legal analysis, financial model, or project plan may be consumed as source material. Producing that specialist analysis is outside this skill. A request to choose a strategy without source-supported options or criteria is also outside scope.
 
-Route one compact workplace message to `a1-business-message`; retain Decision Memo for a layered internal decision document.
+Route one compact send-ready messenger or ordinary business-email message for an existing business contact to `a1-business-message`; retain Decision Memo for a standalone layered, reference-ready internal decision, response, or awareness/status document whose supporting detail, including chronology as applicable, must remain inspectable, even when it is delivered by email. The communication goal alone—inform, decide, approve, or respond—does not choose the owner; artifact shape does. When the format is unnamed and both shapes remain materially plausible, use Business Message when the complete job fits one compact send-ready message, and ask one artifact-shape question only when choosing depth or structure would materially change the result.
 
 Editing or reviewing an already selected finished memo belongs to `a1-copy-editing`. A public article belongs to `a1-article-writing`; a media announcement belongs to `a1-press-release`.
 
