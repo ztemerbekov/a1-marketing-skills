@@ -2,21 +2,23 @@
 
 **English** | [Русский](./a1-copywriting.ru.md)
 
-Use A1 Copywriting when you have a communication goal and source material and need finished written communication in the format that fits the job.
+Use A1 Copywriting when you have a communication goal and source material and need one finished written communication in the format that fits the job. It routes to a dedicated A1 format skill when one exists and writes ordinary marketing copy directly when no listed owner fits.
 
 ## The job
 
-A1 Copywriting turns your goal, audience, facts, and source material into finished written communication. It can create landing-page copy, press releases, articles, decision memos, business messages, cold emails, presentation copy, and company profiles while applying the requirements of each format.
+A1 Copywriting turns your goal, audience, facts, and source material into one finished written communication. It routes landing-page copy, press releases, articles, decision memos, business messages, cold emails, presentation copy, and company profiles to their dedicated format skills; it can also write one ordinary marketing-copy artifact such as an ad, social post, tagline, product blurb, or campaign copy when no listed owner fits.
 
 ## When to use it
 
-Start with a broad request such as “write marketing copy” or describe the result you need in ordinary language. You do not have to choose a writing workflow in advance. Include the intended audience, purpose, confirmed facts, useful evidence, and desired next step when they are available.
+Start with a broad request such as “write marketing copy” or describe the result you need in ordinary language. You do not have to choose a writing workflow in advance. Include the intended audience, purpose, confirmed facts, useful evidence, and desired next step when they are available. If the request is for one ordinary marketing-copy artifact with no listed A1 owner, Copywriting writes it directly.
 
 Use a dedicated format skill directly when you already know which one you need. A selected existing draft is a separate editing job and stays outside A1 Copywriting.
 
+Specialist or high-stakes formats—such as legal, regulatory, financial, medical, safety-critical, investor-relations, or crisis communication—remain outside the direct fallback.
+
 ## What you get
 
-One finished text in the format that fits the stated goal, written according to that format's requirements. If the request contains several independent texts, A1 Copywriting asks which one to create first. If the requested format is not supported, it says so instead of substituting a generic text.
+One finished text in the format that fits the stated goal, written according to that format's requirements. If the request contains several independent texts, A1 Copywriting asks which one to create first. If no listed owner fits an ordinary marketing-copy request, it writes that one artifact directly. It does not substitute generic copy for a specialist or high-stakes format.
 
 > **Try asking:**
 >
@@ -28,7 +30,7 @@ One finished text in the format that fits the stated goal, written according to 
 
 **Do I need to choose the format first?**
 
-No. Describe the audience, purpose, facts, and desired action. A1 Copywriting will use the appropriate supported format.
+No. Describe the audience, purpose, facts, and desired action. A1 Copywriting will route to the appropriate supported format or write one ordinary marketing-copy artifact directly when no listed owner fits.
 
 **Does it edit existing copy?**
 
@@ -38,6 +40,10 @@ No. It creates new written communication. Editing or reviewing a selected draft 
 
 It will ask which text to create first so that each result can follow its own audience, evidence, and format requirements.
 
+**Can it write a social post or an ad?**
+
+Yes, when it is one new ordinary marketing-copy artifact and no listed A1 skill owns the format. Specialist and high-stakes copy remains outside that direct fallback.
+
 ## How to recognize success
 
 - The finished text matches the audience, purpose, and requested action.
@@ -45,6 +51,7 @@ It will ask which text to create first so that each result can follow its own au
 - Claims remain grounded in supplied facts and evidence.
 - Missing material stays visible instead of becoming plausible invention.
 - A broad request produces specific, usable written communication.
+- An ordinary unowned request produces the finished artifact directly, while specialist or high-stakes requests stop at a clear boundary.
 
 ## Related skills
 

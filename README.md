@@ -45,7 +45,7 @@
 
 | Skill | Use it to |
 | --- | --- |
-| [Copywriting](./docs/skills/a1-copywriting.md)<br>`/a1-copywriting` | Turn a communication goal, facts, and source material into finished written communication in the right format. |
+| [Copywriting](./docs/skills/a1-copywriting.md)<br>`/a1-copywriting` | Route a communication goal to the right format skill or write one ordinary marketing-copy artifact directly. |
 | [Copy Editing](./docs/skills/a1-copy-editing.md)<br>`/a1-copy-editing` | Edit an existing draft without adding facts or losing the author's voice. |
 | [Article Writing](./docs/skills/a1-article-writing.md)<br>`/a1-article-writing` | Create an article, guide, case study, or newsletter from supplied material and verified sources. |
 | [Decision Memo](./docs/skills/a1-decision-memo.md)<br>`/a1-decision-memo` | Build an internal memo that makes clear what happened and what decision is needed. |
@@ -138,13 +138,13 @@ Marketing Context stores product facts, audience, positioning, brand voice, evid
 </details>
 
 <details>
-<summary><strong>Copywriting — turns your inputs into finished written communication</strong></summary>
+<summary><strong>Copywriting — turns a communication goal into one finished result</strong></summary>
 
 <br>
 
-Copywriting turns a goal, audience, facts, and source material into finished written communication. It can create landing-page copy, press releases, articles, decision memos, business messages, cold emails, presentation copy, and company profiles while applying the requirements of each format.
+Copywriting turns a goal, audience, facts, and source material into one finished written communication. It routes landing-page copy, press releases, articles, decision memos, business messages, cold emails, presentation copy, and company profiles to their dedicated skills, and writes one ordinary marketing-copy artifact directly when no listed owner fits.
 
-**What you get:** one finished text in the format that fits the stated goal. If the request contains several independent texts, the skill asks which one to create first. A selected existing draft remains a separate editing job.
+**What you get:** one finished text in the format that fits the stated goal. If the request contains several independent texts, the skill asks which one to create first. A selected existing draft remains a separate editing job, and specialist or high-stakes formats remain outside the direct fallback.
 
 > **Try asking:**
 >
