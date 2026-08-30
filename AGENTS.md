@@ -89,6 +89,10 @@ Every public skill's `agents/openai.yaml` must include a quoted, one-sentence En
 
 A public-surface change is complete only after every applicable manifest and catalog has been inspected, every affected `default_prompt` has received a manual user-outcome review, and the matching marketplace and repository validations pass. Semantic review belongs in the pull request; deterministic validation must cover structure rather than enforce preferred wording.
 
+### Human-facing prose gate
+
+For every `README*.md` and every human-facing page under `docs/skills/**`, before finalizing changed prose, use `nmt-chat` to pressure-test the reader's real job, value, and attention cost; then run the selected passages through `a1-copy-editing` for source-faithful clarity, density, and natural language. Preserve confirmed facts, approved scope, links, and product decisions; neither pass may add claims or change those decisions.
+
 ## Invocation Compatibility
 
 Model-invoked skills are the default and need no invocation metadata.

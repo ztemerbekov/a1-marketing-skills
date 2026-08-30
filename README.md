@@ -49,7 +49,7 @@
 | [Copy Editing](./docs/skills/a1-copy-editing.md)<br>`/a1-copy-editing` | Edit an existing draft without adding facts or losing the author's voice. |
 | [Article Writing](./docs/skills/a1-article-writing.md)<br>`/a1-article-writing` | Create an article, guide, case study, or newsletter from supplied material and verified sources. |
 | [Decision Memo](./docs/skills/a1-decision-memo.md)<br>`/a1-decision-memo` | Build an internal memo that makes clear what happened and what decision is needed. |
-| [Business Message](./docs/skills/a1-business-message.md)<br>`/a1-business-message` | Turn working context or a selected draft into one clear workplace message. |
+| [Business Message](./docs/skills/a1-business-message.md)<br>`/a1-business-message` | Turn supplied work material or one selected workplace-message draft into one send-ready message for one person or one group you already work with. |
 | [Landing Page Copy](./docs/skills/a1-landing-page-copy.md)<br>`/a1-landing-page-copy` | Create landing-page copy for one audience with a clear offer, evidence, and next step. |
 | [Press Release](./docs/skills/a1-press-release.md)<br>`/a1-press-release` | Prepare a press release with confirmed facts for distribution or approval. |
 | [Cold Email](./docs/skills/a1-cold-email.md)<br>`/a1-cold-email` | Write one personalized first-contact email from supplied recipient, offer, and proof facts. |
@@ -216,13 +216,13 @@ Decision Memo turns reports, correspondence, notes, analysis, or chronology into
 </details>
 
 <details>
-<summary><strong>Business Message — turns working context into one clear workplace message</strong></summary>
+<summary><strong>Business Message — turns work material into one clear workplace message</strong></summary>
 
 <br>
 
-Business Message turns supplied working context or a selected workplace-message draft into one compact send-ready message for one existing business contact or one coherent group of existing business contacts whose members share one communication job—awareness/status, decision, action, or reply—and need the same relevant facts and disclosure level. When audience jobs materially diverge by facts, action or decision, confidentiality or disclosure, or wording, it identifies the separate message jobs, asks which eligible message to start, and produces no partial message until you select one. It supports two input branches: assemble from facts, notes, correspondence, documents, tables, or transcript material; or rewrite one selected draft for the same source-supported communication job. Use Decision Memo for a standalone layered, reference-ready internal document even when it is delivered by email.
+Business Message turns supplied notes, correspondence, documents, tables, or transcript material—or one workplace-message draft you want rewritten—into one compact, send-ready message for one person or one group of people you already work with. It fits when everyone needs the same status update, decision, action, or reply and can receive the same relevant facts at the same level of disclosure. If recipients need materially different facts, actions or decisions, disclosure levels, or wording, it explains which separate messages are needed, asks which one to start, and drafts nothing until you choose. You can provide source material to assemble the message or select one draft to rewrite for the same need. Use Decision Memo for a standalone internal document people will revisit, with supporting detail, options, evidence, risks, a recommendation, or a decision record kept available for reference—even when it is sent by email.
 
-**What you get:** one message with the point first and enough context; when the job calls for it, a clear recommendation or decision status and an operational next step. An awareness/status job can simply make the current status clear. It does not invent facts, solutions, owners, deadlines, approvals, or decisions; when the sources contain no solution or deadline, that gap remains visible.
+**What you get:** one message with the point first and enough context to understand it. A status update can simply state the current status; it does not need a call to action. When the supplied material supports a recommendation, decision status, or next step, the message makes that clear. It does not invent facts, solutions, owners, deadlines, approvals, or decisions; when the sources contain no solution or deadline, that gap remains visible.
 
 > **Try asking:**
 >

@@ -2,21 +2,21 @@
 
 **English** | [Русский](./a1-business-message.ru.md)
 
-Use A1 Business Message when one existing business contact or one coherent group of existing business contacts shares one communication job—awareness/status, decision, action, or reply—and needs the same relevant facts and disclosure level in one clear workplace message built from supplied context or a selected draft.
+Use A1 Business Message when one existing business contact or one group you already work with needs one clear workplace message based on the same relevant facts.
 
 ## The job
 
-A1 Business Message turns supplied workplace facts, notes, correspondence, documents, tables, or transcript material into one compact message for one recipient set: a single existing business contact or a coherent group of existing business contacts whose members share one communication job—awareness/status, decision, action, or reply—and need the same relevant facts and disclosure level. It can also rewrite one selected workplace-message draft for the same source-supported communication job. The result keeps the recipient set's current question or status need visible without turning missing facts into confident wording.
+A1 Business Message turns supplied workplace facts, notes, correspondence, documents, tables, or transcript material into one compact message for one person or one group you already work with. It fits when everyone needs the same status update, decision, action, or reply and can receive the same relevant facts at the same level of disclosure. It can also rewrite one selected workplace-message draft for the same need. The result keeps the current question or status clear without turning missing facts into confident wording.
 
 ## When to use it
 
-Use it when a manager, colleague, employee, contractor, partner, or existing client—or a coherent group of them—needs an awareness/status update, a decision, an approval, an action, or a reply. Start with an ordinary-language request or `/a1-business-message`.
+Use it when an existing business contact—a manager, colleague, employee, contractor, partner, or client—or a group of people you already work with needs a status update, a decision, an approval, an action, or a reply. Start with an ordinary-language request or `/a1-business-message`.
 
-Bring either the material from which the message should be assembled, or one selected workplace-message draft that needs to be rewritten for the same job. Use [A1 Decision Memo](./a1-decision-memo.md) for a standalone layered, reference-ready internal document whose supporting detail, options, evidence, risks, recommendation, or decision record must remain inspectable, even when delivered by email. Retain Business Message for the lightest complete job that fits one compact send-ready message; the communication goal alone does not choose the boundary. If audience jobs materially diverge by facts, action or decision, confidentiality or disclosure, or wording, it identifies the separate message jobs, asks which eligible message to start, and produces no partial message until you select one. If both shapes remain materially plausible and the choice would materially change depth or structure, ask which artifact shape the user wants. Use [A1 Cold Email](./a1-cold-email.md) for first contact and [A1 Copy Editing](./a1-copy-editing.md) for general editing or review of a selected marketing or editorial draft.
+Bring either the material from which the message should be assembled, or one selected workplace-message draft to rewrite for the same need. Use [A1 Decision Memo](./a1-decision-memo.md) for a standalone internal document people will revisit, with supporting detail, options, evidence, risks, a recommendation, or a decision record kept available for reference—even when it is sent by email. Choose by the result you need, not only by whether you want to inform, decide, approve, or respond. If a compact Business Message fully solves the task, use it by default. When the user has not named a format, ask whether they want a Business Message or Decision Memo only when both forms genuinely fit and the choice would materially change the depth or structure. If recipients need materially different facts, actions or decisions, confidentiality levels, or wording, A1 Business Message explains which separate messages are needed, asks which one to start, and drafts nothing until you choose. Use [A1 Cold Email](./a1-cold-email.md) for first contact and [A1 Copy Editing](./a1-copy-editing.md) for general editing or review of a selected marketing or editorial draft.
 
 ## What you get
 
-One finished workplace message with the main point first and enough context to understand it. When the job calls for it, the message includes a source-supported recommendation or decision status and an operational next step or an explicitly unresolved request; an awareness/status job can simply make the current status clear. Material gaps such as a missing solution, owner, deadline, option, or approval remain visible; the message does not invent them.
+One finished workplace message with the main point first and enough context to understand it. A status update can simply make the current status clear; it does not need a call to action. When the material supports a recommendation, decision status, or next step, the message makes that clear. Material gaps such as a missing solution, owner, deadline, option, or approval remain visible; the message does not invent them.
 
 > **Try asking:**
 >
@@ -28,7 +28,7 @@ One finished workplace message with the main point first and enough context to u
 
 **Can it rewrite a draft?**
 
-Yes, when the selected draft is a workplace message for an existing business contact or a coherent group and serves the same source-supported job. It can reorganize the reading path without adding facts or changing the decision status.
+Yes, when the selected draft is a workplace message for an existing business contact or a group you already work with and serves the same need. It can reorganize the reading path without adding facts or changing the decision status.
 
 **Can it summarize forwarded correspondence?**
 
@@ -47,8 +47,8 @@ Use [A1 Decision Memo](./a1-decision-memo.md) for a layered internal decision do
 - The main point and any response, decision, action, or reply needed from the recipient appear first.
 - Recommendations, proposals, and decision status are distinguishable and supported by the supplied material.
 - Necessary context and real anchors such as names, dates, amounts, or identifiers are easy to scan.
-- The next step is operational and source-supported, the unresolved gap is stated plainly, or no action or reply is requested for an awareness/status job.
-- The recipient set can understand, decide, act, or reply without avoidable follow-up.
+- The next step is operational and source-supported, the unresolved gap is stated plainly, or no action or reply is requested for a status update.
+- The person or group receiving it can understand, decide, act, or reply without avoidable follow-up.
 
 ## Related skills
 
