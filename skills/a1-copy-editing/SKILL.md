@@ -1,6 +1,6 @@
 ---
 name: a1-copy-editing
-description: Copy-edit or review an existing marketing or editorial draft when the user selects that draft as the target—by pasting, attaching, or explicitly naming it—and requests changes or feedback.
+description: "Copy-edit or review a selected draft, including “А1 редактура” requests. Use when the user pastes, attaches, or explicitly names an existing marketing or editorial draft and asks for edits or feedback."
 metadata:
   author: Zinnur Temerbekov
 ---
